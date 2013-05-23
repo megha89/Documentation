@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.2.22)  3 MAY 2013 00:48
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.24)  23 MAY 2013 19:09
 entering extended mode
 **projectreport_mt11024.tex
 
-(c:\Users\Megha\Documents\LEdProjects\CourseProject_MT11024\projectreport_mt110
-24.tex
+(C:\Users\Megha\Desktop\SEM4\DDM\CourseProject\Documentation\ProjectReport_MT11
+024\projectreport_mt11024.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -30,7 +30,7 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 368.
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
--- Using DVI output.
+-- Using PDF output.
 \@IEEEnormalsizeunitybaselineskip=\dimen104
 -- This is a 10 point document.
 \CLASSINFOnormalsizebaselineskip=\dimen105
@@ -100,274 +100,445 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEtmpitemindent=\dimen116
 \c@IEEEbiography=\count91
 \@IEEEtranrubishbin=\box26
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count92
+))
+\Gin@req@height=\dimen117
+\Gin@req@width=\dimen118
 )
 
 LaTeX Warning: Unused global option(s):
     [compsocconf].
 
 
-(c:\Users\Megha\Documents\LEdProjects\CourseProject_MT11024\projectreport_mt110
-24.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+(C:\Users\Megha\Desktop\SEM4\DDM\CourseProject\Documentation\ProjectReport_MT11
+024\projectreport_mt11024.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 282.
+LaTeX Font Info:    ... okay on input line 282.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 282.
+LaTeX Font Info:    ... okay on input line 282.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 282.
+LaTeX Font Info:    ... okay on input line 282.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 282.
+LaTeX Font Info:    ... okay on input line 282.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 282.
+LaTeX Font Info:    ... okay on input line 282.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 282.
+LaTeX Font Info:    ... okay on input line 282.
 
-Underfull \hbox (badness 2261) in paragraph at lines 25--32
+(C:\Users\Megha\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count93
+\scratchdimen=\dimen119
+\scratchbox=\box27
+\nofMPsegments=\count94
+\nofMParguments=\count95
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count96
+\MPscratchDim=\dimen120
+\MPnumerator=\count97
+\makeMPintoPDFobject=\count98
+\everyMPtoPDFconversion=\toks17
+)
+
+LaTeX Warning: Citation `cdnc' on page 1 undefined on input line 300.
+
+
+LaTeX Warning: Citation `cdnc' on page 1 undefined on input line 300.
+
+
+Underfull \hbox (badness 2261) in paragraph at lines 296--303
 \OT1/ptm/b/n/9 method of dig-i-tiz-ing printed texts so that they can be
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--32
+Underfull \hbox (badness 10000) in paragraph at lines 296--303
 
  []
 
 
-Underfull \hbox (badness 3118) in paragraph at lines 40--48
+LaTeX Warning: Citation `OCR' on page 1 undefined on input line 313.
+
+
+LaTeX Warning: Citation `cdnc' on page 1 undefined on input line 314.
+
+
+LaTeX Warning: Citation `cdnc' on page 1 undefined on input line 315.
+
+
+LaTeX Warning: Citation `OCR' on page 1 undefined on input line 315.
+
+
+Underfull \hbox (badness 3118) in paragraph at lines 311--319
 \OT1/ptm/m/n/10 OCR deals with the prob-lem of recog-nis-ing op-ti-cally
  []
 
 
-Underfull \hbox (badness 4168) in paragraph at lines 40--48
+Underfull \hbox (badness 4168) in paragraph at lines 311--319
 \OT1/ptm/m/n/10 plate read-ers, form read-ers, Sig-na-ture ver-i-fi-ca-tion and
 
  []
 
 
-Underfull \hbox (badness 2626) in paragraph at lines 40--48
+Underfull \hbox (badness 2626) in paragraph at lines 311--319
 \OT1/ptm/m/n/10 News-pa-per Ar-ti-cles in the hold-ings of [[]]. One such
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 40--48
+Underfull \hbox (badness 1769) in paragraph at lines 311--319
 \OT1/ptm/m/n/10 news-pa-per, The Amador Ledger pub-lished in the early
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--48
+Underfull \hbox (badness 10000) in paragraph at lines 311--319
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
+LaTeX Warning: Citation `digital' on page 1 undefined on input line 325.
+
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 326.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 326.
+
+<C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport_MT11
+024/logfile.jpg, id=1, 377.15906pt x 150.5625pt>
+File: C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport
+_MT11024/logfile.jpg Graphic file (type jpg)
+
+<use C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport_
+MT11024/logfile.jpg>
+Package pdftex.def Info: C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Document
+ation/ProjectReport_MT11024/logfile.jpg used on input line 330.
+(pdftex.def)             Requested size: 256.07343pt x 142.27771pt.
+
+Overfull \hbox (4.07343pt too wide) in paragraph at lines 330--331
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--334
+\OML/cmm/m/it/10 <\OT1/ptm/m/n/10 NewTextValue\OML/cmm/m/it/10 >\OT1/ptm/m/n/10
+ Largest Plant in the
+ []
+
+
+Underfull \hbox (badness 3849) in paragraph at lines 335--336
+\OT1/ptm/m/n/10 For ex-am-ple AL19000105-changes.log in-cludes Amador
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+<C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport_MT11
+024/histo.jpg, id=2, 256.70906pt x 151.3153pt>
+File: C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport
+_MT11024/histo.jpg Graphic file (type jpg)
 
+<use C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport_
+MT11024/histo.jpg>
+Package pdftex.def Info: C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Document
+ation/ProjectReport_MT11024/histo.jpg used on input line 340.
+(pdftex.def)             Requested size: 256.09343pt x 142.2641pt.
+
+Overfull \hbox (4.09343pt too wide) in paragraph at lines 340--341
+ [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+<C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport_MT11
+024/stats.jpg, id=3, 188.20313pt x 167.12437pt>
+File: C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport
+_MT11024/stats.jpg Graphic file (type jpg)
 
+<use C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport_
+MT11024/stats.jpg>
+Package pdftex.def Info: C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Document
+ation/ProjectReport_MT11024/stats.jpg used on input line 348.
+(pdftex.def)             Requested size: 85.35973pt x 85.35979pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation `datasource' on page 1 undefined on input line 355.
+
+
+Underfull \hbox (badness 2512) in paragraph at lines 355--356
+\OT1/ptm/m/n/10 The files in this cor-pus were ex-tracted from the the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
-
+Underfull \hbox (badness 2626) in paragraph at lines 355--356
+\OT1/ptm/m/n/10 date of the news-pa-per. Fur-ther these name and dates
  []
 
 
-Underfull \hbox (badness 1533) in paragraph at lines 62--63
- \OT1/ptm/m/it/10 5) Soft-ware: [][] []\OT1/ptm/m/n/10 Py-Lucene 3.6.2, a Pytho
-n ex-ten-sion for
+Underfull \hbox (badness 1540) in paragraph at lines 355--356
+\OT1/ptm/m/n/10 were for-mu-lated into a URL. The url for a par-tic-u-lar
  []
 
 
-Underfull \hbox (badness 4872) in paragraph at lines 62--63
-\OT1/ptm/m/n/10 li-brary for en-abling full text in-dex-ing and search-ing
+Underfull \hbox (badness 1681) in paragraph at lines 355--356
+\OT1/ptm/m/n/10 For in-stance, AL19000105-changes.log was con-verted to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
+\OT1/ptm/m/n/10 http://chroniclingamerica.loc.gov/lccn/sn93052980/1900-01-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
 
  []
 
-[1
+[1{C:/Users/Megha/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--85
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+
+ []
+
+
+Underfull \hbox (badness 4001) in paragraph at lines 371--373
+ \OT1/ptm/m/it/10 1) Log-files: [][] \OT1/ptm/m/n/10 Down-loaded the Log-files 
+from the file
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--373
+\OT1/ptm/m/n/10 and cor-re-spond-ing cor-rected text be-tween \OML/cmm/m/it/10 
+<\OT1/ptm/m/n/10 New-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--373
+
+ []
+
+
+LaTeX Warning: Citation `datasource' on page 2 undefined on input line 387.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--388
 \OT1/ptm/m/n/10 http://chroniclingamerica.loc.gov/lccn/sn93052980/1900-01-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--85
+Underfull \hbox (badness 10000) in paragraph at lines 375--388
 \OT1/ptm/m/n/10 http://chroniclingamerica.loc.gov/lccn/sn93052980/1900-01-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--85
+Underfull \hbox (badness 10000) in paragraph at lines 375--388
 \OT1/ptm/m/n/10 http://chroniclingamerica.loc.gov/lccn/sn93052980/1900-01-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--85
+Underfull \hbox (badness 10000) in paragraph at lines 375--388
 \OT1/ptm/m/n/10 http://chroniclingamerica.loc.gov/lccn/sn93052980/1900-01-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--85
+Underfull \hbox (badness 10000) in paragraph at lines 375--388
 \OT1/ptm/m/n/10 http://chroniclingamerica.loc.gov/lccn/sn93052980/1900-01-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--85
+Underfull \hbox (badness 10000) in paragraph at lines 375--388
 \OT1/ptm/m/n/10 http://chroniclingamerica.loc.gov/lccn/sn93052980/1900-01-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--85
+Underfull \hbox (badness 10000) in paragraph at lines 375--388
 \OT1/ptm/m/n/10 http://chroniclingamerica.loc.gov/lccn/sn93052980/1900-01-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--85
+Underfull \hbox (badness 10000) in paragraph at lines 375--388
 \OT1/ptm/m/n/10 http://chroniclingamerica.loc.gov/lccn/sn93052980/1900-01-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--85
+Underfull \hbox (badness 10000) in paragraph at lines 375--388
+
+ []
+
+[2 <C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport_M
+T11024/logfile.jpg> <C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentatio
+n/ProjectReport_MT11024/histo.jpg> <C:/Users/Megha/Desktop/SEM4/DDM/CourseProje
+ct/Documentation/ProjectReport_MT11024/stats.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
-
- []
-
-
-Underfull \hbox (badness 1701) in paragraph at lines 89--92
+Underfull \hbox (badness 1701) in paragraph at lines 393--396
 \OT1/ptm/m/n/10 Lucene's log-i-cal View of In-dex files fea-tures seg-ments
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--92
+Underfull \hbox (badness 10000) in paragraph at lines 393--396
 
  []
 
 
-Underfull \hbox (badness 3612) in paragraph at lines 95--97
+Underfull \hbox (badness 3612) in paragraph at lines 399--401
 \OT1/ptm/m/n/10 The doc-u-ments re-trieved are ranked ac-cord-ing to the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
+Underfull \hbox (badness 10000) in paragraph at lines 399--401
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--101
+Underfull \hbox (badness 10000) in paragraph at lines 403--405
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--113
+Underfull \hbox (badness 10000) in paragraph at lines 406--417
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Underfull \hbox (badness 10000) in paragraph at lines 418--419
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--122
+Underfull \hbox (badness 10000) in paragraph at lines 420--426
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 129.
+(Font)              <7> on input line 433.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 129.
+(Font)              <5> on input line 433.
 
-Underfull \hbox (badness 3471) in paragraph at lines 126--130
+Underfull \hbox (badness 3471) in paragraph at lines 430--434
 \OT1/ptm/m/n/10 Spearman's co-ef-fi-cient, like any cor-re-la-tion cal-cu-la-ti
 on,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--130
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 131--133
+Underfull \hbox (badness 10000) in paragraph at lines 430--434
 
  []
 
 
-Overfull \hbox (8.04152pt too wide) in paragraph at lines 136--150
-[][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--150
+Underfull \hbox (badness 10000) in paragraph at lines 435--437
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--150
-
+[3]
+Overfull \hbox (8.04152pt too wide) in paragraph at lines 440--454
+[][] 
  []
 
 
-Overfull \hbox (8.04152pt too wide) in paragraph at lines 153--167
-[][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--167
+Underfull \hbox (badness 10000) in paragraph at lines 440--454
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--167
+Underfull \hbox (badness 10000) in paragraph at lines 440--454
 
  []
 
 
-Underfull \hbox (badness 2970) in paragraph at lines 168--170
-[][]\OT1/ptm/m/n/10 The av-er-age value of Spear-man's ranked cor-re-la-tion
+Overfull \hbox (8.04152pt too wide) in paragraph at lines 457--471
+[][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 457--471
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--185
+Underfull \hbox (badness 10000) in paragraph at lines 457--471
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 2970) in paragraph at lines 472--474
+[]\OT1/ptm/m/n/10 The av-er-age value of Spear-man's ranked cor-re-la-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 472--474
 
  []
 
 
-(c:\Users\Megha\Documents\LEdProjects\CourseProject_MT11024\projectreport_mt110
-24.bbl)
+Underfull \hbox (badness 10000) in paragraph at lines 481--482
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--489
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
+
+ []
+
+
+LaTeX Warning: Citation `datasource' undefined on input line 495.
+
+
+LaTeX Warning: Citation `cdnc' undefined on input line 495.
+
+
+LaTeX Warning: Citation `digital' undefined on input line 495.
+
+
+(C:\Users\Megha\Desktop\SEM4\DDM\CourseProject\Documentation\ProjectReport_MT11
+024\projectreport_mt11024.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -379,16 +550,38 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3]
-(c:\Users\Megha\Documents\LEdProjects\CourseProject_MT11024\projectreport_mt110
-24.aux) ) 
-Here is how much of TeX's memory you used:
- 915 strings out of 493922
- 16843 string characters out of 3147305
- 75498 words of memory out of 3000000
- 4283 multiletter control sequences out of 15000+200000
- 25356 words of font info for 55 fonts, out of 3000000 for 9000
- 844 hyphenation exceptions out of 8191
- 26i,8n,21p,692b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
+[4]
+(C:\Users\Megha\Desktop\SEM4\DDM\CourseProject\Documentation\ProjectReport_MT11
+024\projectreport_mt11024.aux)
 
-Output written on projectreport_mt11024.dvi (3 pages, 23232 bytes).
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1856 strings out of 493921
+ 30773 string characters out of 3147282
+ 88316 words of memory out of 3000000
+ 5176 multiletter control sequences out of 15000+200000
+ 34114 words of font info for 63 fonts, out of 3000000 for 9000
+ 844 hyphenation exceptions out of 8191
+ 27i,8n,21p,837b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on projectreport_mt11024.pdf (4 pages, 215456 bytes).
+PDF statistics:
+ 63 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+
