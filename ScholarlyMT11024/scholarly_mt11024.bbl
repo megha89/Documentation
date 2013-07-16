@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{cdnc}
+California Digital~Newspaper Collection.
+\newblock http://cdnc.ucr.edu/cdnc, June 2009.
+
+\bibitem{OCR}
+Line Eikvil.
+\newblock Optical character recognition.
+\newblock 1993.
+
+\bibitem{eval}
+Allen~Condit Kazem~Taghva, Julie~Borsack.
+\newblock {\em Evaluation of Model Based Retrieval Effectiveness with OCR
+  Text}, volume~14.
+\newblock New York, US, 1996.
+
+\bibitem{noisy}
+Allen~Condit Kazem~Taghva, Julie~Borsack and Srinivas Erva.
+\newblock {\em Effects of Noisy Data on Text Retrieval}, volume~45.
+\newblock Las Vegas, US, 1993.
+
+\end{thebibliography}
