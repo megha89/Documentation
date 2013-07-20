@@ -9,6 +9,11 @@ Line Eikvil.
 \newblock Optical character recognition.
 \newblock 1993.
 
+\bibitem{vaadin}
+Marko Grönroos.
+\newblock {\em Book of Vaadin: Vaadin 7 Preview edition}.
+\newblock Vaadin Ltd, 2013.
+
 \bibitem{eval}
 Allen~Condit Kazem~Taghva, Julie~Borsack.
 \newblock {\em Evaluation of Model Based Retrieval Effectiveness with OCR

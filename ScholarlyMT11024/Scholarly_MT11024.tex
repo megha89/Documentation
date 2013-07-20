@@ -25,7 +25,7 @@ with Specialization in Data Engineering\\}
 Newspapers are the first draft of history, they have always been a rich source of information for historians, lay researchers, scholars, etc. With the advent of digitized newspapers, its accessibility to the general public has increased. 
 The usability of these old historic newspapers has tremendously increased owing to OCR devices. However the text generated from the OCR devices is often garbled, affecting the efficiency of the retrieved results.\\
 Our goal is to create a web based project that allows a patron to read and edit the articles. The task for editing the electronically translated newspapers is crowdsourced. This crowd based project would help in correcting the OCR errors thus improving the efficiency of retrieved results.\\
-This report describes the OCR Text Correction System, its functions and workflow in section 2 and 3. Section 4 and 5 elaborates on its design model, System specifications and provides the steps to set up the code base. Implementation details with real screenshots and the challanges faced during development are mentioned in Section 6.
+This report describes the OCR Text Correction System, its functions and workflow in section 2 and 3. Section 4 and 5 elaborates on its design model and System specifications respectively. Implementation details with real screenshots and the challanges faced during development are mentioned in Section 6.
 
 \newpage
 \tableofcontents
@@ -153,8 +153,8 @@ It is an Integrated Development Environment (IDE) comprising of a base workspace
 We used the Vaadin plug-in to create our project in Eclipse Juno.
 
 \item Vaadin 6 (Java Framework) plugin for Eclipse \\
+Vaadin is an AJAX web application development framework that enables developers to build high-quality user interfaces with Java, both on the server- and client-side. It provides a set of libraries of ready-to-use user interface components and a clean framework for creating your own components. The focus is on easeof-use, re-usability, extensibility, and meeting the requirements of large enterprise applications.\\
 It is an open source web application for rich Internet applications. It has server side architecture which means that the majority of the logic runs on the server. Ajax technology is used at the browser side to ensure a rich and interactive user experience. On the client-side Vaadin is built on top of Google Web Toolkit (GWT).\\
-It uses Java as the programming language for creating web content. The framework incorporates event-driven programming and widgets.
 
 \item Apache Tomcat 7.0.35
 It is an open source web server and servlet container developed by the Apache Software Foundation (ASF). It implements the Java Servlet and the JavaServer Pages (JSP) specifications from Sun Microsystems, and provides a \textgravedbl pure\textacutedbl Java HTTP web server environment for Java code to run in. \\
@@ -222,49 +222,81 @@ Replace the username and password with the corresponding user's name and passwor
 \section{Implementation}
 \subsection{Functions Implemented}
 \begin{enumerate}
-\item Article Search: Retrieve an article based on a set of criteria like article topic, date range etc.
-\item Headlines: Retrieve links of the headlines of the selected issue from the dropdown list in the left pane.
-\item Images: Retrieve image of the selected articles in the middle pane.
-\item OCR Text: Display the raw OCR article text of the particular headline selected by the user in the left pane.
+\item List of Issues : Populated the combobox with the retrieved list of issues from the database. See figure 1
+\item Article Search : Retrieved an article based on a set of criteria like article topic, date range. See figure 3
+\item Headlines : Retrieved articles are the headlines in the form of links which when clicked returns the OCR text. See figure 3
+\item Images: Retrieved images of the selected articles in the middle pane.
+\item OCR Text : Displayed the raw OCR article text of the user selected headline in the table.
+\item Edit Raw OCR text : Raw OCR text can be edited after clicking the \textasciigrave Edit\textasciiacute button. Once the button is pressed, each row of the table becomes editable.
+\item Save Edited Text : Text edited by the patron gets stored in the database once the \textasciigrave Save\textasciiacute button is pressed.
 \end{enumerate}
+
 \subsection{User Interface}
 The User Interface is designed using Vaadin. Some of our project screenshots are as shown below.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/dropdown.jpg}
+\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/dropdown.jpg}
 \caption{List of issues}
 \label{fig:Phase 1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/datepicker.jpg}
+\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/datepicker.jpg}
 \caption{Datepicker}
-\label{fig:Phase 1}
+\label{fig:Phase 2}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/results.jpg}
+\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/results.jpg}
 \caption{List of headlines in a issue}
-\label{fig:Phase 2}
+\label{fig:Phase 3}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/beforeEditText.jpg}
+\caption{OCR Text of the headline \textasciigrave Amusements\textasciiacute}
+\label{fig:Phase 4}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/ocr_text.jpeg}
-\caption{OCR text of a particular headline}
-\label{fig:Phase 2}
+\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/editing.jpg}
+\caption{Editing the Raw Text}
+\label{fig:Phase 5}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/editscreen.jpg}
-\caption{Edit button to edit OCR Text}
-\label{fig:Phase 2}
+\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/saved.jpg}
+\caption{Edited Text Saved}
+\label{fig:Phase 6}
 \end{figure}
 
+\subsection{Remote Debugging Tomcat using Eclipse}
+To debug our project, we could not simply use the Eclipse Integrated debugger as to debug an executable file is required. So in order to debug a Tomcat application through Eclipse, following steps need to be taken:
+\begin{enumerate}
+    \item Open catalina.bat file which can be found in apache-tomcat-7.0.35/bin/catalina.bat
+\item Insert two statements after "set CLASSPATH=" \\
+CATALINA\_OPTS="-Xdebug-Xrunjdwp:transport=dt\_socket,address=8000,server=y,suspend=n"\\
+JPDA\_OPTS="-agentlib:jdwp=transport=dt\_socket,address=8000,server=y,suspend=n"
+\item Save and close the file. 
+\item Run Tomcat from command prompt using command: \\
+catalina.bat jpda start \\
+instead of using the normal startup.bat
+\item Then in Eclipse create a debug configuration like below:
+Give any name for configuration.
+Give the project name.
+Give the connection type as Standard(Socket Attach)
+Put host as localhost
+Specify port as 8000
+\item After setting the debug configuration, start debugger in Eclipse.
+\end{enumerate}
+  
 \subsection{Challenges}
 There were several challenges faced during the project, few of them are listed below.
 \begin{enumerate}
@@ -274,7 +306,9 @@ There were several challenges faced during the project, few of them are listed b
 \item Incompatible Images: All the images that were available were of the format .jp2 which is JPEG 2000. It uses a wavelet compression algorithm instead of the common DCT compression method that is used with standard JPEG images.\\
 This format can be used to store either lossy or lossless compressed JPEG images and provides the user with a better quality and smaller file size than the traditional JPG image files.\\
 But these images are not supported by the browser, hence they can not be opened in the browser.
-\item Long delays : When instead of using JPEG 2000 which does not open in any browser, we use JPEG images with each image size of around 5-6 MB, the server tends to hang due to large size of the image. Longer delays are experienced to retrieve Raw OCR Text.
+\item Performance Issues : Due to the remote access to the server through tunneling and by using complex subquery to retrieve the OCR text, the server got slow. The time clocked for the server to response for the query was 16 minutes when using 3G network. These long delays and other problems made it difficult to work on real data. \\
+So, the functionality to edit the Raw text was built by setting OCR text in the table a priori. And saving the edited data into the database.
+
 \end{enumerate}
 
 \section{Conclusion}
@@ -284,7 +318,7 @@ Once the system would be functional, it will certainly act as a rich source of i
 \section{Acknowledgement}
 This implementation project was a part of my MTech Scholarly work. I would like to express my gratitude to both my Advisors Dr. Haimonti Dutta and Manoj Pooleery for their constant support and guidance without which I would have never been able to complete it.
 
-\nocite{cdnc,digital,eval,noisy}
+\nocite{cdnc,eval,noisy,vaadin}
 
 \section{Bibiliography}
 \bibliography{Scholarly_report}

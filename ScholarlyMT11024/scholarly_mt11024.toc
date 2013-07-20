@@ -13,10 +13,11 @@
 \contentsline {subsection}{\numberline {5.1}Hardware Specification}{10}
 \contentsline {subsection}{\numberline {5.2}Software Specification}{10}
 \contentsline {subsection}{\numberline {5.3}Setting up the code base}{11}
-\contentsline {section}{\numberline {6}Implementation}{13}
-\contentsline {subsection}{\numberline {6.1}Functions Implemented}{13}
+\contentsline {section}{\numberline {6}Implementation}{14}
+\contentsline {subsection}{\numberline {6.1}Functions Implemented}{14}
 \contentsline {subsection}{\numberline {6.2}User Interface}{14}
-\contentsline {subsection}{\numberline {6.3}Challenges}{17}
-\contentsline {section}{\numberline {7}Conclusion}{17}
-\contentsline {section}{\numberline {8}Acknowledgement}{18}
-\contentsline {section}{\numberline {9}Bibiliography}{18}
+\contentsline {subsection}{\numberline {6.3}Remote Debugging Tomcat using Eclipse}{18}
+\contentsline {subsection}{\numberline {6.4}Challenges}{18}
+\contentsline {section}{\numberline {7}Conclusion}{19}
+\contentsline {section}{\numberline {8}Acknowledgement}{19}
+\contentsline {section}{\numberline {9}Bibiliography}{20}

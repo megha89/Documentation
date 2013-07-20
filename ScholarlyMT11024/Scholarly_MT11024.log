@@ -1,7 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.24)  16 JUL 2013 12:27
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.24)  21 JUL 2013 02:43
 entering extended mode
 **scholarly_mt11024.tex
-(C:\Users\Megha\Documents\LEdProjects\ScholarlyMT11024\scholarly_mt11024.tex
+
+(C:\Users\Megha\Documents\GitHub\Documentation\ScholarlyMT11024\scholarly_mt110
+24.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -235,16 +237,9 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 LaTeX Warning: Unused global option(s):
     [amsart].
 
-(C:\Users\Megha\Documents\LEdProjects\ScholarlyMT11024\scholarly_mt11024.aux
 
-LaTeX Warning: Label `fig:Phase 2' multiply defined.
-
-
-LaTeX Warning: Label `fig:Phase 1' multiply defined.
-
-
-LaTeX Warning: Label `fig:Phase 2' multiply defined.
-
+(C:\Users\Megha\Documents\GitHub\Documentation\ScholarlyMT11024\scholarly_mt110
+24.aux
 
 LaTeX Warning: Label `fig:Phase 2' multiply defined.
 
@@ -301,17 +296,10 @@ Overfull \hbox (14.00674pt too wide) in paragraph at lines 22--22
 [1
 
 {C:/Users/Megha/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-(C:\Users\Megha\Documents\LEdProjects\ScholarlyMT11024\scholarly_mt11024.toc)
+(C:\Users\Megha\Documents\GitHub\Documentation\ScholarlyMT11024\scholarly_mt110
+24.toc)
 \tf@toc=\write3
-
-[3]
-
-LaTeX Warning: Citation `cdnc' on page 4 undefined on input line 37.
-
-
-LaTeX Warning: Citation `OCR' on page 4 undefined on input line 37.
-
-
+ [3]
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
@@ -377,7 +365,12 @@ e (type jpg)
 Package pdftex.def Info: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/
 mvc.jpg used on input line 129.
 (pdftex.def)             Requested size: 256.05855pt x 199.1186pt.
- [9 <C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/mvc.jpg>] [10]
+ [9 <C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/mvc.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 155--158
+
+ []
+
+[10]
 Overfull \hbox (10.58891pt too wide) in paragraph at lines 167--170
 \OT1/cmr/m/n/12 It im-ple-ments the ma-jor-ity of the SQL:2008 stan-dard, is AC
 ID-compliant,
@@ -390,6 +383,12 @@ s
  []
 
 [11]
+Overfull \hbox (15.42496pt too wide) in paragraph at lines 185--188
+\OT1/cmr/m/n/12 Edit log4j.properties, change the value for \TS1/cmr/m/n/12 `\O
+T1/cmr/m/n/12 log4j.appender.A1.File\TS1/cmr/m/n/12 ´\OT1/cmr/m/n/12 to
+ []
+
+
 Overfull \hbox (4.3042pt too wide) in paragraph at lines 191--192
 []\OT1/cmr/m/n/12 edu.columbia.ccls.dh.bodhi.controller (Folder for all the con
 -trollers,
@@ -420,131 +419,156 @@ WebApp,
  []
 
 [13]
-<C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/dropdown.jpg, id=50, 826
-.58812pt x 496.85625pt>
-File: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/dropdown.jpg Graphi
-c file (type jpg)
+<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/dropdown.jpg, i
+d=50, 826.58812pt x 496.85625pt>
+File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/dropdown.j
+pg Graphic file (type jpg)
 
-<use C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/dropdown.jpg>
-Package pdftex.def Info: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/
-dropdown.jpg used on input line 235.
+<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/dropdown.jp
+g>
+Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
+yMT11024/dropdown.jpg used on input line 239.
 (pdftex.def)             Requested size: 398.34698pt x 227.62413pt.
 
-Overfull \hbox (8.34698pt too wide) in paragraph at lines 235--236
+Overfull \hbox (8.34698pt too wide) in paragraph at lines 239--240
  [][] 
  []
 
+[14]
+<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/datepicker.jpg,
+ id=54, 889.07156pt x 497.60907pt>
+File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/datepicker
+.jpg Graphic file (type jpg)
 
-<C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/datepicker.jpg, id=51, 8
-89.07156pt x 497.60907pt>
-File: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/datepicker.jpg Grap
-hic file (type jpg)
-
-<use C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/datepicker.jpg>
-Package pdftex.def Info: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/
-datepicker.jpg used on input line 242.
+<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/datepicker.
+jpg>
+Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
+yMT11024/datepicker.jpg used on input line 246.
 (pdftex.def)             Requested size: 398.32848pt x 227.62733pt.
 
-Overfull \hbox (8.32848pt too wide) in paragraph at lines 242--243
+Overfull \hbox (8.32848pt too wide) in paragraph at lines 246--247
  [][] 
  []
 
-[14 <C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/dropdown.jpg>]
-<C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/results.jpg, id=55, 839.
-38594pt x 525.46312pt>
-File: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/results.jpg Graphic
- file (type jpg)
 
-<use C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/results.jpg>
-Package pdftex.def Info: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/
-results.jpg used on input line 249.
+<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/results.jpg, id
+=55, 839.38594pt x 525.46312pt>
+File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/results.jp
+g Graphic file (type jpg)
+
+<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/results.jpg
+>
+Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
+yMT11024/results.jpg used on input line 253.
 (pdftex.def)             Requested size: 398.34103pt x 227.62048pt.
 
-Overfull \hbox (8.34103pt too wide) in paragraph at lines 249--250
+Overfull \hbox (8.34103pt too wide) in paragraph at lines 253--254
+ [][] 
+ []
+
+[15 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/dropdown.jp
+g> <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/datepicker.j
+pg>]
+<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/beforeEditText.
+jpg, id=59, 837.88031pt x 522.45187pt>
+File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/beforeEdit
+Text.jpg Graphic file (type jpg)
+
+<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/beforeEditT
+ext.jpg>
+Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
+yMT11024/beforeEditText.jpg used on input line 261.
+(pdftex.def)             Requested size: 398.3297pt x 227.62346pt.
+
+Overfull \hbox (8.3297pt too wide) in paragraph at lines 261--262
  [][] 
  []
 
 
-<C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/ocr_text.jpeg, id=56, 94
-7.03813pt x 494.59781pt>
-File: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/ocr_text.jpeg Graph
-ic file (type jpg)
+<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/editing.jpg, id
+=60, 836.3747pt x 523.9575pt>
+File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/editing.jp
+g Graphic file (type jpg)
 
-<use C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/ocr_text.jpeg>
-Package pdftex.def Info: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/
-ocr_text.jpeg used on input line 256.
-(pdftex.def)             Requested size: 398.33133pt x 227.61586pt.
+<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/editing.jpg
+>
+Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
+yMT11024/editing.jpg used on input line 268.
+(pdftex.def)             Requested size: 398.34137pt x 227.61586pt.
 
-Overfull \hbox (8.33133pt too wide) in paragraph at lines 256--257
+Overfull \hbox (8.34137pt too wide) in paragraph at lines 268--269
  [][] 
  []
 
-[15 <C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/datepicker.jpg> <C:/
-Users/Megha/Documents/LEdProjects/ScholarlyMT11024/results.jpg>]
-<C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/editscreen.jpg, id=60, 8
-37.88031pt x 525.46312pt>
-File: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/editscreen.jpg Grap
-hic file (type jpg)
+[16 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/results.jpg
+> <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/beforeEditTex
+t.jpg>]
+<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/saved.jpg, id=6
+4, 839.38594pt x 525.46312pt>
+File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/saved.jpg 
+Graphic file (type jpg)
 
-<use C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/editscreen.jpg>
-Package pdftex.def Info: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/
-editscreen.jpg used on input line 263.
-(pdftex.def)             Requested size: 398.3297pt x 227.62048pt.
+<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/saved.jpg>
+Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
+yMT11024/saved.jpg used on input line 275.
+(pdftex.def)             Requested size: 398.34103pt x 227.62048pt.
 
-Overfull \hbox (8.3297pt too wide) in paragraph at lines 263--264
+Overfull \hbox (8.34103pt too wide) in paragraph at lines 275--276
  [][] 
  []
 
-[16 <C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/ocr_text.jpeg> <C:/U
-sers/Megha/Documents/LEdProjects/ScholarlyMT11024/editscreen.jpg>]
-
-LaTeX Warning: Citation `OCR' on page 17 undefined on input line 281.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 281--283
-
+[17 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/editing.jpg
+> <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/saved.jpg>]
+Overfull \hbox (59.43283pt too wide) in paragraph at lines 283--284
+[]\OT1/cmr/m/n/12 Open catalina.bat file which can be found in apache-tomcat-7.
+0.35/bin/catalina.bat 
  []
 
-[17]
 
-LaTeX Warning: Citation `cdnc' undefined on input line 288.
-
-
-LaTeX Warning: Citation `digital' undefined on input line 288.
-
-
-LaTeX Warning: Citation `eval' undefined on input line 288.
+Overfull \hbox (145.99611pt too wide) in paragraph at lines 284--287
+\OT1/cmr/m/n/12 CATALINA[]OPTS="-Xdebug-Xrunjdwp:transport=dt[]socket,address=8
+000,server=y,suspend=n" 
+ []
 
 
-LaTeX Warning: Citation `noisy' undefined on input line 288.
+Overfull \hbox (95.75359pt too wide) in paragraph at lines 284--287
+\OT1/cmr/m/n/12 JPDA[]OPTS="-agentlib:jdwp=transport=dt[]socket,address=8000,se
+rver=y,suspend=n" 
+ []
 
-(C:\Users\Megha\Documents\LEdProjects\ScholarlyMT11024\scholarly_mt11024.bbl)
 [18]
-(C:\Users\Megha\Documents\LEdProjects\ScholarlyMT11024\scholarly_mt11024.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 315--317
 
-LaTeX Warning: There were undefined references.
+ []
 
+[19]
+(C:\Users\Megha\Documents\GitHub\Documentation\ScholarlyMT11024\scholarly_mt110
+24.bbl
+Missing character: There is no ö in font cmr12!
+) [20]
+(C:\Users\Megha\Documents\GitHub\Documentation\ScholarlyMT11024\scholarly_mt110
+24.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2665 strings out of 493921
- 36177 string characters out of 3147282
- 84325 words of memory out of 3000000
- 5933 multiletter control sequences out of 15000+200000
+ 2674 strings out of 493921
+ 36883 string characters out of 3147282
+ 84376 words of memory out of 3000000
+ 5941 multiletter control sequences out of 15000+200000
  13087 words of font info for 50 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,6n,24p,893b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,6n,24p,884b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Megha\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on scholarly_mt11024.pdf (18 pages, 910871 bytes).
+Output written on scholarly_mt11024.pdf (20 pages, 1465526 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
+ 104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
