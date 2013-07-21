@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.24)  21 JUL 2013 02:55
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.24)  21 JUL 2013 16:39
 entering extended mode
 **scholarly_mt11024.tex
 
@@ -340,9 +340,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--100
  []
 
 [7 <C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/diag.jpg>]
-Overfull \hbox (20.43628pt too wide) in paragraph at lines 108--110
+Overfull \hbox (66.1275pt too wide) in paragraph at lines 108--110
 \OT1/cmr/m/n/12 To ac-cess all the ar-ti-cles re-lated to a par-tic-u-lar is-su
-e us-ing the 'date[]of[]issue'
+e us-ing the \TS1/cmr/m/n/12 `\OT1/cmr/m/n/12 date[]of[]issue\TS1/cmr/m/n/12 ´\
+OT1/cmr/m/n/12 column. 
+ []
+
+
+Overfull \hbox (22.07852pt too wide) in paragraph at lines 114--116
+\OT1/cmr/m/n/12 To ac-cess en-tire text re-lated to a par-tic-u-lar ar-ti-cle u
+s-ing the \TS1/cmr/m/n/12 `\OT1/cmr/m/n/12 ipar[]id\TS1/cmr/m/n/12 ´\OT1/cmr/m/
+n/12 column 
  []
 
 
@@ -434,9 +442,9 @@ Overfull \hbox (8.34698pt too wide) in paragraph at lines 239--240
  [][] 
  []
 
-[14]
+
 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/datepicker.jpg,
- id=54, 889.07156pt x 497.60907pt>
+ id=51, 889.07156pt x 497.60907pt>
 File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/datepicker
 .jpg Graphic file (type jpg)
 
@@ -450,7 +458,8 @@ Overfull \hbox (8.32848pt too wide) in paragraph at lines 246--247
  [][] 
  []
 
-
+[14 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/dropdown.jp
+g>]
 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/results.jpg, id
 =55, 839.38594pt x 525.46312pt>
 File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/results.jp
@@ -466,11 +475,9 @@ Overfull \hbox (8.34103pt too wide) in paragraph at lines 253--254
  [][] 
  []
 
-[15 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/dropdown.jp
-g> <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/datepicker.j
-pg>]
+
 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/beforeEditText.
-jpg, id=59, 837.88031pt x 522.45187pt>
+jpg, id=56, 837.88031pt x 522.45187pt>
 File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/beforeEdit
 Text.jpg Graphic file (type jpg)
 
@@ -484,7 +491,9 @@ Overfull \hbox (8.3297pt too wide) in paragraph at lines 261--262
  [][] 
  []
 
-
+[15 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/datepicker.
+jpg> <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/results.jp
+g>]
 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/editing.jpg, id
 =60, 836.3747pt x 523.9575pt>
 File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/editing.jp
@@ -500,11 +509,9 @@ Overfull \hbox (8.34137pt too wide) in paragraph at lines 268--269
  [][] 
  []
 
-[16 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/results.jpg
-> <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/beforeEditTex
-t.jpg>]
+
 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/saved.jpg, id=6
-4, 839.38594pt x 525.46312pt>
+1, 839.38594pt x 525.46312pt>
 File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/saved.jpg 
 Graphic file (type jpg)
 
@@ -517,8 +524,9 @@ Overfull \hbox (8.34103pt too wide) in paragraph at lines 275--276
  [][] 
  []
 
-[17 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/editing.jpg
-> <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/saved.jpg>]
+[16 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/beforeEditT
+ext.jpg> <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/editin
+g.jpg>]
 Overfull \hbox (59.43283pt too wide) in paragraph at lines 283--284
 []\OT1/cmr/m/n/12 Open catalina.bat file which can be found in apache-tomcat-7.
 0.35/bin/catalina.bat 
@@ -536,16 +544,17 @@ Overfull \hbox (95.75359pt too wide) in paragraph at lines 284--287
 rver=y,suspend=n" 
  []
 
+[17 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/saved.jpg>]
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 315--317
+Underfull \hbox (badness 10000) in paragraph at lines 319--321
 
  []
 
-[19]
+
 (C:\Users\Megha\Documents\GitHub\Documentation\ScholarlyMT11024\scholarly_mt110
 24.bbl
 Missing character: There is no ö in font cmr12!
-) [20]
+ [19]) [20]
 (C:\Users\Megha\Documents\GitHub\Documentation\ScholarlyMT11024\scholarly_mt110
 24.aux)
 
@@ -553,22 +562,22 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2674 strings out of 493921
- 36883 string characters out of 3147282
+ 2672 strings out of 493921
+ 36851 string characters out of 3147282
  84376 words of memory out of 3000000
- 5941 multiletter control sequences out of 15000+200000
+ 5939 multiletter control sequences out of 15000+200000
  13087 words of font info for 50 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,6n,24p,884b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,6n,24p,885b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Megha\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on scholarly_mt11024.pdf (20 pages, 1465522 bytes).
+Output written on scholarly_mt11024.pdf (20 pages, 1465402 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
+ 102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

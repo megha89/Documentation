@@ -24,8 +24,8 @@ with Specialization in Data Engineering\\}
 \section{Abstract}
 Newspapers are the first draft of history, they have always been a rich source of information for historians, lay researchers, scholars, etc. With the advent of digitized newspapers, its accessibility to the general public has increased. 
 The usability of these old historic newspapers has tremendously increased owing to OCR devices. However the text generated from the OCR devices is often garbled, affecting the efficiency of the retrieved results.\\
-Our goal is to create a web based project that allows a patron to read and edit the articles. The task for editing the electronically translated newspapers is crowdsourced. This crowd based project would help in correcting the OCR errors thus improving the efficiency of retrieved results.\\
-This report describes the OCR Text Correction System, its functions and workflow in section 2 and 3. Section 4 and 5 elaborates on its design model and System specifications respectively. Implementation details with real screenshots and the challanges faced during development are mentioned in Section 6.
+Our goal is to create a web based project that allows a patron to read and edit the articles. The task for editing the electronically translated newspapers is crowd sourced. This crowd based project would help in correcting the OCR errors thus improving the efficiency of retrieved results.\\
+This report describes the OCR Text Correction System, its functions and workflow in section 2 and 3. Section 4 and 5 elaborates on its design model and System specifications respectively. Implementation details with real screenshots and the challenges faced during development are mentioned in Section 6.
 
 \newpage
 \tableofcontents
@@ -34,11 +34,11 @@ This report describes the OCR Text Correction System, its functions and workflow
 \section{Introduction}
 
 \subsection{Problem Description}
-This is a web based crowdsourcing project where patrons can edit the electronically translated or OCR-ed text of old historic newspapers present in the holdings of California Digital Newspaper Collection (CDNC) \cite{cdnc}. The OCR-ed text is often garbled due to inaccurate OCR devices. The accuracy of a device depends on the following factors: variations in the quality of input paper, size and style of font, column layout, etc. In our case, the quality of input paper is very poor as the newspapers date back to 1846. This adversely affects the retrieval effectiveness, hence the techniques for cleaning the OCR \cite{OCR} need to be improvised. Often such techniques involve laborious and time consuming manual processing of data. By correcting the garbled text, we will be able to improve the retrieved results thus making our users satisfied. \\
+This is a web based crowd sourcing project where patrons can edit the electronically translated or OCR-ed text of old historic newspapers present in the holdings of California Digital Newspaper Collection (CDNC) \cite{cdnc}. The OCR-ed text is often garbled due to inaccurate OCR devices. The accuracy of a device depends on the following factors: variations in the quality of input paper, size and style of font, column layout, etc. In our case, the quality of input paper is very poor as the newspapers date back to 1846. This adversely affects the retrieval effectiveness, hence the techniques for cleaning the OCR \cite{OCR} need to be improvised. Often such techniques involve laborious and time consuming manual processing of data. By correcting the garbled text, we will be able to improve the retrieved results thus making our users satisfied. \\
 
 \subsection{Scope \& Objectives}
-The objective of this project is to build a software that is usable, intuitive, simple and functions well consistently. It utilizes the \textgravedbl Wisdom of the Crowd\textacutedbl to gather information about the historical newspaper articles and magazines, and utilize Machine Learning for further analysis of data.\\
-Our main focus here is on developing a web interface equipped with a text correction tool for enabling the users to correct the OCR errors as they come across them. By crowdsourcing this project, we accomplish more with fewer resources and build a user community in process.\\
+The objective of this project is to build a software that is usable, intuitive, simple and functions well consistently. It utilizes the \textasciigrave Wisdom of the Crowd\textasciiacute to gather information about the historical newspaper articles and magazines, and utilize Machine Learning for further analysis of data.\\
+Our main focus here is on developing a web interface equipped with a text correction tool for enabling the users to correct the OCR errors as they come across them. By crowd sourcing this project, we accomplish more with fewer resources and build a user community in process.\\
 The software is responsible for a host of functions. Its basic functions are searching and displaying images of issues, search by issue name and date range, user management functions, text correction functionality.\\
 \subsection{Software Functions}
 The project functions can be categorized into the following:
@@ -66,13 +66,13 @@ Phase 3 included advance searching and functionality of tool. \\
 \subsection{Workflow of the System}
 \begin{itemize}
     \item In Phase 1, the first task was to design and build the layout of the interface. The user interface components in Vaadin can roughly be divided in two groups: components that the user can interact with and layout components for placing the other components to specific places in the UI. We started by creating a content layout for the UI, and then added the other layout components hierarchically, and finally the interaction components as the leaves of the component tree.\\
-The Root Layout in this project is the Vertical Layout which encompasses two Horizontal Layouts, called mainLayout for the search options and the other called as bottomLayout. The bottomLayout is again divided into three panels called tool panel, image panel and function panel at left, center and right side of the screen respectively. The tool panel consists of tables, text correction tool, etc. The image panel consists of newspaper's images. And the function panel contains the user management controls.
+The Root Layout in this project is the Vertical Layout which encompasses two Horizontal Layouts, called \textasciigrave mainLayout\textasciiacute for the search options and the other called as \textasciigrave bottomLayout\textasciiacute. The bottomLayout is again divided into three panels called tool panel, image panel and function panel at left, center and right side of the screen respectively. The tool panel consists of tables, text correction tool, etc. The image panel consists of newspaper's images. And the function panel contains the user management controls.
 
 \item Then we had to incorporate the basic search functionality on the basis of issue names given in the combobox, using date range from the date picker.
 Once a issue is selected from the dropdown list and the search button is clicked, we get all the headlines of the selected issue in a table in the tool panel. And the images of the corresponding issue is displayed in the image panel. The headlines are in the form of links which when clicked shows the entire article in the table itself.
-\item In Phase 2, the actual implementation of collaborative text correction tool takes place. Once we get the entire OCR text in the rows of a table, it also gets highlighted in the image at the image panel. Once \textgravedbl Edit Text\textacutedbl button is clicked, the OCR text becomes editable and a save button is displayed at the bottom of the left hand pane. A user can correct the text in the left panel to match it with the text in the image. 
-\item Once the \textgravedbl Save\textacutedbl button is clicked, a check is performed against the database to determine which lines of text have been changed.  Only those text lines that have been changed are saved as a new version.
-\item In Phase 3, we incorporate user management funcions, advance search options like phrase searching, enhance UI features and other functionalities of the tool.
+\item In Phase 2, the actual implementation of collaborative text correction tool takes place. Once we get the entire OCR text in the rows of a table, it also gets highlighted in the image at the image panel. Once \textasciigrave Edit Text\textasciiacute button is clicked, the OCR text becomes editable and a save button is displayed at the bottom of the left hand pane. A user can correct the text in the left panel to match it with the text in the image. 
+\item Once the \textasciigrave Save\textasciiacute button is clicked, a check is performed against the database to determine which lines of text have been changed.  Only those text lines that have been changed are saved as a new version.
+\item In Phase 3, we incorporate user management functions, advance search options like phrase searching, enhance UI features and other functionalities of the tool.
 \end{itemize}
 
 \section{Design Models}
@@ -103,19 +103,19 @@ We have used views to access the tables present in the database. A View is a vir
 Following Views are used by our front end:
 \begin{itemize}
 \item vw\_issu\_page\_files \\
-To get the page file locations (and related data) related to particular issue using the 'date\_of\_issue' column.
+To get the page file locations (and related data) related to particular issue using the \textasciigrave date\_of\_issue\textasciiacute column.
 
 \item vw\_issue\_articles \\
-To access all the articles related to a particular issue using the 'date\_of\_issue' column.
+To access all the articles related to a particular issue using the \textasciigrave date\_of\_issue\textasciiacute column.
 
 \item vw\_image\_info \\
-To access the coordinates, shapes and related data for each article using the 'ipar\_id' column.
+To access the coordinates, shapes and related data for each article using the \textasciigrave ipar\_id\textasciiacute column.
 
 \item vw\_article\_text \\
-To access entire text related to a particular article using the 'ipar\_id' column
+To access entire text related to a particular article using the \textasciigrave ipar\_id\textasciiacute column
 \end{itemize}
 \subsection{Architectural Design}
-The architectural style that suits this project is the Model-View-Controller (MVC) architecture. It is the software architecture pattern that seperates the representation of information from user's interaction with it. It is used by applications that need the ability to maintain multiple views of the same data. The interaction between the three components is defined as: \\
+The architectural style that suits this project is the Model-View-Controller (MVC) architecture. It is the software architecture pattern that separates the representation of information from user's interaction with it. It is used by applications that need the ability to maintain multiple views of the same data. The interaction between the three components is defined as: \\
 
 \begin{itemize}
 \item A controller sends commands to its associated view to change the view's presentation of the model. It can also send commands to the model to update the model's state. It processes every request, prepares other parts of the system like model and view.
@@ -153,11 +153,11 @@ It is an Integrated Development Environment (IDE) comprising of a base workspace
 We used the Vaadin plug-in to create our project in Eclipse Juno.
 
 \item Vaadin 6 (Java Framework) plugin for Eclipse \\
-Vaadin is an AJAX web application development framework that enables developers to build high-quality user interfaces with Java, both on the server- and client-side. It provides a set of libraries of ready-to-use user interface components and a clean framework for creating your own components. The focus is on easeof-use, re-usability, extensibility, and meeting the requirements of large enterprise applications.\\
+Vaadin is an AJAX web application development framework that enables developers to build high-quality user interfaces with Java, both on the server- and client-side. It provides a set of libraries of ready-to-use user interface components and a clean framework for creating your own components. The focus is on ease-of-use, re-usability, extensibility, and meeting the requirements of large enterprise applications.\\
 It is an open source web application for rich Internet applications. It has server side architecture which means that the majority of the logic runs on the server. Ajax technology is used at the browser side to ensure a rich and interactive user experience. On the client-side Vaadin is built on top of Google Web Toolkit (GWT).\\
 
 \item Apache Tomcat 7.0.35
-It is an open source web server and servlet container developed by the Apache Software Foundation (ASF). It implements the Java Servlet and the JavaServer Pages (JSP) specifications from Sun Microsystems, and provides a \textgravedbl pure\textacutedbl Java HTTP web server environment for Java code to run in. \\
+It is an open source web server and servlet container developed by the Apache Software Foundation (ASF). It implements the Java Servlet and the JavaServer Pages (JSP) specifications from Sun Microsystems, and provides a pure Java HTTP web server environment for Java code to run in. \\
 It includes tools for configuration and management, but can also be configured by editing XML configuration files.
 
 \item Apache Ant 1.8.4
@@ -185,8 +185,8 @@ Following are the steps to get the application working:
 \item config (This folder should have two files - log4j.properties and BodhiWebApplication.properties)\\
 Edit log4j.properties, change the value for \textasciigrave log4j.appender.A1.File\textasciiacute to a specific directory on your machine.\\
 No changes are required in BodhiWebApplication.properties
-\item doc (This is the directory for any documents, including javadoc, for now, this is empty)
-\item resources (If the application is going to use any external resources, they will be stored here, for now, this is empty)
+\item doc (This is the directory for any documents, including javadoc)
+\item resources (If the application is going to use any external resources, they will be stored here)
 \item src (Root folder for all the source files)
 \item edu.columbia.ccls.dh.bodhi.controller (Folder for all the controllers, these will have the logic to direct the calls to specific components. It will have the code to instantiate the models and views corresponding to the action chosen by the user)
 \item edu.columbia.ccls.dh.bodhi.model (Folder for all the model classes, typically any database objects that need representation)
@@ -209,7 +209,7 @@ No changes are required in BodhiWebApplication.properties
 ssh -Nn -L 5555:localhost:5432 username@tesla.ldeo.columbia.edu \& \\
 Replace the username and password with the corresponding user's name and password.
 
-\item Open another command prompt, change the directory to the root folder of  the project and type ant war. This will compile the project, create a war file and deploy it to the Tomcat's webapps directory.
+\item Open another command prompt, change the directory to the root folder of  the project and type ant war. This will compile the project, create a war file and deploy it to the Tomcat's \textasciigrave webapps\textasciiacute directory.
 
 \item Start Tomcat (if it is not already running), go to bin and run startup.bat to start the server and shutdown.bat to shutdown the server.
 
@@ -289,11 +289,15 @@ JPDA\_OPTS="-agentlib:jdwp=transport=dt\_socket,address=8000,server=y,suspend=n"
 catalina.bat jpda start \\
 instead of using the normal startup.bat
 \item Then in Eclipse create a debug configuration like below:
-Give any name for configuration.
-Give the project name.
-Give the connection type as Standard(Socket Attach)
-Put host as localhost
-Specify port as 8000
+
+\begin{itemize}
+    \item Give the project name.
+\item Give the connection type as Standard(Socket Attach)
+\item Put the host as localhost
+\item Specify port as 8000
+\item Give any name for configuration.
+\end{itemize}
+
 \item After setting the debug configuration, start debugger in Eclipse.
 \end{enumerate}
   
@@ -316,7 +320,7 @@ The OCR \cite{OCR} Text Correction System has not been fully implemented yet. Th
 Once the system would be functional, it will certainly act as a rich source of information for historians, researchers, scholars and users in general.\\
 
 \section{Acknowledgement}
-This implementation project was a part of my MTech Scholarly work. I would like to express my gratitude to both my Advisors Dr. Haimonti Dutta and Manoj Pooleery for their constant support and guidance without which I would have never been able to complete it.
+This implementation project was a part of my M.Tech Scholarly work. I would like to express my gratitude to both my Advisors Dr. Haimonti Dutta and Manoj Pooleery for their constant support and guidance without which I would have never been able to complete it.
 
 \nocite{cdnc,eval,noisy,vaadin}
 
