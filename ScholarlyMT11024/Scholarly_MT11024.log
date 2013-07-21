@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.24)  21 JUL 2013 16:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.24)  21 JUL 2013 18:56
 entering extended mode
 **scholarly_mt11024.tex
 
@@ -325,21 +325,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--65
  []
 
 [5]
-<C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/diag.jpg, id=21, 378.664
-69pt x 519.44063pt>
-File: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/diag.jpg Graphic fi
-le (type jpg)
+<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/diag.jpg, id=21
+, 378.66469pt x 519.44063pt>
+File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/diag.jpg G
+raphic file (type jpg)
 
-<use C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/diag.jpg>
-Package pdftex.def Info: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/
-diag.jpg used on input line 84.
+<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/diag.jpg>
+Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
+yMT11024/diag.jpg used on input line 84.
 (pdftex.def)             Requested size: 284.52939pt x 284.5281pt.
- [6]
+
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 94--100
 
  []
 
-[7 <C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/diag.jpg>]
+[7 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/diag.jpg>]
 Overfull \hbox (66.1275pt too wide) in paragraph at lines 108--110
 \OT1/cmr/m/n/12 To ac-cess all the ar-ti-cles re-lated to a par-tic-u-lar is-su
 e us-ing the \TS1/cmr/m/n/12 `\OT1/cmr/m/n/12 date[]of[]issue\TS1/cmr/m/n/12 ´\
@@ -364,16 +365,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--126
  []
 
 
-<C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/mvc.jpg, id=33, 7227.0pt
- x 7913.565pt>
-File: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/mvc.jpg Graphic fil
-e (type jpg)
+<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/mvc1.jpg, id=33
+, 434.37282pt x 371.88937pt>
+File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/mvc1.jpg G
+raphic file (type jpg)
 
-<use C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/mvc.jpg>
-Package pdftex.def Info: C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/
-mvc.jpg used on input line 129.
-(pdftex.def)             Requested size: 256.05855pt x 199.1186pt.
- [9 <C:/Users/Megha/Documents/LEdProjects/ScholarlyMT11024/mvc.jpg>]
+<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/mvc1.jpg>
+Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
+yMT11024/mvc1.jpg used on input line 129.
+(pdftex.def)             Requested size: 256.08553pt x 199.17163pt.
+
+[9 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/mvc1.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 155--158
 
  []
@@ -562,8 +564,8 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2672 strings out of 493921
- 36851 string characters out of 3147282
+ 2671 strings out of 493921
+ 36874 string characters out of 3147282
  84376 words of memory out of 3000000
  5939 multiletter control sequences out of 15000+200000
  13087 words of font info for 50 fonts, out of 3000000 for 9000
@@ -575,7 +577,7 @@ pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on scholarly_mt11024.pdf (20 pages, 1465402 bytes).
+Output written on scholarly_mt11024.pdf (20 pages, 1493906 bytes).
 PDF statistics:
  102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
