@@ -1,24 +1,21 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.24)  21 JUL 2013 20:39
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2007.5.18)  22 JUL 2013 13:51
 entering extended mode
-**scholarly_mt11024.tex
-
-(C:\Users\Megha\Documents\GitHub\Documentation\ScholarlyMT11024\scholarly_mt110
-24.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
-File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+\write18 enabled.
+ %&-line parsing enabled.
+**Scholarly_MT11024.tex
+(./Scholarly_MT11024.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
+erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
+ french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
+us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
+tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
+turkish, ukenglish, ukrainian, loaded.
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -32,24 +29,24 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks14
 \ex@=\dimen103
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count87
@@ -90,7 +87,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\classes\amsthm.sty"
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks19
 \thm@bodyfont=\toks20
@@ -102,17 +99,17 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip48
 \dth@everypar=\toks24
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
-Package: amssymb 2009/06/22 v3.00
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
-Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -127,7 +124,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 266.
@@ -162,70 +159,49 @@ Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
 Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
 Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
 Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
-Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
-Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
-Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
-Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
-Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
-Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
-Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
-Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
-Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
-Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
-Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
-Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
-Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
-Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
-Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
-Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
-Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
-Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
-Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
-Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
-Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
-Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
-Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
-Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
-Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
-Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
-Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
-Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
-Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
-Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/local/texlive/2007/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/local/texlive/2007/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks25
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2007/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+(/usr/local/texlive/2007/texmf/tex/latex/config/graphics.cfg
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 90.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
+(/usr/local/texlive/2007/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2007/01/08 v0.04d Graphics/color for pdfTeX
 \Gread@gobject=\count99
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+(/usr/local/texlive/2007/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count100
 \float@exts=\toks26
@@ -237,9 +213,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 LaTeX Warning: Unused global option(s):
     [amsart].
 
-
-(C:\Users\Megha\Documents\GitHub\Documentation\ScholarlyMT11024\scholarly_mt110
-24.aux
+(./Scholarly_MT11024.aux
 
 LaTeX Warning: Label `fig:Phase 2' multiply defined.
 
@@ -247,339 +221,263 @@ LaTeX Warning: Label `fig:Phase 2' multiply defined.
 LaTeX Warning: Label `fig:Phase 2' multiply defined.
 
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 21.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+\openout1 = `Scholarly_MT11024.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 22.
+ (/usr/local/texlive/2007/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    ... okay on input line 22.
 
-(C:\Users\Megha\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+(/usr/local/texlive/2007/texmf-dist/tex/context/base/supp-pdf.tex
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count101
 \scratchdimen=\dimen114
 \scratchbox=\box30
 \nofMPsegments=\count102
 \nofMParguments=\count103
-\everyMPshowfont=\toks28
 \MPscratchCnt=\count104
 \MPscratchDim=\dimen115
 \MPnumerator=\count105
-\makeMPintoPDFobject=\count106
-\everyMPtoPDFconversion=\toks29
+\everyMPtoPDFconversion=\toks28
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 22.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+LaTeX Font Info:    Try loading font information for U+msa on input line 23.
+ (/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 22.
+LaTeX Font Info:    Try loading font information for U+msb on input line 23.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+(/usr/local/texlive/2007/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 )
-Overfull \hbox (14.00674pt too wide) in paragraph at lines 22--22
- [][] 
- []
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 23.
 
-[1
+(/usr/local/texlive/2007/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
+ [1
 
-{C:/Users/Megha/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-(C:\Users\Megha\Documents\GitHub\Documentation\ScholarlyMT11024\scholarly_mt110
-24.toc)
+{/usr/local/texlive/2007/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+(./Scholarly_MT11024.toc)
 \tf@toc=\write3
+\openout3 = `Scholarly_MT11024.toc'.
+
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--43
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--51
+Underfull \hbox (badness 10000) in paragraph at lines 59--64
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 52--56
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--65
+Underfull \hbox (badness 10000) in paragraph at lines 74--78
 
  []
 
-[5]
-<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/diag.jpg, id=21
-, 378.66469pt x 519.44063pt>
-File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/diag.jpg G
-raphic file (type jpg)
-
-<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/diag.jpg>
-Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
-yMT11024/diag.jpg used on input line 84.
-(pdftex.def)             Requested size: 284.52939pt x 284.5281pt.
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 94--100
+[5] <diag.jpg, id=26, 378.66469pt x 519.44063pt>
+File: diag.jpg Graphic file (type jpg)
+ <use diag.jpg> [6]
+Underfull \hbox (badness 10000) in paragraph at lines 107--113
 
  []
 
-[7 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/diag.jpg>]
-Overfull \hbox (66.1275pt too wide) in paragraph at lines 108--110
+[7 <./diag.jpg>]
+Overfull \hbox (66.1275pt too wide) in paragraph at lines 121--123
 \OT1/cmr/m/n/12 To ac-cess all the ar-ti-cles re-lated to a par-tic-u-lar is-su
 e us-ing the \TS1/cmr/m/n/12 `\OT1/cmr/m/n/12 date[]of[]issue\TS1/cmr/m/n/12 ´\
 OT1/cmr/m/n/12 column. 
  []
 
 
-Overfull \hbox (22.07852pt too wide) in paragraph at lines 114--116
+Overfull \hbox (22.07852pt too wide) in paragraph at lines 127--129
 \OT1/cmr/m/n/12 To ac-cess en-tire text re-lated to a par-tic-u-lar ar-ti-cle u
 s-ing the \TS1/cmr/m/n/12 `\OT1/cmr/m/n/12 ipar[]id\TS1/cmr/m/n/12 ´\OT1/cmr/m/
 n/12 column 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
-
-<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/mvc1.jpg, id=33
-, 434.37282pt x 371.88937pt>
-File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/mvc1.jpg G
-raphic file (type jpg)
-
-<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/mvc1.jpg>
-Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
-yMT11024/mvc1.jpg used on input line 129.
-(pdftex.def)             Requested size: 256.08553pt x 199.17163pt.
-
-[9 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/mvc1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 155--158
+<mvc1.jpg, id=37, 434.37282pt x 371.88937pt>
+File: mvc1.jpg Graphic file (type jpg)
+ <use mvc1.jpg> [9 <./mvc1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 168--171
 
  []
 
 [10]
-Overfull \hbox (10.58891pt too wide) in paragraph at lines 167--170
+Overfull \hbox (10.58891pt too wide) in paragraph at lines 180--183
 \OT1/cmr/m/n/12 It im-ple-ments the ma-jor-ity of the SQL:2008 stan-dard, is AC
 ID-compliant,
  []
 
 
-Overfull \hbox (21.09021pt too wide) in paragraph at lines 180--181
+Overfull \hbox (21.09021pt too wide) in paragraph at lines 193--194
 \OT1/cmr/m/n/12 https://power.ldeo.columbia.edu/svn/Proj/NYPL/Bodhi/Code/WebApp
 s
  []
 
 [11]
-Overfull \hbox (15.42496pt too wide) in paragraph at lines 185--188
+Overfull \hbox (15.42496pt too wide) in paragraph at lines 198--201
 \OT1/cmr/m/n/12 Edit log4j.properties, change the value for \TS1/cmr/m/n/12 `\O
 T1/cmr/m/n/12 log4j.appender.A1.File\TS1/cmr/m/n/12 ´\OT1/cmr/m/n/12 to
  []
 
 
-Overfull \hbox (4.3042pt too wide) in paragraph at lines 191--192
+Overfull \hbox (4.3042pt too wide) in paragraph at lines 204--205
 []\OT1/cmr/m/n/12 edu.columbia.ccls.dh.bodhi.controller (Folder for all the con
 -trollers,
  []
 
 
-Overfull \hbox (0.51813pt too wide) in paragraph at lines 192--193
+Overfull \hbox (0.51813pt too wide) in paragraph at lines 205--206
 []\OT1/cmr/m/n/12 edu.columbia.ccls.dh.bodhi.model (Folder for all the model cl
 asses,
  []
 
 
-Overfull \hbox (8.7pt too wide) in paragraph at lines 193--194
+Overfull \hbox (8.7pt too wide) in paragraph at lines 206--207
 []\OT1/cmr/m/n/12 edu.columbia.ccls.dh.bodhi.view (Folder for con-struct-ing th
 e HTML
  []
 
 [12]
-Overfull \hbox (0.42233pt too wide) in paragraph at lines 214--215
+Overfull \hbox (0.42233pt too wide) in paragraph at lines 227--228
 []\OT1/cmr/m/n/12 Start Tom-cat (if it is not al-ready run-ning), go to bin and
  run startup.bat
  []
 
 
-Overfull \hbox (14.11803pt too wide) in paragraph at lines 216--217
+Overfull \hbox (14.11803pt too wide) in paragraph at lines 229--230
 []\OT1/cmr/m/n/12 Open up a web browser, go to http://localhost:8080/bodhi/Main
 WebApp,
  []
 
-[13]
-<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/dropdown.jpg, i
-d=50, 826.58812pt x 496.85625pt>
-File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/dropdown.j
-pg Graphic file (type jpg)
-
-<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/dropdown.jp
-g>
-Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
-yMT11024/dropdown.jpg used on input line 239.
-(pdftex.def)             Requested size: 398.34698pt x 227.62413pt.
-
-Overfull \hbox (8.34698pt too wide) in paragraph at lines 239--240
+[13] <dropdown.jpg, id=54, 826.58812pt x 496.85625pt>
+File: dropdown.jpg Graphic file (type jpg)
+ <use dropdown.jpg>
+Overfull \hbox (8.34698pt too wide) in paragraph at lines 252--253
  [][] 
  []
 
-
-<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/datepicker.jpg,
- id=51, 889.07156pt x 497.60907pt>
-File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/datepicker
-.jpg Graphic file (type jpg)
-
-<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/datepicker.
-jpg>
-Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
-yMT11024/datepicker.jpg used on input line 246.
-(pdftex.def)             Requested size: 398.32848pt x 227.62733pt.
-
-Overfull \hbox (8.32848pt too wide) in paragraph at lines 246--247
+<datepicker.jpg, id=55, 889.07156pt x 497.60907pt>
+File: datepicker.jpg Graphic file (type jpg)
+ <use datepicker.jpg>
+Overfull \hbox (8.32848pt too wide) in paragraph at lines 259--260
  [][] 
  []
 
-[14 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/dropdown.jp
-g>]
-<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/results.jpg, id
-=55, 839.38594pt x 525.46312pt>
-File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/results.jp
-g Graphic file (type jpg)
+[14 <./dropdown.jpg>] <results.jpg, id=59, 839.38594pt x 525.46312pt>
+File: results.jpg Graphic file (type jpg)
 
-<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/results.jpg
->
-Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
-yMT11024/results.jpg used on input line 253.
-(pdftex.def)             Requested size: 398.34103pt x 227.62048pt.
-
-Overfull \hbox (8.34103pt too wide) in paragraph at lines 253--254
+<use results.jpg>
+Overfull \hbox (8.34103pt too wide) in paragraph at lines 266--267
  [][] 
  []
 
+<beforeEditText.jpg, id=60, 837.88031pt x 522.45187pt>
+File: beforeEditText.jpg Graphic file (type jpg)
 
-<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/beforeEditText.
-jpg, id=56, 837.88031pt x 522.45187pt>
-File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/beforeEdit
-Text.jpg Graphic file (type jpg)
-
-<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/beforeEditT
-ext.jpg>
-Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
-yMT11024/beforeEditText.jpg used on input line 261.
-(pdftex.def)             Requested size: 398.3297pt x 227.62346pt.
-
-Overfull \hbox (8.3297pt too wide) in paragraph at lines 261--262
+<use beforeEditText.jpg>
+Overfull \hbox (8.3297pt too wide) in paragraph at lines 274--275
  [][] 
  []
 
-[15 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/datepicker.
-jpg> <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/results.jp
-g>]
-<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/editing.jpg, id
-=60, 836.3747pt x 523.9575pt>
-File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/editing.jp
-g Graphic file (type jpg)
-
-<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/editing.jpg
->
-Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
-yMT11024/editing.jpg used on input line 268.
-(pdftex.def)             Requested size: 398.34137pt x 227.61586pt.
-
-Overfull \hbox (8.34137pt too wide) in paragraph at lines 268--269
+[15 <./datepicker.jpg> <./results.jpg>]
+<editing.jpg, id=64, 836.3747pt x 523.9575pt>
+File: editing.jpg Graphic file (type jpg)
+ <use editing.jpg>
+Overfull \hbox (8.34137pt too wide) in paragraph at lines 281--282
  [][] 
  []
 
-
-<C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/saved.jpg, id=6
-1, 839.38594pt x 525.46312pt>
-File: C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/saved.jpg 
-Graphic file (type jpg)
-
-<use C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/saved.jpg>
-Package pdftex.def Info: C:/Users/Megha/Documents/GitHub/Documentation/Scholarl
-yMT11024/saved.jpg used on input line 275.
-(pdftex.def)             Requested size: 398.34103pt x 227.62048pt.
-
-Overfull \hbox (8.34103pt too wide) in paragraph at lines 275--276
+<saved.jpg, id=65, 839.38594pt x 525.46312pt>
+File: saved.jpg Graphic file (type jpg)
+ <use saved.jpg>
+Overfull \hbox (8.34103pt too wide) in paragraph at lines 288--289
  [][] 
  []
 
-[16 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/beforeEditT
-ext.jpg> <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/editin
-g.jpg>]
-Overfull \hbox (59.43283pt too wide) in paragraph at lines 283--284
+[16 <./beforeEditText.jpg> <./editing.jpg>]
+Overfull \hbox (59.43283pt too wide) in paragraph at lines 296--297
 []\OT1/cmr/m/n/12 Open catalina.bat file which can be found in apache-tomcat-7.
 0.35/bin/catalina.bat 
  []
 
 
-Overfull \hbox (145.99611pt too wide) in paragraph at lines 284--287
+Overfull \hbox (145.99611pt too wide) in paragraph at lines 297--300
 \OT1/cmr/m/n/12 CATALINA[]OPTS="-Xdebug-Xrunjdwp:transport=dt[]socket,address=8
 000,server=y,suspend=n" 
  []
 
 
-Overfull \hbox (95.75359pt too wide) in paragraph at lines 284--287
+Overfull \hbox (95.75359pt too wide) in paragraph at lines 297--300
 \OT1/cmr/m/n/12 JPDA[]OPTS="-agentlib:jdwp=transport=dt[]socket,address=8000,se
 rver=y,suspend=n" 
  []
 
-[17 <C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/saved.jpg>]
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 319--321
+[17 <./saved.jpg>] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 332--334
 
  []
 
-
-(C:\Users\Megha\Documents\GitHub\Documentation\ScholarlyMT11024\scholarly_mt110
-24.bbl
+(./Scholarly_MT11024.bbl
 Missing character: There is no ö in font cmr12!
- [19]) [20]
-(C:\Users\Megha\Documents\GitHub\Documentation\ScholarlyMT11024\scholarly_mt110
-24.aux)
+ [19]) [20] (./Scholarly_MT11024.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2671 strings out of 493921
- 36874 string characters out of 3147282
- 84376 words of memory out of 3000000
- 5939 multiletter control sequences out of 15000+200000
- 13087 words of font info for 50 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 27i,6n,24p,885b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Megha\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on scholarly_mt11024.pdf (20 pages, 1493901 bytes).
+ 2426 strings out of 94073
+ 31052 string characters out of 1162984
+ 76300 words of memory out of 1500000
+ 5684 multiletter control sequences out of 10000+50000
+ 13741 words of font info for 53 fonts, out of 1200000 for 2000
+ 645 hyphenation exceptions out of 8191
+ 27i,8n,24p,824b,264s stack positions out of 5000i,500n,6000p,200000b,5000s
+{/usr/local/texlive/2007/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}</usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/lo
+cal/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texliv
+e/2007/texmf-dist/fonts/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/2007/tex
+mf-dist/fonts/type1/bluesky/cm/cmr17.pfb></usr/local/texlive/2007/texmf-dist/fo
+nts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/b
+luesky/cm/cmr8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/c
+msy10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmti12.pfb
+></usr/local/texlive/2007/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Scholarly_MT11024.pdf (20 pages, 1478518 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
+ 112 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

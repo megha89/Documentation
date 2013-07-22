@@ -2,17 +2,18 @@
 \usepackage{amsmath, amsthm, amssymb, amsfonts, textcomp}
 \usepackage{graphicx}
 \usepackage{float}
-\title{Design and Implementation of OCR Text Correction by Crowdsourcing on Historic Newspaper Archive}
+\title{BODHI: A System for Crowdsourced OCR Text Correction}
 \author{Student Name: Megha Gupta\\
 IIIT-D-MTech-CS-DE-13-MT11024\\
 Indraprastha Institute of Information Technology,
 New Delhi\\
-\\
-Advisor: Dr. Haimonti Dutta* \\
-Co-Advisor: Manoj Pooleery* \\
-*Affiliated to The Center for Computational Learning Systems,\\
-Columbia University, New York\\
-\\
+meghag@iiitd.ac.in
+\\ \\
+Advisor(s): Dr. Haimonti Dutta and Mr. Manoj Pooleery \\
+The Center for Computational Learning Systems (CCLS),\\
+Columbia University, New York.\\
+\{haimonti,manoj\}@ccls.columbia.edu \\
+\\ \\ \\ \\ \\ \\ \\ \\ \\ \\  
 Submitted in partial fulfillment of the requirements\\
 for the degree of MTech in Computer Science\\
 with Specialization in Data Engineering\\}
@@ -22,10 +23,13 @@ with Specialization in Data Engineering\\}
 \maketitle
 \newpage
 \section{Abstract}
-Newspapers are the first draft of history, they have always been a rich source of information for historians, lay researchers, scholars, etc. With the advent of digitized newspapers, its accessibility to the general public has increased. 
-The usability of these old historic newspapers has tremendously increased owing to OCR devices. However the text generated from the OCR devices is often garbled, affecting the efficiency of the retrieved results.\\
-Our goal is to create a web based project that allows a patron to read and edit the articles. The task for editing the electronically translated newspapers is crowd sourced. This crowd based project would help in correcting the OCR errors thus improving the efficiency of retrieved results.\\
-This report describes the OCR Text Correction System, its functions and workflow in section 2 and 3. Section 4 and 5 elaborates on its design model and System specifications respectively. Implementation details with real screenshots and the challenges faced during development are mentioned in Section 6.
+Newspapers are the first draft of history -- they are a rich source of information for historians, researchers, and scholars. With the advent of \emph{digitized} newspapers, the accessibility to old historic papers has increased. The usability of archives storing these newspapers depends on the imaging technology, Optical Character Recognition (OCR) devices, zoning and segmentation, metadata extraction, searchability and web delivery systems developed to make them accessible. It is a well known fact that the OCR technology is far from perfect and often, the text generated is garbled affecting the efficiency of search and retrieval. 
+Since the human mind excels in visual cognition and language processing tasks and machines are not able to completely recreate these skills, manual labor is involved in correcting garbled OCR. 
+
+Our goal in this project is to build a system that will allow users of a digitized newspaper archive to read and correct OCR text. This report is organized as follows: Section 2 and 3 describe the functions and workflow of the system, Section 4 and 5 elaborates on its design model and System specifications; finally, implementation details with real screenshots and the challenges faced during development are mentioned in Section 6.
+
+%create a web based application that allows a patron to read and edit the articles. The task for editing the electronically translated newspapers is crowd sourced. This crowd based project would help in correcting the OCR errors thus improving the efficiency of retrieved results.\\
+%
 
 \newpage
 \tableofcontents
@@ -34,12 +38,21 @@ This report describes the OCR Text Correction System, its functions and workflow
 \section{Introduction}
 
 \subsection{Problem Description}
-This is a web based crowd sourcing project where patrons can edit the electronically translated or OCR-ed text of old historic newspapers present in the holdings of California Digital Newspaper Collection (CDNC) \cite{cdnc}. The OCR-ed text is often garbled due to inaccurate OCR devices. The accuracy of a device depends on the following factors: variations in the quality of input paper, size and style of font, column layout, etc. In our case, the quality of input paper is very poor as the newspapers date back to 1846. This adversely affects the retrieval effectiveness, hence the techniques for cleaning the OCR \cite{OCR} need to be improvised. Often such techniques involve laborious and time consuming manual processing of data. By correcting the garbled text, we will be able to improve the retrieved results thus making our users satisfied. \\
+The goal of our project is to develop a system to edit garbled OCR text from old historic newspapers. The archive under consideration is the holdings of California Digital Newspaper Collection (CDNC) \cite{cdnc}. The OCR software used on digital images of newspapers in this archive has generated garbled text due to poor quality of input paper\footnote{Newspapers date back to 1846}, varying size and style of font and different column layouts. This adversely affects the retrieval effectiveness, hence the techniques for cleaning the OCR \cite{OCR} need to be improvised. Often such techniques involve laborious and time consuming manual processing of data. By correcting the garbled text, we hope to be able to improve the retrieved results thus making the archive more useable. \\
 
 \subsection{Scope \& Objectives}
-The objective of this project is to build a software that is usable, intuitive, simple and functions well consistently. It utilizes the \textasciigrave Wisdom of the Crowd\textasciiacute to gather information about the historical newspaper articles and magazines, and utilize Machine Learning for further analysis of data.\\
-Our main focus here is on developing a web interface equipped with a text correction tool for enabling the users to correct the OCR errors as they come across them. By crowd sourcing this project, we accomplish more with fewer resources and build a user community in process.\\
-The software is responsible for a host of functions. Its basic functions are searching and displaying images of issues, search by issue name and date range, user management functions, text correction functionality.\\
+The objective of this project is to build a a web interface equipped with a text correction tool for enabling the users to correct the OCR errors as they come across them. The software is expected to be usable, intuitive, simple and functions well consistently. 
+%It utilizes the ``Wisdom of the Crowd" to gather information about the historical newspaper articles and magazines, and utilize Machine Learning for further analysis of data.\\
+%
+%By crowd sourcing this project, we are able to accomplish more with fewer resources and build a user community in process. 
+The basic functions are:
+\begin{enumerate}
+\item Searching and displaying images of issues
+\item Search by issue name and date range
+\item User management functions
+\item Text correction functionality
+\end{enumerate}
+
 \subsection{Software Functions}
 The project functions can be categorized into the following:
 \begin{itemize}
@@ -50,9 +63,9 @@ These encompass all the activities to manage the users for the application.  The
 3.	User tracking module: Ability to track user activity, prepare statistics (how long users spent on each module, how many articles they corrected, participation in discussions etc) \\
 
 \item Article related functions \\
-1.	Articles search: this provides the capability to retrieve an article based on a set of criteria like article topic, date range etc. \\
-2.	OCR correction: this interface provide users with the capability to correct the OCR displayed along side a given article image.  A basic level of authentication (based on a CAPTCHA model) will be required before the user can correct the text. \\
-3.	Tag specification: this interface will allow the user to specify tags corresponding to a given article.  This functionality will also require a basic level of authentication. \\
+1.	Articles search: This provides the capability to retrieve an article based on a set of criteria like article topic, date range etc. \\
+2.	OCR correction: This interface provide users with the capability to correct the OCR displayed along side a given article image.  A basic level of authentication (based on a CAPTCHA model) will be required before the user can correct the text. \\
+3.	Tag specification: This interface will allow the user to specify tags corresponding to a given article.  This functionality will also require a basic level of authentication. \\
 
 \item Application administration functions
 \end{itemize}
@@ -81,7 +94,7 @@ Once a issue is selected from the dropdown list and the search button is clicked
 The database design of our project is as given below.\\
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=10cm,height=10cm]{C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/diag.jpg}
+\includegraphics[width=10cm,height=10cm]{diag.jpg}
 \caption{Database Design}
 \label{fig:Phase 2}
 \end{figure}
@@ -126,7 +139,7 @@ The architectural style that suits this project is the Model-View-Controller (MV
 \end{itemize}
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=9cm,height=7cm]{C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/mvc1.jpg}
+\includegraphics[width=9cm,height=7cm]{mvc1.jpg}
 \caption{MVC Architecture}
 \label{fig:Phase 2}
 \end{figure}
@@ -236,21 +249,21 @@ The User Interface is designed using Vaadin. Some of our project screenshots are
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/dropdown.jpg}
+\includegraphics[width=14cm,height=8cm]{dropdown.jpg}
 \caption{List of issues}
 \label{fig:Phase 1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/datepicker.jpg}
+\includegraphics[width=14cm,height=8cm]{datepicker.jpg}
 \caption{Datepicker}
 \label{fig:Phase 2}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/results.jpg}
+\includegraphics[width=14cm,height=8cm]{results.jpg}
 \caption{List of headlines in a issue}
 \label{fig:Phase 3}
 \end{figure}
@@ -258,21 +271,21 @@ The User Interface is designed using Vaadin. Some of our project screenshots are
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/beforeEditText.jpg}
+\includegraphics[width=14cm,height=8cm]{beforeEditText.jpg}
 \caption{OCR Text of the headline \textasciigrave Amusements\textasciiacute}
 \label{fig:Phase 4}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/editing.jpg}
+\includegraphics[width=14cm,height=8cm]{editing.jpg}
 \caption{Editing the Raw Text}
 \label{fig:Phase 5}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=14cm,height=8cm]{C:/Users/Megha/Documents/GitHub/Documentation/ScholarlyMT11024/saved.jpg}
+\includegraphics[width=14cm,height=8cm]{saved.jpg}
 \caption{Edited Text Saved}
 \label{fig:Phase 6}
 \end{figure}
@@ -324,7 +337,7 @@ This implementation project was a part of my M.Tech Scholarly work. I would like
 
 \nocite{cdnc,eval,noisy,vaadin}
 
-\section{Bibiliography}
+%\section{Bibiliography}
 \bibliography{Scholarly_report}
 \bibliographystyle{plain}
 
