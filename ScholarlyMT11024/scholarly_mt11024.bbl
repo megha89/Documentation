@@ -1,4 +1,22 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{ant}
+{\em http://ant.apache.org/bindownload.cgi}.
+
+\bibitem{vaadin}
+{\em https://vaadin.com/download}.
+
+\bibitem{tomcat}
+{\em http://tomcat.apache.org/download-70.cgi}.
+
+\bibitem{svn}
+{\em http://tortoisesvn.net/downloads.html}.
+
+\bibitem{eclipse}
+{\em http://www.eclipse.org/downloads/}.
+
+\bibitem{postgres}
+{\em http://www.postgresql.org/download/}.
 
 \bibitem{cdnc}
 California Digital~Newspaper Collection.
@@ -9,7 +27,7 @@ Line Eikvil.
 \newblock Optical character recognition.
 \newblock 1993.
 
-\bibitem{vaadin}
+\bibitem{book}
 Marko Grönroos.
 \newblock {\em Book of Vaadin: Vaadin 7 Preview edition}.
 \newblock Vaadin Ltd, 2013.
@@ -24,5 +42,10 @@ Allen~Condit Kazem~Taghva, Julie~Borsack.
 Allen~Condit Kazem~Taghva, Julie~Borsack and Srinivas Erva.
 \newblock {\em Effects of Noisy Data on Text Retrieval}, volume~45.
 \newblock Las Vegas, US, 1993.
+
+\bibitem{ER}
+Manoj Pooleery.
+\newblock {\em
+  https://power.ldeo.columbia.edu/twiki/pub/Incubator/\\BodhiDBDesign/Final\_ERD.pdf}.
 
 \end{thebibliography}

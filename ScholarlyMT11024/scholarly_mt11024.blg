@@ -3,8 +3,15 @@ The style file: plain.bst
 Database file #1: Scholarly_report.bib
 Warning--string name "december" is undefined
 --line 12 of file Scholarly_report.bib
+Warning--to sort, need author, organization, or key in eclipse
+Warning--to sort, need author, organization, or key in vaadin
+Warning--to sort, need author, organization, or key in tomcat
+Warning--to sort, need author, organization, or key in ant
+Warning--to sort, need author, organization, or key in postgres
+Warning--to sort, need author, organization, or key in svn
 Warning--empty journal in OCR
-Warning--empty publisher in vaadin
+Warning--empty chapter and pages in book
+Warning--empty publisher in book
 Warning--empty publisher in eval
 Warning--empty publisher in noisy
-(There were 5 warnings)
+(There were 12 warnings)

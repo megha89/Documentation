@@ -1,7 +1,8 @@
-\documentclass[amsart, 12pt]{article}
+\documentclass[12pt]{article}
 \usepackage{amsmath, amsthm, amssymb, amsfonts, textcomp}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage[titletoc,page]{appendix}
 \title{BODHI: A System for Crowdsourced OCR Text Correction}
 \author{Student Name: Megha Gupta\\
 IIIT-D-MTech-CS-DE-13-MT11024\\
@@ -23,10 +24,11 @@ with Specialization in Data Engineering\\}
 \maketitle
 \newpage
 \section{Abstract}
+\label{sec:abstract}
 Newspapers are the first draft of history -- they are a rich source of information for historians, researchers, and scholars. With the advent of \emph{digitized} newspapers, the accessibility to old historic papers has increased. The usability of archives storing these newspapers depends on the imaging technology, Optical Character Recognition (OCR) devices, zoning and segmentation, metadata extraction, searchability and web delivery systems developed to make them accessible. It is a well known fact that the OCR technology is far from perfect and often, the text generated is garbled affecting the efficiency of search and retrieval. 
 Since the human mind excels in visual cognition and language processing tasks and machines are not able to completely recreate these skills, manual labor is involved in correcting garbled OCR. 
 
-Our goal in this project is to build a system that will allow users of a digitized newspaper archive to read and correct OCR text. This report is organized as follows: Section 2 and 3 describe the functions and workflow of the system, Section 4 and 5 elaborates on its design model and System specifications; finally, implementation details with real screenshots and the challenges faced during development are mentioned in Section 6.
+The main aim is to build a system that will allow users of a digitized newspaper archive to read and correct OCR text. This report is organized as follows: section~\ref{sec:intro} and section~\ref{sec:plan} describe the functions and workflow of the system, section~\ref{sec:models} and section~\ref{sec:system} elaborates on its design model and System specifications; finally, implementation details with real screenshots and the challenges faced during development are mentioned in section~\ref{sec:implementation}.
 
 %create a web based application that allows a patron to read and edit the articles. The task for editing the electronically translated newspapers is crowd sourced. This crowd based project would help in correcting the OCR errors thus improving the efficiency of retrieved results.\\
 %
@@ -36,9 +38,9 @@ Our goal in this project is to build a system that will allow users of a digitiz
 
 \newpage
 \section{Introduction}
-
+\label{sec:intro}
 \subsection{Problem Description}
-The goal of our project is to develop a system to edit garbled OCR text from old historic newspapers. The archive under consideration is the holdings of California Digital Newspaper Collection (CDNC) \cite{cdnc}. The OCR software used on digital images of newspapers in this archive has generated garbled text due to poor quality of input paper\footnote{Newspapers date back to 1846}, varying size and style of font and different column layouts. This adversely affects the retrieval effectiveness, hence the techniques for cleaning the OCR \cite{OCR} need to be improvised. Often such techniques involve laborious and time consuming manual processing of data. By correcting the garbled text, we hope to be able to improve the retrieved results thus making the archive more useable. \\
+The goal of our project is to develop a system to edit garbled OCR text from old historic newspapers. The archive under consideration is the holdings of California Digital Newspaper Collection (CDNC) \cite{cdnc}. The OCR software used on digital images of newspapers in this archive has generated garbled text due to poor quality of input paper\footnote{Newspapers date back to 1846}, varying size and style of font and different column layouts. This adversely affects the retrieval effectiveness, hence the techniques for cleaning the OCR \cite{OCR} need to be improvised. Often such techniques involve laborious and time consuming manual processing of data. By correcting the garbled text, the efficiency and usability of the retrieved results would improve . \\
 
 \subsection{Scope \& Objectives}
 The objective of this project is to build a a web interface equipped with a text correction tool for enabling the users to correct the OCR errors as they come across them. The software is expected to be usable, intuitive, simple and functions well consistently. 
@@ -59,18 +61,20 @@ The project functions can be categorized into the following:
 \item User management functions \\
 These encompass all the activities to manage the users for the application.  These include: \\
 1.	Registration module: Ability to enter and validate user demographic information \\
-2.	User Security module: Ability to authenticate and authorize the user \\
-3.	User tracking module: Ability to track user activity, prepare statistics (how long users spent on each module, how many articles they corrected, participation in discussions etc) \\
+2.	User Security module: Ability to authenticate and authorize the user.
+Authentication involves checking the combination of user entered login-password against an existing login-password record in the databse.\\
+Authorization strategy involves accessing operations based on the role membership. Roles are used to partition the application's user base into sets of users.\\
+3.	User tracking module: Ability to track user activity, prepare statistics (how long users spent on each module, how many articles they corrected, participation in discussions) \\
 
 \item Article related functions \\
-1.	Articles search: This provides the capability to retrieve an article based on a set of criteria like article topic, date range etc. \\
+1.	Articles search: This provides the capability to retrieve an article based on a set of criteria like article topic, date range, issue name. \\
 2.	OCR correction: This interface provide users with the capability to correct the OCR displayed along side a given article image.  A basic level of authentication (based on a CAPTCHA model) will be required before the user can correct the text. \\
 3.	Tag specification: This interface will allow the user to specify tags corresponding to a given article.  This functionality will also require a basic level of authentication. \\
 
-\item Application administration functions
+
 \end{itemize}
 \section{Software Project Plan}
-
+\label{sec:plan}
 This project was divided into three phases: \\
 Phase 1 included laying out UI components, database connectivity, searching and displaying user requested issues with their images. \\
 Phase 2 included basic functionality text correction tool, user management functions. \\
@@ -78,57 +82,70 @@ Phase 3 included advance searching and functionality of tool. \\
 
 \subsection{Workflow of the System}
 \begin{itemize}
-    \item In Phase 1, the first task was to design and build the layout of the interface. The user interface components in Vaadin can roughly be divided in two groups: components that the user can interact with and layout components for placing the other components to specific places in the UI. We started by creating a content layout for the UI, and then added the other layout components hierarchically, and finally the interaction components as the leaves of the component tree.\\
-The Root Layout in this project is the Vertical Layout which encompasses two Horizontal Layouts, called \textasciigrave mainLayout\textasciiacute for the search options and the other called as \textasciigrave bottomLayout\textasciiacute. The bottomLayout is again divided into three panels called tool panel, image panel and function panel at left, center and right side of the screen respectively. The tool panel consists of tables, text correction tool, etc. The image panel consists of newspaper's images. And the function panel contains the user management controls.
+    \item In Phase 1, the first task was to design and build the layout of the interface. The user interface components in Vaadin can roughly be divided in two groups: components that the user can interact with and layout components for placing the other components to specific places in the UI. The development started by creating a content layout for the UI, and then the other layout components were added hierarchically, and finally the interaction components were added as the leaves of the component tree.\\
 
-\item Then we had to incorporate the basic search functionality on the basis of issue names given in the combobox, using date range from the date picker.
-Once a issue is selected from the dropdown list and the search button is clicked, we get all the headlines of the selected issue in a table in the tool panel. And the images of the corresponding issue is displayed in the image panel. The headlines are in the form of links which when clicked shows the entire article in the table itself.
-\item In Phase 2, the actual implementation of collaborative text correction tool takes place. Once we get the entire OCR text in the rows of a table, it also gets highlighted in the image at the image panel. Once \textasciigrave Edit Text\textasciiacute button is clicked, the OCR text becomes editable and a save button is displayed at the bottom of the left hand pane. A user can correct the text in the left panel to match it with the text in the image. 
-\item Once the \textasciigrave Save\textasciiacute button is clicked, a check is performed against the database to determine which lines of text have been changed.  Only those text lines that have been changed are saved as a new version.
-\item In Phase 3, we incorporate user management functions, advance search options like phrase searching, enhance UI features and other functionalities of the tool.
+The root layout of this project is the Vertical Layout which holds two more Horizontal Layouts, called \textgravedbl mainLayout\textasciidieresis and \textgravedbl bottomLayout\textasciidieresis.\\
+MainLayout contains the UI for search functionality whereas bottomLayout is divided into three panels called tool panel, image panel and function panel at left, center and right side of the screen respectively. The tool panel consists of tables and text correction tool. The image panel consists of newspaper's images and the function panel contains the user management controls.\\
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=14cm,height=7cm]{layouts.jpg}
+\caption{Interface Layout}
+\label{fig:1}
+\end{figure}
+
+Then the basic search functionality on the basis of issue names,date range was incorporated. Once a issue is selected from the dropdown list and the search button is clicked, all the headlines of the selected issue appears in the table contained in the left pane. And the images of the corresponding issue are displayed in the image panel. The headlines are in the form of links which when clicked shows the entire article in the table itself.
+
+\item In Phase 2, the actual implementation of collaborative text correction tool takes place. Once the entire OCR text is retrieved in the rows of a table, it also gets highlighted in the image at the image panel. If \textgravedbl Edit Text\textasciidieresis button is clicked, the OCR text becomes editable and a save button is displayed at the bottom of the left hand pane. A user can correct the text to match it with the text in the image. \\
+After the \textgravedbl Save\textasciidieresis button is clicked, a check is performed against the database to determine which lines of text have been changed.  Only those text lines that have been changed are saved as a new version.
+\item In Phase 3, user management functions, advance search options like phrase searching, enhanced UI features and other functionalities of the tool will be focussed.
 \end{itemize}
 
 \section{Design Models}
+\label{sec:models}
 \subsection{Database Design}
 
-The database design of our project is as given below.\\
+The database design of our project is given below.\\
+
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=10cm,height=10cm]{diag.jpg}
 \caption{Database Design}
-\label{fig:Phase 2}
+\label{fig:2}
 \end{figure}
 
-Following are the steps to access the Database Server (Postgres) using a command line client:
-\begin{enumerate}
-\item To connect to the database on Tesla.ldeo.columbia.edu, a tunnel needs to be established. To do this, type \\
-ssh -Nn -L 5555:localhost:5432 username@tesla.ldeo.columbia.edu \& \\
-where username is the corresponding user's name.
-\item Open psql command line client and type in the following details:
-Server [localhost] : localhost \\
-Database [postgres]: nypltest \\
-Port [5432]: 5555 \\
-Username [postgres]: nypl\_user \\
-password for nypl\_user: c9MamuaT \\
-\item Commands like $\backslash$l and $\backslash$d gives the list of Databases and Relations in PostgreSQL.
-\end{enumerate}
-We have used views to access the tables present in the database. A View is a virtual table containing fields from one or more real tables. They make information retrieval fast and secure.\\
-Following Views are used by our front end:
-\begin{itemize}
-\item vw\_issu\_page\_files \\
-To get the page file locations (and related data) related to particular issue using the \textasciigrave date\_of\_issue\textasciiacute column.
+The ER Diagram shown describes the association between the tables present in the database of this project. All the entities are connected to a common entity called \textgravedbl Issue\_Page\_Article\_Relator\textasciidieresis. It contains the primary keys of all other entities. The main entities are \textgravedbl Issue\textasciidieresis that refers to the Newspaper, \textgravedbl Page\textasciidieresis that denotes the pages in the newspaper and Article related entities called \textgravedbl Article\_info\textasciidieresis, \textgravedbl Article\_OCR\_File\textasciidieresis, \textgravedbl Article\_Service\_File\textasciidieresis.\\ \textgravedbl TextBlock\textasciidieresis and \textgravedbl String \textasciidieresis are used to fetch and group all the words in a single article in proper order, hence their attributes include the Horizontal and Vertical position of each textline.\\
+Another table was created to save the changes made in the OCR text and to save the user specified tags in the database. This was created due to the challanges faced as mentioned in section~\ref{sec:implementation}.
 
-\item vw\_issue\_articles \\
-To access all the articles related to a particular issue using the \textasciigrave date\_of\_issue\textasciiacute column.
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=5cm,height=5cm]{entity.jpg}
+\caption{Experimental table}
+\label{fig:3}
+\end{figure}
 
-\item vw\_image\_info \\
-To access the coordinates, shapes and related data for each article using the \textasciigrave ipar\_id\textasciiacute column.
+Here \textgravedbl id\textasciidieresis is bigserial Primary Key, \textgravedbl newtext\textasciidieresis is the user corrected text, \textgravedbl tag\textasciidieresis is the user specified tag corresponding to a given article and \textgravedbl ts\textasciidieresis refers to the timestamp when the insert operation is executed.\\
 
-\item vw\_article\_text \\
-To access entire text related to a particular article using the \textasciigrave ipar\_id\textasciiacute column
-\end{itemize}
+In this project, Views are used to access the tables present in the database. A View is a virtual table containing fields from one or more real tables. They make information retrieval fast and secure.\\
+Following Views are used by the web interface:\\
+
+\begin{tabular}{l|p{10cm}}
+\hline
+View Name & Description\\
+\hline
+vw\_issu\_page\_files & \parbox{10cm}{retrieves the page file locations related to particular\\ issue using the \textgravedbl date\_of\_issue\textasciidieresis column}\\
+\hline
+vw\_issue\_articles & \parbox{10cm}{accesses all the articles related to a particular\\ issue using the \textgravedbl date\_of\_issue\textasciidieresis column}\\
+\hline
+vw\_image\_info & \parbox{510cm}{accesses the coordinates, shapes and
+related data\\ for each article using the \textgravedbl ipar\_id\textasciidieresis column}\\
+\hline 
+vw\_article\_text & \parbox{10cm}{accesses entire text related to a particular article\\ using the \textgravedbl ipar\_id\textasciidieresis column}\\
+ \hline
+\end{tabular}
+
 \subsection{Architectural Design}
-The architectural style that suits this project is the Model-View-Controller (MVC) architecture. It is the software architecture pattern that separates the representation of information from user's interaction with it. It is used by applications that need the ability to maintain multiple views of the same data. The interaction between the three components is defined as: \\
+The architectural style used in this project is the Model-View-Controller (MVC) architecture. MVC is the software architecture pattern that separates the representation of information from user's interaction with it. It is used by applications that need the ability to maintain multiple views of the same data. The interaction between the three components is defined as: \\
 
 \begin{itemize}
 \item A controller sends commands to its associated view to change the view's presentation of the model. It can also send commands to the model to update the model's state. It processes every request, prepares other parts of the system like model and view.
@@ -141,17 +158,18 @@ The architectural style that suits this project is the Model-View-Controller (MV
 \centering
 \includegraphics[width=9cm,height=7cm]{mvc1.jpg}
 \caption{MVC Architecture}
-\label{fig:Phase 2}
+\label{fig:4}
 \end{figure}
 
 \subsubsection{Architectural Description}
-In our project, we have MainWebApp.java as the controller which receives calls from the user and calls the relevant screen (model or view) based on the input.\\
-Then we have IssueDisplay.java which acts as a view. This class is the primary display page for an issue, one page at a time.  It takes in the following parameters - list of articles in an issue and the page image to be displayed first.
+In this project, MainWebApp.java is used as the controller which receives calls from the user and calls the relevant screen (model or view) based on the input.\\
+IssueDisplay.java acts as a view. This class is the primary display page for an issue, one page at a time.  It takes in the following parameters - list of articles in an issue and the page image to be displayed first.
 It then display the list of articles as hyperlinks in the left pane, along with the issue title and display the image in the right pane. \\
-Then we have DatabaseHelper.java which acts as a model containing any database objects that needs representation.
+DatabaseHelper.java acts as a model contains any database objects that needs representation.
 
 
 \section{System Study}
+\label{sec:system}
 \subsection{Hardware Specification}
 \begin{itemize}
     \item 32-bit Operating System 
@@ -163,7 +181,7 @@ Then we have DatabaseHelper.java which acts as a model containing any database o
 \begin{itemize}
 \item Eclipse Juno 4.2 IDE \\
 It is an Integrated Development Environment (IDE) comprising of a base workspace and an extensible plug-in system for customizing environment. It is used to develop applications primarily in Java and other languages by means of other plug-ins.\\
-We used the Vaadin plug-in to create our project in Eclipse Juno.
+Vaadin plug-in for eclipse was used to create the web interface of our project.
 
 \item Vaadin 6 (Java Framework) plugin for Eclipse \\
 Vaadin is an AJAX web application development framework that enables developers to build high-quality user interfaces with Java, both on the server- and client-side. It provides a set of libraries of ready-to-use user interface components and a clean framework for creating our own components. The focus is on ease-of-use, re-usability, extensibility, and meeting the requirements of large enterprise applications.\\
@@ -174,7 +192,7 @@ It is an open source web server and servlet container developed by the Apache So
 It includes tools for configuration and management, but can also be configured by editing XML configuration files.
 
 \item Apache Ant 1.8.4
-It is a software tool for automating software build processes. It is similar to \textasciigrave Make\textasciiacute but is implemented using the Java language, requires the Java platform, and is best suited to building Java projects.\\
+It is a software tool for automating software build processes. It is similar to \textgravedbl Make\textasciidieresis but is implemented using the Java language, requires the Java platform, and is best suited to building Java projects.\\
 The most immediately noticeable difference between Ant and Make is that Ant uses XML to describe the build process and its dependencies, whereas Make uses Makefile format.
 
 \item PostgreSQL
@@ -196,7 +214,7 @@ Following are the steps to get the application working:
 \begin{itemize}
     \item build (directory where the classes of some components will be located, for now, this is empty)
 \item config (This folder should have two files - log4j.properties and BodhiWebApplication.properties)\\
-Edit log4j.properties, change the value for \textasciigrave log4j.appender.A1.File\textasciiacute to a specific directory on the machine.\\
+Edit log4j.properties, change the value for \textgravedbl log4j.appender.A1.File\textasciidieresis to a specific directory on the machine.\\
 No changes are required in BodhiWebApplication.properties
 \item doc (This is the directory for any documents, including javadoc)
 \item resources (If the application is going to use any external resources, they will be stored here)
@@ -204,7 +222,7 @@ No changes are required in BodhiWebApplication.properties
 \item edu.columbia.ccls.dh.bodhi.controller (Folder for all the controllers, these will have the logic to direct the calls to specific components. It will have the code to instantiate the models and views corresponding to the action chosen by the user)
 \item edu.columbia.ccls.dh.bodhi.model (Folder for all the model classes, typically any database objects that need representation)
 \item edu.columbia.ccls.dh.bodhi.view (Folder for constructing the HTML views. Information needed for constructing will be passed to it by the constructor, typically either an instance of the model or specific values from the model)
-\item edu.columbia.ccls.dh.bodhi.utils (Folder for all the utility classes and functions. Components in this folder will be used across the board, like database connections, special string operations, validations etc.)
+\item edu.columbia.ccls.dh.bodhi.utils (Folder for all the utility classes and functions. Components in this folder will be used across the board, like database connections, special string operations, validations.)
 \item WebContent (Root folder for all the Vaadin files as well as the web application classes)
 \end{itemize}
 
@@ -212,7 +230,7 @@ No changes are required in BodhiWebApplication.properties
 
 \item Once the project is created, make sure that the java path is set correctly (it might be different on different machines)
 
-\item Once the project is ready, open the deploy.xml, locate the entry , change the value of the attribute \textasciigrave location \textasciiacute, point it to the Tomcat installation directory on the machine.
+\item Once the project is ready, open the deploy.xml, locate the entry , change the value of the attribute \textgravedbl location \textasciidieresis, point it to the Tomcat installation directory on the machine.
 
 \item Make sure Apache Ant is installed on the machine (if not, download it from apache.org and make sure that the executable location is included in the PATH variable)
 
@@ -222,7 +240,7 @@ No changes are required in BodhiWebApplication.properties
 ssh -Nn -L 5555:localhost:5432 username@tesla.ldeo.columbia.edu \& \\
 Replace the username and password with the corresponding user's name and password.
 
-\item Open another command prompt, change the directory to the root folder of  the project and type ant war. This will compile the project, create a war file and deploy it to the Tomcat's \textasciigrave webapps\textasciiacute directory.
+\item Open another command prompt, change the directory to the root folder of  the project and type ant war. This will compile the project, create a war file and deploy it to the Tomcat's \textgravedbl webapps\textasciidieresis directory.
 
 \item Start Tomcat (if it is not already running), go to bin and run startup.bat to start the server and shutdown.bat to shutdown the server.
 
@@ -233,70 +251,31 @@ Replace the username and password with the corresponding user's name and passwor
 
 
 \section{Implementation}
+\label{sec:implementation}
 \subsection{Functions Implemented}
 \begin{enumerate}
-\item List of Issues : Populated the combobox with the retrieved list of issues from the database. See figure 1
-\item Article Search : Retrieved an article based on a set of criteria like article topic, date range. See figure 3
-\item Headlines : Retrieved articles are the headlines in the form of links which when clicked returns the OCR text. See figure 3
+\item List of Issues : Populated the combobox with the retrieved list of issues from the database. Illustrated in figure~\ref{fig:5}
+\item Article Search : Retrieved articles based on a set of criteria like article topic, issue name, date range. Illustrated in figure~\ref{fig:7}
+\item Headlines : Retrieved articles are the headlines in the form of links which when clicked returns the OCR text. Illustrated in figure~\ref{fig:7}
 \item Images: Retrieved images of the selected articles in the middle pane.
-\item OCR Text : Displayed the raw OCR article text of the user selected headline in the table.
-\item Edit Raw OCR text : Raw OCR text can be edited after clicking the \textasciigrave Edit\textasciiacute button. Once the button is pressed, each row of the table becomes editable.
-\item Save Edited Text : Text edited by the patron gets stored in the database once the \textasciigrave Save\textasciiacute button is pressed.
+\item OCR Text : Displayed the raw OCR article text of the user selected headline in the table. Illustrated in figure~\ref{fig:8}
+\item OCR Correction  : Raw OCR text can be edited after clicking the \textgravedbl Edit\textasciidieresis button. Once the button is pressed, each row of the table becomes editable. Illustrated in figure~\ref{fig:9}
+\item Tag Specification: Interface allows users to specify tags corresponding to the given article which then gets saved into the database. Illustrated in figure~\ref{fig:10}
+\item Save corrected Text : Text corrected by the patron gets stored in the database as soon as the \textgravedbl Save\textasciidieresis button is clicked. Illustrated in figure~\ref{fig:11}
 \end{enumerate}
-
+	
 \subsection{User Interface}
-The User Interface is designed using Vaadin. Some of our project screenshots are as shown below.
+The User Interface is designed using Vaadin. Some of our project screenshots are shown in Appendix A.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=14cm,height=8cm]{dropdown.jpg}
-\caption{List of issues}
-\label{fig:Phase 1}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=14cm,height=8cm]{datepicker.jpg}
-\caption{Datepicker}
-\label{fig:Phase 2}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=14cm,height=8cm]{results.jpg}
-\caption{List of headlines in a issue}
-\label{fig:Phase 3}
-\end{figure}
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=14cm,height=8cm]{beforeEditText.jpg}
-\caption{OCR Text of the headline \textasciigrave Amusements\textasciiacute}
-\label{fig:Phase 4}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=14cm,height=8cm]{editing.jpg}
-\caption{Editing the Raw Text}
-\label{fig:Phase 5}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=14cm,height=8cm]{saved.jpg}
-\caption{Edited Text Saved}
-\label{fig:Phase 6}
-\end{figure}
 
 \subsection{Remote Debugging Tomcat using Eclipse}
-To debug our project, we could not simply use the Eclipse Integrated debugger as to debug an executable file is required. So in order to debug a Tomcat application through Eclipse, following steps need to be taken:
+To debug our project, Eclipse Integrated debugger could not be simply used to debug as there was no an executable file. So in order to debug a Tomcat application through Eclipse, following steps need to be taken:
 \begin{enumerate}
-    \item Open catalina.bat file which can be found in apache-tomcat-7.0.35/bin/catalina.bat
-\item Insert two statements after "set CLASSPATH=" \\
-CATALINA\_OPTS="-Xdebug-Xrunjdwp:transport=dt\_socket,address=8000,server=y,suspend=n"\\
-JPDA\_OPTS="-agentlib:jdwp=transport=dt\_socket,address=8000,server=y,suspend=n"
+    \item Open catalina.bat file which can be found in \textgravedbl apache-tomcat-7.0.35/bin/catalina.bat\textasciidieresis
+\item Insert two statements after \textgravedbl set CLASSPATH=\textasciidieresis \\
+CATALINA\_OPTS=\\
+\textgravedbl-Xdebug-Xrunjdwp:transport=dt\_socket,address=8000,server=y,suspend=n\textacutedbl\\
+JPDA\_OPTS=\textgravedbl -agentlib:jdwp=transport=dt\_socket,address=8000,server=y,suspend=n\textasciidieresis
 \item Save and close the file. 
 \item Run Tomcat from command prompt using command: \\
 catalina.bat jpda start \\
@@ -324,7 +303,12 @@ There were several challenges faced during the project, few of them are listed b
 This format can be used to store either lossy or lossless compressed JPEG images and provides the user with a better quality and smaller file size than the traditional JPG image files.\\
 But these images are not supported by the browser, hence they can not be opened in the browser.
 \item Performance Issues : Due to the remote access to the server through tunneling and by using complex subquery to retrieve the OCR text, the server got slow. The time clocked for the server to response for the query was 16 minutes when using 3G network. These long delays and other problems made it difficult to work on real data. \\
-So, the functionality to edit the Raw text was built by setting OCR text in the table a priori. And saving the edited data into the database.
+Query: \\
+\textgravedbl select linetext from vw\_ipar\_text1 where ipar\_id IN (select  ipar\_id from vw\_issue\_articles where headline =\textasciidieresis + headline \\
+Alternatively,\\
+\textgravedbl select linetext from vw\_ipar\_text1 t1 INNER JOIN (select ipar\_id from vw\_issue\_articles where headline =\textasciigrave \textasciidieresis + headline + \textacutedbl\textasciiacute)t2 ON t1.ipar\_id = t2.ipar\_id \textasciidieresis \\
+The above queries fetches the entire article corresponding to the user selected headline. But both of them makes the retrieval process slow.\\
+So, the functionality to edit the Raw text was built by setting OCR text in the table a priori. And saving the edited data into the database. Section~\ref{sec:models}, figure~\ref{fig:3} defines the table created to save the user corrected text and user specified tags.
 
 \end{enumerate}
 
@@ -335,11 +319,79 @@ Once the system would be functional, it will certainly act as a rich source of i
 \section{Acknowledgement}
 This implementation project was a part of my M.Tech Scholarly work. I would like to express my gratitude to both my Advisors Dr. Haimonti Dutta and Manoj Pooleery for their constant support and guidance without which I would have never been able to complete it.
 
-\nocite{cdnc,eval,noisy,vaadin}
+\nocite{cdnc,OCR,eval,noisy,book,eclipse,vaadin,tomcat,ant,postgres,svn,ER}
 
 %\section{Bibiliography}
 \bibliography{Scholarly_report}
 \bibliographystyle{plain}
+\appendix
+\appendixpage
+\addappheadtotoc
 
+\section{Screenshots}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=14cm,height=8cm]{dropdown.jpg}
+\caption{List of issues}
+\label{fig:5}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=14cm,height=8cm]{datepicker.jpg}
+\caption{Datepicker}
+\label{fig:6}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=14cm,height=8cm]{results.jpg}
+\caption{List of headlines in a issue}
+\label{fig:7}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=14cm,height=8cm]{beforeEditText.jpg}
+\caption{OCR Text of the headline \textasciigrave Amusements\textasciiacute}
+\label{fig:8}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=14cm,height=8cm]{editing.jpg}
+\caption{Editing the Raw Text}
+\label{fig:9}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=14cm,height=8cm]{tag.jpg}
+\caption{User Specified Tag}
+\label{fig:10}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm,height=4cm]{db.jpg}
+\caption{Snapshot of the table}
+\label{fig:11}
+\end{figure}
 
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
