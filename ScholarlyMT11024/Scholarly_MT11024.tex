@@ -28,7 +28,7 @@ with Specialization in Data Engineering\\}
 Newspapers are the first draft of history -- they are a rich source of information for historians, researchers, and scholars. With the advent of \emph{digitized} newspapers, the accessibility to old historic papers has increased. The usability of archives storing these newspapers depends on the imaging technology, Optical Character Recognition (OCR) devices, zoning and segmentation, metadata extraction, searchability and web delivery systems developed to make them accessible. It is a well known fact that the OCR technology is far from perfect and often, the text generated is garbled affecting the efficiency of search and retrieval. 
 Since the human mind excels in visual cognition and language processing tasks and machines are not able to completely recreate these skills, manual labor is involved in correcting garbled OCR. 
 
-The main aim is to build a system that will allow users of a digitized newspaper archive to read and correct OCR text. This report is organized as follows: section~\ref{sec:intro} and section~\ref{sec:plan} describe the functions and workflow of the system, section~\ref{sec:models} and section~\ref{sec:system} elaborates on its design model and System specifications; finally, implementation details with real screenshots and the challenges faced during development are mentioned in section~\ref{sec:implementation}.
+The goal of this project is to build a system that will allow users of a digitized newspaper archive to read and correct OCR text. This report is organized as follows: section~\ref{sec:intro} and section~\ref{sec:plan} describe the functions and workflow of the system, section~\ref{sec:models} and section~\ref{sec:system} elaborates on its design model and system specifications; finally, implementation details with real screenshots and the challenges faced during development are mentioned in section~\ref{sec:implementation}.
 
 %create a web based application that allows a patron to read and edit the articles. The task for editing the electronically translated newspapers is crowd sourced. This crowd based project would help in correcting the OCR errors thus improving the efficiency of retrieved results.\\
 %
@@ -40,10 +40,10 @@ The main aim is to build a system that will allow users of a digitized newspaper
 \section{Introduction}
 \label{sec:intro}
 \subsection{Problem Description}
-The goal of our project is to develop a system to edit garbled OCR text from old historic newspapers. The archive under consideration is the holdings of California Digital Newspaper Collection (CDNC) \cite{cdnc}. The OCR software used on digital images of newspapers in this archive has generated garbled text due to poor quality of input paper\footnote{Newspapers date back to 1846}, varying size and style of font and different column layouts. This adversely affects the retrieval effectiveness, hence the techniques for cleaning the OCR \cite{OCR} need to be improvised. Often such techniques involve laborious and time consuming manual processing of data. By correcting the garbled text, the efficiency and usability of the retrieved results would improve . \\
+The goal of our project is to develop a system to edit garbled OCR text from old historic newspapers. The archive under consideration is the holdings of California Digital Newspaper Collection (CDNC) \cite{cdnc}. The OCR software used on digital images of newspapers in this archive has generated garbled text due to poor quality of input paper\footnote{Newspapers date back to 1846}, varying size and style of font and different column layouts. This adversely affects the retrieval effectiveness, hence the techniques for cleaning the OCR \cite{OCR} need to be improvised. Often such techniques involve laborious and time consuming manual processing of data. By correcting the garbled text, the efficiency and usability of the retrieved results are expected to improve. \\
 
 \subsection{Scope \& Objectives}
-The objective of this project is to build a a web interface equipped with a text correction tool for enabling the users to correct the OCR errors as they come across them. The software is expected to be usable, intuitive, simple and functions well consistently. 
+The objective is to build a web interface equipped with a text correction tool for enabling the users to correct the OCR errors as they come across them. The software is expected to be usable, intuitive, simple and functions well consistently. 
 %It utilizes the ``Wisdom of the Crowd" to gather information about the historical newspaper articles and magazines, and utilize Machine Learning for further analysis of data.\\
 %
 %By crowd sourcing this project, we are able to accomplish more with fewer resources and build a user community in process. 
@@ -58,27 +58,30 @@ The basic functions are:
 \subsection{Software Functions}
 The project functions can be categorized into the following:
 \begin{itemize}
-\item User management functions \\
-These encompass all the activities to manage the users for the application.  These include: \\
-1.	Registration module: Ability to enter and validate user demographic information \\
-2.	User Security module: Ability to authenticate and authorize the user.
-Authentication involves checking the combination of user entered login-password against an existing login-password record in the databse.\\
-Authorization strategy involves accessing operations based on the role membership. Roles are used to partition the application's user base into sets of users.\\
-3.	User tracking module: Ability to track user activity, prepare statistics (how long users spent on each module, how many articles they corrected, participation in discussions) \\
-
-\item Article related functions \\
-1.	Articles search: This provides the capability to retrieve an article based on a set of criteria like article topic, date range, issue name. \\
-2.	OCR correction: This interface provide users with the capability to correct the OCR displayed along side a given article image.  A basic level of authentication (based on a CAPTCHA model) will be required before the user can correct the text. \\
-3.	Tag specification: This interface will allow the user to specify tags corresponding to a given article.  This functionality will also require a basic level of authentication. \\
-
+\item \textbf{User management functions:} These encompass activities to manage users of the application.  These include: 
+\begin{enumerate}
+\item Registration module: Ability to enter and validate user demographic information.
+\item User security module: Ability to authenticate and authorize the user.
+Authentication involves checking the combination of user entered login-password against an existing login-password record in the database.
+Authorization strategy involves accessing operations based on the role membership. Roles are used to partition the application's user base into sets of users.
+\item User tracking module: Ability to track user activity, prepare statistics (how long users spent on each module, how many articles they corrected, participation in discussions)
+\end{enumerate}
+\item \textbf{Article related functions:} 
+\begin{enumerate}
+\item Article search: This provides the capability to retrieve an article based on a set of criteria like article topic, date range, issue name. 
+\item OCR correction: This interface provide users with the capability to correct the OCR displayed along side a given article image.  A basic level of authentication (based on a CAPTCHA model) is required before the user can correct the text. 
+\item Tag specification: This interface allows the user to specify tags corresponding to a given article.  This functionality also requires a basic level of authentication. 
+\end{enumerate}
 
 \end{itemize}
 \section{Software Project Plan}
 \label{sec:plan}
-This project was divided into three phases: \\
-Phase 1 included laying out UI components, database connectivity, searching and displaying user requested issues with their images. \\
-Phase 2 included basic functionality text correction tool, user management functions. \\
-Phase 3 included advance searching and functionality of tool. \\
+This project was performed in three phases: 
+\begin{itemize}
+\item \textbf{Phase 1} included laying out UI components, database connectivity, searching and displaying user requested issues with their images.
+\item \textbf{Phase 2} included basic functionality text correction tool, user management functions. 
+\item \textbf{Phase 3} included advance searching and functionality of tool.
+\end{itemize}
 
 \subsection{Workflow of the System}
 \begin{itemize}
@@ -94,9 +97,9 @@ MainLayout contains the UI for search functionality whereas bottomLayout is divi
 \label{fig:1}
 \end{figure}
 
-Then the basic search functionality on the basis of issue names,date range was incorporated. Once a issue is selected from the dropdown list and the search button is clicked, all the headlines of the selected issue appears in the table contained in the left pane. And the images of the corresponding issue are displayed in the image panel. The headlines are in the form of links which when clicked shows the entire article in the table itself.
+Then the basic search functionality on the basis of issue names,date range was incorporated. Once a issue is selected from the dropdown list and the search button is clicked, all the headlines of the selected issue appears in the table contained in the left pane. The images of the corresponding issue are displayed in the image panel. The headlines are in the form of links which when clicked shows the entire article in the table.
 
-\item In Phase 2, the actual implementation of collaborative text correction tool takes place. Once the entire OCR text is retrieved in the rows of a table, it also gets highlighted in the image at the image panel. If \textgravedbl Edit Text\textasciidieresis button is clicked, the OCR text becomes editable and a save button is displayed at the bottom of the left hand pane. A user can correct the text to match it with the text in the image. \\
+\item In Phase 2, the actual implementation of collaborative text correction tool took place. Once the entire OCR text is retrieved in the rows of a table, it also gets highlighted in the image at the image panel. If \textgravedbl Edit Text\textasciidieresis button is clicked, the OCR text becomes editable and a save button is displayed at the bottom of the left hand pane. A user can correct the text to match it with the text in the image. \\
 After the \textgravedbl Save\textasciidieresis button is clicked, a check is performed against the database to determine which lines of text have been changed.  Only those text lines that have been changed are saved as a new version.
 \item In Phase 3, user management functions, advance search options like phrase searching, enhanced UI features and other functionalities of the tool will be focussed.
 \end{itemize}
@@ -105,30 +108,27 @@ After the \textgravedbl Save\textasciidieresis button is clicked, a check is per
 \label{sec:models}
 \subsection{Database Design}
 
-The database design of our project is given below.\\
+%The database design of our project is given below.\\
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=10cm,height=10cm]{diag.jpg}
+\includegraphics[width=\textwidth,height=0.75\textheight]{diag.jpg}
 \caption{Database Design}
 \label{fig:2}
 \end{figure}
 
-The ER Diagram shown describes the association between the tables present in the database of this project. All the entities are connected to a common entity called \textgravedbl Issue\_Page\_Article\_Relator\textasciidieresis. It contains the primary keys of all other entities. The main entities are \textgravedbl Issue\textasciidieresis that refers to the Newspaper, \textgravedbl Page\textasciidieresis that denotes the pages in the newspaper and Article related entities called \textgravedbl Article\_info\textasciidieresis, \textgravedbl Article\_OCR\_File\textasciidieresis, \textgravedbl Article\_Service\_File\textasciidieresis.\\ \textgravedbl TextBlock\textasciidieresis and \textgravedbl String \textasciidieresis are used to fetch and group all the words in a single article in proper order, hence their attributes include the Horizontal and Vertical position of each textline.\\
-Another table was created to save the changes made in the OCR text and to save the user specified tags in the database. This was created due to the challanges faced as mentioned in section~\ref{sec:implementation}.
+The ER Diagram shown in Figure~\ref{fig:2} describes the association between the tables present in the database of this project. All the entities are connected to a common entity called \textgravedbl Issue\_Page\_Article\_Relator\textasciidieresis. It contains the primary keys of all other entities. The main entities are \textgravedbl Issue\textasciidieresis that refers to the Newspaper, \textgravedbl Page\textasciidieresis that denotes the pages in the newspaper and Article related entities called \textgravedbl Article\_info\textasciidieresis, \textgravedbl Article\_OCR\_File\textasciidieresis, \textgravedbl Article\_Service\_File\textasciidieresis.\\ \textgravedbl TextBlock\textasciidieresis and \textgravedbl String \textasciidieresis are used to fetch and group all the words in a single article in proper order, hence their attributes include the Horizontal and Vertical position of each textline. In addition to the above, a table was created to save the changes made in the OCR text and to save the user specified tags in the database. This was created due to the challenges faced as mentioned in section~\ref{sec:implementation}.
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=5cm,height=5cm]{entity.jpg}
+\includegraphics[width=5cm,height=5.5cm]{entity.jpg}
 \caption{Experimental table}
 \label{fig:3}
 \end{figure}
 
-Here \textgravedbl id\textasciidieresis is bigserial Primary Key, \textgravedbl newtext\textasciidieresis is the user corrected text, \textgravedbl tag\textasciidieresis is the user specified tag corresponding to a given article and \textgravedbl ts\textasciidieresis refers to the timestamp when the insert operation is executed.\\
+Figure~\ref{fig:3} shows the table created for storing OCR correction and tages. The ``id" is bigserial Primary Key, ``newtext" is the user corrected text, ``tag" is the user specified tag corresponding to a given article and ``ts" refers to the timestamp when the insert operation is executed.
 
-In this project, Views are used to access the tables present in the database. A View is a virtual table containing fields from one or more real tables. They make information retrieval fast and secure.\\
-Following Views are used by the web interface:\\
-
+\begin{table}
 \begin{tabular}{l|p{10cm}}
 \hline
 View Name & Description\\
@@ -144,15 +144,22 @@ vw\_article\_text & \parbox{10cm}{accesses entire text related to a particular a
  \hline
 \end{tabular}
 
-\subsection{Architectural Design}
-The architectural style used in this project is the Model-View-Controller (MVC) architecture. MVC is the software architecture pattern that separates the representation of information from user's interaction with it. It is used by applications that need the ability to maintain multiple views of the same data. The interaction between the three components is defined as: \\
+\caption{Views used by the web interface.}
+\label{tabView}
+\end{table}
 
+\noindent Views are used to access the tables present in the database. A View is a virtual table containing fields from one or more real tables. They make information retrieval fast and secure.
+Views used by the web interface are described in Table~\ref{tabView}.
+
+
+\subsection{Architectural Design}
+The architecture used in this project is the Model-View-Controller (MVC) architecture. MVC is the software architecture pattern that separates the representation of information from user's interaction with it. It is used by applications that need the ability to maintain multiple views of the same data. The interaction between the three components is defined as: 
 \begin{itemize}
 \item A controller sends commands to its associated view to change the view's presentation of the model. It can also send commands to the model to update the model's state. It processes every request, prepares other parts of the system like model and view.
 
-\item A model handles data processing and database works part. It processes events sent by controller. After processing these events, it sends processed data to controller (thus, controller may reprocess it) or directly to view side allowing them to produce updated output.
+\item A model handles data processing and connections to the database. It processes events sent by controller. After processing these events, it sends processed data to controller (thus, controller may reprocess it) or directly to view side allowing them to produce updated output.
 
-\item A view prepares interface to show to the user.It requests from the model the information that it needs to generate an output representation to the user.\\
+\item A view prepares the interface to show to the user. It requests from the model the information that it needs to generate an output representation to the user.
 \end{itemize}
 \begin{figure}[ht!]
 \centering
@@ -161,16 +168,18 @@ The architectural style used in this project is the Model-View-Controller (MVC) 
 \label{fig:4}
 \end{figure}
 
-\subsubsection{Architectural Description}
-In this project, MainWebApp.java is used as the controller which receives calls from the user and calls the relevant screen (model or view) based on the input.\\
-IssueDisplay.java acts as a view. This class is the primary display page for an issue, one page at a time.  It takes in the following parameters - list of articles in an issue and the page image to be displayed first.
-It then display the list of articles as hyperlinks in the left pane, along with the issue title and display the image in the right pane. \\
+\subsubsection{Implementation}
+In this project, the class MainWebApp.java is used as the controller which receives calls from the user and in turn calls the relevant screen (model or view) based on the input.
+IssueDisplay.java acts as a view. This class is the primary display page for an issue, shown one page at a time.  It takes in the following parameters - list of articles in an issue and the page image to be displayed first.
+It then display the list of articles as hyperlinks in the left pane, along with the issue title and display the image in the right pane. 
 DatabaseHelper.java acts as a model contains any database objects that needs representation.
 
 
 \section{System Study}
 \label{sec:system}
+ 
 \subsection{Hardware Specification}
+The hardware development environment comprised of the following:
 \begin{itemize}
     \item 32-bit Operating System 
 \item 4GB RAM 
@@ -178,28 +187,28 @@ DatabaseHelper.java acts as a model contains any database objects that needs rep
 \end{itemize}
 
 \subsection{Software Specification}
+The software development environment comprised of: 
 \begin{itemize}
-\item Eclipse Juno 4.2 IDE \\
-It is an Integrated Development Environment (IDE) comprising of a base workspace and an extensible plug-in system for customizing environment. It is used to develop applications primarily in Java and other languages by means of other plug-ins.\\
+\item Eclipse Juno 4.2 IDE:  
+It is an Integrated Development Environment (IDE) comprising of a base workspace and an extensible plug-in system for customizing environment. It is used to develop applications primarily in Java and other languages by means of other plug-ins.
 Vaadin plug-in for eclipse was used to create the web interface of our project.
 
-\item Vaadin 6 (Java Framework) plugin for Eclipse \\
-Vaadin is an AJAX web application development framework that enables developers to build high-quality user interfaces with Java, both on the server- and client-side. It provides a set of libraries of ready-to-use user interface components and a clean framework for creating our own components. The focus is on ease-of-use, re-usability, extensibility, and meeting the requirements of large enterprise applications.\\
-It is an open source web application for rich Internet applications. It has server side architecture which means that the majority of the logic runs on the server. Ajax technology is used at the browser side to ensure a rich and interactive user experience. On the client-side Vaadin is built on top of Google Web Toolkit (GWT).\\
+\item Vaadin 6 (Java Framework) plugin for Eclipse:
+Vaadin is an AJAX web application development framework that enables developers to build high-quality user interfaces with Java, both on the server- and client-side. It provides a set of libraries of ready-to-use user interface components and a clean framework for creating our own components. The focus is on ease-of-use, re-usability, extensibility, and meeting the requirements of large enterprise applications.
+It is an open source web application for rich Internet applications. It has server side architecture which means that the majority of the logic runs on the server. Ajax technology is used at the browser side to ensure a rich and interactive user experience. On the client-side Vaadin is built on top of Google Web Toolkit (GWT).
 
-\item Apache Tomcat 7.0.35
-It is an open source web server and servlet container developed by the Apache Software Foundation (ASF). It implements the Java Servlet and the JavaServer Pages (JSP) specifications from Sun Microsystems, and provides a pure Java HTTP web server environment for Java code to run in. \\
-It includes tools for configuration and management, but can also be configured by editing XML configuration files.
+\item Apache Tomcat 7.0.35:
+It is an open source web server and servlet container developed by the Apache Software Foundation (ASF). It implements the Java Servlet and the JavaServer Pages (JSP) specifications from Sun Microsystems, and provides a pure Java HTTP web server environment for Java code to run in. It includes tools for configuration and management, but can also be configured by editing XML configuration files.
 
-\item Apache Ant 1.8.4
-It is a software tool for automating software build processes. It is similar to \textgravedbl Make\textasciidieresis but is implemented using the Java language, requires the Java platform, and is best suited to building Java projects.\\
+\item Apache Ant 1.8.4:
+It is a software tool for automating software build processes. It is similar to \textgravedbl Make\textasciidieresis but is implemented using the Java language, requires the Java platform, and is best suited to building Java projects.
 The most immediately noticeable difference between Ant and Make is that Ant uses XML to describe the build process and its dependencies, whereas Make uses Makefile format.
 
-\item PostgreSQL
-It is an open source object-relational database management system (ORDBMS) available for many platforms including Linux, Microsoft Windows and Mac OS X. \\
+\item PostgreSQL:
+It is an open source object-relational database management system (ORDBMS) available for many platforms including Linux, Microsoft Windows and Mac OS X. 
 It implements the majority of the SQL:2008 standard, is ACID-compliant, is fully transactional (including all DDL statements), has extensible data types, operators, index methods, functions, aggregates, procedural languages, and has a large number of extensions written by third parties.
 
-\item Tortoise SVN 1.7, A Subversion client for Windows
+\item Tortoise SVN 1.7: A Subversion client for Windows.
 It is a free software that helps programmers manage different versions of the source code for their programs.Tortoise SVN is a Subversion client, implemented as a Microsoft Windows shell extension. It is released under the GNU General Public License.
 
 \item Web Browser, Google Chrome or Mozilla Firefox
@@ -213,8 +222,8 @@ Following are the steps to get the application working:
 \item Verify that it has the following directory structure:
 \begin{itemize}
     \item build (directory where the classes of some components will be located, for now, this is empty)
-\item config (This folder should have two files - log4j.properties and BodhiWebApplication.properties)\\
-Edit log4j.properties, change the value for \textgravedbl log4j.appender.A1.File\textasciidieresis to a specific directory on the machine.\\
+\item config (This folder should have two files - log4j.properties and BodhiWebApplication.properties)
+Edit log4j.properties, change the value for ``log4j.appender.A1.File" to a specific directory on the machine.
 No changes are required in BodhiWebApplication.properties
 \item doc (This is the directory for any documents, including javadoc)
 \item resources (If the application is going to use any external resources, they will be stored here)
@@ -297,18 +306,22 @@ instead of using the normal startup.bat
 There were several challenges faced during the project, few of them are listed below.
 \begin{enumerate}
 \item Firewall at server end: Since the database server was at an external location secured with firewall, there were problems in accessing the server at first.
-\item Firewall at client end: After the access was granted the problem arose at my end due to Cyberoam layer. I could access the server from outside but not institution due to restricted remote access in the presence of firewall. Finally I was allotted a port using which I could successfully create a secure tunnel.
+\item Firewall at client end: After the access to the database was granted the problem arose due to Cyberoam layer. I could access the server from outside but not the institution due to restricted remote access in the presence of firewall. Finally I was allotted a port using which I could successfully create a secure tunnel.
 \item Inaccessible Images: Images that were to be displayed in the web page were not available publicly as they were present only on the server. So hundreds of images of size 3.5GB were first securely copied (PSCP) to the client and then they were pushed to the cloud.
-\item Incompatible Images: All the images that were available were of the format .jp2 which is JPEG 2000. It uses a wavelet compression algorithm instead of the common DCT compression method that is used with standard JPEG images.\\
-This format can be used to store either lossy or lossless compressed JPEG images and provides the user with a better quality and smaller file size than the traditional JPG image files.\\
-But these images are not supported by the browser, hence they can not be opened in the browser.
-\item Performance Issues : Due to the remote access to the server through tunneling and by using complex subquery to retrieve the OCR text, the server got slow. The time clocked for the server to response for the query was 16 minutes when using 3G network. These long delays and other problems made it difficult to work on real data. \\
-Query: \\
-\textgravedbl select linetext from vw\_ipar\_text1 where ipar\_id IN (select  ipar\_id from vw\_issue\_articles where headline =\textasciidieresis + headline \\
-Alternatively,\\
-\textgravedbl select linetext from vw\_ipar\_text1 t1 INNER JOIN (select ipar\_id from vw\_issue\_articles where headline =\textasciigrave \textasciidieresis + headline + \textacutedbl\textasciiacute)t2 ON t1.ipar\_id = t2.ipar\_id \textasciidieresis \\
-The above queries fetches the entire article corresponding to the user selected headline. But both of them makes the retrieval process slow.\\
-So, the functionality to edit the Raw text was built by setting OCR text in the table a priori. And saving the edited data into the database. Section~\ref{sec:models}, figure~\ref{fig:3} defines the table created to save the user corrected text and user specified tags.
+\item Incompatible Images: All the images that were available were of the format .jp2 which is JPEG 2000. It uses a wavelet compression algorithm instead of the common DCT compression method that is used with standard JPEG images.
+This format can be used to store either lossy or lossless compressed JPEG images and provides the user with a better quality and smaller file size than the traditional JPG image files.
+However, these images are not supported by the browser, hence they can not be opened in the browser.
+\item Performance Issues : Due to the remote access to the server through tunneling and by using complex subquery to retrieve the OCR text, the server turned out to be slow. The time clocked for the server to response for the query (shown below) was 16 minutes when using 3G network. These long delays and other problems made it difficult to work on real data. 
+
+\textbf{An Example Query:} \\
+`` select linetext from vw\_ipar\_text1 where ipar\_id IN (select  ipar\_id from vw\_issue\_articles where headline =" + headline \\
+
+Alternatively,
+
+`` select linetext from vw\_ipar\_text1 t1 INNER JOIN (select ipar\_id from vw\_issue\_articles where headline =\textasciigrave \textasciidieresis + headline + \textacutedbl\textasciiacute)t2 ON t1.ipar\_id = t2.ipar\_id \textasciidieresis 
+
+The above queries fetches the entire article corresponding to the user selected headline. But both of them makes the retrieval process slow.
+So, the functionality to edit the raw text was built by setting OCR text in the table a priori and saving the edited data into the database. Figure~\ref{fig:3} in Section~\ref{sec:models} defines the table created to save the user corrected text and user specified tags.
 
 \end{enumerate}
 
@@ -317,7 +330,7 @@ The OCR \cite{OCR} Text Correction System has not been fully implemented yet. Th
 Once the system would be functional, it will certainly act as a rich source of information for historians, researchers, scholars and users in general.\\
 
 \section{Acknowledgement}
-This implementation project was a part of my M.Tech Scholarly work. I would like to express my gratitude to both my Advisors Dr. Haimonti Dutta and Manoj Pooleery for their constant support and guidance without which I would have never been able to complete it.
+This implementation project was a part of my M.Tech Scholarly work. I would like to express my gratitude to both my advisors Dr. Haimonti Dutta and Manoj Pooleery for their constant support and guidance without which I would have never been able to complete it.
 
 \nocite{cdnc,OCR,eval,noisy,book,eclipse,vaadin,tomcat,ant,postgres,svn,ER}
 
@@ -376,7 +389,7 @@ This implementation project was a part of my M.Tech Scholarly work. I would like
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=9cm,height=4cm]{db.jpg}
+\includegraphics[width=11cm,height=4cm]{db.jpg}
 \caption{Snapshot of the table}
 \label{fig:11}
 \end{figure}
