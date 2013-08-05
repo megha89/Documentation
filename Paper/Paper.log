@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.2.22)  6 AUG 2013 03:09
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.2.22)  6 AUG 2013 03:36
 entering extended mode
 **paper.tex
 (c:\Users\Megha\Documents\LEdProjects\Paper\paper.tex
@@ -58,9 +58,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 41.
+(Font)              <7> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 41.
+(Font)              <5> on input line 39.
  [2] (c:\Users\Megha\Documents\LEdProjects\Paper\paper.aux) ) 
 Here is how much of TeX's memory you used:
  232 strings out of 493922
@@ -69,6 +69,6 @@ Here is how much of TeX's memory you used:
  3601 multiletter control sequences out of 15000+200000
  7588 words of font info for 27 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 23i,6n,17p,809b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 24i,8n,17p,809b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on paper.dvi (2 pages, 6932 bytes).
+Output written on paper.dvi (2 pages, 7280 bytes).

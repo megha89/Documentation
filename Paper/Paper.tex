@@ -36,6 +36,7 @@ The related work in this domain used Perceptron Algorithm which posed scalabilit
 
 \section{Problem Statement}
 The research problem is to develop an algorithm which when applied on a large-scale training data learns a model/classifier that would classify the future data. The challenge is to extend the current popular methods that are used for binary classification to multi-class classification.
+The large trainining data used is the online repository of historical newspapers articles in the holdings of cronicling america\footnote{http://chroniclingamerica.loc.gov/}.
 
 SVM's are a popular method for binary classification. They can be considered as an extension to perceptron, which simply tries to find any separating hyperplane. Intuitively, a hyperplane that is as far away as possible from either class (largest margin) is preferable because this can be generalized better on future data.
 There are SVM solvers like Pegasos which when presented with more training data, decrease the runtime in contrast to other solvers that increase suoerlinearly with the training data, like SVM\textsuperscript{perf}
