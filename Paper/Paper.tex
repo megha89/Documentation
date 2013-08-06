@@ -1,25 +1,16 @@
 \documentclass{article}
-
-\title{Large-Scale Learning on OCR text}
-\author{Megha Gupta and Haimonti Dutta*\\
-Indraprastha Institute of Information Technology, Delhi, India \\
-meghag@iiitd.ac.in \\
-**The Center for Computational Learning Systems (CCLS) \\
-Columbia University, New York, NY \\
-haimonti@ccls.columbia.edu \\
-}
-\date{August 04, 2013}
-
+\title{Research Statement}
+\date{}
 \begin{document}
 \maketitle
 
-\section{Short Review}
-Today, Big Data is ubiquitous. With the growing volume of data in the recent years, we have started to visualise problems that are large-scale. Different Machine Learning algorithms have been designed to deal with big data.  In our Research, we focus on approaches that are suitable for large-scale data and have the potential for parallel implementation. A problem is called large-scale if its training set can not be stored in modern computer's memory. A large training set poses a challenge for the computational complexity of a learning algorithm: in order for algorithms to be feasible on such datasets, they must scale at
+\section{Review}
+Today, Big Data is ubiquitous. With the growing volume of data in the recent years, we have started to visualize problems that are large-scale. Different Machine Learning algorithms have been designed to deal with big data.  In our Research, we focus on approaches that are suitable for large-scale data and have the potential for parallel implementation. A problem is called large-scale if its training set can not be stored in modern computer's memory. A large training set poses a challenge for the computational complexity of a learning algorithm: in order for algorithms to be feasible on such datasets, they must scale at
 worst linearly with the number of examples. Conventional algorithms can not handle such problems as they no more have ready access to data stored in the memory. This mandates the need for the development of new algorithms and analysis of the challenges posed by them.
 Online algorithms are used in large-scale setting where infinite stream of training examples are presented one at a time. They are also used to solve batch problem which is a desirable in the large-scale setting. The general approaches to solve large-scale batch learning problems are:
 \begin{enumerate}
 \item \textbf{Data Stream}: We can treat the training data as a stream and apply online algorithms.
-\item \textbf{Parallelize}: The batch algorithm can be parallelized so that large learning problem can be splitted into multiple smaller problems(medium-scale).
+\item \textbf{Parallelize}: The batch algorithm can be parallelized so that large learning problem can be split into multiple smaller problems(medium-scale).
 \item \textbf{Random subset}: We can preprocess the training data and randomly sample a small subset of data to train on. By choosing the subset appropriately we can reduce the training size and make our training algorithm tractable.
 \end{enumerate}
 Few algorithms that are used for large scale learning are Decision Trees, Perceptrons, Neural nets, Instance based learning and Support Vector Machines.\\
@@ -31,13 +22,28 @@ The related work in this domain used Winnow-based algorithm achieving accuracy l
 
 \section{Problem Statement}
 The research problem is to develop an algorithm which when applied on a large-scale training data learns a model/classifier that would classify the future data. The challenge is to extend the current popular methods that are used for binary classification to multi-class classification.
-The large trainining data used is the online repository of historical newspapers articles in the holdings of cronicling america\footnote{http://chroniclingamerica.loc.gov/}.
+The large training data used is the online repository of historical newspapers articles in the holdings of cronicling america\footnote{http://chroniclingamerica.loc.gov/}.
 
 SVM's are a popular method for binary classification. They can be considered as an extension to perceptron, which simply tries to find any separating hyperplane. Intuitively, a hyperplane that is as far away as possible from either class (largest margin) is preferable because this can be generalized better on future data.
-There are SVM solvers like Pegasos which when presented with more training data, decrease the runtime in contrast to other solvers that increase superlinearly with the training data, like SVM\textsuperscript{perf}
+There are SVM solvers like Pegasos which when presented with more training data, decrease the runtime in contrast to other solvers that increase superlinearly with the training data, like SVM\textsuperscript{perf}.
+ 
+\section{Research Focus}
+There are some limitations to the ability of the perceptron to classify some data.
+\begin{enumerate}
+    \item The biggest problem is that sometimes data is inherently not separable by the hyperplane. The cure to this problem can be to find a function on the points that would transform them to another space enabling them to be linearly separable. But that would just be another case of overfitting, the situation where the classifier works very well with the training data as it has been carefully designed to handle each training example correctly. However, the classifier will not perform well with on the new data.
+\item If classes are separable by one hyperplane then there can be many hyperplanes separating the points and not all of them are equally good. There lies a more equitable choice of separating hyperplane.
+\item Perceptron stops as soon as there are no misclassified points. As a result, the chosen hyperplane just manages to classify some of the data points correctly.
+\end{enumerate}
+SVM is seen as an improvement on the perceptron that is designed to address the problems as mentioned above. It selects only one particular hyperplane out of all the possible valid hyperplanes such that it not only separates the two classes but also does so in the most efficient way. It selects the hyperplane that maximizes the margin (distance between the margin and the closest points of the training set.)
 
-\section{Scope and Focus}
+
+\section{Scope}
 With the current trend in the growth of information, large-scale learning problems can not be overlooked. There is a need to develop algorithms that deal with these problems efficiently.\\
 The objective of this research is to train a model on a large-scale data which can be used further to predict the labels of unlabelled future data.
 
+
+
+\nocite{winnow,wikiedits,carlson1999snow,menon2009large,book}
+\bibliography{tcsFellowship}
+\bibliographystyle{plain}
 \end{document}

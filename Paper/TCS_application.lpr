@@ -1,6 +1,6 @@
 [Files\0]
 ActiveFilters=
-Bookmark#0=27
+Bookmark#0=22
 Bookmark#1=0
 Bookmark#2=0
 Bookmark#3=0
@@ -10,8 +10,8 @@ Bookmark#6=0
 Bookmark#7=0
 Bookmark#8=0
 Bookmark#9=0
-CaretPos.X=9
-CaretPos.Y=13
+CaretPos.X=7
+CaretPos.Y=2
 CharSet=def
 FileName=paper.tex
 FoldedLines=
@@ -82,8 +82,36 @@ TabOrder=-1
 UseThesaurus=no
 WrapLine=no
 
+[Files\3]
+ActiveFilters=
+Bookmark#0=0
+Bookmark#1=0
+Bookmark#2=0
+Bookmark#3=0
+Bookmark#4=0
+Bookmark#5=0
+Bookmark#6=0
+Bookmark#7=0
+Bookmark#8=0
+Bookmark#9=0
+CaretPos.X=11
+CaretPos.Y=28
+CharSet=def
+FileName=tcsFellowship.bib
+FoldedLines=
+IsMainFile=no
+Opened=yes
+ScrollPos.X=0
+ScrollPos.Y=22
+SearchListCount=0
+ShowSyntax=yes
+SpellChecking=yes
+TabOrder=1
+UseThesaurus=yes
+WrapLine=yes
+
 [Files]
-Count=3
+Count=4
 
 [Project]
 ActiveFilters=

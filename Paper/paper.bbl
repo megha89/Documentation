@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{book}
+Jeffrey D.~Ullman Anand~Rajaraman, Jure~Leskovec.
+\newblock {\em Mining Of Massive Datasets}.
+\newblock Cambridge University Press, 2013.
+
+\bibitem{carlson1999snow}
+Andrew Carlson, Chad Cumby, Je~Rosen, and Dan Roth.
+\newblock The snow learning architecture.
+\newblock Technical report, Technical Report UIUCDCS, 1999.
+
+\bibitem{winnow}
+AndrewR. Golding and Dan Roth.
+\newblock A winnow-based approach to context-sensitive spelling correction.
+\newblock {\em Machine Learning}, 34(1-3):107--130, 1999.
+
+\bibitem{menon2009large}
+Aditya~Krishna Menon.
+\newblock Large-scale support vector machines: algorithms and theory.
+\newblock {\em Research Exam, University of California, San Diego}, 2009.
+
+\bibitem{wikiedits}
+Elif Yamangil and Rani Nelken.
+\newblock Scalable lexical correction from wikipedia edits using perceptron
+  reranking.
+\newblock {\em unpublished}, 2008.
+
+\end{thebibliography}
