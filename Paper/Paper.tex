@@ -5,27 +5,28 @@
 \maketitle
 
 \section{Review}
-Today, Big Data is ubiquitous. With the growing volume of data in the recent years, we have started to visualize problems that are large-scale. Different Machine Learning algorithms have been designed to deal with big data.  In our Research, we focus on approaches that are suitable for large-scale data and have the potential for parallel implementation. A problem is called large-scale if its training set can not be stored in modern computer's memory. A large training set poses a challenge for the computational complexity of a learning algorithm: in order for algorithms to be feasible on such datasets, they must scale at
+Today, Big Data is ubiquitous. With the growing volume of data in the recent years, we have started to visualize problems that are large-scale. Different Machine Learning algorithms have been designed to deal with big data.
+
+In our Research, we focus on approaches that are suitable for large-scale data and have the potential for parallel implementation. A problem is called large-scale if its training set can not be stored in modern computer's memory. A large training set poses a challenge for the computational complexity of a learning algorithm: in order for algorithms to be feasible on such datasets, they must scale at
 worst linearly with the number of examples. Conventional algorithms can not handle such problems as they no more have ready access to data stored in the memory. This mandates the need for the development of new algorithms and analysis of the challenges posed by them.
-Online algorithms are used in large-scale setting where infinite stream of training examples are presented one at a time. They are also used to solve batch problem which is a desirable in the large-scale setting. The general approaches to solve large-scale batch learning problems are:
+Online algorithms are used in large-scale setting where infinite stream of training examples are presented one at a time. They are also used to solve batch problems which is desirable in the large-scale setting. The general approaches to solve large-scale batch learning problems are:
 \begin{enumerate}
 \item \textbf{Data Stream}: We can treat the training data as a stream and apply online algorithms.
 \item \textbf{Parallelize}: The batch algorithm can be parallelized so that large learning problem can be split into multiple smaller problems(medium-scale).
 \item \textbf{Random subset}: We can preprocess the training data and randomly sample a small subset of data to train on. By choosing the subset appropriately we can reduce the training size and make our training algorithm tractable.
 \end{enumerate}
-Few algorithms that are used for large scale learning are Decision Trees, Perceptrons, Neural nets, Instance based learning and Support Vector Machines.\\
-
-The decision tree classifier that is designed to classify large training data is called SLIQ (\textbf{S}upervised \textbf{L}earning \textbf{I}n \textbf{Q}uest). SLIQ is capable of classifying disk-resident datasets, scalable for large datasets, uses pre-sorting techniques for efficiency. The disk resident data is too large to fit in memory but it still requires some information to stay memory-resident which grows in proportion with the input records putting a limit on the size of the training data.\\ Another decision tree based classification algorithm called SPRINT (\textbf{S}calable \textbf{P}a\textbf{R}allelizable \textbf{IN}duction of decision \textbf{T}rees) is a fast, scalable, no memory restrictions and easy to parallelize algorithm. It can handle larger datasets.
-Another classifier that learns decision trees from data streams is based on Incremental learning methods (Hoeffding Tree algorithm) is called VFDT (Very Fast Decision Tree Learner).\\
-Our research is primarily focussed on Large-Scale Machine learning on OCR text.\\
-The related work in this domain used Winnow-based algorithm achieving accuracy levels of 99\% for 265 "confusion sets". However this approach was originally meant to correct predetermined words. It was unclear to what extent it could be scaled to correct all words in a sentence and moreover for allowing more than a small set of predetermined alternatives for each word.
-
+Few algorithms that are used for large scale learning are Decision Trees, Perceptrons, Neural nets, Instance based learning and Support Vector Machines.
+\begin{itemize}
+    \item The decision tree classifier that is designed to classify large training data is called SLIQ (\textbf{S}upervised \textbf{L}earning \textbf{I}n \textbf{Q}uest). SLIQ is capable of classifying disk-resident datasets, scalable for large datasets and uses pre-sorting techniques for efficiency. The disk resident data is too large to fit in memory but it still requires some information to stay memory-resident which grows in proportion with the input records putting a limit on the size of the training data.
+\item Another decision tree based classification algorithm called SPRINT (\textbf{S}calable \textbf{P}a\textbf{R}allelizable \textbf{IN}duction of decision \textbf{T}rees) is a fast, scalable, no memory restrictions and easy to parallelize algorithm. It can handle larger datasets.
+\item Another classifier that learns decision trees from data streams is based on Incremental learning methods (Hoeffding Tree algorithm) is called VFDT (Very Fast Decision Tree Learner).
+\end{itemize}
+Our research is primarily focussed on Large-Scale Machine learning on OCR text.
+The related work in this domain used Winnow-based algorithm \cite{winnow} achieving accuracy levels of 99\% for 265 "confusion sets". However this approach was originally meant to correct predetermined words. It was unclear to what extent it could be scaled to correct all words in a sentence and moreover for allowing more than a small set of predetermined alternatives for each word.
+Moreover, another approach used was a baseline Hidden Markov Model (HMM) which was trained on wikipedia edits and then further augmented with perceptron reranking but it again caused performance bottleneck.
 \section{Problem Statement}
 The research problem is to develop an algorithm which when applied on a large-scale training data learns a model/classifier that would classify the future data. The challenge is to extend the current popular methods that are used for binary classification to multi-class classification.
-The large training data used is the online repository of historical newspapers articles in the holdings of cronicling america\footnote{http://chroniclingamerica.loc.gov/}.
-
-SVM's are a popular method for binary classification. They can be considered as an extension to perceptron, which simply tries to find any separating hyperplane. Intuitively, a hyperplane that is as far away as possible from either class (largest margin) is preferable because this can be generalized better on future data.
-There are SVM solvers like Pegasos which when presented with more training data, decrease the runtime in contrast to other solvers that increase superlinearly with the training data, like SVM\textsuperscript{perf}.
+The large training data to be used is the online repository of historical newspapers articles in the holdings of cronicling america\footnote{http://chroniclingamerica.loc.gov/}.
  
 \section{Research Focus}
 There are some limitations to the ability of the perceptron to classify some data.
@@ -35,13 +36,12 @@ There are some limitations to the ability of the perceptron to classify some dat
 \item Perceptron stops as soon as there are no misclassified points. As a result, the chosen hyperplane just manages to classify some of the data points correctly.
 \end{enumerate}
 SVM is seen as an improvement on the perceptron that is designed to address the problems as mentioned above. It selects only one particular hyperplane out of all the possible valid hyperplanes such that it not only separates the two classes but also does so in the most efficient way. It selects the hyperplane that maximizes the margin (distance between the margin and the closest points of the training set.)
-
-
+There are SVM solvers like Pegasos which when presented with more training data, decrease the runtime in contrast to other solvers that increase superlinearly with the training data, like SVM\textsuperscript{perf}.
+ 
 \section{Scope}
 With the current trend in the growth of information, large-scale learning problems can not be overlooked. There is a need to develop algorithms that deal with these problems efficiently.\\
-The objective of this research is to train a model on a large-scale data which can be used further to predict the labels of unlabelled future data.
-
-
+The objective of this research is to train a model on a large-scale data which can be used further to predict the errors in the unseen OCR text.
+This would help in building a clean online repository of historic newspapers providing rich source of information to historians, researchers, scholars and general users.
 
 \nocite{winnow,wikiedits,carlson1999snow,menon2009large,book,Joachims:1999:MLS:299094.299104,ibm}
 \bibliography{tcsFellowship}

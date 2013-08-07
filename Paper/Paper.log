@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.2.22)  7 AUG 2013 12:44
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.2.22)  7 AUG 2013 19:02
 entering extended mode
 **paper.tex
 (C:\Users\Megha\Documents\LEdProjects\Paper\paper.tex
@@ -53,27 +53,33 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 LaTeX Warning: No \author given.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
-
- []
-
-[1
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 20.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
+ [1
 
 ]
+Overfull \hbox (10.02722pt too wide) in paragraph at lines 21--22
+[][]\OT1/cmr/m/n/10 Another de-ci-sion tree based clas-si-fi-ca-tion al-go-rith
+m called SPRINT (\OT1/cmr/bx/n/10 S\OT1/cmr/m/n/10 calable
+ []
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 25.
+(Font)              <7> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 25.
- [2] (C:\Users\Megha\Documents\LEdProjects\Paper\paper.bbl) [3]
+(Font)              <5> on input line 29.
+[2] (C:\Users\Megha\Documents\LEdProjects\Paper\paper.bbl) [3]
 (C:\Users\Megha\Documents\LEdProjects\Paper\paper.aux) ) 
 Here is how much of TeX's memory you used:
- 244 strings out of 493922
- 2916 string characters out of 3147305
- 54031 words of memory out of 3000000
- 3609 multiletter control sequences out of 15000+200000
+ 261 strings out of 493922
+ 3204 string characters out of 3147305
+ 53031 words of memory out of 3000000
+ 3623 multiletter control sequences out of 15000+200000
  7934 words of font info for 28 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 24i,8n,17p,809b,193s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 24i,8n,19p,617b,193s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on paper.dvi (3 pages, 11312 bytes).
+Output written on paper.dvi (3 pages, 11704 bytes).

@@ -10,15 +10,15 @@ Andrew Carlson, Chad Cumby, Je~Rosen, and Dan Roth.
 \newblock The snow learning architecture.
 \newblock Technical report, Technical Report UIUCDCS, 1999.
 
+\bibitem{ibm}
+Ibm Corporation.
+\newblock Bigdata: Why it matters to the midmarket.
+\newblock {\em Forward View: The magazine for mid-size business}, 2012.
+
 \bibitem{winnow}
 AndrewR. Golding and Dan Roth.
 \newblock A winnow-based approach to context-sensitive spelling correction.
 \newblock {\em Machine Learning}, 34(1-3):107--130, 1999.
-
-\bibitem{ibm}
-ibm corporation.
-\newblock Bigdata: Why it matters to the midmarket.
-\newblock {\em Forward View: The magazine for mid-size business}, 2012.
 
 \bibitem{Joachims:1999:MLS:299094.299104}
 Thorsten Joachims.
