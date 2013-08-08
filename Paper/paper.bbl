@@ -15,6 +15,12 @@ Ibm Corporation.
 \newblock Bigdata: Why it matters to the midmarket.
 \newblock {\em Forward View: The magazine for mid-size business}, 2012.
 
+\bibitem{structuredML}
+ThomasG. Dietterich, Pedro Domingos, Lise Getoor, Stephen Muggleton, and Prasad
+  Tadepalli.
+\newblock Structured machine learning: the next ten years.
+\newblock {\em Machine Learning}, 73(1):3--23, 2008.
+
 \bibitem{winnow}
 AndrewR. Golding and Dan Roth.
 \newblock A winnow-based approach to context-sensitive spelling correction.

@@ -1,4 +1,8 @@
 \documentclass{article}
+\usepackage{pifont}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
 \title{Research Statement}
 \date{}
 \begin{document}
@@ -16,11 +20,28 @@ Since the human mind excels in visual cognition and language processing tasks an
 
 \section{Review} 
 
-Golding and Roth \cite{winnow} uses a Winnow-based algorithm for OCR Correction and achieve accuracy levels of 99\% for 265 "confusion sets". This approach was originally meant to correct predetermined words. It is unclear to what extent it could be scaled to correct all words in a dictionary. 
-% sentence and moreover for allowing more than a small set of predetermined alternatives for each word. -- WHAT DOES THIS MEAN?
+Golding and Roth \cite{winnow} uses a Winnow-based algorithm for OCR Correction and achieve accuracy levels of 99\% for 265 confusion sets. This approach was originally meant to correct predetermined words. It is unclear to what extent it could be scaled to correct all words in a dictionary. 
+
 Another approach used in literature \cite{wikiedits} is based on Hidden Markov Models (HMMs) which are trained on wikipedia edits and further augmented with perceptron re-ranking. This algorithm also is not able to scale to large textual databases and caused performance bottleneck.
 
-[TALK ABOUT STRUCTURED LEARNING HERE]
+Structured learning is most likely to succeed in large domains. It is the umbrella term for supervised machine learning techniques that involve predicting structured objects, rather than single or real valued outputs.
+It learns structured hypotheses from data including structured inputs as well as outputs, parts of which maybe missing, noisy or uncertain.
+These models are typically trained by means of observed data in which the true prediction value is used to adjust model parameters.\\
+%Structured Output Learning: f : X \ding{213} Y \\
+%where inputs X can be any kind of objects \\
+%outputs y belongs to Y are complex (structured) objects like images, parse trees, folds of a protein\\
+Structured prediction models mainly consist of probabilistic graphical models, Baysian Networks, random fields, inductive logic programming, structured SVMs, Markov logic networks and constrained conditional models.
+%Due to the complexity of the model and the interrelations of predicted variables the process of prediction using a trained model and of training itself is often computationally infeasible and approximate inference and learning methods are used.
+There is one overarching problem for structured machine learning: developing scalable learning and reasoning methods. Many of the initial methods for structured learning were batch methods based on extension of logic regressions and support vector machines (SVMStruct, Maximum Margin Markov networks). 
+The general approaches to solve large-scale batch learning problems are:
+\begin{enumerate}
+\item \textbf{Data Stream}: We can treat the training data as a stream and apply online algorithms.
+\item \textbf{Parallelize}: The batch algorithm can be parallelized so that large learning problem can be split into multiple smaller problems(medium-scale).
+\item \textbf{Random subset}: We can preprocess the training data and randomly sample a small subset of data to train on. By choosing the subset appropriately we can reduce the training size and make our training algorithm tractable.
+\end{enumerate}
+
+%[TALK ABOUT STRUCTURED LEARNING HERE]
+
 \section{Problem Statement}
 The research problems include the following:
 \begin{itemize}
@@ -34,7 +55,8 @@ With the current trend in the growth of data and information, large-scale learni
 The objective of this research is to train a model on a large-scale data which can be used further to predict the errors in the unseen OCR text.
 This would help in building a clean online repository of historic newspapers providing rich source of information to historians, researchers, scholars and general users.
 
-\nocite{winnow,wikiedits,carlson1999snow,menon2009large,book,Joachims:1999:MLS:299094.299104,ibm}
+\nocite{winnow,wikiedits,carlson1999snow,menon2009large,Joachims:1999:MLS:299094.299104,ibm,structuredML}
 \bibliography{tcsFellowship}
 \bibliographystyle{plain}
 \end{document}
+
