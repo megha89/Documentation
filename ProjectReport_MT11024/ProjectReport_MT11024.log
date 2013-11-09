@@ -1,21 +1,13 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.24)  23 MAY 2013 19:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  8 NOV 2013 23:28
 entering extended mode
-**projectreport_mt11024.tex
-
-(C:\Users\Megha\Desktop\SEM4\DDM\CourseProject\Documentation\ProjectReport_MT11
-024\projectreport_mt11024.tex
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**ProjectReport_MT11024.tex
+(./ProjectReport_MT11024.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-(C:\Users\Megha\AppData\Roaming\MiKTeX\2.9\tex\latex\ieeetran\IEEEtran.cls
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
 Document Class: IEEEtran 2012/12/27 V1.8 by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -26,7 +18,7 @@ Document Class: IEEEtran 2012/12/27 V1.8 by Michael Shell
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 368.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
@@ -100,31 +92,31 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEtmpitemindent=\dimen116
 \c@IEEEbiography=\count91
 \@IEEEtranrubishbin=\box26
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count92
@@ -136,9 +128,9 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 LaTeX Warning: Unused global option(s):
     [compsocconf].
 
+(./ProjectReport_MT11024.aux)
+\openout1 = `ProjectReport_MT11024.aux'.
 
-(C:\Users\Megha\Desktop\SEM4\DDM\CourseProject\Documentation\ProjectReport_MT11
-024\projectreport_mt11024.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 282.
 LaTeX Font Info:    ... okay on input line 282.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 282.
@@ -152,7 +144,7 @@ LaTeX Font Info:    ... okay on input line 282.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 282.
 LaTeX Font Info:    ... okay on input line 282.
 
-(C:\Users\Megha\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count93
 \scratchdimen=\dimen119
@@ -165,14 +157,53 @@ LaTeX Font Info:    ... okay on input line 282.
 \MPnumerator=\count97
 \makeMPintoPDFobject=\count98
 \everyMPtoPDFconversion=\toks17
+) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-LaTeX Warning: Citation `cdnc' on page 1 undefined on input line 300.
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-LaTeX Warning: Citation `cdnc' on page 1 undefined on input line 300.
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.jpeg,.png,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 Underfull \hbox (badness 2261) in paragraph at lines 296--303
 \OT1/ptm/b/n/9 method of dig-i-tiz-ing printed texts so that they can be
  []
@@ -181,18 +212,6 @@ Underfull \hbox (badness 2261) in paragraph at lines 296--303
 Underfull \hbox (badness 10000) in paragraph at lines 296--303
 
  []
-
-
-LaTeX Warning: Citation `OCR' on page 1 undefined on input line 313.
-
-
-LaTeX Warning: Citation `cdnc' on page 1 undefined on input line 314.
-
-
-LaTeX Warning: Citation `cdnc' on page 1 undefined on input line 315.
-
-
-LaTeX Warning: Citation `OCR' on page 1 undefined on input line 315.
 
 
 Underfull \hbox (badness 3118) in paragraph at lines 311--319
@@ -220,32 +239,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 311--319
 
  []
 
-
-LaTeX Warning: Citation `digital' on page 1 undefined on input line 325.
-
 LaTeX Font Info:    Try loading font information for OML+ptm on input line 326.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 326.
-
-<C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport_MT11
-024/logfile.jpg, id=1, 377.15906pt x 150.5625pt>
-File: C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport
-_MT11024/logfile.jpg Graphic file (type jpg)
-
-<use C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport_
-MT11024/logfile.jpg>
-Package pdftex.def Info: C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Document
-ation/ProjectReport_MT11024/logfile.jpg used on input line 330.
-(pdftex.def)             Requested size: 256.07343pt x 142.27771pt.
-
-Overfull \hbox (4.07343pt too wide) in paragraph at lines 330--331
- [][] 
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 325--334
 \OML/cmm/m/it/10 <\OT1/ptm/m/n/10 NewTextValue\OML/cmm/m/it/10 >\OT1/ptm/m/n/10
@@ -262,41 +262,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
-
-<C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport_MT11
-024/histo.jpg, id=2, 256.70906pt x 151.3153pt>
-File: C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport
-_MT11024/histo.jpg Graphic file (type jpg)
-
-<use C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport_
-MT11024/histo.jpg>
-Package pdftex.def Info: C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Document
-ation/ProjectReport_MT11024/histo.jpg used on input line 340.
-(pdftex.def)             Requested size: 256.09343pt x 142.2641pt.
-
-Overfull \hbox (4.09343pt too wide) in paragraph at lines 340--341
- [][] 
- []
+[1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-<C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport_MT11
-024/stats.jpg, id=3, 188.20313pt x 167.12437pt>
-File: C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport
-_MT11024/stats.jpg Graphic file (type jpg)
-
-<use C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport_
-MT11024/stats.jpg>
-Package pdftex.def Info: C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Document
-ation/ProjectReport_MT11024/stats.jpg used on input line 348.
-(pdftex.def)             Requested size: 85.35973pt x 85.35979pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Citation `datasource' on page 1 undefined on input line 355.
-
-
+]
 Underfull \hbox (badness 2512) in paragraph at lines 355--356
 \OT1/ptm/m/n/10 The files in this cor-pus were ex-tracted from the the
  []
@@ -326,10 +295,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 355--356
 
  []
 
-[1{C:/Users/Megha/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-
-]
 Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
@@ -357,9 +323,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 371--373
  []
 
 
-LaTeX Warning: Citation `datasource' on page 2 undefined on input line 387.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 375--388
 \OT1/ptm/m/n/10 http://chroniclingamerica.loc.gov/lccn/sn93052980/1900-01-
  []
@@ -404,10 +367,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 375--388
 
  []
 
-[2 <C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentation/ProjectReport_M
-T11024/logfile.jpg> <C:/Users/Megha/Desktop/SEM4/DDM/CourseProject/Documentatio
-n/ProjectReport_MT11024/histo.jpg> <C:/Users/Megha/Desktop/SEM4/DDM/CourseProje
-ct/Documentation/ProjectReport_MT11024/stats.jpg>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 390--391
 
  []
@@ -422,7 +382,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 393--396
 
  []
 
-
+[2]
 Underfull \hbox (badness 3612) in paragraph at lines 399--401
 \OT1/ptm/m/n/10 The doc-u-ments re-trieved are ranked ac-cord-ing to the
  []
@@ -472,7 +432,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 435--437
 
  []
 
-[3]
+
 Overfull \hbox (8.04152pt too wide) in paragraph at lines 440--454
 [][] 
  []
@@ -512,7 +472,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 472--474
 
  []
 
-
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 481--482
 
  []
@@ -527,18 +487,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 493--494
 
  []
 
-
-LaTeX Warning: Citation `datasource' undefined on input line 495.
-
-
-LaTeX Warning: Citation `cdnc' undefined on input line 495.
-
-
-LaTeX Warning: Citation `digital' undefined on input line 495.
-
-
-(C:\Users\Megha\Desktop\SEM4\DDM\CourseProject\Documentation\ProjectReport_MT11
-024\projectreport_mt11024.bbl)
+(./ProjectReport_MT11024.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -550,38 +499,33 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4]
-(C:\Users\Megha\Desktop\SEM4\DDM\CourseProject\Documentation\ProjectReport_MT11
-024\projectreport_mt11024.aux)
+[4
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./ProjectReport_MT11024.aux) ) 
 Here is how much of TeX's memory you used:
- 1856 strings out of 493921
- 30773 string characters out of 3147282
- 88316 words of memory out of 3000000
- 5176 multiletter control sequences out of 15000+200000
- 34114 words of font info for 63 fonts, out of 3000000 for 9000
- 844 hyphenation exceptions out of 8191
- 27i,8n,21p,837b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times
-/utmri8a.pfb>
-Output written on projectreport_mt11024.pdf (4 pages, 215456 bytes).
+ 2196 strings out of 493315
+ 35632 string characters out of 6137903
+ 102437 words of memory out of 5000000
+ 5648 multiletter control sequences out of 15000+600000
+ 33007 words of font info for 62 fonts, out of 8000000 for 9000
+ 960 hyphenation exceptions out of 8191
+ 37i,8n,23p,837b,238s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/
+dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmex10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi5.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr5.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
+pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
+local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ProjectReport_MT11024.pdf (4 pages, 125077 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
