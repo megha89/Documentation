@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: flairsPaper.aux
+The style file: aaai.bst
+Database file #1: flairsPaper.bib
+Warning--empty journal in OCR
+You've used 4 entries,
+            2568 wiz_defined-function locations,
+            589 strings with 4858 characters,
+and the built_in function-call counts, 1006 in all, are:
+= -- 105
+> -- 28
+< -- 0
++ -- 8
+- -- 8
+* -- 59
+:= -- 188
+add.period$ -- 16
+call.type$ -- 4
+change.case$ -- 20
+chr.to.int$ -- 4
+cite$ -- 5
+duplicate$ -- 46
+empty$ -- 71
+format.name$ -- 12
+if$ -- 189
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 1
+newline$ -- 23
+num.names$ -- 12
+pop$ -- 18
+preamble$ -- 1
+purify$ -- 24
+quote$ -- 0
+skip$ -- 43
+stack$ -- 0
+substring$ -- 20
+swap$ -- 7
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 32
+warning$ -- 1
+while$ -- 8
+width$ -- 6
+write$ -- 46
+(There was 1 warning)
