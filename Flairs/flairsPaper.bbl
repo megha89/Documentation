@@ -1,14 +1,24 @@
 \begin{thebibliography}{}
 
-\bibitem[\protect\citeauthoryear{America}{2009}]{datasource}
-America, C.
-\newblock 2009.
-\newblock http://chroniclingamerica.loc.gov/.
+\bibitem[\protect\citeauthoryear{Brunner \bgroup et al\mbox.\egroup
+  }{2012}]{pairwise}
+Brunner, C.; Fischer, A.; Luig, K.; and Thies, T.
+\newblock 2012.
+\newblock Pairwise support vector machines and their application to large scale
+  problems.
+\newblock {\em J. Mach. Learn. Res.} 13(1):2279--2292.
 
 \bibitem[\protect\citeauthoryear{Collection}{2009}]{cdnc}
 Collection, C. D.~N.
 \newblock 2009.
 \newblock http://cdnc.ucr.edu/cdnc.
+
+\bibitem[\protect\citeauthoryear{Crammer and Singer}{2002}]{crammer}
+Crammer, K., and Singer, Y.
+\newblock 2002.
+\newblock On the algorithmic implementation of multiclass kernel-based vector
+  machines.
+\newblock {\em J. Mach. Learn. Res.} 2:265--292.
 
 \bibitem[\protect\citeauthoryear{Digital Library~Consulting}{1990}]{digital}
 Digital Library~Consulting, University of Waikato in~Hamilton, N.~Z.
@@ -19,5 +29,30 @@ Digital Library~Consulting, University of Waikato in~Hamilton, N.~Z.
 Eikvil, L.
 \newblock 1993.
 \newblock Optical character recognition.
+
+\bibitem[\protect\citeauthoryear{Jeffrey~Esakov and Zhou}{}]{issue}
+Jeffrey~Esakov, Daniel P.~Lopresti, J. S.~S., and Zhou, J.
+\newblock Issues in automatic ocr error classification.
+
+\bibitem[\protect\citeauthoryear{Joachims, Finley, and Yu}{2009}]{joachims}
+Joachims, T.; Finley, T.; and Yu, C.-N.~J.
+\newblock 2009.
+\newblock Cutting-plane training of structural svms.
+\newblock {\em Mach. Learn.} 77(1):27--59.
+
+\bibitem[\protect\citeauthoryear{Kazem~Taghva and Erva}{1993}]{noisy}
+Kazem~Taghva, Julie~Borsack, A.~C., and Erva, S.
+\newblock 1993.
+\newblock {\em Effects of Noisy Data on Text Retrieval}, volume~45.
+
+\bibitem[\protect\citeauthoryear{Kazem~Taghva}{1996}]{eval}
+Kazem~Taghva, Julie~Borsack, A.~C.
+\newblock 1996.
+\newblock {\em Evaluation of Model Based Retrieval Effectiveness with OCR
+  Text}, volume~14.
+
+\bibitem[\protect\citeauthoryear{Niklas}{}]{thesis}
+Niklas, K.
+\newblock Unsupervised post-correction of ocr errors.
 
 \end{thebibliography}

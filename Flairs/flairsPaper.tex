@@ -46,83 +46,113 @@ OCR devices are widely used in electronic conversion of scanned images which are
 This project deals with printed text in the form of Historical Newspaper Articles in the holdings of \cite{cdnc}. One such newspaper, The Amador Ledger published in the early 1900s by the Amador Publishing Company appealed to the community's interests by covering issues unique to gold mining. Patrons of the \cite{cdnc} continue to be interested in studying about the status of the local mining industry and consequently read the Amador Ledger on a regular basis even to this day and correct \cite{OCR} errors as they come across them.\\
 In this paper, we perform error classification using Joachims multi-class Support Vector Machine algorithm called \textit{SVM\textsuperscript{multiclass}}\footnote{http://www.cs.cornell.edu/people/tj/svm\_light/svm\_multiclass.html}. We chose this algorithm as its the state of the art algorithm till now. But the experiments give altogether a different view on this algorithm. This algorithm do not converge quickly on certain parameters which are shown in table ~\ref{table: results}
 
-
-
-%Experiments are performed on both the datasets using the same Query set. The ranked documents retrieved from both the sets are compared using a statistical measure called Spearman's Rank Order Correlation. It measures the strength of association between two ranked variables.\\
-%This work can be used to determine whether the OCR text is sufficient enough to be used for the thorough text search and analysis and does it meet the user expectation without actually enhancing and enriching the text.\\
-
-
 \section{Related Work}
+\subsection{OCR correction}
+The OCR enables searching of full text data but it is not 100\% accurate. Its accuracy largely depends on paper quality of the original issue, font style, column layouts, its condition at the time of microfilming, choice of scanner \cite{issue}, and the quality of the OCR software. The OCR errors are widely classified as non-word errors and real-word errors. A non-word error takes place when the erroneous word is not a dictionary word whereas in real-word error the erroneous word is correctly spelt and therefore can be found in the dictionary but incorrectly used in context. A related work on the OCR error classification is done by \cite{thesis}. It gives a more exhaustive classification with respect to OCR errors that helps in classifying real words not contained in any of the dictionary, e.g. names, out-dated or historic spelling variations. Segmentation errors, Hyphenation error, Misrecognition of characters, Punctuation errors, Case sensitivity, Changed word meaning are the classes required for better classification of OCR errors.
 
+%The OCR errors are usually dependent on some major factors like the page quality, text layout, font styles. In \mydoubleq{Issues in automatic error correction}, the experimental analysis has shown that there is another important factor that impacts the performance of the OCR errors which is the choice of scanners used to scan the printed text. The type of scanner used not only affect the quantity of errors but quality as well. Their algorithm for classifying OCR errors is based minimising the cost of basic operations used to transform one string to another, also known as edit distance using dynamic programming approach.\\
+%\mydoubleq{Unsupervised Post Correction} paper talks about the post processing of OCR text to minimise the errors. It uses a combination of Anagram Hashing techniques, bigram approach on word level to consider the context and a  similarity key technique called OCR-key.  Anagram Hashing technique uses a hashing function that assigns same number to all those words that have same characters. OCR key observes the shape of characters to know the nature of OCR system and its generated errors.
 
+\subsection{Multi-class SVM}
+SVM's are inherently binary classifiers. To solve the multi class problem, construction of several binary classifiers is required and the result from each classifier is combed. The traditional approaches to do multi class classification are:
+a) \textit{one-versus-all (OVA classification)} classifies the new instances is done by winner-takes-all strategy where the classifier with highest output function assigns the label. It generates k classifiers for a k class problem.
+b)\textit{one-versus-one} uses the majority voting strategy where each classifier assigns the new instance one of the two class, thereby increasing the vote of the assigned class. Finally the class with the majority votes determines the instance classification.
+It generates k(k-2)/2 models for a k class problem. This approach is not practical for large-scale classification because of the memory required for storing k(k-1)/2 models.
+c)\textit{Directed Acyclic Graph SVM}
+d)\textit{error correcting output codes}\\
+The other alternative is by using \textit{pairwise classification} \cite{pairwise}, where a two class classifier is build on the two input example. The class of training example might be unknown but the mandatory condition is to know whether the examples belong to the same class or not. The input pair is positive pair when the both belong to the same class, otherwise its called as negative pair. \\
+The \cite{crammer} approach was to pose the multi class classification problem into a single optimization problem, rather than decomposing it into multiple binary classification problems.
 
 \section{The Data}
 
-\subsection{Log-files}
-Log-files were generated using a third party software issued by \textit{Veridian}\footnote{http://www.dlconsulting.com/}, a digital library software. They used this software for logging user text corrections. Using this software, all the corrections made by the patrons were recorded in a xml format log-file. \\
 
-\textless TextCorrectedBlock pageOID=\mydoubleq {AL19000302.1.1} blockID=\mydoubleq{P1\_TB00069} userID=\mydoubleq{[redacted]}\textgreater \\
-\textless TextCorrectedLine lineID=\mydoubleq{P1\_TL00731} \textgreater \\
-\textless OldTextValue\textgreater  in conjunction willi lln\&lt; Calaveras river \textless/OldTextValue\textgreater \\
-\textless NewTextValue\textgreater  in conjunction with the Calaveras river \textless/NewTextValue\textgreater \\
-\textless OldTextValue\textgreater  Its Eelation to the Precious \textless/OldTextValue\textgreater \\
-\textless NewTextValue\textgreater  Its Relation to the Precious \textless/NewTextValue\textgreater \\
-\textless OldTextValue\textgreater  ?; Metal. U \textless/OldTextValue\textgreater \\
-\textless NewTextValue\textgreater  Metal. \textless/NewTextValue\textgreater \\
-\textless / TextCorrectedLine \textgreater \\
-\textless / TextCorrectedBlock \textgreater \\
+\subsection{Newspaper}
+Figure ~\ref{fig:issue} shows a scanned newspaper (\textit{The Amador Ledger}, January 26,1900) from the \cite{cdnc} archive highlighting the article to be corrected by the user. The raw OCR text of the highlighted article is  displayed by clicking on the specific article headline from the list of headlines seen on the left side of the issue in figure ~\ref{fig:issue}. 
 
-%\begin{figure}[htbp]
-%\begin{center}
-%\includegraphics[width=8cm,height=3cm]{log.png}
-%\caption{Log file}
-%\label{fig:Logfile}
-%\end{center}
-%\end{figure}
-
-The names of the log files follow a convention; the first two letters represent the initials of the newspaper followed by the date in the format yyyymmdd. For example \mydoubleq{AL19000105-changes.log} expands to Amador Ledger, 1900-01-05. There were in total 234 log files. To get an idea of the number of corrections made by user per log file, a histogram is shown in figure ~\ref{fig:histogram}
+%The OCR text generated by running the OCR device on the scanned images of the newspaper was downloaded from the website using Python scripts. The general idea was to decode the names of the log files to retrieve the newspaper name and date. These were further used to formulate URLs needed to download the corresponding OCR text. For instance, \mydoubleq{AL19000105-changes.log} was converted to Amador Ledger, 1900-01-05 which was further translated to \textit{http://chroniclingamerica.loc.gov/lccn/sn93052980/1900-01-05/ed-1/seq-1/ocr.txt}.\\
+%Here, seq-1 refers to the first page in the sequence of pages in the newspaper. Therefore to extract issues of Amador Ledger, the only thing varied was date.
+%The old and its corresponding new text were stored as key value pairs of a dictionary. Once all the pairs were generated from a log file, the text in the raw corpus matching the keys of the dictionary was replaced with the value corresponding to the matched key.\\
+%An analysis was done to figure out the effects of noisy data on text retrieval. The experiments were run on the indexes created on both the datasets using the same query set. The documents retrieved were ranked according to the frequency of the keyword present in the document. Higher the frequency, higher the ranking order. We used Spearman correlation coefficient as the metric to measure the similarity between both our corpora. The average value of Spearman's ranked correlation coefficient calculated by our experiments was 0.625 which denotes that the association between the two corpora is not very strong but the positive value shows that if Raw OCR increases then Corrected OCR will definitely increase.\\
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=7cm,height=5cm]{histo.jpg}
-\caption{Histogram}
-\label{fig:histogram}
+\includegraphics[width=7cm,height=4cm]{./image/issue.png}
+\caption{Amador Ledger}
+\label{fig:issue}
 \end{figure}
 
-The errors rectified by the users were categorised as Spellcheck error , Addition of a new word, Capitalization error, Typo, Punctuation error. The distribution of the these classes in the dataset is shown in figure ~\ref{fig:stats}
-
-
-\begin{figure}[h]
+The tool used by patrons to correct OCR text is shown in figure ~\ref{fig:correction}. All the corrections performed by the annotators were recorded in the log files.
+\begin{figure}[ht!]
 \centering
-\includegraphics[width=7cm,height=5cm]{error.png}
-\caption{Error Classification}
-\label{fig:stats}
+\includegraphics[width=7cm,height=4cm]{./image/correction.png}
+\caption{Text correction tool}
+\label{fig:correction}
 \end{figure}
 
-\subsection{Newspaper}
-The OCR text generated by running the OCR device on the scanned images of the newspaper was downloaded from the website using Python scripts. The general idea was to decode the names of the log files to retrieve the newspaper name and date. These were further used to formulate URLs needed to download the corresponding OCR text. For instance, \mydoubleq{AL19000105-changes.log} was converted to Amador Ledger, 1900-01-05 which was further translated to \textit{http://chroniclingamerica.loc.gov/lccn/sn93052980/1900-01-05/ed-1/seq-1/ocr.txt}.\\
-Here, seq-1 refers to the first page in the sequence of pages in the newspaper. Therefore to extract issues of Amador Ledger, the only thing varied was date.
-The old and its corresponding new text were stored as key value pairs of a dictionary. Once all the pairs were generated from a log file, the text in the raw corpus matching the keys of the dictionary was replaced with the value corresponding to the matched key.\\
-An analysis was done to figure out the effects of noisy data on text retrieval. The experiments were run on the indexes created on both the datasets using the same query set. The documents retrieved were ranked according to the frequency of the keyword present in the document. Higher the frequency, higher the ranking order. We used Spearman correlation coefficient as the metric to measure the similarity between both our corpora. The average value of Spearman's ranked correlation coefficient calculated by our experiments was 0.625 which denotes that the association between the two corpora is not very strong but the positive value shows that if Raw OCR increases then Corrected OCR will definitely increase.\\
+The text correction statistics consisting of total number of annotators involved in the the data enrichment process are shown in figure ~\ref{fig:annotators}. The total number of lines corrected by 848 users are 1,705,149.
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=6cm,height=4cm]{./image/annotators.png}
+\caption{Text correction statistics}
+\label{fig:annotators}
+\end{figure}
+
+\subsection{Log-files}
+The log files are the files that maintain the history of raw OCR and its corresponding corrected OCR text. These files were generated using a third party software issued by \textit{Veridian}\footnote{http://www.dlconsulting.com/}, a digital library software. Each of the log file was generated at an issue-level, containing xml data about the multiple pages in the issue. The table ~\ref{table:logfile} describes the structure and the format of the log file. The following information is provided about the corrections made by the patrons:\\
+a) \textit{Page Id} representing the id of the page in which editing was done.
+b) \textit{Block Id} representing the id of the paragraph containing the line corrected by the user.
+c) \textit{Line Id} is the id of the particular line edited by the user.
+d) \textit{Old text} is the garbled text generated by the OCR device and replaced by the user.
+e) \textit{New text} is the corrected text with which the old text was replaced.
+
+\begin{table}[htdp]
+\begin{center}
+\begin{tabular}{l}
+\textless TextCorrectedLine lineID="P2\_TL00800"\textgreater \\
+\textless OldTextValue\textgreater \textbf{Spll, Stales}\textless /OldTextValue\textgreater \\
+\textless NewTextValue\textgreater \textbf{Union Stables}\textless /NewTextValue\textgreater \\
+\textless /TextCorrectedLine\textgreater \\
+\textless TextCorrectedLine lineID="P2\_TL00801"\textgreater \\
+\textless OldTextValue\textgreater \textbf{**?»** Under Webb Hall *}\textless/OldTextValue\textgreater \\
+\textless NewTextValue\textgreater \textbf{Under Webb Hall} \textless/NewTextValue\textgreater \\
+\textless /TextCorrectedLine\textgreater \\
+\end{tabular}
+\end{center}
+\caption{A segment of the log file}
+\label{table:logfile}
+\end{table}
+
+There were in total 235 log files of which we worked on 191. To get an idea of the number of corrections made by a user per log file, a histogram is shown in figure ~\ref{fig:histogram} % Change the histogram and describe it.
+
+%The names of the log files follow a convention; the first two letters represent the initials of the newspaper followed by the date in the format yyyymmdd. For example \mydoubleq{AL19000105-changes.log} expands to Amador Ledger, 1900-01-05. 
+
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=7cm,height=5cm]{./image/histo.jpg}
+%\caption{Histogram}
+%\label{fig:histogram}
+%\end{figure}
+\subsection{Preprocessing}
+In order to make use of the full text data, we did some preprocessing on the data stored in the log files. We extracted the old text and the corresponding new text from the log file and  tokenized them into words. These token were separated by whitespaces. 
 
 
 \section{Methodology}
-%Machine Learning Algorithms and Parameters
-We applied state of the art algorithm 
+%Theory about the SVM
+
 
 
 \section{Empirical Evaluation}
 
 \subsection{Preprocessing \& Data Generation}
 
-\subsubsection{Feature Construction}
+\subsubsection{Feature Construction} %correct the first line
 Originally, there were two features in the dataset, that is old text and new text. Further features were manually crafted looking at the types of errors. In our dataset, we have six binary features consisting of sameLength, editDist\_0, editDistAbove1, editDistBelow3, editDist\_1andcaseChange, punct\_diff.
 \begin{enumerate}
-\item \mydoubleq{sameLength} is 1 if  both the old text and new text have same length
+\item \mydoubleq{sameLength} is 1 if  both the old word and new word have same length
 \item \mydoubleq{editDist\_0} is 1 if both the words are exactly same
-\item \mydoubleq{editDistAbove1} is 1 if more than one edit operation is required to convert old text to new tex
-\item \mydoubleq{editDistBelow3} is 1 if less than three edit operations are required to convert old text to new text
-\item \mydoubleq{editDist\_1andcaseChange} is 1 if the two strings have edit distance is exactly 1 and the first character of one string change from upper case to lower case or vice versa.
+\item \mydoubleq{editDistAbove1} is 1 if more than one edit operation is required to convert old word to new word
+\item \mydoubleq{editDistBelow3} is 1 if less than three edit operations are required to convert old word to new word
+\item \mydoubleq{editDist\_1andcaseChange} is 1 if the two words have edit distance is exactly 1 and the first character of one string change from upper case to lower case or vice versa.
 \item \mydoubleq{punct\_diff} is 1 if both the old text and new text differ in any of the following punctuation marks !"\#\$\%\&'()*+,-./:;\textless=\textgreater?@[$\backslash$]\^\_`\{\textbar\}\textasciitilde
 \end{enumerate}
 
@@ -165,6 +195,16 @@ Total & 44022 \\
 \label{table: classes}
 \end{table}
 
+The errors rectified by the users were categorised as Spellcheck error , Addition of a new word, Capitalization error, Typo, Punctuation error. The distribution of the these classes in the dataset is shown in figure ~\ref{fig:stats}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=7cm,height=5cm]{./image/error.png}
+\caption{Error Classification}
+\label{fig:stats}
+\end{figure}
+
 
 \subsection{Experiment Setup}
 Experiments were performed by randomly partitioning the data into 70\% and 30\% of training and testing data respectively. For each experiment, the regularisation parameter, C and the type of kernel was varied. The experiments were performed on three machines, two of which were linux servers and the other was a dual core Mac machine with Intel Core i7 processor, 8GB RAM, 2.9 GHz of processor speed. Each experiment was iterated over different dataset for 5 times. The Average Loss and CPU runtime were noted to analyse the experiments.
@@ -174,19 +214,41 @@ Experiments were performed by randomly partitioning the data into 70\% and 30\% 
 \begin{table}[htdp]
 \begin{center}
 \begin{tabular}{l | l | c | c | c | r | r |}
-C & $AE_{L}$ & $AE_{P}$ & $AE_{R}$ & $AT_{L}$ & $AT_{P}$ & $AT_{R}$ \\
+C & $AE_{L}$ & $AE_{P}$ & $AE_{R}$ \\
 \hline
-.001 & 1 & 2 & 3 & 4 & 5 & 6 \\
+.001 & 1 & 2 & 3 \\
 \hline
-.01 & 1 & 2 & 3 & 4 & 5 & 6 \\
+.01 & 1 & 2 & 3 \\
 \hline
-.1 & 1 & 2 & 3 & 4 & 5 & 6 \\
+.1 & 1 & 2 & 3  \\
 \hline
-1 & 1 & 2 & 3 & 4 & 5 & 6 \\
+1 & 1 & 2 & 3 \\
 \hline
-10 & 1 & 2 & 3 & 4 & 5 & 6 \\
+10 & 1 & 2 & 3 \\
 \hline
-100 & 1 & 2 & 3 & 4 & 5 & 6 \\
+100 & 1 & 2 & 3 \\
+\end{tabular}
+\end{center}
+\caption{Experiment Results}
+\label{table: results}
+\end{table}
+
+\begin{table}[htdp]
+\begin{center}
+\begin{tabular}{l | l c | c | r |}
+C & $AT_{L}$ & $AT_{P}$ & $AT_{R}$ \\
+\hline
+.001 & 1 & 2 & 3 \\
+\hline
+.01 & 1 & 2 & 3 \\
+\hline
+.1 & 1 & 2 & 3 \\
+\hline
+1 & 1 & 2 & 3 \\
+\hline
+10 & 1 & 2 & 3 \\
+\hline
+100 & 1 & 2 & 3 \\
 \end{tabular}
 \end{center}
 \caption{Experiment Results}
@@ -214,7 +276,7 @@ This work is supported by funding from the National Endowment for Humanities. I 
 \end{small}
 \end{quote}
 
-%\nocite{datasource,cdnc,digital}
+\nocite{joachims,pairwise,crammer,issue,thesis,cdnc,digital,OCR,eval,noisy}
 %
 %\section{Bibiliography}
 %\bibliography{Project_report}

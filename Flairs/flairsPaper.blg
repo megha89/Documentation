@@ -4,45 +4,51 @@ The top-level auxiliary file: flairsPaper.aux
 The style file: aaai.bst
 Database file #1: flairsPaper.bib
 Warning--empty journal in OCR
-You've used 4 entries,
+Warning--empty year in issue
+Warning--empty journal in issue
+Warning--empty publisher in noisy
+Warning--empty publisher in eval
+Warning--empty year in thesis
+Warning--empty journal in thesis
+You've used 10 entries,
             2568 wiz_defined-function locations,
-            589 strings with 4858 characters,
-and the built_in function-call counts, 1006 in all, are:
-= -- 105
-> -- 28
-< -- 0
-+ -- 8
-- -- 8
-* -- 59
-:= -- 188
-add.period$ -- 16
-call.type$ -- 4
-change.case$ -- 20
-chr.to.int$ -- 4
-cite$ -- 5
-duplicate$ -- 46
-empty$ -- 71
-format.name$ -- 12
-if$ -- 189
+            624 strings with 5715 characters,
+and the built_in function-call counts, 3202 in all, are:
+= -- 330
+> -- 115
+< -- 2
++ -- 36
+- -- 36
+* -- 256
+:= -- 553
+add.period$ -- 41
+call.type$ -- 10
+change.case$ -- 56
+chr.to.int$ -- 10
+cite$ -- 17
+duplicate$ -- 131
+empty$ -- 226
+format.name$ -- 51
+if$ -- 621
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 1
-newline$ -- 23
-num.names$ -- 12
-pop$ -- 18
+missing$ -- 10
+newline$ -- 54
+num.names$ -- 30
+pop$ -- 62
 preamble$ -- 1
-purify$ -- 24
+purify$ -- 68
 quote$ -- 0
-skip$ -- 43
+skip$ -- 100
 stack$ -- 0
-substring$ -- 20
-swap$ -- 7
-text.length$ -- 0
+substring$ -- 125
+swap$ -- 19
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 32
-warning$ -- 1
-while$ -- 8
-width$ -- 6
-write$ -- 46
-(There was 1 warning)
+type$ -- 72
+warning$ -- 7
+while$ -- 26
+width$ -- 15
+write$ -- 119
+(There were 7 warnings)

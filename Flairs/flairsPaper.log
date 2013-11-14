@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  10 NOV 2013 00:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  14 NOV 2013 19:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -67,7 +67,11 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(./flairsPaper.aux)
+(./flairsPaper.aux
+
+LaTeX Warning: Label `table: results' multiply defined.
+
+)
 \openout1 = `flairsPaper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -83,8 +87,7 @@ LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 17.
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -181,126 +184,105 @@ Underfull \hbox (badness 4595) in paragraph at lines 45--49
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
-
-Underfull \hbox (badness 1810) in paragraph at lines 63--64
-\OT1/ptm/m/n/10 Log-files were gen-er-ated us-ing a third party soft-ware
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
-
- []
-
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 65.
-(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlptm.fd
-File: omlptm.fd 
-)
-LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 65.
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--75
-[]\OML/cmm/m/it/10 <\OT1/ptm/m/n/10 TextCorrectedBlock pa-geOID=``AL19000302.1.
-1''
- []
-
-
-Underfull \hbox (badness 6032) in paragraph at lines 65--75
-\OML/cmm/m/it/10 <\OT1/ptm/m/n/10 OldTextValue\OML/cmm/m/it/10 >\OT1/ptm/m/n/10
- Its Ee-la-tion to the Pre-cious \OML/cmm/m/it/10 <\OT1/ptm/m/n/10 /Old-
- []
-
-
-Underfull \hbox (badness 2384) in paragraph at lines 65--75
-\OML/cmm/m/it/10 <\OT1/ptm/m/n/10 NewTextValue\OML/cmm/m/it/10 >\OT1/ptm/m/n/10
- Its Re-la-tion to the Pre-cious \OML/cmm/m/it/10 <\OT1/ptm/m/n/10 /New-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--75
-
- []
-
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
 [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
-<histo.jpg, id=11, 256.70906pt x 151.3153pt>
-File: histo.jpg Graphic file (type jpg)
- <use histo.jpg>
-Package pdftex.def Info: histo.jpg used on input line 88.
-(pdftex.def)             Requested size: 199.17073pt x 142.2641pt.
+<./image/issue.png, id=10, 1274.7625pt x 719.68875pt>
+File: ./image/issue.png Graphic file (type png)
+ <use ./image/issue.png>
+Package pdftex.def Info: ./image/issue.png used on input line 80.
+(pdftex.def)             Requested size: 199.1617pt x 113.80182pt.
 
-<error.png, id=12, 451.6875pt x 321.2pt>
-File: error.png Graphic file (type png)
- <use error.png>
-Package pdftex.def Info: error.png used on input line 98.
-(pdftex.def)             Requested size: 199.17043pt x 142.26454pt.
+<./image/correction.png, id=12, 1278.7775pt x 715.67375pt>
+File: ./image/correction.png Graphic file (type png)
 
-Underfull \hbox (badness 1354) in paragraph at lines 104--108
-\OT1/ptm/m/n/10 name and date. These were fur-ther used to for-mu-late
+<use ./image/correction.png>
+Package pdftex.def Info: ./image/correction.png used on input line 88.
+(pdftex.def)             Requested size: 199.16458pt x 113.80031pt.
+
+<./image/annotators.png, id=13, 447.6725pt x 312.16624pt>
+File: ./image/annotators.png Graphic file (type png)
+
+<use ./image/annotators.png>
+Package pdftex.def Info: ./image/annotators.png used on input line 96.
+(pdftex.def)             Requested size: 170.71843pt x 113.80873pt.
+
+Underfull \vbox (badness 1072) has occurred while \output is active []
+
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 112.
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlptm.fd
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 112.
+Missing character: There is no » in font ptmb7t!
+
+Overfull \hbox (27.3652pt too wide) in paragraph at lines 111--121
+ [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--108
-\OT1/ptm/m/it/10 http://chroniclingamerica.loc.gov/lccn/sn93052980/1900-
- []
+LaTeX Warning: Reference `fig:histogram' on page 2 undefined on input line 126.
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 104--108
-\OT1/ptm/m/n/10 of Spear-man's ranked cor-re-la-tion co-ef-fi-cient cal-cu-late
-d
- []
-
-
-Underfull \hbox (badness 1158) in paragraph at lines 104--108
-\OT1/ptm/m/n/10 by our ex-per-i-ments was 0.625 which de-notes that the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--108
-
- []
-
+[2 <./image/issue.png> <./image/correction.png> <./image/annotators.png>]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 127.
-[2 <./histo.jpg> <./error.png (PNG copy)>]
-Underfull \hbox (badness 1521) in paragraph at lines 138--139
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 157.
+
+Underfull \hbox (badness 1521) in paragraph at lines 168--169
 []\OT1/ptm/m/n/10 Punctuation er-ror : When the two strings dif-fer by
  []
 
+<./image/error.png, id=21, 451.6875pt x 321.2pt>
+File: ./image/error.png Graphic file (type png)
+ <use ./image/error.png>
+Package pdftex.def Info: ./image/error.png used on input line 204.
+(pdftex.def)             Requested size: 199.17043pt x 142.26454pt.
 
-Underfull \hbox (badness 1248) in paragraph at lines 208--209
+Underfull \hbox (badness 1248) in paragraph at lines 270--271
 \OT1/ptm/m/n/10 This work is sup-ported by fund-ing from the Na-tional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
-(./flairsPaper.bbl) [3] (./flairsPaper.aux) ) 
+[3 <./image/error.png (PNG copy)>] (./flairsPaper.bbl) [4
+
+] (./flairsPaper.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1653 strings out of 493315
- 24004 string characters out of 6137903
- 87503 words of memory out of 5000000
- 5080 multiletter control sequences out of 15000+600000
- 23196 words of font info for 43 fonts, out of 8000000 for 9000
+ 1675 strings out of 493315
+ 24438 string characters out of 6137903
+ 90748 words of memory out of 5000000
+ 5099 multiletter control sequences out of 15000+600000
+ 24880 words of font info for 45 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,10n,23p,763b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dis
-t/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/tim
-es/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.
-pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on flairsPaper.pdf (3 pages, 120600 bytes).
+ 37i,10n,23p,1077b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texm
+f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fon
+ts/type1/urw/times/utmri8a.pfb>
+Output written on flairsPaper.pdf (4 pages, 1550557 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 54 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
