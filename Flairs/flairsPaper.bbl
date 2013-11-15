@@ -30,6 +30,16 @@ Eikvil, L.
 \newblock 1993.
 \newblock Optical character recognition.
 
+\bibitem[\protect\citeauthoryear{Foundation}{2013a}]{svm}
+Foundation, W.
+\newblock 2013a.
+\newblock Support vector machine.
+
+\bibitem[\protect\citeauthoryear{Foundation}{2013b}]{vapnik}
+Foundation, W.
+\newblock 2013b.
+\newblock Vapnik-chervonenkis theory.
+
 \bibitem[\protect\citeauthoryear{Jeffrey~Esakov and Zhou}{}]{issue}
 Jeffrey~Esakov, Daniel P.~Lopresti, J. S.~S., and Zhou, J.
 \newblock Issues in automatic ocr error classification.
@@ -39,6 +49,11 @@ Joachims, T.; Finley, T.; and Yu, C.-N.~J.
 \newblock 2009.
 \newblock Cutting-plane training of structural svms.
 \newblock {\em Mach. Learn.} 77(1):27--59.
+
+\bibitem[\protect\citeauthoryear{Joachims}{2008}]{multiclass}
+Joachims, T.
+\newblock 2008.
+\newblock Multi-class support vector machine.
 
 \bibitem[\protect\citeauthoryear{Kazem~Taghva and Erva}{1993}]{noisy}
 Kazem~Taghva, Julie~Borsack, A.~C., and Erva, S.

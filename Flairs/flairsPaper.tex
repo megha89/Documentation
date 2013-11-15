@@ -10,6 +10,7 @@
 \setlength{\pdfpageheight}{11in}
 \def\mydoubleq#1{``#1''}
 \def\mysingleq#1{`#1'}
+\usepackage{amsmath}
 \pdfinfo{
 /Title ( Error Classification in OCR Historic Newspaper Archive using SVM\textsuperscript{multiclass})
 /Author (Megha Gupta, Dr. Haimoti Dutta)}
@@ -54,7 +55,7 @@ The OCR enables searching of full text data but it is not 100\% accurate. Its ac
 %\mydoubleq{Unsupervised Post Correction} paper talks about the post processing of OCR text to minimise the errors. It uses a combination of Anagram Hashing techniques, bigram approach on word level to consider the context and a  similarity key technique called OCR-key.  Anagram Hashing technique uses a hashing function that assigns same number to all those words that have same characters. OCR key observes the shape of characters to know the nature of OCR system and its generated errors.
 
 \subsection{Multi-class SVM}
-SVM's are inherently binary classifiers. To solve the multi class problem, construction of several binary classifiers is required and the result from each classifier is combed. The traditional approaches to do multi class classification are:
+SVMs are inherently binary classifiers. To solve the multi class problem, construction of several binary classifiers is required and the result from each classifier is combed. The traditional approaches to do multi class classification are:
 a) \textit{one-versus-all (OVA classification)} classifies the new instances is done by winner-takes-all strategy where the classifier with highest output function assigns the label. It generates k classifiers for a k class problem.
 b)\textit{one-versus-one} uses the majority voting strategy where each classifier assigns the new instance one of the two class, thereby increasing the vote of the assigned class. Finally the class with the majority votes determines the instance classification.
 It generates k(k-2)/2 models for a k class problem. This approach is not practical for large-scale classification because of the memory required for storing k(k-1)/2 models.
@@ -133,11 +134,37 @@ There were in total 235 log files of which we worked on 191. To get an idea of t
 %\label{fig:histogram}
 %\end{figure}
 \subsection{Preprocessing}
-In order to make use of the full text data, we did some preprocessing on the data stored in the log files. We extracted the old text and the corresponding new text from the log file and  tokenized them into words. These token were separated by whitespaces. 
+In order to make use of the full text data, we did some preprocessing on the data stored in the log files. We extracted the old text and the corresponding new text from the log file and tokenized them into words. These tokens were separated by whitespaces. 
 
 
 \section{Methodology}
 %Theory about the SVM
+We are performing automatic text correction by modelling it through a machine learning algorithm, called multi class Support Vector Machines \cite{multiclass}. In this formulation, multi class problem is posed as a constrained optimization problem with a quadratic objective function.
+The multi class formulation is stated as\\
+\begin{equation}
+min 1/2 \sum_{i = 1}^{k} w_{i}*w_{i} + C/n \sum_{i = 1}^{n}\xi_{i} 
+\end{equation}
+\begin{equation*}
+s.t. \forall y \leq k : [x_{1} \cdot w_{yi}] \geq [x_{1} \cdot w_{y}] + 100*\Delta(y_{1},y)-\xi_{1}
+\end{equation*}
+ . . . . . . . . . . .
+\begin{equation*}
+s.t. \forall y \leq k : [x_{n} \cdot w_{yn}] \geq [x_{n} \cdot w_{y}] + 100*\Delta(y_{n},y)-\xi_{n} 
+\end{equation*}
+Here C is the regularisation parameter that trades off margin error and training error. $\Delta(y_{1},y)$ is the loss function that returns 0 if $y_{n}$ equals y, and 1 otherwise. $\xi_{i}$ are the non negative slack variables which measure the degree of misclassification of the data $x_{i}$. \\
+\cite{multi class} has to two modules, \textit{svm\_multiclass\_learn} and \textit{svm\_multiclass\_classify}. The learning module learns the model given the parameters and the training data whereas the classification module applies the learned model to the test data to find the error. When the data is not linearly separable, the original finite dimensional space is mapped to a much higher dimensional space in order to make the separation easier in that space. The mappings used by SVM schemes are designed to ensure that the dot products may be computed easily in terms of the variables in the original space, by defining them in terms of a Kernel function selected to suit the problem. The types of kernel function used can be described as follows:\\
+a) Linear Kernel (default) : It is the basic kernel function given by the inner product \textless x,y\textgreater plus an optional constant c. K(x,y) = $x^{T}$y + c \\
+b) Polynomial Kernel : It is a non-stationary kernel which is well suited for problems where the training data is normalized. \\
+K(x,y) = $(\alpha x^{T}y + c)^{d}$ \\
+c) Radial Basis Kernel : 
+K(x,y) = exp($-norm(x-y)^{2}$/2$\sigma^{2}$)
+
+
+
+
+%SVM is a state-of-the art algorithm with a strong theoretical foundation based on  Vapnik-Chervonenkis theory \cite{vapnik}.
+%SVMs are useful tool when the data is irregularly distributed or have unknown distribution. They provide good out-of-sample generalization if some of the parameters %C and r (in case of Gaussian)% 
+%are appropriately chosen. Therefore, they can be robust even when the training sample has some bias. Also they guarantee a unique solution as the optimality problem is convex.
 
 
 
@@ -276,7 +303,7 @@ This work is supported by funding from the National Endowment for Humanities. I 
 \end{small}
 \end{quote}
 
-\nocite{joachims,pairwise,crammer,issue,thesis,cdnc,digital,OCR,eval,noisy}
+\nocite{joachims,pairwise,crammer,issue,thesis,cdnc,digital,OCR,eval,noisy,svm,vapnik,multiclass}
 %
 %\section{Bibiliography}
 %\bibliography{Project_report}
