@@ -45,7 +45,7 @@ This paper shows the need to devise an algorithm that is scalable for a large da
 The \textit{California Digital Newspaper Collection}\footnote{http://cdnc.ucr.edu/cgi-bin/cdnc} is an initiative of the Center for Bibliographical Studies and Research (CBSR) which is supported in part by the U.S. Institute of Museum and Library Services. It is also supported by the National Endowment for the Humanities (NEH) to digitise California newspapers for the National Digital Newspaper Program (NDNP). It contains over 400,000 pages of significant historical California newspapers published from 1846-1922.\\
 OCR devices are widely used in electronic conversion of scanned images which are handwritten or printed text into a machine encoded text. The scanning generates  It finds most successful applications in the field of machine Learning, Artificial Intelligence and Pattern recognition. It deals with the problem of recognising optically generated characters be it offline or online. The performance directly depends on the quality of input document. The more constrained the input is the better will be the performance of the system. But when it comes to unconstrained handwriting, the performance is far from satisfactory. The main application areas for \cite{OCR} like Automatic number plate readers, form readers, signature verification.\\
 This project deals with printed text in the form of Historical Newspaper Articles in the holdings of \cite{cdnc}. One such newspaper, The Amador Ledger published in the early 1900s by the Amador Publishing Company appealed to the community's interests by covering issues unique to gold mining. Patrons of the \cite{cdnc} continue to be interested in studying about the status of the local mining industry and consequently read the Amador Ledger on a regular basis even to this day and correct \cite{OCR} errors as they come across them.\\
-In this paper, we perform error classification using Joachims multi-class Support Vector Machine algorithm called \textit{SVM\textsuperscript{multiclass}}\footnote{http://www.cs.cornell.edu/people/tj/svm\_light/svm\_multiclass.html}. We chose this algorithm as its the state of the art algorithm till now. But the experiments give altogether a different view on this algorithm. This algorithm do not converge quickly on certain parameters which are shown in table ~\ref{table: results}
+In this paper, we perform error classification using Joachims multi-class Support Vector Machine algorithm called \textit{SVM\textsuperscript{multiclass}}\footnote{http://www.cs.cornell.edu/people/tj/svm\_light/svm\_multiclass.html}. We chose this algorithm as its the state of the art algorithm till now. But the experiments give altogether a different view on this algorithm. This algorithm do not converge quickly on certain parameters which are shown in table ~\ref{table: runtime}
 
 \section{Related Work}
 \subsection{OCR correction}
@@ -123,7 +123,8 @@ e) \textit{New text} is the corrected text with which the old text was replaced.
 \label{table:logfile}
 \end{table}
 
-There were in total 235 log files of which we worked on 191. To get an idea of the number of corrections made by a user per log file, a histogram is shown in figure ~\ref{fig:histogram} % Change the histogram and describe it.
+There were in total 235 log files of which we worked on 191.
+% To get an idea of the number of corrections made by a user per log file, a histogram is shown in figure ~\ref{fig:histogram} 
 
 %The names of the log files follow a convention; the first two letters represent the initials of the newspaper followed by the date in the format yyyymmdd. For example \mydoubleq{AL19000105-changes.log} expands to Amador Ledger, 1900-01-05. 
 
@@ -233,8 +234,8 @@ The errors rectified by the users were categorised as Spellcheck error , Additio
 
 
 \subsection{Experiment Setup}
-Experiments were performed by randomly partitioning the data into 70\% and 30\% of training and testing data respectively. For each experiment, the regularisation parameter, C and the type of kernel was varied. The experiments were performed on three machines, two of which were linux servers and the other was a dual core Mac machine with Intel Core i7 processor, 8GB RAM, 2.9 GHz of processor speed. Each experiment was iterated over different dataset for 5 times. The Average Loss and CPU runtime were noted to analyse the experiments.
-
+Experiments were performed by randomly partitioning the data into 70\% and 30\% of training and testing data respectively. For each experiment, the regularisation parameter (C) and the type of kernel (t) was varied to (0.001,0.01,0.1,1,10,100) and (Linear, Polynomial and Radial basis kernel) respectively. The experiments were performed on two machines, one of which was a linux server and the other was a dual core Mac machine with Intel Core i7 processor, 8GB RAM, 2.9 GHz of processor speed. Each experiment was ran for 5 iterations. The average loss on the test set and CPU runtime were noted to analyse the experiments. Table ~\ref{table: error} describes how the average loss on test set varies for different values of \mysingleq{C} and \mysingleq{t}. Here, $AE_{L}$, $AE_{P}$, $AE_{R}$ describes the average loss error of linear, polynomial and rbf kernels respectively. Table ~\ref{table: runtime}  shows the average runtime (cpu sec) required to learn a model for various values of C and for different kernels. Here, $AT_{L}$, $AT_{P}$, $AT_{R}$ refers to the average run time of linear, polynomial and rbf kernels respectively.
+ 
 \subsection{Results}
 
 \begin{table}[htdp]
@@ -250,8 +251,8 @@ C & $AE_{L}$ & $AE_{P}$ & $AE_{R}$ \\
 100 & 29.20$\pm$0.133 &  &  \\
 \end{tabular}
 \end{center}
-\caption{Experiment Results : Average Loss}
-\label{table: results}
+\caption{Experiment Results : Average loss error (test set)}
+\label{table: error}
 \end{table}
 
 
@@ -268,8 +269,8 @@ C & $AT_{L}$ & $AT_{P}$ & $AT_{R}$ \\
 100 & 0.998 &  &  \\
 \end{tabular}
 \end{center}
-\caption{Experiment Results : Training time in cpu sec}
-\label{table: results}
+\caption{Experiment Results : Training time (cpu sec)}
+\label{table: runtime}
 \end{table}
 
 \subsection{Discussion}
