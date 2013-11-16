@@ -156,9 +156,8 @@ Here C is the regularisation parameter that trades off margin error and training
 a) Linear Kernel (default) : It is the basic kernel function given by the inner product \textless x,y\textgreater plus an optional constant c. K(x,y) = $x^{T}$y + c \\
 b) Polynomial Kernel : It is a non-stationary kernel which is well suited for problems where the training data is normalized. \\
 K(x,y) = $(\alpha x^{T}y + c)^{d}$ \\
-c) Radial Basis Kernel : 
-K(x,y) = exp($-norm(x-y)^{2}$/2$\sigma^{2}$)
-
+c) Radial Basis Kernel : The (Gaussian) radial basis function kernel on two samples x and y represented as feature vectors in some input space is defined as \\
+K(x,y) = exp($-\lvert \lvert x-y\rvert\rvert^{2}$/2$\sigma^{2}$)
 
 
 
@@ -243,42 +242,33 @@ Experiments were performed by randomly partitioning the data into 70\% and 30\% 
 \begin{tabular}{l | l | c | c | c | r | r |}
 C & $AE_{L}$ & $AE_{P}$ & $AE_{R}$ \\
 \hline
-.001 & 1 & 2 & 3 \\
-\hline
-.01 & 1 & 2 & 3 \\
-\hline
-.1 & 1 & 2 & 3  \\
-\hline
-1 & 1 & 2 & 3 \\
-\hline
-10 & 1 & 2 & 3 \\
-\hline
-100 & 1 & 2 & 3 \\
+.001 & 32.06 $\pm$0.149  & 32.06$\pm$0.149 & 11.96$\pm$0.101 \\
+.01 & 32.06$\pm$0.149 & 32.06$\pm$0.149 & 12.04$\pm$0.199 \\
+.1 & 32.06$\pm$0.149 & 29.10$\pm$0.133  & 12.04$\pm$0.199  \\
+1 &29.10$\pm$0.133  & 28.99$\pm$0.264  & 6.36$\pm$0.142  \\
+10 & 29.20$\pm$0.133 & 8.338$\pm$0.107 & 6.366$\pm$0.142 \\
+100 & 29.20$\pm$0.133 &  &  \\
 \end{tabular}
 \end{center}
-\caption{Experiment Results}
+\caption{Experiment Results : Average Loss}
 \label{table: results}
 \end{table}
 
+
 \begin{table}[htdp]
 \begin{center}
-\begin{tabular}{l | l c | c | r |}
+\begin{tabular}{| l | c | c | l |}
 C & $AT_{L}$ & $AT_{P}$ & $AT_{R}$ \\
 \hline
-.001 & 1 & 2 & 3 \\
-\hline
-.01 & 1 & 2 & 3 \\
-\hline
-.1 & 1 & 2 & 3 \\
-\hline
-1 & 1 & 2 & 3 \\
-\hline
-10 & 1 & 2 & 3 \\
-\hline
-100 & 1 & 2 & 3 \\
+.001 & 0.218 & 5192 & 4596 \\
+.01 & 0.202 & 5166 & 4460 \\
+.1 & 0.208 & 72225 & 4377 \\
+1 & 0.678 & 81251 & 16468 \\
+10 & 0.672 & 260316 & 55308 \\
+100 & 0.998 &  &  \\
 \end{tabular}
 \end{center}
-\caption{Experiment Results}
+\caption{Experiment Results : Training time in cpu sec}
 \label{table: results}
 \end{table}
 
