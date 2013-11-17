@@ -124,7 +124,7 @@ e) \textit{New text} is the corrected text with which the old text was replaced.
 \label{table:logfile}
 \end{table}
 
-There were in total 235 log files of which we worked on 191.
+There were in total 235 log files of which we worked on 191. 
 % To get an idea of the number of corrections made by a user per log file, a histogram is shown in figure ~\ref{fig:histogram} 
 
 %The names of the log files follow a convention; the first two letters represent the initials of the newspaper followed by the date in the format yyyymmdd. For example \mydoubleq{AL19000105-changes.log} expands to Amador Ledger, 1900-01-05. 
@@ -136,7 +136,15 @@ There were in total 235 log files of which we worked on 191.
 %\label{fig:histogram}
 %\end{figure}
 \subsection{Preprocessing}
-In order to make use of the full text data, we did some preprocessing on the data stored in the log files. We extracted the old text and the corresponding new text from the log file and tokenized them into words. These tokens were separated by whitespaces. 
+In order to make use of the full text data, we did some preprocessing on the data stored in the log files. We extracted the old text and the corresponding new text from the log file and tokenized them into words. These tokens were separated by whitespaces. There were in total 44,023 tokens of which 21,113 were corrected by the annotators. The errors rectified by the users were categorized as spellcheck error , addition of a new word, capitalization error, typo, punctuation error. The distribution of the these classes in the dataset is shown in figure ~\ref{fig:stats}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=7cm,height=5cm]{./image/error.png}
+\caption{Error Classification}
+\label{fig:stats}
+\end{figure}
 
 
 \section{Methodology}
@@ -201,7 +209,8 @@ The dataset was parsed to a format used by the Joachim's multi class SVM algorit
 The number of rows in the dataset is 44,022. The class distribution in the dataset is shown in table ~\ref{table: classes}
 \begin{table}[htdp]
 \begin{center}
-\begin{tabular}{l | l r |}
+\begin{tabular}{| c | c |}
+\hline
 $ Class $ & $ no. of instances $ \\
 \hline
 1 & 1970 \\
@@ -217,21 +226,13 @@ $ Class $ & $ no. of instances $ \\
 6 & 23885 \\
 \hline
 Total & 44022 \\
+\hline
 \end{tabular}
 \end{center}
 \caption{Class Distribution}
 \label{table: classes}
 \end{table}
 
-The errors rectified by the users were categorised as Spellcheck error , Addition of a new word, Capitalization error, Typo, Punctuation error. The distribution of the these classes in the dataset is shown in figure ~\ref{fig:stats}
-
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=7cm,height=5cm]{./image/error.png}
-\caption{Error Classification}
-\label{fig:stats}
-\end{figure}
 
 
 \subsection{Experiment Setup}
@@ -241,7 +242,7 @@ Experiments were performed by randomly partitioning the data into 70\% and 30\% 
 
 \begin{table}[htdp]
 \begin{center}
-\begin{tabular}{l| l | c | c | c |}
+\begin{tabular}{| c | c | c | c |}
 \hline
 C & $AE_{L}$ & $AE_{P}$ & $AE_{R}$ \\
 \hline
@@ -279,8 +280,9 @@ C & $ AT_{L} $ & $AT_{P}$ & $AT_{R}$ \\
 \end{table}
 
 \subsection{Discussion}
-As can be seen in table ~\ref{table:error} , the error is minimum when the C has value (1 and 10) and when the kernel type is radial basis function (gaussian). But the time taken to train the model for these parameters, when C is 1 is 16468 cpu sec and when C is 10 is 55308 cpu sec.
-
+As can be seen in table ~\ref{table: error} , the error is minimum when the C has value (1 and 10) and when the kernel type is radial basis function (gaussian). But the time taken as shown in table ~\ref{table: runtime} to train the model for these parameters, when C is 1 is 16468 cpu sec and when C is 10 is 55308 cpu sec.
+\subsection{Known Defects}
+The \cite{multiclass} algorithm converges quickly for linear type kernel but the its performance on test set on poor. For non linear kernels, this algorithm does not scale well for large scale datasets but gives better performance than linear kernels.
 
 \section{Conclusion \& Future Work}
 
@@ -300,9 +302,7 @@ This work is supported by funding from the National Endowment for Humanities. I 
 \end{quote}
 
 %\nocite{joachims,pairwise,crammer,issue,thesis,cdnc,digital,OCR,eval,noisy,svm,vapnik,multiclass}
-%\section{Bibiliography}
-%\bibliography{Project_report}
-%\bibliographystyle{plain}
+
 
 
 \end{document}
