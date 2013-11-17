@@ -22,7 +22,8 @@
 \title{Error Classification in OCR Historic Newspaper Archive using multi-class Support Vector Machine}
 
 %\author{Megha Gupta\\Department of Computer Science,\\ IIIT-Delhi, India \\ meghag@iiitd.ac.in 
-%\And Dr. Haimonti Dutta\\%Center for Computational Learning Systems,\\ Columbia University, New York\\ haimonti@iiitd.ac.in}
+%\And Dr. Haimonti Dutta\\
+%Center for Computational Learning Systems,\\ Columbia University, New York\\ haimonti@iiitd.ac.in}
 
 \author{Megha Gupta and Haimonti Dutta*\\
 Department of Computer Science, IIIT-Delhi\\
@@ -191,7 +192,7 @@ These labels were assigned according to the flow graph as shown in figure
 \item Addition of a new word : When the edit distance is more than 3. For example, at and attend.
 \item Capitalization error : When the edit distance of two strings is exactly 1 and first letter of both the strings changes from upper to lower case or vice versa. For example, largest and Largest.
 \item Typo : When the edit distance is exactly one and case change is 0. For example, teh and the
-\item Punctuation error : When the two strings differ by special characters contained in the set (!"\#\$\%\&'()*+,-./:;\textless=\textgreater?@[$\backslash$]\^\_`\{\textbar\}\textasciitilde). For example, 
+\item Punctuation error : When the two strings differ by special characters contained in the set (!"\#\$\%\&'()*+,-./:;\textless=\textgreater?@[$\backslash$]\^\_`\{\textbar\}\textasciitilde). For example, \mydoubleq{residents} and residents
 \item No correction :  When the old and new text are same. For example, plant and plant
 \end{enumerate}
 
@@ -240,15 +241,17 @@ Experiments were performed by randomly partitioning the data into 70\% and 30\% 
 
 \begin{table}[htdp]
 \begin{center}
-\begin{tabular}{l | l | c | c | c | r | r |}
+\begin{tabular}{l| l | c | c | c |}
+\hline
 C & $AE_{L}$ & $AE_{P}$ & $AE_{R}$ \\
 \hline
 .001 & 32.06 $\pm$0.149  & 32.06$\pm$0.149 & 11.96$\pm$0.101 \\
 .01 & 32.06$\pm$0.149 & 32.06$\pm$0.149 & 12.04$\pm$0.199 \\
 .1 & 32.06$\pm$0.149 & 29.10$\pm$0.133  & 12.04$\pm$0.199  \\
 1 &29.10$\pm$0.133  & 28.99$\pm$0.264  & 6.36$\pm$0.142  \\
-10 & 29.20$\pm$0.133 & 8.338$\pm$0.107 & 6.366$\pm$0.142 \\
+10 & 29.20$\pm$0.133 & 8.338$\pm$0.107 & 6.36$\pm$0.142 \\
 100 & 29.20$\pm$0.133 &  &  \\
+\hline
 \end{tabular}
 \end{center}
 \caption{Experiment Results : Average loss error (test set)}
@@ -259,7 +262,8 @@ C & $AE_{L}$ & $AE_{P}$ & $AE_{R}$ \\
 \begin{table}[htdp]
 \begin{center}
 \begin{tabular}{| l | c | c | l |}
-C & $AT_{L}$ & $AT_{P}$ & $AT_{R}$ \\
+\hline
+C & $ AT_{L} $ & $AT_{P}$ & $AT_{R}$ \\
 \hline
 .001 & 0.218 & 5192 & 4596 \\
 .01 & 0.202 & 5166 & 4460 \\
@@ -267,6 +271,7 @@ C & $AT_{L}$ & $AT_{P}$ & $AT_{R}$ \\
 1 & 0.678 & 81251 & 16468 \\
 10 & 0.672 & 260316 & 55308 \\
 100 & 0.998 &  &  \\
+\hline
 \end{tabular}
 \end{center}
 \caption{Experiment Results : Training time (cpu sec)}
@@ -274,7 +279,7 @@ C & $AT_{L}$ & $AT_{P}$ & $AT_{R}$ \\
 \end{table}
 
 \subsection{Discussion}
-
+As can be seen in table ~\ref{table:error} , the error is minimum when the C has value (1 and 10) and when the kernel type is radial basis function (gaussian). But the time taken to train the model for these parameters, when C is 1 is 16468 cpu sec and when C is 10 is 55308 cpu sec.
 
 
 \section{Conclusion \& Future Work}
@@ -294,8 +299,7 @@ This work is supported by funding from the National Endowment for Humanities. I 
 \end{small}
 \end{quote}
 
-\nocite{joachims,pairwise,crammer,issue,thesis,cdnc,digital,OCR,eval,noisy,svm,vapnik,multiclass}
-%
+%\nocite{joachims,pairwise,crammer,issue,thesis,cdnc,digital,OCR,eval,noisy,svm,vapnik,multiclass}
 %\section{Bibiliography}
 %\bibliography{Project_report}
 %\bibliographystyle{plain}
