@@ -1,3 +1,4 @@
+%File: formatting-instruction.tex
 \documentclass[letterpaper]{article}
 \usepackage{aaai}
 \usepackage{times}
@@ -30,7 +31,6 @@
 %(meghag, haimonti)@iiitd.ac.in
 %}
 
-
 \maketitle
 \begin{abstract}
 \begin{quote}
@@ -42,6 +42,7 @@ This paper shows the need to devise an algorithm that is scalable for a large da
 \end{abstract}
 
 \section{Introduction}
+
 Crowdsourcing is used extensively in cultural heritage and digital history related projects in recent years to 
 digitize, create and process content and provide editorial or processing interventions. For example, the Australian Newspapers Digitization Program \cite{ADNP} enables communities to explore their rich newspaper heritage by enabling free online public access to over 830,000 newspaper pages containing 8.4 million articles. The public enhanced the data by correcting over 7 million lines of text and adding 200,000 tags and 4600 comments \cite{holley_09}. Picture Australia \cite{pictAus} harvests digital images from other heritage institutions and encourages the public to upload their own images and tag them. FamilySearch \cite{famSearch} made available handwritten digital images of births, deaths and marriage records for transcription by the public. The New York Public Library has 1,277,616 dishes transcribed to date from 17,079 menus. Galaxy Zoo \cite{galZoo}Êis Êan Êonline Êcollaborative Êastronomy Êproject in which users are invited to classify millions of galaxies from digital photos. 
 
@@ -52,9 +53,8 @@ In this paper, we study the user corrected OCR text of a large historic newspape
 
 The data from the crowdsourcing project has been made available to the parti 
 
-
-
-%The \textit{California Digital Newspaper Collection}\footnote{http://cdnc.ucr.edu/cgi-bin/cdnc} is an initiative of the Center for Bibliographical Studies and Research (CBSR) which is supported in part by the U.S. Institute of Museum and Library Services. It is also supported by the National Endowment for the Humanities (NEH) to digitise California newspapers for the National Digital Newspaper Program (NDNP). It contains over 400,000 pages of significant historical California newspapers published from 1846-1922.\\
+%Mia Ridge\footnote{http://openobjects.blogspot.co.uk/2012/06/frequently-asked-questions-about.html} offers an interesting categorization of the user activities and the type of data generated from them. Such activities involve tagging, flagging content for review or research, stating preferences, applying structured labels to a group of objects, collecting sets of objects or guessing the label for or relationship between presented set of objects, obtaining creative responses and other related activities. 
+%It is also supported by the National Endowment for the Humanities (NEH) to digitise California newspapers for the National Digital Newspaper Program (NDNP). It \\
 %OCR devices are widely used in electronic conversion of scanned images which are handwritten or printed text into a machine encoded text. The scanning generates  It finds most successful applications in the field of machine Learning, Artificial Intelligence and Pattern recognition. It deals with the problem of recognising optically generated characters be it offline or online. The performance directly depends on the quality of input document. The more constrained the input is the better will be the performance of the system. But when it comes to unconstrained handwriting, the performance is far from satisfactory. The main application areas for \cite{OCR} like Automatic number plate readers, form readers, signature verification.\\
 %This project deals with printed text in the form of Historical Newspaper Articles in the holdings of \cite{cdnc}. One such newspaper, The Amador Ledger published in the early 1900s by the Amador Publishing Company appealed to the community's interests by covering issues unique to gold mining. Patrons of the \cite{cdnc} continue to be interested in studying about the status of the local mining industry and consequently read the Amador Ledger on a regular basis even to this day and correct \cite{OCR} errors as they come across them.\\
 %In this paper, we perform error classification using Joachims multi-class Support Vector Machine algorithm called \textit{SVM\textsuperscript{multiclass}}\footnote{http://www.cs.cornell.edu/people/tj/svm\_light/svm\_multiclass.html}. We chose this algorithm as its the state of the art algorithm till now. But the experiments give altogether a different view on this algorithm. This algorithm do not converge quickly on certain parameters which are shown in table ~\ref{table: runtime}
@@ -135,7 +135,7 @@ e) \textit{New text} is the corrected text with which the old text was replaced.
 \label{table:logfile}
 \end{table}
 
-There were in total 235 log files of which we worked on 191. 
+There were in total 235 log files of which we worked on 191.
 % To get an idea of the number of corrections made by a user per log file, a histogram is shown in figure ~\ref{fig:histogram} 
 
 %The names of the log files follow a convention; the first two letters represent the initials of the newspaper followed by the date in the format yyyymmdd. For example \mydoubleq{AL19000105-changes.log} expands to Amador Ledger, 1900-01-05. 
@@ -147,15 +147,7 @@ There were in total 235 log files of which we worked on 191.
 %\label{fig:histogram}
 %\end{figure}
 \subsection{Preprocessing}
-In order to make use of the full text data, we did some preprocessing on the data stored in the log files. We extracted the old text and the corresponding new text from the log file and tokenized them into words. These tokens were separated by whitespaces. There were in total 44,023 tokens of which 21,113 were corrected by the annotators. The errors rectified by the users were categorized as spellcheck error , addition of a new word, capitalization error, typo, punctuation error. The distribution of the these classes in the dataset is shown in figure ~\ref{fig:stats}
-
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=7cm,height=5cm]{./image/error.png}
-\caption{Error Classification}
-\label{fig:stats}
-\end{figure}
+In order to make use of the full text data, we did some preprocessing on the data stored in the log files. We extracted the old text and the corresponding new text from the log file and tokenized them into words. These tokens were separated by whitespaces. 
 
 
 \section{Methodology}
@@ -211,7 +203,7 @@ These labels were assigned according to the flow graph as shown in figure
 \item Addition of a new word : When the edit distance is more than 3. For example, at and attend.
 \item Capitalization error : When the edit distance of two strings is exactly 1 and first letter of both the strings changes from upper to lower case or vice versa. For example, largest and Largest.
 \item Typo : When the edit distance is exactly one and case change is 0. For example, teh and the
-\item Punctuation error : When the two strings differ by special characters contained in the set (!"\#\$\%\&'()*+,-./:;\textless=\textgreater?@[$\backslash$]\^\_`\{\textbar\}\textasciitilde). For example, \mydoubleq{residents} and residents
+\item Punctuation error : When the two strings differ by special characters contained in the set (!"\#\$\%\&'()*+,-./:;\textless=\textgreater?@[$\backslash$]\^\_`\{\textbar\}\textasciitilde). For example, 
 \item No correction :  When the old and new text are same. For example, plant and plant
 \end{enumerate}
 
@@ -220,8 +212,7 @@ The dataset was parsed to a format used by the Joachim's multi class SVM algorit
 The number of rows in the dataset is 44,022. The class distribution in the dataset is shown in table ~\ref{table: classes}
 \begin{table}[htdp]
 \begin{center}
-\begin{tabular}{| c | c |}
-\hline
+\begin{tabular}{l | l r |}
 $ Class $ & $ no. of instances $ \\
 \hline
 1 & 1970 \\
@@ -237,13 +228,21 @@ $ Class $ & $ no. of instances $ \\
 6 & 23885 \\
 \hline
 Total & 44022 \\
-\hline
 \end{tabular}
 \end{center}
 \caption{Class Distribution}
 \label{table: classes}
 \end{table}
 
+The errors rectified by the users were categorised as Spellcheck error , Addition of a new word, Capitalization error, Typo, Punctuation error. The distribution of the these classes in the dataset is shown in figure ~\ref{fig:stats}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=7cm,height=5cm]{./image/error.png}
+\caption{Error Classification}
+\label{fig:stats}
+\end{figure}
 
 
 \subsection{Experiment Setup}
@@ -253,17 +252,15 @@ Experiments were performed by randomly partitioning the data into 70\% and 30\% 
 
 \begin{table}[htdp]
 \begin{center}
-\begin{tabular}{| c | c | c | c |}
-\hline
+\begin{tabular}{l | l | c | c | c | r | r |}
 C & $AE_{L}$ & $AE_{P}$ & $AE_{R}$ \\
 \hline
 .001 & 32.06 $\pm$0.149  & 32.06$\pm$0.149 & 11.96$\pm$0.101 \\
 .01 & 32.06$\pm$0.149 & 32.06$\pm$0.149 & 12.04$\pm$0.199 \\
 .1 & 32.06$\pm$0.149 & 29.10$\pm$0.133  & 12.04$\pm$0.199  \\
 1 &29.10$\pm$0.133  & 28.99$\pm$0.264  & 6.36$\pm$0.142  \\
-10 & 29.20$\pm$0.133 & 8.338$\pm$0.107 & 6.36$\pm$0.142 \\
+10 & 29.20$\pm$0.133 & 8.338$\pm$0.107 & 6.366$\pm$0.142 \\
 100 & 29.20$\pm$0.133 &  &  \\
-\hline
 \end{tabular}
 \end{center}
 \caption{Experiment Results : Average loss error (test set)}
@@ -274,8 +271,7 @@ C & $AE_{L}$ & $AE_{P}$ & $AE_{R}$ \\
 \begin{table}[htdp]
 \begin{center}
 \begin{tabular}{| l | c | c | l |}
-\hline
-C & $ AT_{L} $ & $AT_{P}$ & $AT_{R}$ \\
+C & $AT_{L}$ & $AT_{P}$ & $AT_{R}$ \\
 \hline
 .001 & 0.218 & 5192 & 4596 \\
 .01 & 0.202 & 5166 & 4460 \\
@@ -283,7 +279,6 @@ C & $ AT_{L} $ & $AT_{P}$ & $AT_{R}$ \\
 1 & 0.678 & 81251 & 16468 \\
 10 & 0.672 & 260316 & 55308 \\
 100 & 0.998 &  &  \\
-\hline
 \end{tabular}
 \end{center}
 \caption{Experiment Results : Training time (cpu sec)}
@@ -291,9 +286,8 @@ C & $ AT_{L} $ & $AT_{P}$ & $AT_{R}$ \\
 \end{table}
 
 \subsection{Discussion}
-As can be seen in table ~\ref{table: error} , the error is minimum when the C has value (1 and 10) and when the kernel type is radial basis function (gaussian). But the time taken as shown in table ~\ref{table: runtime} to train the model for these parameters, when C is 1 is 16468 cpu sec and when C is 10 is 55308 cpu sec.
-\subsection{Known Defects}
-The \cite{multiclass} algorithm converges quickly for linear type kernel but the its performance on test set on poor. For non linear kernels, this algorithm does not scale well for large scale datasets but gives better performance than linear kernels.
+
+
 
 \section{Conclusion \& Future Work}
 
@@ -312,8 +306,11 @@ This work is supported by funding from the National Endowment for Humanities. I 
 \end{small}
 \end{quote}
 
-%\nocite{joachims,pairwise,crammer,issue,thesis,cdnc,digital,OCR,eval,noisy,svm,vapnik,multiclass}
-
+\nocite{joachims,pairwise,crammer,issue,thesis,cdnc,digital,OCR,eval,noisy,svm,vapnik,multiclass}
+%
+%\section{Bibiliography}
+%\bibliography{Project_report}
+%\bibliographystyle{plain}
 
 
 \end{document}
