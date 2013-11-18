@@ -1,0 +1,40 @@
+\documentclass{article}
+\title{Research Statement}
+\date{}
+\begin{document}
+\maketitle
+
+%Simply updating the document
+\noindent Big data is ubiquitous today \cite{Anand_13}. Many science and engineering applications in astronomy, biology, chemistry, physics and medicine are generating peta-and tera-bytes of data. With the evolution of large and complex data archives, machine learning algorithms need to be designed to extract patterns from them. This class of machine learning algorithms which can scale to massive databases are expected to rely significantly on well established techniques of parallelization and distributed computing and are called \emph{large scale} learning algorithms. \\
+
+
+\noindent \textbf{Problem Statement: }Our research primarily focuses on developing algorithms for large scale machine learning for text data. Of particular interest is noisy text generated from Optical Character Recognition devices. \\
+
+The Library of Congress(LoC\footnote{www.loc.gov}) has initiated the digitization of newspapers from early 1800-to date\footnote{\footnote{http://chroniclingamerica.loc.gov/}}. Newspapers are the first draft of history -- they are a rich source of information for historians, researchers, and scholars. With the advent of \emph{digitized} newspapers, the accessibility to old historic papers has increased. The usability of archives storing these newspapers depends on the imaging technology, Optical Character Recognition (OCR) devices, zoning and segmentation, metadata extraction, search ability and web delivery systems developed to make them accessible. It is a well known fact that the OCR technology is far from perfect and often, the text generated is garbled affecting the efficiency of search and retrieval. 
+Since the human mind excels in visual cognition and language processing tasks and machines are not able to completely recreate these skills, manual labor is involved in correcting garbled OCR. Thus building an automated OCR text correction tool is desirable -- more importantly, such a tool should scale to very large databases since archives storing newspaper articles are usually very large. 
+%For example, one ``The Sun" newspaper from the late 1800s contains of the order of 200 articles on average. If each article is represented as a bag-of-words, commonly used for extracting features in natural language processing, the feature space can easily be of the order of millions of words.
+
+\section{Review} 
+
+Golding and Roth \cite{winnow} uses a Winnow-based algorithm for OCR Correction and achieve accuracy levels of 99\% for 265 "confusion sets". This approach was originally meant to correct predetermined words. It is unclear to what extent it could be scaled to correct all words in a dictionary. 
+% sentence and moreover for allowing more than a small set of predetermined alternatives for each word. -- WHAT DOES THIS MEAN?
+Another approach used in literature \cite{wikiedits} is based on Hidden Markov Models (HMMs) which are trained on wikipedia edits and further augmented with perceptron re-ranking. This algorithm also is not able to scale to large textual databases and caused performance bottleneck.
+
+[TALK ABOUT STRUCTURED LEARNING HERE]
+\section{Problem Statement}
+The research problems include the following:
+\begin{itemize}
+\item Developing OCR text correction algorithm which can be applied to a large data repository. Evaluate the performance of the algorithm against current industry standards.
+\item Since humans are much more adept at correcting OCR errors manually -- how can we use annotations provided by humans to model corrections? How does the subjectivity of human annotated data affect the text correction process?
+\end{itemize} 
+
+ 
+\section{Scope}
+With the current trend in the growth of data and information, large-scale learning problems can not be overlooked. There is a need to develop algorithms that deal with these problems efficiently.\\
+The objective of this research is to train a model on a large-scale data which can be used further to predict the errors in the unseen OCR text.
+This would help in building a clean online repository of historic newspapers providing rich source of information to historians, researchers, scholars and general users.
+
+\nocite{winnow,wikiedits,carlson1999snow,menon2009large,book,Joachims:1999:MLS:299094.299104,ibm}
+\bibliography{tcsFellowship}
+\bibliographystyle{plain}
+\end{document}
