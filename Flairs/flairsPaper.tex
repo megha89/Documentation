@@ -1,3 +1,4 @@
+%File: formatting-instruction.tex
 \documentclass[letterpaper]{article}
 \usepackage{aaai}
 \usepackage{times}
@@ -12,24 +13,23 @@
 \usepackage{amsmath}
 \pdfinfo{
 /Title ( Error Classification in OCR Historic Newspaper Archive using SVM\textsuperscript{multiclass})
-/Author (Megha Gupta, Dr. Haimonti Dutta)}
+/Author (Megha Gupta, Dr. Haimoti Dutta)}
 \setcounter{secnumdepth}{1}  
  \begin{document}
 % The file aaai.sty is the style file for AAAI Press 
 % proceedings, working notes, and technical reports.
 %
-\title{Crowdsourced OCR Error Correction Classification using Multi-Class Support Vector Machines}
+\title{Error Classification in OCR Historic Newspaper Archive using multi-class Support Vector Machine}
 
 %\author{Megha Gupta\\Department of Computer Science,\\ IIIT-Delhi, India \\ meghag@iiitd.ac.in 
 %\And Dr. Haimonti Dutta\\
 %Center for Computational Learning Systems,\\ Columbia University, New York\\ haimonti@iiitd.ac.in}
 
-%\author{Megha Gupta and Haimonti Dutta*\\
-%Department of Computer Science, IIIT-Delhi\\
-%**Affiliated to The Center for Computational Learning Systems, Columbia University, New York\\
-%(meghag, haimonti)@iiitd.ac.in
-%}
-
+\author{Megha Gupta and Haimonti Dutta*\\
+Department of Computer Science, IIIT-Delhi\\
+**Affiliated to The Center for Computational Learning Systems, Columbia University, New York\\
+(meghag, haimonti)@iiitd.ac.in
+}
 
 \maketitle
 \begin{abstract}
@@ -42,31 +42,12 @@ This paper shows the need to devise an algorithm that is scalable for a large da
 \end{abstract}
 
 \section{Introduction}
-<<<<<<< HEAD
 \label{sec:intro}
 
 The \textit{California Digital Newspaper Collection}\footnote{http://cdnc.ucr.edu/cgi-bin/cdnc} is an initiative of the Center for Bibliographical Studies and Research (CBSR) which is supported in part by the U.S. Institute of Museum and Library Services and National Endowment for the Humanities (NEH) to digitise California newspapers for the National Digital Newspaper Program (NDNP). It contains over 400,000 pages of significant historical California newspapers published from 1846-1922.\\
 OCR devices are widely used in electronic conversion of scanned images which are handwritten or printed text into a machine encoded text. The scanning generates  It finds most successful applications in the field of machine Learning, Artificial Intelligence and Pattern recognition. It deals with the problem of recognising optically generated characters be it offline or online. The performance directly depends on the quality of input document. The more constrained the input is the better will be the performance of the system. But when it comes to unconstrained handwriting, the performance is far from satisfactory. The main application areas for \cite{OCR} like Automatic number plate readers, form readers, signature verification.\\
 This project deals with printed text in the form of Historical Newspaper Articles in the holdings of \cite{cdnc}. One such newspaper, The Amador Ledger published in the early 1900s by the Amador Publishing Company appealed to the community's interests by covering issues unique to gold mining. Patrons of the \cite{cdnc} continue to be interested in studying about the status of the local mining industry and consequently read the Amador Ledger on a regular basis even to this day and correct \cite{OCR} errors as they come across them.\\
 In this paper, we perform error classification using Joachims multi-class Support Vector Machine algorithm called \textit{SVM\textsuperscript{multiclass}}\footnote{http://www.cs.cornell.edu/people/tj/svm\_light/svm\_multiclass.html}. We chose this algorithm as its the state of the art algorithm till now. But the experiments give altogether a different view on this algorithm. This algorithm do not converge quickly on certain parameters which are shown in table ~\ref{table: runtime}
-=======
-Crowdsourcing is used extensively in cultural heritage and digital history related projects in recent years to 
-digitize, create and process content and provide editorial or processing interventions. For example, the Australian Newspapers Digitization Program \cite{ADNP} enables communities to explore their rich newspaper heritage by enabling free online public access to over 830,000 newspaper pages containing 8.4 million articles. The public enhanced the data by correcting over 7 million lines of text and adding 200,000 tags and 4600 comments \cite{holley_09}. Picture Australia \cite{pictAus} harvests digital images from other heritage institutions and encourages the public to upload their own images and tag them. FamilySearch \cite{famSearch} made available handwritten digital images of births, deaths and marriage records for transcription by the public. The New York Public Library has 1,277,616 dishes transcribed to date from 17,079 menus. Galaxy Zoo \cite{galZoo}Êis Êan Êonline Êcollaborative Êastronomy Êproject in which users are invited to classify millions of galaxies from digital photos. 
-
-In all of the above crowdsourcing projects, large volumes of data are generated by users. These include tags, folksonomies, flagged content, information on history, relationship and preference data, structured labels describing objects and creative responses \cite{Ridge_11}. An interesting research question is how to make use of the user generated content to further enhance search and retrieval on the archives. 
-%Before this question can be answered, statistical analysis of the data generated is imperative.
-
-In this paper, we study the user corrected OCR text of a large historic newspaper archive -- the California Digital Newspaper Collection (CDNC)\footnote{http://cdnc.ucr.edu/cgi-bin/cdnc}, an initiative of the Center for Bibliographical Studies and Research (CBSR) which contains over 400,000 pages of newspapers published in California between 1846-1922. The newspapers are made available for searching on the Internet after the following processes take place: (1) the microfilm copy or paper original is scanned; (2) master and Web image files are generated; (3) metadata is assigned for each page to improve the search capability of the newspaper; (4) OCR software is run over high resolution images to create searchable full text and (5) OCR text, images, and metadata are imported into a digital library software program. The OCR scanning process is far from perfect and the documents generated from it contains a large amount of garbled text. In a bid to serve its patrons better, the CDNC crowdsourced the cleaning of OCR text. To date..
-
-The data from the crowdsourcing project has been made available to the parti 
-
-
-
-%The \textit{California Digital Newspaper Collection}\footnote{http://cdnc.ucr.edu/cgi-bin/cdnc} is an initiative of the Center for Bibliographical Studies and Research (CBSR) which is supported in part by the U.S. Institute of Museum and Library Services. It is also supported by the National Endowment for the Humanities (NEH) to digitise California newspapers for the National Digital Newspaper Program (NDNP). It contains over 400,000 pages of significant historical California newspapers published from 1846-1922.\\
-%OCR devices are widely used in electronic conversion of scanned images which are handwritten or printed text into a machine encoded text. The scanning generates  It finds most successful applications in the field of machine Learning, Artificial Intelligence and Pattern recognition. It deals with the problem of recognising optically generated characters be it offline or online. The performance directly depends on the quality of input document. The more constrained the input is the better will be the performance of the system. But when it comes to unconstrained handwriting, the performance is far from satisfactory. The main application areas for \cite{OCR} like Automatic number plate readers, form readers, signature verification.\\
-%This project deals with printed text in the form of Historical Newspaper Articles in the holdings of \cite{cdnc}. One such newspaper, The Amador Ledger published in the early 1900s by the Amador Publishing Company appealed to the community's interests by covering issues unique to gold mining. Patrons of the \cite{cdnc} continue to be interested in studying about the status of the local mining industry and consequently read the Amador Ledger on a regular basis even to this day and correct \cite{OCR} errors as they come across them.\\
-%In this paper, we perform error classification using Joachims multi-class Support Vector Machine algorithm called \textit{SVM\textsuperscript{multiclass}}\footnote{http://www.cs.cornell.edu/people/tj/svm\_light/svm\_multiclass.html}. We chose this algorithm as its the state of the art algorithm till now. But the experiments give altogether a different view on this algorithm. This algorithm do not converge quickly on certain parameters which are shown in table ~\ref{table: runtime}
->>>>>>> f399225a0dd9730d44fb2bcdbd4bd84a458a7310
 
 \section{Related Work}
 \label{sec:related}
