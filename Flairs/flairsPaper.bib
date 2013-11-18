@@ -56,12 +56,6 @@
  numpages = {12},
  url = {http://www.cse.lehigh.edu/~lopresti/Publications/1994/sdair94b.pdf},
 } 
-@article{thesis,
- author = {Kai Niklas},
- title = {Unsupervised Post-Correction of OCR Errors},
- numpages = {111},
- url = {http://tahmasebi.se/Diplomarbeit_Niklas.pdf},
-} 
  @BOOKLET{cdnc,
 author = {California Digital Newspaper Collection},
 title = {http://cdnc.ucr.edu/cdnc},
@@ -111,12 +105,168 @@ month = oct,
 year = {2013},
 url = {http://en.wikipedia.org/wiki/Vapnik\%E2\%80\%93Chervonenkis_theory}
 }
-@ONLINE{multiclass,
+@ONLINE{algo,
 author = {Thorsten Joachims},
 title = {Multi-Class Support Vector Machine},
 month = aug,
 year = {2008},
 url = {http://www.cs.cornell.edu/people/tj/svm_light/svm_multiclass.html}
+}
+@article{carlson,
+  title={Scaling up context-sensitive text correction},
+  author={Carlson, Andrew J and Rosen, Jeffrey and Roth, Dan},
+  journal={Proceedings of the Thirteenth Conference on Innovative Applications of Artificial Intelligence Conference},
+  pages={45--50},
+  year={2001},
+  publisher={AAAI Press}
+}
+@ARTICLE{wikiedits,
+  title={Scalable Lexical Correction from Wikipedia Edits Using Perceptron Reranking},
+  author={Elif Yamangil and Rani Nelken},
+JOURNAL = {unpublished},
+YEAR = {2008},
+}
+@book{massive,
+author= {Anand Rajaraman, Jure Leskovec, Jeffrey D. Ullman},
+title={Mining Of Massive Datasets},
+publisher={Cambridge University Press},
+year= {2013},
+link = {http://infolab.stanford.edu/~ullman/mmds/book.pdf,
+http://i.stanford.edu/~ullman/pub/ch12.pdf}
+}
+@inproceedings{Gao,
+ author = {Gao, Jianfeng and Li, Xiaolong and Micol, Daniel and Quirk, Chris and Sun, Xu},
+ title = {A large scale ranker-based system for search query spelling correction},
+ booktitle = {Proceedings of the 23rd International Conference on Computational Linguistics},
+ series = {COLING '10},
+ year = {2010},
+ location = {Beijing, China},
+ pages = {358--366},
+ numpages = {9},
+ url = {http://dl.acm.org/citation.cfm?id=1873781.1873822},
+ acmid = {1873822},
+ publisher = {Association for Computational Linguistics},
+ address = {Stroudsburg, PA, USA},
+} 
+@article{Huang,
+ author = {Huang, Gary B. and Kae, Andrew and Doersch, Carl and Learned-Miller, Erik},
+ title = {Bounding the probability of error for high precision optical character recognition},
+ journal = {J. Mach. Learn. Res.},
+ issue_date = {January 2012},
+ volume = {13},
+ number = {1},
+ month = feb,
+ year = {2012},
+ issn = {1532-4435},
+ pages = {363--387},
+ numpages = {25},
+ url = {http://dl.acm.org/citation.cfm?id=2503308.2188397},
+ acmid = {2188397},
+ publisher = {JMLR.org},
+ keywords = {computer vision, document-specific modeling, optical character recognition, probability bounding},
+} 
+@inproceedings{hoi2006large,
+  title={Large-scale text categorization by batch mode active learning},
+  author={Hoi, Steven CH and Jin, Rong and Lyu, Michael R},
+  booktitle={Proceedings of the 15th international conference on World Wide Web},
+  pages={633--642},
+  year={2006},
+  organization={ACM}
+}
+@article{menon2009large,
+  title={Large-scale support vector machines: algorithms and theory},
+  author={Menon, Aditya Krishna},
+  journal={Research Exam, University of California, San Diego},
+  year={2009}
+}
+@incollection{notes,
+year={1998},
+isbn={978-3-540-64417-0},
+booktitle={Machine Learning: ECML-98},
+volume={1398},
+series={Lecture Notes in Computer Science},
+editor={Nédellec, Claire and Rouveirol, Céline},
+doi={10.1007/BFb0026683},
+title={Text categorization with Support Vector Machines: Learning with many relevant features},
+url={http://dx.doi.org/10.1007/BFb0026683},
+publisher={Springer Berlin Heidelberg},
+author={Joachims, Thorsten},
+pages={137-142}
+}
+@INCOLLECTION{Thorsten,
+AUTHOR = {Joachims,Thorsten},
+CHAPTER = {Making large-scale support vector machine learning practical},
+TITLE = {Advances in kernel methods},
+YEAR = {1999},
+isbn = {0-262-19416-3},
+PAGES = {169-184},
+numpages = {16},
+url = {http://dl.acm.org/citation.cfm?id=299094.299104},
+acmid = {299104},
+PUBLISHER = {MIT Press},
+ADDRESS = {Cambridge, MA, USA}
+}
+@article{DBLP:journals/csur/Kukich92,
+  author    = {Karen Kukich},
+  title     = {Techniques for Automatically Correcting Words in Text},
+  journal   = {ACM Comput. Surv.},
+  volume    = {24},
+  number    = {4},
+  year      = {1992},
+  pages     = {377-439},
+  ee        = {http://doi.acm.org/10.1145/146370.146380},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+@incollection{Reynaert2008a,
+    abstract = {{This paper proposes a non-interactive system for reducing the level of OCR-induced typographical variation in large text collections, contemporary and historical. Text-Induced Corpus Clean-up or ticcl (pronounce 'tickle') focuses on high-frequency words derived from the corpus to be cleaned and gathers all typographical variants for any particular focus word that lie within the predefined Levenshtein distance (henceforth: ld ). Simple text-induced filtering techniques help to retain as many as possible of the true positives and to discard as many as possible of the false positives. ticcl has been evaluated on a contemporary OCR-ed Dutch text corpus and on a corpus of historical newspaper articles, whose OCR-quality is far lower and which is in an older Dutch spelling. Representative samples of typographical variants from both corpora have allowed us not only to properly evaluate our system, but also to draw effective conclusions towards the adaptation of the adopted correction mechanism to OCR-error resolution. The performance scores obtained up to ld 2 mean that the bulk of undesirable OCR-induced typographical variation present can fully automatically be removed.}},
+    address = {Berlin/Heidelberg},
+    author = {Reynaert, Martin},
+    booktitle = {Computational Linguistics and Intelligent Text Processing},
+    chapter = {53},
+    citeulike-article-id = {3043413},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1007/978-3-540-78135-6\_53},
+    citeulike-linkout-1 = {http://www.springerlink.com/content/l2724747mt78039l},
+    doi = {10.1007/978-3-540-78135-6\_53},
+    editor = {Gelbukh, Alexander},
+    isbn = {978-3-540-78134-9},
+    keywords = {ocr, spelling\_correction},
+    pages = {617--630},
+    posted-at = {2012-01-31 16:29:05},
+    priority = {2},
+    publisher = {Springer},
+    series = {Lecture Notes in Computer Science},
+    title = {Non-interactive {OCR} Post-correction for Giga-Scale Digitization Projects},
+    url = {http://dx.doi.org/10.1007/978-3-540-78135-6\_53},
+    volume = {4919},
+    year = {2008}
+}
+@mastersthesis{Niklas2010,
+    abstract = {{The trend to digitize (historic) paper-based archives has emerged in the last years. The advantages of digital archives are easy access, searchability and machine readability. These advantages can only be ensured if few or no OCR errors are present. These errors are the result of misrecognized characters during the OCR process. Large archives make it unreasonable to correct errors manually. Therefore, an unsupervised, fully-automatic approach for correcting OCR errors is proposed. The approach combines several methods for retrieving the best correction proposal for a misspelled word: A general spelling correction (Anagram Hash), a new OCR adapted method based on the shape of characters (OCR-Key) and context information (bigrams). A manual evaluation of the approach has been performed on The Times Archive of London, a collection of English newspaper articles spanning from 1785 to 1985. Error reduction rates up to 75\% and F-Scores up to 88\% could be achieved.}},
+    address = {Hannover, Germany},
+    author = {Niklas, Kai},
+    citeulike-article-id = {10390081},
+    keywords = {ocr, spelling\_correction},
+    posted-at = {2012-02-27 12:07:06},
+    priority = {2},
+    school = {Leibniz-Universit\"{a}t Hannover},
+    title = {Unsupervised Post-Correction of {OCR} Errors},
+    year = {2010}
+}
+
+@INPROCEEDINGS{Tong96astatistical,
+    author = {Xian Tong and David A. Evans},
+    title = {A Statistical Approach to Automatic OCR Error Correction In Context},
+    booktitle = {Proceedings of the Fourth Workshop on Very Large Corpora (WVLC-4},
+    year = {1996},
+    pages = {88--100}
+}
+@BOOK{post-correction,
+AUTHOR = {JÛn Fri?rik Da?ason},
+TITLE = {Post-Correction of Icelandic OCR Text},
+PUBLISHER = {Faculty 
+of Industrial Engineering, Mechanical Engineering and Computer Science, University of Iceland},
+YEAR = {2012},
+url = {http://skemman.is/stream/get/1946/12085/30520/1/Post-Correction_of_Icelandic_OCR_Text.pdf}
 }
 
 \end{thebibliography}

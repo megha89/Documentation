@@ -1,64 +1,53 @@
 This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: flairsPaper.aux
-White space in argument---line 16 of file flairsPaper.aux
- : \citation{multi
- :                 class}
-I'm skipping whatever remains of this command
 The style file: aaai.bst
 Database file #1: flairsPaper.bib
-Warning--entry type for "svm" isn't style-file defined
---line 97 of file flairsPaper.bib
-Warning--entry type for "vapnik" isn't style-file defined
---line 104 of file flairsPaper.bib
-Warning--entry type for "multiclass" isn't style-file defined
---line 111 of file flairsPaper.bib
+Warning--entry type for "algo" isn't style-file defined
+--line 108 of file flairsPaper.bib
 Warning--empty journal in OCR
 Warning--empty year in issue
 Warning--empty journal in issue
-Warning--empty publisher in noisy
-Warning--empty publisher in eval
-Warning--empty year in thesis
-Warning--empty journal in thesis
-You've used 13 entries,
+Warning--empty booktitle in Thorsten
+You've used 20 entries,
             2568 wiz_defined-function locations,
-            634 strings with 5861 characters,
-and the built_in function-call counts, 3982 in all, are:
-= -- 408
-> -- 136
-< -- 2
-+ -- 43
-- -- 42
-* -- 298
-:= -- 679
-add.period$ -- 53
-call.type$ -- 13
-change.case$ -- 71
-chr.to.int$ -- 12
-cite$ -- 20
-duplicate$ -- 161
-empty$ -- 298
-format.name$ -- 60
-if$ -- 783
-int.to.chr$ -- 2
+            698 strings with 7757 characters,
+and the built_in function-call counts, 7887 in all, are:
+= -- 851
+> -- 251
+< -- 11
++ -- 81
+- -- 79
+* -- 578
+:= -- 1254
+add.period$ -- 104
+call.type$ -- 20
+change.case$ -- 116
+chr.to.int$ -- 20
+cite$ -- 24
+duplicate$ -- 343
+empty$ -- 593
+format.name$ -- 107
+if$ -- 1665
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 10
-newline$ -- 69
-num.names$ -- 39
-pop$ -- 89
+missing$ -- 19
+newline$ -- 123
+num.names$ -- 64
+pop$ -- 114
 preamble$ -- 1
-purify$ -- 86
+purify$ -- 138
 quote$ -- 0
-skip$ -- 135
+skip$ -- 287
 stack$ -- 0
-substring$ -- 140
-swap$ -- 25
-text.length$ -- 2
+substring$ -- 407
+swap$ -- 101
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 96
-warning$ -- 7
-while$ -- 32
-width$ -- 18
-write$ -- 152
-(There was 1 error message)
+type$ -- 152
+warning$ -- 4
+while$ -- 68
+width$ -- 23
+write$ -- 277
+(There were 5 warnings)

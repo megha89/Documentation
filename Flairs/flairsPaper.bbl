@@ -1,5 +1,11 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citeauthoryear{Anand~Rajaraman}{2013}]{massive}
+Anand~Rajaraman, Jure~Leskovec, J. D.~U.
+\newblock 2013.
+\newblock {\em Mining Of Massive Datasets}.
+\newblock Cambridge University Press.
+
 \bibitem[\protect\citeauthoryear{Brunner \bgroup et al\mbox.\egroup
   }{2012}]{pairwise}
 Brunner, C.; Fischer, A.; Luig, K.; and Thies, T.
@@ -7,6 +13,13 @@ Brunner, C.; Fischer, A.; Luig, K.; and Thies, T.
 \newblock Pairwise support vector machines and their application to large scale
   problems.
 \newblock {\em J. Mach. Learn. Res.} 13(1):2279--2292.
+
+\bibitem[\protect\citeauthoryear{Carlson, Rosen, and Roth}{2001}]{carlson}
+Carlson, A.~J.; Rosen, J.; and Roth, D.
+\newblock 2001.
+\newblock Scaling up context-sensitive text correction.
+\newblock {\em Proceedings of the Thirteenth Conference on Innovative
+  Applications of Artificial Intelligence Conference}  45--50.
 
 \bibitem[\protect\citeauthoryear{Collection}{2009}]{cdnc}
 Collection, C. D.~N.
@@ -20,54 +33,110 @@ Crammer, K., and Singer, Y.
   machines.
 \newblock {\em J. Mach. Learn. Res.} 2:265--292.
 
-\bibitem[\protect\citeauthoryear{Digital Library~Consulting}{1990}]{digital}
-Digital Library~Consulting, University of Waikato in~Hamilton, N.~Z.
-\newblock 1990.
-\newblock http://www.dlconsulting.com/.
+\bibitem[\protect\citeauthoryear{Da?ason}{2012}]{post-correction}
+Da?ason, J.~F.
+\newblock 2012.
+\newblock {\em Post-Correction of Icelandic OCR Text}.
+\newblock Faculty of Industrial Engineering, Mechanical Engineering and
+  Computer Science, University of Iceland.
 
 \bibitem[\protect\citeauthoryear{Eikvil}{1993}]{OCR}
 Eikvil, L.
 \newblock 1993.
 \newblock Optical character recognition.
 
-\bibitem[\protect\citeauthoryear{Foundation}{2013a}]{svm}
-Foundation, W.
-\newblock 2013a.
-\newblock Support vector machine.
+\bibitem[\protect\citeauthoryear{Gao \bgroup et al\mbox.\egroup }{2010}]{Gao}
+Gao, J.; Li, X.; Micol, D.; Quirk, C.; and Sun, X.
+\newblock 2010.
+\newblock A large scale ranker-based system for search query spelling
+  correction.
+\newblock In {\em Proceedings of the 23rd International Conference on
+  Computational Linguistics}, COLING '10,  358--366.
+\newblock Stroudsburg, PA, USA: Association for Computational Linguistics.
 
-\bibitem[\protect\citeauthoryear{Foundation}{2013b}]{vapnik}
-Foundation, W.
-\newblock 2013b.
-\newblock Vapnik-chervonenkis theory.
+\bibitem[\protect\citeauthoryear{Hoi, Jin, and Lyu}{2006}]{hoi2006large}
+Hoi, S.~C.; Jin, R.; and Lyu, M.~R.
+\newblock 2006.
+\newblock Large-scale text categorization by batch mode active learning.
+\newblock In {\em Proceedings of the 15th international conference on World
+  Wide Web},  633--642.
+\newblock ACM.
+
+\bibitem[\protect\citeauthoryear{Huang \bgroup et al\mbox.\egroup
+  }{2012}]{Huang}
+Huang, G.~B.; Kae, A.; Doersch, C.; and Learned-Miller, E.
+\newblock 2012.
+\newblock Bounding the probability of error for high precision optical
+  character recognition.
+\newblock {\em J. Mach. Learn. Res.} 13(1):363--387.
 
 \bibitem[\protect\citeauthoryear{Jeffrey~Esakov and Zhou}{}]{issue}
 Jeffrey~Esakov, Daniel P.~Lopresti, J. S.~S., and Zhou, J.
 \newblock Issues in automatic ocr error classification.
 
-\bibitem[\protect\citeauthoryear{Joachims, Finley, and Yu}{2009}]{joachims}
-Joachims, T.; Finley, T.; and Yu, C.-N.~J.
-\newblock 2009.
-\newblock Cutting-plane training of structural svms.
-\newblock {\em Mach. Learn.} 77(1):27--59.
+\bibitem[\protect\citeauthoryear{Joachims}{1998}]{notes}
+Joachims, T.
+\newblock 1998.
+\newblock Text categorization with support vector machines: Learning with many
+  relevant features.
+\newblock In Nédellec, C., and Rouveirol, C., eds., {\em Machine Learning:
+  ECML-98}, volume 1398 of {\em Lecture Notes in Computer Science}. Springer
+  Berlin Heidelberg.
+\newblock  137--142.
 
-\bibitem[\protect\citeauthoryear{Joachims}{2008}]{multiclass}
+\bibitem[\protect\citeauthoryear{Joachims}{1999}]{Thorsten}
+Joachims, T.
+\newblock 1999.
+\newblock Advances in kernel methods.
+\newblock Cambridge, MA, USA: MIT Press.
+\newblock chapter Making large-scale support vector machine learning practical,
+   169--184.
+
+\bibitem[\protect\citeauthoryear{Joachims}{2008}]{algo}
 Joachims, T.
 \newblock 2008.
 \newblock Multi-class support vector machine.
 
-\bibitem[\protect\citeauthoryear{Kazem~Taghva and Erva}{1993}]{noisy}
-Kazem~Taghva, Julie~Borsack, A.~C., and Erva, S.
-\newblock 1993.
-\newblock {\em Effects of Noisy Data on Text Retrieval}, volume~45.
+\bibitem[\protect\citeauthoryear{Kukich}{1992}]{DBLP:journals/csur/Kukich92}
+Kukich, K.
+\newblock 1992.
+\newblock Techniques for automatically correcting words in text.
+\newblock {\em ACM Comput. Surv.} 24(4):377--439.
 
-\bibitem[\protect\citeauthoryear{Kazem~Taghva}{1996}]{eval}
-Kazem~Taghva, Julie~Borsack, A.~C.
-\newblock 1996.
-\newblock {\em Evaluation of Model Based Retrieval Effectiveness with OCR
-  Text}, volume~14.
+\bibitem[\protect\citeauthoryear{Menon}{2009}]{menon2009large}
+Menon, A.~K.
+\newblock 2009.
+\newblock Large-scale support vector machines: algorithms and theory.
+\newblock {\em Research Exam, University of California, San Diego}.
 
-\bibitem[\protect\citeauthoryear{Niklas}{}]{thesis}
+\bibitem[\protect\citeauthoryear{Niklas}{2010}]{Niklas2010}
 Niklas, K.
-\newblock Unsupervised post-correction of ocr errors.
+\newblock 2010.
+\newblock Unsupervised post-correction of {OCR} errors.
+\newblock Master's thesis, Leibniz-Universit\"{a}t Hannover, Hannover, Germany.
+
+\bibitem[\protect\citeauthoryear{Reynaert}{2008}]{Reynaert2008a}
+Reynaert, M.
+\newblock 2008.
+\newblock Non-interactive {OCR} post-correction for giga-scale digitization
+  projects.
+\newblock In Gelbukh, A., ed., {\em Computational Linguistics and Intelligent
+  Text Processing}, volume 4919 of {\em Lecture Notes in Computer Science}.
+  Berlin/Heidelberg: Springer.
+\newblock chapter~53,  617--630.
+
+\bibitem[\protect\citeauthoryear{Tong and Evans}{1996}]{Tong96astatistical}
+Tong, X., and Evans, D.~A.
+\newblock 1996.
+\newblock A statistical approach to automatic ocr error correction in context.
+\newblock In {\em Proceedings of the Fourth Workshop on Very Large Corpora
+  (WVLC-4},  88--100.
+
+\bibitem[\protect\citeauthoryear{Yamangil and Nelken}{2008}]{wikiedits}
+Yamangil, E., and Nelken, R.
+\newblock 2008.
+\newblock Scalable lexical correction from wikipedia edits using perceptron
+  reranking.
+\newblock {\em unpublished}.
 
 \end{thebibliography}
