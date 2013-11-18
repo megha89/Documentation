@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citeauthoryear{ADNP}{2008}]{ADNP}
+ADNP.
+\newblock 2008.
+\newblock Australian newspapers digitization program.
+
 \bibitem[\protect\citeauthoryear{Anand~Rajaraman}{2013}]{massive}
 Anand~Rajaraman, Jure~Leskovec, J. D.~U.
 \newblock 2013.
@@ -26,6 +31,10 @@ Collection, C. D.~N.
 \newblock 2009.
 \newblock http://cdnc.ucr.edu/cdnc.
 
+\bibitem[\protect\citeauthoryear{Community}{}]{galZoo}
+Community, A.
+\newblock Galaxy zoo.
+
 \bibitem[\protect\citeauthoryear{Crammer and Singer}{2002}]{crammer}
 Crammer, K., and Singer, Y.
 \newblock 2002.
@@ -39,11 +48,6 @@ Da?ason, J.~F.
 \newblock {\em Post-Correction of Icelandic OCR Text}.
 \newblock Faculty of Industrial Engineering, Mechanical Engineering and
   Computer Science, University of Iceland.
-
-\bibitem[\protect\citeauthoryear{Eikvil}{1993}]{OCR}
-Eikvil, L.
-\newblock 1993.
-\newblock Optical character recognition.
 
 \bibitem[\protect\citeauthoryear{Gao \bgroup et al\mbox.\egroup }{2010}]{Gao}
 Gao, J.; Li, X.; Micol, D.; Quirk, C.; and Sun, X.
@@ -61,6 +65,12 @@ Hoi, S.~C.; Jin, R.; and Lyu, M.~R.
 \newblock In {\em Proceedings of the 15th international conference on World
   Wide Web},  633--642.
 \newblock ACM.
+
+\bibitem[\protect\citeauthoryear{Holley}{Nov2009}]{holley_09}
+Holley, R.
+\newblock Nov.,2009.
+\newblock Crowdsourcing and social engagement: potential, power and freedom for
+  libraries and users.
 
 \bibitem[\protect\citeauthoryear{Huang \bgroup et al\mbox.\egroup
   }{2012}]{Huang}
@@ -103,6 +113,11 @@ Kukich, K.
 \newblock Techniques for automatically correcting words in text.
 \newblock {\em ACM Comput. Surv.} 24(4):377--439.
 
+\bibitem[\protect\citeauthoryear{LDS}{2005}]{famSearch}
+LDS.
+\newblock 2005.
+\newblock Family search.
+
 \bibitem[\protect\citeauthoryear{Menon}{2009}]{menon2009large}
 Menon, A.~K.
 \newblock 2009.
@@ -115,6 +130,11 @@ Niklas, K.
 \newblock Unsupervised post-correction of {OCR} errors.
 \newblock Master's thesis, Leibniz-Universit\"{a}t Hannover, Hannover, Germany.
 
+\bibitem[\protect\citeauthoryear{NLA}{2006}]{pictAus}
+NLA.
+\newblock 2006.
+\newblock Picture australia.
+
 \bibitem[\protect\citeauthoryear{Reynaert}{2008}]{Reynaert2008a}
 Reynaert, M.
 \newblock 2008.
@@ -124,6 +144,11 @@ Reynaert, M.
   Text Processing}, volume 4919 of {\em Lecture Notes in Computer Science}.
   Berlin/Heidelberg: Springer.
 \newblock chapter~53,  617--630.
+
+\bibitem[\protect\citeauthoryear{Ridge}{2011}]{Ridge_11}
+Ridge, M.
+\newblock 2011.
+\newblock Frequently asked questions about crowdsourcing in cultural heritage.
 
 \bibitem[\protect\citeauthoryear{Tong and Evans}{1996}]{Tong96astatistical}
 Tong, X., and Evans, D.~A.

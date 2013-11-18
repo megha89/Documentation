@@ -5,49 +5,60 @@ The style file: aaai.bst
 Database file #1: flairsPaper.bib
 Warning--entry type for "algo" isn't style-file defined
 --line 108 of file flairsPaper.bib
-Warning--empty journal in OCR
+Warning--entry type for "pictAus" isn't style-file defined
+--line 123 of file flairsPaper.bib
+Warning--entry type for "famSearch" isn't style-file defined
+--line 130 of file flairsPaper.bib
+Warning--entry type for "galZoo" isn't style-file defined
+--line 136 of file flairsPaper.bib
+Warning--entry type for "ADNP" isn't style-file defined
+--line 143 of file flairsPaper.bib
+Warning--entry type for "Ridge_11" isn't style-file defined
+--line 150 of file flairsPaper.bib
+Warning--empty year in galZoo
+Warning--empty note in holley_09
 Warning--empty year in issue
 Warning--empty journal in issue
 Warning--empty booktitle in Thorsten
-You've used 20 entries,
+You've used 25 entries,
             2568 wiz_defined-function locations,
-            698 strings with 7757 characters,
-and the built_in function-call counts, 7887 in all, are:
-= -- 851
-> -- 251
+            720 strings with 8260 characters,
+and the built_in function-call counts, 9155 in all, are:
+= -- 978
+> -- 286
 < -- 11
-+ -- 81
-- -- 79
-* -- 578
-:= -- 1254
-add.period$ -- 104
-call.type$ -- 20
-change.case$ -- 116
-chr.to.int$ -- 20
-cite$ -- 24
-duplicate$ -- 343
-empty$ -- 593
-format.name$ -- 107
-if$ -- 1665
++ -- 91
+- -- 89
+* -- 650
+:= -- 1461
+add.period$ -- 123
+call.type$ -- 25
+change.case$ -- 141
+chr.to.int$ -- 25
+cite$ -- 30
+duplicate$ -- 389
+empty$ -- 707
+format.name$ -- 122
+if$ -- 1925
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 19
-newline$ -- 123
-num.names$ -- 64
-pop$ -- 114
+missing$ -- 18
+newline$ -- 147
+num.names$ -- 79
+pop$ -- 156
 preamble$ -- 1
-purify$ -- 138
+purify$ -- 168
 quote$ -- 0
-skip$ -- 287
+skip$ -- 345
 stack$ -- 0
-substring$ -- 407
-swap$ -- 101
+substring$ -- 432
+swap$ -- 111
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 152
-warning$ -- 4
-while$ -- 68
-width$ -- 23
-write$ -- 277
-(There were 5 warnings)
+type$ -- 192
+warning$ -- 5
+while$ -- 78
+width$ -- 28
+write$ -- 330
+(There were 11 warnings)
