@@ -3,62 +3,73 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: flairsPaper.aux
 The style file: aaai.bst
 Database file #1: flairsPaper.bib
+Warning--entry type for "cdnc" isn't style-file defined
+--line 63 of file flairsPaper.bib
 Warning--entry type for "algo" isn't style-file defined
---line 108 of file flairsPaper.bib
+--line 116 of file flairsPaper.bib
 Warning--entry type for "pictAus" isn't style-file defined
---line 123 of file flairsPaper.bib
+--line 131 of file flairsPaper.bib
 Warning--entry type for "famSearch" isn't style-file defined
---line 130 of file flairsPaper.bib
+--line 138 of file flairsPaper.bib
 Warning--entry type for "galZoo" isn't style-file defined
---line 136 of file flairsPaper.bib
+--line 144 of file flairsPaper.bib
 Warning--entry type for "ADNP" isn't style-file defined
---line 143 of file flairsPaper.bib
+--line 151 of file flairsPaper.bib
 Warning--entry type for "Ridge_11" isn't style-file defined
---line 150 of file flairsPaper.bib
+--line 158 of file flairsPaper.bib
+Warning--I'm ignoring carlson's extra "pages" field
+--line 170 of file flairsPaper.bib
+Warning--entry type for "bookscount" isn't style-file defined
+--line 351 of file flairsPaper.bib
+Warning--entry type for "gblp" isn't style-file defined
+--line 358 of file flairsPaper.bib
+Warning--entry type for "recaptcha" isn't style-file defined
+--line 365 of file flairsPaper.bib
+Warning--I didn't find a database entry for "ßhybred"
 Warning--empty year in galZoo
 Warning--empty note in holley_09
-Warning--empty year in issue
-Warning--empty journal in issue
 Warning--empty booktitle in Thorsten
-You've used 25 entries,
+Warning--empty journal in hybred
+Warning--empty year in velagapudi
+You've used 31 entries,
             2568 wiz_defined-function locations,
-            720 strings with 8260 characters,
-and the built_in function-call counts, 9155 in all, are:
-= -- 978
-> -- 286
-< -- 11
-+ -- 91
-- -- 89
-* -- 650
-:= -- 1461
-add.period$ -- 123
-call.type$ -- 25
-change.case$ -- 141
-chr.to.int$ -- 25
-cite$ -- 30
-duplicate$ -- 389
-empty$ -- 707
-format.name$ -- 122
-if$ -- 1925
+            755 strings with 9282 characters,
+and the built_in function-call counts, 11310 in all, are:
+= -- 1194
+> -- 382
+< -- 12
++ -- 124
+- -- 121
+* -- 809
+:= -- 1801
+add.period$ -- 149
+call.type$ -- 31
+change.case$ -- 179
+chr.to.int$ -- 31
+cite$ -- 36
+duplicate$ -- 465
+empty$ -- 873
+format.name$ -- 163
+if$ -- 2374
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 18
-newline$ -- 147
-num.names$ -- 79
-pop$ -- 156
+missing$ -- 20
+newline$ -- 179
+num.names$ -- 97
+pop$ -- 210
 preamble$ -- 1
-purify$ -- 168
+purify$ -- 214
 quote$ -- 0
-skip$ -- 345
+skip$ -- 430
 stack$ -- 0
-substring$ -- 432
-swap$ -- 111
-text.length$ -- 11
+substring$ -- 497
+swap$ -- 130
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 192
+type$ -- 240
 warning$ -- 5
-while$ -- 78
-width$ -- 28
-write$ -- 330
-(There were 11 warnings)
+while$ -- 93
+width$ -- 34
+write$ -- 403
+(There were 17 warnings)

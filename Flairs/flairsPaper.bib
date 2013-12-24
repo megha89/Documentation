@@ -1,6 +1,6 @@
 \begin{thebibliography}{99}
 @article{joachims,
- author = {Joachims, Thorsten and Finley, Thomas and Yu, Chun-Nam John},
+ author = {Joachims, Thorsten and Finley, Thomas and Yu, Chun-NamJohn},
  title = {Cutting-plane Training of Structural SVMs},
  journal = {Mach. Learn.},
  issue_date = {October   2009},
@@ -18,6 +18,7 @@
  address = {Hingham, MA, USA},
  keywords = {Structural SVMs, Structured output prediction, Support vector machines, Training algorithms},
 } 
+
 @article{pairwise,
  author = {Brunner, Carl and Fischer, Andreas and Luig, Klaus and Thies, Thorsten},
  title = {Pairwise Support Vector Machines and Their Application to Large Scale Problems},
@@ -33,8 +34,8 @@
  url = {http://dl.acm.org/citation.cfm?id=2503308.2503316},
  acmid = {2503316},
  publisher = {JMLR.org},
- keywords = {interclass generalization, large scale problems, pairwise kernels, pairwise support vector machines},
-} 
+ address = {Dresden, Germany},
+ } 
 @article{crammer,
  author = {Crammer, Koby and Singer, Yoram},
  title = {On the algorithmic implementation of multiclass kernel-based vector machines},
@@ -49,21 +50,24 @@
  url = {http://dl.acm.org/citation.cfm?id=944790.944813},
  acmid = {944813},
  publisher = {JMLR.org},
+ address = {School of Computer Science and Engineering, Hebrew University, Jerusalem, Israel}
 }
 @article{issue,
- author = {Jeffrey Esakov, Daniel P. Lopresti, Jonathan S. Sandberg and Jiangying Zhou},
+ author = {Esakov, Jeffrey and Lopresti, P.Daniel and Sandberg, S.Jonathan and Zhou, Jiangying},
  title = {Issues in Automatic OCR Error Classification},
+ pages = {401-412},
  numpages = {12},
- url = {http://www.cse.lehigh.edu/~lopresti/Publications/1994/sdair94b.pdf},
+ address = {Matsushita Information Technology Laboratory, Princeton, New Jersey},
+ url = {http://www.cse.lehigh.edu/~lopresti/Publications/1994/sdair94b.pdf}
 } 
- @BOOKLET{cdnc,
+ @ONLINE{cdnc,
 author = {California Digital Newspaper Collection},
 title = {http://cdnc.ucr.edu/cdnc},
 month = jun,
 year = {2009},
 url = {http://cdnc.ucr.edu/cdnc}
 }
-@BOOKLET{digital,
+@ONLINE{digital,
 author = {Digital Library Consulting,University of Waikato in Hamilton, New Zealand},
 title = {http://www.dlconsulting.com/},
 month = jan,
@@ -71,26 +75,30 @@ year = {1990},
 url = {http://www.dlconsulting.com/}
 }
 @ARTICLE{OCR,
-AUTHOR = {Line Eikvil},
+AUTHOR = {Eikvil, Line},
 TITLE = {Optical Character Recognition},
 MONTH = dec,
 YEAR = {1993},
-url = {http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.25.3684}
+url = {http://www.nr.no/~eikvil/OCR.pdf}
 }
-@BOOK{eval,
-	    AUTHOR = "Kazem Taghva, Julie Borsack,Allen Condit",
-	    TITLE = "Evaluation of Model Based Retrieval Effectiveness with OCR Text",
-	    VOLUME = 14,
-	    ADDRESS = {New York, US},
-	    YEAR = 1996
-	    }
-@book{noisy,
-	    AUTHOR = "Kazem Taghva, Julie Borsack,Allen Condit and Srinivas Erva",
-	    TITLE = "Effects of Noisy Data on Text Retrieval",
-	    VOLUME = 45,
-	    ADDRESS = {Las Vegas, US},
-	    YEAR = 1993
-	    }
+
+	@ARTICLE{eval,
+    author = {Kazem Taghva and Julie Borsack and Allen Condit},
+    title = {Evaluation of model-based retrieval effectiveness with OCR text},
+    journal = {ACM Transactions on Information Systems},
+    year = {1996},
+    volume = {14},
+    place = {New York, US},
+    pages = {64--93}
+}    
+	@ARTICLE{noisy,
+    author = {Kazem Taghva and Julie Borsack and Allen Condit and Srinivas Erva},
+    title = {The effects of noisy data on text retrieval},
+    journal = {Journal of the American Society for Information Science},
+    year = {1994},
+    volume = {45},
+    pages = {50--58}
+}
 @ONLINE{svm,
 author = {Wikipedia Foundation},
 title = {Support Vector Machine},
@@ -159,20 +167,26 @@ url = {https://familysearch.org/indexing/}
   author={Carlson, Andrew J and Rosen, Jeffrey and Roth, Dan},
   journal={Proceedings of the Thirteenth Conference on Innovative Applications of Artificial Intelligence Conference},
   pages={45--50},
+  pages = 6,
   year={2001},
+  place = {Urbana, Illinois, US},
   publisher={AAAI Press}
 }
 @ARTICLE{wikiedits,
   title={Scalable Lexical Correction from Wikipedia Edits Using Perceptron Reranking},
-  author={Elif Yamangil and Rani Nelken},
-JOURNAL = {unpublished},
-YEAR = {2008},
+  author={Yamangil, Elif and Nelken, Rani},
+  year = {2008},
+  numpages = 8,
+  place = {Cambridge, US},
+  JOURNAL = {unpublished}
 }
 @book{massive,
-author= {Anand Rajaraman, Jure Leskovec, Jeffrey D. Ullman},
+author= {Rajaraman, Anand and Leskovec, Jure and Ullman, Jeffrey D.},
 title={Mining Of Massive Datasets},
 publisher={Cambridge University Press},
 year= {2013},
+numpages = 453,
+place = {Stanford University, US},
 link = {http://infolab.stanford.edu/~ullman/mmds/book.pdf,
 http://i.stanford.edu/~ullman/pub/ch12.pdf}
 }
@@ -205,6 +219,7 @@ http://i.stanford.edu/~ullman/pub/ch12.pdf}
  url = {http://dl.acm.org/citation.cfm?id=2503308.2188397},
  acmid = {2188397},
  publisher = {JMLR.org},
+ place = {Amherst, MA and Pittsburg, PA},
  keywords = {computer vision, document-specific modeling, optical character recognition, probability bounding},
 } 
 @inproceedings{hoi2006large,
@@ -219,7 +234,9 @@ http://i.stanford.edu/~ullman/pub/ch12.pdf}
   title={Large-scale support vector machines: algorithms and theory},
   author={Menon, Aditya Krishna},
   journal={Research Exam, University of California, San Diego},
-  year={2009}
+  year={2009},
+  numpages = 17,
+  place = {San Diego, US}
 }
 @incollection{notes,
 year={1998},
@@ -227,13 +244,14 @@ isbn={978-3-540-64417-0},
 booktitle={Machine Learning: ECML-98},
 volume={1398},
 series={Lecture Notes in Computer Science},
-editor={Nédellec, Claire and Rouveirol, Céline},
+editor={NŽdellec, Claire and Rouveirol, CŽline},
 doi={10.1007/BFb0026683},
 title={Text categorization with Support Vector Machines: Learning with many relevant features},
 url={http://dx.doi.org/10.1007/BFb0026683},
 publisher={Springer Berlin Heidelberg},
 author={Joachims, Thorsten},
-pages={137-142}
+pages={137-142},
+ADDRESS = {Dortmund, Germany}
 }
 @INCOLLECTION{Thorsten,
 AUTHOR = {Joachims,Thorsten},
@@ -292,22 +310,26 @@ ADDRESS = {Cambridge, MA, USA}
     priority = {2},
     school = {Leibniz-Universit\"{a}t Hannover},
     title = {Unsupervised Post-Correction of {OCR} Errors},
-    year = {2010}
+    year = {2010},
+    pages = 100
 }
 
 @INPROCEEDINGS{Tong96astatistical,
-    author = {Xian Tong and David A. Evans},
+    author = {Tong, Xian and Evans, A. David},
     title = {A Statistical Approach to Automatic OCR Error Correction In Context},
     booktitle = {Proceedings of the Fourth Workshop on Very Large Corpora (WVLC-4},
     year = {1996},
-    pages = {88--100}
+    numpages = {88-100},
+    pages = 13,
+    place = {Pittsburgh, USA}
 }
 @BOOK{post-correction,
-AUTHOR = {JÛn Fri?rik Da?ason},
+AUTHOR = {Jon Fridrik Dadason},
 TITLE = {Post-Correction of Icelandic OCR Text},
 PUBLISHER = {Faculty 
 of Industrial Engineering, Mechanical Engineering and Computer Science, University of Iceland},
 YEAR = {2012},
+numpages = 70,
 url = {http://skemman.is/stream/get/1946/12085/30520/1/Post-Correction_of_Icelandic_OCR_Text.pdf}
 }
 
