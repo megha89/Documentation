@@ -1,0 +1,103 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{ADNP}{2008}]{ADNP}
+ADNP.
+\newblock 2008.
+\newblock Australian newspapers digitization program.
+
+\bibitem[\protect\citeauthoryear{Brunner \bgroup et al\mbox.\egroup
+  }{2012}]{pairwise}
+Brunner, C.; Fischer, A.; Luig, K.; and Thies, T.
+\newblock 2012.
+\newblock Pairwise support vector machines and their application to large scale
+  problems.
+\newblock {\em J. Mach. Learn. Res.} 13(1):2279--2292.
+
+\bibitem[\protect\citeauthoryear{Collection}{2009}]{cdnc}
+Collection, C. D.~N.
+\newblock 2009.
+\newblock http://cdnc.ucr.edu/cdnc.
+
+\bibitem[\protect\citeauthoryear{Community}{}]{galZoo}
+Community, A.
+\newblock Galaxy zoo.
+
+\bibitem[\protect\citeauthoryear{Crammer and Singer}{2002}]{crammer}
+Crammer, K., and Singer, Y.
+\newblock 2002.
+\newblock On the algorithmic implementation of multiclass kernel-based vector
+  machines.
+\newblock {\em J. Mach. Learn. Res.} 2:265--292.
+
+\bibitem[\protect\citeauthoryear{Digital Library~Consulting}{1990}]{digital}
+Digital Library~Consulting, University of Waikato in~Hamilton, N.~Z.
+\newblock 1990.
+\newblock http://www.dlconsulting.com/.
+
+\bibitem[\protect\citeauthoryear{Eikvil}{1993}]{OCR}
+Eikvil, L.
+\newblock 1993.
+\newblock Optical character recognition.
+
+\bibitem[\protect\citeauthoryear{Foundation}{2013a}]{svm}
+Foundation, W.
+\newblock 2013a.
+\newblock Support vector machine.
+
+\bibitem[\protect\citeauthoryear{Foundation}{2013b}]{vapnik}
+Foundation, W.
+\newblock 2013b.
+\newblock Vapnik-chervonenkis theory.
+
+\bibitem[\protect\citeauthoryear{Holley}{Nov2009}]{holley_09}
+Holley, R.
+\newblock Nov.,2009.
+\newblock Crowdsourcing and social engagement: potential, power and freedom for
+  libraries and users.
+
+\bibitem[\protect\citeauthoryear{Jeffrey~Esakov and Zhou}{}]{issue}
+Jeffrey~Esakov, Daniel P.~Lopresti, J. S.~S., and Zhou, J.
+\newblock Issues in automatic ocr error classification.
+
+\bibitem[\protect\citeauthoryear{Joachims, Finley, and Yu}{2009}]{joachims}
+Joachims, T.; Finley, T.; and Yu, C.-N.~J.
+\newblock 2009.
+\newblock Cutting-plane training of structural svms.
+\newblock {\em Mach. Learn.} 77(1):27--59.
+
+\bibitem[\protect\citeauthoryear{Joachims}{2008}]{multiclass}
+Joachims, T.
+\newblock 2008.
+\newblock Multi-class support vector machine.
+
+\bibitem[\protect\citeauthoryear{Kazem~Taghva and Erva}{1993}]{noisy}
+Kazem~Taghva, Julie~Borsack, A.~C., and Erva, S.
+\newblock 1993.
+\newblock {\em Effects of Noisy Data on Text Retrieval}, volume~45.
+
+\bibitem[\protect\citeauthoryear{Kazem~Taghva}{1996}]{eval}
+Kazem~Taghva, Julie~Borsack, A.~C.
+\newblock 1996.
+\newblock {\em Evaluation of Model Based Retrieval Effectiveness with OCR
+  Text}, volume~14.
+
+\bibitem[\protect\citeauthoryear{LDS}{2005}]{famSearch}
+LDS.
+\newblock 2005.
+\newblock Family search.
+
+\bibitem[\protect\citeauthoryear{Niklas}{}]{thesis}
+Niklas, K.
+\newblock Unsupervised post-correction of ocr errors.
+
+\bibitem[\protect\citeauthoryear{NLA}{2006}]{pictAus}
+NLA.
+\newblock 2006.
+\newblock Picture australia.
+
+\bibitem[\protect\citeauthoryear{Ridge}{2011}]{Ridge_11}
+Ridge, M.
+\newblock 2011.
+\newblock Frequently asked questions about crowdsourcing in cultural heritage.
+
+\end{thebibliography}
