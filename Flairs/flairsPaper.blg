@@ -4,72 +4,68 @@ The top-level auxiliary file: flairsPaper.aux
 The style file: aaai.bst
 Database file #1: flairsPaper.bib
 Warning--entry type for "cdnc" isn't style-file defined
---line 63 of file flairsPaper.bib
+--line 64 of file flairsPaper.bib
 Warning--entry type for "algo" isn't style-file defined
---line 116 of file flairsPaper.bib
+--line 124 of file flairsPaper.bib
 Warning--entry type for "pictAus" isn't style-file defined
---line 131 of file flairsPaper.bib
+--line 140 of file flairsPaper.bib
 Warning--entry type for "famSearch" isn't style-file defined
---line 138 of file flairsPaper.bib
+--line 147 of file flairsPaper.bib
 Warning--entry type for "galZoo" isn't style-file defined
---line 144 of file flairsPaper.bib
+--line 153 of file flairsPaper.bib
 Warning--entry type for "ADNP" isn't style-file defined
---line 151 of file flairsPaper.bib
+--line 161 of file flairsPaper.bib
 Warning--entry type for "Ridge_11" isn't style-file defined
---line 158 of file flairsPaper.bib
-Warning--I'm ignoring carlson's extra "pages" field
---line 170 of file flairsPaper.bib
+--line 169 of file flairsPaper.bib
 Warning--entry type for "bookscount" isn't style-file defined
---line 351 of file flairsPaper.bib
+--line 377 of file flairsPaper.bib
 Warning--entry type for "gblp" isn't style-file defined
---line 358 of file flairsPaper.bib
+--line 384 of file flairsPaper.bib
 Warning--entry type for "recaptcha" isn't style-file defined
---line 365 of file flairsPaper.bib
+--line 391 of file flairsPaper.bib
+Warning--I didn't find a database entry for "postcorrection"
 Warning--I didn't find a database entry for "ßhybred"
-Warning--empty year in galZoo
 Warning--empty note in holley_09
-Warning--empty booktitle in Thorsten
-Warning--empty journal in hybred
-Warning--empty year in velagapudi
-You've used 31 entries,
+Warning--empty journal in multiclassSVM_ecoc
+You've used 35 entries,
             2568 wiz_defined-function locations,
-            755 strings with 9282 characters,
-and the built_in function-call counts, 11310 in all, are:
-= -- 1194
-> -- 382
-< -- 12
-+ -- 124
-- -- 121
-* -- 809
-:= -- 1801
-add.period$ -- 149
-call.type$ -- 31
-change.case$ -- 179
-chr.to.int$ -- 31
-cite$ -- 36
-duplicate$ -- 465
-empty$ -- 873
-format.name$ -- 163
-if$ -- 2374
+            774 strings with 9939 characters,
+and the built_in function-call counts, 13318 in all, are:
+= -- 1426
+> -- 443
+< -- 16
++ -- 145
+- -- 141
+* -- 935
+:= -- 2100
+add.period$ -- 173
+call.type$ -- 35
+change.case$ -- 206
+chr.to.int$ -- 35
+cite$ -- 37
+duplicate$ -- 558
+empty$ -- 1019
+format.name$ -- 190
+if$ -- 2833
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 20
-newline$ -- 179
-num.names$ -- 97
-pop$ -- 210
+missing$ -- 23
+newline$ -- 206
+num.names$ -- 109
+pop$ -- 225
 preamble$ -- 1
-purify$ -- 214
+purify$ -- 244
 quote$ -- 0
-skip$ -- 430
+skip$ -- 517
 stack$ -- 0
-substring$ -- 497
-swap$ -- 130
-text.length$ -- 12
+substring$ -- 618
+swap$ -- 171
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 240
-warning$ -- 5
-while$ -- 93
-width$ -- 34
-write$ -- 403
-(There were 17 warnings)
+type$ -- 276
+warning$ -- 2
+while$ -- 110
+width$ -- 38
+write$ -- 469
+(There were 14 warnings)
