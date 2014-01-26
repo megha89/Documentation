@@ -1,10 +1,7 @@
-This is BibTeX, Version 0.99d (TeX Live 2013)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
 The top-level auxiliary file: flairsPaper.aux
 The style file: aaai.bst
 Database file #1: flairsPaper.bib
-Warning--entry type for "cdnc" isn't style-file defined
---line 64 of file flairsPaper.bib
 Warning--entry type for "algo" isn't style-file defined
 --line 124 of file flairsPaper.bib
 Warning--entry type for "pictAus" isn't style-file defined
@@ -23,49 +20,47 @@ Warning--entry type for "gblp" isn't style-file defined
 --line 384 of file flairsPaper.bib
 Warning--entry type for "recaptcha" isn't style-file defined
 --line 391 of file flairsPaper.bib
-Warning--I didn't find a database entry for "postcorrection"
-Warning--I didn't find a database entry for "ßhybred"
 Warning--empty note in holley_09
 Warning--empty journal in multiclassSVM_ecoc
-You've used 35 entries,
+You've used 39 entries,
             2568 wiz_defined-function locations,
-            774 strings with 9939 characters,
-and the built_in function-call counts, 13318 in all, are:
-= -- 1426
-> -- 443
-< -- 16
-+ -- 145
-- -- 141
-* -- 935
-:= -- 2100
-add.period$ -- 173
-call.type$ -- 35
-change.case$ -- 206
-chr.to.int$ -- 35
-cite$ -- 37
-duplicate$ -- 558
-empty$ -- 1019
-format.name$ -- 190
-if$ -- 2833
+            798 strings with 10736 characters,
+and the built_in function-call counts, 14944 in all, are:
+= -- 1605
+> -- 505
+< -- 17
++ -- 166
+- -- 161
+* -- 1063
+:= -- 2366
+add.period$ -- 195
+call.type$ -- 39
+change.case$ -- 231
+chr.to.int$ -- 39
+cite$ -- 41
+duplicate$ -- 627
+empty$ -- 1129
+format.name$ -- 220
+if$ -- 3169
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 23
-newline$ -- 206
-num.names$ -- 109
-pop$ -- 225
+missing$ -- 29
+newline$ -- 232
+num.names$ -- 121
+pop$ -- 240
 preamble$ -- 1
-purify$ -- 244
+purify$ -- 274
 quote$ -- 0
-skip$ -- 517
+skip$ -- 571
 stack$ -- 0
-substring$ -- 618
-swap$ -- 171
-text.length$ -- 16
+substring$ -- 696
+swap$ -- 188
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 276
+type$ -- 304
 warning$ -- 2
-while$ -- 110
-width$ -- 38
-write$ -- 469
-(There were 14 warnings)
+while$ -- 123
+width$ -- 43
+write$ -- 529
+(There were 11 warnings)

@@ -20,6 +20,13 @@ Ahn, L.~v.; Maurer, B.; McMillen, C.; Abraham, D.; and Blum, M.
 \newblock 2009.
 \newblock recaptcha, digitizing books one word at a time.
 
+\bibitem[\protect\citeauthoryear{Bassil and Alwani}{2012}]{onlineSpelling}
+Bassil, Y., and Alwani, M.
+\newblock 2012.
+\newblock Ocr post-processing error correction algorithm using google online
+  spelling suggestion.
+\newblock {\em CoRR} abs/1204.0191.
+
 \bibitem[\protect\citeauthoryear{books}{2013}]{bookscount}
 books, G.
 \newblock 2013.
@@ -47,11 +54,6 @@ Carlson, A.~J.; Rosen, J.; and Roth, D.
 \newblock {\em Proceedings of the Thirteenth Conference on Innovative
   Applications of Artificial Intelligence Conference}  45--50.
 
-\bibitem[\protect\citeauthoryear{Collection}{2013}]{cdnc}
-Collection, C. D.~N.
-\newblock 2013.
-\newblock http://cdnc.ucr.edu/cdnc.
-
 \bibitem[\protect\citeauthoryear{Community}{20}]{galZoo}
 Community, A.
 \newblock 20.
@@ -63,6 +65,13 @@ Crammer, K., and Singer, Y.
 \newblock On the algorithmic implementation of multiclass kernel-based vector
   machines.
 \newblock {\em J. Mach. Learn. Res.} 2:265--292.
+
+\bibitem[\protect\citeauthoryear{Dadason}{2012}]{post-correction}
+Dadason, J.~F.
+\newblock 2012.
+\newblock {\em Post-Correction of Icelandic OCR Text}.
+\newblock Faculty of Industrial Engineering, Mechanical Engineering and
+  Computer Science, University of Iceland.
 
 \bibitem[\protect\citeauthoryear{Gao \bgroup et al\mbox.\egroup }{2010}]{Gao}
 Gao, J.; Li, X.; Micol, D.; Quirk, C.; and Sun, X.
@@ -182,6 +191,15 @@ NLA.
 \newblock 2006.
 \newblock Picture australia.
 
+\bibitem[\protect\citeauthoryear{Platt, Cristianini, and
+  Shawe-taylor}{2000}]{dagsvm}
+Platt, J.~C.; Cristianini, N.; and Shawe-taylor, J.
+\newblock 2000.
+\newblock Large margin dags for multiclass classification.
+\newblock In {\em Advances in Neural Information Processing Systems},
+  547--553.
+\newblock MIT Press.
+
 \bibitem[\protect\citeauthoryear{Project}{2013}]{gblp}
 Project, G. B.~L.
 \newblock 2013.
@@ -208,6 +226,14 @@ Ridge, M.
 \newblock 2011.
 \newblock Frequently asked questions about crowdsourcing in cultural heritage.
 
+\bibitem[\protect\citeauthoryear{Tanner, Muñoz, and Ros}{2009}]{britishLibrary}
+Tanner, S.; Muñoz, T.; and Ros, P.~H.
+\newblock 2009.
+\newblock Measuring mass text digitization quality and usefulness: Lessons
+  learned from assessing the ocr accuracy of the british library's 19th century
+  online newspaper archive.
+\newblock {\em D-Lib Magazine} 15.
+
 \bibitem[\protect\citeauthoryear{Tong and Evans}{1996}]{Tong96astatistical}
 Tong, X., and Evans, A.~D.
 \newblock 1996.
@@ -219,6 +245,12 @@ Tong, X., and Evans, A.~D.
 Velagapudi, P.
 \newblock 2005.
 \newblock Using hmms to boost accuracy in optical character recognition.
+
+\bibitem[\protect\citeauthoryear{Wagner and Fischer}{1974}]{Wagner_74}
+Wagner, R.~A., and Fischer, M.~J.
+\newblock 1974.
+\newblock The string-to-string correction problem.
+\newblock {\em J. ACM} 21(1):168--173.
 
 \bibitem[\protect\citeauthoryear{Wang \bgroup et al\mbox.\egroup
   }{2010}]{multiclassSVM_ecoc}
