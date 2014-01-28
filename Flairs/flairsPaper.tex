@@ -2,17 +2,16 @@
 \documentclass[letterpaper]{article}
 \usepackage{aaai}
 \usepackage{times}
-\usepackage{helvet}
-\usepackage{courier}
+%\usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{subfigure}
 \frenchspacing
 \setlength{\pdfpagewidth}{8.5in}
 \setlength{\pdfpageheight}{11in}
 \usepackage{amsmath}
-\pdfinfo{
-/Title ( Error Classification in OCR Historic Newspaper Archive using SVM\textsuperscript{multiclass})
-/Author (Megha Gupta, Dr. Haimonti Dutta)}
+%\pdfinfo{
+%/Title ( Error Classification in OCR Historic Newspaper Archive using SVM\textsuperscript{multiclass})
+%/Author (Megha Gupta, Dr. Haimonti Dutta)}
 \setcounter{secnumdepth}{1}  
  \begin{document}
 % The file aaai.sty is the style file for AAAI Press 
@@ -20,7 +19,7 @@
 %
 %\title{Crowdsourced OCR Error Correction Classification using Multi-Class Support Vector Machines}
 %\title{Classification of Text Corrected by the Crowd using Support Vector Machines}
-\title{CCTC: \textbf{C}lassification of \textbf{C}rowdsourced \textbf{T}ext \textbf{C}orrection}
+\title{ \textbf{C}lassification of \textbf{C}rowdsourced \textbf{T}ext \textbf{C}orrection}
 %\author{Megha Gupta\\Department of Computer Science,\\ IIIT-Delhi, India \\ meghag@iiitd.ac.in 
 %\And Dr. Haimonti Dutta\\
 %Center for Computational Learning Systems,\\ Columbia University, New York\\ haimonti@iiitd.ac.in}
@@ -31,11 +30,13 @@ Columbia University, \\
 New York, NY 10115\\
 haimonti@ccls.columbia.edu\\
 \And
-Megha Gupta \\ 
+Megha Gupta \\
+Dept. of Computer Science\\ 
 IIIT-Delhi, India. \\
 meghag@iiitd.ac.in
 \And 
 Brian Geiger \\
+Center for Bibliographical Studies and Research \\
 University of California, Riverside \\
 brian.geiger@ucr.edu
 }
@@ -43,10 +44,8 @@ brian.geiger@ucr.edu
 \maketitle
 \begin{abstract}
 \begin{quote}
-\noindent Optical Character Recognition (OCR) is a commonly used method of digitizing printed texts so that they can be searched and displayed online, stored compactly and used in text mining applications.\\
-The text generated from OCR devices, however, is often garbled due to variations in quality of the input paper, size and style of the font and column layout. This adversely affects retrieval effectiveness; hence the techniques for cleaning the OCR need to be improvised. Often such techniques involve laborious and time consuming manual processing of data.\\
-This paper shows the need to devise an algorithm that is scalable for a large dataset. The current state of the art algorithm used for performing multi class classification is not yet scalable. The current algorithm takes a long time to converge in a particular parameter setting.
-
+\noindent Optical Character Recognition (OCR) is a commonly used technique for digitizing printed material enabling them to be displayed online, searched and used in text mining applications. 
+The text generated from OCR devices is often garbled due to variations in quality of the input paper, size and style of the font and column layout. This adversely affects retrieval effectiveness and hence techniques for cleaning the garbled text need to be improvised. Often such techniques involve laborious and time consuming manual processing of data. This paper presents a prototype system for \textbf{C}lassification of \textbf{C}rowdsourced \textbf{T}ext \textbf{C}orrection (CCTC) which takes as input log files containing garbled and manually corrected OCR text, parses and tokenizes them and builds models for categorizing the corrections using state-of-the-art machine learning algorithms. Retrieval effectiveness on the California Digital Newspaper Collection is measured using Spearman's rank correlation metric. This prototype system is expected to be deployed on historical newspaper archives that make extensive use of user text corrections.
 \end{quote}
 \end{abstract}
 
@@ -54,23 +53,36 @@ This paper shows the need to devise an algorithm that is scalable for a large da
 \label{sec:intro}
 
 Crowdsourcing is used extensively in cultural heritage and digital history related projects in recent years to 
-digitize, create and process content and provide editorial or processing interventions. For example, the Australian Newspapers Digitization Program \cite{ADNP} enables communities to explore their rich newspaper heritage by enabling free online public access to over 830,000 newspaper pages containing 8.4 million articles. The public enhanced the data by correcting over 7 million lines of text and adding 200,000 tags and 4600 comments \cite{holley_09}. Picture Australia \cite{pictAus} harvests digital images from other heritage institutions and encourages the public to upload their own images and tag them. FamilySearch \cite{famSearch} made available handwritten digital images of births, deaths and marriage records for transcription by the public. The New York Public Library has 1,277,616 dishes transcribed to date from 17,079 menus. Galaxy Zoo \cite{galZoo}is an online collaborative astronomy project in which users are invited to classify millions of galaxies from digital photos. 
+digitize, create and process content and provide editorial or processing interventions. For example, the Australian Newspapers Digitization Program \cite{ADNP} allows communities to explore their rich newspaper heritage by enabling free online public access to over 830,000 newspaper pages containing 8.4 million articles. The public enhanced the data by correcting over 7 million lines of text and adding 200,000 tags and 4600 comments \cite{holley_09}. 
+%Picture Australia \cite{pictAus} harvests digital images from other heritage institutions and encourages the public to upload their own images and tag them. 
+FamilySearch \cite{famSearch} made available handwritten digital images of births, deaths and marriage records for transcription by the public. The New York Public Library has 1,277,616 dishes transcribed to date from 17,079 menus. 
+%Galaxy Zoo \cite{galZoo} is an online collaborative astronomy project in which users are invited to classify millions of galaxies from digital photos. 
 
-In all of the above crowdsourcing projects, large volumes of data are generated by users. These include tags, folksonomies, flagged content, information on history, relationship and preference data, structured labels describing objects and creative responses \cite{Ridge_11}. In most citizen science projects, however, little statistical analysis is done of the user generated content. Thus assessment of data quality obtained by leveraging the ``wisdom of the crowd" remains an open problem. 
+In all of the above crowdsourcing projects, large volumes of data are generated by users. These include tags, folksonomies, flagged content, information on history, relationship and preference data, structured labels describing objects and creative responses \cite{Ridge_11}. However, little statistical analysis is done of the user generated content in most cases. Assessment of data quality obtained by leveraging the ``wisdom of the crowd" remains an open problem. 
 
 %Before this question can be answered, statistical analysis of the data generated is imperative.
 
-In this paper, we focus on understanding the nature of text corrections done by users of an old historic newspaper archive. The newspapers are made available for searching on the Internet after the following processes take place: (1) the microfilm copy or paper original is scanned; (2) master and Web image files are generated; (3) metadata is assigned for each page to improve the search capability of the newspaper; (4) OCR software is run over high resolution images to create searchable full text and (5) OCR text, images, and metadata are imported into a digital library software program. The OCR scanning process is far from perfect and the documents generated from it contains a large amount of garbled text. A user is presented with a high resolution image of a newspaper page along with erroneous or distorted text from the OCR and is expected to rectify the garbled words as appropriate. A prototype for a system that can be used for \textbf{C}lassification of \textbf{C}rowdsourced \textbf{T}ext \textbf{C}orrection (CCTC) is presented which can answer simple questions such as ``What are the different kinds corrections proposed by users?" and statistics generated from the correction process. 
-The output from the system can be used to enhance search and retrieval on the archive.
+In this paper, we focus on understanding the nature of text corrections done by users of an old historic newspaper archive. The newspapers are made available for searching on the Internet after the following processes take place: (1) the microfilm copy or paper original is scanned; %(2) master and Web image files are generated; 
+(2) metadata is assigned for each page to improve the search capability of the newspaper; (3) OCR software is run over high resolution images to create searchable full text.
+% and (5) OCR text, images, and metadata are imported into a digital library software program. 
+The OCR scanning process is far from perfect and the documents generated from it contains a large amount of garbled text. A user is presented with a high resolution image of a newspaper page along with erroneous or distorted text from the OCR and is expected to rectify the garbled words as appropriate. A prototype for a system that can be used for \textbf{C}lassification of \textbf{C}rowdsourced \textbf{T}ext \textbf{C}orrection (CCTC) is presented which can answer simple questions such as ``What are the different kinds corrections proposed by users?" and provide statistics generated from the correction process. The output from the system can be used to enhance search and retrieval.
 
-Our study used log files generated from text correction software in use at the California Digital Newspaper Collection (CDNC)\footnote{http://cdnc.ucr.edu/cgi-bin/cdnc}, which contains over 400,000 pages of newspapers published in California between 1846-1922. 
+The study used log files generated from text correction software in use at the California Digital Newspaper Collection (CDNC)\footnote{http://cdnc.ucr.edu/cgi-bin/cdnc}, which contains over 400,000 pages of newspapers published in California between 1846-1922. 
 %To date, the archive has approximately 1680 registered users who have corrected close to 2 million lines of text. 
 %The corrections are primarily categorized as changes in spellings, punctuation rectification, addition of content or capitalization. A semi-automatic engine for classifying corrections based on support vector machines is designed.  
 To the best of our knowledge, this is the first attempt to statistically analyze and model OCR error corrections provided by the crowd. We posit that such a classification system will be beneficial when attempting to compensate the annotators; it can also be used for task allocation if some users are more comfortable with certain type of corrections than others.
 
 %In a bid to serve its patrons better, the CDNC crowdsourced the cleaning of OCR text. To date..
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.8\textheight]{./image/archOCR.jpg}
+\caption{The Architecture of the Proposed System}
+\label{fig:arch}
+\end{figure*}
 
-[CHECK THIS] \noindent \textbf{Organization}: Section~\ref{arch} describes the architecture of the proposed system. Section~\ref{sec:data} describes the data obtained from crowd sourcing and pre-processing steps; Section~\ref{sec:methodology} presents the design of the semi-automatic error correction classifier and Section~\ref{sec:evaluation} presents empirical and scalability results using real-world data collected at CDNC. Section~\ref{sec:related} discusses related work in OCR text correction with particular emphasis on systems requiring human intervention. Finally, Section~\ref{sec:conc} concludes the paper.
+
+
+\noindent \textbf{Organization}: Section~\ref{arch} describes the architecture of the proposed system; Section~\ref{sec:evaluation} presents empirical and scalability results on real-world data collected at CDNC; Section~\ref{ir} presents information retrieval techniques; Section~\ref{sec:related} discusses related work. Finally, Section~\ref{sec:conc} concludes the paper.
 
 
 
@@ -80,13 +92,6 @@ To the best of our knowledge, this is the first attempt to statistically analyze
 %In this paper, we perform error classification using Joachims multi-class Support Vector Machine algorithm called \textit{SVM\textsuperscript{multiclass}}\footnote{http://www.cs.cornell.edu/people/tj/svm\_light/svm\_multiclass.html}. We chose this algorithm as its the state of the art algorithm till now. But the experiments give altogether a different view on this algorithm. This algorithm do not converge quickly on certain parameters which are shown in table ~\ref{table: runtime}
 
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=0.8\textheight]{./image/archOCR.jpg}
-\caption{The Architecture of the Proposed System}
-\label{fig:arch}
-\end{figure*}
-
 
 \section{Architecture of the Proposed System}
 \label{arch}
@@ -94,40 +99,20 @@ To the best of our knowledge, this is the first attempt to statistically analyze
 
 The \textbf{C}lassification of \textbf{C}rowdsourced \textbf{T}ext \textbf{C}orrection (CCTC) system has the following components:
 
-\begin{figure*}[h]
-\begin{center}
-%\mbox{
-\subfigure[Scanned newspaper ``The Amador Ledger" highlighting an article to be corrected by a user.]
-{
-%%\includegraphics[width=0.6\columnwidth]{odds_20070813_160000rb_M.pdf}
-\includegraphics[width=0.48\textwidth]{./image/issue_greyscale.jpg}
-\label{fig:T1}
-}
-\subfigure[The tool used by patrons to annotate articles.]
-{
-%%\includegraphics[width=0.8\columnwidth]{20070813-C1-7d-roc.pdf}
-\includegraphics[width=0.48\textwidth]{./image/correction.jpg}
-\label{fig:T2}
-}
-%\caption{Something.}
-\label{News_01}
-\end{center}
-\end{figure*}
-
 \begin{enumerate}
-
 
 \item The \textbf{Veridian User Text Correction}\footnote{http://veridiansoftware.com/crowdsourcing/} tool which takes as input a scanned page of the newspaper and enables users to correct OCR errors as they come across them.
 Figure~\ref{fig:T1} shows an example of a scanned page from ``The Amador Ledger" published on January 26, 1900. The article to be corrected by a user is highlighted. The raw OCR text from the article and the tool used by patrons to correct text is shown in figure ~\ref{fig:T2}.
 
-\item \textbf{Log Files: }All corrections performed by the annotators are recorded in log files. To date approximately 1,705,149 lines have been edited by 848 annotators which resulted in 235 log files. A sample of 191 files have been chosen for our work in this project. Each log file is generated at the issue-level and contains XML data about the pages in the issue. Table~\ref{table:logfile} describes the structure of the log file. The following information is provided about the corrections made by the patrons:
-\begin{enumerate}
-\item \textit{Page Id: } The id of the page in which editing was done.
-\item \textit{Block Id: } The id of the paragraph containing the line corrected by the user.
-\item \textit{Line Id: }The id of the line edited by the user.
-\item \textit{Old Text Value} is the garbled text generated by the OCR device and replaced by the user.
-\item \textit{New Text Value} is the corrected text with which the old text was replaced.
-\end{enumerate}
+
+\item \textbf{Log Files: }All corrections performed by the annotators are recorded in log files. To date approximately 1,705,149 lines have been edited by 848 annotators which resulted in 235 log files. A sample of 191 files has been used for this work. Each log file is generated at the issue-level and contains XML data about the pages in the issue. Table~\ref{table:logfile} describes the structure of the log file. The following information is provided about the corrections made by the patrons:
+%\begin{enumerate}
+(a) \textit{Page Id: } The id of the page in which editing was done.
+(b) \textit{Block Id: } The id of the paragraph containing the line corrected by the user.
+(c) \textit{Line Id: }The id of the line edited by the user.
+(d) \textit{Old Text Value} is the garbled text generated by the OCR device and replaced by the user.
+(e) \textit{New Text Value} is the corrected text with which the old text was replaced.
+%\end{enumerate}
 
 \begin{table}[h]
 \begin{center}
@@ -146,43 +131,67 @@ Figure~\ref{fig:T1} shows an example of a scanned page from ``The Amador Ledger"
 \label{table:logfile}
 \end{table}
 
+\begin{figure*}[th]
+\begin{center}
+%\mbox{
+\subfigure[Scanned newspaper highlighting an article to be corrected by a user.]
+{
+%%\includegraphics[width=0.6\columnwidth]{odds_20070813_160000rb_M.pdf}
+\includegraphics[width=0.48\textwidth, height=0.2\textheight]{./image/issue_greyscale.jpg}
+\label{fig:T1}
+}
+\subfigure[The tool used by patrons to annotate articles.]
+{
+%%\includegraphics[width=0.8\columnwidth]{20070813-C1-7d-roc.pdf}
+\includegraphics[width=0.48\textwidth,height=0.2\textheight]{./image/correction.jpg}
+\label{fig:T2}
+}
+\caption{The Amador Ledger, Jan. 26, 1900.}
+\label{News_01}
+\end{center}
+\end{figure*}
+
 \item \textbf{Preprocessor: } The preprocessor has three main components:
 \begin{itemize}
 \item \textbf{Tokenizer: } The old text and the corresponding new text from the log file is tokenized by white-spaces. There are 44,023 tokens of which 21,113 are corrected by the annotators.
 
 \item \textbf{Feature Constructor: } Features are crafted by computing the Levenshtein edit distance between the old word and its correction. The Levenshtein edit distance \cite{Wagner_74} is defined as the minimum number of single edit operations (insertions, deletions and substitutions) required to convert one string into another. Six binary features are generated as follows: 
+%\begin{enumerate}
+(a) \textbf{Same Length} : 1, if both the old word and new word have same length and $0$ otherwise. 
+%For example, the feature is 1 for the tokens ``Spll," and ``Union" as  both the tokens have same number of characters.
+(b) \textbf{Edit Distance Zero}:  1, if both the words are exactly same and $0$ otherwise. 
+%For example, the feature is 1 for tokens ``Under" and ``Under". 
+(c) \textbf{Edit Distance Above One}: 1, if more than one edit operation is required to convert old word to new word and $0$ otherwise. For ``Spll," and ``Union", value is 1 as more than one edit operation is required to convert from old to new token.
+(d) \textbf{Edit Distance Below Three}: 1, if less than three edit operations are required to convert old word to new word and $0$ otherwise. 
+%For ``Stales" and ``Stables", value is 1 as less than three edit operations are required to convert from old to new token. 
+(e) \textbf{Edit Distance is 1 and Case Change}: 1, if the two words have edit distance is exactly 1 and the first character of one string change from upper case to lower case or vice versa. For example, for ``Stales" and ``Stables", the value is 0 as there is no case change.
+(f) \textbf{Punctuation Difference}: 1, if both the old text and new text differ in any of the following punctuation marks (!"\#\$\%\&'*+,-./:;\textless=\textgreater?@[$\backslash$]\^\_`\{\textbar\}\textasciitilde).
+% For ``Spll," and ``Union", the value is 1 as the old and new text differ in one of the following punctuation marks
+%\end{enumerate}
 
 
-\begin{enumerate}
-\item \textit{Same Length} : 1, if both the old word and new word have same length and $0$ otherwise. For example, the feature is 1 for the tokens ``Spll," and ``Union" as  both the tokens have same number of characters.
-\item \textit{Edit Distance Zero}:  1, if both the words are exactly same and $0$ otherwise. For example, the feature is 1 for tokens ``Under" and ``Under". 
-\item \textit{Edit Distance Above One}: 1, if more than one edit operation is required to convert old word to new word and $0$ otherwise. For ``Spll," and ``Union", value is 1 as more than one edit operation is required to convert from old to new token.
-\item \textit{Edit Distance Below Three}: 1, if less than three edit operations are required to convert old word to new word and $0$ otherwise. For ``Stales" and ``Stables", value is 1 as less than three edit operations are required to convert from old to new token. 
-\item \textit{Edit Distance is 1 and Case Change}: 1, if the two words have edit distance is exactly 1 and the first character of one string change from upper case to lower case or vice versa. For ``Stales" and ``Stables", the value is 0 as there are two conditions to be met. One, when both the tokens have edit distance exactly 1 and second, when there is a upper to lower or lower to upper case change in the first character. Here, the edit distance is exactly 1 but there is no case change.
-\item \textit{Punctuation Difference}: 1, if both the old text and new text differ in any of the following punctuation marks (!"\#\$\%\&'*+,-./:;\textless=\textgreater?@[$\backslash$]\^\_`\{\textbar\}\textasciitilde)
-. For ``Spll," and ``Union", the value is 1 as the old and new text differ in one of the following punctuation marks
-\end{enumerate}
+%\begin{figure*}[t]
+%\centering
+%\includegraphics[width=0.9\textwidth]{./image/flowchartnew.jpg}
+%%\includegraphics[width=6cm,height=4cm]{./image/error.jpg}
+%\caption{Flowchart demonstrating how the labels are generated.}
+%\label{fig:flowchart}
+%\end{figure*}
 
+\item \textbf{Label Constructor: }The errors rectified by the users are categorized as Spellcheck Error, Addition of a new word, Capitalization Error, Typo and Punctuation error. 
+%The logic used in generation of the features can be summarized by the flowchart depicted in Figure~\ref{fig:flowchart}.
+Specifically,
+%\begin{enumerate}
+(a)\textbf{Spellcheck Error: }When the edit distance is between 1 and 3. For example, ``mounten" and ``mountain".
+(b)\textbf{Addition of a new word: }When the edit distance is more than 3. For example, ``at" and ``attend".
+(c)\textbf{Capitalization error: } When the edit distance of two strings is exactly 1 and first letter of both the strings changes from upper to lower case or vice versa. For example, ``largest" and ``Largest".
+(d)\textbf{Typographical Error: } When the edit distance is exactly one and case change is 0. For example, ``teh" and ``the"
+(e)\textbf{Punctuation Error: }When the two strings differ by special characters contained in the set (!"\#\$\%\&'()*+,-./:;\textless=\textgreater?@[$\backslash$]\^\_`\{\textbar\}\textasciitilde). 
+%For example, ``residents" and residents
+(f)\textbf{No Correction: }When the old and new text are same. %For example, plant and plant
+%\end{enumerate}
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=0.9\textwidth]{./image/flowchartnew.jpg}
-%\includegraphics[width=6cm,height=4cm]{./image/error.jpg}
-\caption{Flowchart demonstrating how the labels are generated.}
-\label{fig:flowchart}
-\end{figure*}
-
-\item \textbf{Label Constructor: }The errors rectified by the users are categorized as Spellcheck Error, Addition of a new word, Capitalization Error, Typo and Punctuation error. The logic used in generation of the features can be summarized by the flowchart depicted in Figure~\ref{fig:flowchart}. Specifically,
-\begin{enumerate}
-\item \textit{Class 1-Spellcheck error: }When the edit distance is between 1 and 3. For example, ``mounten" and ``mountain".
-\item \textit{Class 2-Addition of a new word: }When the edit distance is more than 3. For example, ``at" and ``attend".
-\item \textit{Class 3-Capitalization error: } When the edit distance of two strings is exactly 1 and first letter of both the strings changes from upper to lower case or vice versa. For example, ``largest" and ``Largest".
-\item \textit{Class 4-Typo: } When the edit distance is exactly one and case change is 0. For example, ``teh" and ``the"
-\item \textit{Class 5-Punctuation error: }When the two strings differ by special characters contained in the set (!"\#\$\%\&'()*+,-./:;\textless=\textgreater?@[$\backslash$]\^\_`\{\textbar\}\textasciitilde). For example, ``residents" and residents
-\item \textit{Class 6-No correction: }When the old and new text are same. For example, plant and plant
-\end{enumerate}
-
-The distribution of the these classes in the dataset is shown in Table~\ref{table: classes}.
+The distribution of the these classes in the dataset is shown in Table~\ref{table: classes}. It must be noted that by design tokens are always assigned to one class, although in principle it may be possible to assign them to multiple classes\footnote{For e.g. a correction of ``t$\$$e" to ``the" could be either a Typo or a Punctuation Error correction.}.
 
 \begin{table}[htdp]
 \begin{center}
@@ -232,53 +241,32 @@ Total & 44022 \\
 %
 
 
-\item \textbf{Model Construction: } The crowdsourced text correction model is built using a Multiclass Support Vector Machine algorithm \cite{algo}. For a training set $(x_1,y_1) ... (x_n,y_n)$ with labels $y_i \in \{1, \cdots, k\}$, the multi class problem is posed as a constrained optimization problem with a quadratic objective function which can be stated as: \\
-\begin{equation}
-\text{min } \frac{1}{2} \sum_{i = 1}^{k} \parallel w_{i}\parallel^2 + \frac{C}{n} \sum_{i = 1}^{n}\xi_{i} 
-\end{equation}
-\begin{equation*}
-s.t. \forall y \leq k : [x_{1} \cdot w_{yi}] \geq [x_{1} \cdot w_{y}] + 100*\Delta(y_{1},y)-\xi_{1}
-\end{equation*}
- . . . . . . . . . . .
-\begin{equation*}
-s.t. \forall y \leq k : [x_{n} \cdot w_{yn}] \geq [x_{n} \cdot w_{y}] + 100*\Delta(y_{n},y)-\xi_{n} 
-\end{equation*}
-Here C is the regularization parameter that trades off margin error and training error. $\Delta(y_{1},y)$ is the loss function that returns 0 if $y_{n}$ equals y, and 1 otherwise. $\xi_{i}$ are the non negative slack variables which measure the degree of misclassification of the data $x_{i}$. \\
-\cite{algo} has to two modules, \textit{svm\_multiclass\_learn} and \textit{svm\_multiclass\_classify}. The learning module learns the model given the parameters and the training data whereas the classification module applies the learned model to the test data to find the error. When the data is not linearly separable, the original finite dimensional space is mapped to a much higher dimensional space in order to make the separation easier in that space. The mappings used by SVM schemes are designed to ensure that the dot products may be computed easily in terms of the variables in the original space, by defining them in terms of a Kernel function selected to suit the problem. The types of kernel function used can be described as follows:\\
-a) Linear Kernel (default) : It is the basic kernel function given by the inner product \textless x,y\textgreater plus an optional constant c. K(x,y) = $x^{T}$y + c \\
-b) Polynomial Kernel : It is a non-stationary kernel which is well suited for problems where the training data is normalized. \\
-K(x,y) = $(\alpha x^{T}y + c)^{d}$ \\
-c) Radial Basis Kernel : The (Gaussian) radial basis function kernel on two samples x and y represented as feature vectors in some input space is defined as \\
-K(x,y) = exp($-\lvert \lvert x-y\rvert\rvert^{2}$/2$\sigma^{2}$)
+\item \textbf{Model Construction: } The model for classifying crowdsourced text correction is built using a Multiclass Support Vector Machine algorithm \cite{Tsochantaridis_2004}. Each training point belongs to one of $k$ different classes. The goal is to construct a function, which given a new data point, will correctly predict the class to which it belongs.
+Different methods have been proposed in literature for solving the SVM multi-class classification problem. Some popular techniques include: a) \textit{One-Versus-All (OVA) classification} Build $k$ different binary classifiers; for the $i^{th}$ classifier, let the positive examples be all points in class $i$ and negative examples not in class $i$. Let $f(x) = \text{arg } max_i f_i(x) $.  b) \textit{one-versus-one} uses the majority voting strategy where each classifier assigns the new instance one of two classes. The class with the majority votes is assigned to the instance.
+%%It generates k(k-2)/2 models for a k class problem. This approach is not practical for large-scale classification because of the memory required for storing k(k-1)/2 models.
+%c) \textit{Directed Acyclic Graph SVM} in its training phase, it is the same as the one-vs-one method. However, in the testing phase, it uses a rooted binary directed acyclic graph which has k(k-1)/2 internal nodes and k leaves. 
+%d) \textit{Error Correcting Output Codes} \cite{multiclassSVM_ecoc} This technique tries to combine binary classifiers by using decorrelations and correct errors.
+Crammer and Singer \cite{crammer} pose the multi-class classification problem as a single optimization problem, rather than decomposing it into multiple binary classification problems. A comparison of the above approaches can be found here \cite{comparison}.
+
+For a training set $(x_1,y_1) ... (x_n,y_n)$ with labels $y_i \in \{1, \cdots, k\}$, the multi class problem can be posed as a constrained optimization problem with a quadratic objective function:
+$\text{min } \frac{1}{2} \sum_{i = 1}^{k} \parallel w_{i}\parallel^2 + \frac{C}{n} \sum_{i = 1}^{n}\xi_{i} $
+
+s.t. $\forall y \leq k : [x_{1} \cdot w_{yi}] \geq [x_{1} \cdot w_{y}] + 100*\Delta(y_{1},y)-\xi_{1}$
+$\cdots$
+s.t. $\forall y \leq k : [x_{n} \cdot w_{yn}] \geq [x_{n} \cdot w_{y}] + 100*\Delta(y_{n},y)-\xi_{n}$
+
+Here $C$ is the regularization parameter, $\Delta(y_{j},y), 1 \le j \le n$ is the loss function that returns 0 if $y_{j}$ equals y, and 1 otherwise and $\xi_{i}, 1 \le i \le n$ are the non negative slack variables which measure the degree of misclassification of the instance $x_{i}$. 
+%\cite{algo} has to two modules, \textit{svm\_multiclass\_learn} and \textit{svm\_multiclass\_classify}. The learning module learns the model given the parameters and the training data whereas the classification module applies the learned model to the test data to find the error. 
+It must be noted that when the data is not linearly separable, the following kernel functions are used for classification:
+%the original finite dimensional space is mapped to a much higher dimensional space in order to make the separation easier in that space. The mappings used by SVM schemes are designed to ensure that the dot products may be computed easily in terms of the variables in the original space, by defining them in terms of a Kernel function selected to suit the problem. The types of kernel function used can be described as follows:\\
+a) Linear Kernel: $K(x,y) = x^{T}y + c $
+b) Polynomial Kernel : $K(x,y) = (\alpha x^{T}y + c)^{d}$
+c) Radial Basis Kernel : $K(x,y) = exp(-\lvert \lvert x-y\rvert\rvert^{2}/2\sigma^{2}$)
+
+%
+\item \textbf{Information Retrieval Techniques: } The tokens identified by the model as ``spell check",``addition of a new word", and ``Typo" play an important role in trying to enhance search and retrieval on the archive. This is presented here for the completeness of the architecture, but described in detail in Section~\ref{ir}.
 
 
-\item \textbf{Information Retrieval Techniques: } The tokens identified by the model as ``spell check",``addition of a new word", and ``Typo" play an important role in trying to enhance search and retrieval on the archive. The following details are relevant: 
-
-\textbf{Query Set:} To measure the retrieval effectiveness of the corrected text versus the garbled OCR, a list of keywords for search was prepared by randomly sampling from the corrected words.
-
-\textbf{Software:} PyLucene 3.6.2, a Python extension for accessing Java Apache Lucene was used as an IR software library for enabling full text indexing and search capabilites. Inverted Index was built on each corpus with the fields stored as file name, file path and file contents making retrieval faster. Experiments were run on the indexes created on both the datasets using the above mentioned query set. Only documents containing words in the query set were retrieved. The documents are ranked according to the frequency of the keyword present in the document. Higher the frequency, higher the ranking order.
- 
- \textbf{Evaluation:} The metric we used to compare the ranked retrieved documents is Spearman's rank correlation coefficient($\rho$). 
- 
-Let $y_{i}$ be the rank ordering of the documents retrieved from the corrected corpus and $x_{i}$ the rank ordering for the garbled text. Let $d_{i}$ = $x_{i}$ - $y_{i}$. Then Spearman's rank correlation $\rho$ is given by:
-\begin{equation}
-\rho = 1 - \frac {6\sum d_i^2 }{n(n^2-1)} 
-\end{equation}
-
-\textbf{Example: } Query word ``Jackson", the evaluation of $\rho$ (Worst Case) is shown in Table~\ref{ex}. Here, ${\sum d_i^2}$ = 11 and $\rho$ = 0.45.
-\begin{table}[h]
-\centering
-\begin{tabular}{ l | c | c | c | r | r }
- $Y_{i}$ & $X_{i}$ & $y_{i}$ & $x_{i}$ & $d_{i}$ & $d_{i}^2$ \\
-\hline
-  12-01-1900 & 21-10-1910 & 1 & 10(4) & -3 & 9 \\
-  09-12-1910 & 09-12-1910 & 2 & 2(1) & 0 & 0 \\
-  08-06-1900 & 23-09-1910 & 3 & 7(2) & 1 & 1 \\
-  01-04-1904 & 02-12-1910 & 4 & 8(3) & 1 & 1 \\
-  25-05-1900 & 23-12-1910 & 5 & 11(5) & 0 & 0 \\
-\end{tabular}
-\label{ex}
-\end{table}
 
 
 \end{enumerate}
@@ -291,9 +279,12 @@ Let $y_{i}$ be the rank ordering of the documents retrieved from the corrected c
 \section{Empirical Evaluation}
 \label{sec:evaluation}
 
-Experiments were performed by randomly partitioning the data into 70\% (30,815 instances) and 30\% (13,207 instances) of training and testing data respectively. For each experiment, the regularization parameter (C) and the type of kernel (t) was varied to (0.001,0.01,0.1,1,10,100) and (Linear, Polynomial and Radial basis kernel) respectively. The experiments were performed on two machines, one of which was a linux server and the other was a dual core Mac machine with Intel Core i7 processor, 8GB RAM, 2.9 GHz of processor speed. Each experiment was ran for 5 iterations. The average loss on the test set and CPU runtime were noted to analyse the experiments. Table ~\ref{table: error} describes how the average loss on test set varies for different values of `C' and `t'. Here, $AE_{L}$, $AE_{P}$, $AE_{R}$ describes the average loss error of linear, polynomial and rbf kernels respectively. Table ~\ref{table: runtime}  shows the average runtime (cpu sec) required to learn a model for various values of C and for different kernels. Here, $AT_{L}$, $AT_{P}$, $AT_{R}$ refers to the average run time of linear, polynomial and rbf kernels respectively.
+Experiments are performed by randomly selecting $70\%$ of the data\footnote{Approximately 30,815 instances}  as the train set. For each experiment, the regularization parameter $C$ and the type of kernel $t$ are varied as $0.001,0.01,0.1,1,10,100$ and Linear, Polynomial and Radial Basis Function kernel respectively. The experiments are performed on two machines, one of which is a linux server and the other a dual core Mac machine with Intel Core i7 processor, 8GB RAM, 2.9 GHz of processor speed. Each experiment is repeated $5$ times and the average loss on the test set and CPU runtime are reported. Table ~\ref{table: error} presents the average loss on test set for different values of $C$ and $t$; $AE_{L}$, $AE_{P}$, $AE_{R}$ represents the average loss on the linear, polynomial and RBF kernels respectively. Table ~\ref{table: runtime} shows the average runtime (cpu sec) required to learn a model for various values of $C$ and for different kernels. Here, $AT_{L}$, $AT_{P}$, $AT_{R}$ refers to the average run time of linear, polynomial and rbf kernels respectively. The loss is least when the $C = 100$ for the polynomial kernel. However, the time taken to train the model is considerably higher at 106753s. It must also be noted that one can learn less accurate models with linear or RBF kernels faster. Thus, it may be useful to consider a trade-off between accuracy of learnt models versus time taken for classification in large scale deployments.
  
-\subsection{Results}
+The code used to build the prototype system along with data generated are available from \texttt{https://github.com/megha89/}. It must be noted that the $SVM^{multiclass}$V2.2 package \cite{algo} was used for the implementation of Multi-class SVMs. 
+For linear kernels, $SVM^{multiclass}$V2.20 is very fast and runtime scales linearly with the number of training examples. Training of non-linear kernels is very slow using the algorithm described in Section~\ref{arch}.
+
+%\subsection{Results}
 
 \begin{table}[htdp]
 \begin{center}
@@ -334,19 +325,51 @@ C & $ AT_{L} $ & $AT_{P}$ & $AT_{R}$ \\
 \label{table: runtime}
 \end{table}
 
-\subsection{Discussion}
-As can be seen in table ~\ref{table: error} , the error is minimum when the C = 100 and when the kernel type is polynomial. But the time taken as shown in table ~\ref{table: runtime} to train the model for these parameters, when C is 100 is 106753 cpu sec.
-\subsection{Known Defects}
-The \cite{algo} algorithm converges quickly for linear type kernel but the its performance on test set is poor. For non linear kernels, this algorithm does not scale well for large scale datasets but gives better performance than linear kernels.
+%\subsection{Discussion}
+
+%\subsection{Known Defects}
+%The \cite{algo} algorithm converges quickly for linear type kernel but the its performance on test set is poor. For non linear kernels, this algorithm does not scale well for large scale datasets but gives better performance than linear kernels.
+
+\section{Information Retrieval Techniques}
+\label{ir}
+The following details are relevant: 
+
+\noindent \textbf{Query Set:} To measure the retrieval effectiveness of the corrected text versus the garbled OCR, a list of keywords for search was prepared by randomly sampling from the corrected words.
+
+\noindent \textbf{Software:} PyLucene 3.6.2, a Python extension for accessing Java Apache Lucene was used as an IR software library for enabling full text indexing and search capabilites. Inverted indices are built for both the original and corrected corpus. Keywords from the query set are tested on both corpora and documents containing words in the query set are retrieved. The documents are ranked according to the frequency of the keyword present -- higher the frequency, higher the rank.
+ 
+\noindent \textbf{Evaluation:} The metric used to compare the retrieved documents is Spearman's rank correlation coefficient($\rho$). Let $y_{i}$ be the rank ordering of the documents retrieved from the corrected corpus and $x_{i}$ the rank ordering for the garbled text. Let $d_{i}$ = $x_{i}$ - $y_{i}$. Then Spearman's rank correlation $\rho$ is given by: $\rho = 1 - \frac {6\sum d_i^2 }{n(n^2-1)}$.
+
+\noindent \textbf{Example: } Query word ``Jackson", the evaluation of $\rho$ is shown in Table~\ref{ex}. Here, ${\sum d_i^2}$ = 11 and $\rho$ = 0.45.
+\begin{table}[h]
+\centering
+\begin{tabular}{ l | c | c | c | r | r }
+ $Y_{i}$ & $X_{i}$ & $y_{i}$ & $x_{i}$ & $d_{i}$ & $d_{i}^2$ \\
+\hline
+  12-01-1900 & 21-10-1910 & 1 & 10(4) & -3 & 9 \\
+  09-12-1910 & 09-12-1910 & 2 & 2(1) & 0 & 0 \\
+  08-06-1900 & 23-09-1910 & 3 & 7(2) & 1 & 1 \\
+  01-04-1904 & 02-12-1910 & 4 & 8(3) & 1 & 1 \\
+  25-05-1900 & 23-12-1910 & 5 & 11(5) & 0 & 0 \\
+\end{tabular}
+\label{ex}
+\end{table}
+
+\noindent \textbf{Deployment: }The full-scale deployment of this prototype system is being considered on old historic newspaper archives at California Digital Newspaper Collection and the New York Public Library among others, where  user text corrections are used extensively for cleaning garbled OCR. 
 
 \section{Related Work}
 \label{sec:related}
-\subsection{Optical Character Recognition}
-Optical Character Recognition (OCR) is a commonly used method of digitizing printed texts so that they can be searched and displayed online, stored compactly and used in text mining applications. The text generated from OCR devices is often garbled due to variations in quality of the input paper, size and style of the font and column layout, its condition at the time of microfilming, choice of scanner, and the quality of the OCR software.
-Several techniques for post processing garbled OCR have been designed. These include:
-\subsubsection{Dictionary based schemes:}They use a lookup dictionary to spellcheck misspelled OCR recognized words. They correct non word errors, a word that is recognised by the OCR device but does not correspond to any entry in the lexicon. \cite{postprocessing} proposed an OCR post error correction method based on pattern learning where a list of suitable candidates is generated from the lexicon and the best candidate is selected as a correction. \cite{statistical} proposed using HMM to integrate syntactic information into the post-processing error correction. The suggested model achieved a higher rate of error correction due to its statistical nature in selecting the most probable candidate for a particular misspelled word.
-\subsubsection{Context based schemes:}They perform error detection and correction based on the grammatical error and semantic context. They are able to correct real-word errors, words that are recognized by OCR system and does correspond to an entry in the lexicon.\cite{contextbased} applies a part-of-speech (POS) tagger enhanced by word trigram model and a statistical Bayesian classifier to correct real-word errors in OCR text.
-\subsubsection{Manual error correction schemes:}Our work primarily focusses on manual error correction schemes where the task of correcting OCR errors is outsourced to a crowd of workers. By engaging a large crowd of people for ideas, skills or participation the quality of work done is superior and relatively inexpensive.
+\noindent \textbf{Optical Character Recognition (OCR)} is a commonly used method of digitizing printed texts so that it can be searched and displayed online, stored compactly and used in text mining applications. The text generated from OCR devices is often garbled due to variations in quality of the input paper, size and style of the font and column layout, its condition at the time of microfilming, choice of scanner, and the quality of the OCR software. Several techniques for post processing garbled OCR have been designed \cite{Fujisawa_08}, \cite{Esakov_94}, \cite{Lecun_90}. These include:
+
+\noindent \textbf{Dictionary based schemes: }These algorithms use a dictionary to spellcheck misspelled OCR recognized words. They correct non-word errors - words that are recognized by the OCR device but do not correspond to any entry in the lexicon. Niwa et al. \cite{postprocessing} proposed an OCR post error correction method based on pattern learning where a list of suitable candidates is generated from the lexicon and the best candidate is selected as a correction. Yannakoudakis and Fawthrop \cite{Yannakoudakis_83} conducted a study to create a set of rules based on common misspelling pattern and used them to correct errors. Cherkassky and Vassilas \cite{Cherkassky_89} use back propagation algorithms for correction. 
+%\cite{statistical} proposed using Hidden Markov Models (HMMs) to integrate syntactic information into the post-processing error correction. 
+%The suggested model achieved a higher rate of error correction due to its statistical nature in selecting the most probable candidate for a particular misspelled word.
+
+\noindent \textbf{Context based schemes: }These algorithms perform error detection and correction based on the grammatical error and semantic context. They are able to correct real-word errors -- words that are recognized by the OCR system and correspond to an entry in the lexicon. Tong and Evans \cite{Tong96astatistical} describe an automatic, context-sensitive, word-error correction system based on Statistical Language Modeling (SLM). The system exploits information from letter n-grams, character confusion probabilities and word bi-gram probabilities. Golding et al. \cite{contextbased} applies a part-of-speech (POS) tagger enhanced by word trigram model and a statistical Bayesian classifier to correct real-word errors in OCR text. Reynaert \cite{Reynaert2008a} presents a system for reducing the level of OCR-induced typographical variation in large text collections called Text-Induced Corpus Clean-up (TICCL). The system focuses on high-frequency words to be cleaned and gathers all typographical variants for any particular focus word that lie within the predefined Levenshtein distance. Bassil et al. \cite{Bassil_12a,Bassil_12b} propose a post-processing context-based error correction algorithm for detecting and correcting OCR non-word and real-word errors. The proposed algorithm is based on Google's online spelling suggestion. Abdulkader et al. \cite{lowcost}  present a method for digitizing textual data by using neural network classifiers to estimate OCR errors, clustering similar errors, designing a user interface and using active learning to tune the error estimation from user labeled data. 
+Velagapudi \cite{velagapudi} uses a combination of classifiers -- kNN classifier,  multilayer perceptrons and SVM to discuss the effects of error correction on the classification accuracy of each method. 
+
+Very little work has been done on automatic \emph{classification} of OCR error corrections\footnote{Most prior work has dealt with evaluation of candidate corrections for OCR errors.} to get a clear understanding of the \emph{nature} of errors encountered -- Esakov et al. \cite{Esakov_94a} suggest classification of output from the OCR engine as simple substitutions ($e \rightarrow c$), improper segmentation or multiple substitutions $(T \rightarrow 'l, m \rightarrow rn, he \rightarrow b)$, deletions and insertions (involving space) and unrecognized characters $(u \rightarrow \sim)$. They use a new variant of the dynamic programming algorithm for classification. In \cite{hybred}, OCR documents are classified into fixed number of categories based on their content. The accuracy of their approach was best when evaluated using SVM among other algorithms. Daoason \cite{Jon_12} posits that OCR errors are not random -- for example, it is extremely unlikely that the letter $o$ will be misrecognized as $x$ since they are very dissimilar. He classifies OCR errors as character errors (characters in the input document that are replaced with other characters), word errors (word in the input document is not correct or not present in the OCR generated text), or zoning errors (OCR software is unable to decipher zones correctly). Our work primarily focusses on \emph{manual} error correction classification where the task of correcting OCR errors is outsourced to a crowd of workers. 
+%By engaging a large crowd of people for ideas, skills or participation the quality of work done is superior and relatively inexpensive.
 
 %It is estimated that the total count of published books in the world is around 130 million \cite{bookscount}. Many of these books published are only available in printed format due to reasons like copyright and licensing issues. This limits the search of these articles, their availability and accessibility on the web. As of 2013, more than 30 million books have been digitised by Google Books Library Project \cite{gblp}. It uses reCAPTCHA to digitise books one word at a time by sending words that can not be read by the computer to the web in the form of CAPTCHAs for humans to decipher \cite{recaptcha}. 
 
@@ -355,35 +378,24 @@ Several techniques for post processing garbled OCR have been designed. These inc
 
 %The OCR errors are usually dependent on some major factors like the page quality, text layout, font styles. In \mydoubleq{Issues in automatic error correction}, the experimental analysis has shown that there is another important factor that impacts the performance of the OCR errors which is the choice of scanners used to scan the printed text. The type of scanner used not only affect the quantity of errors but quality as well. Their algorithm for classifying OCR errors is based minimising the cost of basic operations used to transform one string to another, also known as edit distance using dynamic programming approach.\\
 %\mydoubleq{Unsupervised Post Correction} paper talks about the post processing of OCR text to minimise the errors. It uses a combination of Anagram Hashing techniques, bigram approach on word level to consider the context and a  similarity key technique called OCR-key.  Anagram Hashing technique uses a hashing function that assigns same number to all those words that have same characters. OCR key observes the shape of characters to know the nature of OCR system and its generated errors.
-\subsection{Crowdsourced OCR correction }
-\cite{crowd} was the first to define ``crowdsourcing" as an online, distributed problem-solving and production model. The most comprehensive encyclopedia this world has ever seen is Wikipedia which is a famous example of a crowdsourced project.\\
-\cite{wikiedits} proposed a learning algorithm for mining wikipedia edit history using baseline Hidden Markov Model augmented with perceptron reranking. As the model was trained on wikipedia edits, its attuned to human corrections. Other initiatives that include human intervention is \cite{lowcost}. This work gives a low cost approach for digitizing textual data by using methods like neural network classifier to estimate OCR errors, clustering similar errors, designing a user interface and using active learning to tune the error estimation by using user labeled data.  An important work \cite{velagapudi} that uses a combination of classifiers, a kNN classifier, a multilayer perceptron and SVM discusses the the effects of error correction on the classification accuracy of each method. In another work \cite{hybred}, instead of error classification OCR documents were classified into fixed number of categories based on their content. The accuracy of their approach was best when evaluated using SVM among other algorithms.
+\noindent \textbf{Crowdsourced OCR correction }Recruiting users and paying them small sums of money to tag and annotate text and images in large digital archives has become common practice (e.g. Amazon's Mechanical Turk, reCAPTCHA \cite{vonAhn_08}, ESP \cite{vonAhn_04}) and Games with a Purpose \cite{Ahn_08w}. A number of recent papers have evaluated the effectiveness of using Mechanical Turk to create annotated data for text and natural language processing applications \cite{Snow_08}. In the same vein, many workshops and conferences have been organized on the theme of machine learning in human computation, crowdsourcing and collective intelligence\footnote{See http://ir.ischool.utexas.edu/crowd/}. 
 
-\subsection{Multi-class SVM}
-Among the different methods used for solving SVM multi classification problem, some of the relevant works in related areas. a) \textit{one-versus-all (OVA classification)} uses winner-takes-all strategy where the classifier with highest output function assigns the label. It generates k classifiers for a k class problem.
-b) \textit{one-versus-one} uses the majority voting strategy where each classifier assigns the new instance one of the two class, thereby increasing the vote of the assigned class. Finally the class with the majority votes determines the instance classification.
-It generates k(k-2)/2 models for a k class problem. This approach is not practical for large-scale classification because of the memory required for storing k(k-1)/2 models.
-c) \textit{Directed Acyclic Graph SVM} in its training phase is the same as the one-against-one method by solving k(k-1)/2 binary SVMs. However, in the testing phase, it uses a rooted binary directed acyclic graph which has k(k-1)/2 internal nodes and k leaves. This is superior to other multiclass SVM algorithms in both training and testing time.
-d)\textit{error correcting output codes}, \cite{multiclassSVM_ecoc} proposed an ECOC based probabilistic approach to solve multi class SVM problem. In the training phase a coding scheme is predefined, and a special model is trained by samples. In the classification stage, besides the labels from SVM, posterior probabilities of labels are also calculated. They are used to compute probability estimates of categories.
-The other alternative is by using \textit{pairwise classification} \cite{pairwise}, where a two class classifier is build on the two input example. The class of training example might be unknown but the mandatory condition is to know whether the examples belong to the same class or not. The input pair is positive pair when the both belong to the same class, otherwise its called as negative pair. \\
-The \cite{crammer} approach was to pose the multi class classification problem into a single optimization problem, rather than decomposing it into multiple binary classification problems.
-A comparison of the above approaches can be referred here \cite{comparison}.
+Intuitively, the easiest way to correct garbled OCR text is to hire a group of people to edit it manually. Distributed Proofreaders (DP) \cite{DP} is a web-based project designed to facilitate proofreading of paper books into e-books and was meant to assist the project Gutenberg\footnote{http://www.gutenberg.org/}. Wikipedia is yet another example of a large scale crowdsourcing project. Yamangil et al. \cite{wikiedits} proposed a learning algorithm for mining wikipedia edit history using baseline Hidden Markov Model augmented with perceptron re-ranking. The model was trained on wikipedia edits and hence incorporated human corrections. 
+%\subsection{Multi-class SVM}
 
 
 
 \section{Conclusion \& Future Work}
 \label{sec:conc}
-The California Digital Newspaper Collection has an archive of 400,000 pages of historical California newspapers published between 1846 to 1922. This archive which has been subjected to OCR and is currently stored in an online database making them accessible to patrons. The OCR scanning process generates lot of garbled text which needs to be corrected to make the online newspaper repository more accessible to general public. An automatic OCR error correction technique is implemented using machine learning technique, multi class Support Vector Machine used to build a model for predicting errors in the dataset generated. State-of -the-art algorithm \cite{algo} was used to for our experiments to predict the errors. The labels generated using the approach mentioned in section ~\ref{sec:evaluation} served as the ground-truth against which labels generated by the algorithm were compared. Our results indicate that even the state-of-the-art algorithm is not scalable for large scale learning as it takes 106753 cpu sec to learn a model on data with 30,185 instances.
-Our Future work involves careful analysis of the current algorithm to scale the non-linear kernels for large scale learning.
+The California Digital Newspaper Collection has an archive of 400,000 pages of historical California newspapers published between 1846 to 1922. This archive which has been subjected to OCR and is currently stored in an online database making them accessible to patrons. The OCR scanning process generates lot of garbled text which needs to be corrected to make the online newspaper repository more accessible to general public. 
 
+In this paper, we present a system for Classification of Crowdsourced Text Correction which is capable of modeling user corrections using state-of-the-art machine learning techniques and retrieve categories which are likely to enhance search on the archive such as addition of words, elimination of typographical errors or addition of content. Information retrieval metrics are used to quantify the effectiveness of the user text correction. The prototype system is being considered for deployment on historic newspaper archives at the California Digital Newspaper Collection and the New York Public Library.
 
 % use section* for acknowledgement
 \section*{Acknowledgment}
-This work is supported by funding from the National Endowment for Humanities. I would also like to express my gratitude to my Advisor, Dr. Haimonti Dutta for her support, patience and encouragement throughout the research.\\
+This work is supported by funding from the National Endowment for Humanities, Grant No: NEH HD-51153-10. The authors would like to thank Stefan Boddie, DL Consulting, Ltd., New Zealand for sharing experiences with the Veridian software and Luis. C. Baquera, University of California, Riverside for providing data generated from the log files at CDNC.\\
 
-\nocite{carlson,massive,Gao,Huang,hoi2006large,menon2009large,notes,Thorsten,DBLP:journals/csur/Kukich92,Reynaert2008a,Niklas2010,Tong96astatistical,post-correction,lowcost,bookscount,gblp,recaptcha,velagapudi,hybred,comparison,dagsvm,onlineSpelling,britishLibrary,crowd, postprocessing,statistical,contextbased,multiclassSVM_ecoc}
 
-\bibliography{flairsPaper}
 \bibliographystyle{aaai}
-
+\bibliography{flairsPaper}
 \end{document}

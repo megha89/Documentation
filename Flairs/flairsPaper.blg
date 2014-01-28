@@ -2,65 +2,48 @@ This is BibTeX, Version 0.99c (Web2C 7.5.6)
 The top-level auxiliary file: flairsPaper.aux
 The style file: aaai.bst
 Database file #1: flairsPaper.bib
-Warning--entry type for "algo" isn't style-file defined
---line 124 of file flairsPaper.bib
-Warning--entry type for "pictAus" isn't style-file defined
---line 140 of file flairsPaper.bib
-Warning--entry type for "famSearch" isn't style-file defined
---line 147 of file flairsPaper.bib
-Warning--entry type for "galZoo" isn't style-file defined
---line 153 of file flairsPaper.bib
-Warning--entry type for "ADNP" isn't style-file defined
---line 161 of file flairsPaper.bib
-Warning--entry type for "Ridge_11" isn't style-file defined
---line 169 of file flairsPaper.bib
-Warning--entry type for "bookscount" isn't style-file defined
---line 377 of file flairsPaper.bib
-Warning--entry type for "gblp" isn't style-file defined
---line 384 of file flairsPaper.bib
-Warning--entry type for "recaptcha" isn't style-file defined
---line 391 of file flairsPaper.bib
 Warning--empty note in holley_09
+Warning--empty publisher in Reynaert2008a
 Warning--empty journal in multiclassSVM_ecoc
-You've used 39 entries,
+You've used 32 entries,
             2568 wiz_defined-function locations,
-            798 strings with 10736 characters,
-and the built_in function-call counts, 14944 in all, are:
-= -- 1605
-> -- 505
-< -- 17
-+ -- 166
-- -- 161
-* -- 1063
-:= -- 2366
-add.period$ -- 195
-call.type$ -- 39
-change.case$ -- 231
-chr.to.int$ -- 39
-cite$ -- 41
-duplicate$ -- 627
-empty$ -- 1129
-format.name$ -- 220
-if$ -- 3169
-int.to.chr$ -- 1
+            767 strings with 9975 characters,
+and the built_in function-call counts, 12254 in all, are:
+= -- 1323
+> -- 456
+< -- 11
++ -- 153
+- -- 148
+* -- 901
+:= -- 1977
+add.period$ -- 155
+call.type$ -- 32
+change.case$ -- 201
+chr.to.int$ -- 31
+cite$ -- 35
+duplicate$ -- 499
+empty$ -- 874
+format.name$ -- 197
+if$ -- 2550
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 29
-newline$ -- 232
-num.names$ -- 121
-pop$ -- 240
+missing$ -- 26
+newline$ -- 190
+num.names$ -- 96
+pop$ -- 185
 preamble$ -- 1
-purify$ -- 274
+purify$ -- 234
 quote$ -- 0
-skip$ -- 571
+skip$ -- 445
 stack$ -- 0
-substring$ -- 696
-swap$ -- 188
-text.length$ -- 17
+substring$ -- 561
+swap$ -- 135
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 304
-warning$ -- 2
-while$ -- 123
-width$ -- 43
-write$ -- 529
-(There were 11 warnings)
+type$ -- 252
+warning$ -- 3
+while$ -- 102
+width$ -- 36
+write$ -- 432
+(There were 3 warnings)
