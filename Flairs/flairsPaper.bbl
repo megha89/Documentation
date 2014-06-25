@@ -7,7 +7,6 @@ Abdulkader, A., and Casey, M.~R.
   environment.
 \newblock In {\em Proceedings of the 2009 10th International Conference on
   Document Analysis and Recognition}, ICDAR '09,  576--580.
-\newblock IEEE Computer Society.
 
 \bibitem[\protect\citeauthoryear{ADNP}{2008}]{ADNP}
 ADNP.
@@ -19,6 +18,11 @@ ADNP.
 Ahn, L.~v.; Maurer, B.; McMillen, C.; Abraham, D.; and Blum, M.
 \newblock 2009.
 \newblock recaptcha, digitizing books one word at a time.
+
+\bibitem[\protect\citeauthoryear{Astronomy}{2000}]{galZoo}
+Astronomy.
+\newblock 2000.
+\newblock Galaxy zoo.
 
 \bibitem[\protect\citeauthoryear{Bassil and Alwani}{2012}]{onlineSpelling}
 Bassil, Y., and Alwani, M.
@@ -53,11 +57,6 @@ Carlson, A.~J.; Rosen, J.; and Roth, D.
 \newblock Scaling up context-sensitive text correction.
 \newblock {\em Proceedings of the Thirteenth Conference on Innovative
   Applications of Artificial Intelligence Conference}  45--50.
-
-\bibitem[\protect\citeauthoryear{Community}{20}]{galZoo}
-Community, A.
-\newblock 20.
-\newblock Galaxy zoo.
 
 \bibitem[\protect\citeauthoryear{Crammer and Singer}{2002}]{crammer}
 Crammer, K., and Singer, Y.
@@ -216,9 +215,8 @@ Reynaert, M.
 \newblock 2008.
 \newblock Non-interactive {OCR} post-correction for giga-scale digitization
   projects.
-\newblock In Gelbukh, A., ed., {\em Computational Linguistics and Intelligent
-  Text Processing}, volume 4919 of {\em Lecture Notes in Computer Science}.
-  Springer.
+\newblock In {\em Computational Linguistics and Intelligent Text Processing},
+  volume 4919.
 \newblock chapter~53,  617--630.
 
 \bibitem[\protect\citeauthoryear{Ridge}{2011}]{Ridge_11}

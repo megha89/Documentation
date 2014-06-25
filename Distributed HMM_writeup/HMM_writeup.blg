@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: HMM_writeup.aux
+The style file: plain.bst
+Database file #1: HMM_writeup.bib
+Warning--entry type for "Iain" isn't style-file defined
+--line 9 of file HMM_writeup.bib
+You've used 2 entries,
+            2118 wiz_defined-function locations,
+            507 strings with 4219 characters,
+and the built_in function-call counts, 421 in all, are:
+= -- 38
+> -- 14
+< -- 1
++ -- 6
+- -- 4
+* -- 19
+:= -- 81
+add.period$ -- 5
+call.type$ -- 2
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 16
+empty$ -- 38
+format.name$ -- 4
+if$ -- 84
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 0
+newline$ -- 12
+num.names$ -- 4
+pop$ -- 12
+preamble$ -- 1
+purify$ -- 6
+quote$ -- 0
+skip$ -- 13
+stack$ -- 0
+substring$ -- 10
+swap$ -- 2
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 8
+warning$ -- 0
+while$ -- 4
+width$ -- 3
+write$ -- 21
+(There was 1 warning)
