@@ -3,54 +3,47 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: flairsPaper.aux
 The style file: aaai.bst
 Database file #1: flairsPaper.bib
-Warning--entry type for "bookscount" isn't style-file defined
---line 356 of file flairsPaper.bib
-Warning--entry type for "gblp" isn't style-file defined
---line 364 of file flairsPaper.bib
-Warning--entry type for "recaptcha" isn't style-file defined
---line 371 of file flairsPaper.bib
 Warning--empty note in holley_09
 Warning--empty publisher in Reynaert2008a
-Warning--empty journal in multiclassSVM_ecoc
-You've used 39 entries,
+You've used 31 entries,
             2568 wiz_defined-function locations,
-            794 strings with 10677 characters,
-and the built_in function-call counts, 14894 in all, are:
-= -- 1600
-> -- 501
-< -- 17
-+ -- 165
-- -- 160
-* -- 1058
-:= -- 2355
-add.period$ -- 192
-call.type$ -- 39
-change.case$ -- 231
-chr.to.int$ -- 39
-cite$ -- 42
-duplicate$ -- 626
-empty$ -- 1125
-format.name$ -- 219
-if$ -- 3158
-int.to.chr$ -- 1
+            760 strings with 9743 characters,
+and the built_in function-call counts, 11785 in all, are:
+= -- 1275
+> -- 433
+< -- 10
++ -- 144
+- -- 140
+* -- 866
+:= -- 1901
+add.period$ -- 150
+call.type$ -- 31
+change.case$ -- 193
+chr.to.int$ -- 30
+cite$ -- 33
+duplicate$ -- 480
+empty$ -- 846
+format.name$ -- 188
+if$ -- 2451
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 29
-newline$ -- 231
-num.names$ -- 119
-pop$ -- 242
+missing$ -- 25
+newline$ -- 184
+num.names$ -- 93
+pop$ -- 176
 preamble$ -- 1
-purify$ -- 274
+purify$ -- 225
 quote$ -- 0
-skip$ -- 572
+skip$ -- 429
 stack$ -- 0
-substring$ -- 696
-swap$ -- 187
-text.length$ -- 17
+substring$ -- 543
+swap$ -- 129
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 304
-warning$ -- 3
-while$ -- 122
-width$ -- 43
-write$ -- 526
-(There were 6 warnings)
+type$ -- 244
+warning$ -- 2
+while$ -- 98
+width$ -- 34
+write$ -- 419
+(There were 2 warnings)
