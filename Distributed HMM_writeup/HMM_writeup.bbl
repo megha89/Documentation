@@ -1,13 +1,19 @@
 \begin{thebibliography}{1}
 
+\bibitem{aistats}
+Andrew Brown and Geoffrey Hinton.
+\newblock Proceedings of artificial intelligence and statistics 2001.
+\newblock In {\em Products of Hidden Markov Models}, number GCNU TR 2000-008,
+  2001.
+
 \bibitem{hinton2000}
 Geoffrey~E. Hinton.
 \newblock Training products of experts by minimizing contrastive divergence.
 \newblock Technical Report GCNU TR 2000-004, Gatsby Computational Neuroscience
   Unit, University College London, 2000.
 
-\bibitem{Iain}
-lain Murray.
+\bibitem{code}
+Iain Murray.
 \newblock Training products of experts by minimizing contrastive divergence,
   June 2012.
 
