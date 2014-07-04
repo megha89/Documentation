@@ -524,7 +524,7 @@ The rules for synchronised product construction are : \\
 \end{figure*}
 
 
-\section{Methodology}
+\section{ Methodology }
 \subsection{Training product of experts by minimising contrastive divergence}
 High dimensional distributions are approximated as a product of one dimensional distributions. The product of individual distributions which is uniguassian or multivariate guassian will also be multivariate guassian. If the individual models are more complicated and contain one or more hidden variables, multiplying their distributions together and renormalizing them can be very powerful. These individual models are called "experts".
 The product of experts produce sharper distribution than the individual distributions\cite{hinton2000}.
@@ -554,7 +554,7 @@ Experiments reported here use the House 2 data from REDD. It has $11$ channels w
 \item disposal
 \end{enumerate}
 
-The dataset has $318759$ records and $2$ columns. We randomly sample 300 records for our experiment. Time series data from two appliances are represented as product of $k$ HMMs.
+The dataset has $318759$ records and $2$ columns. We randomly sample 300 records for our initial experiment. Time series data from two appliances are represented as product of $k$ HMMs.
 
 
 \item \textbf{ Time Series :} The time series data of the microwave, dryer, kitchen$\_2$ and refrigerator are plotted below in Figures~\ref{fig:micro}, ~\ref{fig:washer}, ~\ref{fig:kitchen2}, ~\ref{fig:refri}.
@@ -609,8 +609,8 @@ Some additional details regarding experiments:
  
 \end{itemize}
 
-\section{Experimental Setup}
-Experiments are performed on the REDD which contains $9$ appliances each containing $318759$ rows of energy consumption data. Experiments are subdivided into $4$ parts, in the first part the number of data samples are varied corresponding to which the values of KL Divergence and convergence time are noted down. In the second part, the number of experts are varied keeping the best value of the sample from the first part constant. In the third part, number of iterations are varied keeping the best values from part 1 and 2 constant. In the fourth part, the no. of appliances to be aggregated are varied keeping the best values from above parts constant.
+\subsection{Experimental Setup for REDD house 2}
+Experiments are performed on the REDD which contains $9$ appliances each containing $318759$ rows of energy consumption data. Experiments are subdivided into $4$ parts, in the first part the number of data samples are varied corresponding to which the values of KL Divergence and convergence time are noted down. In the second part, the number of experts are varied keeping the best value of the sample from the first part constant. In the third part, number of iterations are varied keeping the best values from part $1$ and $2$ constant. In the fourth part, the no. of appliances to be aggregated are varied keeping the best values from above parts constant.
 
 \begin{table}[htdp]
 \begin{center}
@@ -740,8 +740,11 @@ Experts & $KL Div$ & $T(sec)$ & $Iterations$ \\
 % exclusively. Note that, LaTeX2e, unlike IEEE journals/conferences, places
 % footnotes above bottom floats. This can be corrected via the \fnbelowfloat
 % command of the stfloats package.
-\section{Results}
+\subsection{Results}
 The evaluation of how well the learning has taken place is done by using a Kullback-Leibler divergence metric which gives the difference between two probability distributions. The two probability distributions in the REDD example refer to the expert probabilities in real and fantasy data. The learned parameters from the training are fitted to the fantasy data to measure the information lost when fantasy data is used to approximate real data. This is denoted as D$_{KL}$(real data $|$$|$ fantasy).
+%%This section shows the graphs for different combinations of devices representing how well the learning by product of experts on real data takes place. Experts try to fit the generated data (fantasy data) to the means calculated from the real data. The results of the following pairwise appliances, microwave \& washer, Kitchen$\_$2 \& refrigerator and microwave \& refrigerator are plotted below in Figures~\ref{fig:img1}, ~\ref{fig:img2}, ~\ref{fig:img3}. The black dots represent the fantasy data that is generated from the product of experts. Mean computed by the real data is shown by red dots and ellipses in blue show the one standard deviation contours of the Gaussians in each expert.
+%%There are 15 unigauss experts each of which is a mixture of a uniform and a single, axis aligned gaussian. These experts are initialized with randomly located, circular gaussians that have the same variance as the data.
+%%In the fitted model, each tight data cluster is represented by the intersection of two gaussians which are elongated along different axes.
 
 \begin{table}[htdp]
 \begin{center}
@@ -780,10 +783,54 @@ Appliances & $KL Div$ & $T(sec)$ & $Iterations$ \\
 \label{table: error}
 \end{table}
 
-%%This section shows the graphs for different combinations of devices representing how well the learning by product of experts on real data takes place. Experts try to fit the generated data (fantasy data) to the means calculated from the real data. The results of the following pairwise appliances, microwave \& washer, Kitchen$\_$2 \& refrigerator and microwave \& refrigerator are plotted below in Figures~\ref{fig:img1}, ~\ref{fig:img2}, ~\ref{fig:img3}. The black dots represent the fantasy data that is generated from the product of experts. Mean computed by the real data is shown by red dots and ellipses in blue show the one standard deviation contours of the Gaussians in each expert.
-%%There are 15 unigauss experts each of which is a mixture of a uniform and a single, axis aligned gaussian. These experts are initialized with randomly located, circular gaussians that have the same variance as the data.
-%%In the fitted model, each tight data cluster is represented by the intersection of two gaussians which are elongated along different axes.
+\section{Proof of concept on Faculty housing data}
 
+\subsection{ Aim } To represent streams of energy consumption data from all the floors of faculty housing as a product(s) of k HMMs. 
+\subsection{Method}
+\begin{itemize}
+\item \textbf{ Data } This data represents the energy consumed by the IIIT Delhi faculty housing building. As a part of research, a team from IIIT Delhi has installed various temperature, light and motion sensors to perform real world studies and to analyse user preferences for energy conservation. For our analysis, we selected one month's historical data ranging from 01-01-2014, 00:01 hours to 31-01-2014, 23:59 hours. The two smart meters installed captures the data from all the floors. The first meter gives out readings from floors $0$ to $5$ and the second meter gives out readings from floors $6$ to $11$. The dataset includes timestamp and power consumed in watts and $84133$ records. Time series data from two streams are modelled as a product of $k$ HMMs. We also have the total power consumed by the faculty housing building which would serve as the ground truth to compare product of $k$ HMMs with. The data is obtained from the website whose screenshot is shown in ~\ref{fig:screenshot}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.35\textheight]{screenshot.png}
+\caption{Screen shot of the webpage}
+\label{fig:screenshot}
+\end{figure*}
+
+
+
+\item \textbf{ Code } The implementation of the product of experts model is obtained from Iain Murray's website \cite{code}. It implements the technique described in Geoff Hinton's paper \cite{hinton2000}. 
+
+\item \textbf{ Time Series :} The time series data of the energy consumption of floor 0 to 5, floor 6 to 11 and total power are plotted below in Figures~\ref{fig:flr05}, ~\ref{fig:flr611}, ~\ref{fig:total}.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=1.0\textwidth,height=0.15\textheight]{floor052.png}
+\caption{Stream 1: Power consumption of floors 0-5}
+\label{fig:flr05}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=1.0\textwidth,height=0.15\textheight]{floor6112.png}
+\caption{Stream 2: Power consumption of floors 6-11}
+\label{fig:flr611}
+\end{figure*}
+
+\begin{figure*}[th]
+\centering
+\includegraphics[width=1.0\textwidth,height=0.15\textheight]{total2.png}
+\caption{Total Power of the building}
+\label{fig:total}
+\end{figure*}
+
+
+\item \textbf{ Additional Details } 
+\end{itemize}
+\subsection{ Experimental Setup } 
+Each of the data stream is modelled as a HMM individually. There are three streams of data, the first stream D1 corresponds to the data from floor 0-5, D2 corresponds to floor 6-11 and D3 represents the total power from the faculty housing and a fixed test set, T representing the data D3. Firstly, the stream D1 is used to train the model by minimising contrastive divergence. The parameters learnt during learning are provided to the test set T to obtain the conditional probability of the gaussians given the data D1 as pgauss1. Similarly, the second stream of data, D2 collected from floor 6-11, is used to learn the parameters of the model during the training phase which are then again provided to the test set T to obtain conditional probability of the gaussians given the data D2 as pgauss2. Finally the data D3 is used to learn the model and parameters which are then applied to the test set T to obtain the gaussian probability as pgauss3. Now, as we know that the total power consumption of the building should be approximately equal to the product of HMMs, hence the value of the product of pgauss1 and pgauss2 should be as close as possible to pgauss3.
+
+\subsection{ Results }
 
 \section{Conclusion \& Future Work}
 The conclusion goes here. this is more of the conclusion

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  25 JUN 2014 08:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  26 JUN 2014 07:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -344,18 +344,18 @@ Underfull \hbox (badness 1314) in paragraph at lines 336--338
  []
 
 [4]
-Underfull \hbox (badness 1521) in paragraph at lines 410--411
+Underfull \hbox (badness 1521) in paragraph at lines 412--413
 \OT1/ptm/b/n/10 Deployment: \OT1/ptm/m/n/10 The full-scale de-ploy-ment of this
  pro-to-
  []
 
 [5]
-Underfull \hbox (badness 1248) in paragraph at lines 448--449
+Underfull \hbox (badness 1248) in paragraph at lines 450--451
 \OT1/ptm/m/n/10 This work is sup-ported by fund-ing from the Na-tional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--449
+Underfull \hbox (badness 10000) in paragraph at lines 450--451
 
  []
 
@@ -373,36 +373,33 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2487 strings out of 493315
- 33974 string characters out of 6137903
- 105006 words of memory out of 5000000
- 5885 multiletter control sequences out of 15000+600000
+ 2486 strings out of 493315
+ 33970 string characters out of 6137903
+ 105998 words of memory out of 5000000
+ 5884 multiletter control sequences out of 15000+600000
  25712 words of font info for 56 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,16n,24p,1659b,373s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local
-/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/
-texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
-ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
-e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2
-013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2013
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-dist/
-fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
-pe1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/ti
-mes/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8
-a.pfb>
-Output written on flairsPaper.pdf (7 pages, 1221421 bytes).
+xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-dis
+t/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr
+i8a.pfb>
+Output written on flairsPaper.pdf (7 pages, 1197165 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

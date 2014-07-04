@@ -386,26 +386,28 @@ C & $ AT_{L} $ & $AT_{P}$ & $AT_{R}$ \\
 \label{ir}
 The following details are relevant: 
 
-\noindent \textbf{Query Set:} To measure the retrieval effectiveness of the corrected text versus the garbled OCR, a list of keywords for search was prepared by randomly sampling from the corrected words.
+\noindent \textbf{Query Set:} To measure the retrieval effectiveness of the corrected text versus the garbled OCR, a list of 60 keywords for search was prepared by randomly sampling from the corrected words.
 
 \noindent \textbf{Software:} PyLucene 3.6.2, a Python extension for accessing Java Apache Lucene was used as an IR software library for enabling full text indexing and search capabilites. Inverted indices are built for both the original and corrected corpus. Keywords from the query set are tested on both corpora and documents containing words in the query set are retrieved. The documents are ranked according to the frequency of the keyword present -- higher the frequency, higher the rank.
  
-\noindent \textbf{Evaluation:} The metric used to compare the retrieved documents is Spearman's rank correlation coefficient($\rho$). Let $y_{i}$ be the rank ordering of the documents retrieved from the corrected corpus and $x_{i}$ the rank ordering for the garbled text. Let $d_{i}$ = $x_{i}$ - $y_{i}$. Then Spearman's rank correlation $\rho$ is given by: $\rho = 1 - \frac {6\sum d_i^2 }{n(n^2-1)}$.
+\noindent \textbf{Evaluation:} The main aim of this system is to improve the quality of text for use with an IR system. The metric used for our evaluation include the standard IR techniques of recall and precision. Recall is defined as the ratio of number of relevant documents returned to the total number of relevant documents for a query, in the collection. Precision is defined as the ratio of number of relevant documents returned to the total number of documents returned for a given query. The document to query relevance is manually determined by other computer science students. The table shows the precision at ten standard recall points for corrected OCR text over the raw OCR text.  
 
-\noindent \textbf{Example: } Query word ``Jackson", the evaluation of $\rho$ is shown in Table~\ref{ex}. Here, ${\sum d_i^2}$ = 11 and $\rho$ = 0.45.
-\begin{table}[h]
-\centering
-\begin{tabular}{ l | c | c | c | r | r }
- $Y_{i}$ & $X_{i}$ & $y_{i}$ & $x_{i}$ & $d_{i}$ & $d_{i}^2$ \\
-\hline
-  12-01-1900 & 21-10-1910 & 1 & 10(4) & -3 & 9 \\
-  09-12-1910 & 09-12-1910 & 2 & 2(1) & 0 & 0 \\
-  08-06-1900 & 23-09-1910 & 3 & 7(2) & 1 & 1 \\
-  01-04-1904 & 02-12-1910 & 4 & 8(3) & 1 & 1 \\
-  25-05-1900 & 23-12-1910 & 5 & 11(5) & 0 & 0 \\
-\end{tabular}
-\label{ex}
-\end{table}
+%The metric used to compare the retrieved documents is Spearman's rank correlation coefficient($\rho$). Let $y_{i}$ be the rank ordering of the documents retrieved from the corrected corpus and $x_{i}$ the rank ordering for the garbled text. Let $d_{i}$ = $x_{i}$ - $y_{i}$. Then Spearman's rank correlation $\rho$ is given by: $\rho = 1 - \frac {6\sum d_i^2 }{n(n^2-1)}$.
+
+%\noindent \textbf{Example: } Query word ``Jackson", the evaluation of $\rho$ is shown in Table~\ref{ex}. Here, ${\sum d_i^2}$ = 11 and $\rho$ = 0.45.
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{ l | c | c | c | r | r }
+% $Y_{i}$ & $X_{i}$ & $y_{i}$ & $x_{i}$ & $d_{i}$ & $d_{i}^2$ \\
+%\hline
+%  12-01-1900 & 21-10-1910 & 1 & 10(4) & -3 & 9 \\
+%  09-12-1910 & 09-12-1910 & 2 & 2(1) & 0 & 0 \\
+%  08-06-1900 & 23-09-1910 & 3 & 7(2) & 1 & 1 \\
+%  01-04-1904 & 02-12-1910 & 4 & 8(3) & 1 & 1 \\
+%  25-05-1900 & 23-12-1910 & 5 & 11(5) & 0 & 0 \\
+%\end{tabular}
+%\label{ex}
+%\end{table}
 
 \noindent \textbf{Deployment: }The full-scale deployment of this prototype system is being considered on old historic newspaper archives at California Digital Newspaper Collection and the New York Public Library among others, where  user text corrections are used extensively for cleaning garbled OCR. 
 
