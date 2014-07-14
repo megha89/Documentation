@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  26 JUN 2014 07:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  9 JUL 2014 18:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -139,11 +139,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(./flairsPaper.aux
-
-LaTeX Warning: Label `fig:arch' multiply defined.
-
-)
+(./flairsPaper.aux)
 \openout1 = `flairsPaper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -159,7 +155,8 @@ LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 16.
- (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -250,15 +247,6 @@ Overfull \hbox (14.45598pt too wide) in paragraph at lines 83--84
  [][] 
  []
 
-File: ./image/archOCR.jpg Graphic file (type jpg)
-<use ./image/archOCR.jpg>
-Package pdftex.def Info: ./image/archOCR.jpg used on input line 102.
-(pdftex.def)             Requested size: 520.34598pt x 206.63382pt.
-
-Overfull \hbox (14.45598pt too wide) in paragraph at lines 102--103
- [][] 
- []
-
 
 Underfull \hbox (badness 4832) in paragraph at lines 111--112
 \OT1/ptm/m/n/10 The \OT1/ptm/b/n/10 C\OT1/ptm/m/n/10 lassification of \OT1/ptm/
@@ -308,98 +296,90 @@ Package pdftex.def Info: ./image/correction.jpg used on input line 159.
 (pdftex.def)             Requested size: 242.81415pt x 130.08246pt.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 167.
- [2 <./image/archOCR.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3 <./image/issue_greyscale.jpg> <./image/correction.jpg>]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 336.
+ [2 <./image/archOCR.jpg>] [3 <./image/issue_greyscale.jpg> <./image/correction
+.jpg>]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 337.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 336--338
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 []\OT1/ptm/m/n/10 The code used to build the pro-to-type sys-
  []
 
 
-Underfull \hbox (badness 7379) in paragraph at lines 336--338
+Underfull \hbox (badness 7379) in paragraph at lines 337--339
 \OT1/ptm/m/n/10 tem along with data gen-er-ated are avail-able from
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--338
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 \OT1/pcr/m/n/10 https://github.com/megha89/\OT1/ptm/m/n/10 . It must be
  []
 
 
-Underfull \hbox (badness 1917) in paragraph at lines 336--338
+Underfull \hbox (badness 1917) in paragraph at lines 337--339
 \OT1/ptm/m/n/10 noted that the $\OML/cmm/m/it/10 SVM[]$\OT1/ptm/m/n/10 V2.2 pac
 k-age ( Joachims
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 336--338
+Underfull \hbox (badness 1314) in paragraph at lines 337--339
 \OT1/ptm/m/n/10 2008) was used for the im-ple-men-ta-tion of Multi-class
  []
 
-[4]
-Underfull \hbox (badness 1521) in paragraph at lines 412--413
+
+Underfull \hbox (badness 1521) in paragraph at lines 413--414
 \OT1/ptm/b/n/10 Deployment: \OT1/ptm/m/n/10 The full-scale de-ploy-ment of this
  pro-to-
  []
 
-[5]
-Underfull \hbox (badness 1248) in paragraph at lines 450--451
+[4]
+Underfull \hbox (badness 1248) in paragraph at lines 451--452
 \OT1/ptm/m/n/10 This work is sup-ported by fund-ing from the Na-tional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
 
  []
 
-(./flairsPaper.bbl
+(./flairsPaper.bbl [5]
 Underfull \hbox (badness 2050) in paragraph at lines 83--90
 []\OT1/ptm/m/n/10 Golding, A. R., and Sch-abes, Y.  1996.  Com-bin-
  []
 
 Missing character: There is no é in font ptmr7t!
-[6]) [7
-
-] (./flairsPaper.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+) [6] (./flairsPaper.aux) ) 
 Here is how much of TeX's memory you used:
  2486 strings out of 493315
  33970 string characters out of 6137903
- 105998 words of memory out of 5000000
+ 106959 words of memory out of 5000000
  5884 multiletter control sequences out of 15000+600000
  25712 words of font info for 56 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,16n,24p,1659b,373s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texli
-ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-dis
-t/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/
-type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/
-times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr
-i8a.pfb>
-Output written on flairsPaper.pdf (7 pages, 1197165 bytes).
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/
+base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmex10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
+fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/loc
+al/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/f
+onts/type1/urw/times/utmri8a.pfb>
+Output written on flairsPaper.pdf (6 pages, 1196723 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
