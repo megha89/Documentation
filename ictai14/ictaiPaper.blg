@@ -15,7 +15,7 @@ Database file #1: ictaiPaper.bib
 Done.
 You've used 31 entries,
             4039 wiz_defined-function locations,
-            1007 strings with 12980 characters,
+            1008 strings with 12997 characters,
 and the built_in function-call counts, 19892 in all, are:
 = -- 1641
 > -- 408
@@ -23,7 +23,7 @@ and the built_in function-call counts, 19892 in all, are:
 + -- 219
 - -- 70
 * -- 923
-:= -- 3157
+:= -- 3158
 add.period$ -- 63
 call.type$ -- 31
 change.case$ -- 30
@@ -32,7 +32,7 @@ cite$ -- 31
 duplicate$ -- 1483
 empty$ -- 1670
 format.name$ -- 91
-if$ -- 4515
+if$ -- 4514
 int.to.chr$ -- 0
 int.to.str$ -- 31
 missing$ -- 259

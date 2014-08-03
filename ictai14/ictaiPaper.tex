@@ -352,20 +352,21 @@
 % use a multiple column layout for up to two different
 % affiliations
 
-\author{\IEEEauthorblockN{Haimonti Dutta \thanks{The author is also a visiting assistant professor at IIIT-Delhi.}
-\IEEEauthorblockA{Center for Computational Learning Systems, \\
-Columbia University, \\
+\author{\IEEEauthorblockN{Haimonti Dutta \thanks{The author is also an adjunct assistant professor at IIIT, Delhi.}
+\IEEEauthorblockA{Institute of Data Sciences and Engineering (IDSE),\\
+Columbia University\\
 New York, NY 10115\\
-haimonti@ccls.columbia.edu}\\
+hd2200columbia@gmail.com}\\
 \and
 \IEEEauthorblockN{Megha Gupta}
 \IEEEauthorblockA{Dept. of Computer Science\\
-IIIT-Delhi, India. \\
+IIIT-Delhi, India.\\
 meghag@iiitd.ac.in}
 \and 
 \IEEEauthorblockN{Brian Geiger}
-Center for Bibliographical Studies and Research \\
-University of California, Riverside \\
+Center for Bibliographical Studies\\
+and Research\\
+University of California, Riverside.\\
 brian.geiger@ucr.edu
 }
 }
@@ -405,12 +406,10 @@ brian.geiger@ucr.edu
 % make the title area
 \maketitle
 
-
 \begin{abstract}
-\begin{quote}
-\noindent Optical Character Recognition (OCR) is a commonly used technique for digitizing printed material enabling them to be displayed online, searched and used in text mining applications. 
-The text generated from OCR devices is often garbled due to variations in quality of the input paper, size and style of the font and column layout. This adversely affects retrieval effectiveness and hence techniques for cleaning the garbled text need to be improvised. Often such techniques involve laborious and time consuming manual processing of data. This paper presents a prototype system for \textbf{C}lassification of \textbf{C}rowdsourced \textbf{T}ext \textbf{C}orrection (CCTC) which takes as input log files containing garbled and manually corrected OCR text, parses and tokenizes them and builds models for categorizing the corrections using state-of-the-art machine learning algorithms. Retrieval effectiveness on the California Digital Newspaper Collection is measured using Spearman's rank correlation metric. This prototype system is expected to be deployed on historical newspaper archives that make extensive use of user text corrections.
-\end{quote}
+Optical Character Recognition (OCR) is a commonly used technique for digitizing printed material enabling them to be displayed online, searched and used in text mining applications. 
+The text generated from OCR devices is often garbled due to variations in quality of the input paper, size and style of the font and column layout. This adversely affects retrieval effectiveness and hence techniques for cleaning the garbled text need to be improvised. Often such techniques involve laborious and time consuming manual processing of data. This paper presents a prototype system for \textbf{C}lassification of \textbf{C}rowdsourced \textbf{T}ext \textbf{C}orrection (CCTC) which takes as input log files containing garbled and manually corrected OCR text, parses and tokenizes them and builds models for categorizing the corrections using state-of-the-art machine learning algorithms. Retrieval effectiveness on the California Digital Newspaper Collection is measured using mean reciprocal rank. 
+This prototype system is expected to be deployed on historical newspaper archives that make extensive use of user text corrections.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -601,18 +600,22 @@ Total & 21108 \\
 
 %The dataset was parsed to a format used by the Joachim's multi class SVM algorithm which is represented as\\
 %\textless target\textgreater\space\textless feature\textgreater:\textless value\textgreater ......\textless feature\textgreater:\textless value\textgreater\\
-%The number of rows in the dataset is 44,022. 
+%The number of instances in the dataset is 44,022. 
 %The class distribution in the dataset is shown in table ~\ref{table: classes}
 
-\item \textbf{Baseline Construction}
-In order to test the performance of the manually crafted features of the dataset, we generated automatic rules using Association Rule Mining (ARM). The tokenization of the old and new text in the log files was modified to incorporate the addition and deletion of text using a character, that is if the token was deleted by the user then the character ``$\sim$" was assigned to the new token whereas if the user added a new token as a part of correction then the character  ``+" was assigned to the old token. All the corrected tokens were further split into character level data with the tuple \textless old char, new char\textgreater  replacing the previous token level notion of \textless old token,new token\textgreater giving us $58,963$ rows of data. Of $58,963$ rows, we encountered that $55,612$ rows were redundant. Hence, the number of unique instances was found to be $3351$. Some of the major character to character corrections are o$\rightarrow$e, b$\rightarrow$h, u$\rightarrow$n. Figure ~\ref{fig:stat1}, ~\ref{fig:stat2} shows histograms where some of the character level corrections have taken place. The maximum number of automatic rules generated by ARM algorithm were $6631$. 
-The parameters of the algorithm were set to minimum confidence: 1.0E-4, delta:  1.0E-4, upper bound minimum support: 1.0,  lower bound minimum support: 1.0E-4.
+\item \textbf{Baseline Character-Level Feature Construction: }
+The tokenization process of the text in the log files was modified to enable the addition and deletion classification of text using a character. If the text was deleted by the user as a part of correction process then the character ``$\sim$" was assigned to the new token denoting that the user performed the task of deleting the OCR garbled text whereas if the user added a new text  then the character ``+" was assigned to the old token denoting that user added text that was initially missing in the OCR data. All the corrected tokens were further split into character level data with the tuple \textless old char, new char\textgreater  replacing the previous token level notion of \textless old token,new token\textgreater giving us $58,963$ instances of data. Of $58,963$ instances, we encountered that $55,612$ instances were redundant which signifies that the OCR device makes the same type of mistakes repeatedly. The maximum number of redundant corrections noted were deletion of punctuations and special characters. There were $4344$ deletions of comma, $2831$ deletions of $\ddot{A}$. Amongst character to character corrections, $635$ cases of o$\rightarrow$e, $470$ cases of b$\rightarrow$h, 299 cases of u$\rightarrow$n contributed maximum to the redundancy. Hence, the number of unique instances was found to be $3351$. Figure ~\ref{fig:stat1}, ~\ref{fig:stat2} shows histograms where examples of few o$\rightarrow$e and b$\rightarrow$h corrections have taken place. In order to test the performance of the manually crafted features of the dataset, we automatically generated rules using apriori algorithm to mine association rules. Mining association rules means to find all association rules that have support and confidence greater than or equal to user specified minimum support ($minsup$) and minimum confidence ($minconf$) respectively. In our case, the value of $minconf$ and the the lower bound $minsup$ was set to $0.0001$, and the upper bound of $minsup$ was set to $1$. The upper bound of $minsup$ was iteratively decreased by a factor of $delta$ until either the lower bound of $minsup$ was reached or the required number of rules were generated. The number of rules generated by the algorithm were $6631$.
+%Some of the user defined parameters used in the algorithm are support and confidence. Support, sup(o$\rightarrow$e) is defined as the probability that letter `o' gets replaced to letter `e'. And confidence, conf(o$\rightarrow$e) is defined as the probability that the new character is `e' given the old character is `o'.
+%minimum confidence, was set to 1.0E-4, delta:  1.0E-4, upper bound minimum support: 1.0, lower bound minimum support: 1.0E-4.
+
+
+
 The error labels are the same as that for token level data.
-(a) \textbf{Addition: } + $\rightarrow$ T
-(b) \textbf{Deletion: } A $\rightarrow$ $\sim$
-(c) \textbf{Capitalization error: } l $\rightarrow$ L
-(d) \textbf{Punctuation error: } ! $\rightarrow$ t 
-(e) \textbf{Spellcheck error: } o $\rightarrow$ e
+(a) \textbf{Addition: } When a user inserts a new token `T' in place of void, the old character is assigned a symbol `+'. For example, + $\rightarrow$ T.
+(b) \textbf{Deletion: } When a user removes an existing token `A' from the old text, the new character is assigned a symbol `$\sim$'. For example, A $\rightarrow$ $\sim$.
+(c) \textbf{Capitalization error: } When an old character is capitalized or decapitalized to form a new character. For example, l $\rightarrow$ L.
+(d) \textbf{Punctuation error: } When a substitution of an old to new character involves a punctuation. For example, ! $\rightarrow$ t.
+(e) \textbf{Spellcheck error: } When an old alphanumeric character is replaced by a new alphanumeric character. For example, o $\rightarrow$ e.
 
 \begin{figure*}[ht]
 \begin{center}
@@ -641,7 +644,6 @@ The error labels are the same as that for token level data.
 \end{figure*}
 
 
-
 \item \textbf{Model Construction: } The model for classifying crowdsourced text correction is built using a Multiclass Support Vector Machine algorithm \cite{Tsochantaridis_2004}. Each training point belongs to one of $k$ different classes. The goal is to construct a function, which given a new data point, will correctly predict the class to which it belongs.
 Different methods have been proposed in literature for solving the SVM multi-class classification problem. Some popular techniques include: a) \textit{One-Versus-All (OVA) classification} Build $k$ different binary classifiers; for the $i^{th}$ classifier, let the positive examples be all points in class $i$ and negative examples not in class $i$. Let $f(x) = \text{arg } max_i f_i(x) $.  b) \textit{one-versus-one} uses the majority voting strategy where each classifier assigns the new instance one of two classes. The class with the majority votes is assigned to the instance.
 %%It generates k(k-2)/2 models for a k class problem. This approach is not practical for large-scale classification because of the memory required for storing k(k-1)/2 models.
@@ -664,27 +666,13 @@ a) Linear Kernel: $K(x,y) = x^{T}y + c $
 b) Polynomial Kernel : $K(x,y) = (\alpha x^{T}y + c)^{d}$
 c) Radial Basis Kernel : $K(x,y) = exp(-\lvert \lvert x-y\rvert\rvert^{2}/2\sigma^{2}$)
 
-%
-\item \textbf{Information Retrieval Techniques: } The tokens identified by the model as ``spell check",``addition", ``capitalization", and ``punctuation" play an important role in trying to enhance search and retrieval on the archive. This is presented here for the completeness of the architecture, but described in detail in Section~\ref{ir}.
 
-\end{enumerate}
-
-\section{Empirical Evaluation}
-\label{sec:evaluation}
-
-The experiments are performed on two machines, one of which is a linux HPC cluster and the other a dual core Mac machine with Intel Core i7 processor, 8GB RAM, 2.9 GHz of processor speed. In these experiments, the regularization parameter $C$ is varied from $0.0001$ to $10000$ for the linear kernel. The performance of the algorithm is evaluated using 10-fold cross validation technique. The average loss on the test set and average CPU runtime are reported. Table ~\ref{table: error} presents the average loss on test set for different values of $C$ ; $AE_{B}$, $AE_{P}$ represents the average loss on the baseline dataset and proposed dataset respectively. $AT_{B}$, $AT_{P}$ shows the average runtime (cpu sec) on the baseline dataset and proposed dataset respectively. We also experimented to build a model on the datasets using polynomial and radial basis kernel as shown in table ~\ref{table:kernels}
-
-%The loss is least when the $C = 100$ for the polynomial kernel. However, the time taken to train the model is considerably higher at 106753s. It must also be noted that one can learn less accurate models with linear or RBF kernels faster. Thus, it may be useful to consider a trade-off between accuracy of learnt models versus time taken for classification in large scale deployments.
- 
-The code used to build the prototype system along with data generated are available from \texttt{https://github.com/megha89/}. It must be noted that the $SVM^{multiclass}$V2.2 package \cite{algo} was used for the implementation of Multi-class SVMs. 
-For linear kernels, $SVM^{multiclass}$V2.20 is very fast and runtime scales linearly with the number of training examples. Training of non-linear kernels is very slow using the algorithm described in Section~\ref{arch}.
-
-%\subsection{Results}
 \begin{table}
-\begin{center}
-\begin{tabular}{|ccccc|}
+\parbox{.55\linewidth}{
+\centering
+\begin{tabular}{|lllll|}
 \hline
-C &$AE_{B}$&$AE_{P}$&$AT_{B}$&$AT_{P}$\\
+C &$AE_{b}$&$AE_{p}$&$AT_{b}$&$AT_{p}$\\
 \hline
 .0001&99.43$\pm .09$&49.47$\pm0.25$&1.268$\pm.06$&0.11$\pm.01$\\
 .1&99.43$\pm .09$&49.464$\pm .47$&2.512$\pm0.01$&0.061$\pm0.01$\\
@@ -695,37 +683,108 @@ C &$AE_{B}$&$AE_{P}$&$AT_{B}$&$AT_{P}$\\
 \end{tabular}
 \caption{Experiment results using linear kernel}
 \label{table: error}
-\end{center}
-\end{table}
-
-\begin{table}[htdp]
-\begin{tabular}{|ccccc|}
+}
+\hfill
+\parbox{.55\linewidth}{
+\centering
+\begin{tabular}{|l|ll|ll|}
 \hline
-C &$AE_{B}$ & $AE_{P}$ &$AE_{B}$ & $AE_{P}$ \\
-0.0001&41.6$\pm0.13$&49.46$\pm0.47$&62.88$\pm0.15$&26.65$\pm0.5$\\
+&Poly&&RBF&\\
+\cline{2-5}
+C&$AE_{b}$ & $AE_{p}$&$AE_{b}$&$AE_{p}$\\
 \hline
- &$AT_{B}$ & $AT_{P}$ &$AT_{B}$ & $AT_{P}$ \\
-0.0001&2217$\pm81.7$&574.9$\pm14.6$&1500.1$\pm42.9$&338.75$\pm8.6$\\
+.0001&42$\pm.13$&50$\pm.47$&63$\pm.15$&27$\pm.5$\\
+100&42$\pm.13$&.33$\pm.2$&63$\pm.16$&3$\pm.4$\\
+1000&42$\pm.13$&0$\pm0$&63$\pm.16$&1.7$\pm.2$\\
+\hline
+C&$AT_{b}$ & $AT_{p}$ &$AT_{b}$ & $AT_{p}$ \\
+ \hline
+.0001&37$\pm1.4$&10$\pm0.2$&25$\pm0.7$&6$\pm0.2$\\
+100&326$\pm11.8$&1239$\pm118$&$540\pm110$&404$\pm34$\\
+1000&942$\pm17.4$&764$\pm93$&537$\pm111.72$&957$\pm184$\\
 \hline
 \end{tabular}
-\caption{Experiment Results using polynomial and rbf kernel}
+\caption{Experiment Results using polynomial and rbf kernels}
 \label{table: kernels}
+}
 \end{table}
 
-%\subsection{Discussion}
 
+
+\item \textbf{Information Retrieval Techniques: } The tokens identified by the model as ``spell check",``addition", ``capitalization", and ``punctuation" play an important role in trying to enhance search and retrieval on the archive. This is presented here for the completeness of the architecture, but described in detail in Section~\ref{ir}.
+
+\end{enumerate}
+
+
+\section{Empirical Evaluation}
+\label{sec:evaluation}
+
+The experiments are performed on two machines, one of which is a linux HPC cluster with 20 CPU(s) and 10 cores per socket, 99GB RAM and 2.50GHz of processor speed and the other a dual core mac machine with Intel Core i7 processor, 8GB RAM and 2.9 GHz of processor speed. In these experiments, the regularization parameter $C$ is varied from $0.0001$ to $10000$ for the linear kernel. The performance of the algorithm is evaluated using 10-fold cross validation technique. The \textbf{A}verage loss \textbf{E}rror (AE) and  \textbf{A}verage running \textbf{T}ime (AT) from cross validation for baseline and proposed dataset respectively are represented as $AE_{b}$, $AE_{p}$. Table ~\ref{table: error} shows the result of the experiment, error and running time (cpu seconds) using linear kernel for different values of $C$. Table~\ref{table: kernels} shows the result of the experiment, error and running time (cpu minutes) using polynomial and radial basis kernel.
+%The loss is least when the $C = 100$ for the polynomial kernel. However, the time taken to train the model is considerably higher at 106753s. It must also be noted that one can learn less accurate models with linear or RBF kernels faster. Thus, it may be useful to consider a trade-off between accuracy of learnt models versus time taken for classification in large scale deployments.
+ 
+The code used to build the prototype system along with data generated are available from \texttt{https://github.com/megha89/}. It must be noted that the $SVM^{multiclass}$V2.2 package \cite{algo} was used for the implementation of Multi-class SVMs. 
+For linear kernels, $SVM^{multiclass}$V2.20 is very fast and runtime scales linearly with the number of training examples. Training of non-linear kernels is very slow using the algorithm described in Section~\ref{arch}.
+
+%\subsection{Results}
+%\begin{table}
+%\begin{center}
+%\begin{tabular}{|lllll|}
+%\hline
+%C &$AE_{b}$&$AE_{p}$&$AT_{b}$&$AT_{p}$\\
+%\hline
+%.0001&99.43$\pm .09$&49.47$\pm0.25$&1.268$\pm.06$&0.11$\pm.01$\\
+%.1&99.43$\pm .09$&49.464$\pm .47$&2.512$\pm0.01$&0.061$\pm0.01$\\
+%10&99.43$\pm .09$&4.974$\pm .5$&2.512$\pm0.01$&0.17\\
+%1000&99.43$\pm .09$&1.743$\pm .14$&3.635$\pm0.08$&0.382$\pm0.04$\\
+%10000&99.43$\pm .09$&0&6.126$\pm0.02$&0.303$\pm0.02$\\
+%\hline
+%\end{tabular}
+%\caption{Experiment results using linear kernel}
+%\label{table: error}
+%\end{center}
+%\end{table}
+%
+%\begin{table}[htdp]
+%\begin{tabular}{|l|ll|ll|}
+%\hline
+%&Poly&&RBF&\\
+%\cline{2-5}
+%C&$AE_{b}$ & $AE_{p}$&$AE_{b}$&$AE_{p}$\\
+%\hline
+%.0001&42$\pm.13$&50$\pm.47$&63$\pm.15$&27$\pm.5$\\
+%100&42$\pm.13$&.33$\pm.2$&63$\pm.16$&3$\pm.4$\\
+%1000&42$\pm.13$&0$\pm0$&63$\pm.16$&1.7$\pm.2$\\
+%\hline
+%C&$AT_{b}$ & $AT_{p}$ &$AT_{b}$ & $AT_{p}$ \\
+% \hline
+%.0001&37$\pm1.4$&10$\pm0.2$&25$\pm0.7$&6$\pm0.2$\\
+%100&326$\pm11.8$&1239$\pm118$&$540\pm110$&404$\pm34$\\
+%1000&942$\pm17.4$&764$\pm93$&537$\pm111.72$&957$\pm184$\\
+%\hline
+%\end{tabular}
+%\caption{Experiment Results using polynomial and rbf kernels}
+%\label{table: kernels}
+%\end{table}
+
+
+%\subsection{Discussion}
 %\subsection{Known Defects}
 %The \cite{algo} algorithm converges quickly for linear type kernel but the its performance on test set is poor. For non linear kernels, this algorithm does not scale well for large scale datasets but gives better performance than linear kernels.
-
 \section{Information Retrieval Techniques}
 \label{ir}
 The following details are relevant: 
 
-\noindent \textbf{Query Set:} To measure the retrieval effectiveness of the corrected text versus the garbled OCR, a list of 60 keywords for search was prepared by randomly sampling from the corrected words.
+\noindent \textbf{Query Set:} To measure the retrieval effectiveness of the corrected text versus the garbled OCR, a list of 20 keywords for search was prepared by randomly sampling from the corrected words.
 
 \noindent \textbf{Software:} PyLucene 3.6.2, a Python extension for accessing Java Apache Lucene was used as an IR software library for enabling full text indexing and search capabilites. Inverted indices are built for both the original and corrected corpus. Keywords from the query set are tested on both corpora and documents containing words in the query set are retrieved. The documents are ranked according to the frequency of the keyword present -- higher the frequency, higher the rank.
+
+\noindent \textbf{Evaluation:} The main aim of this system is to improve the quality of text for use with an IR system. The metric used for evaluation here is mean reciprocal rank (MRR) which produces a list of possible ranked responses to a sample of queries, Q. The reciprocal rank is the multiplicative inverse of the rank of the first correct answer. The first correct answer is decided by the users. The average of the reciprocal ranks over a sample of queries is the mean reciprocal rank.
+MRR = $\frac{1}{|Q|} \sum_{i = 1}^{|Q|} \frac{1}{rank_{i}}$
+
+The same set of queries were applied on both the datasets, that is raw OCR and corrected OCR individually. For each of the of $20$ queries, we chose the most relevant document from the retrieved results and observed the rank of the most relevant document in both the set of results. The MRR for the raw OCR data was noted to be $0.355$ whereas for corrected data it was $0.65415$. The higher value of MRR denotes that relevant results get higher priority in corrected corpus.
+
  
-\noindent \textbf{Evaluation:} The main aim of this system is to improve the quality of text for use with an IR system. The metric used for our evaluation include the standard IR techniques of recall and precision. Recall is defined as the ratio of number of relevant documents returned to the total number of relevant documents for a query, in the collection. Precision is defined as the ratio of number of relevant documents returned to the total number of documents returned for a given query. The document to query relevance is manually determined by other computer science students. The table shows the precision at ten standard recall points for corrected OCR text over the raw OCR text.  
+%\noindent \textbf{Evaluation:} The main aim of this system is to improve the quality of text for use with an IR system. The metric used for our evaluation include the standard IR techniques of recall and precision. Recall is defined as the ratio of number of relevant documents returned to the total number of relevant documents for a query, in the collection. Precision is defined as the ratio of number of relevant documents returned to the total number of documents returned for a given query. The document to query relevance is manually determined by other computer science students. The table shows the precision at ten standard recall points for corrected OCR text over the raw OCR text.  
 
 %The metric used to compare the retrieved documents is Spearman's rank correlation coefficient($\rho$). Let $y_{i}$ be the rank ordering of the documents retrieved from the corrected corpus and $x_{i}$ the rank ordering for the garbled text. Let $d_{i}$ = $x_{i}$ - $y_{i}$. Then Spearman's rank correlation $\rho$ is given by: $\rho = 1 - \frac {6\sum d_i^2 }{n(n^2-1)}$.
 
@@ -778,7 +837,7 @@ Intuitively, the easiest way to correct garbled OCR text is to hire a group of p
 \label{sec:conc}
 The California Digital Newspaper Collection has an archive of 400,000 pages of historical California newspapers published between 1846 to 1922. This archive which has been subjected to OCR and is currently stored in an online database making them accessible to patrons. The OCR scanning process generates lot of garbled text which needs to be corrected to make the online newspaper repository more accessible to general public. 
 
-In this paper, we present a system for Classification of Crowdsourced Text Correction which is capable of modelling user corrections using state-of-the-art machine learning techniques and retrieve categories which are likely to enhance search on the archive such as addition of words, elimination of typographical errors or addition of content. Information retrieval metrics are used to quantify the effectiveness of the user text correction. The prototype system is being considered for deployment on historic newspaper archives at the California Digital Newspaper Collection and the New York Public Library.
+In this paper, we present a system for Classification of Crowdsourced Text Correction which is capable of modelling user corrections using state-of-the-art machine learning techniques and retrieve categories which are likely to enhance search on the archive such as addition of words, elimination of typographical errors or addition of content. Information retrieval metric, mean reciprocal rank is used to quantify the effectiveness of the user text correction. The prototype system is being considered for deployment on historic newspaper archives at the California Digital Newspaper Collection and the New York Public Library.
 
 % use section* for acknowledgement
 \section*{Acknowledgment}

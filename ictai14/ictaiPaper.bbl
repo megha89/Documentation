@@ -128,12 +128,12 @@ M.~Reynaert, ``Non-interactive {OCR} post-correction for giga-scale
   Text Processing}, 2008, vol. 4919, ch.~53, pp. 617--630.
 
 \bibitem{Bassil_12a}
-Y.~Bassil and M.~Alwani, ``Ocr post-processing error correction algorithm using
+Bassil and Alwani, ``Ocr post-processing error correction algorithm using
   google online spelling suggestion,'' \emph{CoRR}, vol. abs/1204.0191, 2012.
 
 \bibitem{Bassil_12b}
-------, ``Ocr context-sensitive error correction based on google web 1t 5-gram
-  data set,'' \emph{CoRR}, vol. abs/1204.0188, 2012.
+Y.~Bassil and M.~Alwani, ``Ocr context-sensitive error correction based on
+  google web 1t 5-gram data set,'' \emph{CoRR}, vol. abs/1204.0188, 2012.
 
 \bibitem{lowcost}
 A.~Abdulkader and M.~R. Casey, ``Low cost correction of ocr errors using
