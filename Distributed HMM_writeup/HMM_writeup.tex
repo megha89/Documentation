@@ -366,18 +366,35 @@
 % use a multiple column layout for up to two different
 % affiliations
 
-\author{\IEEEauthorblockN{Dr. Haimonti Dutta}
-\IEEEauthorblockA{Center for Computational Learning System,\\
-Columbia University\\
-New York, NY 10115\\
-haimonti@ccls.columbia.edu}
-\and
-\IEEEauthorblockN{Megha Gupta}
+
+\author{\IEEEauthorblockN{Megha Gupta}
 \IEEEauthorblockA{Dept. of Computer Science,\\
 IIIT-D\\
 Delhi, India.\\
-meghag@iiitd.ac.in}
+meghag@iiitd.ac.in}\\
+\IEEEauthorblockN{Dr. Amarjeet Singh }
+\IEEEauthorblockA{Dept. of Computer Science,\\
+IIIT-D\\
+Delhi, India.\\
+amarjeet@iiitd.ac.in}
+\and
+\IEEEauthorblockN{Dr. Haimonti Dutta}
+\IEEEauthorblockA{Center for Computational Learning System,\\
+Columbia University\\
+New York, NY 10115\\
+haimonti@ccls.columbia.edu}\\
+\IEEEauthorblockN{Dr. Ullas Nambiar}
+\IEEEauthorblockA{EMC Corporation,\\
+Bangalore, India\\
+ullas.nambiar-@-emc.com}
 }
+
+%\author{%
+%  \makebox[.5\linewidth]{Author 1}\\Affilation 1\\
+%  \and \makebox[.5\linewidth]{Author 2}\\Affiliation 2\\
+%  \and \makebox[.5\linewidth]{Author 3}\\Affiliation 3\\
+%  \and \makebox[.5\linewidth]{Author 4}\\Affiliation 4\\
+%}
 
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
@@ -439,7 +456,8 @@ product of experts; energy aggregation; contrastive divergence;
 
 \section{Introduction}
 % no \IEEEPARstart
-
+Aggregation is a process in which data is gathered and used for statistical analysis. The purpose of energy aggregation is to get some valuable information about single or multi-site units. In this paper, we 
+ Here, we are trying to estimate the total power consumed by the whole building using the product of experts method. 
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
 
@@ -526,7 +544,7 @@ The rules for synchronised product construction are : \\
 
 \section{ Methodology }
 \subsection{Training product of experts by minimising contrastive divergence}
-High dimensional distributions are approximated as a product of one dimensional distributions. The product of individual distributions which is uniguassian or multivariate guassian will also be multivariate guassian. If the individual models are more complicated and contain one or more hidden variables, multiplying their distributions together and renormalizing them can be very powerful. These individual models are called "experts".
+High dimensional distributions are approximated as a product of one dimensional distributions. The product of individual distributions which are uniguassian or multivariate guassian will also be multivariate guassian. If the individual models are more complicated and contain one or more hidden variables, multiplying their distributions together and renormalizing them can be very powerful. These individual models are called "experts".
 The product of experts produce sharper distribution than the individual distributions\cite{hinton2000}.
 
 \section{Proof of concept on REDD House 2}
@@ -538,7 +556,7 @@ The product of experts produce sharper distribution than the individual distribu
 
 \begin{itemize}
 \item \textbf{Data } The Reference Energy Disaggregation Data Set (REDD) is used in empirical analysis. The data contains power consumption from real homes, for the whole house as well as for each individual circuit in
-the house (labeled by the main type of appliance on that circuit). It is intended for use in developing disaggregation methods, which can predict, from only the whole-home signal, which devices are being used. The REDD data set contains two main types of home electricity data: high-frequency current/voltage waveform data of the two power mains (as well as the voltage signal for a single phase), and lower-frequency power data including the mains and individual, labeled circuits in the house. The main directory consists of several house\_i directories, each of which contain all the power readings for a single house.  Each house subdirectory consists of a labels.dat and several channels\_i.dat files. The labels file contains channel numbers and a text label indicating the general category of device on this channel. Each channel\_i.dat file has two columns containing UTC timestamps (as integers) and power readings (recording the apparent power of the circuit) for the channel.
+the house (labeled by the main type of appliance on that circuit). It is intended for use in developing disaggregation methods, which can predict, from only the whole-home signal, which devices are being used. The REDD data set contains two main types of home electricity data: high-frequency current/voltage waveform data of the two power mains (as well as the voltage signal for a single phase), and lower-frequency power data including the mains and individual, labeled circuits in the house. The main directory consists of several house directories, each of which contain all the power readings for a single house.  Each house subdirectory consists of a labels and channels files. The labels file contains channel numbers and a text label indicating the general category of device on this channel. Each channel\_i.dat file has two columns containing UTC timestamps (as integers) and power readings (recording the apparent power of the circuit) for the channel.
 Experiments reported here use the House 2 data from REDD. It has $11$ channels where each channel corresponds to the following appliance: 
 \begin{enumerate}
 \item mains$\_1$ 
@@ -828,7 +846,7 @@ Appliances & $KL Div$ & $T(sec)$ & $Iterations$ \\
 \item \textbf{ Additional Details } 
 \end{itemize}
 \subsection{ Experimental Setup } 
-Each of the data stream is modelled as a HMM individually. There are three streams of data, the first stream D1 corresponds to the data from floor 0-5, D2 corresponds to floor 6-11 and D3 represents the total power from the faculty housing and a fixed test set, T representing the data D3. Firstly, the stream D1 is used to train the model by minimising contrastive divergence. The parameters learnt during learning are provided to the test set T to obtain the conditional probability of the gaussians given the data D1 as pgauss1. Similarly, the second stream of data, D2 collected from floor 6-11, is used to learn the parameters of the model during the training phase which are then again provided to the test set T to obtain conditional probability of the gaussians given the data D2 as pgauss2. Finally the data D3 is used to learn the model and parameters which are then applied to the test set T to obtain the gaussian probability as pgauss3. Now, as we know that the total power consumption of the building should be approximately equal to the product of HMMs, hence the value of the product of pgauss1 and pgauss2 should be as close as possible to pgauss3.
+Each of the data stream is modelled as a HMM individually. There are three streams of data, the first stream D1 corresponds to the data from floor 0-5, D2 corresponds to floor 6-11 and D3 represents the total power from the faculty housing which is represented by a fixed test set, T. Firstly, the stream D1 is used to train the model by minimising contrastive divergence. The parameters learnt during training are provided to the test set T to obtain the conditional probability of the gaussians given the data D1 as pgauss1. Similarly, the second stream of data, D2 collected from floor 6-11, is used to learn the parameters of the model during the training phase which are then again provided to the test set T to obtain conditional probability of the gaussians given the data D2 as pgauss2. Finally the data D3 is used to learn the model and parameters which are then applied to the test set T to obtain the gaussian probability as pgauss3. Now, as we know that the total power consumption of the building should be approximately equal to the product of HMMs, hence the value of the product of pgauss1 and pgauss2 should be as close as possible to pgauss3.
 
 \subsection{ Results }
 

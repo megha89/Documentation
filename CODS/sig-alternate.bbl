@@ -1,0 +1,182 @@
+\begin{thebibliography}{10}
+
+\bibitem{lowcost}
+A.~Abdulkader and M.~R. Casey.
+\newblock Low cost correction of ocr errors using learning in a multi-engine
+  environment.
+\newblock In {\em Proceedings of the 2009 10th International Conference on
+  Document Analysis and Recognition}, ICDAR '09, pages 576--580, 2009.
+
+\bibitem{ADNP}
+ADNP.
+\newblock Australian newspapers digitization program, 2008.
+
+\bibitem{Bassil_12a}
+Bassil and Alwani.
+\newblock Ocr post-processing error correction algorithm using google online
+  spelling suggestion.
+\newblock {\em CoRR}, abs/1204.0191, 2012.
+
+\bibitem{Bassil_12b}
+Y.~Bassil and M.~Alwani.
+\newblock Ocr context-sensitive error correction based on google web 1t 5-gram
+  data set.
+\newblock {\em CoRR}, abs/1204.0188, 2012.
+
+\bibitem{Cherkassky_89}
+V.~Cherkassky and N.~Vassilas.
+\newblock {Performance of back propagation networks for associative database
+  retrieval}.
+\newblock {\em In Proc. of the International Joint Conference on Neural
+  Networks}, 1:77--84, 1989.
+
+\bibitem{crammer}
+K.~Crammer and Y.~Singer.
+\newblock On the algorithmic implementation of multiclass kernel-based vector
+  machines.
+\newblock {\em J. Mach. Learn. Res.}, 2:265--292, Mar. 2002.
+
+\bibitem{Jon_12}
+J.~F. Daoason.
+\newblock {\em Post-correction of icelandic OCR text}.
+\newblock Faculty of Industrial Engineering, Mechanical Engineering and
+  Computer Science, University of Iceland, 2012.
+
+\bibitem{Esakov_94a}
+J.~Esakov, D.~P. Lopresti, and J.~S. Sandberg.
+\newblock Classification and distribution of optical character recognition
+  errors.
+\newblock {\em SPIE, Document Recognition}, 2181:204--216, 1994.
+
+\bibitem{Esakov_94}
+J.~Esakov, D.~P. Lopresti, J.~S. Sandberg, and J.~Zhou.
+\newblock Issues in automatic ocr error classification.
+\newblock {\em Proc. Third Annual Symposium on Document Analysis and
+  Information Retrieval}, 1994.
+
+\bibitem{DP}
+C.~Franks.
+\newblock Distributed proofreaders, 2000.
+
+\bibitem{Fujisawa_08}
+H.~Fujisawa and C.~L. Liu.
+\newblock Classification and learning for character recognition: Comparison of
+  methods and remaining problems in neural networks and learning in document
+  analysis and recognition.
+\newblock {\em Machine Learning in Document Analysis and Recognition, Studies
+  in Computational Intelligence}, 90:139--161, 2008.
+
+\bibitem{contextbased}
+A.~R. Golding and Y.~Schabes.
+\newblock Combining trigram-based and feature-based methods for
+  context-sensitive spelling correction.
+\newblock In {\em Proceedings of the 34th Annual Meeting on Association for
+  Computational Linguistics}, ACL '96, pages 71--78, Stroudsburg, PA, USA,
+  1996. Association for Computational Linguistics.
+
+\bibitem{holley_09}
+R.~Holley.
+\newblock Crowdsourcing and social engagement: potential, power and freedom for
+  libraries and users., november 2009.
+
+\bibitem{comparison}
+C.-W. Hsu and C.-J. Lin.
+\newblock A comparison of methods for multiclass support vector machines.
+\newblock {\em Trans. Neur. Netw.}, 13(2):415--425, Mar. 2002.
+
+\bibitem{algo}
+T.~Joachims.
+\newblock Multi-class support vector machine, Aug. 2008.
+
+\bibitem{hybred}
+S.~Laroum1, N.~BÈchet2, H.~Hamza3, and M.~Roche.
+\newblock Hybred: An ocr document representation for classification task.
+\newblock {\em IJCSI International Journal of Computer Science Issues}, 8,
+  2011.
+
+\bibitem{famSearch}
+LDS.
+\newblock Family search, 2005.
+
+\bibitem{Lecun_90}
+Y.~Lecun, B.~Boser, J.~S. Denker, D.~Henderson, R.~E. Howard, W.~Hubbard, and
+  L.~D. Jackel.
+\newblock Handwritten digit recognition with a back-propagation network.
+\newblock {\em NIPS}, 1989.
+
+\bibitem{postprocessing}
+H.~Niwa, K.~Kayashima, and Y.~Shimeki.
+\newblock Postprocessing for character recognition using keyword information.
+\newblock In {\em IAPR Workshop on Machine Vision Applications}, pages
+  519--522, Dec 1992.
+
+\bibitem{Reynaert2008a}
+M.~Reynaert.
+\newblock Non-interactive {OCR} post-correction for giga-scale digitization
+  projects.
+\newblock In {\em Computational Linguistics and Intelligent Text Processing},
+  volume 4919, pages 617--630, 2008.
+
+\bibitem{Ridge_11}
+M.~Ridge.
+\newblock Frequently asked questions about crowdsourcing in cultural heritage,
+  June 2011.
+
+\bibitem{Snow_08}
+R.~Snow, B.~O'Connor, D.~Jurafsky, and A.~Y. Ng.
+\newblock Cheap and fast---but is it good: evaluating non-expert annotations
+  for natural language tasks.
+\newblock In {\em Proceedings of the Conference on Empirical Methods in Natural
+  Language Processing}, EMNLP '08, pages 254--263, 2008.
+
+\bibitem{Tong96astatistical}
+X.~Tong and A.~D. Evans.
+\newblock A statistical approach to automatic ocr error correction in context.
+\newblock In {\em Proceedings of the Fourth Workshop on Very Large Corpora
+  (WVLC-4}, page~13, 1996.
+
+\bibitem{Tsochantaridis_2004}
+I.~Tsochantaridis, T.~Hofmann, T.~Joachims, and Y.~Altun.
+\newblock Support vector machine learning for interdependent and structured
+  output spaces.
+\newblock In {\em Proceedings of the Twenty-first International Conference on
+  Machine Learning}, ICML '04, pages 104--, 2004.
+
+\bibitem{velagapudi}
+P.~Velagapudi.
+\newblock Using hmms to boost accuracy in optical character recognition, 2005.
+
+\bibitem{Ahn_08w}
+L.~von Ahn.
+\newblock {Designing games with a purpose}.
+\newblock {\em Communications of the ACM}, 51, 2008.
+
+\bibitem{vonAhn_04}
+L.~von Ahn and L.~Dabbish.
+\newblock {Labeling images with a computer game.}
+\newblock {\em In {\em Proceedings of the SIGCHI conference on Human factors in
+  computing systems}, CHI '04}, pages 319--326, 2004.
+
+\bibitem{vonAhn_08}
+L.~von Ahn, B.~Maurer, C.~Mcmillen, D.~Abraham, and M.~Blum.
+\newblock {reCAPTCHA: Human-based character recognition via web security
+  Measures}.
+\newblock {\em \em Science}, 321:5895--, 2008.
+
+\bibitem{Wagner_74}
+R.~A. Wagner and M.~J. Fischer.
+\newblock The string-to-string correction problem.
+\newblock {\em J. ACM}, 21(1):168--173, Jan. 1974.
+
+\bibitem{wikiedits}
+E.~Yamangil and R.~Nelken.
+\newblock Scalable lexical correction from wikipedia edits using perceptron
+  reranking.
+\newblock {\em unpublished}, 2008.
+
+\bibitem{Yannakoudakis_83}
+E.~J. Yannakoudakis and D.~Fawthrop.
+\newblock {The rules of spelling errors}.
+\newblock {\em Information Processing and Management}, 19:87--99, 1983.
+
+\end{thebibliography}
