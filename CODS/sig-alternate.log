@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  13 OCT 2014 12:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  15 OCT 2014 18:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -399,10 +399,18 @@ File: correction-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: correction-eps-converted-to.pdf used on input line 299
 .
 (pdftex.def)             Requested size: 216.80392pt x 122.85323pt.
- [2 <./archOCR-eps-converted-to.pdf>]
-Overfull \hbox (1.28682pt too wide) in paragraph at lines 393--397
-[]\T1/aer/bx/n/9 Baseline Character-Level Fea-ture Con-struc-tion:
+
+Overfull \hbox (1.90715pt too wide) in paragraph at lines 312--324
+\T1/aer/m/n/9 Features are crafted by com-put-ing the Lev-en-shtein
  []
+
+
+Overfull \hbox (3.97662pt too wide) in paragraph at lines 325--340
+\T1/aer/m/n/9 represents the prob-a-bil-ity that the trans-ac-tion con-
+ []
+
+[2 <./archOCR-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package epstopdf Info: Source file: <stat1edit.eps>
 (epstopdf)                    date: 2014-10-13 01:16:32
@@ -412,13 +420,14 @@ Package epstopdf Info: Source file: <stat1edit.eps>
 (epstopdf)                    size: 15298 bytes
 (epstopdf)             Command: <repstopdf --outfile=stat1edit-eps-converted-to
 .pdf stat1edit.eps>
-(epstopdf)             \includegraphics on input line 400.
+(epstopdf)             \includegraphics on input line 386.
 Package epstopdf Info: Output file is already uptodate.
+
 <stat1edit-eps-converted-to.pdf, id=27, 530.98375pt x 181.67876pt>
 File: stat1edit-eps-converted-to.pdf Graphic file (type pdf)
 
 <use stat1edit-eps-converted-to.pdf>
-Package pdftex.def Info: stat1edit-eps-converted-to.pdf used on input line 400.
+Package pdftex.def Info: stat1edit-eps-converted-to.pdf used on input line 386.
 
 (pdftex.def)             Requested size: 245.72197pt x 130.09059pt.
 Package epstopdf Info: Source file: <stat2copy.eps>
@@ -429,89 +438,86 @@ Package epstopdf Info: Source file: <stat2copy.eps>
 (epstopdf)                    size: 14197 bytes
 (epstopdf)             Command: <repstopdf --outfile=stat2copy-eps-converted-to
 .pdf stat2copy.eps>
-(epstopdf)             \includegraphics on input line 402.
+(epstopdf)             \includegraphics on input line 388.
 Package epstopdf Info: Output file is already uptodate.
 
 <stat2copy-eps-converted-to.pdf, id=28, 530.98375pt x 148.555pt>
 File: stat2copy-eps-converted-to.pdf Graphic file (type pdf)
 
 <use stat2copy-eps-converted-to.pdf>
-Package pdftex.def Info: stat2copy-eps-converted-to.pdf used on input line 402.
+Package pdftex.def Info: stat2copy-eps-converted-to.pdf used on input line 388.
 
 (pdftex.def)             Requested size: 238.49486pt x 122.86311pt.
-
-Underfull \vbox (badness 3118) has occurred while \output is active []
-
  [3 <./greyscale-eps-converted-to.pdf> <./correction-eps-converted-to.pdf>]
-Overfull \hbox (12.12645pt too wide) in paragraph at lines 482--506
+Overfull \hbox (12.12645pt too wide) in paragraph at lines 468--492
 []$[]$  $[]$ 
  []
 
 
-Overfull \hbox (2.47147pt too wide) in paragraph at lines 510--511
+Overfull \hbox (2.47147pt too wide) in paragraph at lines 496--497
 \T1/aer/m/n/9 iden-ti-fied by the model as ``spell check",``addition", ``cap-
  []
 
 
-Overfull \hbox (23.36032pt too wide) in paragraph at lines 568--568
+Overfull \hbox (1.82489pt too wide) in paragraph at lines 503--505
+\T1/aer/m/n/9 character-level. In case of au-to-mat-i-cally gen-er-ated charact
+er-
+ []
+
+
+Overfull \hbox (23.36032pt too wide) in paragraph at lines 554--554
 []\secfnt INFORMATION RE-TRIEVAL TECH-NIQUES 
  []
 
 [4 <./stat1edit-eps-converted-to.pdf> <./stat2copy-eps-converted-to.pdf>]
-Overfull \hbox (4.39816pt too wide) in paragraph at lines 607--610
+Overfull \hbox (4.39816pt too wide) in paragraph at lines 593--596
 \T1/aer/m/n/9 tio-nary to spellcheck mis-spelled OCR rec-og-nized words. They
  []
 
 [5]
-Overfull \hbox (3.09467pt too wide) in paragraph at lines 633--634
+Overfull \hbox (3.09467pt too wide) in paragraph at lines 619--620
 []\T1/aer/m/n/9 The Cal-i-for-nia Dig-i-tal News-pa-per Col-lec-tion has an arc
 hive
  []
 
 
-Overfull \hbox (7.00793pt too wide) in paragraph at lines 633--634
+Overfull \hbox (7.00793pt too wide) in paragraph at lines 619--620
 \T1/aer/m/n/9 sub-jected to OCR and is cur-rently stored in an on-line database
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--640
+Underfull \hbox (badness 10000) in paragraph at lines 625--626
 
  []
 
-(./sig-alternate.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6])
-[7
-
-] (./sig-alternate.aux) ) 
+(./sig-alternate.bbl [6]) [7] (./sig-alternate.aux) ) 
 Here is how much of TeX's memory you used:
- 3634 strings out of 493315
- 50561 string characters out of 6137903
- 122162 words of memory out of 5000000
- 6998 multiletter control sequences out of 15000+600000
+ 3635 strings out of 493315
+ 50577 string characters out of 6137903
+ 121170 words of memory out of 5000000
+ 6999 multiletter control sequences out of 15000+600000
  53173 words of font info for 70 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,11n,38p,2251b,370s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/ba
-se/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-ti10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cmextr
-a/cmex9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi5.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.p
-fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></
-usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></us
-r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/
-local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/t
-exlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf
--dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/font
-s/type1/urw/times/utmri8a.pfb>
-Output written on sig-alternate.pdf (7 pages, 877024 bytes).
+ 41i,11n,38p,2240b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/t
+exmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2013/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2013/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helve
+tic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhv
+r8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
+usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/
+texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on sig-alternate.pdf (7 pages, 878879 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  77 compressed objects within 1 object stream

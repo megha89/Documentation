@@ -111,17 +111,17 @@
 %
 % 1st. author
 \alignauthor
+Megha Gupta\\
+       \affaddr{Dept. of Computer Science}\\
+       \affaddr{IIIT-Delhi, India.}\\
+       \email{meghag@iiitd.ac.in}
+% 2nd. author
+\alignauthor
 Haimonti Dutta\\
        \affaddr{Institute of Data Sciences and Engineering (IDSE)}\\
        \affaddr{Columbia University}\\
        \affaddr{New York, NY 10115}\\
        \email{hd2200columbia@gmail.com}
-% 2nd. author
-\alignauthor
-Megha Gupta\\
-       \affaddr{Dept. of Computer Science}\\
-       \affaddr{IIIT-Delhi, India.}\\
-       \email{meghag@iiitd.ac.in}
 % 3rd. author
 \alignauthor 
 Brian Geiger\\
@@ -309,7 +309,9 @@ Figure~\ref{fig:T1}a shows an example of a scanned page from ``The Amador Ledger
 \begin{itemize}
 \item \textbf{Tokenizer: } The old text and the corresponding new text from the log file is tokenized by white-spaces. There are 44,022 tokens of which 21,108 are corrected by the annotators.
 
-\item \textbf{Feature Constructor: } Features are crafted by computing the Levenshtein edit distance between the old word and its correction. The Levenshtein edit distance \cite{Wagner_74} is defined as the minimum number of single edit operations (insertions, deletions and substitutions) required to convert one string into another. Six binary features are generated as follows: 
+\item \textbf{Feature Constructor }\\ 
+\textbf{Word-level feature construction:}\\
+Features are crafted by computing the Levenshtein edit distance between the old word and its correction. The Levenshtein edit distance \cite{Wagner_74} is defined as the minimum number of single edit operations (insertions, deletions and substitutions) required to convert one string into another. Six binary features are generated as follows: 
 (a) \textbf{Difference Length Zero} : $1$, if both the old word and new word have same length and $0$ otherwise. 
 %For example, the feature is 1 for the tokens ``Spll," and ``Union" as  both the tokens have same number of characters.
 (b) \textbf{Difference Length Above One} : $1$, if the length of new word exceeds the length of old word and $0$ otherwise.
@@ -320,7 +322,14 @@ Figure~\ref{fig:T1}a shows an example of a scanned page from ``The Amador Ledger
 (e) \textbf{Edit Distance is 1 and Case Change}: 1, if the two words have edit distance is exactly 1 and the first character of one string change from upper case to lower case or vice versa. For example, for ``Stales" and ``Stables", the value is 0 as there is no case change.
 (f) \textbf{Punctuation Difference}: 1, if both the old text and new text differ in any of the following punctuation marks (!"\#\$\%\&'*+,-./:;\textless=\textgreater?@[$\backslash$]\^\_`\{\textbar\}\textasciitilde).
 
-
+\textbf{Character-level feature construction:}\\
+The tokenization process of the text in the log files was modified to enable the addition and deletion classification of text using a character. If the text was deleted by the user as a part of correction process then the character ``$\sim$" was assigned to the new token denoting that the user performed the task of deleting the OCR garbled text whereas if the user added a new text  then the character ``+" was assigned to the old token denoting that user added text that was initially missing in the OCR data.
+The corrected tokens were further split into character-level data thereby contributing $58,963$ instances. Of $58,963$ instances, we encountered that $55,612$ had same character-level corrections indicating that the OCR makes the same type of mistakes repeatedly. The maximum number of redundant corrections noted were deletion of punctuations and special characters. There were $4344$ deletions of comma, $2831$ deletions of $\ddot{A}$. Amongst character to character corrections, $635$ cases of o$\rightarrow$e, $470$ cases of b$\rightarrow$h, 299 cases of u$\rightarrow$n contributed maximum to the redundancy. Hence, the number of unique instances was found to be $3351$. Figure~\ref{fig:stat1} shows histograms of corrections made by the users. Figure~\ref{fig:stat1}a shows that the total corrections from the original word ``tbe" to the corrected word ``the" are $269$. The x-axis in the graph denotes the examples of character-level corrections whereas the y-axis denotes the number of corrections made on the examples in the entire corpus. In order to test the performance of the manually crafted (word-level) features of the dataset, we use Apriori algorithm to mine character-level rules. Mining association rules is to discover all the strong rules in the database using different measures of interestingness. To select interesting rules from the total set of possible rules, we use some user controlled measures like minimum support ($minsup$) and minimum confidence ($minconf$). They are formally defined as follows. \\
+Support(X$\rightarrow$Y) = P(X $\cup$ Y)\\
+represents the percentage of transactions from the transaction database that contains both X and Y.\\
+Confidence(X$\rightarrow$Y) = P(Y|X)\\ 
+represents the probability that the transaction containing X also contains Y.
+In our case, the value of $minconf$ and the the lower bound $minsup$ was set to $0.0001$, and the upper bound of $minsup$ was set to $1$. The upper bound of $minsup$ was iteratively decreased by a factor of $delta$ until either the lower bound of $minsup$ was reached or the required number of rules were generated. The number of rules generated by the algorithm were around $6631$.
 %\begin{figure*}[t]
 %\centering
 %\includegraphics[width=0.9\textwidth]{./image/flowchartnew.jpg}
@@ -348,32 +357,8 @@ Specifically,
 %(f)\textbf{No Correction: }When the old and new text are same. %For example, plant and plant
 %%\end{enumerate}
 
-The distribution of the these classes in the dataset is shown in Table~\ref{table: classes}. It must be noted that by design tokens are always assigned to one class, although in principle it may be possible to assign them to multiple classes\footnote{For e.g. a correction of ``t$\$$e" to ``the" could be either a Spellcheck or a Punctuation Error correction but we assign it to Spellcheck }.
+The distribution of the these classes in the dataset is shown in Table~\ref{table: classes} (See Appendix). It must be noted that by design tokens are always assigned to one class, although in principle it may be possible to assign them to multiple classes\footnote{For e.g. a correction of ``t$\$$e" to ``the" could be either a Spellcheck or a Punctuation Error correction but we assign it to Spellcheck }.
 
-
-\begin{table}[htdp]
-\centering
-\caption{Class Distribution}
-\begin{tabular}{| l | l |}
-\hline
- Class  & No. of Instances \\
-\hline
- Addition & 4575 \\
-%\hline 
-Deletion & 5024 \\
-%\hline
-Punctuation & 6401 \\
-%\hline
-Capitalization & 299 \\
-%\hline
-Spellcheck & 4809 \\
-%\aline 
-\hline
-Total & 21108 \\
-\hline
-\end{tabular}
-\label{table: classes}
-\end{table}
 
 \end{itemize}
 
@@ -390,10 +375,11 @@ Total & 21108 \\
 %The number of instances in the dataset is 44,022. 
 %The class distribution in the dataset is shown in table ~\ref{table: classes}
 
-\item \textbf{Baseline Character-Level Feature Construction: }
-The tokenization process of the text in the log files was modified to enable the addition and deletion classification of text using a character. If the text was deleted by the user as a part of correction process then the character ``$\sim$" was assigned to the new token denoting that the user performed the task of deleting the OCR garbled text whereas if the user added a new text  then the character ``+" was assigned to the old token denoting that user added text that was initially missing in the OCR data. All the corrected tokens were further split into character level data with the tuple \textless old char, new char\textgreater  replacing the previous token level notion of \textless old token,new token\textgreater giving us $58,963$ instances of data. Of $58,963$ instances, we encountered that $55,612$ instances were redundant which signifies that the OCR device makes the same type of mistakes repeatedly. The maximum number of redundant corrections noted were deletion of punctuations and special characters. There were $4344$ deletions of comma, $2831$ deletions of $\ddot{A}$. Amongst character to character corrections, $635$ cases of o$\rightarrow$e, $470$ cases of b$\rightarrow$h, 299 cases of u$\rightarrow$n contributed maximum to the redundancy. Hence, the number of unique instances was found to be $3351$. Figure ~\ref{fig:stat1}a and ~\ref{fig:stat2}b shows histograms of few o$\rightarrow$e and b$\rightarrow$h corrections made by users. In order to test the performance of the manually crafted features of the dataset, we automatically generated rules using apriori algorithm to mine association rules. Mining association rules means to find all association rules that have support and confidence greater than or equal to user specified minimum support ($minsup$) and minimum confidence ($minconf$) respectively. In our case, the value of $minconf$ and the the lower bound $minsup$ was set to $0.0001$, and the upper bound of $minsup$ was set to $1$. The upper bound of $minsup$ was iteratively decreased by a factor of $delta$ until either the lower bound of $minsup$ was reached or the required number of rules were generated. The number of rules generated by the algorithm were $6631$.
-%Some of the user defined parameters used in the algorithm are support and confidence. Support, sup(o$\rightarrow$e) is defined as the probability that letter `o' gets replaced to letter `e'. And confidence, conf(o$\rightarrow$e) is defined as the probability that the new character is `e' given the old character is `o'.
-%minimum confidence, was set to 1.0E-4, delta:  1.0E-4, upper bound minimum support: 1.0, lower bound minimum support: 1.0E-4.
+%\item \textbf{Baseline Character-Level Feature Construction: }
+%The tokenization process of the text in the log files was modified to enable the addition and deletion classification of text using a character. If the text was deleted by the user as a part of correction process then the character ``$\sim$" was assigned to the new token denoting that the user performed the task of deleting the OCR garbled text whereas if the user added a new text  then the character ``+" was assigned to the old token denoting that user added text that was initially missing in the OCR data. All the corrected tokens were further split into character level data with the tuple \textless old char, new char\textgreater  replacing the previous token level notion of \textless old token,new token\textgreater giving us $58,963$ instances of data. Of $58,963$ instances, we encountered that $55,612$ instances were redundant which signifies that the OCR device makes the same type of mistakes repeatedly. The maximum number of redundant corrections noted were deletion of punctuations and special characters. There were $4344$ deletions of comma, $2831$ deletions of $\ddot{A}$. Amongst character to character corrections, $635$ cases of o$\rightarrow$e, $470$ cases of b$\rightarrow$h, 299 cases of u$\rightarrow$n contributed maximum to the redundancy. Hence, the number of unique instances was found to be $3351$. Figure ~\ref{fig:stat1}a and ~\ref{fig:stat2}b shows histograms of few o$\rightarrow$e and b$\rightarrow$h corrections made by users. In order to test the performance of the manually crafted features of the dataset, we automatically generated rules using apriori algorithm to mine association rules. Mining association rules means to find all association rules that have support and confidence greater than or equal to user specified minimum support ($minsup$) and minimum confidence ($minconf$) respectively. In our case, the value of $minconf$ and the the lower bound $minsup$ was set to $0.0001$, and the upper bound of $minsup$ was set to $1$. The upper bound of $minsup$ was iteratively decreased by a factor of $delta$ until either the lower bound of $minsup$ was reached or the required number of rules were generated. The number of rules generated by the algorithm were $6631$.
+
+%%Some of the user defined parameters used in the algorithm are support and confidence. Support, sup(o$\rightarrow$e) is defined as the probability that letter `o' gets replaced to letter `e'. And confidence, conf(o$\rightarrow$e) is defined as the probability that the new character is `e' given the old character is `o'.
+%%minimum confidence, was set to 1.0E-4, delta:  1.0E-4, upper bound minimum support: 1.0, lower bound minimum support: 1.0E-4.
 
 \begin{figure*}[ht]
 \centering
@@ -406,12 +392,12 @@ The tokenization process of the text in the log files was modified to enable the
 \caption{Example of character level corrections}
 \end{figure*}
 
-The error labels are the same as that for token level data.
-(a) \textbf{Addition: } When a user inserts a new token `T' in place of void, the old character is assigned a symbol `+'. For example, + $\rightarrow$ T.
-(b) \textbf{Deletion: } When a user removes an existing token `A' from the old text, the new character is assigned a symbol `$\sim$'. For example, A $\rightarrow$ $\sim$.
-(c) \textbf{Capitalization error: } When an old character is capitalized or decapitalized to form a new character. For example, l $\rightarrow$ L.
-(d) \textbf{Punctuation error: } When a substitution of an old to new character involves a punctuation. For example, ! $\rightarrow$ t.
-(e) \textbf{Spellcheck error: } When an old alphanumeric character is replaced by a new alphanumeric character. For example, o $\rightarrow$ e.
+%The error labels are the same as that for token level data.
+%(a) \textbf{Addition: } When a user inserts a new token `T' in place of void, the old character is assigned a symbol `+'. For example, + $\rightarrow$ T.
+%(b) \textbf{Deletion: } When a user removes an existing token `A' from the old text, the new character is assigned a symbol `$\sim$'. For example, A $\rightarrow$ $\sim$.
+%(c) \textbf{Capitalization error: } When an old character is capitalized or decapitalized to form a new character. For example, l $\rightarrow$ L.
+%(d) \textbf{Punctuation error: } When a substitution of an old to new character involves a punctuation. For example, ! $\rightarrow$ t.
+%(e) \textbf{Spellcheck error: } When an old alphanumeric character is replaced by a new alphanumeric character. For example, o $\rightarrow$ e.
 
 %\begin{figure*}[ht]
 %\centering
@@ -486,7 +472,7 @@ C &$AE_{b}$&$AE_{p}$&$AT_{b}$&$AT_{p}$\\
 \caption{Results using polynomial and rbf kernels}
 \begin{tabular}{|l|ll|ll|}
 \hline
-&Poly&&RBF&\\
+&Polynomial&&RBF&\\
 \cline{2-5}
 C&$AE_{b}$ & $AE_{p}$&$AE_{b}$&$AE_{p}$\\
 \hline
@@ -514,8 +500,8 @@ C&$AT_{b}$ & $AT_{p}$ &$AT_{b}$ & $AT_{p}$ \\
 \section{Empirical Evaluation}
 \label{sec:evaluation}
 
-The experiments are performed on two machines, one of which is a linux HPC cluster with 20 CPU(s) and 10 cores per socket, 99GB RAM and 2.50GHz of processor speed and the other a dual core mac machine with Intel Core i7 processor, 8GB RAM and 2.9 GHz of processor speed. In these experiments, the regularization parameter $C$ is varied from $0.0001$ to $10000$ for the linear kernel. The performance of the algorithm is evaluated using 10-fold cross validation technique. The \textbf{A}verage loss \textbf{E}rror (AE) and  \textbf{A}verage running \textbf{T}ime (AT) from cross validation for baseline and proposed dataset respectively are represented as $AE_{b}$, $AE_{p}$. Table ~\ref{table: error} shows the result of the experiment, error and running time (cpu seconds) using linear kernel for different values of $C$. Table~\ref{table: kernels} shows the result of the experiment, error and running time (cpu minutes) using polynomial and radial basis kernel.
-%The loss is least when the $C = 100$ for the polynomial kernel. However, the time taken to train the model is considerably higher at 106753s. It must also be noted that one can learn less accurate models with linear or RBF kernels faster. Thus, it may be useful to consider a trade-off between accuracy of learnt models versus time taken for classification in large scale deployments.
+The experiments are performed on two machines, one of which is a linux HPC cluster with 20 CPU(s) and 10 cores per socket, 99GB RAM and 2.50GHz of processor speed and the other a dual core mac machine with Intel Core i7 processor, 8GB RAM and 2.9 GHz of processor speed. In these experiments, the regularization parameter $C$ is varied from $0.0001$ to $10000$ for the linear kernel. The performance of the algorithm is evaluated using 10-fold cross validation technique. The \textbf{A}verage loss \textbf{E}rror (AE) and  \textbf{A}verage running \textbf{T}ime (AT) from cross validation for baseline and proposed dataset respectively are represented as $AE_{b}$, $AE_{p}$. Table ~\ref{table: error} shows the result of the experiment, error and running time (cpu seconds) using linear kernel for different values of $C$. Table~\ref{table: kernels} shows the result of the experiment, error and running time (cpu minutes) using polynomial and radial basis kernel.\\
+The multi class SVM algorithm using polynomial kernel gives the best results in both the datasets, word-level and character-level. In case of automatically generated character-level dataset, the performance of the algorithm does not improve by varying the regularization constant in contrast to the performance of the manually crafted word-level dataset. As the value of regularization constant increases, the average loss of the learning model decreases. However, the time taken to train the model is considerably high. It must also be noted that one can learn less accurate but faster models with linear or RBF kernels. Thus, it may be useful to consider a trade-off between accuracy of learnt models versus time taken for classification in large scale deployments.
  
 The code used to build the prototype system along with data generated are available at the github account\footnote{https://github.com/megha89/}. It must be noted that the $SVM^{multiclass}$V2.2 package \cite{algo} was used for the implementation of Multi-class SVMs. 
 For linear kernels, $SVM^{multiclass}$V2.20 is very fast and runtime scales linearly with the number of training examples. Training of non-linear kernels is very slow using the algorithm described in Section~\ref{arch}.
@@ -569,7 +555,7 @@ For linear kernels, $SVM^{multiclass}$V2.20 is very fast and runtime scales line
 \label{ir}
 The following details are relevant: 
 
-\noindent \textbf{Query Set:} To measure the retrieval effectiveness of the corrected text versus the garbled OCR, a list of 20 keywords for search was prepared by randomly sampling from the corrected words.
+\noindent \textbf{Query Set:} To measure the retrieval effectiveness of the corrected text versus the garbled OCR, a list of 20 keywords for search was prepared by randomly sampling from the corrected words. The table~\ref{table:keywords} (See Appendix) presents the list of 20 keywords that were used to analyse the retrieval effectiveness of raw OCR versus corrected OCR text.
 
 \noindent \textbf{Software:} PyLucene 3.6.2, a Python extension for accessing Java Apache Lucene was used as an IR software library for enabling full text indexing and search capabilites. Inverted indices are built for both the original and corrected corpus. Keywords from the query set are tested on both corpora and documents containing words in the query set are retrieved. The documents are ranked according to the frequency of the keyword present -- higher the frequency, higher the rank.
 
@@ -646,7 +632,7 @@ This work is supported by funding from the National Endowment for Humanities, Gr
 \bibliography{sig-alternate}  % sigproc.bib is the name of the Bibliography in this case
 
 
-\end{document}
+%\end{document}
 
 %
 %\section{The {\secit Body} of The Paper}
@@ -987,7 +973,67 @@ This work is supported by funding from the National Endowment for Humanities, Gr
 %%\balancecolumns
 %\appendix
 %%Appendix A
-%\section{Headings in Appendices}
+\appendix
+%Appendix A
+\section{Tables}
+
+
+\begin{table}[htdp]
+\centering
+\caption{Class Distribution}
+\begin{tabular}{| l | l |}
+\hline
+ Class  & No. of Instances \\
+\hline
+ Addition & 4575 \\
+%\hline 
+Deletion & 5024 \\
+%\hline
+Punctuation & 6401 \\
+%\hline
+Capitalization & 299 \\
+%\hline
+Spellcheck & 4809 \\
+%\aline 
+\hline
+Total & 21108 \\
+\hline
+\end{tabular}
+\label{table: classes}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{List of keywords}
+\begin{tabular}{| l | l |}
+\hline
+ S.no  & Keywords\\
+\hline
+1 & prices\\
+2 & trade \\
+3 & character \\
+4 & Development \\
+5 & Aldrich \\
+7 & Sutter \\
+8 & south \\
+9 & Sacramento \\
+10 & compelled \\
+11 & insertion \\
+12 & estate \\
+13 & Pacific \\
+14 & missed \\
+15 & cough \\
+16 & kidneys \\
+17 & CALAVERAS \\
+18 & sheep \\
+19 & aces \\
+20 & controlled \\
+\hline
+\end{tabular}
+\label{table:keywords}
+\end{table}
+
+
 %The rules about hierarchical headings discussed above for
 %the body of the article are different in the appendices.
 %In the \textbf{appendix} environment, the command
@@ -1030,6 +1076,6 @@ This work is supported by funding from the National Endowment for Humanities, Gr
 %and helpful comments.  If you consider yourself a moderately
 %experienced to expert user of \LaTeX, you may find reading
 %it useful but please remember not to change it.
-%%\balancecolumns % GM June 2007
-%% That's all folks!
-%\end{document}
+%\balancecolumns % GM June 2007
+% That's all folks!
+\end{document}
