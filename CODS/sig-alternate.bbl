@@ -11,6 +11,12 @@ A.~Abdulkader and M.~R. Casey.
 ADNP.
 \newblock Australian newspapers digitization program, 2008.
 
+\bibitem{Agrawal1994}
+R.~Agrawal and R.~Srikant.
+\newblock Fast algorithms for mining association rules in large databases.
+\newblock In {\em 20th International Conference on Very Large Data Bases},
+  pages 478--499. Morgan Kaufmann, Los Altos, CA, 1994.
+
 \bibitem{Bassil_12a}
 Bassil and Alwani.
 \newblock Ocr post-processing error correction algorithm using google online

@@ -305,7 +305,8 @@ Features are crafted by computing the Levenshtein edit distance between the old 
 
 \textbf{Character-level feature construction:}\\
 The tokenization process of the text in the log files was modified to enable the addition and deletion classification of text using a character. If the text was deleted by the user as a part of correction process then the character ``$\sim$" was assigned to the new token denoting that the user performed the task of deleting the OCR garbled text whereas if the user added a new text  then the character ``+" was assigned to the old token denoting that user added text that was initially missing in the OCR data.\\
-The corrected tokens were further split into character-level data thereby contributing $58,963$ instances. Of $58,963$ instances, we encountered that $55,612$ had same character-level corrections indicating that the OCR makes the same type of mistakes repeatedly. The maximum number of redundant corrections noted were deletion of punctuations and special characters. There were $4344$ deletions of comma, $2831$ deletions of $\ddot{A}$. Amongst character to character corrections, $635$ cases of o$\rightarrow$e, $470$ cases of b$\rightarrow$h, 299 cases of u$\rightarrow$n contributed maximum to the redundancy. Hence, the number of unique instances were found to be $3351$. Figure~\ref{fig:stat1} shows histograms of corrections made by the users. Figure~\ref{fig:stat1}a shows that the total corrections from the original word ``tbe" to the corrected word ``the" are $269$. The x-axis in the graph denotes the examples of character-level corrections whereas the y-axis denotes the number of corrections made on the examples in the entire corpus. In order to test the performance of the manually crafted (word-level) features of the dataset, we used association rule mining algorithm to generate rules. Hence, the character-level feature construction acts as a baseline method.\\
+The corrected tokens were further split into character-level data thereby contributing $58,963$ instances. Of $58,963$ instances, we encountered that $55,612$ had same character-level corrections indicating that the OCR makes the same type of mistakes repeatedly. The maximum number of redundant corrections noted were deletion of punctuations and special characters. There were $4344$ deletions of comma, $2831$ deletions of $\ddot{A}$. Amongst character to character corrections, $635$ cases of o$\rightarrow$e, $470$ cases of b$\rightarrow$h, 299 cases of u$\rightarrow$n contributed maximum to the redundancy. Hence, the number of unique instances were found to be The first graph shows that the total corrections from the original word ``tbe" to the corrected word ``the" are $269$. 
+The x-axis in the graph denotes the examples of character-level corrections whereas the y-axis denotes the number of corrections made on the examples in the entire corpus. In order to test the performance of the manually crafted (word-level) features of the dataset, we used association rule mining algorithm to generate rules. Hence, the character-level feature construction acts as a baseline method.\\
 Apriori algorithm \cite{Agrawal1994} implementation of WEKA 3.7.10 was used to mine character-level rules. Mining association rules is to discover all the strong rules in the database using different measures of interestingness. To select interesting rules from the total set of possible rules, we use some user controlled measures like minimum support ($minsup$) and minimum confidence ($minconf$). They are formally defined as follows. \\
 Support(X$\rightarrow$Y) = P(X $\cup$ Y)\\
 represents the percentage of transactions from the transaction database that contains both X and Y.\\
@@ -321,16 +322,16 @@ The number of features and instances are $6631$ and $3351$ respectively in the c
 %\label{fig:flowchart}
 %\end{figure*}
 
-\begin{figure*}[ht]
-\centering
-\epsfig{file=stat1edit.eps, height= 1.8 in,width= 3.4 in}
-\label{fig:stat1}
-\epsfig{file=stat2copy.eps, height= 1.7 in,width= 3.3 in}
-\label{fig:stat2}
-%\epsfig{file=stat3copy.eps, height= 1.7 in,width= 3 in}
-%\label{fig:stat3}
-\caption{Examples of character level corrections}
-\end{figure*}
+%\begin{figure*}[ht]
+%\centering
+%\epsfig{file=stat1edit.eps, height= 1.8 in,width= 3.4 in}
+%\label{fig:stat1}
+%\epsfig{file=stat2copy.eps, height= 1.7 in,width= 3.3 in}
+%\label{fig:stat2}
+%%\epsfig{file=stat3copy.eps, height= 1.7 in,width= 3 in}
+%%\label{fig:stat3}
+%\caption{Examples of character level corrections}
+%\end{figure*}
 
 \item \textbf{Label Constructor: }The errors rectified by the users are categorized as addition, deletion, punctuation error, capitalization error, and spellcheck error. 
 %The logic used in generation of the features can be summarized by the flowchart depicted in Figure~\ref{fig:flowchart}.
@@ -984,25 +985,8 @@ This work is supported by funding from the National Endowment for Humanities, Gr
 \appendix
 %Appendix A
 
-\section{Graphs}
-\begin{figure*}[ht]
-\centering
-\epsfig{file=o_e.eps, height= 1.8 in,width= 5.0 in}
-\label{fig:o_e}
-\epsfig{file=b_h.eps, height= 1.8 in,width= 5 in}
-\label{fig:b_h}
-\epsfig{file=u_n.eps, height= 1.8 in,width= 5 in}
-\label{fig:u_n}
-\epsfig{file=I_i.eps, height= 1.8 in,width= 5 in}
-\label{fig:I_i}
-\epsfig{file=l_i.eps, height= 1.8 in,width= 5 in}
-\label{fig:l_i}
-\caption{Examples of character level corrections}
-\end{figure*}
-
 \section{Tables}
-
-\begin{table}[ht]
+\begin{table*}[ht]
 \centering
 \caption{List of keywords}
 \begin{tabular}{| l | l |}
@@ -1031,7 +1015,44 @@ This work is supported by funding from the National Endowment for Humanities, Gr
 \hline
 \end{tabular}
 \label{table:keywords}
-\end{table}
+\end{table*}
+
+
+\section{Graphs}
+\begin{figure*}[ht]
+\centering
+\epsfig{file=o_e.eps, height= 2.2 in,width= 5.5 in}
+\label{fig:o_e}
+\caption{Examples of o $\rightarrow$ e corrections}
+\end{figure*}
+
+\begin{figure*}[ht]
+\centering
+\epsfig{file=b_h.eps, height= 2 in,width= 5.2 in}
+\label{fig:b_h}
+\caption{Examples of b $\rightarrow$ h corrections}
+\end{figure*}
+
+\begin{figure*}[ht]
+\centering
+\epsfig{file=u_n.eps, height= 2 in,width= 5.2 in}
+\label{fig:u_n}
+\caption{Examples of u $\rightarrow$ n corrections}
+\end{figure*}
+
+\begin{figure*}[ht]
+\centering
+\epsfig{file=I_i.eps, height= 2 in,width= 5.2 in}
+\label{fig:I_i}
+\caption{Examples of I $\rightarrow$ i corrections}
+\end{figure*}
+
+\begin{figure*}[ht]
+\centering
+\epsfig{file=l_i.eps, height= 2 in,width= 5.2 in}
+\label{fig:l_i}
+\caption{Examples of l $\rightarrow$ i corrections}
+\end{figure*}
 
 
 %The rules about hierarchical headings discussed above for
