@@ -117,11 +117,11 @@ Megha Gupta\\
        \email{meghag@iiitd.ac.in}
 % 2nd. author
 \alignauthor
-Haimonti Dutta\\
-       \affaddr{Institute of Data Sciences and Engineering (IDSE)}\\
-       \affaddr{Columbia University}\\
-       \affaddr{New York, NY 10115}\\
-       \email{hd2200columbia@gmail.com}
+Haimonti Dutta\titlenote{The author is also affiliated to the Institute of Data Science and Engineering (IDSE), Columbia University and is an adjunct professor at IIIT-Delhi.}\\
+       \affaddr{Department of Management Science and Systems}\\
+       \affaddr{State University of New York, Buffalo}\\
+       \affaddr{New York, 14260}\\
+       \email{haimonti@buffalo.edu}
 % 3rd. author
 \alignauthor 
 Brian Geiger\\
@@ -130,26 +130,7 @@ and Research}\\
        \affaddr{University of California, Riverside.}\\
        \email{brian.geiger@ucr.edu}
        }
-%\and  % use '\and' if you need 'another row' of author names
-%% 4th. author
-%\alignauthor Lawrence P. Leipuner\\
-%       \affaddr{Brookhaven Laboratories}\\
-%       \affaddr{Brookhaven National Lab}\\
-%       \affaddr{P.O. Box 5000}\\
-%       \email{lleipuner@researchlabs.org}
-%% 5th. author
-%\alignauthor Sean Fogarty\\
-%       \affaddr{NASA Ames Research Center}\\
-%       \affaddr{Moffett Field}\\
-%       \affaddr{California 94035}\\
-%       \email{fogartys@amesres.org}
-%% 6th. author
-%\alignauthor Charles Palmer\\
-%       \affaddr{Palmer Research Laboratories}\\
-%       \affaddr{8600 Datapoint Drive}\\
-%       \affaddr{San Antonio, Texas 78229}\\
-%       \email{cpalmer@prl.com}
-%}
+
 
 % There's nothing stopping you putting the seventh, eighth, etc.
 % author on the opening page (as the 'third row') but we ask,
@@ -323,13 +304,15 @@ Features are crafted by computing the Levenshtein edit distance between the old 
 (f) \textbf{Punctuation Difference}: 1, if both the old text and new text differ in any of the following punctuation marks (!"\#\$\%\&'*+,-./:;\textless=\textgreater?@[$\backslash$]\^\_`\{\textbar\}\textasciitilde).
 
 \textbf{Character-level feature construction:}\\
-The tokenization process of the text in the log files was modified to enable the addition and deletion classification of text using a character. If the text was deleted by the user as a part of correction process then the character ``$\sim$" was assigned to the new token denoting that the user performed the task of deleting the OCR garbled text whereas if the user added a new text  then the character ``+" was assigned to the old token denoting that user added text that was initially missing in the OCR data.
-The corrected tokens were further split into character-level data thereby contributing $58,963$ instances. Of $58,963$ instances, we encountered that $55,612$ had same character-level corrections indicating that the OCR makes the same type of mistakes repeatedly. The maximum number of redundant corrections noted were deletion of punctuations and special characters. There were $4344$ deletions of comma, $2831$ deletions of $\ddot{A}$. Amongst character to character corrections, $635$ cases of o$\rightarrow$e, $470$ cases of b$\rightarrow$h, 299 cases of u$\rightarrow$n contributed maximum to the redundancy. Hence, the number of unique instances was found to be $3351$. Figure~\ref{fig:stat1} shows histograms of corrections made by the users. Figure~\ref{fig:stat1}a shows that the total corrections from the original word ``tbe" to the corrected word ``the" are $269$. The x-axis in the graph denotes the examples of character-level corrections whereas the y-axis denotes the number of corrections made on the examples in the entire corpus. In order to test the performance of the manually crafted (word-level) features of the dataset, we use Apriori algorithm to mine character-level rules. Mining association rules is to discover all the strong rules in the database using different measures of interestingness. To select interesting rules from the total set of possible rules, we use some user controlled measures like minimum support ($minsup$) and minimum confidence ($minconf$). They are formally defined as follows. \\
+The tokenization process of the text in the log files was modified to enable the addition and deletion classification of text using a character. If the text was deleted by the user as a part of correction process then the character ``$\sim$" was assigned to the new token denoting that the user performed the task of deleting the OCR garbled text whereas if the user added a new text  then the character ``+" was assigned to the old token denoting that user added text that was initially missing in the OCR data.\\
+The corrected tokens were further split into character-level data thereby contributing $58,963$ instances. Of $58,963$ instances, we encountered that $55,612$ had same character-level corrections indicating that the OCR makes the same type of mistakes repeatedly. The maximum number of redundant corrections noted were deletion of punctuations and special characters. There were $4344$ deletions of comma, $2831$ deletions of $\ddot{A}$. Amongst character to character corrections, $635$ cases of o$\rightarrow$e, $470$ cases of b$\rightarrow$h, 299 cases of u$\rightarrow$n contributed maximum to the redundancy. Hence, the number of unique instances were found to be $3351$. Figure~\ref{fig:stat1} shows histograms of corrections made by the users. Figure~\ref{fig:stat1}a shows that the total corrections from the original word ``tbe" to the corrected word ``the" are $269$. The x-axis in the graph denotes the examples of character-level corrections whereas the y-axis denotes the number of corrections made on the examples in the entire corpus. In order to test the performance of the manually crafted (word-level) features of the dataset, we used association rule mining algorithm to generate rules. Hence, the character-level feature construction acts as a baseline method.\\
+Apriori algorithm \cite{Agrawal1994} implementation of WEKA 3.7.10 was used to mine character-level rules. Mining association rules is to discover all the strong rules in the database using different measures of interestingness. To select interesting rules from the total set of possible rules, we use some user controlled measures like minimum support ($minsup$) and minimum confidence ($minconf$). They are formally defined as follows. \\
 Support(X$\rightarrow$Y) = P(X $\cup$ Y)\\
 represents the percentage of transactions from the transaction database that contains both X and Y.\\
 Confidence(X$\rightarrow$Y) = P(Y|X)\\ 
 represents the probability that the transaction containing X also contains Y.
-In our case, the value of $minconf$ and the the lower bound $minsup$ was set to $0.0001$, and the upper bound of $minsup$ was set to $1$. The upper bound of $minsup$ was iteratively decreased by a factor of $delta$ until either the lower bound of $minsup$ was reached or the required number of rules were generated. The number of rules generated by the algorithm were around $6631$.
+In our case, the value of $minconf$ and the the lower bound $minsup$ was set to $0.0001$, and the upper bound of $minsup$ was set to $1$. The upper bound of $minsup$ was iteratively decreased by a factor of $delta$ until either the lower bound of $minsup$ was reached or the required number of rules were generated.\\
+The number of features and instances are $6631$ and $3351$ respectively in the character-level data set.
 %\begin{figure*}[t]
 %\centering
 %\includegraphics[width=0.9\textwidth]{./image/flowchartnew.jpg}
@@ -337,6 +320,17 @@ In our case, the value of $minconf$ and the the lower bound $minsup$ was set to 
 %\caption{Flowchart demonstrating how the labels are generated.}
 %\label{fig:flowchart}
 %\end{figure*}
+
+\begin{figure*}[ht]
+\centering
+\epsfig{file=stat1edit.eps, height= 1.8 in,width= 3.4 in}
+\label{fig:stat1}
+\epsfig{file=stat2copy.eps, height= 1.7 in,width= 3.3 in}
+\label{fig:stat2}
+%\epsfig{file=stat3copy.eps, height= 1.7 in,width= 3 in}
+%\label{fig:stat3}
+\caption{Examples of character level corrections}
+\end{figure*}
 
 \item \textbf{Label Constructor: }The errors rectified by the users are categorized as addition, deletion, punctuation error, capitalization error, and spellcheck error. 
 %The logic used in generation of the features can be summarized by the flowchart depicted in Figure~\ref{fig:flowchart}.
@@ -357,9 +351,31 @@ Specifically,
 %(f)\textbf{No Correction: }When the old and new text are same. %For example, plant and plant
 %%\end{enumerate}
 
-The distribution of the these classes in the dataset is shown in Table~\ref{table: classes} (See Appendix). It must be noted that by design tokens are always assigned to one class, although in principle it may be possible to assign them to multiple classes\footnote{For e.g. a correction of ``t$\$$e" to ``the" could be either a Spellcheck or a Punctuation Error correction but we assign it to Spellcheck }.
+The distribution of the these classes in the dataset is shown in Table~\ref{table: classes}. It must be noted that by design tokens are always assigned to one class, although in principle it may be possible to assign them to multiple classes\footnote{For e.g. a correction of ``t$\$$e" to ``the" could be either a Spellcheck or a Punctuation Error correction but we assign it to Spellcheck }.
 
-
+\begin{table}[htdp]
+\centering
+\caption{Class Distribution}
+\begin{tabular}{| l | l |}
+\hline
+ Class  & No. of Instances \\
+\hline
+ Addition & 4575 \\
+%\hline 
+Deletion & 5024 \\
+%\hline
+Punctuation & 6401 \\
+%\hline
+Capitalization & 299 \\
+%\hline
+Spellcheck & 4809 \\
+%\aline 
+\hline
+Total & 21108 \\
+\hline
+\end{tabular}
+\label{table: classes}
+\end{table}
 \end{itemize}
 
 %\begin{figure}[h]
@@ -381,16 +397,7 @@ The distribution of the these classes in the dataset is shown in Table~\ref{tabl
 %%Some of the user defined parameters used in the algorithm are support and confidence. Support, sup(o$\rightarrow$e) is defined as the probability that letter `o' gets replaced to letter `e'. And confidence, conf(o$\rightarrow$e) is defined as the probability that the new character is `e' given the old character is `o'.
 %%minimum confidence, was set to 1.0E-4, delta:  1.0E-4, upper bound minimum support: 1.0, lower bound minimum support: 1.0E-4.
 
-\begin{figure*}[ht]
-\centering
-\epsfig{file=stat1edit.eps, height= 1.8 in,width= 3.4 in}
-\label{fig:stat1}
-\epsfig{file=stat2copy.eps, height= 1.7 in,width= 3.3 in}
-\label{fig:stat2}
-%\epsfig{file=stat3copy.eps, height= 1.7 in,width= 3 in}
-%\label{fig:stat3}
-\caption{Example of character level corrections}
-\end{figure*}
+
 
 %The error labels are the same as that for token level data.
 %(a) \textbf{Addition: } When a user inserts a new token `T' in place of void, the old character is assigned a symbol `+'. For example, + $\rightarrow$ T.
@@ -500,8 +507,8 @@ C&$AT_{b}$ & $AT_{p}$ &$AT_{b}$ & $AT_{p}$ \\
 \section{Empirical Evaluation}
 \label{sec:evaluation}
 
-The experiments are performed on two machines, one of which is a linux HPC cluster with 20 CPU(s) and 10 cores per socket, 99GB RAM and 2.50GHz of processor speed and the other a dual core mac machine with Intel Core i7 processor, 8GB RAM and 2.9 GHz of processor speed. In these experiments, the regularization parameter $C$ is varied from $0.0001$ to $10000$ for the linear kernel. The performance of the algorithm is evaluated using 10-fold cross validation technique. The \textbf{A}verage loss \textbf{E}rror (AE) and  \textbf{A}verage running \textbf{T}ime (AT) from cross validation for baseline and proposed dataset respectively are represented as $AE_{b}$, $AE_{p}$. Table ~\ref{table: error} shows the result of the experiment, error and running time (cpu seconds) using linear kernel for different values of $C$. Table~\ref{table: kernels} shows the result of the experiment, error and running time (cpu minutes) using polynomial and radial basis kernel.\\
-The multi class SVM algorithm using polynomial kernel gives the best results in both the datasets, word-level and character-level. In case of automatically generated character-level dataset, the performance of the algorithm does not improve by varying the regularization constant in contrast to the performance of the manually crafted word-level dataset. As the value of regularization constant increases, the average loss of the learning model decreases. However, the time taken to train the model is considerably high. It must also be noted that one can learn less accurate but faster models with linear or RBF kernels. Thus, it may be useful to consider a trade-off between accuracy of learnt models versus time taken for classification in large scale deployments.
+The experiments are performed on two machines, one of which is a linux HPC cluster with 20 CPU(s) and 10 cores per socket, 99GB RAM and 2.50GHz of processor speed and the other a dual core mac machine with Intel Core i7 processor, 8GB RAM and 2.9 GHz of processor speed. In these experiments, the regularization parameter $C$ is varied from $0.0001$ to $10000$ for the linear kernel. The performance of the algorithm is evaluated using 10-fold cross validation technique. The \textbf{A}verage loss \textbf{E}rror (AE) and  \textbf{A}verage running \textbf{T}ime (AT) from cross validation for baseline (character-level) and proposed (word-level) dataset respectively are represented as $AE_{b}$, $AE_{p}$. Table ~\ref{table: error} shows the result of the experiment, error and running time (cpu seconds) using linear kernel for different values of $C$. Table~\ref{table: kernels} shows the result of the experiment, error and running time (cpu minutes) using polynomial and radial basis kernel.\\
+The multi-class SVM algorithm using polynomial kernel gives the best results in both the datasets, word-level and character-level. In case of automatically generated character-level dataset, the performance of the algorithm does not improve by varying the regularization constant in contrast to the performance of the manually crafted word-level dataset. In case of word-level dataset, as the value of regularization constant increases, the average loss of the learning model decreases. However, the time taken to train the model is considerably high. It must also be noted that one can learn less accurate but faster models with linear or RBF kernels. Thus, it may be useful to consider a trade-off between accuracy of learnt models versus time taken for classification in large scale deployments.
  
 The code used to build the prototype system along with data generated are available at the github account\footnote{https://github.com/megha89/}. It must be noted that the $SVM^{multiclass}$V2.2 package \cite{algo} was used for the implementation of Multi-class SVMs. 
 For linear kernels, $SVM^{multiclass}$V2.20 is very fast and runtime scales linearly with the number of training examples. Training of non-linear kernels is very slow using the algorithm described in Section~\ref{arch}.
@@ -616,9 +623,10 @@ Intuitively, the easiest way to correct garbled OCR text is to hire a group of p
 
 \section{Conclusion \& Future Work}
 \label{sec:conc}
-The California Digital Newspaper Collection has an archive of 400,000 pages of historical California newspapers published between 1846 to 1922. This archive which has been subjected to OCR and is currently stored in an online database making them accessible to patrons. The OCR scanning process generates lot of garbled text which needs to be corrected to make the online newspaper repository more accessible to general public. 
+The California Digital Newspaper Collection has an archive of 400,000 pages of historical California newspapers published between 1846 to 1922. This archive which has been subjected to OCR is currently stored in an online database accessible to the patrons. The OCR scanning process generates lot of garbled text which needs to be corrected to make the online newspaper repository more accessible to general public. 
 
-In this paper, we present a system for Classification of Crowdsourced Text Correction which is capable of modelling user corrections using state-of-the-art machine learning techniques and retrieve categories which are likely to enhance search on the archive such as addition of words, elimination of typographical errors or addition of content. Information retrieval metric, mean reciprocal rank is used to quantify the effectiveness of the user text correction. The prototype system is being considered for deployment on historic newspaper archives at the California Digital Newspaper Collection and the New York Public Library.
+In this paper, we present a system for Classification of Crowdsourced Text Correction which is capable of modelling user corrections using state-of-the-art machine learning techniques and retrieve categories which are likely to enhance search on the archive such as addition of words, elimination of typographical errors or addition of content. We also compared the two datasets, word-level and character-level by applying the machine learning algorithms on each. The manually crafted word-level dataset performed better in terms of average loss error. However, the running time of the algorithm was considerably high. Thus, there is a need to improve the algorithms in order to make them compatible with large scale datasets.\\
+Information retrieval metric, mean reciprocal rank is used to quantify the effectiveness of the user text correction. The higher value of the MRR in the case of corrected corpus indicates that the relevant results are ranked higher in the retrieved set of documents. The prototype system is being considered for deployment on historic newspaper archives at the California Digital Newspaper Collection and the New York Public Library.
 
 % use section* for acknowledgement
 \section*{Acknowledgment}
@@ -975,32 +983,24 @@ This work is supported by funding from the National Endowment for Humanities, Gr
 %%Appendix A
 \appendix
 %Appendix A
-\section{Tables}
 
-
-\begin{table}[htdp]
+\section{Graphs}
+\begin{figure*}[ht]
 \centering
-\caption{Class Distribution}
-\begin{tabular}{| l | l |}
-\hline
- Class  & No. of Instances \\
-\hline
- Addition & 4575 \\
-%\hline 
-Deletion & 5024 \\
-%\hline
-Punctuation & 6401 \\
-%\hline
-Capitalization & 299 \\
-%\hline
-Spellcheck & 4809 \\
-%\aline 
-\hline
-Total & 21108 \\
-\hline
-\end{tabular}
-\label{table: classes}
-\end{table}
+\epsfig{file=o_e.eps, height= 1.8 in,width= 5.0 in}
+\label{fig:o_e}
+\epsfig{file=b_h.eps, height= 1.8 in,width= 5 in}
+\label{fig:b_h}
+\epsfig{file=u_n.eps, height= 1.8 in,width= 5 in}
+\label{fig:u_n}
+\epsfig{file=I_i.eps, height= 1.8 in,width= 5 in}
+\label{fig:I_i}
+\epsfig{file=l_i.eps, height= 1.8 in,width= 5 in}
+\label{fig:l_i}
+\caption{Examples of character level corrections}
+\end{figure*}
+
+\section{Tables}
 
 \begin{table}[ht]
 \centering

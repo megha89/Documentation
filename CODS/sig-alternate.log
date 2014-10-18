@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  15 OCT 2014 18:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  18 OCT 2014 10:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -309,25 +309,21 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 166.
+LaTeX Font Info:    Try loading font information for U+msa on input line 147.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 166.
+LaTeX Font Info:    Try loading font information for U+msb on input line 147.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 166.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 147.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Overfull \hbox (18.89441pt too wide) in paragraph at lines 166--166
- []\eaddfnt hd2200columbia@gmail.com| 
- []
-
 Package epstopdf Info: Source file: <archOCR.eps>
 (epstopdf)                    date: 2014-10-13 12:20:56
 (epstopdf)                    size: 1912905 bytes
@@ -336,21 +332,22 @@ Package epstopdf Info: Source file: <archOCR.eps>
 (epstopdf)                    size: 60545 bytes
 (epstopdf)             Command: <repstopdf --outfile=archOCR-eps-converted-to.p
 df archOCR.eps>
-(epstopdf)             \includegraphics on input line 232.
+(epstopdf)             \includegraphics on input line 213.
 Package epstopdf Info: Output file is already uptodate.
+
 <archOCR-eps-converted-to.pdf, id=1, 669.50125pt x 265.99374pt>
 File: archOCR-eps-converted-to.pdf Graphic file (type pdf)
 
 <use archOCR-eps-converted-to.pdf>
-Package pdftex.def Info: archOCR-eps-converted-to.pdf used on input line 232.
+Package pdftex.def Info: archOCR-eps-converted-to.pdf used on input line 213.
 (pdftex.def)             Requested size: 505.90454pt x 216.81342pt.
 
-Overfull \hbox (1.90454pt too wide) in paragraph at lines 232--233
+Overfull \hbox (1.90454pt too wide) in paragraph at lines 213--214
  [][] 
  []
 
 
-Overfull \hbox (15.22672pt too wide) in paragraph at lines 241--242
+Overfull \hbox (15.22672pt too wide) in paragraph at lines 222--223
 []\T1/aer/m/n/9 The \T1/aer/bx/n/9 C\T1/aer/m/n/9 lassification of \T1/aer/bx/n
 /9 C\T1/aer/m/n/9 rowdsourced \T1/aer/bx/n/9 T\T1/aer/m/n/9 ext \T1/aer/bx/n/9 
 C\T1/aer/m/n/9 orrection (CCTC)
@@ -360,9 +357,12 @@ C\T1/aer/m/n/9 orrection (CCTC)
 
 
 ]
-Overfull \hbox (51.39822pt too wide) in paragraph at lines 260--270
+Overfull \hbox (51.39822pt too wide) in paragraph at lines 241--251
  [] 
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package epstopdf Info: Source file: <greyscale.eps>
 (epstopdf)                    date: 2014-10-12 21:10:29
@@ -372,13 +372,13 @@ Package epstopdf Info: Source file: <greyscale.eps>
 (epstopdf)                    size: 180923 bytes
 (epstopdf)             Command: <repstopdf --outfile=greyscale-eps-converted-to
 .pdf greyscale.eps>
-(epstopdf)             \includegraphics on input line 297.
+(epstopdf)             \includegraphics on input line 278.
 Package epstopdf Info: Output file is already uptodate.
-<greyscale-eps-converted-to.pdf, id=15, 1003.75pt x 567.11874pt>
+<greyscale-eps-converted-to.pdf, id=16, 1003.75pt x 567.11874pt>
 File: greyscale-eps-converted-to.pdf Graphic file (type pdf)
 
 <use greyscale-eps-converted-to.pdf>
-Package pdftex.def Info: greyscale-eps-converted-to.pdf used on input line 297.
+Package pdftex.def Info: greyscale-eps-converted-to.pdf used on input line 278.
 
 (pdftex.def)             Requested size: 216.79758pt x 122.85408pt.
 Package epstopdf Info: Source file: <correction.eps>
@@ -389,27 +389,56 @@ Package epstopdf Info: Source file: <correction.eps>
 (epstopdf)                    size: 390967 bytes
 (epstopdf)             Command: <repstopdf --outfile=correction-eps-converted-t
 o.pdf correction.eps>
-(epstopdf)             \includegraphics on input line 299.
+(epstopdf)             \includegraphics on input line 280.
 Package epstopdf Info: Output file is already uptodate.
 
-<correction-eps-converted-to.pdf, id=16, 1278.7775pt x 715.67375pt>
+<correction-eps-converted-to.pdf, id=17, 1278.7775pt x 715.67375pt>
 File: correction-eps-converted-to.pdf Graphic file (type pdf)
 
 <use correction-eps-converted-to.pdf>
-Package pdftex.def Info: correction-eps-converted-to.pdf used on input line 299
+Package pdftex.def Info: correction-eps-converted-to.pdf used on input line 280
 .
 (pdftex.def)             Requested size: 216.80392pt x 122.85323pt.
 
-Overfull \hbox (1.90715pt too wide) in paragraph at lines 312--324
+Overfull \hbox (1.90715pt too wide) in paragraph at lines 293--305
 \T1/aer/m/n/9 Features are crafted by com-put-ing the Lev-en-shtein
  []
 
 
-Overfull \hbox (3.97662pt too wide) in paragraph at lines 325--340
+Underfull \vbox (badness 1838) has occurred while \output is active []
+
+ [2 <./archOCR-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `Agrawal1994' on page \thepage  undefined on input line
+ 309.
+
+
+Overfull \hbox (15.09167pt too wide) in paragraph at lines 306--323
+\T1/aer/m/n/9 The cor-rected to-kens were fur-ther split into character-
+ []
+
+
+Overfull \hbox (6.49669pt too wide) in paragraph at lines 306--323
+\T1/aer/m/n/9 had same character-level cor-rec-tions in-di-cat-ing that
+ []
+
+
+Overfull \hbox (1.59203pt too wide) in paragraph at lines 306--323
+\T1/aer/m/n/9 3.7.10 was used to mine character-level rules. Min-
+ []
+
+
+Overfull \hbox (10.5233pt too wide) in paragraph at lines 306--323
+\T1/aer/m/n/9 con-trolled mea-sures like min-i-mum sup-port ($\OML/cmm/m/it/9 m
+insup$\T1/aer/m/n/9 )
+ []
+
+
+Overfull \hbox (3.97662pt too wide) in paragraph at lines 306--323
 \T1/aer/m/n/9 represents the prob-a-bil-ity that the trans-ac-tion con-
  []
 
-[2 <./archOCR-eps-converted-to.pdf>]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package epstopdf Info: Source file: <stat1edit.eps>
@@ -420,14 +449,14 @@ Package epstopdf Info: Source file: <stat1edit.eps>
 (epstopdf)                    size: 15298 bytes
 (epstopdf)             Command: <repstopdf --outfile=stat1edit-eps-converted-to
 .pdf stat1edit.eps>
-(epstopdf)             \includegraphics on input line 386.
+(epstopdf)             \includegraphics on input line 326.
 Package epstopdf Info: Output file is already uptodate.
 
 <stat1edit-eps-converted-to.pdf, id=27, 530.98375pt x 181.67876pt>
 File: stat1edit-eps-converted-to.pdf Graphic file (type pdf)
 
 <use stat1edit-eps-converted-to.pdf>
-Package pdftex.def Info: stat1edit-eps-converted-to.pdf used on input line 386.
+Package pdftex.def Info: stat1edit-eps-converted-to.pdf used on input line 326.
 
 (pdftex.def)             Requested size: 245.72197pt x 130.09059pt.
 Package epstopdf Info: Source file: <stat2copy.eps>
@@ -438,89 +467,187 @@ Package epstopdf Info: Source file: <stat2copy.eps>
 (epstopdf)                    size: 14197 bytes
 (epstopdf)             Command: <repstopdf --outfile=stat2copy-eps-converted-to
 .pdf stat2copy.eps>
-(epstopdf)             \includegraphics on input line 388.
+(epstopdf)             \includegraphics on input line 328.
 Package epstopdf Info: Output file is already uptodate.
 
 <stat2copy-eps-converted-to.pdf, id=28, 530.98375pt x 148.555pt>
 File: stat2copy-eps-converted-to.pdf Graphic file (type pdf)
 
 <use stat2copy-eps-converted-to.pdf>
-Package pdftex.def Info: stat2copy-eps-converted-to.pdf used on input line 388.
+Package pdftex.def Info: stat2copy-eps-converted-to.pdf used on input line 328.
 
 (pdftex.def)             Requested size: 238.49486pt x 122.86311pt.
  [3 <./greyscale-eps-converted-to.pdf> <./correction-eps-converted-to.pdf>]
-Overfull \hbox (12.12645pt too wide) in paragraph at lines 468--492
+Overfull \hbox (12.12645pt too wide) in paragraph at lines 475--499
 []$[]$  $[]$ 
  []
 
 
-Overfull \hbox (2.47147pt too wide) in paragraph at lines 496--497
+Overfull \hbox (2.47147pt too wide) in paragraph at lines 503--504
 \T1/aer/m/n/9 iden-ti-fied by the model as ``spell check",``addition", ``cap-
  []
 
 
-Overfull \hbox (1.82489pt too wide) in paragraph at lines 503--505
-\T1/aer/m/n/9 character-level. In case of au-to-mat-i-cally gen-er-ated charact
-er-
+Overfull \hbox (2.24759pt too wide) in paragraph at lines 510--512
+\T1/aer/m/n/9 The multi-class SVM al-go-rithm us-ing poly-no-mial ker-nel gives
+
  []
 
 
-Overfull \hbox (23.36032pt too wide) in paragraph at lines 554--554
-[]\secfnt INFORMATION RE-TRIEVAL TECH-NIQUES 
+Overfull \hbox (5.36887pt too wide) in paragraph at lines 510--512
+\T1/aer/m/n/9 the best re-sults in both the datasets, word-level and character-
+
  []
 
 [4 <./stat1edit-eps-converted-to.pdf> <./stat2copy-eps-converted-to.pdf>]
-Overfull \hbox (4.39816pt too wide) in paragraph at lines 593--596
+Overfull \hbox (23.36032pt too wide) in paragraph at lines 561--561
+[]\secfnt INFORMATION RE-TRIEVAL TECH-NIQUES 
+ []
+
+
+Overfull \hbox (4.39816pt too wide) in paragraph at lines 600--603
 \T1/aer/m/n/9 tio-nary to spellcheck mis-spelled OCR rec-og-nized words. They
  []
 
-[5]
-Overfull \hbox (3.09467pt too wide) in paragraph at lines 619--620
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+Overfull \hbox (3.09467pt too wide) in paragraph at lines 626--627
 []\T1/aer/m/n/9 The Cal-i-for-nia Dig-i-tal News-pa-per Col-lec-tion has an arc
 hive
  []
 
 
-Overfull \hbox (7.00793pt too wide) in paragraph at lines 619--620
-\T1/aer/m/n/9 sub-jected to OCR and is cur-rently stored in an on-line database
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
 
  []
 
+(./sig-alternate.bbl [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--626
+)
+Package epstopdf Info: Source file: <o_e.eps>
+(epstopdf)                    date: 2014-10-18 10:31:27
+(epstopdf)                    size: 267674 bytes
+(epstopdf)             Output file: <o_e-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-10-18 10:42:06
+(epstopdf)                    size: 22977 bytes
+(epstopdf)             Command: <repstopdf --outfile=o_e-eps-converted-to.pdf o
+_e.eps>
+(epstopdf)             \includegraphics on input line 990.
+Package epstopdf Info: Output file is already uptodate.
 
- []
+<o_e-eps-converted-to.pdf, id=57, 597.23125pt x 217.81375pt>
+File: o_e-eps-converted-to.pdf Graphic file (type pdf)
 
-(./sig-alternate.bbl [6]) [7] (./sig-alternate.aux) ) 
+<use o_e-eps-converted-to.pdf>
+Package pdftex.def Info: o_e-eps-converted-to.pdf used on input line 990.
+(pdftex.def)             Requested size: 361.3488pt x 130.08435pt.
+Package epstopdf Info: Source file: <b_h.eps>
+(epstopdf)                    date: 2014-10-18 10:33:24
+(epstopdf)                    size: 199910 bytes
+(epstopdf)             Output file: <b_h-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-10-18 10:44:06
+(epstopdf)                    size: 14265 bytes
+(epstopdf)             Command: <repstopdf --outfile=b_h-eps-converted-to.pdf b
+_h.eps>
+(epstopdf)             \includegraphics on input line 992.
+Package epstopdf Info: Output file is already uptodate.
+
+<b_h-eps-converted-to.pdf, id=58, 442.65375pt x 217.81375pt>
+File: b_h-eps-converted-to.pdf Graphic file (type pdf)
+
+<use b_h-eps-converted-to.pdf>
+Package pdftex.def Info: b_h-eps-converted-to.pdf used on input line 992.
+(pdftex.def)             Requested size: 361.37088pt x 130.08435pt.
+Package epstopdf Info: Source file: <u_n.eps>
+(epstopdf)                    date: 2014-10-18 10:30:27
+(epstopdf)                    size: 214871 bytes
+(epstopdf)             Output file: <u_n-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-10-18 10:43:31
+(epstopdf)                    size: 21071 bytes
+(epstopdf)             Command: <repstopdf --outfile=u_n-eps-converted-to.pdf u
+_n.eps>
+(epstopdf)             \includegraphics on input line 994.
+Package epstopdf Info: Output file is already uptodate.
+
+<u_n-eps-converted-to.pdf, id=59, 476.78125pt x 217.81375pt>
+File: u_n-eps-converted-to.pdf Graphic file (type pdf)
+
+<use u_n-eps-converted-to.pdf>
+Package pdftex.def Info: u_n-eps-converted-to.pdf used on input line 994.
+(pdftex.def)             Requested size: 361.36809pt x 130.08435pt.
+Package epstopdf Info: Source file: <I_i.eps>
+(epstopdf)                    date: 2014-10-18 10:34:26
+(epstopdf)                    size: 189349 bytes
+(epstopdf)             Output file: <I_i-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-10-18 10:45:11
+(epstopdf)                    size: 18786 bytes
+(epstopdf)             Command: <repstopdf --outfile=I_i-eps-converted-to.pdf I
+_i.eps>
+(epstopdf)             \includegraphics on input line 996.
+Package epstopdf Info: Output file is already uptodate.
+
+<I_i-eps-converted-to.pdf, id=60, 418.56375pt x 217.81375pt>
+File: I_i-eps-converted-to.pdf Graphic file (type pdf)
+
+<use I_i-eps-converted-to.pdf>
+Package pdftex.def Info: I_i-eps-converted-to.pdf used on input line 996.
+(pdftex.def)             Requested size: 361.35011pt x 130.08435pt.
+Package epstopdf Info: Source file: <l_i.eps>
+(epstopdf)                    date: 2014-10-18 10:32:30
+(epstopdf)                    size: 231152 bytes
+(epstopdf)             Output file: <l_i-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-10-18 10:46:42
+(epstopdf)                    size: 30304 bytes
+(epstopdf)             Command: <repstopdf --outfile=l_i-eps-converted-to.pdf l
+_i.eps>
+(epstopdf)             \includegraphics on input line 998.
+Package epstopdf Info: Output file is already uptodate.
+
+<l_i-eps-converted-to.pdf, id=61, 513.92pt x 217.81375pt>
+File: l_i-eps-converted-to.pdf Graphic file (type pdf)
+
+<use l_i-eps-converted-to.pdf>
+Package pdftex.def Info: l_i-eps-converted-to.pdf used on input line 998.
+(pdftex.def)             Requested size: 361.35695pt x 130.08435pt.
+
+
+LaTeX Warning: Float too large for page by 10.66771pt on input line 1001.
+
+[7] [8 <./o_e-eps-converted-to.pdf> <./b_h-eps-converted-to.pdf> <./u_n-eps-con
+verted-to.pdf> <./I_i-eps-converted-to.pdf> <./l_i-eps-converted-to.pdf>]
+(./sig-alternate.aux) ) 
 Here is how much of TeX's memory you used:
- 3635 strings out of 493315
- 50577 string characters out of 6137903
- 121170 words of memory out of 5000000
- 6999 multiletter control sequences out of 15000+600000
+ 3666 strings out of 493315
+ 51245 string characters out of 6137903
+ 122210 words of memory out of 5000000
+ 7025 multiletter control sequences out of 15000+600000
  53173 words of font info for 70 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,11n,38p,2240b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/t
-exmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2013/texmf-dist/fonts/
-type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2013/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2013/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmti9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helve
-tic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhv
-r8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
-usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/
-texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sig-alternate.pdf (7 pages, 878879 bytes).
+ 41i,12n,38p,2240b,377s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base
+/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti
+10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/
+cmex9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi5.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.
+pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></
+usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></us
+r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/
+local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/lo
+cal/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-d
+ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/urw/times/utmri8a.pfb>
+Output written on sig-alternate.pdf (8 pages, 976713 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 136 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
