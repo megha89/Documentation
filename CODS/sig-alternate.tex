@@ -313,7 +313,20 @@ represents the percentage of transactions from the transaction database that con
 Confidence(X$\rightarrow$Y) = P(Y|X)\\ 
 represents the probability that the transaction containing X also contains Y.
 In our case, the value of $minconf$ and the the lower bound $minsup$ was set to $0.0001$, and the upper bound of $minsup$ was set to $1$. The upper bound of $minsup$ was iteratively decreased by a factor of $delta$ until either the lower bound of $minsup$ was reached or the required number of rules were generated.\\
-The number of features and instances are $6631$ and $3351$ respectively in the character-level data set.
+The number of features and instances are $6631$ and $3351$ respectively in the character-level data set.\\
+\textbf{Example rules mined from the character level data}
+
+\begin{itemize}
+\item old=b ==> new=h
+\item old=J  ==> new=j
+\item old=K ==> new=R
+ \item old=0 ==> new=6
+\item old=G ==> new=6
+\end{itemize}
+
+The above examples show that the old character is corrected to a new character by the patrons. As can be seen, the transformations done by the OCR device were very close to the original word, for example, character `h' can be easily misinterpreted as character `b' by the device.
+
+
 %\begin{figure*}[t]
 %\centering
 %\includegraphics[width=0.9\textwidth]{./image/flowchartnew.jpg}
