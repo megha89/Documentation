@@ -62,7 +62,7 @@
 %Format\titlenote{(Produces the permission block, and
 %copyright information). For use with
 %SIG-ALTERNATE.CLS. Supported by ACM.}}
-\title{ A System for Classification of Crowdsourced Text Correction (CCTC)}
+\title{A System for Classification of Crowdsourced Text Correction (CCTC)}
 
 %\subtitle{[Extended Abstract]
 %\titlenote{A full version of this paper is available as
@@ -158,7 +158,7 @@ This prototype system is expected to be deployed on historical newspaper archive
 %
 %\terms{Theory}
 %
-%\keywords{OCR, classification, crowdsourced text correction}
+\keywords{OCR error classification, crowdsourced text correction, multi class SVM}
 
 \section{Introduction}
 %The \textit{proceedings} are the records of a conference.
@@ -577,14 +577,14 @@ For linear kernels, $SVM^{multiclass}$V2.20 is very fast and runtime scales line
 \label{ir}
 The following details are relevant: 
 
-\noindent \textbf{Query Set:} To measure the retrieval effectiveness of the corrected text versus the garbled OCR, a list of 20 keywords for search was prepared by randomly sampling from the corrected words. The table~\ref{table:keywords} (See Appendix) presents the list of 20 keywords that were used to analyse the retrieval effectiveness of raw OCR versus corrected OCR text.
+\noindent \textbf{Query Set:} To measure the retrieval effectiveness of the corrected text versus the garbled OCR, a list of $23$ keywords for search was prepared by randomly sampling from the corrected words. The table~\ref{table:keywords} (See Appendix) presents the list of keywords that were used to analyse the retrieval effectiveness of raw OCR versus corrected OCR text.
 
 \noindent \textbf{Software:} PyLucene 3.6.2, a Python extension for accessing Java Apache Lucene was used as an IR software library for enabling full text indexing and search capabilites. Inverted indices are built for both the original and corrected corpus. Keywords from the query set are tested on both corpora and documents containing words in the query set are retrieved. The documents are ranked according to the frequency of the keyword present -- higher the frequency, higher the rank.
 
 \noindent \textbf{Evaluation:} The main aim of this system is to improve the quality of text for use with an IR system. The metric used for evaluation here is mean reciprocal rank (MRR) \cite{manning2008introduction} which produces a list of possible ranked responses to a sample of queries, Q. The reciprocal rank is the multiplicative inverse of the rank of the first correct answer. The first correct answer is decided by the users. The average of the reciprocal ranks over a sample of queries is the mean reciprocal rank.
 MRR = $\frac{1}{|Q|} \sum_{i = 1}^{|Q|} \frac{1}{rank_{i}}$
 
-The same set of queries were applied on both the datasets, that is raw OCR and corrected OCR individually. For each of the of $20$ queries, we chose the most relevant document from the retrieved results and observed the rank of the most relevant document in both the set of results. The MRR for the raw OCR data was noted to be $0.355$ whereas for corrected data it was $0.65415$. The higher value of MRR denotes that relevant results get higher priority in corrected corpus. The metric MRR was chosen because it did not require relevance feedback from the users as in precision/recall \cite{manning2008introduction}.
+The same set of queries were applied on both the datasets, that is raw OCR and corrected OCR individually. For each of the of $23$ queries, we chose the most relevant document from the retrieved results and observed the rank of the most relevant document in both the set of results. The MRR for the raw OCR data was noted to be $0.352$ whereas for corrected data it was $0.629$. The higher value of MRR denotes that relevant results get higher priority in corrected corpus. The metric MRR was chosen because it did not require relevance feedback from the users as in precision/recall \cite{manning2008introduction}.
 
  
 %\noindent \textbf{Evaluation:} The main aim of this system is to improve the quality of text for use with an IR system. The metric used for our evaluation include the standard IR techniques of recall and precision. Recall is defined as the ratio of number of relevant documents returned to the total number of relevant documents for a query, in the collection. Precision is defined as the ratio of number of relevant documents returned to the total number of documents returned for a given query. The document to query relevance is manually determined by other computer science students. The table shows the precision at ten standard recall points for corrected OCR text over the raw OCR text.  
@@ -745,6 +745,9 @@ This work is supported by funding from the National Endowment for Humanities, Gr
 18 & sheep \\
 19 & aces \\
 20 & controlled \\
+21 & Telephone \\
+22 & character \\
+23 & attended \\
 \hline
 \end{tabular}
 \caption{List of keywords containing upper and lower case words, randomly sampled from the corrected corpus are used for testing the information retrieval techniques.}
