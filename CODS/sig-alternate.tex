@@ -62,7 +62,7 @@
 %Format\titlenote{(Produces the permission block, and
 %copyright information). For use with
 %SIG-ALTERNATE.CLS. Supported by ACM.}}
-\title{ Classification of Crowdsourced Text Correction}
+\title{ A System for Classification of Crowdsourced Text Correction (CCTC)}
 
 %\subtitle{[Extended Abstract]
 %\titlenote{A full version of this paper is available as
@@ -204,9 +204,8 @@ The OCR scanning process is far from perfect and the documents generated from it
 
 The study used log files generated from text correction software in use at the California Digital Newspaper Collection (CDNC)\footnote{http://cdnc.ucr.edu/cgi-bin/cdnc}, which contains over 400,000 pages of newspapers published in California between 1846-1922. 
 %To date, the archive has approximately 1680 registered users who have corrected close to 2 million lines of text. 
-%The corrections are primarily categorized as changes in spellings, punctuation rectification, addition of content or capitalization. A semi-automatic engine for classifying corrections based on support vector machines is designed.  
-To the best of our knowledge, this is the first attempt to statistically analyze and model OCR error corrections provided by the crowd. We posit that such a classification system will be beneficial when attempting to compensate the annotators; it can also be used for task allocation if some users are more comfortable with certain type of corrections than others.
-
+%The corrections are primarily categorized as changes in spellings, punctuation rectification, addition of content or capitalization. A semi-automatic engine for classifying corrections based on support vector machines is designed.
+The work done on reCAPTCHA \cite{von2008recaptcha} channelizes the old printed text which OCR devices failed to recognize. This work aims to correct the the printed books with high accuracy apart from differentiating between computers and humans by asking users to correct suspicious distorted words. To the best of our knowledge, this is the first attempt to statistically analyze, model and classify OCR error corrections provided by the crowd. We posit that such a classification system will be beneficial when attempting to compensate the annotators; it can also be used for task allocation if some users are more comfortable with certain type of corrections than others. 
 %In a bid to serve its patrons better, the CDNC crowdsourced the cleaning of OCR text. To date..
 \begin{figure*}[t]
 \centering
@@ -244,7 +243,8 @@ Figure~\ref{fig:T1}a shows an example of a scanned page from ``The Amador Ledger
 \textless NewTextValue\textgreater \textbf{Union Stables}\textless /NewTextValue\textgreater \\
 \textless /TextCorrectedLine\textgreater \\
 \textless TextCorrectedLine lineID="P2\_TL00801"\textgreater \\
-\textless OldTextValue\textgreater \textbf{**?�** Under Webb Hall *}\textless/OldTextValue\textgreater \\
+\textless OldTextValue\textgreater \textbf{**?�** Under Webb Hall *}\\
+\textless/OldTextValue\textgreater \\
 \textless NewTextValue\textgreater \textbf{Under Webb Hall} \textless/NewTextValue\textgreater \\
 \textless /TextCorrectedLine\textgreater \\
 \end{tabular}
@@ -290,7 +290,8 @@ Figure~\ref{fig:T1}a shows an example of a scanned page from ``The Amador Ledger
 \begin{itemize}
 \item \textbf{Tokenizer: } The old text and the corresponding new text from the log file is tokenized by white-spaces. There are 44,022 tokens of which 21,108 are corrected by the annotators.
 
-\item \textbf{Feature Constructor }\\ 
+\item \textbf{Feature Constructor }\\
+Two different kinds of features are generated from the raw text - (1) word level and (2) character level features. Word level features are carefully crafted by hand and form the baseline for the classification task described in item~\ref{itm:mod} of Section~\ref{arch}. Character level features are automatically generated from the text corrections using machine learning algorithms. We believe these character level features will help us understand the process of automation and classification of user corrections.\\
 \textbf{Word-level feature construction:}\\
 Features are crafted by computing the Levenshtein edit distance between the old word and its correction. The Levenshtein edit distance \cite{Wagner_74} is defined as the minimum number of single edit operations (insertions, deletions and substitutions) required to convert one string into another. Six binary features are generated as follows: 
 (a) \textbf{Difference Length Zero} : $1$, if both the old word and new word have same length and $0$ otherwise. 
@@ -304,14 +305,14 @@ Features are crafted by computing the Levenshtein edit distance between the old 
 (f) \textbf{Punctuation Difference}: 1, if both the old text and new text differ in any of the following punctuation marks (!"\#\$\%\&'*+,-./:;\textless=\textgreater?@[$\backslash$]\^\_`\{\textbar\}\textasciitilde).
 
 \textbf{Character-level feature construction:}\\
-The tokenization process of the text in the log files was modified to enable the addition and deletion classification of text using a character. If the text was deleted by the user as a part of correction process then the character ``$\sim$" was assigned to the new token denoting that the user performed the task of deleting the OCR garbled text whereas if the user added a new text  then the character ``+" was assigned to the old token denoting that user added text that was initially missing in the OCR data.\\
-The corrected tokens were further split into character-level data thereby contributing $58,963$ instances. Of $58,963$ instances, we encountered that $55,612$ had same character-level corrections indicating that the OCR makes the same type of mistakes repeatedly. The maximum number of redundant corrections noted were deletion of punctuations and special characters. There were $4344$ deletions of comma, $2831$ deletions of $\ddot{A}$. Amongst character to character corrections, $635$ cases of o$\rightarrow$e, $470$ cases of b$\rightarrow$h, 299 cases of u$\rightarrow$n contributed maximum to the redundancy. The first graph in figure ~\ref{fig:o_e}(See Appendix) shows that the total corrections from the original word ``tbe" to the corrected word ``the" are $269$. 
-The x-axis in the graph denotes the examples of character-level corrections whereas the y-axis denotes the number of corrections made on the examples in the entire corpus. In order to test the performance of the manually crafted (word-level) features of the dataset, we used association rule mining algorithm to generate rules. Hence, the character-level feature construction acts as a baseline method.\\
+The tokenization process of the text in the log files was done at the character level. If the text was deleted by the user as a part of correction process then the character ``$\sim$" represented the new character denoting that the user performed the task of deletion, for example, t $\rightarrow$ $\sim$ means that the user deleted character ``t" from the old token. Whereas if the user added a new text  then the character ``+" represented that the user added text that was initially missing in the OCR data, for example + $\rightarrow$ o means that the user added character ``o" as a part of correction process. \\
+The character-level dataset consists of $58,963$ instances of which we encountered that $55,612$ had same character-level corrections indicating that the OCR makes the same type of mistakes repeatedly. The maximum number of redundant corrections noted were deletion of punctuations and special characters. There were $4344$ deletions of comma, $2831$ deletions of $\ddot{A}$. Amongst character to character corrections, $635$ cases of o$\rightarrow$e, $470$ cases of b$\rightarrow$h, 299 cases of u$\rightarrow$n contributed maximum to the redundancy. The first graph in figure ~\ref{fig:o_e}(See Appendix) shows that the total corrections from the original word ``tbe" to the corrected word ``the" are $269$. 
+The x-axis in the graph denotes the examples of character-level corrections whereas the y-axis denotes the number of corrections made on the examples in the entire corpus. The performance of the proposed character level feature dataset was compared against the baseline method of manually crafted word level dataset.\\
 Apriori algorithm \cite{Agrawal1994} implementation of WEKA 3.7.10 was used to mine character-level rules. Mining association rules is to discover all the strong rules in the database using different measures of interestingness. To select interesting rules from the total set of possible rules, we use some user controlled measures like minimum support ($minsup$) and minimum confidence ($minconf$). They are formally defined as follows. \\
 Support(X$\rightarrow$Y) = P(X $\cup$ Y)\\
-represents the percentage of transactions from the transaction database that contains both X and Y.\\
+represents the percentage of instances from the database that contains both X and Y.\\
 Confidence(X$\rightarrow$Y) = P(Y|X)\\ 
-represents the probability that the transaction containing X also contains Y.
+represents the probability that the instance containing X also contains Y.
 In our case, the value of $minconf$ and the the lower bound $minsup$ was set to $0.0001$, and the upper bound of $minsup$ was set to $1$. The upper bound of $minsup$ was iteratively decreased by a factor of $delta$ until either the lower bound of $minsup$ was reached or the required number of rules were generated.\\
 The number of features and instances are $6631$ and $3351$ respectively in the character-level data set.\\
 \textbf{Example rules mined from the character level data}
@@ -324,7 +325,7 @@ The number of features and instances are $6631$ and $3351$ respectively in the c
 \item old=G ==> new=6
 \end{itemize}
 
-The above examples show that the old character is corrected to a new character by the patrons. As can be seen, the transformations done by the OCR device were very close to the original word, for example, character `h' can be easily misinterpreted as character `b' by the device.
+The above examples show that the old character is corrected to a new character by the patrons. As can be seen, the transformations done by the OCR device were very close to the original word, for example, character `h' can be easily misinterpreted as character `b'.
 
 
 %\begin{figure*}[t]
@@ -447,7 +448,7 @@ Total & 21108 \\
 
 
 
-\item \textbf{Model Construction: } The model for classifying crowdsourced text correction is built using a Multiclass Support Vector Machine algorithm \cite{Tsochantaridis_2004}. Each training point belongs to one of $k$ different classes. The goal is to construct a function, which given a new data point, will correctly predict the class to which it belongs.
+\item \label{itm:mod} \textbf{Model Construction: } The model for classifying crowdsourced text correction is built using a Multiclass Support Vector Machine algorithm \cite{Tsochantaridis_2004}. Each training point belongs to one of $k$ different classes. The goal is to construct a function, which given a new data point, will correctly predict the class to which it belongs.
 Different methods have been proposed in literature for solving the SVM multi-class classification problem. Some popular techniques include: a) \textit{One-Versus-All (OVA) classification} Build $k$ different binary classifiers; for the $i^{th}$ classifier, let the positive examples be all points in class $i$ and negative examples not in class $i$. Let $f(x) = \text{arg } max_i f_i(x) $.  b) \textit{one-versus-one} uses the majority voting strategy where each classifier assigns the new instance one of two classes. The class with the majority votes is assigned to the instance.
 %%It generates k(k-2)/2 models for a k class problem. This approach is not practical for large-scale classification because of the memory required for storing k(k-1)/2 models.
 %c) \textit{Directed Acyclic Graph SVM} in its training phase, it is the same as the one-vs-one method. However, in the testing phase, it uses a rooted binary directed acyclic graph which has k(k-1)/2 internal nodes and k leaves. 
@@ -476,7 +477,7 @@ c) Radial Basis Kernel : $K(x,y) = exp(-\lvert \lvert x-y\rvert\rvert^{2}/2\sigm
 \caption{Results using linear kernel}
 \begin{tabular}{|lllll|}
 \hline
-C &$AE_{b}$&$AE_{p}$&$AT_{b}$&$AT_{p}$\\
+C &$AE_{p}$&$AE_{b}$&$AT_{p}$&$AT_{b}$\\
 \hline
 .0001&99.43$\pm .09$&49.47$\pm0.25$&1.268$\pm.06$&0.11$\pm.01$\\
 .1&99.43$\pm .09$&49.464$\pm .47$&2.512$\pm0.01$&0.061$\pm0.01$\\
@@ -495,13 +496,13 @@ C &$AE_{b}$&$AE_{p}$&$AT_{b}$&$AT_{p}$\\
 \hline
 &Polynomial&&RBF&\\
 \cline{2-5}
-C&$AE_{b}$ & $AE_{p}$&$AE_{b}$&$AE_{p}$\\
+C&$AE_{p}$ & $AE_{b}$&$AE_{p}$&$AE_{b}$\\
 \hline
 .0001&42$\pm.13$&50$\pm.47$&63$\pm.15$&27$\pm.5$\\
 100&42$\pm.13$&.33$\pm.2$&63$\pm.16$&3$\pm.4$\\
 1000&42$\pm.13$&0$\pm0$&63$\pm.16$&1.7$\pm.2$\\
 \hline
-C&$AT_{b}$ & $AT_{p}$ &$AT_{b}$ & $AT_{p}$ \\
+C&$AT_{p}$ & $AT_{b}$ &$AT_{p}$ & $AT_{b}$ \\
  \hline
 .0001&37$\pm1.4$&10$\pm0.2$&25$\pm0.7$&6$\pm0.2$\\
 100&326$\pm11.8$&1239$\pm118$&$540\pm110$&404$\pm34$\\
@@ -520,8 +521,8 @@ C&$AT_{b}$ & $AT_{p}$ &$AT_{b}$ & $AT_{p}$ \\
 
 \section{Empirical Evaluation}
 \label{sec:evaluation}
-
-The experiments are performed on two machines, one of which is a linux HPC cluster with 20 CPU(s) and 10 cores per socket, 99GB RAM and 2.50GHz of processor speed and the other a dual core mac machine with Intel Core i7 processor, 8GB RAM and 2.9 GHz of processor speed. In these experiments, the regularization parameter $C$ is varied from $0.0001$ to $10000$ for the linear kernel. The performance of the algorithm is evaluated using 10-fold cross validation technique. The \textbf{A}verage loss \textbf{E}rror (AE) and  \textbf{A}verage running \textbf{T}ime (AT) from cross validation for baseline (character-level) and proposed (word-level) dataset respectively are represented as $AE_{b}$, $AE_{p}$. Table ~\ref{table: error} shows the result of the experiment, error and running time (cpu seconds) using linear kernel for different values of $C$. Table~\ref{table: kernels} shows the result of the experiment, error and running time (cpu minutes) using polynomial and radial basis kernel.\\
+The goal of our experiments is to understand whether character level features or word level features are better predictors of the class of text correction.
+The experiments are performed on a linux HPC cluster with 20 CPU(s) and 10 cores per socket, 99GB RAM and 2.50GHz of processor speed. In these experiments, the regularization parameter $C$ is varied from $0.0001$ to $10000$ for the linear kernel. The performance of the algorithm is evaluated using 10-fold cross validation technique. The \textbf{A}verage (loss) \textbf{E}rror (AE) and  \textbf{A}verage (running) \textbf{T}ime (AT) from cross validation for baseline (word-level) and proposed (character-level) dataset respectively are represented as $AE_{b}$, $AE_{p}$. Table ~\ref{table: error} shows the result of the experiment, error and running time (cpu seconds) using linear kernel for different values of $C$. Table~\ref{table: kernels} shows the result of the experiment, error and running time (cpu minutes) using polynomial and radial basis kernel. As it can be seen from the results, the word level features perform better than the character level.\\
 The multi-class SVM algorithm using polynomial kernel gives the best results in both the datasets, word-level and character-level. In case of automatically generated character-level dataset, the performance of the algorithm does not improve by varying the regularization constant in contrast to the performance of the manually crafted word-level dataset. In case of word-level dataset, as the value of regularization constant increases, the average loss of the learning model decreases. However, the time taken to train the model is considerably high. It must also be noted that one can learn less accurate but faster models with linear or RBF kernels. Thus, it may be useful to consider a trade-off between accuracy of learnt models versus time taken for classification in large scale deployments.
  
 The code used to build the prototype system along with data generated are available at the github account\footnote{https://github.com/megha89/}. It must be noted that the $SVM^{multiclass}$V2.2 package \cite{algo} was used for the implementation of Multi-class SVMs. 
@@ -572,7 +573,7 @@ For linear kernels, $SVM^{multiclass}$V2.20 is very fast and runtime scales line
 %\subsection{Discussion}
 %\subsection{Known Defects}
 %The \cite{algo} algorithm converges quickly for linear type kernel but the its performance on test set is poor. For non linear kernels, this algorithm does not scale well for large scale datasets but gives better performance than linear kernels.
-\section{Information Retrieval Techniques}
+\section{Information Retrieval \\Techniques}
 \label{ir}
 The following details are relevant: 
 
@@ -998,10 +999,10 @@ This work is supported by funding from the National Endowment for Humanities, Gr
 \appendix
 %Appendix A
 
-\section{Tables}
+%\section{Tables}
 \begin{table*}[ht]
 \centering
-\caption{List of keywords}
+\caption{List of keywords containing upper and lower case words, randomly sampled from the corrected corpus are used for testing the information retrieval techniques.}
 \begin{tabular}{| l | l |}
 \hline
  S.no  & Keywords\\
@@ -1031,40 +1032,40 @@ This work is supported by funding from the National Endowment for Humanities, Gr
 \end{table*}
 
 
-\section{Graphs}
+%\section{Graphs}
 \begin{figure*}[ht]
 \centering
 \epsfig{file=o_e.eps, height= 2.2 in,width= 5.5 in}
 \label{fig:o_e}
-\caption{Examples of o $\rightarrow$ e corrections}
+\caption{Examples of o $\rightarrow$ e corrections, (tho,the; ho,he; boon,been; stato,state; camo,came; estato,estate; Now,New; mooting,meeting; throe,three; loader,leader; borno,borne, foet,feet; juno,june; hoar,hear; capturod,captured; uniquo,unique; lecturo,lecture; diod,died; wheoler,wheeler; onco,once; utroot,street; mado,made; phono,phone)}
 \end{figure*}
 
 \begin{figure*}[ht]
 \centering
 \epsfig{file=b_h.eps, height= 2 in,width= 5.2 in}
 \label{fig:b_h}
-\caption{Examples of b $\rightarrow$ h corrections}
+\caption{Examples of b $\rightarrow$ h corrections, (tbe,the; tbat,that; bis,his; tbey,they; McCullougb,McCullough; tbis,this; tbere,there; beeober,beecher; banger,hanger)}
 \end{figure*}
 
 \begin{figure*}[ht]
 \centering
 \epsfig{file=u_n.eps, height= 2 in,width= 5.2 in}
 \label{fig:u_n}
-\caption{Examples of u $\rightarrow$ n corrections}
+\caption{Examples of u $\rightarrow$ n corrections, (aud,and; theu,then; auy,any; frieuds,friends; wheu,when; laud,land; haud,hand; uunanimous,unanimous; natiou,nation; oue,one; ouly,only; mau,man; hiuts,hints; uight,night; kuown,known; ou,on; fraucisci,francisci; iuform,inform; maiu,main)}
 \end{figure*}
 
 \begin{figure*}[ht]
 \centering
 \epsfig{file=I_i.eps, height= 2 in,width= 5.2 in}
 \label{fig:I_i}
-\caption{Examples of I $\rightarrow$ i corrections}
+\caption{Examples of I $\rightarrow$ i corrections, (In,in; Is,is; It,it; Innocent,innocent; Idiosyncrasies,idiosyncrasies; Indulgence,indulgence; Irresist, irresist; Insulting,insulting, Incurred,incurred; Indebtedness,indebtedness; Iron,iron; Idea,idea)}
 \end{figure*}
 
 \begin{figure*}[ht]
 \centering
 \epsfig{file=l_i.eps, height= 2 in,width= 5.2 in}
 \label{fig:l_i}
-\caption{Examples of l $\rightarrow$ i corrections}
+\caption{Examples of l $\rightarrow$ i corrections, (l,It; wurnlns,warning; l'-ililng,Repairing; fiprlng,spring; ovenlnga,evenings; Iluildlng,builing; Wilmerdlng,Wilmerding; reaohlng,reaching; Nevln,Nevin; Msln,Main; Marlni,Marini; LeMoln,LeMoin; Alnus,Ainus; Adellna,Adelina; Gulzot,Guizot; rcslstino,resisting; splnsterhood,spinsterhood; Camlnettl,Caminetti)}
 \end{figure*}
 
 

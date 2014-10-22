@@ -163,6 +163,12 @@ L.~von Ahn and L.~Dabbish.
 \newblock {\em In {\em Proceedings of the SIGCHI conference on Human factors in
   computing systems}, CHI '04}, pages 319--326, 2004.
 
+\bibitem{von2008recaptcha}
+L.~Von~Ahn, B.~Maurer, C.~McMillen, D.~Abraham, and M.~Blum.
+\newblock {reCAPTCHA}: Human-based character recognition via web security
+  measures.
+\newblock {\em Science}, 321(5895):1465--1468, 2008.
+
 \bibitem{vonAhn_08}
 L.~von Ahn, B.~Maurer, C.~Mcmillen, D.~Abraham, and M.~Blum.
 \newblock {reCAPTCHA: Human-based character recognition via web security
