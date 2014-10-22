@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  22 OCT 2014 18:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  22 OCT 2014 22:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -405,6 +405,11 @@ Overfull \hbox (1.90715pt too wide) in paragraph at lines 293--306
  []
 
 [2 <./archOCR-eps-converted-to.pdf>]
+Overfull \hbox (1.66422pt too wide) in paragraph at lines 307--319
+\T1/aer/m/n/9 dataset was com-pared against the base-line method
+ []
+
+
 Overfull \hbox (1.59203pt too wide) in paragraph at lines 307--319
 \T1/aer/m/n/9 3.7.10 was used to mine character-level rules. Min-
  []
@@ -468,14 +473,14 @@ Package epstopdf Info: Source file: <o_e.eps>
 (epstopdf)                    size: 22977 bytes
 (epstopdf)             Command: <repstopdf --outfile=o_e-eps-converted-to.pdf o
 _e.eps>
-(epstopdf)             \includegraphics on input line 1038.
+(epstopdf)             \includegraphics on input line 756.
 Package epstopdf Info: Output file is already uptodate.
 
 <o_e-eps-converted-to.pdf, id=49, 597.23125pt x 217.81375pt>
 File: o_e-eps-converted-to.pdf Graphic file (type pdf)
 
 <use o_e-eps-converted-to.pdf>
-Package pdftex.def Info: o_e-eps-converted-to.pdf used on input line 1038.
+Package pdftex.def Info: o_e-eps-converted-to.pdf used on input line 756.
 (pdftex.def)             Requested size: 397.49097pt x 158.99272pt.
 Package epstopdf Info: Source file: <b_h.eps>
 (epstopdf)                    date: 2014-10-18 10:33:24
@@ -485,14 +490,14 @@ Package epstopdf Info: Source file: <b_h.eps>
 (epstopdf)                    size: 14265 bytes
 (epstopdf)             Command: <repstopdf --outfile=b_h-eps-converted-to.pdf b
 _h.eps>
-(epstopdf)             \includegraphics on input line 1045.
+(epstopdf)             \includegraphics on input line 763.
 Package epstopdf Info: Output file is already uptodate.
 
 <b_h-eps-converted-to.pdf, id=50, 442.65375pt x 217.81375pt>
 File: b_h-eps-converted-to.pdf Graphic file (type pdf)
 
 <use b_h-eps-converted-to.pdf>
-Package pdftex.def Info: b_h-eps-converted-to.pdf used on input line 1045.
+Package pdftex.def Info: b_h-eps-converted-to.pdf used on input line 763.
 (pdftex.def)             Requested size: 375.82516pt x 144.53854pt.
 Package epstopdf Info: Source file: <u_n.eps>
 (epstopdf)                    date: 2014-10-18 10:30:27
@@ -502,14 +507,14 @@ Package epstopdf Info: Source file: <u_n.eps>
 (epstopdf)                    size: 21071 bytes
 (epstopdf)             Command: <repstopdf --outfile=u_n-eps-converted-to.pdf u
 _n.eps>
-(epstopdf)             \includegraphics on input line 1052.
+(epstopdf)             \includegraphics on input line 770.
 Package epstopdf Info: Output file is already uptodate.
 
 <u_n-eps-converted-to.pdf, id=51, 476.78125pt x 217.81375pt>
 File: u_n-eps-converted-to.pdf Graphic file (type pdf)
 
 <use u_n-eps-converted-to.pdf>
-Package pdftex.def Info: u_n-eps-converted-to.pdf used on input line 1052.
+Package pdftex.def Info: u_n-eps-converted-to.pdf used on input line 770.
 (pdftex.def)             Requested size: 375.82368pt x 144.53854pt.
 Package epstopdf Info: Source file: <I_i.eps>
 (epstopdf)                    date: 2014-10-18 10:34:26
@@ -519,14 +524,14 @@ Package epstopdf Info: Source file: <I_i.eps>
 (epstopdf)                    size: 18786 bytes
 (epstopdf)             Command: <repstopdf --outfile=I_i-eps-converted-to.pdf I
 _i.eps>
-(epstopdf)             \includegraphics on input line 1059.
+(epstopdf)             \includegraphics on input line 777.
 Package epstopdf Info: Output file is already uptodate.
 
 <I_i-eps-converted-to.pdf, id=52, 418.56375pt x 217.81375pt>
 File: I_i-eps-converted-to.pdf Graphic file (type pdf)
 
 <use I_i-eps-converted-to.pdf>
-Package pdftex.def Info: I_i-eps-converted-to.pdf used on input line 1059.
+Package pdftex.def Info: I_i-eps-converted-to.pdf used on input line 777.
 (pdftex.def)             Requested size: 375.80334pt x 144.53854pt.
 Package epstopdf Info: Source file: <l_i.eps>
 (epstopdf)                    date: 2014-10-18 10:32:30
@@ -536,17 +541,17 @@ Package epstopdf Info: Source file: <l_i.eps>
 (epstopdf)                    size: 30304 bytes
 (epstopdf)             Command: <repstopdf --outfile=l_i-eps-converted-to.pdf l
 _i.eps>
-(epstopdf)             \includegraphics on input line 1066.
+(epstopdf)             \includegraphics on input line 784.
 Package epstopdf Info: Output file is already uptodate.
 
 <l_i-eps-converted-to.pdf, id=53, 513.92pt x 217.81375pt>
 File: l_i-eps-converted-to.pdf Graphic file (type pdf)
 
 <use l_i-eps-converted-to.pdf>
-Package pdftex.def Info: l_i-eps-converted-to.pdf used on input line 1066.
+Package pdftex.def Info: l_i-eps-converted-to.pdf used on input line 784.
 (pdftex.def)             Requested size: 375.80934pt x 144.53854pt.
 
-Underfull \hbox (badness 1043) in paragraph at lines 1068--1068
+Underfull \hbox (badness 1043) in paragraph at lines 785--785
 []\T1/aer/bx/n/9 Figure 7: Ex-am-ples of l $\OMS/cmsy/m/n/9 !$ \T1/aer/bx/n/9 i
  cor-rec-tions, (l,It; wurnlns,warning; l'-ililng,Repairing; fiprlng,spring;
  []
@@ -555,10 +560,10 @@ Underfull \hbox (badness 1043) in paragraph at lines 1068--1068
 -converted-to.pdf> <./I_i-eps-converted-to.pdf> <./l_i-eps-converted-to.pdf>]
 (./sig-alternate.aux) ) 
 Here is how much of TeX's memory you used:
- 3656 strings out of 493315
- 50946 string characters out of 6137903
- 124210 words of memory out of 5000000
- 7017 multiletter control sequences out of 15000+600000
+ 3657 strings out of 493315
+ 50976 string characters out of 6137903
+ 124214 words of memory out of 5000000
+ 7018 multiletter control sequences out of 15000+600000
  53173 words of font info for 70 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,38p,2240b,373s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -579,7 +584,7 @@ live/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/20
 13/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on sig-alternate.pdf (9 pages, 956600 bytes).
+Output written on sig-alternate.pdf (9 pages, 956865 bytes).
 PDF statistics:
  131 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream

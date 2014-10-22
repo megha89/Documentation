@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: sig-alternate.aux
 The style file: abbrv.bst
 Database file #1: sig-alternate.bib
-You've used 33 entries,
+You've used 34 entries,
             2118 wiz_defined-function locations,
-            699 strings with 9388 characters,
-and the built_in function-call counts, 10714 in all, are:
-= -- 1055
-> -- 474
+            704 strings with 9555 characters,
+and the built_in function-call counts, 11000 in all, are:
+= -- 1080
+> -- 492
 < -- 10
-+ -- 190
-- -- 154
-* -- 660
-:= -- 1738
-add.period$ -- 94
-call.type$ -- 33
-change.case$ -- 175
++ -- 197
+- -- 160
+* -- 678
+:= -- 1789
+add.period$ -- 97
+call.type$ -- 34
+change.case$ -- 180
 chr.to.int$ -- 0
-cite$ -- 33
-duplicate$ -- 428
-empty$ -- 871
-format.name$ -- 154
-if$ -- 2292
+cite$ -- 34
+duplicate$ -- 440
+empty$ -- 893
+format.name$ -- 160
+if$ -- 2351
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 27
-newline$ -- 161
-num.names$ -- 66
-pop$ -- 203
+int.to.str$ -- 34
+missing$ -- 29
+newline$ -- 166
+num.names$ -- 68
+pop$ -- 212
 preamble$ -- 1
-purify$ -- 143
+purify$ -- 148
 quote$ -- 0
-skip$ -- 362
+skip$ -- 368
 stack$ -- 0
-substring$ -- 612
-swap$ -- 116
+substring$ -- 617
+swap$ -- 117
 text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 130
+type$ -- 132
 warning$ -- 0
-while$ -- 106
-width$ -- 35
-write$ -- 348
+while$ -- 108
+width$ -- 36
+write$ -- 359

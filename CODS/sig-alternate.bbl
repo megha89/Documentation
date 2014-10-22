@@ -110,6 +110,11 @@ Y.~Lecun, B.~Boser, J.~S. Denker, D.~Henderson, R.~E. Howard, W.~Hubbard, and
 \newblock Handwritten digit recognition with a back-propagation network.
 \newblock {\em NIPS}, 1989.
 
+\bibitem{manning2008introduction}
+C.~D. Manning, P.~Raghavan, and H.~Schütze.
+\newblock {\em Introduction to Information Retrieval}.
+\newblock Cambridge University Press, Cambridge, UK, 2008.
+
 \bibitem{postprocessing}
 H.~Niwa, K.~Kayashima, and Y.~Shimeki.
 \newblock Postprocessing for character recognition using keyword information.
