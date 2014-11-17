@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  9 OCT 2014 11:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  18 NOV 2014 00:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -314,102 +314,100 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 431.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 432.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 432.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 432.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 432.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 432.
 
-Underfull \hbox (badness 1365) in paragraph at lines 439--441
+Underfull \hbox (badness 1365) in paragraph at lines 440--442
 []\OT1/ptm/b/it/9 Keywords\OT1/ptm/b/n/9 -product of ex-perts; en-ergy ag-gre-g
 a-tion; con-
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 467.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 467.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 467.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 470.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 467.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 470.
 
-Underfull \hbox (badness 10000) in paragraph at lines 467--468
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
 
  []
 
 <automata.png, id=1, 705.63625pt x 356.33125pt>
 File: automata.png Graphic file (type png)
  <use automata.png>
-Package pdftex.def Info: automata.png used on input line 471.
+Package pdftex.def Info: automata.png used on input line 474.
 (pdftex.def)             Requested size: 227.61708pt x 85.35812pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 487.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 487.
  [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 527--535
+Underfull \hbox (badness 10000) in paragraph at lines 530--538
 
  []
 
 <product.png, id=16, 716.6775pt x 372.39125pt>
 File: product.png Graphic file (type png)
  <use product.png>
-Package pdftex.def Info: product.png used on input line 538.
+Package pdftex.def Info: product.png used on input line 541.
 (pdftex.def)             Requested size: 227.61366pt x 85.35838pt.
-
-<channel_6.png, id=17, 1032.85875pt x 275.0275pt>
+ [2 <./automata.png>] <channel_6.png, id=23, 1032.85875pt x 275.0275pt>
 File: channel_6.png Graphic file (type png)
  <use channel_6.png>
-Package pdftex.def Info: channel_6.png used on input line 591.
+Package pdftex.def Info: channel_6.png used on input line 596.
 (pdftex.def)             Requested size: 505.88458pt x 97.1969pt.
 
-<channel_7.png, id=18, 966.61125pt x 300.12125pt>
+<channel_7.png, id=24, 966.61125pt x 300.12125pt>
 File: channel_7.png Graphic file (type png)
  <use channel_7.png>
-Package pdftex.def Info: channel_7.png used on input line 598.
+Package pdftex.def Info: channel_7.png used on input line 603.
 (pdftex.def)             Requested size: 505.88559pt x 97.19478pt.
 
-<channel_8.png, id=19, 917.4275pt x 300.12125pt>
+<channel_8.png, id=25, 917.4275pt x 300.12125pt>
 File: channel_8.png Graphic file (type png)
  <use channel_8.png>
-Package pdftex.def Info: channel_8.png used on input line 605.
+Package pdftex.def Info: channel_8.png used on input line 610.
 (pdftex.def)             Requested size: 505.88858pt x 97.19478pt.
 
-<channel_9.png, id=20, 1030.85126pt x 307.1475pt>
+<channel_9.png, id=26, 1030.85126pt x 307.1475pt>
 File: channel_9.png Graphic file (type png)
  <use channel_9.png>
-Package pdftex.def Info: channel_9.png used on input line 612.
+Package pdftex.def Info: channel_9.png used on input line 617.
 (pdftex.def)             Requested size: 505.89229pt x 97.1972pt.
- [2 <./automata.png>] [3 <./product.png> <./channel_6.png> <./channel_7.png> <.
-/channel_8.png>] [4 <./channel_9.png>]
-<screenshot.png, id=34, 1004.75375pt x 583.17876pt>
+ [3 <./product.png>] [4 <./channel_6.png> <./channel_7.png> <./channel_8.png> <
+./channel_9.png>] <screenshot.png, id=34, 1004.75375pt x 583.17876pt>
 File: screenshot.png Graphic file (type png)
- <use screenshot.png>
-Package pdftex.def Info: screenshot.png used on input line 812.
+
+<use screenshot.png>
+Package pdftex.def Info: screenshot.png used on input line 818.
 (pdftex.def)             Requested size: 404.70001pt x 226.7981pt.
-
-<floor052.png, id=36, 911.405pt x 341.275pt>
+ <floor052.png, id=36, 911.405pt x 341.275pt>
 File: floor052.png Graphic file (type png)
- <use floor052.png>
-Package pdftex.def Info: floor052.png used on input line 825.
+
+<use floor052.png>
+Package pdftex.def Info: floor052.png used on input line 831.
 (pdftex.def)             Requested size: 505.9053pt x 97.19147pt.
-
-<floor6112.png, id=37, 905.3825pt x 341.275pt>
+ <floor6112.png, id=37, 905.3825pt x 341.275pt>
 File: floor6112.png Graphic file (type png)
- <use floor6112.png>
-Package pdftex.def Info: floor6112.png used on input line 832.
+
+<use floor6112.png>
+Package pdftex.def Info: floor6112.png used on input line 838.
 (pdftex.def)             Requested size: 505.89174pt x 97.19147pt.
-
-<total2.png, id=38, 904.37875pt x 334.24875pt>
+ <total2.png, id=38, 904.37875pt x 334.24875pt>
 File: total2.png Graphic file (type png)
- <use total2.png>
-Package pdftex.def Info: total2.png used on input line 839.
-(pdftex.def)             Requested size: 505.88287pt x 97.19485pt.
 
-(./HMM_writeup.bbl)
+<use total2.png>
+Package pdftex.def Info: total2.png used on input line 845.
+(pdftex.def)             Requested size: 505.88287pt x 97.19485pt.
+ (./HMM_writeup.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -421,22 +419,20 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5
-
-] [6 <./screenshot.png> <./floor052.png> <./floor6112.png> <./total2.png>]
+[5] [6 <./screenshot.png> <./floor052.png> <./floor6112.png> <./total2.png>]
 (./HMM_writeup.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3460 strings out of 493315
- 50235 string characters out of 6137903
- 127485 words of memory out of 5000000
- 6854 multiletter control sequences out of 15000+600000
+ 3464 strings out of 493315
+ 50281 string characters out of 6137903
+ 129520 words of memory out of 5000000
+ 6858 multiletter control sequences out of 15000+600000
  42008 words of font info for 76 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
- 38i,8n,23p,1178b,304s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,14n,24p,1178b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
@@ -451,7 +447,7 @@ dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts
 /type1/urw/times/utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on HMM_writeup.pdf (6 pages, 444124 bytes).
+Output written on HMM_writeup.pdf (6 pages, 446272 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
