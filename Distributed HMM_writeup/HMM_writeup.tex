@@ -855,6 +855,64 @@ Each of the data stream is modelled as a HMM individually. There are three strea
 
 \subsection{ Results }
 
+\begin{table}[htdp]
+\begin{center}
+\begin{tabular}{| c | c | c | c |}
+\hline
+Samples & $KL Div$ & $T(sec)$ & $Iterations$ \\
+\hline
+100 & 2.6219e-05 & 257 & 45100 \\
+300 & 1.9753e-05 & 222 & 43200 \\
+500 & 5.5493e-05 & 260 & 44800 \\
+700 & 3.2847e-05 & 249 & 44000 \\
+900 & 3.9486e-04 & 221 & 42600 \\
+1100 & 4.9274e-04 & 317 & 44700 \\
+1300 & 3.0425e-04 & 276 & 43100 \\
+1500 &  3.1128e-04 & 303 & 44400\\
+2000 & 1.9192e-04 & 306 & 44400\\
+2500 & 1.7122e-04 & 370 & 44100 \\
+3000 & 1.4686e-04 & 331 & 43300 \\
+3500 & 1.2663e-04 & 370 & 43200 \\
+4000 & 1.0793e-04 & 403 & 43200 \\
+
+\hline
+\end{tabular}
+\end{center}
+\caption{Effect of varying samples on KL div and time}
+\label{table: error}
+\end{table}
+
+\begin{table}[htdp]
+\begin{center}
+\begin{tabular}{| c | c | c |}
+\hline
+Experts & $KL Div (e-05)$ & $T(sec)$\\
+\hline
+2 & 0 & 219 \\
+3 & 1.9780 & 229 \\
+4 & 3.5897 & 217 \\
+5 & 1.9753 & 228 \\
+6 & 4.3488 & 238 \\
+7 & 4.9111 & 245  \\
+8 & 5.6564 & 241 \\
+9 & 5.4290 & 258 \\
+10 & 5.5163 & 267 \\
+12 & 4.4504 & 262 \\
+14 & 6.9006 & 296 \\
+16 & 6.8666 & 300 \\
+18 & 6.2872 & 313 \\
+20 & 5.3842 & 267 \\
+25 & 5.8970 & 326 \\
+30 & 5.9962 & 327  \\
+35 & 5.2716 & 346 \\
+40 & 5.0955 & 320 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Effect of varying experts on KL div and time}
+\label{table: error}
+\end{table}
+
 \section{Conclusion \& Future Work}
 The conclusion goes here. this is more of the conclusion
 

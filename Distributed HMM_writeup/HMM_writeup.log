@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  18 NOV 2014 00:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  25 NOV 2014 23:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -237,6 +237,12 @@ LaTeX Warning: Label `table: error' multiply defined.
 
 LaTeX Warning: Label `table: error' multiply defined.
 
+
+LaTeX Warning: Label `table: error' multiply defined.
+
+
+LaTeX Warning: Label `table: error' multiply defined.
+
 )
 \openout1 = `HMM_writeup.aux'.
 
@@ -428,7 +434,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3464 strings out of 493315
  50281 string characters out of 6137903
- 129520 words of memory out of 5000000
+ 129519 words of memory out of 5000000
  6858 multiletter control sequences out of 15000+600000
  42008 words of font info for 76 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
@@ -447,7 +453,7 @@ dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts
 /type1/urw/times/utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on HMM_writeup.pdf (6 pages, 446272 bytes).
+Output written on HMM_writeup.pdf (6 pages, 448900 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
