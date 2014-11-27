@@ -554,7 +554,7 @@ The product of experts produce sharper distribution than the individual distribu
 \label{sec:redd}
 %\begin{enumerate}
 \subsection{Aim}
- To represent streams of energy consumption data from $n$\footnote{n=2} appliances by product(s) of $k$ HMMs.
+ To represent streams of energy consumption data from $n$\footnote{n=2} appliances by product of $k$ HMMs.
  
 \subsection{Method} 
 
@@ -808,7 +808,7 @@ Appliances & $KL Div$ & $T(sec)$ & $Iterations$ \\
 \section{Proof of concept on Faculty housing data}
 \label{sec:faculty}
 
-\subsection{ Aim } To represent streams of energy consumption data from all the floors of faculty housing as a product(s) of k HMMs. 
+\subsection{ Aim } To represent streams of energy consumption data from all the floors of faculty housing as a product of k HMMs. 
 \subsection{Method}
 \begin{itemize}
 \item \textbf{ Data } This data represents the energy consumed by the IIIT Delhi faculty housing building. As a part of research, a team from IIIT Delhi has installed various temperature, light and motion sensors to perform real world studies and to analyse user preferences for energy conservation. For our analysis, we selected one month's historical data ranging from 01-01-2014, 00:01 hours to 31-01-2014, 23:59 hours. The two smart meters installed captures the data from all the floors. The first meter gives out readings from floors $0$ to $5$ and the second meter gives out readings from floors $6$ to $11$. The dataset includes timestamp and power consumed in watts and $84133$ records. Time series data from two streams are modelled as a product of $k$ HMMs. We also have the total power consumed by the faculty housing building which would serve as the ground truth to compare product of $k$ HMMs with. The data is obtained from the website whose screenshot is shown in ~\ref{fig:screenshot}
@@ -851,7 +851,9 @@ Appliances & $KL Div$ & $T(sec)$ & $Iterations$ \\
 \item \textbf{ Additional Details } 
 \end{itemize}
 \subsection{ Experimental Setup } 
-Each of the data stream is modelled as a HMM individually. There are three streams of data, the first stream D1 corresponds to the data from floor 0-5, D2 corresponds to floor 6-11 and D3 represents the total power from the faculty housing which is represented by a fixed test set, T. Firstly, the stream D1 is used to train the model by minimising contrastive divergence. The parameters learnt during training are provided to the test set T to obtain the conditional probability of the gaussians given the data D1 as pgauss1. Similarly, the second stream of data, D2 collected from floor 6-11, is used to learn the parameters of the model during the training phase which are then again provided to the test set T to obtain conditional probability of the gaussians given the data D2 as pgauss2. Finally the data D3 is used to learn the model and parameters which are then applied to the test set T to obtain the gaussian probability as pgauss3. Now, as we know that the total power consumption of the building should be approximately equal to the product of HMMs, hence the value of the product of pgauss1 and pgauss2 should be as close as possible to pgauss3.
+Each of the data stream is modelled as a HMM individually. There are three streams of data, the first stream D1 corresponds to the data from 0-5th floor, D2 corresponds to 6-11th floor and D3 represents the total power from the faculty housing which is represented by a fixed test set, T. Firstly, the stream D1 is used to train the model such that the contrastive divergence is minimized. The parameters (mixing component of each unigauss, means of gaussian bits, log precisions of axis-aligned gaussian bits) that are learnt during the training are provided to the test set T in order to obtain the conditional probability of the gaussians given the data D1 represented as pgauss1. Similarly, the second stream of data, D2 collected from floor 6-11, is used to learn the parameters of the model during the training phase which are then again provided to the test set T to obtain conditional probability of the gaussians given the data D2 as pgauss2. Finally the data D3 is used to learn the model and parameters which are then applied to the test set T to obtain the gaussian probability as pgauss3. Now, as we know that the total power consumption of the building should be approximately equal to the product of HMMs, which is the product of pgauss1 and pgauss2. If we can show that the value of pgauss3 is as close as possible to the product of pgauss1 and pgauss2.\\
+The experiments performed in table ~\ref{table:data} , shows the effect of varying samples on KL Divergence, convergence time and iterations keeping minimum threshold constant at 7.\\
+The other experiment performed in table ~\ref{table:error} shows that effect of varying experts on KL Divergence and convergence time.
 
 \subsection{ Results }
 
@@ -874,12 +876,11 @@ Samples & $KL Div$ & $T(sec)$ & $Iterations$ \\
 3000 & 1.4686e-04 & 331 & 43300 \\
 3500 & 1.2663e-04 & 370 & 43200 \\
 4000 & 1.0793e-04 & 403 & 43200 \\
-
 \hline
 \end{tabular}
 \end{center}
-\caption{Effect of varying samples on KL div and time}
-\label{table: error}
+\caption{Effect of varying samples on KL div}
+\label{table:data}
 \end{table}
 
 \begin{table}[htdp]
@@ -910,7 +911,7 @@ Experts & $KL Div (e-05)$ & $T(sec)$\\
 \end{tabular}
 \end{center}
 \caption{Effect of varying experts on KL div and time}
-\label{table: error}
+\label{table:error}
 \end{table}
 
 \section{Conclusion \& Future Work}
