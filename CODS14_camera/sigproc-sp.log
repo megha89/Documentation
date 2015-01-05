@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  28 DEC 2014 00:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  5 JAN 2015 15:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -292,58 +292,74 @@ T1/aer/m/n/9 orrection (CCTC)
 
 
 ]
-Overfull \hbox (12.12645pt too wide) in paragraph at lines 285--309
-[]$[]$  $[]$ 
+Overfull \hbox (40.02534pt too wide) in paragraph at lines 246--246
+[][]\T1/aer/m/n/9 http://www.cs.cornell.edu/people/tj/svm_light/svm_multiclass.
+html| 
  []
 
 
-Overfull \hbox (2.24759pt too wide) in paragraph at lines 417--419
+Overfull \hbox (11.14517pt too wide) in paragraph at lines 318--330
+ [][] 
+ []
+
+
+Overfull \hbox (1.5255pt too wide) in paragraph at lines 335--353
+ [][] 
+ []
+
+
+Overfull \hbox (2.24759pt too wide) in paragraph at lines 313--354
 \T1/aer/m/n/9 The multi-class SVM al-go-rithm us-ing poly-no-mial ker-nel gives
 
  []
 
 
-Overfull \hbox (5.36887pt too wide) in paragraph at lines 417--419
+Overfull \hbox (5.36887pt too wide) in paragraph at lines 313--354
 \T1/aer/m/n/9 the best re-sults in both the datasets, word-level and character-
 
  []
 
 
-Overfull \hbox (2.87666pt too wide) in paragraph at lines 464--467
+Overfull \hbox (2.87666pt too wide) in paragraph at lines 400--403
 \T1/aer/m/n/9 In this pa-per, we present a sys-tem for Clas-si-fi-ca-tion of Cr
 owd-
  []
 
 
-Overfull \hbox (3.57062pt too wide) in paragraph at lines 464--467
+Overfull \hbox (3.57062pt too wide) in paragraph at lines 400--403
 \T1/aer/m/n/9 cor-rec-tions us-ing state-of-the-art ma-chine learn-ing tech-niq
 ues
  []
 
-(./sigproc-sp.bbl) [2] [3] (./sigproc-sp.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 400--403
+
+ []
+
+[2] (./sigproc-sp.aux) ) 
 Here is how much of TeX's memory you used:
- 2781 strings out of 493315
- 35360 string characters out of 6137903
- 105944 words of memory out of 5000000
- 6165 multiletter control sequences out of 15000+600000
+ 2776 strings out of 493315
+ 35288 string characters out of 6137903
+ 104941 words of memory out of 5000000
+ 6163 multiletter control sequences out of 15000+600000
  49468 words of font info for 67 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,12n,28p,828b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-d
-ist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmti9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uh
-vb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
-b></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-Output written on sigproc-sp.pdf (3 pages, 125910 bytes).
+ 41i,12n,28p,828b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/bas
+e/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
+x9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
+.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.p
+fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb>
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/te
+xlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+Output written on sigproc-sp.pdf (2 pages, 122105 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 52 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
