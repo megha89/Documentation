@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  5 JAN 2015 15:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  6 JAN 2015 13:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -282,7 +282,7 @@ ve.
  []
 
 
-Overfull \hbox (6.22672pt too wide) in paragraph at lines 169--170
+Overfull \hbox (6.22672pt too wide) in paragraph at lines 170--171
 \T1/aer/m/n/9 The \T1/aer/bx/n/9 C\T1/aer/m/n/9 lassification of \T1/aer/bx/n/9
  C\T1/aer/m/n/9 rowdsourced \T1/aer/bx/n/9 T\T1/aer/m/n/9 ext \T1/aer/bx/n/9 C\
 T1/aer/m/n/9 orrection (CCTC)
@@ -292,56 +292,67 @@ T1/aer/m/n/9 orrection (CCTC)
 
 
 ]
-Overfull \hbox (40.02534pt too wide) in paragraph at lines 246--246
-[][]\T1/aer/m/n/9 http://www.cs.cornell.edu/people/tj/svm_light/svm_multiclass.
-html| 
+Overfull \hbox (14.36589pt too wide) in paragraph at lines 237--249
+\T1/aer/m/n/9 (e) \T1/aer/bx/n/9 Spellcheck: \T1/aer/m/n/9 For ex-am-ple, ``han
+ger" and ``banger". 
  []
 
 
-Overfull \hbox (11.14517pt too wide) in paragraph at lines 318--330
+Overfull \hbox (3.10806pt too wide) in paragraph at lines 279--281
+[]\T1/aer/bx/n/9 Information Re-trieval Tech-niques: \T1/aer/m/n/9 A set of que
+ries
+ []
+
+
+Overfull \hbox (4.81253pt too wide) in paragraph at lines 279--281
+\T1/aer/m/n/9 and cor-rected OCR in-di-vid-u-ally. For each of the queries,
+ []
+
+
+Overfull \hbox (11.14517pt too wide) in paragraph at lines 329--341
  [][] 
  []
 
 
-Overfull \hbox (1.5255pt too wide) in paragraph at lines 335--353
+Overfull \hbox (1.5255pt too wide) in paragraph at lines 346--364
  [][] 
  []
 
 
-Overfull \hbox (2.24759pt too wide) in paragraph at lines 313--354
+Overfull \hbox (2.24759pt too wide) in paragraph at lines 324--365
 \T1/aer/m/n/9 The multi-class SVM al-go-rithm us-ing poly-no-mial ker-nel gives
 
  []
 
 
-Overfull \hbox (5.36887pt too wide) in paragraph at lines 313--354
+Overfull \hbox (5.36887pt too wide) in paragraph at lines 324--365
 \T1/aer/m/n/9 the best re-sults in both the datasets, word-level and character-
 
  []
 
 
-Overfull \hbox (2.87666pt too wide) in paragraph at lines 400--403
+Overfull \hbox (2.87666pt too wide) in paragraph at lines 411--414
 \T1/aer/m/n/9 In this pa-per, we present a sys-tem for Clas-si-fi-ca-tion of Cr
 owd-
  []
 
 
-Overfull \hbox (3.57062pt too wide) in paragraph at lines 400--403
+Overfull \hbox (3.57062pt too wide) in paragraph at lines 411--414
 \T1/aer/m/n/9 cor-rec-tions us-ing state-of-the-art ma-chine learn-ing tech-niq
 ues
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--403
+Underfull \hbox (badness 10000) in paragraph at lines 411--414
 
  []
 
 [2] (./sigproc-sp.aux) ) 
 Here is how much of TeX's memory you used:
- 2776 strings out of 493315
- 35288 string characters out of 6137903
- 104941 words of memory out of 5000000
- 6163 multiletter control sequences out of 15000+600000
+ 2775 strings out of 493315
+ 35280 string characters out of 6137903
+ 103941 words of memory out of 5000000
+ 6162 multiletter control sequences out of 15000+600000
  49468 words of font info for 67 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,28p,828b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -356,7 +367,7 @@ sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
 ocal/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2
 013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-Output written on sigproc-sp.pdf (2 pages, 122105 bytes).
+Output written on sigproc-sp.pdf (2 pages, 118724 bytes).
 PDF statistics:
  52 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream
