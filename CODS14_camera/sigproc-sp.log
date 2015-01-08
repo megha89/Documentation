@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  6 JAN 2015 13:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  8 JAN 2015 12:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -347,11 +347,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 411--414
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--424
+
+ []
+
 [2] (./sigproc-sp.aux) ) 
 Here is how much of TeX's memory you used:
  2775 strings out of 493315
  35280 string characters out of 6137903
- 103941 words of memory out of 5000000
+ 104941 words of memory out of 5000000
  6162 multiletter control sequences out of 15000+600000
  49468 words of font info for 67 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -367,7 +372,7 @@ sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
 ocal/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2
 013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-Output written on sigproc-sp.pdf (2 pages, 118724 bytes).
+Output written on sigproc-sp.pdf (2 pages, 119947 bytes).
 PDF statistics:
  52 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream
