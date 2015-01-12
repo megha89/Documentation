@@ -1,0 +1,29 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Brown and Hinton}{2001}]{aistats}
+Andrew Brown and Geoffrey Hinton.
+\newblock Proceedings of artificial intelligence and statistics 2001.
+\newblock In {\em Products of Hidden Markov Models}, number GCNU TR 2000-008,
+  2001.
+
+\bibitem[\protect\citeauthoryear{Brown}{2001}]{andrew}
+Andrew~Dennis Brown.
+\newblock Product model for sequences, 2001.
+
+\bibitem[\protect\citeauthoryear{Fabre \bgroup \em et al.\egroup
+  }{2000}]{benveniste}
+Eric Fabre, Stefan Haar, Albert Benveniste, and Albert Benveniste.
+\newblock Hidden markov models for distributed and concurrent systems, 2000.
+
+\bibitem[\protect\citeauthoryear{Ghahramani and Jordan}{1997}]{fhmm}
+Zoubin Ghahramani and Michael~I. Jordan.
+\newblock Factorial hidden markov models.
+\newblock {\em Mach. Learn.}, 29(2-3):245--273, November 1997.
+
+\bibitem[\protect\citeauthoryear{Hinton}{2000}]{hinton2000}
+Geoffrey~E. Hinton.
+\newblock Training products of experts by minimizing contrastive divergence.
+\newblock Technical Report GCNU TR 2000-004, Gatsby Computational Neuroscience
+  Unit, University College London, 2000.
+
+\end{thebibliography}
