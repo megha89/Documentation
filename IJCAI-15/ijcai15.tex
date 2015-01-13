@@ -166,9 +166,23 @@ The rules for synchronised product construction are : \\
 
 \section{ Methodology }
 \label{sec:method}
+\subsection{Inference in PoHMM}
+The main feature of PoE is its undirected graphical modelling with no direct connection among the latent variables as they only interact indirectly via observed variables. The hidden variables all the experts are rendered independent when conditioned on visible variables. So, if the inference in each of the constituent model is tractable then the inference in the product is also tractable. To generate a data point in this model, all the experts in PoE generate an observation and if they all generated the same point then it is accepted else they again generate an observation until all the experts agree to it. Therefore all the experts have some influence over the generated data. So, the inference determines the the probability that all the experts would have taken in order to generate the given observation.
+ 
 \subsection{Training product of experts by minimising contrastive divergence}
-High dimensional distributions are approximated as a product of one dimensional distributions. The product of individual distributions which are uniguassian or multivariate guassian will also be multivariate guassian. If the individual models are more complicated and contain one or more hidden variables, multiplying their distributions together and renormalizing them can be very powerful. These individual models are called "experts".
-The product of experts produce sharper distribution than the individual distributions\cite{hinton2000}.
+PoE is a method of combining densities of many latent variable models. It is defined by the following formula:\\
+% Write the formula and explain it. Explain Gibbs Sampling
+To fit the model to the data, we need to maximize the likelihood of the dataset or minimise the Kullback-Liebler divergence between the real data and the fantasy data. The contrastive divergence algorithm for training the PoHMM has the following steps:
+\begin{enumerate}
+\item Calculate each model's gradient on a data point using forward backward algorithm.
+\item For each model take a sample from the posterior distribution of paths through state space.
+\item At each time step, multiply together the distributions and renormalize to get the reconstruction distribution at each step.
+\item Draw a sample from the reconstruction distribution at each time step to get a reconstructed sequence. Compute each model's gradient on the new sequence.
+\item Update the parameters
+
+\end{enumerate}
+%High dimensional distributions are approximated as a product of one dimensional distributions. The product of individual distributions which are uniguassian or multivariate guassian will also be multivariate guassian. If the individual models are more complicated and contain one or more hidden variables, multiplying their distributions together and renormalizing them can be very powerful. These individual models are called "experts".
+%The product of experts produce sharper distribution than the individual distributions\cite{hinton2000}.
 
 \section{Proof of concept on REDD House 2}
 \label{sec:redd}
