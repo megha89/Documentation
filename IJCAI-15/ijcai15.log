@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  13 JAN 2015 01:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  13 JAN 2015 13:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -176,133 +176,135 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 67.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 87.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 90.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 91.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 91.
 
-Underfull \hbox (badness 1571) in paragraph at lines 90--91
+Underfull \hbox (badness 1571) in paragraph at lines 91--92
 \OT1/ptm/m/n/10 Distributed net-works can be mod-elled us-ing in-ter-act-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
 <automata.png, id=1, 705.63625pt x 356.33125pt>
 File: automata.png Graphic file (type png)
  <use automata.png>
-Package pdftex.def Info: automata.png used on input line 94.
+Package pdftex.def Info: automata.png used on input line 95.
 (pdftex.def)             Requested size: 227.61708pt x 85.35812pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--157
-
- []
-
-[1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
-<product.png, id=15, 716.6775pt x 372.39125pt>
-File: product.png Graphic file (type png)
- <use product.png>
-Package pdftex.def Info: product.png used on input line 160.
-(pdftex.def)             Requested size: 227.61366pt x 85.35838pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 179.
-
-<channel_6.png, id=16, 1032.85875pt x 275.0275pt>
-File: channel_6.png Graphic file (type png)
- <use channel_6.png>
-Package pdftex.def Info: channel_6.png used on input line 202.
-(pdftex.def)             Requested size: 505.88458pt x 97.5578pt.
-
-<channel_7.png, id=17, 966.61125pt x 300.12125pt>
-File: channel_7.png Graphic file (type png)
- <use channel_7.png>
-Package pdftex.def Info: channel_7.png used on input line 209.
-(pdftex.def)             Requested size: 505.88559pt x 97.56114pt.
-
-<channel_8.png, id=18, 917.4275pt x 300.12125pt>
-File: channel_8.png Graphic file (type png)
- <use channel_8.png>
-Package pdftex.def Info: channel_8.png used on input line 216.
-(pdftex.def)             Requested size: 505.88858pt x 97.56114pt.
-
-<channel_9.png, id=19, 1030.85126pt x 307.1475pt>
-File: channel_9.png Graphic file (type png)
- <use channel_9.png>
-Package pdftex.def Info: channel_9.png used on input line 223.
-(pdftex.def)             Requested size: 505.89229pt x 97.55807pt.
- [2 <./automata.png>]
-Overfull \hbox (7.57439pt too wide) in paragraph at lines 314--327
- [] 
+Underfull \hbox (badness 2970) in paragraph at lines 150--159
+\OT1/ptm/m/n/10 PoHMM is a com-bi-na-tion of di-rected and undi-rected
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 150--159
 
- [3 <./product.png> <./channel_6.png>]
-<screenshot.png, id=28, 1004.75375pt x 583.17876pt>
+ []
+
+<product.png, id=15, 716.6775pt x 372.39125pt>
+File: product.png Graphic file (type png)
+ <use product.png>
+Package pdftex.def Info: product.png used on input line 162.
+(pdftex.def)             Requested size: 227.61366pt x 85.35838pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 181.
+ [2 <./automata.png>] <channel_6.png, id=21, 1032.85875pt x 275.0275pt>
+File: channel_6.png Graphic file (type png)
+ <use channel_6.png>
+Package pdftex.def Info: channel_6.png used on input line 204.
+(pdftex.def)             Requested size: 505.88458pt x 97.5578pt.
+
+<channel_7.png, id=22, 966.61125pt x 300.12125pt>
+File: channel_7.png Graphic file (type png)
+ <use channel_7.png>
+Package pdftex.def Info: channel_7.png used on input line 211.
+(pdftex.def)             Requested size: 505.88559pt x 97.56114pt.
+
+<channel_8.png, id=23, 917.4275pt x 300.12125pt>
+File: channel_8.png Graphic file (type png)
+ <use channel_8.png>
+Package pdftex.def Info: channel_8.png used on input line 218.
+(pdftex.def)             Requested size: 505.88858pt x 97.56114pt.
+
+<channel_9.png, id=24, 1030.85126pt x 307.1475pt>
+File: channel_9.png Graphic file (type png)
+ <use channel_9.png>
+Package pdftex.def Info: channel_9.png used on input line 225.
+(pdftex.def)             Requested size: 505.89229pt x 97.55807pt.
+
+Overfull \hbox (7.57439pt too wide) in paragraph at lines 316--329
+ [] 
+ []
+
+[3 <./product.png>] <screenshot.png, id=28, 1004.75375pt x 583.17876pt>
 File: screenshot.png Graphic file (type png)
- <use screenshot.png>
-Package pdftex.def Info: screenshot.png used on input line 345.
+
+<use screenshot.png>
+Package pdftex.def Info: screenshot.png used on input line 347.
 (pdftex.def)             Requested size: 404.70001pt x 227.65236pt.
-
-<floor052.png, id=30, 911.405pt x 341.275pt>
+ <floor052.png, id=30, 911.405pt x 341.275pt>
 File: floor052.png Graphic file (type png)
- <use floor052.png>
-Package pdftex.def Info: floor052.png used on input line 357.
+
+<use floor052.png>
+Package pdftex.def Info: floor052.png used on input line 359.
 (pdftex.def)             Requested size: 505.9053pt x 97.556pt.
-
-<floor6112.png, id=31, 905.3825pt x 341.275pt>
+ <floor6112.png, id=31, 905.3825pt x 341.275pt>
 File: floor6112.png Graphic file (type png)
- <use floor6112.png>
-Package pdftex.def Info: floor6112.png used on input line 364.
-(pdftex.def)             Requested size: 505.89174pt x 97.556pt.
 
-<total2.png, id=32, 904.37875pt x 334.24875pt>
+<use floor6112.png>
+Package pdftex.def Info: floor6112.png used on input line 366.
+(pdftex.def)             Requested size: 505.89174pt x 97.556pt.
+ <total2.png, id=32, 904.37875pt x 334.24875pt>
 File: total2.png Graphic file (type png)
- <use total2.png>
-Package pdftex.def Info: total2.png used on input line 371.
+
+<use total2.png>
+Package pdftex.def Info: total2.png used on input line 373.
 (pdftex.def)             Requested size: 505.88287pt x 97.56207pt.
- [4 <./channel_7.png> <./channel_8.png>] (./ijcai15.bbl
+ [4 <./channel_6.png> <./channel_7.png>] (./ijcai15.bbl
 Underfull \hbox (badness 4927) in paragraph at lines 4--8
 []\OT1/ptm/m/n/10 Andrew Brown and Ge-of-frey
  []
 
-[5 <./channel_9.png> <./screenshot.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 19--22
 []\OT1/ptm/m/n/10 Zoubin Ghahra-mani and
  []
 
-) [6 <./floor052.png> <./floor6112.png>] [7 <./total2.png>] (./ijcai15.aux) ) 
+[5 <./channel_8.png> <./channel_9.png>]) [6
+
+ <./screenshot.png> <./floor052.png>] [7 <./floor6112.png> <./total2.png>] (./i
+jcai15.aux) ) 
 Here is how much of TeX's memory you used:
  1723 strings out of 493315
  24864 string characters out of 6137903
- 93213 words of memory out of 5000000
+ 95213 words of memory out of 5000000
  5137 multiletter control sequences out of 15000+600000
  25098 words of font info for 58 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  37i,10n,23p,1385b,295s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/
-usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texli
-ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texliv
-e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2013/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf
--dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/font
-s/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
-w/times/utmri8a.pfb>
-Output written on ijcai15.pdf (7 pages, 420129 bytes).
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</
+usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
+l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist
+/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ijcai15.pdf (7 pages, 420863 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
