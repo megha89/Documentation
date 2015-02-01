@@ -1,5 +1,11 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citeauthoryear{Akyildiz \bgroup \em et al.\egroup
+  }{2002}]{Akyildiz02wirelesssensor}
+I.~F. Akyildiz, W.~Su, Y.~Sankarasubramaniam, and E.~Cayirci.
+\newblock Wireless sensor networks: a survey.
+\newblock {\em Computer Networks}, 38:393--422, 2002.
+
 \bibitem[\protect\citeauthoryear{Brown and Hinton}{2001}]{aistats}
 Andrew Brown and Geoffrey Hinton.
 \newblock Proceedings of artificial intelligence and statistics 2001.
@@ -9,6 +15,13 @@ Andrew Brown and Geoffrey Hinton.
 \bibitem[\protect\citeauthoryear{Brown}{2001}]{andrew}
 Andrew~Dennis Brown.
 \newblock Product model for sequences, 2001.
+
+\bibitem[\protect\citeauthoryear{Chen \bgroup \em et al.\egroup
+  }{2008}]{Chen20083579}
+Huifang Chen, Hiroshi Mineno, and Tadanori Mizuno.
+\newblock Adaptive data aggregation scheme in clustered wireless sensor
+  networks.
+\newblock {\em Computer Communications}, 31(15):3579 -- 3585, 2008.
 
 \bibitem[\protect\citeauthoryear{Fabre \bgroup \em et al.\egroup
   }{2000}]{benveniste}
@@ -20,10 +33,66 @@ Zoubin Ghahramani and Michael~I. Jordan.
 \newblock Factorial hidden markov models.
 \newblock {\em Mach. Learn.}, 29(2-3):245--273, November 1997.
 
+\bibitem[\protect\citeauthoryear{Heinzelman \bgroup \em et al.\egroup
+  }{2000}]{Heinzelman00energy-efficientcommunication}
+Wendi~Rabiner Heinzelman, Anantha Ch, and Hari Balakrishnan.
+\newblock Energy-efficient communication protocol for wireless microsensor
+  networks.
+\newblock pages 3005--3014, 2000.
+
 \bibitem[\protect\citeauthoryear{Hinton}{2000}]{hinton2000}
 Geoffrey~E. Hinton.
 \newblock Training products of experts by minimizing contrastive divergence.
 \newblock Technical Report GCNU TR 2000-004, Gatsby Computational Neuroscience
   Unit, University College London, 2000.
+
+\bibitem[\protect\citeauthoryear{Liao \bgroup \em et al.\egroup
+  }{2008}]{Liao2008387}
+Wen-Hwa Liao, Yucheng Kao, and Chien-Ming Fan.
+\newblock Data aggregation in wireless sensor networks using ant colony
+  algorithm.
+\newblock {\em Journal of Network and Computer Applications}, 31(4):387 -- 401,
+  2008.
+
+\bibitem[\protect\citeauthoryear{Liao \bgroup \em et al.\egroup
+  }{2011}]{Liao20116599}
+Wen-Hwa Liao, Yucheng Kao, and Ru-Ting Wu.
+\newblock Ant colony optimization based sensor deployment protocol for wireless
+  sensor networks.
+\newblock {\em Expert Systems with Applications}, 38(6):6599 -- 6605, 2011.
+
+\bibitem[\protect\citeauthoryear{Lin \bgroup \em et al.\egroup
+  }{2012}]{Lin20121686}
+Chi Lin, Guowei Wu, Feng Xia, Mingchu Li, Lin Yao, and Zhongyi Pei.
+\newblock Energy efficient ant colony algorithms for data aggregation in
+  wireless sensor networks.
+\newblock {\em Journal of Computer and System Sciences}, 78(6):1686 -- 1702,
+  2012.
+\newblock \{JCSS\} Multidisciplinary Emerging Networks and Systems (MENS).
+
+\bibitem[\protect\citeauthoryear{Liu \bgroup \em et al.\egroup
+  }{2007}]{Liu20071187}
+Chuan-Ming Liu, Chuan-Hsiu Lee, and Li-Chun Wang.
+\newblock Distributed clustering algorithms for data-gathering in wireless
+  mobile sensor networks.
+\newblock {\em Journal of Parallel and Distributed Computing}, 67(11):1187 --
+  1200, 2007.
+
+\bibitem[\protect\citeauthoryear{SHA \bgroup \em et al.\egroup
+  }{2010}]{SHA2010104}
+Chao SHA, Ru~chuan WANG, Hai ping HUANG, and Li~juan SUN.
+\newblock Energy efficient clustering algorithm for data aggregation in
+  wireless sensor networks.
+\newblock {\em The Journal of China Universities of Posts and
+  Telecommunications}, 17, Supplement 2(0):104 -- 122, 2010.
+
+\bibitem[\protect\citeauthoryear{Yuea \bgroup \em et al.\egroup
+  }{2012}]{Yuea20122009}
+Jun Yuea, Weiming Zhang, Weidong Xiao, Daquan Tang, and Jiuyang Tang.
+\newblock Energy efficient and balanced cluster-based data aggregation
+  algorithm for wireless sensor networks.
+\newblock {\em Procedia Engineering}, 29(0):2009 -- 2015, 2012.
+\newblock 2012 International Workshop on Information and Electronics
+  Engineering.
 
 \end{thebibliography}

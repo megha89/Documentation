@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ijcai15.aux
+The style file: named.bst
+Database file #1: ijcai15.bib
+Warning--entry type for "andrew" isn't style-file defined
+--line 180 of file ijcai15.bib
+Warning--there's a number but no series in aistats
+Warning--empty booktitle in Heinzelman00energy-efficientcommunication
+You've used 14 entries,
+            2439 wiz_defined-function locations,
+            647 strings with 7170 characters,
+and the built_in function-call counts, 5925 in all, are:
+= -- 602
+> -- 260
+< -- 3
++ -- 88
+- -- 88
+* -- 513
+:= -- 955
+add.period$ -- 42
+call.type$ -- 14
+change.case$ -- 100
+chr.to.int$ -- 14
+cite$ -- 16
+duplicate$ -- 202
+empty$ -- 438
+format.name$ -- 104
+if$ -- 1215
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 11
+newline$ -- 73
+num.names$ -- 42
+pop$ -- 81
+preamble$ -- 1
+purify$ -- 114
+quote$ -- 0
+skip$ -- 172
+stack$ -- 0
+substring$ -- 379
+swap$ -- 41
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 112
+warning$ -- 2
+while$ -- 42
+width$ -- 16
+write$ -- 181
+(There were 3 warnings)
