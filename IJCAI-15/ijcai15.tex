@@ -79,40 +79,54 @@ Ullas Nambiar
 %manuscripts submitted by the authors. These must be PDF ({\em Portable
 %Document Format}) files formatted for 8-1/2$''$ $\times$ 11$''$ paper.
 
-In todays scenario, wireless sensor networks (WSN) have found wide range of applications in areas like military, health, environmental sensing, etc. Though WSNs have been a significant improvement over traditional sensors but they have their own constraints like nodes with limited power, computational capacities and memory \cite{Akyildiz02wirelesssensor}. Therefore, a sensor node lifetime is strongly dependent on its battery lifetime.
-In the context of energy management, several challenges like finding data, collecting the right data and compiling all the data from different sources are to be faced.
- %Managing the energy consumption effectively is an ongoing process. 
-Efficient energy data aggregation is thus one of the leading problems in wireless sensor networks. Data aggregation also known as data fusion is defined as set of methods for combining the data that comes from many sensor nodes into a set of meaningful information \cite{Heinzelman00energy-efficientcommunication}.
+Smart meters consisting of real time sensors, power outage notifications and power quality monitoring are widely used today. These meters provide a host of benefits like energy efficiency and savings, improved retail competition, better demand response actions, improved tariffs, lower bills due to better customer feedback, accurate billing, less environmental pollution, etc. %\cite
+They generate huge amount of data which helps in giving meaningful insights through analytics.
+They can measure site specific information and also help agencies to set different electricity prices for consumption based on the time of the day, seasons, holidays, etc. As a result, a feedback is sent to the customers by the utilities that can help consumers better manage their resources. A research \cite{mckerracher} shows that by providing real time feedback, consumers can reduce the consumption by 3-5\%. Also, for some country providing real time feedback may not be a cost effective plan but it can help in retaining customers and peak-load shift.
+%This helps consumers to better manage their energy resources and reduce their bills and carbon emissions.
 
-%This problem has been tackled in a variety of ways including topology control, energy conserving sleep scheduling, mobile data collectors and data compression. 
-In recent years, machine learning has been applied to the problem of energy consumption analysis\cite{SHA2010104}\cite{Liao2008387}\cite{Liao20116599}\cite{Chen20083579}\cite{Yuea20122009}\cite{Lin20121686}\cite{Liu20071187}. 
+
+In recent years, machine learning has been applied to the problem of energy consumption and demand forecasting analysis. The role of the machine learning algorithm is to study the sensor data and provide alerts and warnings when anomalous behaviour occurs or to inform (and remind) customers when certain activities were performed, which rooms they occupied, and what appliances they used most frequently during that period. This information can be transmitted to customers in timely fashion via phone, email or the Internet.
+This paper \cite{1626400} does a comparison of several clustering techniques and finds out that  the hierarchical clustering and modified follow-the-leader perform best among the rest K-Means, fuzzy K-Means to group customers with similar electrical behaviour \cite{5620917}. Another paper \cite{Wijaya} uses classifiers like random forest, J48, logistic and naive bayes to identify customers with similar electricity consumption profiles.
 Sensor data collected from smart homes are used to reveal activity patterns of the residents, which can then be correlated with the total energy consumption. This enables utility companies and their customers to associate activities with energy usage and costs, devise intelligent systems to control home environments improving energy efficiency and reducing costs. Typically, sequences of usage patterns that appear frequently at different time scales (daily, weekly, monthly, yearly) and across different homes are studied and 
 %; trends of electricity consumption (steadily increasing, decreasing, cyclic, seasonal) for individual homes and across the community; and anomalies (sudden peaks or drops on consumption) for individual homes and across the community.
-outlier detection algorithms are designed to enable customers to be notified that they are consuming unusually large amount(s) of energy during some specific period. Related problems involve study of trends of electricity consumption (steadily increasing, decreasing, cyclic, seasonal) and sudden anomalous behavior (sudden peaks or drops on consumption) for individual homes and across the community. The role of the machine learning algorithm is to study the sensor data and provide alerts and warnings when anomalous behavior occurs or to inform (and remind) customers when certain activities were performed, which rooms they occupied, and what appliances they used most frequently during that period. This information can be transmitted to customers in timely fashion via phone, email or the Internet.
-
-
-
-
-%To study the process of energy aggregation, data is collected from multiple smart meters. The purpose of energy aggregation is to get some valuable information about single or multi-site units. 
+outlier detection algorithms are designed to enable customers to be notified that they are consuming unusually large amount(s) of energy during some specific period. Related problems involve study of trends of electricity consumption (steadily increasing, decreasing, cyclic, seasonal) and sudden anomalous behaviour (sudden peaks or drops on consumption) for individual homes and across the community.
 
 In this paper, we build machine learning models using products of HMM and apply them to the energy aggregation problem. Two different proof of concepts are presented -- one on the REDD data set and another on real data collected at the faculty housing in India. 
 %application of are aggregating energy consumption information using a model that extends the power of HMMs. HMM's are used as the basic expert in the of product of experts model. 
-There are many reasons why the product model constructed from many HMMs is appropriate. First, this model is ideal for data which is caused by multiple underlying influences. Second, HMMs alone are not efficient at capturing long range structure in time series (CITE) -- in contrast to product of hidden markov models (PoHMM)  \cite{andrew} allow each model to remember a different piece of information about the past. [SAY SOMETHING MORE HERE]
+There are many reasons why the product model constructed from many HMMs is appropriate. First, this model is ideal for data which is caused by multiple underlying influences. Second, HMMs alone are not efficient at capturing long range structure in time series \cite{Taylor} -- in contrast to product of hidden markov models (PoHMM)  \cite{andrew} allow each model to remember a different piece of information about the past.
 %There have been some experiments on sentence and character strings modelling, factorial time series to demonstrate the advantages of using a PoHMM over an equivalently sized regular HMM}.
 %We have applied the contrastive divergence learning algorithm on two datasets, REDD dataset and the faculty housing dataset which was generated by smart meters.
-%The system architecture for the faculty housing dataset consists of two smart meters S1 and S2 installed in a faculty housing building collecting data from twelve floors. S1 collects data from first six floors (0 to 5th) and S2 collects data from the rest of the floors (6 to 11th). The data collected from two meters is aggregated using product of experts technique in a way that the contrastive divergence between the two probability distributions is minimized. 
+%The system architecture for the faculty housing dataset consists of two smart meters $S_1$ and $S_2$ installed in a faculty housing building collecting data from twelve floors. $S_1$ collects data from first six floors (0 to 5th) and $S_2$ collects data from the rest of the floors (6 to 11th). The data collected from two meters is aggregated using product of experts technique in a way that the contrastive divergence between the two probability distributions is minimized. 
 %The proof of concept of REDD dataset and faculty housing dataset is given in section~\ref{sec:redd} and section~\ref{sec:faculty} respectively.
 
-\noindent \textbf{Organization:} This paper is organized as follows: Section~\ref{related} examines related work on energy aggregation; Section~\ref{sec:review} provides a review of automata and their products and subsequently leads to an understanding of products of Hidden Markov Models (HMMs). Inference from Products of HMMs is dealt with in Section~\ref{sec:method}. The two proofs of concepts are introduced in Section~\ref{poc} to illustrate the effectiveness of the use of product of HMMs in the energy aggregation problem. Finally, Section~\ref{conc} concludes the work.
+\noindent \textbf{Organization:} This paper is organized as follows: Section~\ref{related} examines related work on data analytics on aggregated data of smart meters; Section~\ref{sec:review} provides a review of products of Hidden Markov Models (HMMs) and how they relate to our application. The two proofs of concepts are introduced in Section~\ref{poc} to illustrate the effectiveness of the use of product of HMMs in the energy aggregation problem. Finally, Section~\ref{conc} concludes the work.
 
 \section{Related Work}
 \label{related}
 
 \subsection{Energy Aggregation}
-Devaine et al. (CITE) study ...
+%Devaine et al. (CITE) study ...
+ Data aggregation also known as data fusion is defined as set of methods for combining the data that comes from many sensor nodes into a set of meaningful information \cite{Heinzelman00energy}.
+To study the process of energy aggregation, data is collected from multiple smart meters. This collected data is very large which in turn makes the analytics on top of it very difficult. Also, this detailed energy consumption data leads to privacy breach and other risks related to it. To address this problem, there has been work done \cite{Wijaya} to reduce the smart meter data numerosity by converting it into symbolic representation and then allowing algorithms on top of it. They have applied the symbolic representation tasks for customer segmentation and load forecasting.
+%The purpose of energy aggregation is to get some valuable information about single or multi-site units. 
+%This work evaluates the trend of degrading performance of the state of the art algorithms when the number of considered meters decrease \cite{BLTJ:BLTJ21650}. Short term load forecasts at the meter level help the company communicate with the customer about energy savings and billing. STLF handles prediction of one hour upto one week.
+%The energy aggregation problem has been tackled in a variety of ways including topology control, energy conserving sleep scheduling, mobile data collectors and data aggregation. 
+%Research has been done on the role of energy on the growth of the country's economy \cite{NYAS:NYAS5921}.
+
+\subsection{Energy Disaggregation}
+The process in which the whole building energy (aggregated) signal is separated into appliance level energy (disaggregated) for a variety of reasons like residential energy reductions, program evaluation, targeted marketing, etc. Several studies have been done in this regard, one of the unsupervised desegregation method \cite{DisaggregationHSMM} that outperforms other unsupervised disaggregation methods is conditional factorial hidden semi-Markov model. This model when integrated with other features, accurately represents the individual appliance energy consumption. Another research \cite{KolterJ12} that exploits the additive structure of the FHMM to develop approximate inference procedure in  energy disaggregation domain that outperforms the rest.
+
+\subsection{Load Forecasting}
+Load forecasting is extremely important for operation and planning of an electric utility company. It is usually divided into three categories, short-term forecasts \cite{Bakirtzis} \cite{Chen} \cite{Fan} \cite{Chow}, medium-term forecasts \cite{Falvo} \cite{samuel} \cite{bassi} and long-term forecasts \cite{Daneshi} \cite{Zhang}. Most of the load forecasting algorithms use statistical and artificial intelligence algorithms.
+
+\subsection{Customer Segmentation}
+The identification of consumer profiles that show similar behaviour in energy consumption. This analysis is useful in various ways, like demand response system, intelligent distribution channel. The author \cite{wijaya2014consumer} segments the customers based on contextual dimensions like location, seasons, weather patterns, holidays, etc which help with various higher level applications like usage-specific tariff structure, theft detection, etc. In \cite{Albert}, author proposes to infer occupancy states from consumption time series data by using HMM framework. They investigate the effectiveness of HMM and model based cluster analysis in producing meaningful features of the classification. This work suggests the dynamics of time series as captured by HMM analysis can be valuable.
+
+
+
 
 \subsection{Prediction with expert advice}
-\section{Review of Automata and their products}
+\section{Review of PoHMM}
 \label{sec:review}
 
 Distributed networks can be modeled using interacting automata. Benveniste \cite{benveniste} defines automaton as a quadruple, \'{A} = (X,$X_0$,A,T) where X is a finite state of sets, $X_0$ is the subset of initial states, A is a finite set of messages, T is a set of transitions of the form t = \{x\_,a,x\} where x\_ is the previous state, a is the message label on which the state transitions to the next state x. The figure~\ref{fig:ex} below explains the automata with an example.\\
@@ -124,8 +138,8 @@ Distributed networks can be modeled using interacting automata. Benveniste \cite
 \label{fig:ex}
 \end{figure*}
 
-For automaton R, X$_{R}$ = \{2; R1,R2\}, X$_{0R}$ = \{R1\}, A$_{R}$ = \{a,b\}, T$_{R}$ = \{R1,a,R1; R1,b,R2; R2,a,R2; R2,b,R1\} \\
-For automaton S, X$_{S}$ = \{3; S1,S2,S3\}, X$_{0S}$ = \{S1\}, A$_{S}$ = \{a,b\}, T$_{S}$ = \{S1,a,S1; S1,b,S2; S2,a,S2; S2,b,S3; S3,a,S3; S3,b,S1\} \\
+For automaton R, X$_{R}$ = \{2; $R_1$,$R_2$\}, X$_{0R}$ = \{$R_1$\}, A$_{R}$ = \{a,b\}, T$_{R}$ = \{$R_1$,a,$R_1$; $R_1$,b,$R_2$; $R_2$,a,$R_2$; $R_2$,b,$R_1$\} \\
+For automaton S, X$_{S}$ = \{3; $S_1$,$S_2$,$S_3$\}, X$_{0S}$ = \{$S_1$\}, A$_{S}$ = \{a,b\}, T$_{S}$ = \{$S_1$,a,$S_1$; $S_1$,b,$S_2$; $S_2$,a,$S_2$; $S_2$,b,$S_3$; $S_3$,a,$S_3$; $S_3$,b,$S_1$\} \\
 The product of two automata \'{A} = R x S is defined as follows: \\
 X = X$_{R}$ x X$_{S}$ \\
 $X_0$ = X$_{0R}$ x X$_{0S}$ \\
@@ -135,10 +149,10 @@ Benveniste uses a notion of stuttering transition which helps to distinguish bet
 \begin{table}[h]
 \centering
 \begin{tabular}{ l | c | c }
- A & R1 & R2 \\
+ A & $R_1$ & $R_2$ \\
 \hline
-R1 & 0.6 & 0.4 \\
-R2 & 0.3 & 0.7 \\
+$R_1$ & 0.6 & 0.4 \\
+$R_2$ & 0.3 & 0.7 \\
 \end{tabular}
 \caption{Transition probability, A}
 \label{table:A}
@@ -149,8 +163,8 @@ R2 & 0.3 & 0.7 \\
 \begin{tabular}{ l | c | c }
  B & a & b \\
 \hline
-R1 & 0.2 & 0.8 \\
-R2 & 0.5 & 0.5 \\
+$R_1$ & 0.2 & 0.8 \\
+$R_2$ & 0.5 & 0.5 \\
 \end{tabular}
 \caption{Observed probability, B}
 \label{table:B}
@@ -159,7 +173,7 @@ R2 & 0.5 & 0.5 \\
 \begin{table}[h]
 \centering
 \begin{tabular}{ l | c | c }
-&  R1 & R2 \\
+&  $R_1$ & $R_2$ \\
 \hline
 $\pi$ & 0.4 & 0.6 \\
 
@@ -176,8 +190,8 @@ Using the traditional HMM notation of the parameters $\lambda$ = \{A, B, $\pi$ \
 \label {sec:pohmm}
 PoHMM is a combination of directed and undirected graphical models. The hidden states are connected with directed links where as the connection with visible states is through undirected links. This causes different conditional independence relationships among the variables in graphical model. 
 Product of HMM is a way of combining HMM's to form distributed state time series model. It is defined by multiplying together the densities of its, k experts and renormalizing them. The figure~\ref{fig:pohmm} is a product of two HMMs shown in~\ref{fig:ex}. For  P = R x S, the quadruple becomes\\
-X = \{6; R1S1, R1S2, R1S3, R2S1, R2S2, R2S3\} \\
-$X_0$ = \{R1S1\} \\
+X = \{6; $R_1$$S_1$, $R_1$$S_2$, $R_1$$S_3$, $R_2$$S_1$, $R_2$$S_2$, $R_2$$S_3$\} \\
+$X_0$ = \{$R_1$$S_1$\} \\
 A = \{a,b\} \\
 The rules for synchronised product construction are : \\
 1. $<p,q>$ --a--$>$ $<p',q>$ if a $\in$ A$_{R}$ $\cap$ A$_{S}$ and p --a--$>$ p' and q --a--$>$ q'	\\
@@ -191,10 +205,10 @@ The rules for synchronised product construction are : \\
 \label{fig:pohmm}
 \end{figure*}
 
-\section{ Methodology }
-\label{sec:method}
+%\section{ Methodology }
+%\label{sec:method}
 \subsection{Inference in PoHMM}
-The main feature of PoE is its undirected graphical modelling with no direct connection among the latent variables as they only interact indirectly via observed variables. The hidden variables all the experts are rendered independent when conditioned on visible variables. So, if the inference in each of the constituent model is tractable then the inference in the product is also tractable. To generate a data point in this model, all the experts in PoE generate an observation and if they all generated the same point then it is accepted else they again generate an observation until all the experts agree to it. Therefore all the experts have some influence over the generated data. So, the inference determines the the probability that all the experts would have taken in order to generate the given observation.
+The main feature of PoE is its undirected graphical modelling with no direct connection among the latent variables as they only interact indirectly via observed variables. The hidden variables all the experts are rendered independent when conditioned on visible variables. So, if the inference in each of the constituent model is tractable then the inference in the product is also tractable. To generate a data point in this model, all the experts in PoE generate an observation and if they all generated the same point then it is accepted else they again generate an observation until all the experts agree to it. Therefore all the experts have some influence over the generated data. So, the inference determines the the probability that all the experts would have taken in order to generate the given observation. 
  
 \subsection{Training product of experts by minimising contrastive divergence}
 PoE is a method of combining densities of many latent variable models. It is defined by the following formula:\\
@@ -732,7 +746,8 @@ The conclusion goes here. this is more of the conclusion
 %pcchair15@ijcai.org}.
 
 %% The file named.bst is a bibliography style file for BibTeX 0.99c
-\nocite{SHA2010104,Liao2008387,Liao20116599,Chen20083579,Yuea20122009,Lin20121686,Liu20071187,Akyildiz02wirelesssensor,Heinzelman00energy-efficientcommunication,benveniste,hinton2000,aistats,fhmm,andrew}
+\nocite{Albert,wijaya2014consumer,Zhang,Daneshi,bassi,samuel,Falvo,Bakirtzis,Chen,Fan,Chow,DisaggregationHSMM,KolterJ12,KolterF11,BLTJ:BLTJ21650,Heinzelman00energy,Taylor,NYAS:NYAS5921,
+Wijaya,5620917,1626400,mckerracher, benveniste,hinton2000,aistats,fhmm,andrew}
 
 
 \bibliographystyle{named}
