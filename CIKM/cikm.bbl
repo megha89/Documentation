@@ -1,0 +1,183 @@
+\begin{thebibliography}{10}
+
+\bibitem{Albert}
+A.~Albert and R.~Rajagopal.
+\newblock Smart meter driven segmentation: What your consumption says about
+  you.
+\newblock {\em Power Systems, IEEE Transactions on}, 28(4):4019--4030, Nov
+  2013.
+
+\bibitem{Bakirtzis}
+A.~Bakirtzis, V.~Petridis, S.~Kiartzis, and M.~Alexiadis.
+\newblock A neural network short term load forecasting model for the greek
+  power system.
+\newblock {\em Power Systems, IEEE Transactions on}, 11(2):858--863, May 1996.
+
+\bibitem{bassi}
+D.~Bassi and O.~Olivares.
+\newblock Medium term electric load forecasting using tlfn neural networks.
+\newblock {\em International Journal of Computers, Communications \& Control},
+  1(2):23--32, 2006.
+
+\bibitem{aistats}
+A.~Brown and G.~Hinton.
+\newblock Proceedings of artificial intelligence and statistics 2001.
+\newblock In {\em Products of Hidden Markov Models}, number GCNU TR 2000-008,
+  2001.
+
+\bibitem{andrew}
+A.~D. Brown.
+\newblock Product model for sequences, 2001.
+
+\bibitem{Chen}
+H.~Chen, C.~Canizares, and A.~Singh.
+\newblock Ann-based short-term load forecasting in electricity markets.
+\newblock In {\em Power Engineering Society Winter Meeting, 2001. IEEE},
+  volume~2, pages 411--415 vol.2, 2001.
+
+\bibitem{1626400}
+G.~Chicco, R.~Napoli, and F.~Piglione.
+\newblock Comparisons among clustering techniques for electricity customer
+  classification.
+\newblock {\em Power Systems, IEEE Transactions on}, 21(2):933--940, May 2006.
+
+\bibitem{Chow}
+T.~Chow and C.~Leung.
+\newblock Nonlinear autoregressive integrated neural network model for
+  short-term load forecasting.
+\newblock {\em Generation, Transmission and Distribution, IEE Proceedings-},
+  143(5):500--506, Sep 1996.
+
+\bibitem{Daneshi}
+H.~Daneshi, M.~Shahidehpour, and A.~Choobbari.
+\newblock Long-term load forecasting in electricity market.
+\newblock In {\em Electro/Information Technology, 2008. EIT 2008. IEEE
+  International Conference on}, pages 395--400, May 2008.
+
+\bibitem{benveniste}
+E.~Fabre, S.~Haar, A.~Benveniste, and A.~Benveniste.
+\newblock Hidden markov models for distributed and concurrent systems, 2000.
+
+\bibitem{Falvo}
+M.~Falvo, R.~Lamedica, S.~Pierazzo, and A.~Prudenzi.
+\newblock A knowledge based system for medium term load forecasting.
+\newblock In {\em Transmission and Distribution Conference and Exhibition,
+  2005/2006 IEEE PES}, pages 1291--1295, May 2006.
+
+\bibitem{Felice}
+M.~D. Felice and X.~Yao.
+\newblock Short-term load forecasting with neural network ensembles: A
+  comparative study [application notes].
+\newblock {\em IEEE Comp. Int. Mag.}, 6(3):47--56, 2011.
+
+\bibitem{Ghahramani}
+Z.~Ghahramani.
+\newblock Hidden markov models.
+\newblock pages 9--42, 2002.
+
+\bibitem{fhmm}
+Z.~Ghahramani and M.~I. Jordan.
+\newblock Factorial hidden markov models.
+\newblock {\em Mach. Learn.}, 29(2-3):245--273, Nov. 1997.
+
+\bibitem{Heinzelman00energy}
+W.~R. Heinzelman, A.~Ch, and H.~Balakrishnan.
+\newblock Energy-efficient communication protocol for wireless microsensor
+  networks.
+\newblock pages 3005--3014, 2000.
+
+\bibitem{hinton2000}
+G.~E. Hinton.
+\newblock Training products of experts by minimizing contrastive divergence.
+\newblock Technical Report GCNU TR 2000-004, Gatsby Computational Neuroscience
+  Unit, University College London, 2000.
+
+\bibitem{DisaggregationHSMM}
+H.~Kim, M.~Marwah, M.~F. Arlitt, G.~Lyon, and J.~Han.
+\newblock Unsupervised disaggregation of low frequency power measurements.
+\newblock In {\em SIAM}, pages 747--758. SIAM / Omnipress, 2011.
+
+\bibitem{KolterF11}
+J.~Z. Kolter and J.~Ferreira.
+\newblock A large-scale study on predicting and contextualizing building energy
+  usage.
+\newblock In {\em AAAI}. AAAI Press, 2011.
+
+\bibitem{KolterJ12}
+J.~Z. Kolter and T.~Jaakkola.
+\newblock Approximate inference in additive factorial hmms with application to
+  energy disaggregation.
+\newblock In {\em AISTATS}, volume~22 of {\em JMLR Proceedings}, pages
+  1472--1482. JMLR.org, 2012.
+
+\bibitem{5620917}
+F.~Martinez~Alvarez, A.~Troncoso, J.~Riquelme, and J.~Aguilar~Ruiz.
+\newblock Energy time series forecasting based on pattern sequence similarity.
+\newblock {\em Knowledge and Data Engineering, IEEE Transactions on},
+  23(8):1230--1243, Aug 2011.
+
+\bibitem{mckerracher}
+C.~McKerracher and J.~Torriti.
+\newblock Energy consumption feedback in perspective: integrating australian
+  data to meta-analyses on in-home displays.
+\newblock {\em Energy Efficiency}, 6(2):387--405, 2013.
+
+\bibitem{BLTJ:BLTJ21650}
+P.~Mirowski, S.~Chen, T.~Kam~Ho, and C.-N. Yu.
+\newblock Demand forecasting in smart grids.
+\newblock {\em Bell Labs Technical Journal}, 18(4):135--158, 2014.
+
+\bibitem{samuel}
+I.~A. Samuel, A.~A. Awelewa, et~al.
+\newblock Medium-term load forecasting of covenant university using the
+  regression analysis methods.
+\newblock {\em Journal of Energy Technologies and Policy}, 4(4):10--16, 2014.
+
+\bibitem{Shen}
+W.~Shen, V.~Babushkin, Z.~Aung, and W.~L. Woon.
+\newblock An ensemble model for day-ahead electricity demand time series
+  forecasting.
+\newblock In {\em Proceedings of the Fourth International Conference on Future
+  Energy Systems}, e-Energy '13, pages 51--62, New York, NY, USA, 2013. ACM.
+
+\bibitem{NYAS:NYAS5921}
+D.~I. Stern.
+\newblock The role of energy in economic growth.
+\newblock {\em Annals of the New York Academy of Sciences}, 1219(1):26--51,
+  2011.
+
+\bibitem{taban}
+G.~Taban and A.~A.~C?rdenas.
+\newblock Data aggregation as a method of protecting privacy in smart grid
+  networks.
+\newblock {\em Power Systems, IEEE Transactions on}, March 2012.
+
+\bibitem{Taylor}
+G.~W. Taylor and G.~E. Hinton.
+\newblock Products of hidden markov models: It takes n >1 to tango.
+\newblock In {\em Proceedings of the Twenty-Fifth Conference on Uncertainty in
+  Artificial Intelligence}, UAI '09, pages 522--529, Arlington, Virginia,
+  United States, 2009. AUAI Press.
+
+\bibitem{Wijaya}
+T.~K. Wijaya, J.~Eberle, and K.~Aberer.
+\newblock Symbolic representation of smart meter data.
+\newblock In {\em Proceedings of the Joint EDBT/ICDT 2013 Workshops}, EDBT '13,
+  pages 242--248, New York, NY, USA, 2013. ACM.
+
+\bibitem{wijaya2014consumer}
+T.~K. Wijaya, T.~Ganu, D.~Chakraborty, K.~Aberer, and D.~P. Seetharam.
+\newblock Consumer segmentation and knowledge extraction from smart meter and
+  survey data.
+\newblock In {\em SIAM International Conference on Data Mining (SDM14)}, number
+  EPFL-CONF-196276, pages 226--234, 2014.
+
+\bibitem{Zhang}
+Z.~Zhang and S.~Ye.
+\newblock Long term load forecasting and recommendations for china based on
+  support vector regression.
+\newblock In {\em Information Management, Innovation Management and Industrial
+  Engineering (ICIII), 2011 International Conference on}, volume~3, pages
+  597--602, Nov 2011.
+
+\end{thebibliography}
