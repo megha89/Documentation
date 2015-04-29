@@ -103,49 +103,72 @@ There are many reasons why the product model constructed from many HMMs is appro
 
 \section{Related Work}
 \label{related}
+In this section, we describe work that uses ensemble learning techniques and non-ensemble learning techniques to solve problems in energy domain.
+\subsection{Non-ensemble based learning techniques}
 
-\subsection{Energy Aggregation}
+\subsubsection{Energy Aggregation}
 %Devaine et al. (CITE) study ...
- Data aggregation also known as data fusion is defined as set of methods for combining the data that comes from many sensor nodes into a set of meaningful information \cite{Heinzelman00energy}.
-To study the process of energy aggregation, data is collected from multiple smart meters. This collected data is very large which in turn makes the analytics on top of it very difficult. Also, this detailed energy consumption data leads to privacy breach and other risks related to it. To address this problem, there has been work done \cite{Wijaya} to reduce the smart meter data numerosity by converting it into symbolic representation and then allowing algorithms on top of it. They have applied the symbolic representation tasks for customer segmentation and load forecasting.
+In wireless sensor networks, energy data aggregation is a method of combining data from different sources and expressing on a specific variable, in a summarised format. As the sensor network generates lot of data for the end user to process, there are automated methods employed to aggregate data. This data fusion is generally known as data aggregation which combines the data into a set of meaningful information \cite{Heinzelman00energy}.
+The sensor nodes are organised in a tree structure, called aggregation tree. The leaves of this tree are the sensor devices, the internal nodes are the aggregator devices that takes the data from the leaves, aggregates it and sends it to its parent node which is the root of the tree. \\
+The main objective of data aggregation is to reduce the unnecessary information thereby reducing the network traffic and improving the privacy of the customers from internal and external entities by keeping only the necessary information \cite{taban}. 
+
+
+%To study the process of energy aggregation, data is collected from multiple smart meters. This collected data is very large which in turn makes the analytics on top of it very difficult. Also, this detailed energy consumption data leads to privacy breach and other risks related to it. To address this problem, there has been work done \cite{Wijaya} to reduce the smart meter data numerosity by converting it into symbolic representation and then allowing algorithms on top of it. They have applied the symbolic representation tasks for customer segmentation and load forecasting.
+
 %The purpose of energy aggregation is to get some valuable information about single or multi-site units. 
 %This work evaluates the trend of degrading performance of the state of the art algorithms when the number of considered meters decrease \cite{BLTJ:BLTJ21650}. Short term load forecasts at the meter level help the company communicate with the customer about energy savings and billing. STLF handles prediction of one hour upto one week.
 %The energy aggregation problem has been tackled in a variety of ways including topology control, energy conserving sleep scheduling, mobile data collectors and data aggregation. 
 %Research has been done on the role of energy on the growth of the country's economy \cite{NYAS:NYAS5921}.
 
-\subsection{Energy Disaggregation}
+\subsubsection{Energy Disaggregation}
 The process in which the whole building energy (aggregated) signal is separated into appliance level energy (disaggregated) for a variety of reasons like residential energy reductions, program evaluation, targeted marketing, etc. Several studies have been done in this regard, one of the unsupervised desegregation method \cite{DisaggregationHSMM} that outperforms other unsupervised disaggregation methods is conditional factorial hidden semi-Markov model. This model when integrated with other features, accurately represents the individual appliance energy consumption. Another research \cite{KolterJ12} that exploits the additive structure of the FHMM to develop approximate inference procedure in  energy disaggregation domain that outperforms the rest.
 
-\subsection{Load Forecasting}
-Load forecasting is extremely important for operation and planning of an electric utility company. It is usually divided into three categories, short-term forecasts \cite{Bakirtzis} \cite{Chen} \cite{Fan} \cite{Chow}, medium-term forecasts \cite{Falvo} \cite{samuel} \cite{bassi} and long-term forecasts \cite{Daneshi} \cite{Zhang}. Most of the load forecasting algorithms use statistical and artificial intelligence algorithms.
+\subsubsection{Load Forecasting}
+Electrical load forecasting refers to the projection of electrical load required in a certain geographical area with the use of previous electrical load usage in the same area. It is extremely important for efficient power system planning and operation, energy purchasing and generation, load switching, infrastructure development. It encompasses various factors like, historical load, weather data, population, energy supply and price, time of the year, etc.
+It is usually divided into three categories, short-term forecasts (one hour to one week) , medium-term forecasts (one week to one year) and long-term forecasts (more than a year).
+In short term load forecast, \cite{Bakirtzis} and \cite{Chen} used a three layer feed forward artificial neural network and to predict daily load profiles. In a paper by \cite{Chow}, nonlinear autoregressive integrated neural network was used to predict daily load consumption.
+In medium term load forecasts, the author forecasts \cite{Falvo} the monthly load through knowledge based activities from the output of the ANN based stage providing yearly energy predictions. Whereas in \cite{bassi}, time lagged feedforward neural network is used to do monthly forecasting on the basis of historical series of electrical load, economic and demographic variables. And the authors from covenant university, \cite{samuel} performed load forecasting of their own educational institute using the models based on linear, compound growth and cubic methods of regression analysis.
+In long term load forecasting, study done by \cite{Daneshi} resulted in showing that the models based on regression analysis did not give very accurate predictions as compared to fuzzy neural network which performed better due to better handling with non linear systems. Another work  \cite{Zhang} uses support vector regression to derive non linear relationship between load and economic factors like GDP for long term forecasting in developing countries.
 
-\subsection{Customer Segmentation}
+
+
+\subsubsection{Customer Segmentation}
 The identification of consumer profiles that show similar behaviour in energy consumption. This analysis is useful in various ways, like demand response system, intelligent distribution channel. The author \cite{wijaya2014consumer} segments the customers based on contextual dimensions like location, seasons, weather patterns, holidays, etc which help with various higher level applications like usage-specific tariff structure, theft detection, etc. In \cite{Albert}, author proposes to infer occupancy states from consumption time series data by using HMM framework. They investigate the effectiveness of HMM and model based cluster analysis in producing meaningful features of the classification. This work suggests the dynamics of time series as captured by HMM analysis can be valuable.
 
+\subsection{Ensemble based learning techniques}
+Ensemble learning is a method where multiple learners are trained to solve the same problem. It constructs a set of hypothesis and combines them to generate the final result.
+\subsubsection{Prediction with expert advice}
+A study done by \cite{Shen}, proposes a Pattern Forecasting Ensemble Model (PFEM) comprising of five forecasting models using different clustering techniques, like k-means model, self-organising map model, hierarchical clustering model, k-medoids model and fuzzy c-means model. They have showed that on three real-world dataset, their proposed ensemble model outperformed all the five individual model in case of day ahead electricity demand prediction.
+Another study \cite{Felice} highlights the importance of regularised negative correlation learning ensemble methodology on the problem of energy load hourly prediction. This method tries to overcomes the problem of variability in neural network due to high sensitivitiness to the initial conditions. As this method combines the outputs of several neural networks, it achieves a marked reduction in error after introducing external data. \\
+In our paper,  we deal with the problem of energy aggregation using ensemble learning model. Each HMM is used to represent a state of an appliance. An appliance can have states like ON or OFF. The combination of the outputs from each of these HMM models gives us our ensemble based learning model, Product of Hidden Markov Model (PoHMM) \cite{hinton2000}. This learning technique outputs the probability distribution by combining the outputs from several simpler distributions. It allows each model to make a decision on the basis of few dimensions.
 
 
-
-\subsection{Prediction with expert advice}
 \section{Review of PoHMM}
 \label{sec:review}
+%Benveniste defines HMM as a triple (\'{A}, $\mu$, $\pi$) where \'{A} = (X,$X_0$,A,T) is an automaton, $\mu$ is the initial state probability, $\pi$ is factored as state transition probability $\pi$$_{x}$ and message transition probability $\pi$$_{A}$. He uses a random arbiter $\alpha$, with values {first, second, third} to choose automaton to initiate transition. If $\alpha$ = first then first automaton chooses any transition having a private message whereas second automaton performs a stuttering transition, and vice versa for $\alpha$ = second. If $\alpha$ = both, then both automata agree on some shared message and move accordingly.
 
-Distributed networks can be modeled using interacting automata. Benveniste \cite{benveniste} defines automaton as a quadruple, \'{A} = (X,$X_0$,A,T) where X is a finite state of sets, $X_0$ is the subset of initial states, A is a finite set of messages, T is a set of transitions of the form t = \{x\_,a,x\} where x\_ is the previous state, a is the message label on which the state transitions to the next state x. The figure~\ref{fig:ex} below explains the automata with an example.\\
+Using the traditional HMM notation of the parameters $\lambda$ = \{A, B, $\pi$ \} where A is the transition probability, B is the observed probability, $\pi$ is the initial state probability. For a HMM, R we have the values of A, B, $\pi$ as shown in table ~\ref{table:A}, ~\ref{table:B}, ~\ref{table:pi} respectively.
+
+%Distributed networks can be modeled using interacting automata.
+%Benveniste \cite{benveniste} defines automaton as a quadruple, \'{A} = (X,$X_0$,A,T) where X is a finite state of sets, $X_0$ is the subset of initial states, A is a finite set of messages, T is a set of transitions of the form t = \{x\_,a,x\} where x\_ is the previous state, a is the message label on which the state transitions to the next state x. The figure~\ref{fig:ex} below explains the automata with an example.\\
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=8cm,height=3cm]{automata.png}
-\caption{Automata R and S}
+\caption{HMM R and S}
 \label{fig:ex}
 \end{figure*}
 
-For automaton R, X$_{R}$ = \{2; $R_1$,$R_2$\}, X$_{0R}$ = \{$R_1$\}, A$_{R}$ = \{a,b\}, T$_{R}$ = \{$R_1$,a,$R_1$; $R_1$,b,$R_2$; $R_2$,a,$R_2$; $R_2$,b,$R_1$\} \\
-For automaton S, X$_{S}$ = \{3; $S_1$,$S_2$,$S_3$\}, X$_{0S}$ = \{$S_1$\}, A$_{S}$ = \{a,b\}, T$_{S}$ = \{$S_1$,a,$S_1$; $S_1$,b,$S_2$; $S_2$,a,$S_2$; $S_2$,b,$S_3$; $S_3$,a,$S_3$; $S_3$,b,$S_1$\} \\
+For HMM R, X$_{R}$ = \{2; $R_1$,$R_2$\}, X$_{0R}$ = \{$R_1$\}, A$_{R}$ = \{a,b\}, T$_{R}$ = \{$R_1$,a,$R_1$; $R_1$,b,$R_2$; $R_2$,a,$R_2$; $R_2$,b,$R_1$\} \\
+For HMM S, X$_{S}$ = \{3; $S_1$,$S_2$,$S_3$\}, X$_{0S}$ = \{$S_1$\}, A$_{S}$ = \{a,b\}, T$_{S}$ = \{$S_1$,a,$S_1$; $S_1$,b,$S_2$; $S_2$,a,$S_2$; $S_2$,b,$S_3$; $S_3$,a,$S_3$; $S_3$,b,$S_1$\} \\
 The product of two automata \'{A} = R x S is defined as follows: \\
 X = X$_{R}$ x X$_{S}$ \\
 $X_0$ = X$_{0R}$ x X$_{0S}$ \\
 A = A$_{R}$ $\cup$ A$_{S}$ \\
 %t = (x\_,a,x)  \\
-Benveniste uses a notion of stuttering transition which helps to distinguish between local and global time by inserting dummy transitions between two transitions of a local automaton attached to a node. This stuttering transition waits for others to progress.
+
+%Benveniste uses a notion of stuttering transition which helps to distinguish between local and global time by inserting dummy transitions between two transitions of a local automaton attached to a node. This stuttering transition waits for others to progress.
+
 \begin{table}[h]
 \centering
 \begin{tabular}{ l | c | c }
@@ -182,9 +205,7 @@ $\pi$ & 0.4 & 0.6 \\
 \label{table:pi}
 \end{table}
 
-Talking in terms of HMM, requires us to equip products of automata with probabilities. Benveniste defines HMM as a triple (\'{A}, $\mu$, $\pi$) where \'{A} = (X,$X_0$,A,T) is an automaton, $\mu$ is the initial state probability, $\pi$ is factored as state transition probability $\pi$$_{x}$ and message transition probability $\pi$$_{A}$. He uses a random arbiter $\alpha$, with values {first, second, third} to choose automaton to initiate transition. If $\alpha$ = first then first automaton chooses any transition having a private message whereas second automaton performs a stuttering transition, and vice versa for $\alpha$ = second. If $\alpha$ = both, then both automata agree on some shared message and move accordingly.
-
-Using the traditional HMM notation of the parameters $\lambda$ = \{A, B, $\pi$ \} where A is the transition probability, B is the observed probability, $\pi$ is the initial state probability. For automata R, we have the values of A, B, $\pi$ as shown in table ~\ref{table:A}, ~\ref{table:B}, ~\ref{table:pi} respectively.
+%Talking in terms of HMM, requires us to equip products of automata with probabilities. 
 
 \subsection{Product of HMM}
 \label {sec:pohmm}
@@ -193,10 +214,10 @@ Product of HMM is a way of combining HMM's to form distributed state time series
 X = \{6; $R_1$$S_1$, $R_1$$S_2$, $R_1$$S_3$, $R_2$$S_1$, $R_2$$S_2$, $R_2$$S_3$\} \\
 $X_0$ = \{$R_1$$S_1$\} \\
 A = \{a,b\} \\
-The rules for synchronised product construction are : \\
-1. $<p,q>$ --a--$>$ $<p',q>$ if a $\in$ A$_{R}$ $\cap$ A$_{S}$ and p --a--$>$ p' and q --a--$>$ q'	\\
-2. $<p,q>$ --a--$>$ $<p',q>$ if a $\in$ A$_{R}$, a $\notin$ A$_{S}$ and p --a--$>$ p'	\\
-3. $<p,q>$ --a--$>$ $<p,q'>$ if a $\notin$ A$_{R}$, a $\in$ A$_{S}$ and q --a--$>$ q'	\\
+%The rules for synchronised product construction are : \\
+%1. $<p,q>$ --a--$>$ $<p',q>$ if a $\in$ A$_{R}$ $\cap$ A$_{S}$ and p --a--$>$ p' and q --a--$>$ q'	\\
+%2. $<p,q>$ --a--$>$ $<p',q>$ if a $\in$ A$_{R}$, a $\notin$ A$_{S}$ and p --a--$>$ p'	\\
+%3. $<p,q>$ --a--$>$ $<p,q'>$ if a $\notin$ A$_{R}$, a $\in$ A$_{S}$ and q --a--$>$ q'	\\
 
 \begin{figure*}[t]
 \centering
@@ -437,7 +458,7 @@ It implements the technique described in Geoff Hinton's paper \cite{hinton2000}.
 \item \textbf{ Additional Details } 
 \end{itemize}
 \subsection{ Experimental Setup } 
-Each of the data stream is modelled as a HMM individually. There are three streams of data, the first stream D1 corresponds to the data from 0-5th floor, D2 corresponds to 6-11th floor and D3 represents the total power from the faculty housing which is represented by a fixed test set, T. Firstly, the stream D1 is used to train the model such that the contrastive divergence is minimized. The parameters (mixing component of each unigauss, means of gaussian bits, log precisions of axis-aligned gaussian bits) that are learnt during the training are provided to the test set T in order to obtain the conditional probability of the gaussians given the data D1 represented as pgauss1. Similarly, the second stream of data, D2 collected from floor 6-11, is used to learn the parameters of the model during the training phase which are then again provided to the test set T to obtain conditional probability of the gaussians given the data D2 as pgauss2. Finally the data D3 is used to learn the model and parameters which are then applied to the test set T to obtain the gaussian probability as pgauss3. Now, as we know that the total power consumption of the building should be approximately equal to the product of HMMs, which is the product of pgauss1 and pgauss2. If we can show that the value of pgauss3 is as close as possible to the product of pgauss1 and pgauss2.\\
+Each of the data stream is modelled as a HMM individually. There are three streams of data, the first stream D$_{1}$ corresponds to the data from 0-5th floor, D$_{2}$ corresponds to 6-11th floor and D$_{3}$ represents the total power from the faculty housing which is represented by a fixed test set, T. Firstly, the stream D$_{1}$ is used to train the model such that the contrastive divergence is minimized. The parameters (mixing component of each unigauss, means of gaussian bits, log precisions of axis-aligned gaussian bits) that are learnt during the training are provided to the test set T in order to obtain the conditional probability of the gaussians given the data D$_{1}$ represented as pgauss$_{1}$. Similarly, the second stream of data, D$_{2}$ collected from floor 6-11, is used to learn the parameters of the model during the training phase which are then again provided to the test set T to obtain conditional probability of the gaussians given the data D$_{2}$ as pgauss$_{2}$. Finally the data D$_{3}$ is used to learn the model and parameters which are then applied to the test set T to obtain the gaussian probability as pgauss$_{3}$. Now, as we know that the total power consumption of the building should be approximately equal to the product of HMMs, which is the product of pgauss$_{1}$ and pgauss$_{2}$. If we can show that the value of pgauss$_{3}$ is as close as possible to the product of pgauss$_{1}$ and pgauss$_{2}$.\\
 The experiments performed in table ~\ref{table:error5} , shows the effect of varying samples on KL Divergence, convergence time and iterations keeping minimum threshold constant at 7.\\
 The other experiment performed in table ~\ref{table:error6} shows that effect of varying experts on KL Divergence and convergence time.
 
@@ -746,7 +767,7 @@ The conclusion goes here. this is more of the conclusion
 %pcchair15@ijcai.org}.
 
 %% The file named.bst is a bibliography style file for BibTeX 0.99c
-\nocite{Albert,wijaya2014consumer,Zhang,Daneshi,bassi,samuel,Falvo,Bakirtzis,Chen,Fan,Chow,DisaggregationHSMM,KolterJ12,KolterF11,BLTJ:BLTJ21650,Heinzelman00energy,Taylor,NYAS:NYAS5921,
+\nocite{Felice,Shen,taban,Albert,wijaya2014consumer,Zhang,Daneshi,bassi,samuel,Falvo,Bakirtzis,Chen,Chow,DisaggregationHSMM,KolterJ12,KolterF11,BLTJ:BLTJ21650,Heinzelman00energy,Taylor,NYAS:NYAS5921,
 Wijaya,5620917,1626400,mckerracher, benveniste,hinton2000,aistats,fhmm,andrew}
 
 

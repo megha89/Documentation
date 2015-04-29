@@ -69,11 +69,11 @@ M.C. Falvo, R.~Lamedica, S.~Pierazzo, and A.~Prudenzi.
 \newblock In {\em Transmission and Distribution Conference and Exhibition,
   2005/2006 IEEE PES}, pages 1291--1295, May 2006.
 
-\bibitem[\protect\citeauthoryear{Fan and McDonald}{1994}]{Fan}
-J.Y. Fan and J.D. McDonald.
-\newblock A real-time implementation of short-term load forecasting for
-  distribution power systems.
-\newblock {\em Power Systems, IEEE Transactions on}, 9(2):988--994, May 1994.
+\bibitem[\protect\citeauthoryear{Felice and Yao}{2011}]{Felice}
+M.~D. Felice and X.~Yao.
+\newblock Short-term load forecasting with neural network ensembles: A
+  comparative study [application notes].
+\newblock {\em IEEE Comp. Int. Mag.}, 6(3):47--56, 2011.
 
 \bibitem[\protect\citeauthoryear{Ghahramani and Jordan}{1997}]{fhmm}
 Zoubin Ghahramani and Michael~I. Jordan.
@@ -138,11 +138,24 @@ Isaac~A Samuel, Ayokunle~A Awelewa, et~al.
   regression analysis methods.
 \newblock {\em Journal of Energy Technologies and Policy}, 4(4):10--16, 2014.
 
+\bibitem[\protect\citeauthoryear{Shen \bgroup \em et al.\egroup }{2013}]{Shen}
+Wen Shen, Vahan Babushkin, Zeyar Aung, and Wei~Lee Woon.
+\newblock An ensemble model for day-ahead electricity demand time series
+  forecasting.
+\newblock In {\em Proceedings of the Fourth International Conference on Future
+  Energy Systems}, e-Energy '13, pages 51--62, New York, NY, USA, 2013. ACM.
+
 \bibitem[\protect\citeauthoryear{Stern}{2011}]{NYAS:NYAS5921}
 David~I. Stern.
 \newblock The role of energy in economic growth.
 \newblock {\em Annals of the New York Academy of Sciences}, 1219(1):26--51,
   2011.
+
+\bibitem[\protect\citeauthoryear{Taban and A.~C�rdenas}{2012}]{taban}
+Gelareh Taban and Alvaro A.~C�rdenas.
+\newblock Data aggregation as a method of protecting privacy in smart grid
+  networks.
+\newblock {\em Power Systems, IEEE Transactions on}, March 2012.
 
 \bibitem[\protect\citeauthoryear{Taylor and Hinton}{2009}]{Taylor}
 Graham~W. Taylor and Geoffrey~E. Hinton.
@@ -165,7 +178,7 @@ Tri~Kurniawan Wijaya, Tanuja Ganu, Dipanjan Chakraborty, Karl Aberer, and
 \newblock Consumer segmentation and knowledge extraction from smart meter and
   survey data.
 \newblock In {\em SIAM International Conference on Data Mining (SDM14)}, number
-  EPFL-CONF-196276, 2014.
+  EPFL-CONF-196276, pages 226--234, 2014.
 
 \bibitem[\protect\citeauthoryear{Zhang and Ye}{2011}]{Zhang}
 Zhiheng Zhang and Shijie Ye.

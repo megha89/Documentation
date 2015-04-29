@@ -4,49 +4,49 @@ The top-level auxiliary file: ijcai15.aux
 The style file: named.bst
 Database file #1: ijcai15.bib
 Warning--entry type for "andrew" isn't style-file defined
---line 314 of file ijcai15.bib
+--line 364 of file ijcai15.bib
 Warning--there's a number but no series in aistats
 Warning--empty booktitle in Heinzelman00energy
 Warning--there's a number but no series in wijaya2014consumer
-You've used 27 entries,
+You've used 29 entries,
             2439 wiz_defined-function locations,
-            737 strings with 9409 characters,
-and the built_in function-call counts, 11892 in all, are:
-= -- 1239
-> -- 443
-< -- 15
-+ -- 151
-- -- 146
-* -- 961
-:= -- 1812
-add.period$ -- 84
-call.type$ -- 27
-change.case$ -- 180
-chr.to.int$ -- 27
-cite$ -- 30
-duplicate$ -- 491
-empty$ -- 926
-format.name$ -- 184
-if$ -- 2552
+            747 strings with 9801 characters,
+and the built_in function-call counts, 12899 in all, are:
+= -- 1353
+> -- 479
+< -- 17
++ -- 163
+- -- 158
+* -- 1033
+:= -- 1960
+add.period$ -- 91
+call.type$ -- 29
+change.case$ -- 194
+chr.to.int$ -- 29
+cite$ -- 32
+duplicate$ -- 537
+empty$ -- 996
+format.name$ -- 199
+if$ -- 2776
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 24
-newline$ -- 136
-num.names$ -- 81
-pop$ -- 162
+missing$ -- 26
+newline$ -- 146
+num.names$ -- 87
+pop$ -- 173
 preamble$ -- 1
-purify$ -- 207
+purify$ -- 223
 quote$ -- 0
-skip$ -- 429
+skip$ -- 474
 stack$ -- 0
-substring$ -- 712
-swap$ -- 156
-text.length$ -- 15
+substring$ -- 772
+swap$ -- 176
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 216
+type$ -- 232
 warning$ -- 3
-while$ -- 92
-width$ -- 32
-write$ -- 357
+while$ -- 102
+width$ -- 34
+write$ -- 386
 (There were 4 warnings)
