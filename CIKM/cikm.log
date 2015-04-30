@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  30 APR 2015 03:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  30 APR 2015 19:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -294,6 +294,9 @@ LaTeX Warning: Reference `conc' on page \thepage  undefined on input line 206.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 LaTeX Warning: Reference `fig:pohmm' on page \thepage  undefined on input line 
 342.
 
@@ -339,12 +342,12 @@ File: channel_9.png Graphic file (type png)
  <use channel_9.png>
 Package pdftex.def Info: channel_9.png used on input line 442.
 (pdftex.def)             Requested size: 503.98901pt x 99.89673pt.
-
+ [4 <./pohmm1.jpg>]
 Overfull \hbox (20.52705pt too wide) in paragraph at lines 554--554
 []\secfnt PROOF OF CON-CEPT ON FAC-ULTY HOUS-
  []
 
-[4 <./pohmm1.jpg>] [5 <./channel_6.png> <./channel_7.png>]
+[5 <./channel_6.png> <./channel_7.png>]
 <screenshot.png, id=36, 1004.75375pt x 583.17876pt>
 File: screenshot.png Graphic file (type png)
  <use screenshot.png>
@@ -368,8 +371,12 @@ File: total2.png Graphic file (type png)
  <use total2.png>
 Package pdftex.def Info: total2.png used on input line 590.
 (pdftex.def)             Requested size: 503.99231pt x 99.89287pt.
- [6 <./channel_8.png> <./channel_9.png>] [7 <./screenshot.png> <./floor052.png>
-] (./cikm.bbl
+ (./cikm.bbl
+[6 <./channel_8.png> <./channel_9.png>] [7 <./screenshot.png> <./floor052.png>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8 <./floor6112.png> <./total2.png>]) [9
@@ -382,7 +389,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  2886 strings out of 493315
  36577 string characters out of 6137903
- 113671 words of memory out of 5000000
+ 110671 words of memory out of 5000000
  6255 multiletter control sequences out of 15000+600000
  54309 words of font info for 71 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -402,7 +409,7 @@ t/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts
 urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on cikm.pdf (9 pages, 428037 bytes).
+Output written on cikm.pdf (9 pages, 428605 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream
