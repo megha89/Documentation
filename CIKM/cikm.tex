@@ -55,7 +55,7 @@
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
 
-\title{Energy Aggregation using Product of HMM}
+\title{Energy Aggregation using Product of HMMs}
 %\title{Alternate {\ttlit ACM} SIG Proceedings Paper in LaTeX
 %Format\titlenote{(Produces the permission block, and
 %copyright information). For use with
@@ -142,9 +142,13 @@ Ullas Nambiar\\
 
 \maketitle
 \begin{abstract}
-The need to gather real-time fine grained spatio-temporal energy consumption data is fulfilled by the large scale deployment of smart meters. With the advent of smart metering infrastructure in the electrical power systems, remote monitoring is done by sending the readings from the customer's place to the data aggregators placed at the substations. Each substation aggregates the load derived from all the meters connected to that substation. The problem arises when the analytics is to be performed on the data which is aggregated from the inconsistent messages passed by all the meters connected to a particular substation.
+The need to gather fine grained real-time spatio-temporal energy consumption data is fulfilled by the large scale deployment of smart meters. Remote monitoring on these meters is done by sending readings from the customer site to the data aggregators placed at the substations. Each substation aggregates the load derived from all the meters connected to that substation. The  readings received at the substation are adhoc and usually not synchronized in time. Different smart meters can send data points when they are collected resulting in inconsistent data including aggregating non-aligned time stamped readings, readings with missing values, repeated values, meter reset readings.
+%The problem arises when the analytics is to be performed on the data which is aggregated from the inconsistent messages passed by all the meters connected to a particular substation.
 %the demand response programs have been a cost effective alternative to meet the occasional peak demands. 
-We propose to solve the problem of energy aggregation where the constituents of each aggregate are inconsistent with respect to time. The challenges with the inconsistent data includes aggregating non-aligned time stamped readings, readings with missing values, repeated values, meter reset readings. We address the problem of aggregating energy data in context with the load forecasting using a machine learning technique called product of Hidden Markov Models (PoHMM). The objective function used for learning is the contrastive divergence between the observed data and the reconstructed data produced by running a Gibbs sampler. 
+%We propose to solve the problem of energy aggregation where the constituents of each aggregate are inconsistent with respect to time. The challenges with the inconsistent data includes aggregating non-aligned time stamped readings, readings with missing values, repeated values, meter reset readings. 
+We address the problem of learning from disparate data streams (with inconsistencies) by modelling streams as HMMs and the process of aggregating data at the substation as a Product of HMMs. This enables us to perform load forecasting using machine learning techniques. We have performed experiments using contrastive divergence learning on the REDD data set and the energy consumption data collected from the faculty housing at our institute. The results show that this technique performs best by combining larger no. of HMMs with smaller no. of states (on, off or standby) with training time linear to the number of HMMs. via a product.
+%We address the problem of aggregating energy data in context with the load forecasting using a machine learning technique called product of Hidden Markov Models (PoHMM). 
+%The objective function used for learning is the contrastive divergence between the observed data and the reconstructed data produced by running a Gibbs sampler. 
 %Data analytics in energy domain, load forecasting on aggregates of power meters, Energy aggregation problem using pohmm, The STLF accuracy improves with larger aggregates, This paper deals with the energy aggregation problems in electrical system. The challenges included problem of aggregating inconsistent data, across time, in case of electrical systems.
 
 
@@ -180,7 +184,7 @@ We propose to solve the problem of energy aggregation where the constituents of 
 %
 %\terms{Theory}
 
-\keywords{Energy aggregation; Ensemble learning; Product of HMM }
+\keywords{Energy aggregation; Ensemble learning; Product of HMMs }
 
 \section{Introduction}
 Smart meters consisting of real time sensors, power outage notifications and power quality monitoring are widely used today. These meters provide a host of benefits like energy efficiency and savings, improved retail competition, better demand response actions, improved tariffs, lower bills due to better customer feedback, accurate billing, less environmental pollution, etc. %\cite

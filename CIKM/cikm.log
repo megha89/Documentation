@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  30 APR 2015 19:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  1 MAY 2015 02:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -287,7 +287,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 
-LaTeX Warning: Reference `conc' on page \thepage  undefined on input line 206.
+LaTeX Warning: Reference `conc' on page \thepage  undefined on input line 210.
 
 [2]
 
@@ -298,81 +298,85 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: Reference `fig:pohmm' on page \thepage  undefined on input line 
-342.
+346.
 
 
-LaTeX Warning: Reference `fig:ex' on page \thepage  undefined on input line 342
+LaTeX Warning: Reference `fig:ex' on page \thepage  undefined on input line 346
 .
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--350
+Underfull \hbox (badness 10000) in paragraph at lines 344--354
 
  []
 
 <pohmm1.jpg, id=17, 353.32pt x 271.0125pt>
 File: pohmm1.jpg Graphic file (type jpg)
  <use pohmm1.jpg>
-Package pdftex.def Info: pohmm1.jpg used on input line 366.
+Package pdftex.def Info: pohmm1.jpg used on input line 370.
 (pdftex.def)             Requested size: 142.26357pt x 85.35698pt.
  [3]
-Overfull \hbox (2.3822pt too wide) in paragraph at lines 398--401
+Overfull \hbox (2.3822pt too wide) in paragraph at lines 402--405
 \T1/aer/m/n/9 tains power con-sump-tion from real homes, for the whole
  []
 
 <channel_6.png, id=26, 1032.85875pt x 275.0275pt>
 File: channel_6.png Graphic file (type png)
  <use channel_6.png>
-Package pdftex.def Info: channel_6.png used on input line 421.
+Package pdftex.def Info: channel_6.png used on input line 425.
 (pdftex.def)             Requested size: 503.99336pt x 99.8953pt.
 
 <channel_7.png, id=27, 966.61125pt x 300.12125pt>
 File: channel_7.png Graphic file (type png)
  <use channel_7.png>
-Package pdftex.def Info: channel_7.png used on input line 428.
+Package pdftex.def Info: channel_7.png used on input line 432.
 (pdftex.def)             Requested size: 503.99768pt x 99.89667pt.
 
 <channel_8.png, id=28, 917.4275pt x 300.12125pt>
 File: channel_8.png Graphic file (type png)
  <use channel_8.png>
-Package pdftex.def Info: channel_8.png used on input line 435.
+Package pdftex.def Info: channel_8.png used on input line 439.
 (pdftex.def)             Requested size: 503.99875pt x 99.89667pt.
 
 <channel_9.png, id=29, 1030.85126pt x 307.1475pt>
 File: channel_9.png Graphic file (type png)
  <use channel_9.png>
-Package pdftex.def Info: channel_9.png used on input line 442.
+Package pdftex.def Info: channel_9.png used on input line 446.
 (pdftex.def)             Requested size: 503.98901pt x 99.89673pt.
-
-Overfull \hbox (20.52705pt too wide) in paragraph at lines 554--554
+ [4 <./pohmm1.jpg>]
+Overfull \hbox (20.52705pt too wide) in paragraph at lines 558--558
 []\secfnt PROOF OF CON-CEPT ON FAC-ULTY HOUS-
  []
 
-[4 <./pohmm1.jpg>] [5 <./channel_6.png> <./channel_7.png>]
+[5 <./channel_6.png> <./channel_7.png>]
 <screenshot.png, id=36, 1004.75375pt x 583.17876pt>
 File: screenshot.png Graphic file (type png)
  <use screenshot.png>
-Package pdftex.def Info: screenshot.png used on input line 564.
+Package pdftex.def Info: screenshot.png used on input line 568.
 (pdftex.def)             Requested size: 403.19754pt x 233.0983pt.
 
 <floor052.png, id=38, 911.405pt x 341.275pt>
 File: floor052.png Graphic file (type png)
  <use floor052.png>
-Package pdftex.def Info: floor052.png used on input line 576.
+Package pdftex.def Info: floor052.png used on input line 580.
 (pdftex.def)             Requested size: 504.01396pt x 99.89413pt.
 
 <floor6112.png, id=39, 905.3825pt x 341.275pt>
 File: floor6112.png Graphic file (type png)
  <use floor6112.png>
-Package pdftex.def Info: floor6112.png used on input line 583.
+Package pdftex.def Info: floor6112.png used on input line 587.
 (pdftex.def)             Requested size: 503.99907pt x 99.89413pt.
 
 <total2.png, id=40, 904.37875pt x 334.24875pt>
 File: total2.png Graphic file (type png)
  <use total2.png>
-Package pdftex.def Info: total2.png used on input line 590.
+Package pdftex.def Info: total2.png used on input line 594.
 (pdftex.def)             Requested size: 503.99231pt x 99.89287pt.
- [6 <./channel_8.png> <./channel_9.png>] [7 <./screenshot.png> <./floor052.png>
-] (./cikm.bbl
+ (./cikm.bbl
+[6 <./channel_8.png> <./channel_9.png>] [7 <./screenshot.png> <./floor052.png>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8 <./floor6112.png> <./total2.png>]) [9
@@ -385,7 +389,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  2886 strings out of 493315
  36577 string characters out of 6137903
- 113671 words of memory out of 5000000
+ 110671 words of memory out of 5000000
  6255 multiletter control sequences out of 15000+600000
  54309 words of font info for 71 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -405,7 +409,7 @@ t/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts
 urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on cikm.pdf (9 pages, 428355 bytes).
+Output written on cikm.pdf (9 pages, 428637 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream
