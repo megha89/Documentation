@@ -187,27 +187,31 @@ We address the problem of learning from disparate data streams (with inconsisten
 \keywords{Energy aggregation; Ensemble learning; Product of HMMs }
 
 \section{Introduction}
-Smart meters consisting of real time sensors, power outage notifications and power quality monitoring are widely used today. These meters provide a host of benefits like energy efficiency and savings, improved retail competition, better demand response actions, improved tariffs, lower bills due to better customer feedback, accurate billing, less environmental pollution, etc. %\cite
-They generate huge amount of data which helps in giving meaningful insights through analytics.
-They can measure site specific information and also help agencies to set different electricity prices for consumption based on the time of the day, seasons, holidays, etc. As a result, a feedback is sent to the customers by the utilities that can help consumers better manage their resources. A research \cite{mckerracher} shows that by providing real time feedback, consumers can reduce the consumption by 3-5\%. Also, for some country providing real time feedback may not be a cost effective plan but it can help in retaining customers and peak-load shift.
+Smart meters consisting of real time sensors, power outage notifications and power quality monitoring are widely used today. These meters provide a host of benefits like energy efficiency and savings, improved retail competition, better demand response actions, improved tariffs, lower bills due to better customer feedback, accurate billing, less environmental pollution, etc. \cite{Klopfert}
+They generate huge amount of time series data which can be used for gaining meaningful insights through analytics.
+They can measure site specific information and also help agencies set different electricity prices for consumption based on the time of the day, seasons, holidays, etc. Based on the data collected from smart meters, a feedback sent to the customers by the utilities that can help consumers better manage their resources. A research \cite{mckerracher} shows that by providing real time feedback, consumers can reduce the consumption by 3-5\%.
 %This helps consumers to better manage their energy resources and reduce their bills and carbon emissions.
 
 
 In recent years, machine learning has been applied to the problem of energy consumption and demand forecasting analysis. The role of the machine learning algorithm is to study the sensor data and provide alerts and warnings when anomalous behaviour occurs or to inform (and remind) customers when certain activities were performed, which rooms they occupied, and what appliances they used most frequently during that period. This information can be transmitted to customers in timely fashion via phone, email or the Internet.
-This paper \cite{1626400} does a comparison of several clustering techniques and finds out that  the hierarchical clustering and modified follow-the-leader perform best among the rest K-Means, fuzzy K-Means to group customers with similar electrical behaviour \cite{5620917}. Another paper \cite{Wijaya} uses classifiers like random forest, J48, logistic and naive bayes to identify customers with similar electricity consumption profiles.
-Sensor data collected from smart homes are used to reveal activity patterns of the residents, which can then be correlated with the total energy consumption. This enables utility companies and their customers to associate activities with energy usage and costs, devise intelligent systems to control home environments improving energy efficiency and reducing costs. Typically, sequences of usage patterns that appear frequently at different time scales (daily, weekly, monthly, yearly) and across different homes are studied and 
-%; trends of electricity consumption (steadily increasing, decreasing, cyclic, seasonal) for individual homes and across the community; and anomalies (sudden peaks or drops on consumption) for individual homes and across the community.
-outlier detection algorithms are designed to enable customers to be notified that they are consuming unusually large amount(s) of energy during some specific period. Related problems involve study of trends of electricity consumption (steadily increasing, decreasing, cyclic, seasonal) and sudden anomalous behaviour (sudden peaks or drops on consumption) for individual homes and across the community.
+Chicco et al. \cite{1626400} does a comparison of several clustering techniques and finds out that  the hierarchical clustering and modified follow-the-leader perform best among the rest K-Means, fuzzy K-Means to group customers with similar electrical behaviour \cite{5620917}. Another paper \cite{Wijaya} uses classifiers like random forest, decision trees (J48), logistic and naive bayes to identify customers with similar electricity consumption profiles.
+%Sensor data collected from smart homes are used to reveal activity patterns of the residents, which can then be correlated with the total energy consumption. This enables utility companies and their customers to associate activities with energy usage and costs, devise intelligent systems to control home environments improving energy efficiency and reducing costs. Typically, sequences of usage patterns that appear frequently at different time scales (daily, weekly, monthly, yearly) and across different homes are studied and 
+%%; trends of electricity consumption (steadily increasing, decreasing, cyclic, seasonal) for individual homes and across the community; and anomalies (sudden peaks or drops on consumption) for individual homes and across the community.
+%outlier detection algorithms are designed to enable customers to be notified that they are consuming unusually large amount(s) of energy during some specific period. 
+Related problems involve study of trends of electricity consumption (steadily increasing, decreasing, cyclic, seasonal) and sudden anomalous behaviour (sudden peaks or drops on consumption) for individual homes and across the community.\cite{Diane}
 
-In this paper, we use HMMs to model time series data. We build machine learning models using products of HMMs and apply them to the energy aggregation problem. Two different proof of concepts are presented -- first one on the REDD data set and the other one on real data collected at the faculty housing in India. 
+In this paper, we use Hidden Markov models (HMMs) to analyse the time series energy data. HMMs are widely used for time series data like financial time series prediction \cite{SS97a}, health checkup data \cite{Kawamoto}, energy time series analytics \cite{Albert}, etc. We are trying to model the data stream from each source as a HMM with its states represented as ON/OF.  For $N$ sources, there are $N$ HMMs and  the total number of states collectively are $2^N$. The observations represent the energy consumed in a particular state. These observations are recorded at different time scales for different sources. In order to aggregate the data from all the different sources, we build a machine learning model using products of HMMs (PoHMMs) and apply it to the energy aggregation problem. There are many reasons why the product model constructed from many HMMs is appropriate. 
+%First, this model is ideal for data which is caused by multiple underlying influences.
+First, this model allows each HMM to make decisions based on few dimensions without actually having to worry about covering the full dimensionality of the problem. Second, HMMs alone are not efficient at capturing long range structure in time series \cite{Taylor} -- in contrast to PoHMMs  \cite{andrew} allow each model to remember a different piece of information about the past.
+Two different proof of concepts are presented -- first one on the REDD \footnote{http://redd.csail.mit.edu/} data set and the other one on real data collected at the faculty housing in India. 
 %application of are aggregating energy consumption information using a model that extends the power of HMMs. HMM's are used as the basic expert in the of product of experts model. 
-There are many reasons why the product model constructed from many HMMs is appropriate. First, this model is ideal for data which is caused by multiple underlying influences. Second, HMMs alone are not efficient at capturing long range structure in time series \cite{Taylor} -- in contrast to product of hidden markov models (PoHMM)  \cite{andrew} allow each model to remember a different piece of information about the past.
+
 %There have been some experiments on sentence and character strings modelling, factorial time series to demonstrate the advantages of using a PoHMM over an equivalently sized regular HMM}.
 %We have applied the contrastive divergence learning algorithm on two datasets, REDD dataset and the faculty housing dataset which was generated by smart meters.
 %The system architecture for the faculty housing dataset consists of two smart meters $S_1$ and $S_2$ installed in a faculty housing building collecting data from twelve floors. $S_1$ collects data from first six floors (0 to 5th) and $S_2$ collects data from the rest of the floors (6 to 11th). The data collected from two meters is aggregated using product of experts technique in a way that the contrastive divergence between the two probability distributions is minimized. 
 %The proof of concept of REDD dataset and faculty housing dataset is given in section~\ref{sec:redd} and section~\ref{sec:faculty} respectively.
 
-\noindent \textbf{Organization:} This paper is organized as follows: Section~\ref{related} examines related work on data analytics on aggregated data of smart meters; Section~\ref{sec:review} provides a review of products of Hidden Markov Models (HMMs) and how they relate to our application. The two proofs of concepts are introduced in Section~\ref{poc} to illustrate the effectiveness of the use of product of HMMs in the energy aggregation problem. Finally, Section~\ref{conc} concludes the work.
+\noindent \textbf{Organization:} This paper is organized as follows: Section~\ref{related} examines related work on data analytics on aggregated data of smart meters; Section~\ref{sec:review} provides a review of products of Hidden Markov Models (HMMs) and how they relate to our application. The two proofs of concepts are introduced in Section~\ref{poc} and Section~\ref{poc2} to illustrate the effectiveness of the use of product of HMMs in the energy aggregation problem. Finally, Section~\ref{con} concludes the work.
 
 \section{Related Work}
 \label{related}
@@ -248,27 +252,48 @@ Ensemble learning is a method where multiple learners are trained to solve the s
 \subsubsection{Prediction with expert advice}
 A study done by \cite{Shen}, proposes a Pattern Forecasting Ensemble Model (PFEM) comprising of five forecasting models using different clustering techniques, like k-means model, self-organising map model, hierarchical clustering model, k-medoids model and fuzzy c-means model. They have showed that on three real-world dataset, their proposed ensemble model outperformed all the five individual model in case of day ahead electricity demand prediction.
 Another study \cite{Felice} highlights the importance of regularised negative correlation learning ensemble methodology on the problem of energy load hourly prediction. This method tries to overcomes the problem of variability in neural network due to high sensitivitiness to the initial conditions. As this method combines the outputs of several neural networks, it achieves a marked reduction in error after introducing external data. \\
+An extension of HMMs, called Factorial Hidden Markov Model (FHMM) \cite{fhmm} is a class of ensemble based learning models that addresses the need for distributed hidden states in HMMs. But by being a directed model, when conditioned on the observed sequence, the hidden state chains become independent making the inference easy but learning more complex.
 In our paper,  we deal with the problem of energy aggregation using ensemble learning model. Each HMM is used to represent a state of an appliance. An appliance can have states like ON or OFF. The combination of the outputs from each of these HMM models gives us our ensemble based learning model, Product of Hidden Markov Model (PoHMM) \cite{hinton2000}. This learning technique outputs the probability distribution by combining the outputs from several simpler distributions. It allows each model to make a decision on the basis of few dimensions.
 
 
-\section{Review of PoHMM}
+%\begin{figure*}[t]
+%\centering
+%\includegraphics[width=4cm,height=3cm]{hmm1.jpg}
+%\caption{HMM $S$}
+%\label{fig:hmm1}
+%\end{figure*}
+
+
+\begin{figure*}
+\centering
+\includegraphics[width=4cm,height=3cm]{hmm1.jpg}
+\label{fig:hmm1}
+\includegraphics[width=4cm,height=3cm]{hmm2.jpg}
+\label{fig:product}
+\caption{HMM $S^1$ and $S^2$}
+\end{figure*}
+
+
+\section{Review}
 \label{sec:review}
+
 %Benveniste defines HMM as a triple (\'{A}, $\mu$, $\pi$) where \'{A} = (X,$X_0$,A,T) is an automaton, $\mu$ is the initial state probability, $\pi$ is factored as state transition probability $\pi$$_{x}$ and message transition probability $\pi$$_{A}$. He uses a random arbiter $\alpha$, with values {first, second, third} to choose automaton to initiate transition. If $\alpha$ = first then first automaton chooses any transition having a private message whereas second automaton performs a stuttering transition, and vice versa for $\alpha$ = second. If $\alpha$ = both, then both automata agree on some shared message and move accordingly.
 
-A hidden Markov Model (HMM) is a tool that represents the probability distribution over the sequence of observations \cite{Ghahramani}. It holds two name defining properties, first, the observation at time $t$ is generated by a process whose state $S_{t}$ is hidden from the observer and second, is that this hidden state process satisfies Markov property which states that given the value at state $S_{t-1}$, the value at current state $S_{t}$ is independent of all the states prior to $t-1$. Another assumption that it follows is that the hidden state variable is discreet, that is $S_{t}$ can take $K$ values denoted by integers \{1,..K\}. In order to define probably distribution  over the sequence of observation, it is important to define probability distribution over the initial state P($S_{1}$), the transition probability P($S_{t}$|$S_{t-1}$) and the observed probability P($Y_{t}$|$S_{t}$) where $Y_{t}$ is the observation at time $t$.
+A Hidden Markov Model (HMM) is a statistical markov model that represents the probability distribution over a sequence of observations \cite{Ghahramani}. They are found useful in applications like speech \cite{Rabiner}, handwriting, gesture recognition, part-of-speech tagging, bioinformatics, etc. It has two properties, first, the observation at time $t$, $y_{t}$ is generated by a process whose state at time $t$, $s_{t}$ is hidden from the observer and second, is that this hidden state process satisfies markov property which states that given the value at state $s_{t-1}$, the value at current state $s_{t}$ is independent of all the states prior to $t-1$. The subscripts $i$ and superscripts $j$ indicate the model at $i$th time and the $j$th HMM. The state space of the HMM is discrete, that is a state can take $2$ values denoted by ON and OFF. The observed values represent the aggregated load/energy collected from different data streams at time $t$. In order to define probability distribution over the sequence of observation, it is important to define probability distribution over the initial state P($s_{1}$), the transition probability P($s_{t}$|$s_{t-1}$) and the observed probability P($y_{t}$|$s_{t}$) where $y_{t}$ is the observation at time $t$. \\
+Following a notation in \cite{Rabiner}, HMM is composed of a 3-tuple \{A, B, $\pi$ \} where A is the transition probability, B is the observed probability and $\pi$ is the initial state probability.
 %HMMs are widely used for modelling time series data. They are found useful in applications like speech, handwriting, gesture recognition, part-of-speech tagging, bioinformatics, etc.
+HMMs solve three fundamental problems:
+1. Given the model $\lambda$ = \{A, B, $\pi$ \}, and observation sequence Y = \{$y_{1}$,...,$y_{T}$\}, how do we efficiently compute the probability of the sequence of observations given the model, that is P(Y|$\lambda$).
+2. Given the model $\lambda$ and observation sequence Y, what is the underlying state sequence \{$s_{1}$,...,$s_{T}$\} that best explains the observations.
+3. Given the observation Y and state space sequence S, how do we need to adjust the parameters so as to find the model $\lambda$ that maximises P(Y|$\lambda$).\\
+In this paper, we deal with the third problem as it involves learning parameters by training the model with the historical data and then using these parameters to predict the future observations.
+The figure ~\ref{fig:hmm1} shows the HMM $S^1$ and $S^2$ generated by a data stream.
 
-Using the traditional HMM notation for the parameter $\lambda$ = \{A, B, $\pi$ \} where A is the transition probability, B is the observed probability and $\pi$ is the initial state probability. For HMMs, $S^{1}$ \& $S^{2}$ we have the values of A, B, $\pi$ as shown in table ~\ref{table:A}, ~\ref{table:B}, ~\ref{table:pi} respectively.
+%Using the traditional HMM notation for the parameter $\lambda$ = \{A, B, $\pi$ \} where A is the transition probability, B is the observed probability and $\pi$ is the initial state probability. For HMMs, $S^{1}$ \& $S^{2}$ we have the values of A, B, $\pi$ as shown in table ~\ref{table:A}, ~\ref{table:B}, ~\ref{table:pi} respectively.
 
 %Distributed networks can be modeled using interacting automata.
 %Benveniste \cite{benveniste} defines automaton as a quadruple, \'{A} = (X,$X_0$,A,T) where X is a finite state of sets, $X_0$ is the subset of initial states, A is a finite set of messages, T is a set of transitions of the form t = \{x\_,a,x\} where x\_ is the previous state, a is the message label on which the state transitions to the next state x. The figure~\ref{fig:ex} below explains the automata with an example.\\
 
-%\begin{figure*}[t]
-%\centering
-%\includegraphics[width=8cm,height=3cm]{automata.png}
-%\caption{HMM R and S}
-%\label{fig:ex}
-%\end{figure*}
 
 %For HMM R, X$_{R}$ = \{2; $R_1$,$R_2$\}, X$_{0R}$ = \{$R_1$\}, A$_{R}$ = \{a,b\}, T$_{R}$ = \{$R_1$,a,$R_1$; $R_1$,b,$R_2$; $R_2$,a,$R_2$; $R_2$,b,$R_1$\} \\
 %For HMM S, X$_{S}$ = \{3; $S_1$,$S_2$,$S_3$\}, X$_{0S}$ = \{$S_1$\}, A$_{S}$ = \{a,b\}, T$_{S}$ = \{$S_1$,a,$S_1$; $S_1$,b,$S_2$; $S_2$,a,$S_2$; $S_2$,b,$S_3$; $S_3$,a,$S_3$; $S_3$,b,$S_1$\} \\
@@ -280,103 +305,92 @@ Using the traditional HMM notation for the parameter $\lambda$ = \{A, B, $\pi$ \
 
 %Benveniste uses a notion of stuttering transition which helps to distinguish between local and global time by inserting dummy transitions between two transitions of a local automaton attached to a node. This stuttering transition waits for others to progress.
 
-\begin{table}[h]
-\centering
-\begin{tabular}{ l | c | c }
- $A_{S^{1}}$ & $S^1_1$ & $S^1_2$ \\
-\hline
-$R_1$ & 0.6 & 0.4 \\
-$R_2$ & 0.3 & 0.7 \\
-\end{tabular}
-\quad
-\begin{tabular}{ l | c | c | c }
-  $A_{S^{2}}$ & $S^2_1$ & $S^2_2$ & $S^2_3$ \\
-\hline
-$S_1$ & 0.6 & 0.3 & 0.1 \\
-$S_2$ & 0.4 & 0.1 & 0.5 \\
-$S_3$ & 0.2 & 0.4 & 0.4 \\
-\end{tabular}
-\caption{Transition probabilities, A}
-\label{table:A}
-\end{table}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{ l | c | c }
- $B_{S^{1}}$ & a & b \\
-\hline
-$S^1_1$ & 0.2 & 0.8 \\
-$S^1_2$ & 0.5 & 0.5 \\
-\end{tabular}
-\quad
-\begin{tabular}{ l | c | c | c}
- $B_{S^{2}}$ & a & b & c\\
-\hline
-$S^2_1$ & 0.2 & 0.3 & 0.5 \\
-$S^2_2$ & 0.5 & 0.4 & 0.1 \\
-$S^2_3$ & 0.4 & 0.3 & 0.3 \\
-\end{tabular}
-\caption{Observed probabilities, B}
-\label{table:B}
-\end{table}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{ l | c | c }
-&  $R_1$ & $R_2$ \\
-\hline
-$\pi_{S^{1}}$ & 0.4 & 0.6 \\
-\end{tabular}
-\quad
-\begin{tabular}{ l | c | c | c}
-&  $S_1$ & $S_2$ & $S_3$\\
-\hline
-$\pi_{S^{2}}$ & 0.4 & 0.4 & 0.2 \\
-\end{tabular}
-\caption{Initial state probabilities, $\pi$}
-\label{table:pi}
-\end{table}
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{ l | c | c }
+% $A_{S^{1}}$ & $S^1_1$ & $S^1_2$ \\
+%\hline
+%$R_1$ & 0.6 & 0.4 \\
+%$R_2$ & 0.3 & 0.7 \\
+%\end{tabular}
+%\quad
+%\begin{tabular}{ l | c | c | c }
+%  $A_{S^{2}}$ & $S^2_1$ & $S^2_2$ & $S^2_3$ \\
+%\hline
+%$S_1$ & 0.6 & 0.3 & 0.1 \\
+%$S_2$ & 0.4 & 0.1 & 0.5 \\
+%$S_3$ & 0.2 & 0.4 & 0.4 \\
+%\end{tabular}
+%\caption{Transition probabilities, A}
+%\label{table:A}
+%\end{table}
+%
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{ l | c | c }
+% $B_{S^{1}}$ & a & b \\
+%\hline
+%$S^1_1$ & 0.2 & 0.8 \\
+%$S^1_2$ & 0.5 & 0.5 \\
+%\end{tabular}
+%\quad
+%\begin{tabular}{ l | c | c | c}
+% $B_{S^{2}}$ & a & b & c\\
+%\hline
+%$S^2_1$ & 0.2 & 0.3 & 0.5 \\
+%$S^2_2$ & 0.5 & 0.4 & 0.1 \\
+%$S^2_3$ & 0.4 & 0.3 & 0.3 \\
+%\end{tabular}
+%\caption{Observed probabilities, B}
+%\label{table:B}
+%\end{table}
+%
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{ l | c | c }
+%&  $R_1$ & $R_2$ \\
+%\hline
+%$\pi_{S^{1}}$ & 0.4 & 0.6 \\
+%\end{tabular}
+%\quad
+%\begin{tabular}{ l | c | c | c}
+%&  $S_1$ & $S_2$ & $S_3$\\
+%\hline
+%$\pi_{S^{2}}$ & 0.4 & 0.4 & 0.2 \\
+%\end{tabular}
+%\caption{Initial state probabilities, $\pi$}
+%\label{table:pi}
+%\end{table}
 
 %Talking in terms of HMM, requires us to equip products of automata with probabilities. 
 
-\subsection{Product of HMM}
+\subsection{Product of HMMs}
 \label {sec:pohmm}
-PoHMM is a way of combining multiple HMMs by multiplying their individual distribution together and then renormalizing them. Its representation includes both directed and undirected links where the hidden states are causally connected to the other hidden states but non causally related to the visible states. This causes different conditional independence relationships among the variables in graphical model. 
+PoHMM is a model that combines several HMMs by multiplying their individual distribution together and then renormalizing them. Its representation includes both directed and undirected links where the hidden states are causally connected to the other hidden states but non causally related to the visible states. This causes different conditional independence relationships among the variables in graphical model. 
 %It is a way of combining HMM's to form distributed state time series model. It is defined by multiplying together the densities of its, k experts and renormalizing them. 
-The figure~\ref{fig:pohmm} is a product of two HMMs shown in~\ref{fig:ex}. For  P = $S^1$ x $S^2$, the number of states is the product of states in $S^1$ and $S^2$ which is 6. The connections formed in the P depend on the links in the multiplying HMMs. The resultant HMM will have a pair (s,s)
-X = \{6; $R_1$$S_1$, $R_1$$S_2$, $R_1$$S_3$, $R_2$$S_1$, $R_2$$S_2$, $R_2$$S_3$\} \\
-$X_0$ = \{$R_1$$S_1$\} \\
-A = \{a,b\} \\
+The figure~\ref{fig:product} is a product of two HMMs P = $S^1$ x $S^2$ where the superscript in $S^1$ indicates the kth HMM. The number of states in the PoHMM is the product of states in $S^1$ and $S^2$ which is $4$ in our case. The connections formed in the P depend on the links in the multiplying HMMs. 
+%The resultant HMM will have a pair (s,s) X = \{6; $R_1$$S_1$, $R_1$$S_2$, $R_1$$S_3$, $R_2$$S_1$, $R_2$$S_2$, $R_2$$S_3$\} \\
+%$X_0$ = \{$R_1$$S_1$\} \\
+%A = \{a,b\} \\
+
+
 %The rules for synchronised product construction are : \\
 %1. $<p,q>$ --a--$>$ $<p',q>$ if a $\in$ A$_{R}$ $\cap$ A$_{S}$ and p --a--$>$ p' and q --a--$>$ q'	\\
 %2. $<p,q>$ --a--$>$ $<p',q>$ if a $\in$ A$_{R}$, a $\notin$ A$_{S}$ and p --a--$>$ p'	\\
 %3. $<p,q>$ --a--$>$ $<p,q'>$ if a $\notin$ A$_{R}$, a $\in$ A$_{S}$ and q --a--$>$ q'	\\
 
-%\begin{figure*}[t]
-%\centering
-%\includegraphics[width=8cm,height=3cm]{product.png}
-%\caption{Product of HMMs, P = R x S}
-%\label{fig:pohmm}
-%\end{figure*}
-
-%\section{ Methodology }
-%\label{sec:method}
-\subsection{Inference in PoHMM}
-
-The main feature of PoE is its undirected graphical modelling with no direct connection among the latent variables as they only interact indirectly via observed variables. The hidden variables all the experts are rendered independent when conditioned on visible variables. So, if the inference in each of the constituent model is tractable then the inference in the product is also tractable. To generate a data point in this model, all the experts in PoE generate an observation and if they all generated the same point then it is accepted else they again generate an observation until all the experts agree to it. Therefore all the experts have some influence over the generated data. So, the inference determines the the probability that all the experts would have taken in order to generate the given observation. 
-
-\begin{figure*}[t]
+ \begin{figure*}[t]
 \centering
-\includegraphics[width=5cm,height=3cm]{pohmm1.jpg}
+\includegraphics[width=3cm,height=4cm]{product.jpg}
 \caption{Product of HMMs, P = $S^{1}$ x $S^2$}
-\label{fig:PoHMM}
+\label{fig:product}
 \end{figure*}
 
- 
-\subsection{Training product of experts by minimising contrastive divergence}
-PoE is a method of combining densities of many latent variable models. It is defined by the following formula:\\
+
+\subsection{Training the model by minimising contrastive divergence}
+%Product of experts (PoE)\footnote{http://en.wikipedia.org/wiki/Product\_of\_experts} is a technique that models probability distribution by combining the output from several simpler distributions. It is defined by the following formula:\\
 % Write the formula and explain it. Explain Gibbs Sampling
-To fit the model to the data, we need to maximize the likelihood of the dataset or minimise the Kullback-Liebler divergence between the real data and the fantasy data. The contrastive divergence algorithm for training the PoHMM has the following steps:
+To fit the model to the data, we need to maximize the likelihood of the dataset or minimise the Kullback-Liebler divergence between the real data and the data reconstructed by using gibbs sampling, henceforth called fantasy data. The contrastive divergence algorithm for training the PoHMM has the following steps:
 \begin{enumerate}
 \item Calculate each model's gradient on a data point using forward backward algorithm.
 \item For each model take a sample from the posterior distribution of paths through state space.
@@ -388,85 +402,103 @@ To fit the model to the data, we need to maximize the likelihood of the dataset 
 %High dimensional distributions are approximated as a product of one dimensional distributions. The product of individual distributions which are uniguassian or multivariate guassian will also be multivariate guassian. If the individual models are more complicated and contain one or more hidden variables, multiplying their distributions together and renormalizing them can be very powerful. These individual models are called "experts".
 %The product of experts produce sharper distribution than the individual distributions\cite{hinton2000}.
 
-\section{Proof of Concepts}
+\subsection{Inference in PoHMM}
+
+The main feature of PoHMMs is its undirected graphical modelling with no direct connection among the latent variables ($S^1_{t}$ and $S^2_{t}$) as they only interact indirectly via observed variables ($Y_{t}$). The hidden variables all the experts are rendered independent when conditioned on visible variables. So, if the inference in each of the constituent model is tractable then the inference in the product is also tractable. To generate a data point in this model, all the experts in PoE generate an observation and if they all generated the same point then it is accepted else they again generate an observation until all the experts agree to it. Therefore all the experts have some influence over the generated data. So, the inference determines the the probability that all the experts would have taken in order to generate the given observation. 
+
+%\begin{figure*}[t]
+%\centering
+%\includegraphics[width=5cm,height=3cm]{pohmm1.jpg}
+%\caption{Product of HMMs, P = $S^{1}$ x $S^2$}
+%\label{fig:PoHMM}
+%\end{figure*}
+
+
+\section{Proof of Concept}
 \label{poc}
 
-\subsection{REDD House 2}
-\label{sec:redd}
-%\begin{enumerate}
-\subsection{Aim}
- To represent streams of energy consumption data from $n$\footnote{n=2} appliances by product of $k$ HMMs.
+\textbf{Aim}: To perform load forecasting using PoHMMs.
+%To represent streams of energy consumption data from $n$\footnote{n=2} appliances by product of $k$ HMMs.
 
-\subsection{Method} 
+\subsection{Data Description} 
 \begin{itemize}
-\item \textbf{Data } The Reference Energy Disaggregation Data Set (REDD) is used in empirical analysis. The data contains power consumption from real homes, for the whole house as well as for each individual circuit in
-the house (labeled by the main type of appliance on that circuit). It is intended for use in developing disaggregation methods, which can predict, from only the whole-home signal, which devices are being used. The REDD data set contains two main types of home electricity data: high-frequency current/voltage waveform data of the two power mains (as well as the voltage signal for a single phase), and lower-frequency power data including the mains and individual, labeled circuits in the house. The main directory consists of several house directories, each of which contain all the power readings for a single house.  Each house subdirectory consists of a labels and channels files. The labels file contains channel numbers and a text label indicating the general category of device on this channel. Each channel\_i.dat file has two columns containing UTC timestamps (as integers) and power readings (recording the apparent power of the circuit) for the channel.
-Experiments reported here use the House 2 data from REDD. It has $11$ channels where each channel corresponds to the following appliance: 
-\begin{enumerate}
-\item mains$\_1$ 
-\item mains$\_2$ 
-\item kitchen$\_$1
-\item lighting
-\item stove 
-\item microwave
-\item washer$\_$dryer
-\item kitchen$\_2$
-\item refrigerator
-\item dishwaser
-\item disposal
-\end{enumerate}
+\item \textbf{Dataset 1:} The Reference Energy Disaggregation Data Set (REDD) contains power consumption data from real homes, for the whole house as well as for each individual circuit in
+the house (labeled by the main type of appliance on that circuit). %It is intended for use in developing disaggregation methods, which can predict, from only the whole-home signal, which devices are being used.
+The REDD data set contains two main types of home electricity data: high-frequency current/voltage waveform data of the two power mains (as well as the voltage signal for a single phase), and lower-frequency power data including the mains and individual, labeled circuits in the house. 
+The main directory consists of several house directories, each of which contain all the power readings for a single house.  Each house subdirectory consists of a labels and channels files. The labels file helps in matching the channel number with the device name. Each channel file has two columns containing UTC timestamps (as integers) and power readings (recording the apparent power of the circuit) for the channel.
+Experiments reported here use the house 2 data from REDD. The dataset has $318759$ records and $2$ columns. We randomly sample $300$ records for our initial experiment. 
+%The time series data of the microwave, dryer, kitchen$\_2$ and refrigerator are plotted below in Figures~\ref{fig:micro}, ~\ref{fig:washer}, ~\ref{fig:kitchen2}, ~\ref{fig:refri}. 
+The implementation of the product of hidden markov model is obtained from Iain Murray's website\footnote{\label{link}http://homepages.inf.ed.ac.uk/imurray2/code/}. It implements the technique described in Geoff Hinton's paper \cite{hinton2000}. 
+%Time series data from two appliances are represented as product of $k$ HMMs. It has $11$ channels where each channel corresponds to the following appliance, 1. mains1, 2. mains2, 3. kitchen 1, 4. lighting, 5. stove, 6. microwave, 7. washer dryer, 8. kitchen 2, 9. refrigerator, 10. dishwasher, 11. disposal
 
-The dataset has $318759$ records and $2$ columns. We randomly sample 300 records for our initial experiment. Time series data from two appliances are represented as product of $k$ HMMs.
 
-\item \textbf{ Time Series :} The time series data of the microwave, dryer, kitchen$\_2$ and refrigerator are plotted below in Figures~\ref{fig:micro}, ~\ref{fig:washer}, ~\ref{fig:kitchen2}, ~\ref{fig:refri}.
+\item \textbf{Dataset 2:} This data represents the energy consumed by the IIIT Delhi faculty housing building. As a part of research, a team from IIIT Delhi has installed various temperature, light and motion sensors to perform real world studies and to analyse user preferences for energy conservation. For our analysis, we selected $1$ month's historical data ranging from 01-01-2014, 00:01 hours to 31-01-2014, 23:59 hours. The two smart meters installed captures the data from all the $12$ floors. The first meter records readings from ground to $5$th floors and the second meter from $6$th to $11$th. The dataset includes timestamp and power consumed in watts. There are $84133$ records in this dataset. We also have the total power consumed by the faculty housing building which would serve as the ground truth to compare the aggregated load using PoHMMs. The data is obtained from the website whose screenshot is shown in Figure~\ref{fig:screenshot}
+%Time series data from two streams are modelled as a product of $k$ HMMs. 
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=1.0\textwidth,height=0.15\textheight]{channel_6.png}
-\caption{Microwave}
-\label{fig:micro}
+\includegraphics[width=0.8\textwidth,height=0.35\textheight]{screenshot.png}
+\caption{Screen shot of the webpage}
+\label{fig:screenshot}
 \end{figure*}
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=1.0\textwidth,height=0.15\textheight]{channel_7.png}
-\caption{washer\_dryer}
-\label{fig:washer}
-\end{figure*}
 
-\begin{figure*}[th]
-\centering
-\includegraphics[width=1.0\textwidth,height=0.15\textheight]{channel_8.png}
-\caption{Kitchen\_2}
-\label{fig:kitchen2}
-\end{figure*}
-
-\begin{figure*}[th]
-\centering
-\includegraphics[width=1.0\textwidth,height=0.15\textheight]{channel_9.png}
-\caption{refrigerator}
-\label{fig:refri}
-\end{figure*}
-
-\item \textbf{Code } The implementation of the product of experts model is obtained from Iain Murray's website\footnote{\label{link}http://homepages.inf.ed.ac.uk/imurray2/code/}. It implements the technique described in Geoff Hinton's paper \cite{hinton2000}. 
-
-\item \textbf{Additional details }
-Some additional details regarding experiments:
-\begin{enumerate}
-\item The product of HMMs model (PoHMM) minimizes ``contrastive divergence" as described in the paper \cite{hinton2000}. 
-\item The number of experts, $k$ used here is 15. This is set somewhat arbitrarily and needs to be experimented on.
-\item Learning rate is $\epsilon = \frac{1}{300}$.
-\end{enumerate}
+%\item \textbf{ Time Series :} The time series data of the microwave, dryer, kitchen$\_2$ and refrigerator are plotted below in Figures~\ref{fig:micro}, ~\ref{fig:washer}, ~\ref{fig:kitchen2}, ~\ref{fig:refri}.
+%
+%\begin{figure*}[t]
+%\centering
+%\includegraphics[width=1.0\textwidth,height=0.15\textheight]{channel_6.png}
+%\caption{Microwave}
+%\label{fig:micro}
+%\end{figure*}
+%
+%\begin{figure*}[t]
+%\centering
+%\includegraphics[width=1.0\textwidth,height=0.15\textheight]{channel_7.png}
+%\caption{washer\_dryer}
+%\label{fig:washer}
+%\end{figure*}
+%
+%\begin{figure*}[th]
+%\centering
+%\includegraphics[width=1.0\textwidth,height=0.15\textheight]{channel_8.png}
+%\caption{Kitchen\_2}
+%\label{fig:kitchen2}
+%\end{figure*}
+%
+%\begin{figure*}[th]
+%\centering
+%\includegraphics[width=1.0\textwidth,height=0.15\textheight]{channel_9.png}
+%\caption{refrigerator}
+%\label{fig:refri}
+%\end{figure*}
+%
+%\item \textbf{Code } The implementation of the product of experts model is obtained from Iain Murray's website\footnote{\label{link}http://homepages.inf.ed.ac.uk/imurray2/code/}. It implements the technique described in Geoff Hinton's paper \cite{hinton2000}. 
+%
+%\item \textbf{Additional details }
+%Some additional details regarding experiments:
+%\begin{enumerate}
+%\item The product of HMMs model (PoHMM) minimizes ``contrastive divergence" as described in the paper \cite{hinton2000}. 
+%\item The number of experts, $k$ used here is 15. This is set somewhat arbitrarily and needs to be experimented on.
+%\item Learning rate is $\epsilon = \frac{1}{300}$.
+%\end{enumerate}
  
 \end{itemize}
 
+\subsection{Problem Formulation}
+The source of disparate energy data streams contains reading at different time scales. Each data stream is modelled as a HMM with cardinality $2$, that is either a state can be ON or OFF. The process of aggregating the energy data from different data streams is modelled through PoHMMs. 
 
-%FIRST EXPERIMENT ON REDD DATASET
+%Different smart meters can send data points when they are collected resulting in inconsistent data including aggregating non-aligned time stamped readings, readings with missing values, repeated values, meter reset readings.
+%We address the problem of learning from disparate data streams (with inconsistencies) by modelling streams as HMMs and the process of aggregating data at the base station as a Product of HMMs. This enables us to perform load forecasting using machine learning techniques.
+Each energy data stream is used to train the model, till the time the objective function, that is contrastive divergence reaches a threshold value. Once the model is trained from a data stream, the parameters learned by the model (mixing component of each unigauss, means of gaussian bits, log precisions of axis-aligned gaussian bits) are provided to the test set (samples representing the total power consumed data) to obtain the conditional probability distribution of the gaussians given the data. Similarly, all the data streams are used for training the model, and the parameters learned are then applied on the test set to obtain the conditional probability of the gaussians given the data. After all the data streams are used to obtain the probability distribution, we use the data stream that correspond to the total energy consumed from the house/ building to train the model and hence obtain the probability distribution P of the gaussians. These probability distributions are then compared with the product of the probability distributions Q obtained from the individual data streams. The evaluation of how well the learning has taken place is done by using a Kullback-Leibler divergence. KL divergence of two probability distributions P and Q, $D_{KL}$(P$\parallel$Q) is the measure of information lost when Q is used to approximate P. %Here, P is the real data and Q is a fantasy data. The two probability distributions in the REDD example refer to the expert probabilities in real and fantasy data. 
+%The learned parameters from the training are fitted to the fantasy data to measure the information lost when fantasy data is used to approximate real data.
 
-\subsection{Experimental Setup for REDD house 2}
-Experiments are performed on the REDD which contains $9$ appliances each containing $318759$ rows of energy consumption data. Experiments are done into $4$ phases, in the first phase the number of data samples are varied corresponding to which the values of KL Divergence and convergence time are noted. In the second phase, the number of experts are varied keeping the best value of the sample from the first phase fixed. In the third phase, number of iterations are varied keeping the best values from above first two phases fixed. In the fourth part, the no. of appliances to be aggregated are varied.
 
-\begin{table}[htdp]
+%\subsection{Experimental Setup}
+%%Experiments are performed on the REDD which contains $9$ appliances each containing $318759$ rows of energy consumption data. 
+%Experiments are done into $4$ phases, in the first phase the number of data samples are varied corresponding to which the values of KL Divergence and convergence time are noted. In the second phase, the number of experts are varied keeping the best value of the sample from the first phase fixed. In the third phase, number of iterations are varied keeping the best values from above first two phases fixed. In the fourth part, the no. of appliances to be aggregated are varied.
+
+\begin{table*}[htdp]
 \begin{center}
 \begin{tabular}{| c | c | c | c |}
 \hline
@@ -489,34 +521,42 @@ Samples & $KL Div$ & $T(sec)$ & $Iterations$ \\
 \end{tabular}
 \end{center}
 \caption{Effect of varying samples on KL div and time}
-\label{table: error1}
-\end{table}
+\label{table:sample1}
+\end{table*}
 
-\begin{table}[htdp]
-\begin{center}
-\begin{tabular}{| c | c | c | c |}
-\hline
-Experts & $KL Div$ & $T(sec)$ & $Iterations$ \\
-\hline
-5 & 0.774 & 72.968 $\pm$1.177 & 5200 \\
-10 & 1.424 & 117.482 $\pm$1.966 & 6700 \\
-15 & 0.473 & 210.249 $\pm$1.258  & 9900 \\
-20 & 1.56 & 217.739 $\pm$10.452 & 9000 \\
-25 & 7.469 & 347.019 $\pm$8.23 & 12100 \\
-30 & 2.4968 & 413.802 $\pm$7.304 & 12900 \\
-35 & 1.5012 & 348.906 $\pm$14.651 & 11300 \\
-\hline
-\end{tabular}
-\end{center}
-\caption{Effect of varying experts on KL div and time}
-\label{table: error2}
-\end{table}
+%\begin{table}[htdp]
+%\begin{center}
+%\begin{tabular}{| c | c | c | c |}
+%\hline
+%Experts & $KL Div$ & $T(sec)$ & $Iterations$ \\
+%\hline
+%5 & 0.774 & 72.968 $\pm$1.177 & 5200 \\
+%10 & 1.424 & 117.482 $\pm$1.966 & 6700 \\
+%15 & 0.473 & 210.249 $\pm$1.258  & 9900 \\
+%20 & 1.56 & 217.739 $\pm$10.452 & 9000 \\
+%25 & 7.469 & 347.019 $\pm$8.23 & 12100 \\
+%30 & 2.4968 & 413.802 $\pm$7.304 & 12900 \\
+%35 & 1.5012 & 348.906 $\pm$14.651 & 11300 \\
+%\hline
+%\end{tabular}
+%\end{center}
+%\caption{Effect of varying experts on KL div and time}
+%\label{table:expert}
+%\end{table}
 
 
-\subsection{Results}
-The evaluation of how well the learning has taken place is done by using a Kullback-Leibler divergence. KL divergence of P from Q, $D_{KL}$(P$\parallel$Q) is the measure of information lost when Q is used to approximate P. Here, P is the real data and Q is a fantasy data. The two probability distributions in the REDD example refer to the expert probabilities in real and fantasy data. The learned parameters from the training are fitted to the fantasy data to measure the information lost when fantasy data is used to approximate real data.
-\begin{table}[htdp]
-\begin{center}
+\subsection{Empirical Results}
+In both the datasets, experiments are performed keeping some parameters constant and some varying. In case of REDD, Tables~\ref{table:sample1},~\ref{table:threshold1} and~\ref{table:appliance1} show the effect of varying data samples, no. of HMMs, threshold and no. of appliances on the KL divergence.
+In case of faculty housing dataset, Tables~\ref{table:sample2} and~\ref{table:expert2} show the effect of varying data samples and no. of HMMs on the KL divergence.
+
+%Experiments are done into $4$ phases, in the first phase the number of data samples are varied corresponding to which the values of KL Divergence and convergence time are noted. In the second phase, the number of experts are varied keeping the best value of the sample from the first phase fixed. In the third phase, number of iterations are varied keeping the best values from above first two phases fixed. In the fourth part, the no. of appliances to be aggregated are varied.
+
+%The evaluation of how well the learning has taken place is done by using a Kullback-Leibler divergence. KL divergence of P from Q, $D_{KL}$(P$\parallel$Q) is the measure of information lost when Q is used to approximate P. Here, P is the real data and Q is a fantasy data. The two probability distributions in the REDD example refer to the expert probabilities in real and fantasy data. The learned parameters from the training are fitted to the fantasy data to measure the information lost when fantasy data is used to approximate real data.
+
+
+\begin{table*}[htdp]
+\parbox{.51\linewidth}{
+\centering
 \begin{tabular}{| c | c | c | c |}
 \hline
 Threshold & $KL Div$ & $T(sec)$ & $Iterations$ \\
@@ -527,13 +567,12 @@ Threshold & $KL Div$ & $T(sec)$ & $Iterations$ \\
 .005 & 0.509 & 1167.243 $\pm$43.412 & 49800 \\
 \hline
 \end{tabular}
-\end{center}
 \caption{Effect of varying min threshold on KL div and time}
-\label{table: error3}
-\end{table}
-
-\begin{table}[htdp]
-\begin{center}
+\label{table:threshold1}
+}
+\hfill
+\parbox{.51\linewidth}{
+\centering
 \begin{tabular}{| c | c | c | c |}
 \hline
 Appliances & $KL Div$ & $T(sec)$ & $Iterations$ \\
@@ -547,67 +586,15 @@ Appliances & $KL Div$ & $T(sec)$ & $Iterations$ \\
 9 & 0.15 & 474.579 $\pm$14.619 & 20600 \\
 \hline
 \end{tabular}
-\end{center}
 \caption{Effect of varying appliances on KL div and time}
-\label{table: error4}
-\end{table}
+\label{table:appliance1}
+}
+\end{table*}
 
 
-% SECOND EXPERIMENT ON FACULTY HOUSING
-
-\section{Proof of concept on Faculty housing data}
-\label{sec:faculty}
-
-\subsection{ Aim } To represent streams of energy consumption data from all the floors of faculty housing as a product of k HMMs. 
-\subsection{Method}
-\begin{itemize}
-\item \textbf{ Data } This data represents the energy consumed by the IIIT Delhi faculty housing building. As a part of research, a team from IIIT Delhi has installed various temperature, light and motion sensors to perform real world studies and to analyse user preferences for energy conservation. For our analysis, we selected one month's historical data ranging from 01-01-2014, 00:01 hours to 31-01-2014, 23:59 hours. The two smart meters installed captures the data from all the floors. The first meter gives out readings from floors $0$ to $5$ and the second meter gives out readings from floors $6$ to $11$. The dataset includes timestamp and power consumed in watts and $84133$ records. Time series data from two streams are modelled as a product of $k$ HMMs. We also have the total power consumed by the faculty housing building which would serve as the ground truth to compare product of $k$ HMMs with. The data is obtained from the website whose screenshot is shown in Figure~\ref{fig:screenshot}
-
-\begin{figure*}[t]
+\begin{table*}[htdp]
+\parbox{.51\linewidth}{
 \centering
-\includegraphics[width=0.8\textwidth,height=0.35\textheight]{screenshot.png}
-\caption{Screen shot of the webpage}
-\label{fig:screenshot}
-\end{figure*}
-
-\item \textbf{ Code } %The implementation of the product of experts model is obtained from Iain Murray's website\footnotemark[\value{http://homepages.inf.ed.ac.uk/imurray2/code/}].
-It implements the technique described in Geoff Hinton's paper \cite{hinton2000}. 
-
-\item \textbf{ Time Series :} The time series data of the energy consumption of floor 0 to 5, floor 6 to 11 and total power are plotted below in Figures~\ref{fig:flr05}, ~\ref{fig:flr611}, ~\ref{fig:total}.
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=1.0\textwidth,height=0.15\textheight]{floor052.png}
-\caption{Stream 1: Power consumption of floors 0-5}
-\label{fig:flr05}
-\end{figure*}
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=1.0\textwidth,height=0.15\textheight]{floor6112.png}
-\caption{Stream 2: Power consumption of floors 6-11}
-\label{fig:flr611}
-\end{figure*}
-
-\begin{figure*}[th]
-\centering
-\includegraphics[width=1.0\textwidth,height=0.15\textheight]{total2.png}
-\caption{Total Power of the building}
-\label{fig:total}
-\end{figure*}
-
-
-\item \textbf{ Additional Details } 
-\end{itemize}
-\subsection{ Experimental Setup } 
-Each of the data stream is modelled as a HMM individually. There are three streams of data, the first stream D$_{1}$ corresponds to the data from 0-5th floor, D$_{2}$ corresponds to 6-11th floor and D$_{3}$ represents the total power from the faculty housing which is represented by a fixed test set, T. Firstly, the stream D$_{1}$ is used to train the model such that the contrastive divergence is minimized. The parameters (mixing component of each unigauss, means of gaussian bits, log precisions of axis-aligned gaussian bits) that are learnt during the training are provided to the test set T in order to obtain the conditional probability of the gaussians given the data D$_{1}$ represented as pgauss$_{1}$. Similarly, the second stream of data, D$_{2}$ collected from floor 6-11, is used to learn the parameters of the model during the training phase which are then again provided to the test set T to obtain conditional probability of the gaussians given the data D$_{2}$ as pgauss$_{2}$. Finally the data D$_{3}$ is used to learn the model and parameters which are then applied to the test set T to obtain the gaussian probability as pgauss$_{3}$. Now, as we know that the total power consumption of the building should be approximately equal to the product of HMMs, which is the product of pgauss$_{1}$ and pgauss$_{2}$. If we can show that the value of pgauss$_{3}$ is as close as possible to the product of pgauss$_{1}$ and pgauss$_{2}$.\\
-The experiments performed in table ~\ref{table:error5} , shows the effect of varying samples on KL Divergence, convergence time and iterations keeping minimum threshold constant at 7.\\
-The other experiment performed in table ~\ref{table:error6} shows that effect of varying experts on KL Divergence and convergence time.
-
-\subsection{ Results }
-Table ~\ref{table:error5} shows that the error was minimum when the sample size was $300$. With respect to the number of experts, the error was minimum when there were $5$ experts as shown in table~\ref{table:error6}.
-\begin{table}[htdp]
-\begin{center}
 \begin{tabular}{| c | c | c | c |}
 \hline
 Samples & $KL Div$ & $T(sec)$ & $Iterations$ \\
@@ -627,13 +614,12 @@ Samples & $KL Div$ & $T(sec)$ & $Iterations$ \\
 4000 & 1.0793e-04 & 403 & 43200 \\
 \hline
 \end{tabular}
-\end{center}
 \caption{Effect of varying samples on KL div}
-\label{table:error5}
-\end{table}
-
-\begin{table}[htdp]
-\begin{center}
+\label{table:sample2}
+}
+\hfill
+\parbox{.51\linewidth}{
+\centering
 \begin{tabular}{| c | c | c |}
 \hline
 Experts & $KL Div (e-05)$ & $T(sec)$\\
@@ -657,10 +643,126 @@ Experts & $KL Div (e-05)$ & $T(sec)$\\
 40 & 5.0955 & 320 \\
 \hline
 \end{tabular}
-\end{center}
-\caption{Effect of varying experts on KL div and time}
-\label{table:error6}
-\end{table}
+\caption{Effect of varying HMMs on KL div and time}
+\label{table:expert2}
+}
+\end{table*}
+
+
+\subsection{Discussion}
+% SECOND EXPERIMENT ON FACULTY HOUSING
+
+%\section{Proof of Concept}
+%\label{sec:poc2}
+%Aim: To represent streams of energy consumption data from all the floors of faculty housing as a product of k HMMs. 
+%\subsection{Data Description}
+%\begin{itemize}
+%\item \textbf{ Data } This data represents the energy consumed by the IIIT Delhi faculty housing building. As a part of research, a team from IIIT Delhi has installed various temperature, light and motion sensors to perform real world studies and to analyse user preferences for energy conservation. For our analysis, we selected one month's historical data ranging from 01-01-2014, 00:01 hours to 31-01-2014, 23:59 hours. The two smart meters installed captures the data from all the floors. The first meter gives out readings from floors $0$ to $5$ and the second meter gives out readings from floors $6$ to $11$. The dataset includes timestamp and power consumed in watts and $84133$ records. Time series data from two streams are modelled as a product of $k$ HMMs. We also have the total power consumed by the faculty housing building which would serve as the ground truth to compare product of $k$ HMMs with. The data is obtained from the website whose screenshot is shown in Figure~\ref{fig:screenshot}
+%
+%\begin{figure*}[t]
+%\centering
+%\includegraphics[width=0.8\textwidth,height=0.35\textheight]{screenshot.png}
+%\caption{Screen shot of the webpage}
+%\label{fig:screenshot}
+%\end{figure*}
+%
+%\item \textbf{ Code } %The implementation of the product of experts model is obtained from Iain Murray's website\footnotemark[\value{http://homepages.inf.ed.ac.uk/imurray2/code/}].
+%It implements the technique described in Geoff Hinton's paper \cite{hinton2000}. 
+%
+%\item \textbf{ Time Series :} The time series data of the energy consumption of floor 0 to 5, floor 6 to 11 and total power are plotted below in Figures~\ref{fig:flr05}, ~\ref{fig:flr611}, ~\ref{fig:total}.
+%
+%\begin{figure*}[t]
+%\centering
+%\includegraphics[width=1.0\textwidth,height=0.15\textheight]{floor052.png}
+%\caption{Stream 1: Power consumption of floors 0-5}
+%\label{fig:flr05}
+%\end{figure*}
+%
+%\begin{figure*}[t]
+%\centering
+%\includegraphics[width=1.0\textwidth,height=0.15\textheight]{floor6112.png}
+%\caption{Stream 2: Power consumption of floors 6-11}
+%\label{fig:flr611}
+%\end{figure*}
+%
+%\begin{figure*}[th]
+%\centering
+%\includegraphics[width=1.0\textwidth,height=0.15\textheight]{total2.png}
+%\caption{Total Power of the building}
+%\label{fig:total}
+%\end{figure*}
+%
+%
+%\item \textbf{ Additional Details } 
+%\end{itemize}
+%\subsection{Problem Formulation}
+
+%% INCORPORATE THE DATA IN THE PREV SECTION
+
+%\subsection{ Experimental Setup } 
+%Each of the data stream is modelled as a HMM individually. There are three streams of data, the first stream D$_{1}$ corresponds to the data from 0-5th floor, D$_{2}$ corresponds to 6-11th floor and D$_{3}$ represents the total power from the faculty housing which is represented by a fixed test set, T. Firstly, the stream D$_{1}$ is used to train the model such that the contrastive divergence is minimized. The parameters (mixing component of each unigauss, means of gaussian bits, log precisions of axis-aligned gaussian bits) that are learnt during the training are provided to the test set T in order to obtain the conditional probability of the gaussians given the data D$_{1}$ represented as pgauss$_{1}$. Similarly, the second stream of data, D$_{2}$ collected from floor 6-11, is used to learn the parameters of the model during the training phase which are then again provided to the test set T to obtain conditional probability of the gaussians given the data D$_{2}$ as pgauss$_{2}$. Finally the data D$_{3}$ is used to learn the model and parameters which are then applied to the test set T to obtain the gaussian probability as pgauss$_{3}$. Now, as we know that the total power consumption of the building should be approximately equal to the product of HMMs, which is the product of pgauss$_{1}$ and pgauss$_{2}$. If we can show that the value of pgauss$_{3}$ is as close as possible to the product of pgauss$_{1}$ and pgauss$_{2}$.\\
+%The experiments performed in table ~\ref{table:error5} , shows the effect of varying samples on KL Divergence, convergence time and iterations keeping minimum threshold constant at 7.\\
+%The other experiment performed in table ~\ref{table:error6} shows that effect of varying experts on KL Divergence and convergence time.
+%
+%\subsection{ Results }
+%Table ~\ref{table:error5} shows that the error was minimum when the sample size was $300$. With respect to the number of experts, the error was minimum when there were $5$ experts as shown in table~\ref{table:error6}.
+%\begin{table}[htdp]
+%\begin{center}
+%\begin{tabular}{| c | c | c | c |}
+%\hline
+%Samples & $KL Div$ & $T(sec)$ & $Iterations$ \\
+%\hline
+%100 & 2.6219e-05 & 257 & 45100 \\
+%300 & 1.9753e-05 & 222 & 43200 \\
+%500 & 5.5493e-05 & 260 & 44800 \\
+%700 & 3.2847e-05 & 249 & 44000 \\
+%900 & 3.9486e-04 & 221 & 42600 \\
+%1100 & 4.9274e-04 & 317 & 44700 \\
+%1300 & 3.0425e-04 & 276 & 43100 \\
+%1500 &  3.1128e-04 & 303 & 44400\\
+%2000 & 1.9192e-04 & 306 & 44400\\
+%2500 & 1.7122e-04 & 370 & 44100 \\
+%3000 & 1.4686e-04 & 331 & 43300 \\
+%3500 & 1.2663e-04 & 370 & 43200 \\
+%4000 & 1.0793e-04 & 403 & 43200 \\
+%\hline
+%\end{tabular}
+%\end{center}
+%\caption{Effect of varying samples on KL div}
+%\label{table:error5}
+%\end{table}
+%
+%\begin{table}[htdp]
+%\begin{center}
+%\begin{tabular}{| c | c | c |}
+%\hline
+%Experts & $KL Div (e-05)$ & $T(sec)$\\
+%\hline
+%3 & 1.9780 & 229 \\
+%4 & 3.5897 & 217 \\
+%5 & 1.9753 & 228 \\
+%6 & 4.3488 & 238 \\
+%7 & 4.9111 & 245  \\
+%8 & 5.6564 & 241 \\
+%9 & 5.4290 & 258 \\
+%10 & 5.5163 & 267 \\
+%12 & 4.4504 & 262 \\
+%14 & 6.9006 & 296 \\
+%16 & 6.8666 & 300 \\
+%18 & 6.2872 & 313 \\
+%20 & 5.3842 & 267 \\
+%25 & 5.8970 & 326 \\
+%30 & 5.9962 & 327  \\
+%35 & 5.2716 & 346 \\
+%40 & 5.0955 & 320 \\
+%\hline
+%\end{tabular}
+%\end{center}
+%\caption{Effect of varying experts on KL div and time}
+%\label{table:error6}
+%\end{table}
+
+%% TILL HERE
 
 
 %\section{The {\secit Body} of The Paper}
@@ -963,6 +1065,8 @@ Experts & $KL Div (e-05)$ & $T(sec)$\\
 %be, to say the least, problematic.
 
 \section{Conclusions}
+\label{sec:con}
+
 %This paragraph will end the body of this sample document.
 %Remember that you might still have Acknowledgments or
 %Appendices; brief samples of these
@@ -1052,7 +1156,7 @@ Experts & $KL Div (e-05)$ & $T(sec)$\\
 %\balancecolumns % GM June 2007
 % That's all folks!
 
-\nocite{Ghahramani,Felice,Shen,taban,Albert,wijaya2014consumer,Zhang,Daneshi,bassi,samuel,Falvo,Bakirtzis,Chen,Chow,DisaggregationHSMM,KolterJ12,KolterF11,BLTJ:BLTJ21650,Heinzelman00energy,Taylor,NYAS:NYAS5921,
+\nocite{Rabiner,SS97a,Kawamoto,Diane,Klopfert,Ghahramani,Felice,Shen,taban,Albert,wijaya2014consumer,Zhang,Daneshi,bassi,samuel,Falvo,Bakirtzis,Chen,Chow,DisaggregationHSMM,KolterJ12,KolterF11,BLTJ:BLTJ21650,Heinzelman00energy,Taylor,NYAS:NYAS5921,
 Wijaya,5620917,1626400,mckerracher, benveniste,hinton2000,aistats,fhmm,andrew}
 
 

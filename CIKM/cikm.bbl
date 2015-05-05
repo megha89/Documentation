@@ -48,6 +48,11 @@ T.~Chow and C.~Leung.
 \newblock {\em Generation, Transmission and Distribution, IEE Proceedings-},
   143(5):500--506, Sep 1996.
 
+\bibitem{Diane}
+D.~J. Cook and C.~Chen.
+\newblock Teasing detailed home habits from aggregate energy consumption data.
+\newblock 2012.
+
 \bibitem{Daneshi}
 H.~Daneshi, M.~Shahidehpour, and A.~Choobbari.
 \newblock Long-term load forecasting in electricity market.
@@ -92,10 +97,22 @@ G.~E. Hinton.
 \newblock Technical Report GCNU TR 2000-004, Gatsby Computational Neuroscience
   Unit, University College London, 2000.
 
+\bibitem{Kawamoto}
+R.~Kawamoto, A.~Nazir, A.~Kameyama, T.~Ichinomiya, K.~Yamamoto, S.~Tamura,
+  M.~Yamamoto, S.~Hayamizu, and Y.~Kinosada.
+\newblock Hidden markov model for analyzing time-series health checkup data.
+\newblock In {\em MedInfo}, volume 192 of {\em Studies in Health Technology and
+  Informatics}, pages 491--495. IOS Press, 2013.
+
 \bibitem{DisaggregationHSMM}
 H.~Kim, M.~Marwah, M.~F. Arlitt, G.~Lyon, and J.~Han.
 \newblock Unsupervised disaggregation of low frequency power measurements.
 \newblock In {\em SIAM}, pages 747--758. SIAM / Omnipress, 2011.
+
+\bibitem{Klopfert}
+F.~Klopfert and G.~Wallenborn.
+\newblock Empowering consumers through smart metering.
+\newblock 2011.
 
 \bibitem{KolterF11}
 J.~Z. Kolter and J.~Ferreira.
@@ -127,6 +144,13 @@ P.~Mirowski, S.~Chen, T.~Kam~Ho, and C.-N. Yu.
 \newblock Demand forecasting in smart grids.
 \newblock {\em Bell Labs Technical Journal}, 18(4):135--158, 2014.
 
+\bibitem{Rabiner}
+L.~R. Rabiner.
+\newblock Readings in speech recognition.
+\newblock chapter A Tutorial on Hidden Markov Models and Selected Applications
+  in Speech Recognition, pages 267--296. Morgan Kaufmann Publishers Inc., San
+  Francisco, CA, USA, 1990.
+
 \bibitem{samuel}
 I.~A. Samuel, A.~A. Awelewa, et~al.
 \newblock Medium-term load forecasting of covenant university using the
@@ -139,6 +163,13 @@ W.~Shen, V.~Babushkin, Z.~Aung, and W.~L. Woon.
   forecasting.
 \newblock In {\em Proceedings of the Fourth International Conference on Future
   Energy Systems}, e-Energy '13, pages 51--62, New York, NY, USA, 2013. ACM.
+
+\bibitem{SS97a}
+S.~Shi and A.~Weigend.
+\newblock Taking time seriously: Hidden {M}arkov experts applied to financial
+  engineering.
+\newblock In {\em CIFEr '97: Proc. of the Conf. on Computational Intelligence
+  for Financial Engineering}, pages 244--252. IEEE, 1997.
 
 \bibitem{NYAS:NYAS5921}
 D.~I. Stern.

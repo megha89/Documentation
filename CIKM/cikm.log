@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  1 MAY 2015 21:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  6 MAY 2015 02:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -188,7 +188,11 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
-))) (./cikm.aux)
+))) (./cikm.aux
+
+LaTeX Warning: Label `fig:product' multiply defined.
+
+)
 \openout1 = `cikm.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
@@ -203,8 +207,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
-
-(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
 \scratchdimen=\dimen123
@@ -287,132 +290,96 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 
-LaTeX Warning: Reference `conc' on page \thepage  undefined on input line 210.
-
-[2]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `poc2' on page \thepage  undefined on input line 214.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `con' on page \thepage  undefined on input line 214.
 
+[2] <hmm1.jpg, id=20, 217.81375pt x 207.77625pt>
+File: hmm1.jpg Graphic file (type jpg)
+ <use hmm1.jpg>
+Package pdftex.def Info: hmm1.jpg used on input line 269.
+(pdftex.def)             Requested size: 113.80885pt x 85.35683pt.
 
-LaTeX Warning: Reference `fig:pohmm' on page \thepage  undefined on input line 
-346.
+<hmm2.jpg, id=21, 221.82875pt x 210.7875pt>
+File: hmm2.jpg Graphic file (type jpg)
+ <use hmm2.jpg>
+Package pdftex.def Info: hmm2.jpg used on input line 271.
+(pdftex.def)             Requested size: 113.80812pt x 85.35881pt.
 
+<product.jpg, id=22, 239.89626pt x 327.2225pt>
+File: product.jpg Graphic file (type jpg)
+ <use product.jpg>
+Package pdftex.def Info: product.jpg used on input line 384.
+(pdftex.def)             Requested size: 85.35959pt x 113.8106pt.
 
-LaTeX Warning: Reference `fig:ex' on page \thepage  undefined on input line 346
-.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 344--354
-
+Overfull \hbox (16.61752pt too wide) in paragraph at lines 390--390
+[]\secfnt Training the model by min-imis-ing con-trastive
  []
 
-<pohmm1.jpg, id=17, 353.32pt x 271.0125pt>
-File: pohmm1.jpg Graphic file (type jpg)
- <use pohmm1.jpg>
-Package pdftex.def Info: pohmm1.jpg used on input line 370.
-(pdftex.def)             Requested size: 142.26357pt x 85.35698pt.
- [3]
-Overfull \hbox (2.3822pt too wide) in paragraph at lines 402--405
-\T1/aer/m/n/9 tains power con-sump-tion from real homes, for the whole
+[3]
+Overfull \hbox (4.17497pt too wide) in paragraph at lines 425--433
+[]\T1/aer/bx/n/9 Dataset 1: \T1/aer/m/n/9 The Ref-er-ence En-ergy Dis-ag-gre-ga
+-tion Data
  []
 
-<channel_6.png, id=26, 1032.85875pt x 275.0275pt>
-File: channel_6.png Graphic file (type png)
- <use channel_6.png>
-Package pdftex.def Info: channel_6.png used on input line 425.
-(pdftex.def)             Requested size: 503.99336pt x 99.8953pt.
-
-<channel_7.png, id=27, 966.61125pt x 300.12125pt>
-File: channel_7.png Graphic file (type png)
- <use channel_7.png>
-Package pdftex.def Info: channel_7.png used on input line 432.
-(pdftex.def)             Requested size: 503.99768pt x 99.89667pt.
-
-<channel_8.png, id=28, 917.4275pt x 300.12125pt>
-File: channel_8.png Graphic file (type png)
- <use channel_8.png>
-Package pdftex.def Info: channel_8.png used on input line 439.
-(pdftex.def)             Requested size: 503.99875pt x 99.89667pt.
-
-<channel_9.png, id=29, 1030.85126pt x 307.1475pt>
-File: channel_9.png Graphic file (type png)
- <use channel_9.png>
-Package pdftex.def Info: channel_9.png used on input line 446.
-(pdftex.def)             Requested size: 503.98901pt x 99.89673pt.
- [4 <./pohmm1.jpg>]
-Overfull \hbox (20.52705pt too wide) in paragraph at lines 558--558
-[]\secfnt PROOF OF CON-CEPT ON FAC-ULTY HOUS-
- []
-
-[5 <./channel_6.png> <./channel_7.png>]
-<screenshot.png, id=36, 1004.75375pt x 583.17876pt>
+<screenshot.png, id=27, 1004.75375pt x 583.17876pt>
 File: screenshot.png Graphic file (type png)
  <use screenshot.png>
-Package pdftex.def Info: screenshot.png used on input line 568.
+Package pdftex.def Info: screenshot.png used on input line 440.
 (pdftex.def)             Requested size: 403.19754pt x 233.0983pt.
 
-<floor052.png, id=38, 911.405pt x 341.275pt>
-File: floor052.png Graphic file (type png)
- <use floor052.png>
-Package pdftex.def Info: floor052.png used on input line 580.
-(pdftex.def)             Requested size: 504.01396pt x 99.89413pt.
+[4 <./hmm1.jpg> <./hmm2.jpg> <./product.jpg>]
+Overfull \hbox (12.12645pt too wide) in paragraph at lines 572--592
+[]$[]$  $[]$ 
+ []
 
-<floor6112.png, id=39, 905.3825pt x 341.275pt>
-File: floor6112.png Graphic file (type png)
- <use floor6112.png>
-Package pdftex.def Info: floor6112.png used on input line 587.
-(pdftex.def)             Requested size: 503.99907pt x 99.89413pt.
 
-<total2.png, id=40, 904.37875pt x 334.24875pt>
-File: total2.png Graphic file (type png)
- <use total2.png>
-Package pdftex.def Info: total2.png used on input line 594.
-(pdftex.def)             Requested size: 503.99231pt x 99.89287pt.
- (./cikm.bbl
-[6 <./channel_8.png> <./channel_9.png>] [7 <./screenshot.png> <./floor052.png>]
+Overfull \hbox (12.12645pt too wide) in paragraph at lines 619--649
+[]$[]$  $[]$ 
+ []
 
+(./cikm.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [5 <./screenshot.png>] [6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8 <./floor6112.png> <./total2.png>]) [9
-
-] (./cikm.aux)
+) [7]
+(./cikm.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 2886 strings out of 493315
- 36577 string characters out of 6137903
- 110671 words of memory out of 5000000
- 6255 multiletter control sequences out of 15000+600000
- 54309 words of font info for 71 fonts, out of 8000000 for 9000
+ 2852 strings out of 493315
+ 36026 string characters out of 6137903
+ 114644 words of memory out of 5000000
+ 6227 multiletter control sequences out of 15000+600000
+ 52818 words of font info for 70 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,12n,28p,1462b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,28p,1525b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texli
 ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2013/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2013/texmf-dis
-t/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts
-/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
-urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/
-utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pf
-b>
-Output written on cikm.pdf (9 pages, 428690 bytes).
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2013/texmf-
+dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fo
+nts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
+e1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/tim
+es/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a
+.pfb>
+Output written on cikm.pdf (7 pages, 318366 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
