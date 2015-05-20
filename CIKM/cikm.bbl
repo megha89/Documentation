@@ -27,7 +27,8 @@ A.~Brown and G.~Hinton.
 
 \bibitem{andrew}
 A.~D. Brown.
-\newblock Product model for sequences, 2001.
+\newblock Product model for sequences.
+\newblock {\em Gatsby Unit}, 2001.
 
 \bibitem{Chen}
 H.~Chen, C.~Canizares, and A.~Singh.
@@ -51,17 +52,13 @@ T.~Chow and C.~Leung.
 \bibitem{Diane}
 D.~J. Cook and C.~Chen.
 \newblock Teasing detailed home habits from aggregate energy consumption data.
-\newblock 2012.
+\newblock February 2012.
 
 \bibitem{Daneshi}
 H.~Daneshi, M.~Shahidehpour, and A.~Choobbari.
 \newblock Long-term load forecasting in electricity market.
 \newblock In {\em Electro/Information Technology, 2008. EIT 2008. IEEE
   International Conference on}, pages 395--400, May 2008.
-
-\bibitem{benveniste}
-E.~Fabre, S.~Haar, A.~Benveniste, and A.~Benveniste.
-\newblock Hidden markov models for distributed and concurrent systems, 2000.
 
 \bibitem{Falvo}
 M.~Falvo, R.~Lamedica, S.~Pierazzo, and A.~Prudenzi.
@@ -94,8 +91,7 @@ W.~R. Heinzelman, A.~Ch, and H.~Balakrishnan.
 \bibitem{hinton2000}
 G.~E. Hinton.
 \newblock Training products of experts by minimizing contrastive divergence.
-\newblock Technical Report GCNU TR 2000-004, Gatsby Computational Neuroscience
-  Unit, University College London, 2000.
+\newblock {\em Neural Computation}, 14(8):1771--1800, 2002.
 
 \bibitem{Kawamoto}
 R.~Kawamoto, A.~Nazir, A.~Kameyama, T.~Ichinomiya, K.~Yamamoto, S.~Tamura,

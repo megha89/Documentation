@@ -3,8 +3,6 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: cikm.aux
 The style file: abbrv.bst
 Database file #1: cikm.bib
-Warning--entry type for "andrew" isn't style-file defined
---line 436 of file cikm.bib
 Warning--there's a number but no series in aistats
 Warning--empty journal in Diane
 Warning--empty journal in Ghahramani
@@ -12,45 +10,45 @@ Warning--empty booktitle in Heinzelman00energy
 Warning--empty journal in Klopfert
 Warning--empty booktitle in Rabiner
 Warning--there's a number but no series in wijaya2014consumer
-You've used 35 entries,
+You've used 34 entries,
             2118 wiz_defined-function locations,
-            741 strings with 10289 characters,
-and the built_in function-call counts, 13639 in all, are:
-= -- 1367
-> -- 580
-< -- 23
-+ -- 232
-- -- 192
-* -- 941
-:= -- 2114
-add.period$ -- 112
-call.type$ -- 35
-change.case$ -- 200
+            740 strings with 10103 characters,
+and the built_in function-call counts, 13456 in all, are:
+= -- 1356
+> -- 557
+< -- 22
++ -- 223
+- -- 184
+* -- 940
+:= -- 2081
+add.period$ -- 111
+call.type$ -- 34
+change.case$ -- 193
 chr.to.int$ -- 0
-cite$ -- 42
-duplicate$ -- 557
-empty$ -- 1094
-format.name$ -- 192
-if$ -- 2989
+cite$ -- 41
+duplicate$ -- 555
+empty$ -- 1081
+format.name$ -- 184
+if$ -- 2952
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 32
-newline$ -- 176
-num.names$ -- 70
-pop$ -- 220
+int.to.str$ -- 34
+missing$ -- 34
+newline$ -- 173
+num.names$ -- 68
+pop$ -- 202
 preamble$ -- 1
-purify$ -- 165
+purify$ -- 159
 quote$ -- 0
-skip$ -- 446
+skip$ -- 439
 stack$ -- 0
-substring$ -- 913
-swap$ -- 186
-text.length$ -- 23
+substring$ -- 935
+swap$ -- 185
+text.length$ -- 22
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 140
+type$ -- 136
 warning$ -- 7
-while$ -- 125
-width$ -- 37
-write$ -- 393
-(There were 8 warnings)
+while$ -- 124
+width$ -- 36
+write$ -- 387
+(There were 7 warnings)

@@ -94,7 +94,7 @@
 % of EIGHT authors. SIX appear on the 'first-page' (for formatting
 % reasons) and the remaining two appear in the \additionalauthors section.
 %
-\author{
+%\author{
 % You can go ahead and credit any number of authors here,
 % e.g. one 'row of three' or two rows (consisting of one row of three
 % and a second row of one, two or three).
@@ -105,28 +105,28 @@
 % affiliation/address with \affaddr, and tag the
 % e-mail address with \email.
 %
-\alignauthor
-Megha Gupta\\
-       \affaddr{Department of Computer Science}\\
-       \affaddr{IIIT Delhi, India}\\
-       \email{meghag@iiitd.ac.in}
-\alignauthor
-Haimonti Dutta\titlenote{The author is also affiliated to the Institute of Data Science and Engineering (IDSE), Columbia University and is an adjunct professor at IIIT-Delhi.}\\
-       \affaddr{Department of Management Science and Systems,}\\
-       \affaddr{State University of New York, Buffalo}\\
-       \affaddr{New York, 14260}\\
-       \email{haimonti@buffalo.edu}
-\alignauthor 
-Ullas Nambiar\\
-       \affaddr{EMC Corporation}\\
-       \affaddr{Bangalore, India}\\
-       \email{ullas.nambiar@emc.com}
-\and  % use '\and' if you need 'another row' of author names
-\alignauthor Amarjeet Singh \\
-       \affaddr{Department of Computer Science}\\
-       \affaddr{IIIT Delhi}\\
-       \email{amarjeet@iiitd.ac.in}
-}
+%\alignauthor
+%Megha Gupta\\
+%       \affaddr{Department of Computer Science}\\
+%       \affaddr{IIIT Delhi, India}\\
+%       \email{meghag@iiitd.ac.in}
+%\alignauthor
+%Haimonti Dutta\titlenote{The author is also affiliated to the Institute of Data Science and Engineering (IDSE), Columbia University and is an adjunct professor at IIIT-Delhi.}\\
+%       \affaddr{Department of Management Science and Systems,}\\
+%       \affaddr{State University of New York, Buffalo}\\
+%       \affaddr{New York, 14260}\\
+%       \email{haimonti@buffalo.edu}
+%\alignauthor 
+%Ullas Nambiar\\
+%       \affaddr{EMC Corporation}\\
+%       \affaddr{Bangalore, India}\\
+%       \email{ullas.nambiar@emc.com}
+%\and  % use '\and' if you need 'another row' of author names
+%\alignauthor Amarjeet Singh \\
+%       \affaddr{Department of Computer Science}\\
+%       \affaddr{IIIT Delhi}\\
+%       \email{amarjeet@iiitd.ac.in}
+%}
 
 % There's nothing stopping you putting the seventh, eighth, etc.
 % author on the opening page (as the 'third row') but we ask,
@@ -142,11 +142,11 @@ Ullas Nambiar\\
 
 \maketitle
 \begin{abstract}
-The need to gather fine grained real-time spatio-temporal energy consumption data is fulfilled by the large scale deployment of smart meters. Remote monitoring on these meters is done by sending readings from the customer site to the data aggregators placed at the base stations. Each base station aggregates the load derived from all the meters connected to that station. The  readings received at the base station are adhoc and usually not synchronized in time. Different smart meters can send data points when they are collected resulting in inconsistent data including aggregating non-aligned time stamped readings, readings with missing values, repeated values, meter reset readings.
+The need to gather fine grained real-time spatio-temporal energy consumption data is fulfilled by the large scale deployment of smart meters. Remote monitoring on these meters is done by sending readings from the customer site to the data aggregators placed at the base stations. Each base station aggregates the load derived from all the meters connected to that station. The  readings received at the base station are adhoc and usually not synchronized in time. Each house is installed with multiple energy monitoring equipments such as smart meters and controllers. Different smart meters can send data points when they are collected resulting in inconsistent data including aggregating non-aligned time stamped readings, readings with missing values, repeated values, meter reset readings.
 %The problem arises when the analytics is to be performed on the data which is aggregated from the inconsistent messages passed by all the meters connected to a particular base station.
 %the demand response programs have been a cost effective alternative to meet the occasional peak demands. 
 %We propose to solve the problem of energy aggregation where the constituents of each aggregate are inconsistent with respect to time. The challenges with the inconsistent data includes aggregating non-aligned time stamped readings, readings with missing values, repeated values, meter reset readings. 
-We address the problem of learning from disparate data streams (with inconsistencies) by modelling streams as HMMs and the process of aggregating data at the base station as a Product of HMMs. This enables us to perform load forecasting using machine learning techniques. We have performed experiments using contrastive divergence learning on the Reference Energy Disaggregation Data Set (REDD) and the energy consumption data collected from the faculty housing at our institute. The results show that this technique performs the best by combining via product larger no. of HMMs with smaller no. of states (on, off or standby) and training time linear to the number of HMMs.
+We address the problem of learning from disparate data streams (with inconsistencies) by modelling streams as HMMs and the process of aggregating data at the base station as a Product of HMMs. This enables us to perform load forecasting using machine learning techniques. We have performed experiments using contrastive divergence learning on the Reference Energy Disaggregation Data Set (REDD) and the energy consumption data collected from the faculty housing at our institute. The results show that this technique performs the best by combining via product, all the HMMs (corresponding to each data stream) with binary states (on, off or standby) and training time linear to the number of HMMs.
 %We address the problem of aggregating energy data in context with the load forecasting using a machine learning technique called product of Hidden Markov Models (PoHMM). 
 %The objective function used for learning is the contrastive divergence between the observed data and the reconstructed data produced by running a Gibbs sampler. 
 %Data analytics in energy domain, load forecasting on aggregates of power meters, Energy aggregation problem using pohmm, The STLF accuracy improves with larger aggregates, This paper deals with the energy aggregation problems in electrical system. The challenges included problem of aggregating inconsistent data, across time, in case of electrical systems.
@@ -194,15 +194,19 @@ They can measure site specific information and also help agencies set different 
 
 
 In recent years, machine learning has been applied to the problem of energy consumption and demand forecasting analysis. The role of the machine learning algorithm is to study the sensor data and provide alerts and warnings when anomalous behaviour occurs or to inform (and remind) customers when certain activities were performed, which rooms they occupied, and what appliances they used most frequently during that period. This information can be transmitted to customers in timely fashion via phone, email or the Internet.
-Chicco et al. \cite{1626400} does a comparison of several clustering techniques and finds out that  the hierarchical clustering and modified follow-the-leader perform best among the rest K-Means, fuzzy K-Means to group customers with similar electrical behaviour \cite{5620917}. Another paper \cite{Wijaya} uses classifiers like random forest, decision trees (J48), logistic and naive bayes to identify customers with similar electricity consumption profiles.
+Chicco et al. \cite{1626400} compared several clustering techniques and observed that the hierarchical clustering and modified follow-the-leader perform best among the rest K-Means, fuzzy K-Means to group customers with similar electrical behaviour \cite{5620917}. Another paper \cite{Wijaya} used classifiers like random forest, decision trees (J48), logistic and naive bayes to identify customers with similar electricity consumption profiles.
 %Sensor data collected from smart homes are used to reveal activity patterns of the residents, which can then be correlated with the total energy consumption. This enables utility companies and their customers to associate activities with energy usage and costs, devise intelligent systems to control home environments improving energy efficiency and reducing costs. Typically, sequences of usage patterns that appear frequently at different time scales (daily, weekly, monthly, yearly) and across different homes are studied and 
 %%; trends of electricity consumption (steadily increasing, decreasing, cyclic, seasonal) for individual homes and across the community; and anomalies (sudden peaks or drops on consumption) for individual homes and across the community.
 %outlier detection algorithms are designed to enable customers to be notified that they are consuming unusually large amount(s) of energy during some specific period. 
 Related problems involve study of trends of electricity consumption (steadily increasing, decreasing, cyclic, seasonal) and sudden anomalous behaviour (sudden peaks or drops on consumption) for individual homes and across the community.\cite{Diane}
 
-In this paper, we use Hidden Markov models (HMMs) to analyse the time series energy data. HMMs are widely used for time series data like financial time series prediction \cite{SS97a}, health checkup data \cite{Kawamoto}, energy time series analytics \cite{Albert}, etc. We are trying to model the data stream from each source as a HMM with its states represented as ON/OF.  For $N$ sources, there are $N$ HMMs and  the total number of states collectively are $2^N$. The observations represent the energy consumed in a particular state. These observations are recorded at different time scales for different sources. In order to aggregate the data from all the different sources, we build a machine learning model using products of HMMs (PoHMMs) and apply it to the energy aggregation problem. There are many reasons why the product model constructed from many HMMs is appropriate. 
+In this paper, we use Hidden Markov models (HMMs) to analyse the time series energy data. HMMs are widely used for time series data like financial time series prediction \cite{SS97a}, health checkup data \cite{Kawamoto}, energy time series analytics \cite{Albert}, etc.\\
+We model the data stream from each source as a HMM with its states represented as ON/OF.  For $N$ sources, there are $N$ HMMs and  the total number of states collectively are $2^N$. The observations represent the energy consumed in a particular state. These observations are recorded at different time scales for different sources. \\
+In order to aggregate the data from all the different sources, we build a machine learning model using products of HMMs (PoHMMs) and apply it to the energy aggregation problem. There are many reasons why the product model constructed from many HMMs is appropriate. 
 %First, this model is ideal for data which is caused by multiple underlying influences.
-First, this model allows each HMM to make decisions based on few dimensions without actually having to worry about covering the full dimensionality of the problem. Second, HMMs alone are not efficient at capturing long range structure in time series \cite{Taylor} -- in contrast to PoHMMs  \cite{andrew} allow each model to remember a different piece of information about the past.
+%First, this model allows each HMM to make decisions based on few dimensions without actually having to worry about covering the full dimensionality of the problem.
+First, in a high-dimensional space each model constrains a different subset of dimensions, and their product constrains all of the dimensions.
+Second, HMMs alone are not efficient at capturing long range structure in time series \cite{Taylor} -- in contrast to PoHMMs  \cite{andrew} allow each model to remember a different piece of information about the past.
 Two different proof of concepts are presented -- first one on the REDD \footnote{http://redd.csail.mit.edu/} data set and the other one on real data collected at the faculty housing in India. 
 %application of are aggregating energy consumption information using a model that extends the power of HMMs. HMM's are used as the basic expert in the of product of experts model. 
 
@@ -250,9 +254,10 @@ The identification of consumer profiles that show similar behaviour in energy co
 \subsection{Ensemble based learning techniques}
 Ensemble learning is a method where multiple learners are trained to solve the same problem. It constructs a set of hypothesis and combines them to generate the final result.
 \subsubsection{Prediction with expert advice}
-A study done by \cite{Shen}, proposes a Pattern Forecasting Ensemble Model (PFEM) comprising of five forecasting models using different clustering techniques, like k-means model, self-organising map model, hierarchical clustering model, k-medoids model and fuzzy c-means model. They have showed that on three real-world dataset, their proposed ensemble model outperformed all the five individual model in case of day ahead electricity demand prediction.
-Another study \cite{Felice} highlights the importance of regularised negative correlation learning ensemble methodology on the problem of energy load hourly prediction. This method tries to overcomes the problem of variability in neural network due to high sensitivitiness to the initial conditions. As this method combines the outputs of several neural networks, it achieves a marked reduction in error after introducing external data. \\
-An extension of HMMs, called Factorial Hidden Markov Model (FHMM) \cite{fhmm} is a class of ensemble based learning models that addresses the need for distributed hidden states in HMMs. But by being a directed model, when conditioned on the observed sequence, the hidden state chains become independent making the inference easy but learning more complex.
+A study done by \cite{Shen}, proposed a Pattern Forecasting Ensemble Model (PFEM) comprising of five forecasting models using different clustering techniques, like k-means model, self-organising map model, hierarchical clustering model, k-medoids model and fuzzy c-means model. They have showed that on three real-world dataset, their proposed ensemble model outperformed all the five individual model in case of day ahead electricity demand prediction.
+Another study \cite{Felice} highlighted the importance of regularised negative correlation learning ensemble methodology on the problem of energy load hourly prediction. This method tried to overcome the problem of variability in neural network due to high sensitivitiness to the initial conditions. As this method combines the outputs of several neural networks, it achieves a marked reduction in error after introducing external data. \\
+An extension of HMMs, called Factorial Hidden Markov Model (FHMM) \cite{fhmm} is a class of ensemble based learning models that addresses the need for distributed hidden states in HMMs. But by being a directed model, when conditioned on the observed sequence, the hidden state chains become independent making the inference easy but learning more complex. But this approach has proved to be very inefficient in high dimensional spaces.
+To model a complicated, high-dimensional data distributions, an approach called mixture of gaussians is widely used. In this method, each simple model which is a gaussian is combined using a weighted arithmetic mean of individual distributions. Such mixtures of tractable models can easily fit to data using expectation-maximization (EM) and are more powerful than their individual component. So, a different way of combining these distributions is by multiplying them together and then renormalizing them.
 In our paper,  we deal with the problem of energy aggregation using ensemble learning model. Each HMM is used to represent a state of an appliance. An appliance can have states like ON or OFF. The combination of the outputs from each of these HMM models gives us our ensemble based learning model, Product of Hidden Markov Model (PoHMM) \cite{hinton2000}. This learning technique outputs the probability distribution by combining the outputs from several simpler distributions. It allows each model to make a decision on the basis of few dimensions.
 
 
@@ -390,13 +395,42 @@ The figure~\ref{fig:product} is a product of two HMMs P = $S^1$ x $S^2$ where th
 \subsection{Training the model by minimising contrastive divergence}
 %Product of experts (PoE)\footnote{http://en.wikipedia.org/wiki/Product\_of\_experts} is a technique that models probability distribution by combining the output from several simpler distributions. It is defined by the following formula:\\
 % Write the formula and explain it. Explain Gibbs Sampling
-To fit the model to the data, we need to maximize the likelihood of the dataset or minimise the Kullback-Liebler divergence between the real data and the data reconstructed by using gibbs sampling, henceforth called fantasy data. The contrastive divergence algorithm for training the PoHMM has the following steps:
+
+To fit the model to the data, we need to maximize the likelihood of the dataset or minimise the Kullback-Liebler divergence between the data distribution, $P^0$ (data distribution at time 0) and the equilibrium distribution over the visible variables, $P^\infty_\theta$ (fantasy data) which is obtained after prolonged Gibbs sampling as shown in equation~\ref{eq:KL}. 
+\begin{align}
+P^0 || P^\infty_\theta = \sum_{d}P^0 (d)logP^0(d) - \sum_{d}P^0 (d)logP^\infty_\theta(d) \label{eq:KL} \\
+P^0 || P^\infty_\theta = -H(P^0) - \langle log P^\infty_\theta \rangle_{P^{0}}
+\end{align}
+
+where || represents Kullback-Leibler divergence, d is the data vector in discrete space, $\theta_m$ is all the parameters of individual model m, $P^0$ is the data distribution at time $0$, H($P^0$) represents the entropy which is ignored during optimisation as $P^0$ does not depend on the parameters of the model, angle brackets denote the expectation over the distribution specified by the subscript.
+In Gibbs sampling, each variable draws a sample from its posterior distribution given the current states of the other variables. The hidden states of all the models are conditionally independent given the data and hence can be parallel updated as shown in Figure~\ref{fig:gibbs}. At time t=0, the observed variables represent a data vector, d and the hidden variables, s of all the models are updated in parallel with samples from their posterior distribution given the observed variables, y. At time 1, the visible variables are updated to generate a reconstruction of the original data vector from the hidden variables and the hidden variables are again updated simultaneously. This prolonged sampling helps the Markov chain to converge to the equilibrium distribution which helps to attain the unbiased estimate of the gradient of the PoHMMs. But since the samples from the equilibrium state have high variance as they come from the entire model's distribution, it poses a difficulty in determining the estimate the derivative. Therefore, the optimisation is performed on the different objective function called contrastive divergence, defined in equation~\ref{eq:CD}. Contrastive divergence is the difference between $P^0$ || $P^\infty_\theta$ and $P^1_\theta$ || $P^\infty_\theta$ where $P^1_\theta$ is the distribution over the one-step reconstruction of the data vectors generated by one full step of Gibbs sampling. The intuition behind using contrastive divergence is to leave the initial distribution $P^{0}$ over the visible variables unaltered and also the intractable expectation over $P^\infty_\theta$ gets cancelled out. Instead of comparing the initial and final derivatives, $P^0$ and $P^\infty_\theta$, the Markov chain is run for one full step and the parameters are updated to avoid the chain to wander away from the initial distribution on the first step. As $P^1$ is a step closer to $P^\infty$ which guarantees that $P^0$ || $P^\infty_\theta$ will always exceed $P^1_\theta$ || $P^\infty_\theta$ ensuring a non negative value unless $P^0$ = $P^1_\theta$. If $P^0$ = $P^1_\theta$, then it implies that the chain is already in an equilibrium state, that is $P^0$ = $P^\infty_\theta$ hence making the value of contrastive divergence as $0$.
+
+ \begin{figure*}[t]
+\centering
+\includegraphics[width=12cm,height=4cm]{gibbs.jpg}
+\caption{Visualization of Gibbs sampling}
+\label{fig:gibbs}
+\end{figure*}
+
+\begin{align}
+- \frac {\partial} {\partial\theta_{m}} (P^0 || P^\infty_\theta - P^1_\theta || P^\infty_\theta) = \langle \frac {\partial log f_{\theta_{m}}}{\partial \theta_m} \rangle_{P^0} - \langle \frac {\partial log f_{\theta_{m}}}{\partial \theta_m} \rangle_{P^1_\theta} + \nonumber \\
+ \frac{\partial{P^1_\theta}}{\partial\theta_m} \frac{\partial(P^1_\theta || P^\infty_\theta)}{\partial{P^1_\theta}}
+ \label{eq:CD}
+\end{align}
+where log$f_{\theta_{m}}$ is a random variable that can also be written as $f_m$(D|$\theta_m$) where D being a random variable corresponding to the data.
+In equation~\ref{eq:CD}, the first two terms on the right hand side are tractable as it is easy to sample from $P^0$ and $P^1_\theta$ but the third term represents the effect on $P^1_\theta$ || $P^\infty_\theta$ of the change of the step reconstruction caused by the change in the $\theta_m$. Extensive simulations show that it is small and rarely differs from the result of other two terms, hence can be safely ignored. Therefore in contrastive divergence, the parameters are learned according to the equation~\ref{eq:params}. To minimise the contrastive divergence by using a Markov chain that slowly mixes, we can use mixing techniques like weight decay that ensures that every possible visible vector has non zero probability given the latent variables.
+
+\begin{align}
+\Delta\theta_m \propto \langle \frac {\partial log f_{\theta_{m}}}{\partial \theta_m}\rangle_{P^0} - \langle \frac {\partial log f_{\theta_{m}}}{\partial \theta_m} \rangle_{P^1_\theta} \label{eq:params}
+\end{align}
+
+The contrastive divergence algorithm for training the PoHMM has the following steps:
 \begin{enumerate}
-\item Calculate each model's gradient on a data point using forward backward algorithm.
-\item For each model take a sample from the posterior distribution of paths through state space.
-\item At each time step, multiply together the distributions and renormalize to get the reconstruction distribution at each step.
-\item Draw a sample from the reconstruction distribution at each time step to get a reconstructed sequence. Compute each model's gradient on the new sequence.
-\item Update the parameters
+\item Each model's gradient $\frac{\partial}{\partial\theta_m}$ $P(Y|\theta_m)$ ($\{y_t\}_{t=1}^T$ = Y is the visible variable) is calculated on a data point using forward backward algorithm.
+\item A sample for each model is taken from the posterior distribution of paths through state space.
+\item At each time step, the distributions are multiplied and renormalized together to get the reconstruction distribution.
+\item A sample from the reconstruction distribution is drawn at each time step to get a reconstructed sequence. Each model's is gradient is computed on the new sequence $P(\hat Y|\theta_m)$
+\item Parameters are updated as per equation~\ref{eq:params}
 
 \end{enumerate}
 %High dimensional distributions are approximated as a product of one dimensional distributions. The product of individual distributions which are uniguassian or multivariate guassian will also be multivariate guassian. If the individual models are more complicated and contain one or more hidden variables, multiplying their distributions together and renormalizing them can be very powerful. These individual models are called "experts".
@@ -404,7 +438,7 @@ To fit the model to the data, we need to maximize the likelihood of the dataset 
 
 \subsection{Inference in PoHMM}
 
-The main feature of PoHMMs is its undirected graphical modelling with no direct connection among the latent variables ($S^1_{t}$ and $S^2_{t}$) as they only interact indirectly via observed variables ($Y_{t}$). The hidden variables all the experts are rendered independent when conditioned on visible variables. So, if the inference in each of the constituent model is tractable then the inference in the product is also tractable. To generate a data point in this model, all the experts in PoE generate an observation and if they all generated the same point then it is accepted else they again generate an observation until all the experts agree to it. Therefore all the experts have some influence over the generated data. So, the inference determines the the probability that all the experts would have taken in order to generate the given observation. 
+The main feature of PoHMMs is its undirected graphical modelling with no direct connection among the latent variables ($S^1_{t}$ and $S^2_{t}$) as they only interact indirectly via observed variables ($Y_{t}$). The hidden variables all the experts are rendered independent when conditioned on visible variables. So, if the inference in each of the constituent model is tractable then the inference in the product is also tractable. To generate a data point in this model, all the models in PoHMMs generate an observation and if they all generated the same point then it is accepted else they again generate an observation until all the models agree to it. Therefore all the models have some influence over the generated data. So, the inference determines the the probability that all the models would have taken in order to generate the given observation. 
 
 %\begin{figure*}[t]
 %\centering
@@ -414,7 +448,7 @@ The main feature of PoHMMs is its undirected graphical modelling with no direct 
 %\end{figure*}
 
 
-\section{Proof of Concept}
+\section{Applications using Product of HMM}
 \label{poc}
 
 \textbf{Aim}: To perform load forecasting using PoHMMs.
@@ -426,14 +460,15 @@ The main feature of PoHMMs is its undirected graphical modelling with no direct 
 the house (labeled by the main type of appliance on that circuit). %It is intended for use in developing disaggregation methods, which can predict, from only the whole-home signal, which devices are being used.
 The REDD data set contains two main types of home electricity data: high-frequency current/voltage waveform data of the two power mains (as well as the voltage signal for a single phase), and lower-frequency power data including the mains and individual, labeled circuits in the house. 
 The main directory consists of several house directories, each of which contain all the power readings for a single house.  Each house subdirectory consists of a labels and channels files. The labels file helps in matching the channel number with the device name. Each channel file has two columns containing UTC timestamps (as integers) and power readings (recording the apparent power of the circuit) for the channel.
-Experiments reported here use the house 2 data from REDD. The dataset has $318759$ records and $2$ columns. We randomly sample $300$ records for our initial experiment. 
+Experiments reported here use the house 2 data from REDD. The dataset has $318759$ records and $2$ columns. We randomly sample $300$ records for our initial experiment.
 %The time series data of the microwave, dryer, kitchen$\_2$ and refrigerator are plotted below in Figures~\ref{fig:micro}, ~\ref{fig:washer}, ~\ref{fig:kitchen2}, ~\ref{fig:refri}. 
-The implementation of the product of hidden markov model is obtained from Iain Murray's website\footnote{\label{link}http://homepages.inf.ed.ac.uk/imurray2/code/}. It implements the technique described in Geoff Hinton's paper \cite{hinton2000}. 
+The implementation of the product of hidden markov model is obtained from Iain Murray's website\footnote{\label{link}http://homepages.inf.ed.ac.uk/imurray2/code/}. It implements the technique described in Geoff Hinton's paper \cite{hinton2000}.
 %Time series data from two appliances are represented as product of $k$ HMMs. It has $11$ channels where each channel corresponds to the following appliance, 1. mains1, 2. mains2, 3. kitchen 1, 4. lighting, 5. stove, 6. microwave, 7. washer dryer, 8. kitchen 2, 9. refrigerator, 10. dishwasher, 11. disposal
 
 
 \item \textbf{Dataset 2:} This data represents the energy consumed by the IIIT Delhi faculty housing building. As a part of research, a team from IIIT Delhi has installed various temperature, light and motion sensors to perform real world studies and to analyse user preferences for energy conservation. For our analysis, we selected $1$ month's historical data ranging from 01-01-2014, 00:01 hours to 31-01-2014, 23:59 hours. The two smart meters installed captures the data from all the $12$ floors. The first meter records readings from ground to $5$th floors and the second meter from $6$th to $11$th. The dataset includes timestamp and power consumed in watts. There are $84133$ records in this dataset. We also have the total power consumed by the faculty housing building which would serve as the ground truth to compare the aggregated load using PoHMMs. The data is obtained from the website whose screenshot is shown in Figure~\ref{fig:screenshot}
 %Time series data from two streams are modelled as a product of $k$ HMMs. 
+
 
 \begin{figure*}[t]
 \centering
@@ -546,7 +581,7 @@ Samples & $KL Div$ & $T(sec)$ & $Iterations$ \\
 
 
 \subsection{Empirical Results}
-In both the datasets, experiments are performed keeping some parameters constant and some varying. In case of REDD, Tables~\ref{table:sample1},~\ref{table:threshold1} and~\ref{table:appliance1} show the effect of varying data samples, no. of HMMs, threshold and no. of appliances on the KL divergence.
+In both the datasets, experiments are performed keeping some parameters constant and some varying. In case of REDD, Tables~\ref{table:sample1},~\ref{table:threshold1} and~\ref{table:appliance1} show the effect of varying data samples, threshold and no. of appliances on the KL divergence.
 In case of faculty housing dataset, Tables~\ref{table:sample2} and~\ref{table:expert2} show the effect of varying data samples and no. of HMMs on the KL divergence.
 
 %Experiments are done into $4$ phases, in the first phase the number of data samples are varied corresponding to which the values of KL Divergence and convergence time are noted. In the second phase, the number of experts are varied keeping the best value of the sample from the first phase fixed. In the third phase, number of iterations are varied keeping the best values from above first two phases fixed. In the fourth part, the no. of appliances to be aggregated are varied.
@@ -1079,7 +1114,7 @@ Experts & $KL Div (e-05)$ & $T(sec)$\\
 %\end{document}  % This is where a 'short' article might terminate
 
 %ACKNOWLEDGMENTS are optional
-\section{Acknowledgments}
+%\section{Acknowledgments}
 %This section is optional; it is a location for you
 %to acknowledge grants, funding, editing assistance and
 %what have you.  In the present case, for example, the
@@ -1157,7 +1192,7 @@ Experts & $KL Div (e-05)$ & $T(sec)$\\
 % That's all folks!
 
 \nocite{Rabiner,SS97a,Kawamoto,Diane,Klopfert,Ghahramani,Felice,Shen,taban,Albert,wijaya2014consumer,Zhang,Daneshi,bassi,samuel,Falvo,Bakirtzis,Chen,Chow,DisaggregationHSMM,KolterJ12,KolterF11,BLTJ:BLTJ21650,Heinzelman00energy,Taylor,NYAS:NYAS5921,
-Wijaya,5620917,1626400,mckerracher, benveniste,hinton2000,aistats,fhmm,andrew}
+Wijaya,5620917,1626400,mckerracher,hinton2000,aistats,fhmm,andrew}
 
 
 \bibliographystyle{abbrv}
