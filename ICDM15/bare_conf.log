@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  2 JUN 2015 04:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  2 JUN 2015 14:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -212,70 +212,67 @@ e
 LaTeX Warning: No \author given.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 467.
+(Font)              <7> on input line 468.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 467.
+(Font)              <5> on input line 468.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 473.
+(Font)              <8> on input line 474.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 473.
+(Font)              <6> on input line 474.
 
-LaTeX Warning: Reference `poc2' on page 1 undefined on input line 481.
+LaTeX Warning: Reference `poc2' on page 1 undefined on input line 482.
 
 
-LaTeX Warning: Reference `con' on page 1 undefined on input line 481.
+LaTeX Warning: Reference `con' on page 1 undefined on input line 482.
 
 [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Underfull \vbox (badness 7851) has occurred while \output is active []
-
-
 <hmm1.jpg, id=13, 217.81375pt x 207.77625pt>
 File: hmm1.jpg Graphic file (type jpg)
  <use hmm1.jpg>
-Package pdftex.def Info: hmm1.jpg used on input line 532.
+Package pdftex.def Info: hmm1.jpg used on input line 533.
 (pdftex.def)             Requested size: 113.80885pt x 85.35683pt.
 
 <hmm2.jpg, id=14, 221.82875pt x 210.7875pt>
 File: hmm2.jpg Graphic file (type jpg)
  <use hmm2.jpg>
-Package pdftex.def Info: hmm2.jpg used on input line 534.
+Package pdftex.def Info: hmm2.jpg used on input line 535.
 (pdftex.def)             Requested size: 113.80812pt x 85.35881pt.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 546.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 547.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 546.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 547.
  [2]
 <product.jpg, id=18, 239.89626pt x 327.2225pt>
 File: product.jpg Graphic file (type jpg)
  <use product.jpg>
-Package pdftex.def Info: product.jpg used on input line 647.
+Package pdftex.def Info: product.jpg used on input line 648.
 (pdftex.def)             Requested size: 113.81279pt x 113.8106pt.
  [3 <./hmm1.jpg> <./hmm2.jpg>] <gibbs.jpg, id=29, 712.6625pt x 205.76875pt>
 File: gibbs.jpg Graphic file (type jpg)
  <use gibbs.jpg>
-Package pdftex.def Info: gibbs.jpg used on input line 669.
+Package pdftex.def Info: gibbs.jpg used on input line 670.
 (pdftex.def)             Requested size: 341.43253pt x 113.81052pt.
 
 [4 <./product.jpg>] <screenshot.png, id=34, 1004.75375pt x 583.17876pt>
 File: screenshot.png Graphic file (type png)
 
 <use screenshot.png>
-Package pdftex.def Info: screenshot.png used on input line 733.
+Package pdftex.def Info: screenshot.png used on input line 734.
 (pdftex.def)             Requested size: 419.28006pt x 238.7044pt.
 
-Overfull \hbox (12.08618pt too wide) in paragraph at lines 866--886
+Overfull \hbox (12.08618pt too wide) in paragraph at lines 867--887
 []$[]$  $[]$ 
  []
 
 
-Overfull \hbox (12.08618pt too wide) in paragraph at lines 913--944
+Overfull \hbox (12.08618pt too wide) in paragraph at lines 914--945
 []$[]$  $[]$ 
  []
 
@@ -287,7 +284,7 @@ Overfull \hbox (12.08618pt too wide) in paragraph at lines 913--944
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
 
-Underfull \vbox (badness 3471) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6 <./screenshot.png>]
 Underfull \hbox (badness 5359) in paragraph at lines 96--100
@@ -341,7 +338,7 @@ st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist
 e1/urw/times/utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on bare_conf.pdf (7 pages, 339192 bytes).
+Output written on bare_conf.pdf (7 pages, 340260 bytes).
 PDF statistics:
  96 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
