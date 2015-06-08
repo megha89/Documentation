@@ -1,0 +1,183 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem{Albert}
+Albert, A., Rajagopal, R.: Smart meter driven segmentation: What your
+  consumption says about you. Power Systems, IEEE Transactions on  28(4),
+  4019--4030 (Nov 2013)
+
+\bibitem{Bakirtzis}
+Bakirtzis, A., Petridis, V., Kiartzis, S., Alexiadis, M.: A neural network
+  short term load forecasting model for the greek power system. Power Systems,
+  IEEE Transactions on  11(2),  858--863 (May 1996)
+
+\bibitem{bassi}
+Bassi, D., Olivares, O.: Medium term electric load forecasting using tlfn
+  neural networks. International Journal of Computers, Communications \&
+  Control  1(2),  23--32 (2006)
+
+\bibitem{aistats}
+Brown, A., Hinton, G.: Proceedings of artificial intelligence and statistics
+  2001. In: Products of Hidden Markov Models. No. GCNU TR 2000-008 (2001)
+
+\bibitem{andrew}
+Brown, A.D.: Product model for sequences. Gatsby Unit  (2001),
+  \url{http://www.gatsby.ucl.ac.uk/publications/andy\_thesis\_final.pdf}
+
+\bibitem{Chen}
+Chen, H., Canizares, C., Singh, A.: Ann-based short-term load forecasting in
+  electricity markets. In: Power Engineering Society Winter Meeting, 2001.
+  IEEE. vol.~2, pp. 411--415 vol.2 (2001)
+
+\bibitem{1626400}
+Chicco, G., Napoli, R., Piglione, F.: Comparisons among clustering techniques
+  for electricity customer classification. Power Systems, IEEE Transactions on
+  21(2),  933--940 (May 2006)
+
+\bibitem{Chow}
+Chow, T., Leung, C.: Nonlinear autoregressive integrated neural network model
+  for short-term load forecasting. Generation, Transmission and Distribution,
+  IEE Proceedings-  143(5),  500--506 (Sep 1996)
+
+\bibitem{Diane}
+Cook, D.J., Chen, C.: Teasing detailed home habits from aggregate energy
+  consumption data. IEEE Smart Grid  (February 2012),
+  \url{http://smartgrid.ieee.org/newsletter/february-2012/507-teasing-detailed-home-habits-from-aggregate-energy-consumption-data}
+
+\bibitem{Daneshi}
+Daneshi, H., Shahidehpour, M., Choobbari, A.: Long-term load forecasting in
+  electricity market. In: Electro/Information Technology, 2008. EIT 2008. IEEE
+  International Conference on. pp. 395--400 (May 2008)
+
+\bibitem{Falvo}
+Falvo, M., Lamedica, R., Pierazzo, S., Prudenzi, A.: A knowledge based system
+  for medium term load forecasting. In: Transmission and Distribution
+  Conference and Exhibition, 2005/2006 IEEE PES. pp. 1291--1295 (May 2006)
+
+\bibitem{Felice}
+Felice, M.D., Yao, X.: Short-term load forecasting with neural network
+  ensembles: A comparative study [application notes]. IEEE Comp. Int. Mag.
+  6(3),  47--56 (2011)
+
+\bibitem{Ghahramani}
+Ghahramani, Z.: Hidden markov models. In: World Scientific Series In Machine
+  Perception And Artificial Intelligence Series, chap. An Introduction to
+  Hidden Markov Models and Bayesian Networks, pp. 9--42. World Scientific
+  Publishing Co., Inc., River Edge, NJ, USA (2002),
+  \url{http://dl.acm.org/citation.cfm?id=505741.505743}
+
+\bibitem{fhmm}
+Ghahramani, Z., Jordan, M.I.: Factorial hidden markov models. Mach. Learn.
+  29(2-3),  245--273 (Nov 1997),
+  \url{http://dx.doi.org/10.1023/A:1007425814087}
+
+\bibitem{Heinzelman00energy}
+Heinzelman, W.R., Ch, A., Balakrishnan, H.: Energy-efficient communication
+  protocol for wireless microsensor networks. In: System Sciences. pp.
+  3005--3014 (2000)
+
+\bibitem{hinton2000}
+Hinton, G.E.: Training products of experts by minimizing contrastive
+  divergence. Neural Computation  14(8),  1771--1800 (2002)
+
+\bibitem{Kawamoto}
+Kawamoto, R., Nazir, A., Kameyama, A., Ichinomiya, T., Yamamoto, K., Tamura,
+  S., Yamamoto, M., Hayamizu, S., Kinosada, Y.: Hidden markov model for
+  analyzing time-series health checkup data. In: MedInfo. Studies in Health
+  Technology and Informatics, vol. 192, pp. 491--495. IOS Press (2013)
+
+\bibitem{DisaggregationHSMM}
+Kim, H., Marwah, M., Arlitt, M.F., Lyon, G., Han, J.: Unsupervised
+  disaggregation of low frequency power measurements. In: SIAM. pp. 747--758.
+  SIAM / Omnipress (2011)
+
+\bibitem{Klopfert}
+Klopfert, F., Wallenborn, G.: Empowering consumers through smart metering.
+  BEUC, The European Consumer Organisation  (2011)
+
+\bibitem{KolterF11}
+Kolter, J.Z., Ferreira, J.: A large-scale study on predicting and
+  contextualizing building energy usage. In: AAAI. AAAI Press (2011)
+
+\bibitem{KolterJ12}
+Kolter, J.Z., Jaakkola, T.: Approximate inference in additive factorial hmms
+  with application to energy disaggregation. In: AISTATS. JMLR Proceedings,
+  vol.~22, pp. 1472--1482. JMLR.org (2012)
+
+\bibitem{5620917}
+Martinez~Alvarez, F., Troncoso, A., Riquelme, J., Aguilar~Ruiz, J.: Energy time
+  series forecasting based on pattern sequence similarity. Knowledge and Data
+  Engineering, IEEE Transactions on  23(8),  1230--1243 (Aug 2011)
+
+\bibitem{mckerracher}
+McKerracher, C., Torriti, J.: Energy consumption feedback in perspective:
+  integrating australian data to meta-analyses on in-home displays. Energy
+  Efficiency  6(2),  387--405 (2013),
+  \url{http://dx.doi.org/10.1007/s12053-012-9169-3}
+
+\bibitem{BLTJ:BLTJ21650}
+Mirowski, P., Chen, S., Kam~Ho, T., Yu, C.N.: Demand forecasting in smart
+  grids. Bell Labs Technical Journal  18(4),  135--158 (2014),
+  \url{http://dx.doi.org/10.1002/bltj.21650}
+
+\bibitem{Rabiner}
+Rabiner, L.R.: Readings in speech recognition. In: Waibel, A., Lee, K.F. (eds.)
+  Readings in speech recognition, chap. A Tutorial on Hidden Markov Models and
+  Selected Applications in Speech Recognition, pp. 267--296. Morgan Kaufmann
+  Publishers Inc., San Francisco, CA, USA (1990),
+  \url{http://dl.acm.org/citation.cfm?id=108235.108253}
+
+\bibitem{samuel}
+Samuel, I.A., Awelewa, A.A., et~al.: Medium-term load forecasting of covenant
+  university using the regression analysis methods. Journal of Energy
+  Technologies and Policy  4(4),  10--16 (2014)
+
+\bibitem{Shen}
+Shen, W., Babushkin, V., Aung, Z., Woon, W.L.: An ensemble model for day-ahead
+  electricity demand time series forecasting. In: Proceedings of the Fourth
+  International Conference on Future Energy Systems. pp. 51--62. e-Energy '13,
+  ACM, New York, NY, USA (2013),
+  \url{http://doi.acm.org/10.1145/2487166.2487173}
+
+\bibitem{SS97a}
+Shi, S., Weigend, A.: Taking time seriously: Hidden {M}arkov experts applied to
+  financial engineering. In: CIFEr '97: Proc. of the Conf. on Computational
+  Intelligence for Financial Engineering. pp. 244--252. IEEE (1997)
+
+\bibitem{NYAS:NYAS5921}
+Stern, D.I.: The role of energy in economic growth. Annals of the New York
+  Academy of Sciences  1219(1),  26--51 (2011),
+  \url{http://dx.doi.org/10.1111/j.1749-6632.2010.05921.x}
+
+\bibitem{taban}
+Taban, G., A.~C?rdenas, A.: Data aggregation as a method of protecting privacy
+  in smart grid networks. Power Systems, IEEE Transactions on  (March 2012)
+
+\bibitem{Taylor}
+Taylor, G.W., Hinton, G.E.: Products of hidden markov models: It takes n >1 to
+  tango. In: Proceedings of the Twenty-Fifth Conference on Uncertainty in
+  Artificial Intelligence. pp. 522--529. UAI '09, AUAI Press, Arlington,
+  Virginia, United States (2009),
+  \url{http://dl.acm.org/citation.cfm?id=1795114.1795175}
+
+\bibitem{Wijaya}
+Wijaya, T.K., Eberle, J., Aberer, K.: Symbolic representation of smart meter
+  data. In: Proceedings of the Joint EDBT/ICDT 2013 Workshops. pp. 242--248.
+  EDBT '13, ACM, New York, NY, USA (2013),
+  \url{http://doi.acm.org/10.1145/2457317.2457357}
+
+\bibitem{wijaya2014consumer}
+Wijaya, T.K., Ganu, T., Chakraborty, D., Aberer, K., Seetharam, D.P.: Consumer
+  segmentation and knowledge extraction from smart meter and survey data. In:
+  SIAM International Conference on Data Mining (SDM14). pp. 226--234. No.
+  EPFL-CONF-196276 (2014),
+  \url{https://github.com/tritritri/consumer-segmentation}
+
+\bibitem{Zhang}
+Zhang, Z., Ye, S.: Long term load forecasting and recommendations for china
+  based on support vector regression. In: Information Management, Innovation
+  Management and Industrial Engineering (ICIII), 2011 International Conference
+  on. vol.~3, pp. 597--602 (Nov 2011)
+
+\end{thebibliography}
