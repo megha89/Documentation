@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  8 JUN 2015 22:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  16 JUN 2015 03:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -269,7 +269,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Underfull \vbox (badness 1303) has occurred while \output is active []
 
  [2]
-[3] [4] <hmm1.jpg, id=26, 217.81375pt x 207.77625pt>
+[3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+<hmm1.jpg, id=26, 217.81375pt x 207.77625pt>
 File: hmm1.jpg Graphic file (type jpg)
  <use hmm1.jpg>
 Package pdftex.def Info: hmm1.jpg used on input line 221.
@@ -288,67 +292,111 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 234.
- [5 <./hmm1.jpg> <./hmm2.jpg>] <product.jpg, id=34, 239.89626pt x 327.2225pt>
+ [5 <./hmm1.jpg> <./hmm2.jpg>] <product.jpg, id=32, 239.89626pt x 327.2225pt>
 File: product.jpg Graphic file (type jpg)
  <use product.jpg>
 Package pdftex.def Info: product.jpg used on input line 335.
 (pdftex.def)             Requested size: 113.81279pt x 113.8106pt.
 
-[6 <./product.jpg>] <gibbs.jpg, id=38, 712.6625pt x 205.76875pt>
+[6] [7 <./product.jpg>] <gibbs.jpg, id=44, 712.6625pt x 205.76875pt>
 File: gibbs.jpg Graphic file (type jpg)
 
 <use gibbs.jpg>
 Package pdftex.def Info: gibbs.jpg used on input line 357.
 (pdftex.def)             Requested size: 341.43253pt x 113.81052pt.
- [7] [8 <./gibbs.jpg>]
-<./screenshot.png, id=49, 1004.75375pt x 583.17876pt>
+ [8 <./gibbs.jpg>] [9]
+<./screenshot.png, id=52, 1004.75375pt x 583.17876pt>
 File: ./screenshot.png Graphic file (type png)
  <use ./screenshot.png>
 Package pdftex.def Info: ./screenshot.png used on input line 417.
 (pdftex.def)             Requested size: 277.69562pt x 192.20042pt.
 
-[9] [10 <./screenshot.png>]
-Overfull \hbox (64.53522pt too wide) in paragraph at lines 551--571
+[10 <./screenshot.png>]
+Overfull \hbox (39.02405pt too wide) in paragraph at lines 530--530
+ [][] 
+ []
+
+
+Overfull \hbox (26.64705pt too wide) in paragraph at lines 554--554
+ [][] 
+ []
+
+[11]
+Overfull \hbox (16.32602pt too wide) in paragraph at lines 608--608
+ [][] 
+ []
+
+
+Overfull \hbox (50.6579pt too wide) in paragraph at lines 590--609
 []$[]$  $[]$ 
  []
 
 
-Overfull \hbox (8.99417pt too wide) in paragraph at lines 598--629
-[]$[]$  $[]$ 
+Overfull \hbox (22.05165pt too wide) in paragraph at lines 630--630
+ [][] 
  []
 
 
-Underfull \vbox (badness 1406) has occurred while \output is active []
+Underfull \hbox (badness 1210) in paragraph at lines 630--630
+[]\OT1/cmr/bx/n/9 Table 5. \OT1/cmr/m/n/9 Ef-fect of vary-ing HMMs
+ []
 
- [11]
-[12] (./typeinst.bbl [13]
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
+
+Overfull \hbox (41.13312pt too wide) in paragraph at lines 651--651
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 651--651
+[]\OT1/cmr/bx/n/9 Table 6. \OT1/cmr/m/n/9 Ef-fect of vary-ing HMMs
+ []
+
+[12] (./typeinst.bbl
+Underfull \hbox (badness 2050) in paragraph at lines 11--16
+[]\OT1/cmr/m/n/9 Armel, K.C., Gupta, A., Shri-mali, G., Al-bert, A.: Is dis-ag-
+gre-ga-tion the
+ []
+
+
+Underfull \hbox (badness 5189) in paragraph at lines 11--16
+\OT1/cmr/m/n/9 holy grail of en-ergy ef-fi-ciency? the case of elec-tric-ity. E
+n-ergy Pol-icy
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 51--54
 []\OT1/cmr/m/n/9 Cook, D.J., Chen, C.: Teas-ing de-tailed home habits from ag-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
+Underfull \hbox (badness 10000) in paragraph at lines 51--54
 \OT1/cmr/m/n/9 gre-gate en-ergy con-sump-tion data. IEEE Smart Grid (Febru-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
+Underfull \hbox (badness 10000) in paragraph at lines 51--54
 \OT1/cmr/m/n/9 ary 2012), $\OT1/cmtt/m/n/9 http : / / smartgrid . ieee . org / 
 newsletter / february-[]2012 /
  []
 
 
-Overfull \hbox (9.66693pt too wide) in paragraph at lines 44--47
+Overfull \hbox (9.66693pt too wide) in paragraph at lines 51--54
 \OT1/cmtt/m/n/9 507-[]teasing-[]detailed-[]home-[]habits-[]from-[]aggregate-[]e
 nergy-[]consumption-[]data$ 
  []
 
+
+Underfull \hbox (badness 1231) in paragraph at lines 107--112
+\OT1/cmr/m/n/9 sparse cod-ing. In: Laf-ferty, J., Williams, C., Shawe-Taylor, J
+., Zemel, R.,
+ []
+
 [14]) [15] (./typeinst.aux) ) 
 Here is how much of TeX's memory you used:
- 2363 strings out of 493315
- 31682 string characters out of 6137903
- 112713 words of memory out of 5000000
- 5775 multiletter control sequences out of 15000+600000
+ 2367 strings out of 493315
+ 31732 string characters out of 6137903
+ 104735 words of memory out of 5000000
+ 5779 multiletter control sequences out of 15000+600000
  10434 words of font info for 41 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  37i,10n,26p,2279b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -370,7 +418,7 @@ pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
 usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on typeinst.pdf (15 pages, 396210 bytes).
+Output written on typeinst.pdf (15 pages, 398618 bytes).
 PDF statistics:
  132 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream

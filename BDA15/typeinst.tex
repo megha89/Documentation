@@ -177,7 +177,7 @@ In this section, we describe work that uses ensemble learning techniques and non
 
 \noindent \textbf{Energy Aggregation}
 %Devaine et al. (CITE) study ...
-In wireless sensor networks, energy data aggregation is a method of combining data from different sources such that several unreliable data measurements combine to produce a more accurate signal by enhancing the common signal and reducing the uncorrelated noise. As the sensor network generates lot of data for the end user to process, there are automated methods employed to aggregate data. This data fusion is generally known as data aggregation which combines the data into a set of meaningful information \cite{Heinzelman00energy}.
+is a method of combining data from different sources such that several unreliable data measurements combine to produce a more accurate signal by enhancing the common signal and reducing the uncorrelated noise. As the sensor network generates lot of data for the end user to process, there are automated methods employed to aggregate data. This data fusion is generally known as data aggregation which combines the data into a set of meaningful information \cite{Heinzelman00energy}.
 The sensor nodes are organised in a tree structure, called aggregation tree. The leaves of this tree are the sensor devices, the internal nodes are the aggregator devices that takes the data from the leaves, aggregates it and sends it to its parent node which is the root of the tree. \\
 The main objective of data aggregation is to reduce the unnecessary information thereby reducing the network traffic and improving the privacy of the customers from internal and external entities by keeping only the necessary information \cite{taban}. 
 
@@ -189,11 +189,11 @@ The main objective of data aggregation is to reduce the unnecessary information 
 %The energy aggregation problem has been tackled in a variety of ways including topology control, energy conserving sleep scheduling, mobile data collectors and data aggregation. 
 %Research has been done on the role of energy on the growth of the country's economy \cite{NYAS:NYAS5921}.
 
-\noindent \textbf{Energy Disaggregation}
-The process in which the whole building energy (aggregated) signal is separated into appliance level energy (disaggregated) for a variety of reasons like residential energy reductions, program evaluation, targeted marketing, etc. Several studies have been done in this regard, one of the unsupervised desegregation method \cite{DisaggregationHSMM} that outperforms other unsupervised disaggregation methods is conditional factorial hidden semi-Markov model. This model when integrated with other features, accurately represents the individual appliance energy consumption. Kolter et al. \cite{KolterJ12} exploits the additive structure of the FHMM to develop a convex formulation of approximate inference algorithm that achieves state-of-the-art performance in energy disaggregation problem.
+\noindent \textbf{Energy Disaggregation} or Non-intrusive appliance load monitoring (NIALM) is a process in which the household's aggregate electricity consumption is broken down into individual appliance's consumption. The motivation behind this task is twofolds; first, the reduction in energy consumption by using the information given to the household occupants about the individual appliance's electricity consumption; second, recommending the occupants to defer the use of appliance to a time of day when electricity is cheaper. Approaches for energy disaggregation from smart meter using ML techniques fall in two categories; first group is where sub-metered data is available to train appliance models prior to performing disaggregation; second group uses unsupervised disaggregation methods that require labelling of detected appliance, assuming the type and number of household appliance.
+Parson et al. \cite{eps272990} proposed an approach to NIALM that separates the energy consumption of individual appliance iteratively from the aggregated load using hidden Markov models. Several studies have been done in this regard, one of the unsupervised disaggregation method \cite{DisaggregationHSMM} that outperforms other unsupervised disaggregation methods is conditional factorial hidden semi-Markov model. This model when integrated with other features, accurately represents the individual appliance energy consumption. In one of the work, Kolter et al. \cite{NIPS2010} show that by discriminately training the sparse coding algorithms using a method based on structured prediction, the performance of the algorithm significantly improves on the energy disaggregation task. In another study, Kolter et al. \cite{KolterJ12} exploits the additive structure of the FHMM to develop a convex formulation of approximate inference algorithm that achieves state-of-the-art performance in energy disaggregation problem. The work on this task is quite large, therefore doing a complete survey is out of the scope. So, we have provided the seminal references here.
 
-\noindent \textbf{Load Forecasting}
-Electrical load forecasting refers to the projection of electrical load required in a certain geographical area with the use of previous electrical load usage in the same area. It is extremely important for efficient power system planning and operation, energy purchasing and generation, load switching, infrastructure development. It encompasses various factors like, historical load, weather data, population, energy supply and price, time of the year, etc.
+
+\noindent \textbf{Load Forecasting} refers to the projection of electrical load required in a certain geographical area with the use of previous electrical load usage in the same area. It is extremely important for efficient power system planning and operation, energy purchasing and generation, load switching, infrastructure development. It encompasses various factors like, historical load, weather data, population, energy supply and price, time of the year, etc.
 It is usually divided into three categories, short-term forecasts (one hour to one week) , medium-term forecasts (one week to one year) and long-term forecasts (more than a year).
 In short term load forecast, \cite{Bakirtzis} and \cite{Chen} used a three layer feed forward artificial neural network to predict daily load profiles. In a paper by \cite{Chow}, nonlinear autoregressive integrated neural network was used to predict daily load consumption.
 In medium term load forecasts, the author forecasts \cite{Falvo} the monthly load through knowledge based activities from the output of the ANN based stage providing yearly energy predictions. Similarly, in \cite{bassi}, time lagged feedforward neural network is used to do monthly forecasting on the basis of historical series of electrical load, economic and demographic variables. Also, the authors from covenant university, \cite{samuel} performed load forecasting of their own educational institute using the models based on linear, compound growth and cubic methods of regression analysis.
@@ -201,19 +201,19 @@ In long term load forecasting, study done by \cite{Daneshi} resulted in showing 
 
 
 
-\noindent \textbf{Customer Segmentation}
-The identification of consumer profiles that show similar behaviour in energy consumption. This analysis is useful in various ways, like demand response system, intelligent distribution channel. The author \cite{wijaya2014consumer} segments the customers based on contextual dimensions like location, seasons, weather patterns, holidays, etc which help with various higher level applications like usage-specific tariff structure, theft detection, etc. In \cite{Albert}, author proposes to infer occupancy states from consumption time series data by using HMM framework. They investigate the effectiveness of HMM and model based cluster analysis in producing meaningful features of the classification. This work suggests the dynamics of time series as captured by HMM analysis can be valuable.
+\noindent \textbf{Customer Segmentation} is the process of dividing a large homogeneous market into identifiable segments having similar demand characteristics. The appliance specific data has the potential to improve energy efficiency marketing by improving market segmentation, diversifying programs and transforming product development and evaluation \cite{CarrieArmel2013213}. This analysis is useful in various ways, like demand response system, intelligent distribution channel. The author \cite{wijaya2014consumer} segments the customers based on contextual dimensions like location, seasons, weather patterns, holidays, etc which help with various higher level applications like usage-specific tariff structure, theft detection, etc. In \cite{Albert}, author proposes to infer occupancy states from consumption time series data by using HMM framework. They investigate the effectiveness of HMM and model based cluster analysis in producing meaningful features of the classification. 
+%This work suggests the dynamics of time series as captured by HMM analysis can be valuable.
 
 \subsection{Ensemble based learning techniques}
 Ensemble learning is a method where multiple learners are trained to solve the same problem. It constructs a set of hypothesis and combines them to generate the final result.
 \subsubsection{Prediction with expert advice}
 A study done by \cite{Shen}, proposed a Pattern Forecasting Ensemble Model (PFEM) comprising of five forecasting models using different clustering techniques, like k-means model, self-organising map model, hierarchical clustering model, k-medoids model and fuzzy c-means model. They have showed that on three real-world dataset, their proposed ensemble model outperformed all the five individual model in case of day ahead electricity demand prediction.
 Another study \cite{Felice} highlighted the importance of regularised negative correlation learning ensemble methodology on the problem of energy load hourly prediction. This method tried to overcome the problem of variability in neural network due to high sensitivitiness to the initial conditions. As this method combines the outputs of several neural networks, it achieves a marked reduction in error after introducing external data. \\
-An extension of HMMs, called Factorial Hidden Markov Model (FHMM) \cite{fhmm} is a class of ensemble based learning models that addresses the need for distributed hidden states in HMMs. But by being a directed model, when conditioned on the observed sequence, the hidden state chains become independent making the inference easy but learning more complex. But this approach has proved to be very inefficient in high dimensional spaces.
-To model a complicated, high-dimensional data distributions, an approach called mixture of gaussians is widely used. In this method, each simple model which is a gaussian is combined using a weighted arithmetic mean of individual distributions. Such mixtures of tractable models can easily fit to data using expectation-maximization (EM) and are more powerful than their individual component. So, a different way of combining these distributions is by multiplying them together and then renormalizing them.
-In our paper,  we deal with the problem of energy aggregation using ensemble learning model. Each HMM is used to represent a state of an appliance. An appliance can have states like ON or OFF. The combination of the outputs from each of these HMM models gives us our ensemble based learning model, Product of Hidden Markov Model (PoHMM) \cite{hinton2000}. This learning technique outputs the probability distribution by combining the outputs from several simpler distributions. It allows each model to make a decision on the basis of few dimensions.
+An extension of HMMs, called Factorial Hidden Markov Model (FHMM) \cite{fhmm} is a class of ensemble based learning models that addresses the need for distributed hidden states in HMMs. The FHMM generalizes the HMM by representing the state using a collection, instead of single discrete variable. However, FHMMs being directed models, when conditioned on the observed sequence, the hidden state chains become independent making the inference easy but learning more complex. Thus, the exact inference becomes intractable, leaving one to resort to approximate inference techniques like Gibbs sampling or variational approximations.
 
 
+%To model a complicated, high-dimensional data distributions, an approach called mixture of gaussians is widely used. In this method, each simple model which is a gaussian is combined using a weighted arithmetic mean of individual distributions. Such mixtures of tractable models can easily fit to data using expectation-maximization (EM) and are more powerful than their individual component. So, a different way of combining these distributions is by multiplying them together and then renormalizing them.
+%In our paper,  we deal with the problem of energy aggregation using ensemble learning model. Each HMM is used to represent a state of an appliance. An appliance can have states like ON or OFF. The combination of the outputs from each of these HMM models gives us our ensemble based learning model, Product of Hidden Markov Model (PoHMM) \cite{hinton2000}. This learning technique outputs the probability distribution by combining the outputs from several simpler distributions. It allows each model to make a decision on the basis of few dimensions.
 
 
 \begin{figure*}
@@ -401,7 +401,7 @@ The main feature of PoHMMs is its undirected graphical modelling with no direct 
 the house (labeled by the main type of appliance on that circuit). %It is intended for use in developing disaggregation methods, which can predict, from only the whole-home signal, which devices are being used.
 The REDD data set contains two main types of home electricity data: high-frequency current/voltage waveform data of the two power mains (as well as the voltage signal for a single phase), and lower-frequency power data including the mains and individual, labeled circuits in the house. 
 %The main directory consists of several house directories, each of which contain all the power readings for a single house.  Each house subdirectory consists of a labels and channels files. The labels file helps in matching the channel number with the device name. Each channel file has two columns containing UTC timestamps (as integers) and power readings (recording the apparent power of the circuit) for the channel.
-Experiments reported here use 'house 2' data from REDD. This dataset has $318759$ records and $2$ columns. We randomly sample $300$ records for our initial experiment.
+Experiments reported here use `house 2' data from REDD. This dataset has $318759$ records and $2$ columns. We randomly sample $300$ records for our initial experiment.
 %The time series data of the microwave, dryer, kitchen$\_2$ and refrigerator are plotted below in Figures~\ref{fig:micro}, ~\ref{fig:washer}, ~\ref{fig:kitchen2}, ~\ref{fig:refri}. 
 \subsubsection{Implementation Details}
 The implementation of the product of hidden Markov model is obtained from Iain Murray's website\footnote{\label{link}http://homepages.inf.ed.ac.uk/imurray2/code/}. It implements the technique described in paper \cite{hinton2000}.
@@ -476,8 +476,37 @@ are provided to the randomly sampled test set (total energy consumed data) to ob
 %%Experiments are performed on the REDD which contains $9$ appliances each containing $318759$ rows of energy consumption data. 
 %Experiments are done into $4$ phases, in the first phase the number of data samples are varied corresponding to which the values of KL Divergence and convergence time are noted. In the second phase, the number of experts are varied keeping the best value of the sample from the first phase fixed. In the third phase, number of iterations are varied keeping the best values from above first two phases fixed. In the fourth part, the no. of appliances to be aggregated are varied.
 
+%\begin{table*}[htdp]
+%\begin{center}
+%\begin{tabular}{| c | c | c | c |}
+%\hline
+%Samples & $KL Div$ & $Iterations$& $T(sec)$ \\
+%\hline
+%300 & 2.4864 & 18600 & 186.212 $\pm$9.087  \\
+%500 & 0.6761 & 10200 & 106.564 $\pm$10.046 \\
+%1000 & 1.1088 & 11200 & 158.521 $\pm$1.97  \\
+%1500 & 3.8829 & 5300 & 92.896 $\pm$8.075  \\
+%2000 & 1.8686 & 6900 & 130.98 $\pm$1.932 \\
+%2500 & 0.4733 & 9900 & 215.563 $\pm$ 2.471 \\
+%3000 & 2.8204 & 11000 & 258.213 $\pm1.918$ \\
+%3500 & 1.2332 & 7900 & 204.661 $\pm$1.713 \\
+%4000 & 0.8959 & 10400 & 292.666 $\pm$0.619 \\
+%4500 & 1.1118 & 7200 & 222.558 $\pm$1.967 \\
+%8000 & 6.392 & 8100 & 381.635 $\pm$2.952  \\
+%10000 & 8.276 & 10500 & 887.932 $\pm$13.824  \\
+%15000 & 0.7201 & 9400 & 1368.514 $\pm$13.605  \\
+%\hline
+%\end{tabular}
+%\end{center}
+%\caption{Effect of varying samples (REDD)}
+%\label{table:sample1}
+%\end{table*}
+
+
+
 \begin{table*}[htdp]
-\begin{center}
+\parbox{.43\linewidth}{
+\centering
 \begin{tabular}{| c | c | c | c |}
 \hline
 Samples & $KL Div$ & $Iterations$& $T(sec)$ \\
@@ -497,36 +526,46 @@ Samples & $KL Div$ & $Iterations$& $T(sec)$ \\
 15000 & 0.7201 & 9400 & 1368.514 $\pm$13.605  \\
 \hline
 \end{tabular}
-\end{center}
-\caption{Effect of varying samples on KL div and time for REDD}
-\label{table:sample1}
+\caption{Effect of varying samples (REDD)}
+\label{table:sample1}}
+\hfill
+\parbox{.43\linewidth}{
+\centering
+\begin{tabular}{| c | c | c | c |}
+\hline
+Samples & $KL Div(e-04)$  & $Iterations$ & $T(sec)$\\
+\hline
+100 & 0.26219 & 45100 & 257  \\
+300 & 0.19753 & 43200 & 222 \\
+500 & 0.55493 & 44800 & 260  \\
+700 & 0.32847 & 44000 & 249 \\
+900 & 3.9486 & 42600 & 221  \\
+1100 & 4.9274 & 44700 & 317  \\
+1300 & 3.0425 & 43100 & 276 \\
+1500 &  3.1128 & 44400 & 303 \\
+2000 & 1.9192 & 44400 & 306 \\
+2500 & 1.7122 & 44100 & 370 \\
+3000 & 1.4686 & 43300 & 331 \\
+3500 & 1.2663 & 43200 & 370  \\
+4000 & 1.0793 & 43200 & 403  \\
+\hline
+\end{tabular}
+\caption{Effect of varying samples (housing data)}
+\label{table:sample2}}
 \end{table*}
 
-%\begin{table}[htdp]
-%\begin{center}
-%\begin{tabular}{| c | c | c | c |}
-%\hline
-%Experts & $KL Div$ & $T(sec)$ & $Iterations$ \\
-%\hline
-%5 & 0.774 & 72.968 $\pm$1.177 & 5200 \\
-%10 & 1.424 & 117.482 $\pm$1.966 & 6700 \\
-%15 & 0.473 & 210.249 $\pm$1.258  & 9900 \\
-%20 & 1.56 & 217.739 $\pm$10.452 & 9000 \\
-%25 & 7.469 & 347.019 $\pm$8.23 & 12100 \\
-%30 & 2.4968 & 413.802 $\pm$7.304 & 12900 \\
-%35 & 1.5012 & 348.906 $\pm$14.651 & 11300 \\
-%\hline
-%\end{tabular}
-%\end{center}
-%\caption{Effect of varying experts on KL div and time}
-%\label{table:expert}
-%\end{table}
+
+
+
 
 
 \subsection{Empirical Results}
 In both the datasets, experiments are performed by tuning some parameters and keeping some fixed.
-In case of REDD, Tables~\ref{table:sample1},~\ref{table:threshold1} and~\ref{table:appliance1} show the effect of varying data samples, threshold and no. of appliances on the KL divergence. In Table \ref{table:sample1}, data samples are randomly selected from the dataset, KL divergence is chosen are the performance metric, iterations are performed to obtain the samples from the equilibrium distribution by using Gibbs sampler on the hidden and visible variables and the average time taken (sec) by these iterations are shown in the last column.
- In case of faculty housing dataset, Tables~\ref{table:sample2} and~\ref{table:expert2} show the effect of varying data samples and no. of HMMs on the KL divergence. As per table \ref{table:sample1} and \ref{table:sample2}, the relation between no. of samples and KL divergence was observed, the best performance was attained when $2500$ and $300$ samples were randomly taken from the REDD and faculty housing dataset respectively. In table \ref{table:threshold1}, there is an indirect relationship of threshold value and KL divergence, that is lower the threshold, higher the KL divergence in contrast to the direct relationship between the threshold value and the time taken or the iterations required. Table \ref{table:appliance1} and \ref{table:expert2} show that when all the appliances in the home are used in PoHMMs the performance is at its best. The value of KL divergence is minimum when the energy data from all the appliances are aggregated and tested with total energy data. % keeping the threshold value fixed at $0.1$ and no. of appliances fixed at $15$.
+In case of REDD, Tables~\ref{table:sample1},~\ref{table:threshold1} and \ref{table:hmm1} show the effect of varying data samples, threshold and no. of HMMs on KL divergence. In Table \ref{table:sample1}, data samples are randomly selected from the dataset, KL divergence is chosen as the performance metric, iterations are performed to obtain the samples from the equilibrium distribution by using Gibbs sampler on the hidden and visible variables and the average time taken (sec) with the standard deviation on three such iterations is noted in the last column.
+
+ In case of faculty housing dataset, Tables~\ref{table:sample2},~\ref{table:threshold2} and \ref{table:hmm2} show the effect of varying data samples, threshold and no. of HMMs on the KL divergence. As per table \ref{table:sample1} and \ref{table:sample2}, the relation between no. of samples and KL divergence was observed, the best performance was attained when $2500$ and $300$ samples were randomly chosen from the REDD and faculty housing dataset respectively. In table \ref{table:threshold1} and \ref{table:threshold2}, there is an indirect relationship between threshold and KL divergence value, that is lower the threshold, higher the KL divergence. 
+%Similarly, the relationship between threshold values and iterations/time taken is indirect.
+When all the appliances in `house 2' (total appliances are $9$) of REDD are used in PoHMMs and similarly when both the data streams of faculty housing building are aggregated, the performance is at its best as can be seen in Table \ref{table:hmm1} and \ref{table:hmm2}. The value of KL divergence is minimum when the energy data from all the appliances are aggregated and tested against total energy data. % keeping the threshold value fixed at $0.1$ and no. of appliances fixed at $15$.
 
 %Experiments are done into $4$ phases, in the first phase the number of data samples are varied corresponding to which the values of KL Divergence and convergence time are noted. In the second phase, the number of experts are varied keeping the best value of the sample from the first phase fixed. In the third phase, number of iterations are varied keeping the best values from above first two phases fixed. In the fourth part, the no. of appliances to be aggregated are varied.
 
@@ -534,105 +573,94 @@ In case of REDD, Tables~\ref{table:sample1},~\ref{table:threshold1} and~\ref{tab
 
 
 \begin{table*}[htdp]
-\parbox{.59\linewidth}{
+\parbox{.57\linewidth}{
 \centering
 \begin{tabular}{| c | c | c | c |}
 \hline
-Threshold & $KL Div$ & $T(sec)$ & $Iterations$ \\
+Threshold & $KL Div$ & $Iterations$ & $T(sec)$  \\
 \hline
-.1 & 0.473 & 210.6 $\pm$1.493 & 9900 \\
-.05 & 0.443 & 240.607$\pm$2.436 & 10900 \\
-.01 & 0.454 & 431.536 $\pm$14.509 & 18000 \\
-.005 & 0.509 & 1167.243 $\pm$43.412 & 49800 \\
+.1 & 0.473 & 9900 & 210.6 $\pm$1.493 \\
+.05 & 0.443 & 10900 & 240.607$\pm$2.436 \\
+.01 & 0.454 & 18000 & 431.536 $\pm$14.509 \\
+.005 & 0.509 & 49800 & 1167.243 $\pm$43.412 \\
 \hline
 \end{tabular}
-\caption{Effect of varying min threshold on KL div and time for REDD}
+\caption{Effect of varying threshold (REDD)}
 \label{table:threshold1}
 }
 \hfill
-\parbox{.59\linewidth}{
+\parbox{.57\linewidth}{
 \centering
 \begin{tabular}{| c | c | c | c |}
 \hline
-Appliances & $KL Div$ & $T(sec)$ & $Iterations$ \\
+Threshold & $KL Div(e-04)$ & $Iterations$& $T(sec)$ \\
 \hline
-3 & 5.559 & 233.664 $\pm$0.579 & 10700 \\
-4 & 0.188 & 465.634 $\pm$5.275 & 19900 \\
-5 & .432 & 338.416 $\pm$3.988  & 13400 \\
-6 & 8.736 & 606.062 $\pm$7.534 & 28100 \\
-7 & 5.054 & 411.457 $\pm$10.051 & 17300 \\
-8 & 0.436 & 260.544 $\pm$27.862 & 10700 \\
-9 & 0.15 & 474.579 $\pm$14.619 & 20600 \\
+0.9 & 0.768 & 49300 & 153.67 $\pm$13.57  \\
+0.8 & 0.768 & 49300 & 190.3 $\pm$34.35 \\
+0.7 & 0.769 & 49400 &  193.67$\pm$31.64  \\
+0.6 & 0.792 & 49500 & 218.3 $\pm$43.93  \\
+0.5 & 0.793 & 49600 & 250.67$\pm$3.51  \\
+0.4 & 0.854 & 49600 & 191$\pm$35.55  \\
 \hline
 \end{tabular}
-\caption{Effect of varying appliances on KL div and time for REDD}
-\label{table:appliance1}
+\caption{Effect of varying threshold (housing data)}
+\label{table:threshold2}
 }
 \end{table*}
+
 
 
 \begin{table*}[htdp]
-\parbox{.51\linewidth}{
+\parbox{.45\linewidth}{
 \centering
 \begin{tabular}{| c | c | c | c |}
 \hline
-Samples & $KL Div$ & $T(sec)$ & $Iterations$ \\
+HMMs & $KL Div$ & $Iterations$ & $T(sec)$  \\
 \hline
-100 & 2.6219e-05 & 257 & 45100 \\
-300 & 1.9753e-05 & 222 & 43200 \\
-500 & 5.5493e-05 & 260 & 44800 \\
-700 & 3.2847e-05 & 249 & 44000 \\
-900 & 3.9486e-04 & 221 & 42600 \\
-1100 & 4.9274e-04 & 317 & 44700 \\
-1300 & 3.0425e-04 & 276 & 43100 \\
-1500 &  3.1128e-04 & 303 & 44400\\
-2000 & 1.9192e-04 & 306 & 44400\\
-2500 & 1.7122e-04 & 370 & 44100 \\
-3000 & 1.4686e-04 & 331 & 43300 \\
-3500 & 1.2663e-04 & 370 & 43200 \\
-4000 & 1.0793e-04 & 403 & 43200 \\
+3 & 5.559  & 10700 & 233.664 $\pm$0.579 \\
+4 & 0.188 & 19900 & 465.634 $\pm$5.275  \\
+5 & .432  & 13400 & 338.416 $\pm$3.988  \\
+6 & 8.736  & 28100 & 606.062 $\pm$7.534 \\
+7 & 5.054  & 17300 & 411.457 $\pm$10.051\\
+8 & 0.436 & 10700 & 260.544 $\pm$27.862 \\
+9 & 0.15 & 20600 & 474.579 $\pm$14.619 \\
 \hline
 \end{tabular}
-\caption{Effect of varying samples on KL div for housing data}
-\label{table:sample2}
-}
+\caption{Effect of varying HMMs (REDD)}
+\label{table:hmm1}}
 \hfill
-\parbox{.51\linewidth}{
+\parbox{.45\linewidth}{
 \centering
-\begin{tabular}{| c | c | c |}
+\begin{tabular}{| c | c | c | c |}
 \hline
-HMMs & $KL Div (e-05)$ & $T(sec)$\\
+HMMs & $KL Div (e-04)$ & Iterations & $T(sec)$\\
 \hline
-2 & 0 & 219 \\
-3 & 1.9780 & 229 \\
-4 & 3.5897 & 217 \\
-5 & 1.9753 & 228 \\
-6 & 4.3488 & 238 \\
-7 & 4.9111 & 245  \\
-8 & 5.6564 & 241 \\
-9 & 5.4290 & 258 \\
-10 & 5.5163 & 267 \\
-12 & 4.4504 & 262 \\
-14 & 6.9006 & 296 \\
-16 & 6.8666 & 300 \\
-18 & 6.2872 & 313 \\
-20 & 5.3842 & 267 \\
-25 & 5.8970 & 326 \\
-30 & 5.9962 & 327  \\
-35 & 5.2716 & 346 \\
-40 & 5.0955 & 320 \\
+2 & 0 & 49200 & 233.33 $\pm$7.23 \\
+3 & 0.81 & 49200 & 237.67 $\pm$10.59 \\
+5 & 0.77 & 49300 & 242.33 $\pm$3 \\
+10 & 2.12 & 49300 & 228.33 $\pm$46.23 \\
+15 & 2.55 & 49300 & 269.33 $\pm$17.61 \\
+20 & 2.23 & 49300 & 305.66 $\pm$2.08  \\
+25 & 2.19 & 49300 & 302.33 $\pm$8 \\
+30 & 2.24 & 49300 & 336.33 $\pm$9.5 \\
+35 & 1.94 & 49300 & 331.33 $\pm$9 \\
 \hline
 \end{tabular}
-\caption{Effect of varying HMMs on KL div and time for housing data}
-\label{table:expert2}
+\caption{Effect of varying HMMs (housing data)}
+\label{table:hmm2}
 }
 \end{table*}
+
+
+
+
+
 
 
 \section{Conclusion}
 \label{conclusion}
 
-In this paper, we are solving the problem of load aggregation (energy consumption) for disparate energy data sources using the ensemble based learning technique called Product of HMMs. Several challenges are faced while computing the aggregated energy, few of which include non-aligned timestamp readings, missing values, meter reset readings. This technique produces the combined probability distributions of several simpler distributions and then renormalizes this output. The optimisation problem is to minimise the contrastive divergence between the two probability distributions of the data at time $0$ and the data at time $1$ (one-step reconstruction using gibbs sampling). The evaluation of the algorithm is done by computing the KL divergence between the product of the energy data distributions and the total energy data distribution. From the results shown in table \ref{table:appliance1} and \ref{table:expert2}, we can see that the algorithm has performed best when the number of appliances (REDD) reached the actual number of appliances ($9$) in the house and the number of data streams in case of housing data reached the actual number of streams ($2$) used in the 12 floor faculty housing data. Therefore, this signifies that this algorithm is applicable for this kind of application and can be used for load forecasting.
+In this paper, we are solving the problem of load aggregation (energy consumption) for disparate energy data sources using the ensemble based learning technique called Product of HMMs. Several challenges are faced while computing the aggregated energy, few of which include non-aligned timestamp readings, missing values, meter reset readings. This technique produces the combined probability distributions of several simpler distributions and then renormalizes this output. The optimisation problem is to minimise the contrastive divergence between the two probability distributions of the data at time $0$ and the data at time $1$ (one-step reconstruction using gibbs sampling). The evaluation of the algorithm is done by computing the KL divergence between the product of the energy data distributions and the total energy data distribution. From the results shown in table \ref{table:hmm1} and \ref{table:hmm2}, we can see that the algorithm has performed best when the number of appliances (REDD) reached the actual number of appliances ($9$) in the house and the number of data streams in case of housing data reached the actual number of streams ($2$) used in the 12 floor faculty housing data. Therefore, this signifies that this algorithm is applicable for this kind of application and can be used for load forecasting.
 
 
 % use section* for acknowledgement
@@ -645,7 +673,7 @@ The authors would like to thank $EMC^2$ for supporting this research through gra
 
 
 
-\nocite{Rabiner,SS97a,Kawamoto,Diane,Klopfert,Ghahramani,Felice,Shen,taban,Albert,wijaya2014consumer,Zhang,Daneshi,bassi,samuel,Falvo,Bakirtzis,Chen,Chow,DisaggregationHSMM,KolterJ12,KolterF11,BLTJ:BLTJ21650,Heinzelman00energy,Taylor,NYAS:NYAS5921,
+\nocite{CarrieArmel2013213,eps272990,NIPS2010,Rabiner,SS97a,Kawamoto,Diane,Klopfert,Ghahramani,Felice,Shen,taban,Albert,wijaya2014consumer,Zhang,Daneshi,bassi,samuel,Falvo,Bakirtzis,Chen,Chow,DisaggregationHSMM,KolterJ12,KolterF11,BLTJ:BLTJ21650,Heinzelman00energy,Taylor,NYAS:NYAS5921,
 Wijaya,5620917,1626400,mckerracher,hinton2000,aistats,fhmm,andrew}
 
 % trigger a \newpage just before the given reference

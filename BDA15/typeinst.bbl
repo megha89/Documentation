@@ -7,6 +7,13 @@ Albert, A., Rajagopal, R.: Smart meter driven segmentation: What your
   consumption says about you. Power Systems, IEEE Transactions on  28(4),
   4019--4030 (Nov 2013)
 
+\bibitem{CarrieArmel2013213}
+Armel, K.C., Gupta, A., Shrimali, G., Albert, A.: Is disaggregation the holy
+  grail of energy efficiency? the case of electricity. Energy Policy  52(0),
+  213 -- 234 (2013),
+  \url{http://www.sciencedirect.com/science/article/pii/S0301421512007446},
+  special Section: Transition Pathways to a Low Carbon Economy
+
 \bibitem{Bakirtzis}
 Bakirtzis, A., Petridis, V., Kiartzis, S., Alexiadis, M.: A neural network
   short term load forecasting model for the greek power system. Power Systems,
@@ -96,6 +103,13 @@ Kim, H., Marwah, M., Arlitt, M.F., Lyon, G., Han, J.: Unsupervised
 Klopfert, F., Wallenborn, G.: Empowering consumers through smart metering.
   BEUC, The European Consumer Organisation  (2011)
 
+\bibitem{NIPS2010}
+Kolter, J.Z., Batra, S., Ng, A.Y.: Energy disaggregation via discriminative
+  sparse coding. In: Lafferty, J., Williams, C., Shawe-Taylor, J., Zemel, R.,
+  Culotta, A. (eds.) Advances in Neural Information Processing Systems 23, pp.
+  1153--1161. Curran Associates, Inc. (2010),
+  \url{http://papers.nips.cc/paper/4054-energy-disaggregation-via-discriminative-sparse-coding.pdf}
+
 \bibitem{KolterF11}
 Kolter, J.Z., Ferreira, J.: A large-scale study on predicting and
   contextualizing building energy usage. In: AAAI. AAAI Press (2011)
@@ -120,6 +134,13 @@ McKerracher, C., Torriti, J.: Energy consumption feedback in perspective:
 Mirowski, P., Chen, S., Kam~Ho, T., Yu, C.N.: Demand forecasting in smart
   grids. Bell Labs Technical Journal  18(4),  135--158 (2014),
   \url{http://dx.doi.org/10.1002/bltj.21650}
+
+\bibitem{eps272990}
+Parson, O., Ghosh, S., Weal, M., Rogers, A.: Using hidden markov models for
+  iterative non-intrusive appliance monitoring. In: Neural Information
+  Processing Systems workshop on Machine Learning for Sustainability (December
+  2011), \url{http://eprints.soton.ac.uk/272990/}, event Dates: 17 December
+  2011
 
 \bibitem{Rabiner}
 Rabiner, L.R.: Readings in speech recognition. In: Waibel, A., Lee, K.F. (eds.)
