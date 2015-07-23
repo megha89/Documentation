@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: typeinst.aux
+The style file: llncs.bst
+Database file #1: typeinst.bib
+Warning--there's a number but no series in aistats
+Warning--there's a number but no series in wijaya2014consumer
+You've used 38 entries,
+            2785 wiz_defined-function locations,
+            871 strings with 12749 characters,
+and the built_in function-call counts, 23473 in all, are:
+= -- 2021
+> -- 624
+< -- 52
++ -- 260
+- -- 217
+* -- 1518
+:= -- 2906
+add.period$ -- 62
+call.type$ -- 38
+change.case$ -- 260
+chr.to.int$ -- 0
+cite$ -- 40
+duplicate$ -- 2110
+empty$ -- 2106
+format.name$ -- 251
+if$ -- 5226
+int.to.chr$ -- 0
+int.to.str$ -- 38
+missing$ -- 409
+newline$ -- 119
+num.names$ -- 80
+pop$ -- 689
+preamble$ -- 1
+purify$ -- 180
+quote$ -- 0
+skip$ -- 685
+stack$ -- 0
+substring$ -- 1514
+swap$ -- 1222
+text.length$ -- 52
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 152
+warning$ -- 2
+while$ -- 188
+width$ -- 40
+write$ -- 411
+(There were 2 warnings)

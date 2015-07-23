@@ -2,6 +2,10 @@
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 
+\bibitem{achnata2012long}
+Achnata, R.: Long term electric load forecasting using neural networks and
+  support vector machines. IJCST  3(1) (2012)
+
 \bibitem{Albert}
 Albert, A., Rajagopal, R.: Smart meter driven segmentation: What your
   consumption says about you. Power Systems, IEEE Transactions on  28(4),
@@ -51,11 +55,6 @@ Chow, T., Leung, C.: Nonlinear autoregressive integrated neural network model
 Cook, D.J., Chen, C.: Teasing detailed home habits from aggregate energy
   consumption data. IEEE Smart Grid  (February 2012),
   \url{http://smartgrid.ieee.org/newsletter/february-2012/507-teasing-detailed-home-habits-from-aggregate-energy-consumption-data}
-
-\bibitem{Daneshi}
-Daneshi, H., Shahidehpour, M., Choobbari, A.: Long-term load forecasting in
-  electricity market. In: Electro/Information Technology, 2008. EIT 2008. IEEE
-  International Conference on. pp. 395--400 (May 2008)
 
 \bibitem{Falvo}
 Falvo, M., Lamedica, R., Pierazzo, S., Prudenzi, A.: A knowledge based system
@@ -200,5 +199,9 @@ Zhang, Z., Ye, S.: Long term load forecasting and recommendations for china
   based on support vector regression. In: Information Management, Innovation
   Management and Industrial Engineering (ICIII), 2011 International Conference
   on. vol.~3, pp. 597--602 (Nov 2011)
+
+\bibitem{Zoha12articlenon-intrusive}
+Zoha, A., Gluhak, E., Imran, M.A., Rajasegarar, S.: Article non-intrusive load
+  monitoring approaches for disaggregated energy sensing: A survey (2012)
 
 \end{thebibliography}

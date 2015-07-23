@@ -1,0 +1,884 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  23 JUL 2015 21:03
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**sigproc-sp.tex
+(./sigproc-sp.tex
+LaTeX2e <2011/06/27>
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(./acm_proc_article-sp.cls
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count79
+))
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+)
+\epsfxsize=\dimen104
+\epsfysize=\dimen105
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip41
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen106
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen107
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count80
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count81
+\leftroot@=\count82
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count83
+\DOTSCASE@=\count84
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count85
+\c@MaxMatrixCols=\count86
+\dotsspace@=\muskip10
+\c@parentequation=\count87
+\dspbrk@lvl=\count88
+\tag@help=\toks17
+\row@=\count89
+\column@=\count90
+\maxfields@=\count91
+\andhelp@=\toks18
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks19
+\multlinegap=\skip42
+\multlinetaggap=\skip43
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+Document Class 'acm_proc_article-sp' <22nd. April '09>. Modified by G.K.M. Tobi
+n
+Based in part upon document Style `acmconf' <22 May 89>. Hacked 4/91 by
+shivers@cs.cmu.edu, 4/93 by theobald@cs.mcgill.ca
+Excerpts were taken from (Journal Style) 'esub2acm.cls'.
+****** Bugs/comments/suggestions to Gerry Murray -- murray@hq.acm.org ******
+\footheight=\dimen115
+\@maxsep=\dimen116
+\@dblmaxsep=\dimen117
+\aucount=\count92
+\originalaucount=\count93
+\auwidth=\dimen118
+\auskip=\dimen119
+\auskipcount=\count94
+\auskip=\dimen120
+\allauboxes=\dimen121
+\addauthors=\toks21
+\addauflag=\count95
+\subtitletext=\toks22
+\savesection=\count96
+\sectioncntr=\count97
+\c@figure=\count98
+\c@table=\count99
+\titleboxnotes=\toks23
+\titleboxnoteflag=\count100
+Document Class: acm_proc_article-sp 2009/04/22 - V3.2SP - based on esub2acm.sty
+ <23 April 96>
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+\@acmtitlebox=\box28
+\titlenotecount=\count101
+\tntoks=\toks24
+\tntokstwo=\toks25
+\tntoksthree=\toks26
+\tntoksfour=\toks27
+\tntoksfive=\toks28
+\catcount=\count102
+\copyrightnotice=\toks29
+\conf=\toks30
+\confinfo=\toks31
+\c@part=\count103
+\c@section=\count104
+\c@subsection=\count105
+\c@subsubsection=\count106
+\c@paragraph=\count107
+
+Using 'Abbrev' bibliography style
+LaTeX Info: Redefining \cite on input line 1236.
+\bibindent=\dimen122
+\colcntr=\count108
+\saveb@x=\box29
+\copyrtyr=\toks32
+\acmcopyr=\toks33
+\boilerplate=\toks34
+\copyrightetc=\toks35
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)
+LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/ae/t1aer.fd
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+))) (./sigproc-sp.aux)
+\openout1 = `sigproc-sp.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count109
+\scratchdimen=\dimen123
+\scratchbox=\box30
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count112
+\MPscratchDim=\dimen124
+\MPnumerator=\count113
+\makeMPintoPDFobject=\count114
+\everyMPtoPDFconversion=\toks37
+) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for U+msa on input line 122.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 122.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 122.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+Overfull \hbox (4.61847pt too wide) in paragraph at lines 161--162
+\T1/aer/m/n/9 energy ag-gre-ga-tion, en-sem-ble learn-ing, load fore-cast-ing, 
+prod-
+ []
+
+
+LaTeX Warning: Citation `Klopfert' on page \thepage  undefined on input line 19
+1.
+
+
+LaTeX Warning: Citation `mckerracher' on page \thepage  undefined on input line
+ 193.
+
+
+LaTeX Warning: Citation `1626400' on page \thepage  undefined on input line 198
+.
+
+
+LaTeX Warning: Citation `5620917' on page \thepage  undefined on input line 198
+.
+
+
+LaTeX Warning: Citation `Wijaya' on page \thepage  undefined on input line 198.
+
+
+
+LaTeX Warning: Citation `Diane' on page \thepage  undefined on input line 202.
+
+
+Overfull \hbox (2.66219pt too wide) in paragraph at lines 197--203
+\T1/aer/m/n/9 prob-lem of en-ergy con-sump-tion and de-mand fore-cast-ing anal-
+
+ []
+
+
+Overfull \hbox (2.28433pt too wide) in paragraph at lines 197--203
+\T1/aer/m/n/9 the sen-sor data and pro-vide alerts and warn-ings when anoma-
+ []
+
+[1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+
+LaTeX Warning: Citation `Taylor' on page \thepage  undefined on input line 210.
+
+
+
+LaTeX Warning: Citation `andrew' on page \thepage  undefined on input line 210.
+
+
+
+LaTeX Warning: Reference `related' on page \thepage  undefined on input line 21
+9.
+
+
+LaTeX Warning: Reference `sec:review' on page \thepage  undefined on input line
+ 219.
+
+
+LaTeX Warning: Reference `poc' on page \thepage  undefined on input line 219.
+
+
+LaTeX Warning: Reference `conclusion' on page \thepage  undefined on input line
+ 219.
+
+
+LaTeX Warning: Citation `Heinzelman00energy' on page \thepage  undefined on inp
+ut line 229.
+
+
+LaTeX Warning: Citation `taban' on page \thepage  undefined on input line 231.
+
+
+LaTeX Warning: Citation `eps272990' on page \thepage  undefined on input line 2
+42.
+
+
+LaTeX Warning: Citation `DisaggregationHSMM' on page \thepage  undefined on inp
+ut line 242.
+
+
+LaTeX Warning: Citation `NIPS2010' on page \thepage  undefined on input line 24
+2.
+
+
+LaTeX Warning: Citation `KolterJ12' on page \thepage  undefined on input line 2
+42.
+
+
+LaTeX Warning: Citation `Zoha12articlenon-intrusive' on page \thepage  undefine
+d on input line 242.
+
+<chart.jpg, id=12, 584.1825pt x 187.70125pt>
+File: chart.jpg Graphic file (type jpg)
+ <use chart.jpg>
+Package pdftex.def Info: chart.jpg used on input line 246.
+(pdftex.def)             Requested size: 302.41281pt x 79.91661pt.
+
+
+LaTeX Warning: Citation `Bakirtzis' on page \thepage  undefined on input line 2
+53.
+
+
+LaTeX Warning: Citation `Chen' on page \thepage  undefined on input line 253.
+
+
+LaTeX Warning: Citation `Chow' on page \thepage  undefined on input line 253.
+
+
+LaTeX Warning: Citation `Falvo' on page \thepage  undefined on input line 254.
+
+
+LaTeX Warning: Citation `bassi' on page \thepage  undefined on input line 254.
+
+
+LaTeX Warning: Citation `samuel' on page \thepage  undefined on input line 254.
+
+
+
+LaTeX Warning: Citation `achnata2012long' on page \thepage  undefined on input 
+line 255.
+
+
+LaTeX Warning: Citation `Zhang' on page \thepage  undefined on input line 257.
+
+
+LaTeX Warning: Reference `fig:problem' on page \thepage  undefined on input lin
+e 258.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+
+LaTeX Warning: Citation `CarrieArmel2013213' on page \thepage  undefined on inp
+ut line 261.
+
+
+LaTeX Warning: Citation `wijaya2014consumer' on page \thepage  undefined on inp
+ut line 261.
+
+
+LaTeX Warning: Citation `Albert' on page \thepage  undefined on input line 261.
+
+
+
+LaTeX Warning: Citation `Shen' on page \thepage  undefined on input line 267.
+
+
+LaTeX Warning: Citation `Felice' on page \thepage  undefined on input line 268.
+
+
+
+LaTeX Warning: Citation `fhmm' on page \thepage  undefined on input line 269.
+
+<hmm1.jpg, id=19, 217.81375pt x 207.77625pt>
+File: hmm1.jpg Graphic file (type jpg)
+ <use hmm1.jpg>
+Package pdftex.def Info: hmm1.jpg used on input line 274.
+(pdftex.def)             Requested size: 93.89404pt x 73.97508pt.
+
+<hmm2.jpg, id=20, 221.82875pt x 210.7875pt>
+File: hmm2.jpg Graphic file (type jpg)
+ <use hmm2.jpg>
+Package pdftex.def Info: hmm2.jpg used on input line 276.
+(pdftex.def)             Requested size: 93.89178pt x 73.97614pt.
+
+<product.jpg, id=21, 239.89626pt x 327.2225pt>
+File: product.jpg Graphic file (type jpg)
+ <use product.jpg>
+Package pdftex.def Info: product.jpg used on input line 278.
+(pdftex.def)             Requested size: 85.35959pt x 85.35544pt.
+
+
+LaTeX Warning: Citation `Ghahramani' on page \thepage  undefined on input line 
+302.
+
+
+LaTeX Warning: Citation `Rabiner' on page \thepage  undefined on input line 302
+.
+
+
+LaTeX Warning: Citation `Rabiner' on page \thepage  undefined on input line 303
+.
+
+
+LaTeX Warning: Reference `fig:HMMs' on page \thepage  undefined on input line 3
+10.
+
+
+LaTeX Warning: Reference `table:timestamp' on page \thepage  undefined on input
+ line 310.
+
+
+LaTeX Warning: Reference `table:timestamp' on page \thepage  undefined on input
+ line 310.
+
+
+Overfull \hbox (11.80351pt too wide) in paragraph at lines 302--311
+\T1/aer/m/n/9 model $\OML/cmm/m/it/9 ^^U$ \T1/aer/m/n/9 = {A, B, $\OML/cmm/m/it
+/9 ^^Y$ \T1/aer/m/n/9 }, and ob-ser-va-tion se-quence Y = {$\OML/cmm/m/it/9 y[]
+$\T1/aer/m/n/9 ,...,$\OML/cmm/m/it/9 y[]$\T1/aer/m/n/9 },
+ []
+
+[3 <./chart.jpg>]
+
+LaTeX Warning: Reference `eq:pohmm' on page \thepage  undefined on input line 3
+15.
+
+
+LaTeX Warning: Reference `fig:product' on page \thepage  undefined on input lin
+e 317.
+
+
+Underfull \vbox (badness 3229) has occurred while \output is active []
+
+
+Overfull \hbox (16.61752pt too wide) in paragraph at lines 327--327
+[]\secfnt Training the model by min-imis-ing con-trastive
+ []
+
+
+LaTeX Warning: Reference `eq:KL' on page \thepage  undefined on input line 329.
+
+
+
+LaTeX Warning: Reference `fig:gibbs' on page \thepage  undefined on input line 
+336.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
+
+ []
+
+<gibbs.jpg, id=27, 712.6625pt x 205.76875pt>
+File: gibbs.jpg Graphic file (type jpg)
+ <use gibbs.jpg>
+Package pdftex.def Info: gibbs.jpg used on input line 340.
+(pdftex.def)             Requested size: 298.75075pt x 85.3579pt.
+
+
+LaTeX Warning: Reference `fig:gibbs' on page \thepage  undefined on input line 
+345.
+
+
+LaTeX Warning: Reference `eq:gradient' on page \thepage  undefined on input lin
+e 345.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
+
+ []
+
+[4 <./hmm1.jpg> <./hmm2.jpg> <./product.jpg>]
+
+LaTeX Warning: Reference `eq:CD' on page \thepage  undefined on input line 353.
+
+
+
+LaTeX Warning: Reference `eq:CD' on page \thepage  undefined on input line 359.
+
+
+
+LaTeX Warning: Reference `eq:params' on page \thepage  undefined on input line 
+359.
+
+
+Overfull \hbox (5.65073pt too wide) in paragraph at lines 367--368
+[]\T1/aer/m/n/9 The con-trastive di-ver-gence al-go-rithm for train-ing the PoH
+MM
+ []
+
+
+LaTeX Warning: Reference `eq:params' on page \thepage  undefined on input line 
+393.
+
+
+Overfull \hbox (31.95122pt too wide) in paragraph at lines 402--402
+[]\secfnt APPLICATIONS US-ING PROD-UCT OF HMMS 
+ []
+
+<./REDD_img.jpg, id=33, 473.77pt x 405.515pt>
+File: ./REDD_img.jpg Graphic file (type jpg)
+ <use ./REDD_img.jpg>
+Package pdftex.def Info: ./REDD_img.jpg used on input line 411.
+(pdftex.def)             Requested size: 170.71652pt x 146.1214pt.
+
+<./FHschema.jpg, id=34, 503.8825pt x 251.94125pt>
+File: ./FHschema.jpg Graphic file (type jpg)
+ <use ./FHschema.jpg>
+Package pdftex.def Info: ./FHschema.jpg used on input line 413.
+(pdftex.def)             Requested size: 199.16928pt x 99.58298pt.
+
+
+LaTeX Warning: Reference `fig:FH' on page \thepage  undefined on input line 422
+.
+
+
+Overfull \hbox (4.17497pt too wide) in paragraph at lines 420--426
+[]\T1/aer/bx/n/9 Dataset 1: \T1/aer/m/n/9 The Ref-er-ence En-ergy Dis-ag-gre-ga
+-tion Data
+ []
+
+[5 <./gibbs.jpg>]
+
+LaTeX Warning: Reference `fig:FH' on page \thepage  undefined on input line 427
+.
+
+
+LaTeX Warning: Reference `eq:KL' on page \thepage  undefined on input line 429.
+
+
+
+LaTeX Warning: Reference `fig:plot' on page \thepage  undefined on input line 4
+29.
+
+
+Overfull \hbox (2.89522pt too wide) in paragraph at lines 429--430
+\T1/aer/m/n/9 vary-ing data sam-ples and ex-perts for 1 month, 4 months
+ []
+
+<./plot1.jpg, id=40, 343.2825pt x 253.94875pt>
+File: ./plot1.jpg Graphic file (type jpg)
+ <use ./plot1.jpg>
+Package pdftex.def Info: ./plot1.jpg used on input line 435.
+(pdftex.def)             Requested size: 199.16928pt x 147.33687pt.
+
+<./plot2.jpg, id=41, 354.32375pt x 238.8925pt>
+File: ./plot2.jpg Graphic file (type jpg)
+ <use ./plot2.jpg>
+Package pdftex.def Info: ./plot2.jpg used on input line 438.
+(pdftex.def)             Requested size: 199.16928pt x 134.28555pt.
+
+
+LaTeX Warning: Reference `fig:problem' on page \thepage  undefined on input lin
+e 450.
+
+
+LaTeX Warning: Citation `hinton2000' on page \thepage  undefined on input line 
+454.
+
+
+Overfull \hbox (23.57384pt too wide) in paragraph at lines 480--480
+ [][] 
+ []
+
+
+Overfull \hbox (22.2086pt too wide) in paragraph at lines 480--505
+[]$[]$  $[]$ 
+ []
+
+
+Overfull \hbox (27.24583pt too wide) in paragraph at lines 526--544
+[]$[]$  $[]$ 
+ []
+
+
+LaTeX Warning: Reference `table:sample1' on page \thepage  undefined on input l
+ine 549.
+
+
+LaTeX Warning: Reference `table:threshold1' on page \thepage  undefined on inpu
+t line 549.
+
+
+LaTeX Warning: Reference `table:hmm1' on page \thepage  undefined on input line
+ 549.
+
+[6 <./REDD_img.jpg> <./FHschema.jpg>] [7 <./plot1.jpg> <./plot2.jpg>]
+
+LaTeX Warning: Reference `table:sample2' on page \thepage  undefined on input l
+ine 551.
+
+
+LaTeX Warning: Reference `table:threshold2' on page \thepage  undefined on inpu
+t line 551.
+
+
+LaTeX Warning: Reference `table:hmm2' on page \thepage  undefined on input line
+ 551.
+
+
+LaTeX Warning: Reference `table:sample1' on page \thepage  undefined on input l
+ine 552.
+
+
+LaTeX Warning: Reference `table:sample2' on page \thepage  undefined on input l
+ine 552.
+
+
+LaTeX Warning: Reference `table:threshold1' on page \thepage  undefined on inpu
+t line 553.
+
+
+LaTeX Warning: Reference `table:threshold2' on page \thepage  undefined on inpu
+t line 553.
+
+
+LaTeX Warning: Reference `table:hmm1' on page \thepage  undefined on input line
+ 555.
+
+
+LaTeX Warning: Reference `table:hmm2' on page \thepage  undefined on input line
+ 555.
+
+
+Overfull \hbox (31.29561pt too wide) in paragraph at lines 572--572
+ [][] 
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 572--572
+[]\T1/aer/bx/n/9 Table 6: Ef-fect of vary-ing thresh-old
+ []
+
+
+Overfull \hbox (22.2086pt too wide) in paragraph at lines 572--591
+[]$[]$  $[]$ 
+ []
+
+
+Overfull \hbox (13.56633pt too wide) in paragraph at lines 612--612
+ [][] 
+ []
+
+
+Overfull \hbox (22.2086pt too wide) in paragraph at lines 612--634
+[]$[]$  $[]$ 
+ []
+
+
+LaTeX Warning: Reference `table:hmm1' on page \thepage  undefined on input line
+ 640.
+
+
+LaTeX Warning: Reference `table:hmm2' on page \thepage  undefined on input line
+ 640.
+
+
+LaTeX Warning: Citation `Zoha12articlenon-intrusive' undefined on input line 65
+0.
+
+
+LaTeX Warning: Citation `CarrieArmel2013213' undefined on input line 650.
+
+
+LaTeX Warning: Citation `eps272990' undefined on input line 650.
+
+
+LaTeX Warning: Citation `NIPS2010' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Rabiner' undefined on input line 650.
+
+
+LaTeX Warning: Citation `SS97a' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Kawamoto' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Diane' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Klopfert' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Ghahramani' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Felice' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Shen' undefined on input line 650.
+
+
+LaTeX Warning: Citation `taban' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Albert' undefined on input line 650.
+
+
+LaTeX Warning: Citation `wijaya2014consumer' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Zhang' undefined on input line 650.
+
+
+LaTeX Warning: Citation `achnata2012long' undefined on input line 650.
+
+
+LaTeX Warning: Citation `bassi' undefined on input line 650.
+
+
+LaTeX Warning: Citation `samuel' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Falvo' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Bakirtzis' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Chen' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Chow' undefined on input line 650.
+
+
+LaTeX Warning: Citation `DisaggregationHSMM' undefined on input line 650.
+
+
+LaTeX Warning: Citation `KolterJ12' undefined on input line 650.
+
+
+LaTeX Warning: Citation `KolterF11' undefined on input line 650.
+
+
+LaTeX Warning: Citation `BLTJ:BLTJ21650' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Heinzelman00energy' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Taylor' undefined on input line 650.
+
+
+LaTeX Warning: Citation `NYAS:NYAS5921' undefined on input line 650.
+
+
+LaTeX Warning: Citation `Wijaya' undefined on input line 650.
+
+
+LaTeX Warning: Citation `5620917' undefined on input line 650.
+
+
+LaTeX Warning: Citation `1626400' undefined on input line 650.
+
+
+LaTeX Warning: Citation `mckerracher' undefined on input line 650.
+
+
+LaTeX Warning: Citation `hinton2000' undefined on input line 650.
+
+
+LaTeX Warning: Citation `aistats' undefined on input line 650.
+
+
+LaTeX Warning: Citation `fhmm' undefined on input line 650.
+
+
+LaTeX Warning: Citation `andrew' undefined on input line 650.
+
+(./sigproc-sp.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9])
+[10
+
+] (./sigproc-sp.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2888 strings out of 493315
+ 36655 string characters out of 6137903
+ 113909 words of memory out of 5000000
+ 6260 multiletter control sequences out of 15000+600000
+ 50604 words of font info for 68 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 41i,12n,28p,1462b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/
+texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/te
+xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texliv
+e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2013
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2013/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2013/texmf-dist
+/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/u
+rw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/u
+tmri8a.pfb>
+Output written on sigproc-sp.pdf (10 pages, 440119 bytes).
+PDF statistics:
+ 111 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+

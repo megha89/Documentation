@@ -1,131 +1,144 @@
-
-%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+% THIS IS SIGPROC-SP.TEX - VERSION 3.1
+% WORKS WITH V3.2SP OF ACM_PROC_ARTICLE-SP.CLS
+% APRIL 2009
 %
-% This is the LaTeX source for the instructions to authors using
-% the LaTeX document class 'llncs.cls' for contributions to
-% the Lecture Notes in Computer Sciences series.
-% http://www.springer.com/lncs       Springer Heidelberg 2006/05/04
+% It is an example file showing how to use the 'acm_proc_article-sp.cls' V3.2SP
+% LaTeX2e document class file for Conference Proceedings submissions.
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V3.2SP) *DOES NOT* produce:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) Page numbering
+% ---------------------------------------------------------------------------------------------------------------
+% It is an example which *does* use the .bib file (from which the .bbl file
+% is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission,
+% you need to 'insert'  your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
 %
-% It may be used as a template for your own input - copy it
-% to a new file with a new name and use it as the basis
-% for your article.
+% Questions regarding SIGS should be sent to
+% Adrienne Griscti ---> griscti@acm.org
 %
-% NB: the document class 'llncs' has its own and detailed documentation, see
-% ftp://ftp.springer.de/data/pubftp/pub/tex/latex/llncs/latex2e/llncsdoc.pdf
+% Questions/suggestions regarding the guidelines, .tex and .cls files, etc. to
+% Gerald Murray ---> murray@hq.acm.org
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For tracking purposes - this is V3.1SP - APRIL 2009
 
-
-\documentclass[runningheads,a4paper]{llncs}
-
-\usepackage{amssymb}
-\setcounter{tocdepth}{3}
-\usepackage{graphicx}
-\usepackage[]{algorithm2e}
-\usepackage{subfig}
-
-
-\usepackage{url}
-\urldef{\mailsa}\path|{alfred.hofmann, ursula.barth, ingrid.haas, frank.holzwarth,|
-\urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
-\urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@springer.com|    
-\newcommand{\keywords}[1]{\par\addvspace\baselineskip
-\noindent\keywordname\enspace\ignorespaces#1}
+\documentclass{acm_proc_article-sp}
 
 \begin{document}
 
-\mainmatter  % start of an individual contribution
+\title{Aggregate Load Forecasting using Product of HMMs}
+%\titlenote{(Does NOT produce the permission block, copyright information nor page numbering). For use with ACM\_PROC\_ARTICLE-SP.CLS. Supported by ACM.}}
+%\subtitle{[Extended Abstract]
+%\titlenote{A full version of this paper is available as
+%\textit{Author's Guide to Preparing ACM SIG Proceedings Using
+%\LaTeX$2_\epsilon$\ and BibTeX} at
+%\texttt{www.acm.org/eaddress.htm}}}
 
-% first the title is needed
-\title{Energy Aggregation using Product of HMMs}
 
-% a short form should be given in case it is too long for the running head
-%\titlerunning{Lecture Notes in Computer Science: Authors' Instructions}
 
-% the name(s) of the author(s) follow(s) next
 %
-% NB: Chinese authors should write their first names(s) in front of
-% their surnames. This ensures that the names appear correctly in
-% the running heads and the author index.
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
 %
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
 
-\author{Megha Gupta\inst{1} \and Haimonti Dutta\inst{2}
-\thanks{The author is also affiliated to the Institute of Data Science and Engineering (IDSE), Columbia University and is an adjunct professor at IIIT-Delhi.}
-Ullas Nambiar\inst{3} \and Amarjeet Singh\inst{4}}
-
-\institute{IIIT Delhi, India,\\
-\email{meghag@iiitd.ac.in},\\ 
-%WWW home page:
-%\texttt{http://users/\homedir iekeland/web/welcome.html}
-\and
-State University of New York, Buffalo,\\
-haimonti@buffalo.edu\\
-%\thanks{The author is also affiliated to the Institute of Data Science and Engineering (IDSE), Columbia University and is an adjunct professor at IIIT-Delhi.}%
-\and
-EMC, India \\
-Ullas.Nambiar@emc.com\\
-\and
-IIIT Delhi, India\\
-amarjeet@iiitd.ac.in
+\numberofauthors{4} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Megha Gupta\\
+       \affaddr{Department of Computer Science}\\
+       \affaddr{IIIT Delhi, India,}\\
+       \email{meghag@iiitd.ac.in}
+% 2nd. author
+\alignauthor
+Haimonti Dutta\titlenote{The author is also affiliated to the Institute of Data Science and Engineering (IDSE), Columbia University and is an adjunct professor at IIIT-Delhi.}\\
+       \affaddr{Department of Management Science and Systems}\\
+       \affaddr{State University of New York, Buffalo,}\\
+       \affaddr{New York, 14260}\\
+       \email{haimonti@buffalo.edu}
+       \and
+% 3rd. author
+\alignauthor Ullas Nambiar\\
+       \affaddr{EMC, India}\\
+       \email{Ullas.Nambiar@emc.com}
+ % use '\and' if you need 'another row' of author names
+% 4th. author
+\alignauthor Amarjeet Singh\\
+       \affaddr{Department of Computer Science}\\
+       \affaddr{IIIT Delhi, India}\\
+       \email{amarjeet@iiitd.ac.in}
 }
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
 
-%\author{Megha Gupta\\
-%\institute{IIIT Delhi,\\
-%\email{meghag@iiitd.ac.in\\
-%%\thanks{Please note that the LNCS Editorial assumes that all authors have used
-%%the western naming convention, with given names preceding surnames. This determines
-%%the structure of the names in the running heads and the author index.}%
-%\and Haimonti Dutta
-%\institute{State University of New York,Buffalo,\\
-%\email{haimonti@buffalo.edu\\
-%\and Ullas Nambiar
-% \and Amarjeet Singh}
-%}
-%}}}
-%Anna Kramer\and Leonie Kunz\and Christine Rei\ss\and\\
-%Nicole Sator\and Erika Siebert-Cole\and Peter Stra\ss er}
-%
-\authorrunning{Energy Aggregation using Product of HMMs}
-% (feature abused for this document to repeat the title also on left hand pages)
+%\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
+%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
+%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
+%\date{30 July 1999}
 
-% the affiliations are given next; don't give your e-mail address
-% unless you accept that it will be published
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
 
-%
-%\institute{IIIT Delhi, India,\\
-%State University of New York, Buffalo
-%Tiergartenstr. 17, 69121 Heidelberg, Germany\\
-%\mailsa\\
-%\mailsb\\
-%\mailsc\\
-%\url{http://www.springer.com/lncs}}
-
-%\institute{IIIT Delhi,\\
-%\email{meghag@iiitd.ac.in}\\} 
-%\institute{State University of New York, Buffalo,\\
-%\email{haimonti@buffalo.edu}\\} 
-
-%WWW home page:
-%\texttt{http://users/\homedir iekeland/web/welcome.html}
-%\and
-%Universit\'{e} de Paris-Sud,
-%Laboratoire d'Analyse Num\'{e}rique, B\^{a}timent 425,\\
-%F-91405 Orsay Cedex, France}
-
-
-%
-% NB: a more complex sample for affiliations and the mapping to the
-% corresponding authors can be found in the file "llncs.dem"
-% (search for the string "\mainmatter" where a contribution starts).
-% "llncs.dem" accompanies the document class "llncs.cls".
-%
-
-%\toctitle{Lecture Notes in Computer Science}
-%\tocauthor{Authors' Instructions}
 \maketitle
-
-
 \begin{abstract}
+%This paper provides a sample of a \LaTeX\ document which conforms to
+%the formatting guidelines for ACM SIG Proceedings.
+%It complements the document \textit{Author's Guide to Preparing
+%ACM SIG Proceedings Using \LaTeX$2_\epsilon$\ and Bib\TeX}. This
+%source file has been written with the intention of being
+%compiled under \LaTeX$2_\epsilon$\ and BibTeX.
+%
+%The developers have tried to include every imaginable sort
+%of ``bells and whistles", such as a subtitle, footnotes on
+%title, subtitle and authors, as well as in the text, and
+%every optional component (e.g. Acknowledgments, Additional
+%Authors, Appendices), not to mention examples of
+%equations, theorems, tables and figures.
+%
+%To make best use of this sample document, run it through \LaTeX\
+%and BibTeX, and compare this source code with the printed
+%output produced by the dvi file.
+
 Real time spatio-temporal energy consumption data is captured by large scale deployment of smart meters. Data from these meters are usually sent to a base station (BS) where they are aggregated for analytics. Each BS aggregates the load derived from all the meters connected to that station. The  readings received at the BS are adhoc and usually not synchronized in time. Different smart meters can send data points when they are collected resulting in inconsistent data including aggregating non-aligned time stamped readings, readings with missing values, repeated values, meter reset readings.
 %The problem arises when the analytics is to be performed on the data which is aggregated from the inconsistent messages passed by all the meters connected to a particular base station.
 %the demand response programs have been a cost effective alternative to meet the occasional peak demands. 
@@ -134,11 +147,46 @@ We address the problem of learning from disparate data streams (with inconsisten
 %We address the problem of aggregating energy data in context with the load forecasting using a machine learning technique called product of Hidden Markov Models (PoHMM). 
 %The objective function used for learning is the contrastive divergence between the observed data and the reconstructed data produced by running a Gibbs sampler. 
 %Data analytics in energy domain, load forecasting on aggregates of power meters, Energy aggregation problem using pohmm, The STLF accuracy improves with larger aggregates, This paper deals with the energy aggregation problems in electrical system. The challenges included problem of aggregating inconsistent data, across time, in case of electrical systems.
-\keywords{energy aggregation, ensemble learning, load forecasting, product of HMMs}
 \end{abstract}
+
+% A category with the (minimum) three required fields
+\category{H.4}{Information Systems Applications}{Miscellaneous}
+%A category including the fourth, optional field follows...
+%\category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
+
+\terms{Algorithm,Experimentation}
+
+%\keywords{ACM proceedings, \LaTeX, text tagging} % NOT required for Proceedings
+
+\keywords{energy aggregation, ensemble learning, load forecasting, product of HMMs, aggregate forecasting}
 
 
 \section{Introduction}
+%The \textit{proceedings} are the records of a conference.
+%ACM seeks to give these conference by-products a uniform,
+%high-quality appearance.  To do this, ACM has some rigid
+%requirements for the format of the proceedings documents: there
+%is a specified format (balanced  double columns), a specified
+%set of fonts (Arial or Helvetica and Times Roman) in
+%certain specified sizes (for instance, 9 point for body copy),
+%a specified live area (18 $\times$ 23.5 cm [7" $\times$ 9.25"]) centered on
+%the page, specified size of margins (1.9 cm [0.75"]) top, (2.54 cm [1"]) bottom
+%and (1.9 cm [.75"]) left and right; specified column width
+%(8.45 cm [3.33"]) and gutter size (.83 cm [.33"]).
+%
+%The good news is, with only a handful of manual
+%settings\footnote{Two of these, the {\texttt{\char'134 numberofauthors}}
+%and {\texttt{\char'134 alignauthor}} commands, you have
+%already used; another, {\texttt{\char'134 balancecolumns}}, will
+%be used in your very last run of \LaTeX\ to ensure
+%balanced column heights on the last page.}, the \LaTeX\ document
+%class file handles all of this for you.
+%
+%The remainder of this document is concerned with showing, in
+%the context of an ``actual'' document, the \LaTeX\ commands
+%specifically available for denoting the structure of a
+%proceedings paper, rather than with giving rigorous descriptions
+%or explanations of such commands.
 
 Smart meters consisting of real time sensors, power outage notifications and power quality monitoring are widely used today. These meters provide a host of benefits like energy efficiency and savings, improved retail competition, better demand response actions, improved tariffs, lower bills due to better customer feedback, accurate billing, less environmental pollution, etc. \cite{Klopfert}
 They generate huge amount of time series data which can be used for gaining meaningful insights through analytics.
@@ -193,6 +241,12 @@ The main objective of data aggregation is to reduce the unnecessary information 
 \noindent \textbf{Energy Disaggregation} or Non-intrusive appliance load monitoring (NIALM) is a process in which the household's aggregate electricity consumption is broken down into individual appliance's consumption. The motivation behind this task is twofolds; first, the reduction in energy consumption by using the information given to the household occupants about the individual appliance's electricity consumption; second, recommending the occupants to defer the use of appliance to a time of day when electricity is cheaper. Approaches for energy disaggregation from smart meter using ML techniques fall in two categories; first group is where sub-metered data is available to train appliance models prior to performing disaggregation; second group uses unsupervised disaggregation methods that require labelling of detected appliance, assuming the type and number of household appliance.
 Parson et al. \cite{eps272990} proposed an approach to NIALM that separates the energy consumption of individual appliance iteratively from the aggregated load using hidden Markov models. Several studies have been done in this regard, one of the unsupervised disaggregation method \cite{DisaggregationHSMM} that outperformed other unsupervised disaggregation methods is conditional factorial hidden semi-Markov model. This model when integrated with other features, accurately represents the individual appliance energy consumption. In one of the work, Kolter et al. \cite{NIPS2010} showed that by discriminately training the sparse coding algorithms using a method based on structured prediction, the performance of the algorithm significantly improved on the energy disaggregation task. In another study, Kolter et al. \cite{KolterJ12} exploited the additive structure of the FHMM to develop a convex formulation of approximate inference algorithm that achieves state-of-the-art performance in energy disaggregation problem. A survey paper \cite{Zoha12articlenon-intrusive} reviewed several NILM methods making use of steady state and transient load signature in addition to the state-of-the art load disaggregation algorithms.
 
+\begin{figure*}[th]
+\centering
+\includegraphics[width=0.6\textwidth,height=0.12\textheight]{chart.jpg}
+\caption{Problem Formulation}
+\label{fig:problem}
+\end{figure*}
 
 \noindent \textbf{Load Forecasting} refers to the projection of electrical load required in a certain geographical area with the use of previous electrical load usage in the same area. It is extremely important for efficient power system planning and operation, energy purchasing and generation, load switching, infrastructure development. It encompasses various factors like, historical load, weather data, population, energy supply and price, time of the year, etc.
 It is usually divided into three categories, short-term forecasts (one hour to one week) , medium-term forecasts (one week to one year) and long-term forecasts (more than a year).
@@ -200,8 +254,8 @@ In short term load forecast, \cite{Bakirtzis} and \cite{Chen} used a three layer
 In medium term load forecasts, the author forecasts \cite{Falvo} the monthly load through knowledge based activities from the output of the ANN based stage providing yearly energy predictions. Similarly, in \cite{bassi}, time lagged feedforward neural network is used to do monthly forecasting on the basis of historical series of electrical load, economic and demographic variables. Also, the authors from Covenant University, \cite{samuel} performed load forecasting of their own educational institute using the models based on linear, compound growth and cubic methods of regression analysis.
 In long term load forecasting, a study done by \cite{achnata2012long} compared the performance of support vector regression and multilayer perceptron neural networks. The results showed that the percentage error in SVM reduced to 15\% when compared to neural networks trained with back propagation algorithm. It was also observed that the parameter selection in SVM plays an important role in the performance of the model.
 %study done by \cite{Daneshi} resulted in showing that the models based on regression analysis did not give very accurate predictions as compared to fuzzy neural network which performed better due to better handling with non linear systems. 
-Another work  \cite{Zhang} uses support vector regression to derive non linear relationship between load and economic factors like GDP for long term forecasting in developing countries.
-
+Another work  \cite{Zhang} uses support vector regression to derive non linear relationship between load and economic factors like GDP for long term forecasting in developing countries.\\
+Load forecasting at the utility level can be done in three ways, that are completely aggregated, completely disaggregated and by using clustering for forecasting[CITE]. In completely aggregated method, the historical consumption data is combined first and then the prediction is performed. In completely disaggregated method, first the prediction at individual level data stream is performed and then combined together to compute the overall estimate at the utility level. In case of cluster based approach, individual data streams are clustered in specific segments, then segment level consumption is predicted which is finally combined to estimate the utility level consumption. In our approach, we have historical individual level data streams that are aggregated and hence used for next day load prediction using Product of HMMs as shown in figure~\ref{fig:problem}
 
 
 \noindent \textbf{Customer Segmentation} is the process of dividing a large homogeneous market into identifiable segments having similar demand characteristics. The appliance specific data has the potential to improve energy efficiency marketing by improving market segmentation, diversifying programs and transforming product development and evaluation \cite{CarrieArmel2013213}. This analysis is useful in various ways, like demand response system, intelligent distribution channel. The author \cite{wijaya2014consumer} segments the customers based on contextual dimensions like location, seasons, weather patterns, holidays, etc which help with various higher level applications like usage-specific tariff structure, theft detection, etc. In \cite{Albert}, author proposes to infer occupancy states from the consumption data by using HMM framework. They investigate the effectiveness of HMM and model based cluster analysis in producing meaningful features of the classification. 
@@ -215,34 +269,19 @@ Another study \cite{Felice} highlighted the importance of regularised negative c
 An extension of HMMs, called Factorial Hidden Markov Model (FHMM) \cite{fhmm} is a class of ensemble based learning models that addresses the need for distributed hidden states in HMMs. The FHMM generalizes the HMM by representing the state using a collection, instead of single discrete variable. However, FHMMs being directed models, when conditioned on the observed sequence, the hidden state chains become independent making the inference easy but learning more complex. Thus, the exact inference becomes intractable, leaving one to resort to approximate inference techniques like Gibbs sampling or variational approximations.
 
 
-%To model a complicated, high-dimensional data distributions, an approach called mixture of gaussians is widely used. In this method, each simple model which is a gaussian is combined using a weighted arithmetic mean of individual distributions. Such mixtures of tractable models can easily fit to data using expectation-maximization (EM) and are more powerful than their individual component. So, a different way of combining these distributions is by multiplying them together and then renormalizing them.
-%In our paper,  we deal with the problem of energy aggregation using ensemble learning model. Each HMM is used to represent a state of an appliance. An appliance can have states like ON or OFF. The combination of the outputs from each of these HMM models gives us our ensemble based learning model, Product of Hidden Markov Model (PoHMM) \cite{hinton2000}. This learning technique outputs the probability distribution by combining the outputs from several simpler distributions. It allows each model to make a decision on the basis of few dimensions.
-
-
 \begin{figure*}
 \centering
-\includegraphics[width=4cm,height=3cm]{hmm1.jpg}
+\includegraphics[width=3.3cm,height=2.6cm]{hmm1.jpg}
 %\label{fig:hmm1}
-\includegraphics[width=4cm,height=3cm]{hmm2.jpg}
+\includegraphics[width=3.3cm,height=2.6cm]{hmm2.jpg}
 %\label{fig:HMMs}
-\caption{HMM $S^1$ and $S^2$}
+\includegraphics[width=3cm,height=3cm]{product}
+\caption{HMM $S^1$ and $S^2$ and PoHMMs, P = $S^{1}$ x $S^2$}
 \label{fig:HMMs}
 \end{figure*}
 
 \section{Review}
 \label{sec:review}
-
-%Benveniste defines HMM as a triple (\'{A}, $\mu$, $\pi$) where \'{A} = (X,$X_0$,A,T) is an automaton, $\mu$ is the initial state probability, $\pi$ is factored as state transition probability $\pi$$_{x}$ and message transition probability $\pi$$_{A}$. He uses a random arbiter $\alpha$, with values {first, second, third} to choose automaton to initiate transition. If $\alpha$ = first then first automaton chooses any transition having a private message whereas second automaton performs a stuttering transition, and vice versa for $\alpha$ = second. If $\alpha$ = both, then both automata agree on some shared message and move accordingly.
-
-A Hidden Markov Model (HMM) is a statistical Markov model that represents the probability distribution over a sequence of observations \cite{Ghahramani}. They are found useful in applications like speech \cite{Rabiner}, handwriting, gesture recognition, part-of-speech tagging, bioinformatics, etc. It has two properties, first, the observation at time $t$, $y_{t}$ is generated by a process whose state at time $t$, $s_{t}$ is hidden from the observer and second, is that this hidden state process satisfies Markov property which states that given the value at state $s_{t-1}$, the value at current state $s_{t}$ is independent of all the states prior to $t-1$. The subscripts $i$ and superscripts $j$ indicate the model at $i$th time and the $j$th HMM. The state space of the HMM is discrete, that is a state can take $2$ values denoted by ON and OFF. The observed values represent the aggregated load/energy collected from different data streams at time $t$. In order to define probability distribution over the sequence of observation, it is important to define probability distribution over the initial state P($s_{1}$), the transition probability P($s_{t}|s_{t-1}$) and the observed probability P($y_{t}|s_{t}$) where $y_{t}$ is the observation at time $t$. \\
-Following a notation in \cite{Rabiner}, HMM is composed of a 3-tuple \{A, B, $\pi$ \} where A is the transition probability, B is the observed probability and $\pi$ is the initial state probability.
-%HMMs are widely used for modelling time series data. They are found useful in applications like speech, handwriting, gesture recognition, part-of-speech tagging, bioinformatics, etc.
-HMMs solve three fundamental problems:
-1. Given the model $\lambda$ = \{A, B, $\pi$ \}, and observation sequence Y = \{$y_{1}$,...,$y_{T}$\}, how do we efficiently compute the probability of the sequence of observations given the model, that is P($Y|\lambda$).
-2. Given the model $\lambda$ and observation sequence Y, what is the underlying state sequence \{$s_{1}$,...,$s_{T}$\} that best explains the observations.
-3. How do we adjust the model parameters (A,B,$\lambda$) so as to maximize the probability of observation sequence given the model P($Y|\lambda$). There is no optimal way to estimate the model parameters given any infinite observation sequence. However, using an iterative procedure like Baum-Welch or gradient techniques, model parameters $\lambda$ can be chosen such that P($O|\lambda$) is locally maximized. \\
-In this paper, we deal with the third problem as it involves learning parameters by training the model with the past energy consumption data and then using these parameters to perform load forecasting.\\
-\noindent \textbf{An Example:} Figure~\ref{fig:HMMs} shows the HMMs $S^1$ and $S^2$ generated by two data streams. The energy consumed by first six floors and the top six floors of the faculty housing building is represented by the two data streams, $S^1$ and $S^2$ individually. In order to know the energy consumption of all the 12 floors, simple addition of two data streams will not work as the readings in both the data streams are not synchronized in time. Table ~\ref{table:timestamp} shows the timestamp readings of the energy consumed by the two data streams and the entire building. As can be seen in table~\ref{table:timestamp}, the recording in both the data streams is shifted by 1 second. Also, the recording for each data stream is sampled every 30 seconds.
 
 \begin{table*}[htdp]
 \begin{center}
@@ -260,80 +299,16 @@ Floor 0-5 & $Floor 6 -11$ & $Total$ \\
 \label{table:timestamp}
 \end{table*}
 
-%Using the traditional HMM notation for the parameter $\lambda$ = \{A, B, $\pi$ \} where A is the transition probability, B is the observed probability and $\pi$ is the initial state probability. For HMMs, $S^{1}$ \& $S^{2}$ we have the values of A, B, $\pi$ as shown in table ~\ref{table:A}, ~\ref{table:B}, ~\ref{table:pi} respectively.
+A Hidden Markov Model (HMM) is a statistical Markov model that represents the probability distribution over a sequence of observations \cite{Ghahramani}. They are found useful in applications like speech \cite{Rabiner}, handwriting, gesture recognition, part-of-speech tagging, bioinformatics, etc. It has two properties, first, the observation at time $t$, $y_{t}$ is generated by a process whose state at time $t$, $s_{t}$ is hidden from the observer and second, is that this hidden state process satisfies Markov property which states that given the value at state $s_{t-1}$, the value at current state $s_{t}$ is independent of all the states prior to $t-1$. The subscripts $i$ and superscripts $j$ indicate the model at $i$th time and the $j$th HMM. The state space of the HMM is discrete, that is a state can take $2$ values denoted by ON and OFF. The observed values represent the aggregated load/energy collected from different data streams at time $t$. In order to define probability distribution over the sequence of observation, it is important to define probability distribution over the initial state P($s_{1}$), the transition probability P($s_{t}|s_{t-1}$) and the observed probability P($y_{t}|s_{t}$) where $y_{t}$ is the observation at time $t$. \\
+Following a notation in \cite{Rabiner}, HMM is composed of a 3-tuple \{A, B, $\pi$ \} where A is the transition probability, B is the observed probability and $\pi$ is the initial state probability.
+%HMMs are widely used for modelling time series data. They are found useful in applications like speech, handwriting, gesture recognition, part-of-speech tagging, bioinformatics, etc.
+HMMs solve three fundamental problems:
+1. Given the model $\lambda$ = \{A, B, $\pi$ \}, and observation sequence Y = \{$y_{1}$,...,$y_{T}$\}, how do we efficiently compute the probability of the sequence of observations given the model, that is P($Y|\lambda$).
+2. Given the model $\lambda$ and observation sequence Y, what is the underlying state sequence \{$s_{1}$,...,$s_{T}$\} that best explains the observations.
+3. How do we adjust the model parameters (A,B,$\lambda$) so as to maximize the probability of observation sequence given the model P($Y|\lambda$). There is no optimal way to estimate the model parameters given any infinite observation sequence. However, using an iterative procedure like Baum-Welch or gradient techniques, model parameters $\lambda$ can be chosen such that P($O|\lambda$) is locally maximized. \\
+In this paper, we deal with the third problem as it involves learning parameters by training the model with the past energy consumption data and then using these parameters to perform load forecasting.\\
+\noindent \textbf{An Example:} Figure~\ref{fig:HMMs} shows the HMMs $S^1$ and $S^2$ generated by two data streams. The energy consumed by first six floors and the top six floors of the faculty housing building is represented by the two data streams, $S^1$ and $S^2$ individually. In order to know the energy consumption of all the 12 floors, simple addition of two data streams will not work as the readings in both the data streams are not synchronized in time. Table ~\ref{table:timestamp} shows the timestamp readings of the energy consumed by the two data streams and the entire building. As can be seen in table~\ref{table:timestamp}, the recording in both the data streams is shifted by 1 second. Also, the recording for each data stream is sampled every 30 seconds.
 
-%Distributed networks can be modeled using interacting automata.
-%Benveniste \cite{benveniste} defines automaton as a quadruple, \'{A} = (X,$X_0$,A,T) where X is a finite state of sets, $X_0$ is the subset of initial states, A is a finite set of messages, T is a set of transitions of the form t = \{x\_,a,x\} where x\_ is the previous state, a is the message label on which the state transitions to the next state x. The figure~\ref{fig:ex} below explains the automata with an example.\\
-
-
-%For HMM R, X$_{R}$ = \{2; $R_1$,$R_2$\}, X$_{0R}$ = \{$R_1$\}, A$_{R}$ = \{a,b\}, T$_{R}$ = \{$R_1$,a,$R_1$; $R_1$,b,$R_2$; $R_2$,a,$R_2$; $R_2$,b,$R_1$\} \\
-%For HMM S, X$_{S}$ = \{3; $S_1$,$S_2$,$S_3$\}, X$_{0S}$ = \{$S_1$\}, A$_{S}$ = \{a,b\}, T$_{S}$ = \{$S_1$,a,$S_1$; $S_1$,b,$S_2$; $S_2$,a,$S_2$; $S_2$,b,$S_3$; $S_3$,a,$S_3$; $S_3$,b,$S_1$\} \\
-%The product of two HMMs P = R x S is defined as follows: \\
-%X = X$_{R}$ x X$_{S}$ \\
-%$X_0$ = X$_{0R}$ x X$_{0S}$ \\
-%A = A$_{R}$ $\cup$ A$_{S}$ \\
-%t = (x\_,a,x)  \\
-
-%Benveniste uses a notion of stuttering transition which helps to distinguish between local and global time by inserting dummy transitions between two transitions of a local automaton attached to a node. This stuttering transition waits for others to progress.
-
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ l | c | c }
-% $A_{S^{1}}$ & $S^1_1$ & $S^1_2$ \\
-%\hline
-%$R_1$ & 0.6 & 0.4 \\
-%$R_2$ & 0.3 & 0.7 \\
-%\end{tabular}
-%\quad
-%\begin{tabular}{ l | c | c | c }
-%  $A_{S^{2}}$ & $S^2_1$ & $S^2_2$ & $S^2_3$ \\
-%\hline
-%$S_1$ & 0.6 & 0.3 & 0.1 \\
-%$S_2$ & 0.4 & 0.1 & 0.5 \\
-%$S_3$ & 0.2 & 0.4 & 0.4 \\
-%\end{tabular}
-%\caption{Transition probabilities, A}
-%\label{table:A}
-%\end{table}
-%
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ l | c | c }
-% $B_{S^{1}}$ & a & b \\
-%\hline
-%$S^1_1$ & 0.2 & 0.8 \\
-%$S^1_2$ & 0.5 & 0.5 \\
-%\end{tabular}
-%\quad
-%\begin{tabular}{ l | c | c | c}
-% $B_{S^{2}}$ & a & b & c\\
-%\hline
-%$S^2_1$ & 0.2 & 0.3 & 0.5 \\
-%$S^2_2$ & 0.5 & 0.4 & 0.1 \\
-%$S^2_3$ & 0.4 & 0.3 & 0.3 \\
-%\end{tabular}
-%\caption{Observed probabilities, B}
-%\label{table:B}
-%\end{table}
-%
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ l | c | c }
-%&  $R_1$ & $R_2$ \\
-%\hline
-%$\pi_{S^{1}}$ & 0.4 & 0.6 \\
-%\end{tabular}
-%\quad
-%\begin{tabular}{ l | c | c | c}
-%&  $S_1$ & $S_2$ & $S_3$\\
-%\hline
-%$\pi_{S^{2}}$ & 0.4 & 0.4 & 0.2 \\
-%\end{tabular}
-%\caption{Initial state probabilities, $\pi$}
-%\label{table:pi}
-%\end{table}
-
-%Talking in terms of HMM, requires us to equip products of automata with probabilities. 
 
 \subsection{Product of HMMs}
 \label {pohmm}
@@ -349,23 +324,7 @@ p(d|\theta_{1}...\theta_{n}) = \frac{\prod_{m}f_m(d|\theta_{m})}{\sum_{c}\prod_{
 \label{eq:pohmm}
 \end{eqnarray}
 
-%The rules for synchronised product construction are : \\
-%1. $<p,q>$ --a--$>$ $<p',q>$ if a $\in$ A$_{R}$ $\cap$ A$_{S}$ and p --a--$>$ p' and q --a--$>$ q'	\\
-%2. $<p,q>$ --a--$>$ $<p',q>$ if a $\in$ A$_{R}$, a $\notin$ A$_{S}$ and p --a--$>$ p'	\\
-%3. $<p,q>$ --a--$>$ $<p,q'>$ if a $\notin$ A$_{R}$, a $\in$ A$_{S}$ and q --a--$>$ q'	\\
-
- \begin{figure*}[!t]
-\centering
-\includegraphics[width=4cm,height=4cm]{product}
-\caption{Product of HMMs, P = $S^{1}$ x $S^2$}
-\label{fig:product}
-\end{figure*}
-
-
 \subsection{Training the model by minimising contrastive divergence}
-%Product of experts (PoE)\footnote{http://en.wikipedia.org/wiki/Product\_of\_experts} is a technique that models probability distribution by combining the output from several simpler distributions. It is defined by the following formula:\\
-% Write the formula and explain it. Explain Gibbs Sampling
-
 To fit the model to the data, we need to maximize the likelihood of the dataset or minimise the Kullback-Liebler (KL) divergence between the data distribution, $P^0$ (distribution at time 0) and $P^\infty_\theta$ (also written as $p(d|\theta_{1}...\theta_{n})$) which is
 the equilibrium distribution over the visible variables. KL divergence is defined as the non-symmetric measure of the difference between two probability distributions $P^\infty$ and $P^0$. It measures the information lost when $P^\infty$ is used to approximate $P^{0}$ as shown mathematically in equation~\ref{eq:KL}.
 
@@ -378,7 +337,7 @@ where $||$ represents Kullback-Leibler divergence, d is the data vector in discr
 
  \begin{figure*}[t]
 \centering
-\includegraphics[width=12cm,height=4cm]{gibbs.jpg}
+\includegraphics[width=10.5cm,height=3cm]{gibbs.jpg}
 \caption{Visualization of Gibbs sampling}
 \label{fig:gibbs}
 \end{figure*}
@@ -405,138 +364,66 @@ In equation~\ref{eq:CD}, the first two terms on the right hand side are tractabl
 \Delta\theta_m \propto \langle \frac {\partial log f_{\theta_{m}}}{\partial \theta_m}\rangle_{P^0} - \langle \frac {\partial log f_{\theta_{m}}}{\partial \theta_m} \rangle_{P^1_\theta} \label{eq:params}
 \end{eqnarray}
 
-The contrastive divergence algorithm for training the PoHMM has the following steps:
-%\begin{algorithm}
-%\item Each model's gradient $\frac{\partial}{\partial\theta_m}$ $P(Y|\theta_m)$ (Y = $\{y_t\}_{t=1}^T$ is a visible variable) is the visible variable) is calculated on a data point using forward backward algorithm.
-%\item A sample for each model is taken from the posterior distribution of paths through state space.
-%\item At each time step, the distributions are multiplied and renormalized together to get the reconstruction distribution.
-%\item A sample from the reconstruction distribution is drawn at each time step to get a reconstructed sequence. Each model's is gradient is computed on the new sequence $P(\hat Y|\theta_m)$
-%\item Parameters are updated as per equation~\ref{eq:params}
-%\end{algorithm}
+%The contrastive divergence algorithm for training the PoHMM has the following steps:
 
-\begin{algorithm}[H]
-% \KwData{this text}
- %\KwResult{Training of PoHMMs using contrastive divergence }
- %initialization\;
- Each model's gradient $\frac{\partial}{\partial\theta_m}$ $P(Y|\theta_m)$ (Y = $\{y_t\}_{t=1}^T$ is a visible variable) is calculated on a data point using forward backward algorithm\;
- For each model, a sample is taken from the posterior distribution of paths through state space\;
- At each time step, the distributions are multiplied and renormalized together to get the reconstruction distribution\;
- A sample from the reconstruction distribution is drawn at each time step to get a reconstructed sequence. Each model's gradient is computed on the new sequence $P(\hat Y|\theta_m)$\;
- Parameters are updated as per equation~\ref{eq:params}\;
- \end{algorithm}
+%%\begin{algorithm}[H]
+%% \KwData{this text}
+% %\KwResult{Training of PoHMMs using contrastive divergence }
+% %initialization\;
+% Each model's gradient $\frac{\partial}{\partial\theta_m}$ $P(Y|\theta_m)$ (Y = $\{y_t\}_{t=1}^T$ is a visible variable) is calculated on a data point using forward backward algorithm\;
+% For each model, a sample is taken from the posterior distribution of paths through state space\;
+% At each time step, the distributions are multiplied and renormalized together to get the reconstruction distribution\;
+% A sample from the reconstruction distribution is drawn at each time step to get a reconstructed sequence. Each model's gradient is computed on the new sequence $P(\hat Y|\theta_m)$\;
+% Parameters are updated as per equation~\ref{eq:params}\;
+% %\end{algorithm}
  
-% \begin{algorithm}
-% \ForEach {model in models}{
-%calculate gradient $\frac{\partial}{\partial\theta_m}$ $P(Y|\theta_m)$ (Y = $\{y_t\}_{t=1}^T$ is a visible variable) on a data point using the forward-backward algorithm. \;
-%take a sample from the posterior distribution of the paths through state space. \;
-% }
-% \ForEach{time in timesteps}{
-% The distributions are multiplied and renormalized together to get the reconstructed distribution. \;
-% A sample is drawn from this reconstructed distribution to get a reconstructed sequence. \;
-%} 
-%\caption{Training PoHMMs by minimizing contrastive divergence}
-%\end{algorithm}
-
-%High dimensional distributions are approximated as a product of one dimensional distributions. The product of individual distributions which are uniguassian or multivariate guassian will also be multivariate guassian. If the individual models are more complicated and contain one or more hidden variables, multiplying their distributions together and renormalizing them can be very powerful. These individual models are called "experts".
-%The product of experts produce sharper distribution than the individual distributions\cite{hinton2000}.
-
-\subsection{Inference in PoHMM}
+ \subsection{Inference in PoHMM}
 
 The main feature of PoHMMs is its undirected graphical modelling with no direct connection among the latent variables ($S^1_{t}$ and $S^2_{t}$) as they only interact indirectly via observed variables ($Y_{t}$). The hidden variables all the experts are rendered independent when conditioned on visible variables. So, if the inference in each of the constituent model is tractable then the inference in the product is also tractable. To generate a data point in this model, all the models in PoHMMs generate an observation and if they all generated the same point then it is accepted else they again generate an observation until all the models agree to it. Therefore all the models have some influence over the generated data. So, the inference determines the the probability that all the models would have taken in order to generate the given observation. 
 
 
 
-\section{Applications using Product of HMM}
+\section{Applications using Product of HMMs}
 \label{poc}
 
 \textbf{Aim}: In this section we demonstrate how PoHMMs can be used to model data streams and perform load forecasting. Proof-of-concepts are provided on two data sets - REDD\footnote{http://redd.csail.mit.edu/} and on the energy data collected from faculty housing at IIIT Delhi.
 %To represent streams of energy consumption data from $n$\footnote{n=2} appliances by product of $k$ HMMs.
 
 \subsection{Data Description} 
+\begin{figure*}
+\centering
+\includegraphics[width=6cm]{./REDD_img}
+%\label{fig:hmm1}
+\includegraphics[width=7cm]{./FHschema}
+%\label{fig:HMMs}
+\caption{Schematic diagram of REDD and Faculty housing building}
+\label{fig:FH}
+\end{figure*}
+
 \begin{itemize}
 \item \textbf{Dataset 1:} The Reference Energy Disaggregation Data Set (REDD) contains power consumption data from real homes, for the whole house as well as for each individual circuit in
 the house (labeled by the main type of appliance on that circuit). %It is intended for use in developing disaggregation methods, which can predict, from only the whole-home signal, which devices are being used.
-The REDD data set contains two main types of home electricity data: high-frequency current/voltage waveform data of the two power mains (as well as the voltage signal for a single phase), and lower-frequency power data including the mains and individual, labeled circuits in the house. Its schematic diagram is shown in figure~\ref{fig:REDD}.
+The REDD data set contains two main types of home electricity data: high-frequency current/voltage waveform data of the two power mains (as well as the voltage signal for a single phase), and lower-frequency power data including the mains and individual, labeled circuits in the house. Its schematic diagram is shown in figure~\ref{fig:FH}.
 %The main directory consists of several house directories, each of which contain all the power readings for a single house.  Each house subdirectory consists of a labels and channels files. The labels file helps in matching the channel number with the device name. Each channel file has two columns containing UTC timestamps (as integers) and power readings (recording the apparent power of the circuit) for the channel.
 Experiments reported here use `house 2' data from REDD. This dataset has $318759$ records and $2$ columns. We randomly sample $300$ records for our initial experiment.
 %The time series data of the microwave, dryer, kitchen$\_2$ and refrigerator are plotted below in Figures~\ref{fig:micro}, ~\ref{fig:washer}, ~\ref{fig:kitchen2}, ~\ref{fig:refri}. 
 
 \item \textbf{Dataset 2:} This data represents the energy consumed by the IIIT Delhi's faculty housing building. As a part of research, a team from the institute has installed various temperature, light and motion sensors to perform real world studies and to analyse user preferences for energy conservation. Its schematic diagram is shown in figure~\ref{fig:FH}. For our analysis, we selected $1$ month's historical data ranging from 01-01-2014, 00:01 hours to 31-01-2014, 23:59 hours. The two smart meters installed, captured data from all the $12$ floors. The first meter records readings from ground to $5$th floor generating one stream of data and the second meter generates a stream from $6$th to $11$th. Both these streams are aggregated to obtain the aggregated load of the housing building. The dataset includes timestamp and power consumed in watts. There are $84133$ records in this dataset. We also have the total energy consumed by the faculty housing building which would serve as the ground truth to compare the aggregated load using PoHMMs. 
-%Time series data from two streams are modelled as a product of $k$ HMMs. 
 
-
-%\begin{figure*}[t]
-%\centering
-%\includegraphics[width=0.6\textwidth,height=0.27\textheight]{./REDD_img}
-%\caption{Schematic diagram of REDD}
-%\label{fig:REDD}
-%\end{figure*}
-%
-%\begin{figure*}[t]
-%\centering
-%\includegraphics[width=0.7\textwidth,height=0.23\textheight]{./FHschema}
-%\caption{Schematic diagram of faculty housing building}
-%\label{fig:REDD}
-%\end{figure*}
-
-
-\begin{figure}
-\centering
-\parbox{5cm}{
-\includegraphics[width=5cm]{./REDD_img}
-\caption{Schematic diagram of REDD}
-\label{fig:REDD}}
-\qquad
-\begin{minipage}{5cm}
-\includegraphics[width=5cm]{./FHschema}
-\caption{Schematic diagram of faculty housing building}
-\label{fig:FH}
-\end{minipage}
-\end{figure}
-
-
-
-%\item \textbf{ Time Series :} The time series data of the microwave, dryer, kitchen$\_2$ and refrigerator are plotted below in Figures~\ref{fig:micro}, ~\ref{fig:washer}, ~\ref{fig:kitchen2}, ~\ref{fig:refri}.
-%
-%\begin{figure*}[t]
-%\centering
-%\includegraphics[width=1.0\textwidth,height=0.15\textheight]{channel_6.png}
-%\caption{Microwave}
-%\label{fig:micro}
-%\end{figure*}
-%
-%\begin{figure*}[t]
-%\centering
-%\includegraphics[width=1.0\textwidth,height=0.15\textheight]{channel_7.png}
-%\caption{washer\_dryer}
-%\label{fig:washer}
-%\end{figure*}
-%
-%\begin{figure*}[th]
-%\centering
-%\includegraphics[width=1.0\textwidth,height=0.15\textheight]{channel_8.png}
-%\caption{Kitchen\_2}
-%\label{fig:kitchen2}
-%\end{figure*}
-%
-%\begin{figure*}[th]
-%\centering
-%\includegraphics[width=1.0\textwidth,height=0.15\textheight]{channel_9.png}
-%\caption{refrigerator}
-%\label{fig:refri}
-%\end{figure*}
-%
-%\item \textbf{Code } The implementation of the product of experts model is obtained from Iain Murray's website\footnote{\label{link}http://homepages.inf.ed.ac.uk/imurray2/code/}. It implements the technique described in Geoff Hinton's paper \cite{hinton2000}. 
-%
-%\item \textbf{Additional details }
-%Some additional details regarding experiments:
-%\begin{enumerate}
-%\item The product of HMMs model (PoHMM) minimizes ``contrastive divergence" as described in the paper \cite{hinton2000}. 
-%\item The number of experts, $k$ used here is 15. This is set somewhat arbitrarily and needs to be experimented on.
-%\item Learning rate is $\epsilon = \frac{1}{300}$.
-%\end{enumerate}
- 
+\item \textbf{Dataset 3:} The third dataset that we have used is the Enernoc data set\footnote{http://open.enernoc.com/data/}, which consists of power consumption data from different industrial customers. This contains energy consumption data of 100 industrial consumers from January 2012 to December 2012. In our analysis, we have used 66\% of data for training and 33\% for testing. We are comparing the load forecast by using PoHMMs vs single HMM. The metric used to quantify the similarity between the distribution of both the methods is KL divergence (refer equation\ref{eq:KL}). The comparisons using both the above approaches are done to observe the behaviour at different time scales, number of consumers and type of consumers. Figure~\ref{fig:plot} shows how KL Divergence gets affected with varying data samples and experts for 1 month, 4 months and 6 months data. We can see that KL is 
 \end{itemize}
+
+
+\begin{figure*}
+\centering
+\includegraphics[width=7cm]{./plot1.jpg}
+%\caption{Schematic diagram of REDD}
+%\label{fig:plot1}}
+\includegraphics[width=7cm]{./plot2.jpg}
+\caption{Plots using Enernoc data set}
+\label{fig:plot}
+\end{figure*}
+
 
 \subsection{Problem Formulation}
 The disparate energy data streams collects readings at different time scales. Each of the data stream is modelled as a HMM with cardinality $2$, that is either ON or OFF. The process of aggregating the energy data from different data streams is modelled through PoHMMs. 
@@ -544,56 +431,15 @@ The disparate energy data streams collects readings at different time scales. Ea
 %Different smart meters can send data points when they are collected resulting in inconsistent data including aggregating non-aligned time stamped readings, readings with missing values, repeated values, meter reset readings.
 %We address the problem of learning from disparate data streams (with inconsistencies) by modelling streams as HMMs and the process of aggregating data at the base station as a Product of HMMs. This enables us to perform load forecasting using machine learning techniques.
 Each energy data stream is used to train the model, till the time the objective function, that is contrastive divergence reaches a threshold value. Once the model is trained from a randomly sampled data stream, the parameters learned by the model %(mixing component of each unigauss, means of gaussian bits, log precisions of axis-aligned gaussian bits) 
-are provided to the randomly sampled test set (total energy consumed data) to obtain the conditional probability distribution of the gaussians given the data. Similarly, all the data streams are used for training the model, and the parameters learned are then applied on the test set to obtain the conditional probability of the gaussians given the data. After all the data streams are used to obtain the probability distribution, we use the data stream that correspond to the total energy consumed from the house/ building to train the model and hence obtain the probability distribution P of the gaussians. These probability distributions are then compared with the product of the probability distributions Q obtained from the individual data streams. The evaluation of how well the learning has taken place is done by using a Kullback-Leibler divergence. KL divergence of two probability distributions P and Q, $D_{KL}$(P$\parallel$Q) is the measure of information lost when Q is used to approximate P. Here is a flowchart that shows how the problem is formulated ~\ref{fig:chart}.
+are provided to the randomly sampled test set (total energy consumed data) to obtain the conditional probability distribution of the gaussians given the data. Similarly, all the data streams are used for training the model, and the parameters learned are then applied on the test set to obtain the conditional probability of the gaussians given the data. After all the data streams are used to obtain the probability distribution, we use the data stream that correspond to the total energy consumed from the house/ building to train the model and hence obtain the probability distribution P of the gaussians. These probability distributions are then compared with the product of the probability distributions Q obtained from the individual data streams. The evaluation of how well the learning has taken place is done by using a Kullback-Leibler divergence. KL divergence of two probability distributions P and Q, $D_{KL}$(P$\parallel$Q) is the measure of information lost when Q is used to approximate P. Figure~\ref{fig:problem} shows a flowchart that depicts the problem formulation.
 %Here, P is the real data and Q is a fantasy data. The two probability distributions in the REDD example refer to the expert probabilities in real and fantasy data. 
 %The learned parameters from the training are fitted to the fantasy data to measure the information lost when fantasy data is used to approximate real data.
 \subsubsection{Implementation Details}
 The implementation of the product of hidden Markov model is obtained from Iain Murray's website\footnote{\label{link}http://homepages.inf.ed.ac.uk/imurray2/code/}. It implements the technique described in paper \cite{hinton2000}.
 %Time series data from two appliances are represented as product of $k$ HMMs. It has $11$ channels where each channel corresponds to the following appliance, 1. mains1, 2. mains2, 3. kitchen 1, 4. lighting, 5. stove, 6. microwave, 7. washer dryer, 8. kitchen 2, 9. refrigerator, 10. dishwasher, 11. disposal
 
-\begin{figure*}[th]
-\centering
-\includegraphics[width=0.7\textwidth,height=0.12\textheight]{chart.jpg}
-\caption{Problem Formulation}
-\label{fig:refri}
-\end{figure*}
-
-
-
-%\subsection{Experimental Setup}
-%%Experiments are performed on the REDD which contains $9$ appliances each containing $318759$ rows of energy consumption data. 
-%Experiments are done into $4$ phases, in the first phase the number of data samples are varied corresponding to which the values of KL Divergence and convergence time are noted. In the second phase, the number of experts are varied keeping the best value of the sample from the first phase fixed. In the third phase, number of iterations are varied keeping the best values from above first two phases fixed. In the fourth part, the no. of appliances to be aggregated are varied.
-
-%\begin{table*}[htdp]
-%\begin{center}
-%\begin{tabular}{| c | c | c | c |}
-%\hline
-%Samples & $KL Div$ & $Iterations$& $T(sec)$ \\
-%\hline
-%300 & 2.4864 & 18600 & 186.212 $\pm$9.087  \\
-%500 & 0.6761 & 10200 & 106.564 $\pm$10.046 \\
-%1000 & 1.1088 & 11200 & 158.521 $\pm$1.97  \\
-%1500 & 3.8829 & 5300 & 92.896 $\pm$8.075  \\
-%2000 & 1.8686 & 6900 & 130.98 $\pm$1.932 \\
-%2500 & 0.4733 & 9900 & 215.563 $\pm$ 2.471 \\
-%3000 & 2.8204 & 11000 & 258.213 $\pm1.918$ \\
-%3500 & 1.2332 & 7900 & 204.661 $\pm$1.713 \\
-%4000 & 0.8959 & 10400 & 292.666 $\pm$0.619 \\
-%4500 & 1.1118 & 7200 & 222.558 $\pm$1.967 \\
-%8000 & 6.392 & 8100 & 381.635 $\pm$2.952  \\
-%10000 & 8.276 & 10500 & 887.932 $\pm$13.824  \\
-%15000 & 0.7201 & 9400 & 1368.514 $\pm$13.605  \\
-%\hline
-%\end{tabular}
-%\end{center}
-%\caption{Effect of varying samples (REDD)}
-%\label{table:sample1}
-%\end{table*}
-
-
-
 \begin{table*}[htdp]
-\parbox{.43\linewidth}{
+\parbox{.39\linewidth}{
 \centering
 \begin{tabular}{| c | c | c | c |}
 \hline
@@ -614,10 +460,10 @@ Samples & $KL Div$ & $Iterations$& $T(sec)$ \\
 15000 & 0.7201 & 9400 & 1368.514 $\pm$13.605  \\
 \hline
 \end{tabular}
-\caption{Effect of varying samples (REDD)}
+\caption{Effect of varying the samples (REDD)}
 \label{table:sample1}}
 \hfill
-\parbox{.43\linewidth}{
+\parbox{.65\linewidth}{
 \centering
 \begin{tabular}{| c | c | c | c |}
 \hline
@@ -638,12 +484,48 @@ Samples & $KL Div$  & $Iterations$ & $T(sec)$\\
 4000 & 1.0793 & 43200 & 403  \\
 \hline
 \end{tabular}
-\caption{Effect of varying samples (housing data), KL Div in e-04}
+\caption{Effect of varying the samples (housing data), KL Div in e-04}
 \label{table:sample2}}
 \end{table*}
 
 
 
+\begin{table*}[htdp]
+\parbox{.4\linewidth}{
+\centering
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+Samples & $T_{P}$ & $T_H$ & $Iter_P$ & $Iter_H$ & $KL Div $\\
+\hline
+%300 & 26 & 41 & 5700 & 28200 & 1.04  \\
+600 & 31 & 24 & 5600 & 13100 & 35.01 \\
+1200 & 41 & 15 & 5300 & 5500 & 28.85 \\
+1500 & 68 & 16 & 7700 & 5400 & 47.78  \\
+1800 & 52 & 112 & 5400 & 34300 & 49.72 \\
+2100 & 69 & 40 & 6100 & 11200 & 35.75 \\
+2500 & 83 & 25 & 6900 & 5500 & 12.0329 \\
+\hline
+\end{tabular}
+\caption{Effect of varying the samples (Enernoc)}
+\label{table:sample3}}
+\hfill
+\parbox{.65\linewidth}{
+\centering
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+Experts & $T_P$ & $T_H$ & $Iter_P$& $Iter_H$ & $KL Div $\\
+\hline
+3 & 26 & 41 & 5700 & 28200 & 1.04 \\
+4 & 49 & 153 & 10233 & 98200 & 4.35 \\
+5 & 158 & 36 & 32000 & 22300 & 20.72  \\
+6 & 76 & 10 & 15000 & 6000 & 36.74 \\
+7 & 117 & 2798 & 21000 & 1430000 & 18.445 \\
+9 & 455 & 420 & 70500 & 189000 & 22.04  \\
+\hline
+\end{tabular}
+\caption{Effect of varying the HMMs (Enernoc)}
+\label{table:expert2}}
+\end{table*}
 
 
 
@@ -655,16 +537,9 @@ As per table \ref{table:sample1} and \ref{table:sample2}, there is no linear rel
 In table \ref{table:threshold1} and \ref{table:threshold2}, there is an indirect relationship between threshold and KL divergence value, that is lower the threshold, higher the KL divergence. 
 %Similarly, the relationship between threshold values and iterations/time taken is indirect.
 In table \ref{table:hmm1} and \ref{table:hmm2}, it can be seen that the KL divergence attains its minimum value when the no. of HMMs multiplied are same as the number of data streams aggregated. Hence, the error is minimum when the number of HMMs reaches the number of aggregated data streams, that is when all the appliances in `house 2' (total appliances are $9$) of REDD are used in PoHMMs and when both the data streams of faculty housing building are aggregated together.
-%When all the appliances in `house 2' (total appliances are $9$) of REDD are used in PoHMMs and similarly when both the data streams of faculty housing building are aggregated, the performance is at its best as can be seen in Table \ref{table:hmm1} and \ref{table:hmm2}.
-%The value of KL divergence is minimum when the energy data from all the appliances are aggregated and tested against total energy data. % keeping the threshold value fixed at $0.1$ and no. of appliances fixed at $15$.
-
-%Experiments are done into $4$ phases, in the first phase the number of data samples are varied corresponding to which the values of KL Divergence and convergence time are noted. In the second phase, the number of experts are varied keeping the best value of the sample from the first phase fixed. In the third phase, number of iterations are varied keeping the best values from above first two phases fixed. In the fourth part, the no. of appliances to be aggregated are varied.
-
-%The evaluation of how well the learning has taken place is done by using a Kullback-Leibler divergence. KL divergence of P from Q, $D_{KL}$(P$\parallel$Q) is the measure of information lost when Q is used to approximate P. Here, P is the real data and Q is a fantasy data. The two probability distributions in the REDD example refer to the expert probabilities in real and fantasy data. The learned parameters from the training are fitted to the fantasy data to measure the information lost when fantasy data is used to approximate real data.
-
 
 \begin{table*}[htdp]
-\parbox{.57\linewidth}{
+\parbox{.39\linewidth}{
 \centering
 \begin{tabular}{| c | c | c | c |}
 \hline
@@ -680,7 +555,7 @@ Threshold & $KL Div$ & $Iterations$ & $T(sec)$  \\
 \label{table:threshold1}
 }
 \hfill
-\parbox{.57\linewidth}{
+\parbox{.65\linewidth}{
 \centering
 \begin{tabular}{| c | c | c | c |}
 \hline
@@ -702,7 +577,7 @@ Threshold & $KL Div$ & $Iterations$& $T(sec)$ \\
 
 
 \begin{table*}[htdp]
-\parbox{.45\linewidth}{
+\parbox{.39\linewidth}{
 \centering
 \begin{tabular}{| c | c | c | c |}
 \hline
@@ -720,7 +595,7 @@ HMMs & $KL Div$ & $Iterations$ & $T(sec)$  \\
 \caption{Effect of varying HMMs (REDD)}
 \label{table:hmm1}}
 \hfill
-\parbox{.45\linewidth}{
+\parbox{.65\linewidth}{
 \centering
 \begin{tabular}{| c | c | c | c |}
 \hline
@@ -749,369 +624,438 @@ HMMs & $KL Div$ & Iterations & $T(sec)$\\
 In this paper, we are solving the problem of load aggregation (energy consumption) for disparate energy data sources using the ensemble based learning technique called Product of HMMs. Several challenges are faced while computing the aggregated energy, few of which include non-aligned timestamp readings, missing values, meter reset readings. This technique produces the combined probability distributions of several simpler distributions and then renormalizes this output. The optimisation problem is to minimise the contrastive divergence between the two probability distributions of the data at time $0$ and the data at time $1$ (one-step reconstruction using gibbs sampling). The evaluation of the algorithm is done by computing the KL divergence between the product of the energy data distributions and the total energy data distribution. From the results shown in table \ref{table:hmm1} and \ref{table:hmm2}, we can see that the algorithm has performed best when the number of appliances (REDD) reached the actual number of appliances ($9$) in the house and the number of data streams in case of housing data reached the actual number of streams ($2$) used in the 12 floor faculty housing data. Therefore, this signifies that this algorithm is applicable for this kind of application and can be used for load forecasting.
 
 
-% use section* for acknowledgement
-
 \section*{Acknowledgment}
 The authors would like to thank $EMC^2$ for supporting this research through grant number JRA092014-Q3-5.
 %
 %
 %The authors would like to thank...
 
-
-
 \nocite{Zoha12articlenon-intrusive,CarrieArmel2013213,eps272990,NIPS2010,Rabiner,SS97a,Kawamoto,Diane,Klopfert,Ghahramani,Felice,Shen,taban,Albert,wijaya2014consumer,Zhang,achnata2012long,bassi,samuel,Falvo,Bakirtzis,Chen,Chow,DisaggregationHSMM,KolterJ12,KolterF11,BLTJ:BLTJ21650,Heinzelman00energy,Taylor,NYAS:NYAS5921,
 Wijaya,5620917,1626400,mckerracher,hinton2000,aistats,fhmm,andrew}
 
-% trigger a \newpage just before the given reference
-% number - used to balance the columns on the last page
-% adjust value as needed - may need to be readjusted if
-% the document is modified later
-%\IEEEtriggeratref{8}
-% The "triggered" command can be changed if desired:
-%\IEEEtriggercmd{\enlargethispage{-5in}}
-
-% references section
-
-% can use a bibliography generated by BibTeX as a .bbl file
-% BibTeX documentation can be easily obtained at:
-% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
-% The IEEEtran BibTeX style support page is at:
-% http://www.michaelshell.org/tex/ieeetran/bibtex/
-\bibliographystyle{llncs}
-% argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,IEEEexample}
-\bibliography{typeinst}
 
 
-
-%\subsection{Checking the PDF File}
+%\section{The {\secit Body} of The Paper}
+%Typically, the body of a paper is organized
+%into a hierarchical structure, with numbered or unnumbered
+%headings for sections, subsections, sub-subsections, and even
+%smaller sections.  The command \texttt{{\char'134}section} that
+%precedes this paragraph is part of such a
+%hierarchy.\footnote{This is the second footnote.  It
+%starts a series of three footnotes that add nothing
+%informational, but just give an idea of how footnotes work
+%and look. It is a wordy one, just so you see
+%how a longish one plays out.} \LaTeX\ handles the numbering
+%and placement of these headings for you, when you use
+%the appropriate heading commands around the titles
+%of the headings.  If you want a sub-subsection or
+%smaller part to be unnumbered in your output, simply append an
+%asterisk to the command name.  Examples of both
+%numbered and unnumbered headings will appear throughout the
+%balance of this sample document.
 %
-%Kindly assure that the Contact Volume Editor is given the name and email
-%address of the contact author for your paper. The Contact Volume Editor
-%uses these details to compile a list for our production department at
-%SPS in India. Once the files have been worked upon, SPS sends a copy of
-%the final pdf of each paper to its contact author. The contact author is
-%asked to check through the final pdf to make sure that no errors have
-%crept in during the transfer or preparation of the files. This should
-%not be seen as an opportunity to update or copyedit the papers, which is
-%not possible due to time constraints. Only errors introduced during the
-%preparation of the files will be corrected.
+%Because the entire article is contained in
+%the \textbf{document} environment, you can indicate the
+%start of a new paragraph with a blank line in your
+%input file; that is why this sentence forms a separate paragraph.
 %
-%This round of checking takes place about two weeks after the files have
-%been sent to the Editorial by the Contact Volume Editor, i.e., roughly
-%seven weeks before the start of the conference for conference
-%proceedings, or seven weeks before the volume leaves the printer's, for
-%post-proceedings. If SPS does not receive a reply from a particular
-%contact author, within the timeframe given, then it is presumed that the
-%author has found no errors in the paper. The tight publication schedule
-%of LNCS does not allow SPS to send reminders or search for alternative
-%email addresses on the Internet.
+%\subsection{Type Changes and {\subsecit Special} Characters}
+%We have already seen several typeface changes in this sample.  You
+%can indicate italicized words or phrases in your text with
+%the command \texttt{{\char'134}textit}; emboldening with the
+%command \texttt{{\char'134}textbf}
+%and typewriter-style (for instance, for computer code) with
+%\texttt{{\char'134}texttt}.  But remember, you do not
+%have to indicate typestyle changes when such changes are
+%part of the \textit{structural} elements of your
+%article; for instance, the heading of this subsection will
+%be in a sans serif\footnote{A third footnote, here.
+%Let's make this a rather short one to
+%see how it looks.} typeface, but that is handled by the
+%document class file. Take care with the use
+%of\footnote{A fourth, and last, footnote.}
+%the curly braces in typeface changes; they mark
+%the beginning and end of
+%the text that is to be in the different typeface.
 %
-%In some cases, it is the Contact Volume Editor that checks all the final
-%pdfs. In such cases, the authors are not involved in the checking phase.
+%You can use whatever symbols, accented characters, or
+%non-English characters you need anywhere in your document;
+%you can find a complete list of what is
+%available in the \textit{\LaTeX\
+%User's Guide}\cite{Lamport:LaTeX}.
 %
-%\subsection{Additional Information Required by the Volume Editor}
+%\subsection{Math Equations}
+%You may want to display math equations in three distinct styles:
+%inline, numbered or non-numbered display.  Each of
+%the three are discussed in the next sections.
 %
-%If you have more than one surname, please make sure that the Volume Editor
-%knows how you are to be listed in the author index.
+%\subsubsection{Inline (In-text) Equations}
+%A formula that appears in the running text is called an
+%inline or in-text formula.  It is produced by the
+%\textbf{math} environment, which can be
+%invoked with the usual \texttt{{\char'134}begin. . .{\char'134}end}
+%construction or with the short form \texttt{\$. . .\$}. You
+%can use any of the symbols and structures,
+%from $\alpha$ to $\omega$, available in
+%\LaTeX\cite{Lamport:LaTeX}; this section will simply show a
+%few examples of in-text equations in context. Notice how
+%this equation: \begin{math}\lim_{n\rightarrow \infty}x=0\end{math},
+%set here in in-line math style, looks slightly different when
+%set in display style.  (See next section).
 %
-%\subsection{Copyright Forms}
+%\subsubsection{Display Equations}
+%A numbered display equation -- one set off by vertical space
+%from the text and centered horizontally -- is produced
+%by the \textbf{equation} environment. An unnumbered display
+%equation is produced by the \textbf{displaymath} environment.
 %
-%The copyright form may be downloaded from the ``For Authors"
-%(Information for LNCS Authors) section of the LNCS Website:
-%\texttt{www.springer.com/lncs}. Please send your signed copyright form
-%to the Contact Volume Editor, either as a scanned pdf or by fax or by
-%courier. One author may sign on behalf of all of the other authors of a
-%particular paper. Digital signatures are acceptable.
-%
-%\section{Paper Preparation}
-%
-%Springer provides you with a complete integrated \LaTeX{} document class
-%(\texttt{llncs.cls}) for multi-author books such as those in the LNCS
-%series. Papers not complying with the LNCS style will be reformatted.
-%This can lead to an increase in the overall number of pages. We would
-%therefore urge you not to squash your paper.
-%
-%Please always cancel any superfluous definitions that are
-%not actually used in your text. If you do not, these may conflict with
-%the definitions of the macro package, causing changes in the structure
-%of the text and leading to numerous mistakes in the proofs.
-%
-%If you wonder what \LaTeX{} is and where it can be obtained, see the
-%``\textit{LaTeX project site}'' (\url{http://www.latex-project.org})
-%and especially the webpage ``\textit{How to get it}''
-%(\url{http://www.latex-project.org/ftp.html}) respectively.
-%
-%When you use \LaTeX\ together with our document class file,
-%\texttt{llncs.cls},
-%your text is typeset automatically in Computer Modern Roman (CM) fonts.
-%Please do
-%\emph{not} change the preset fonts. If you have to use fonts other
-%than the preset fonts, kindly submit these with your files.
-%
-%Please use the commands \verb+\label+ and \verb+\ref+ for
-%cross-references and the commands \verb+\bibitem+ and \verb+\cite+ for
-%references to the bibliography, to enable us to create hyperlinks at
-%these places.
-%
-%For preparing your figures electronically and integrating them into
-%your source file we recommend using the standard \LaTeX{} \verb+graphics+ or
-%\verb+graphicx+ package. These provide the \verb+\includegraphics+ command.
-%In general, please refrain from using the \verb+\special+ command.
-%
-%Remember to submit any further style files and
-%fonts you have used together with your source files.
-%
-%\subsubsection{Headings.}
-%
-%Headings should be capitalized
-%(i.e., nouns, verbs, and all other words
-%except articles, prepositions, and conjunctions should be set with an
-%initial capital) and should,
-%with the exception of the title, be aligned to the left.
-%Words joined by a hyphen are subject to a special rule. If the first
-%word can stand alone, the second word should be capitalized.
-%
-%Here are some examples of headings: ``Criteria to Disprove
-%Context-Freeness of Collage Language", ``On Correcting the Intrusion of
-%Tracing Non-deterministic Programs by Software", ``A User-Friendly and
-%Extendable Data Distribution System", ``Multi-flip Networks:
-%Parallelizing GenSAT", ``Self-determinations of Man".
-%
-%\subsubsection{Lemmas, Propositions, and Theorems.}
-%
-%The numbers accorded to lemmas, propositions, and theorems, etc. should
-%appear in consecutive order, starting with Lemma 1, and not, for
-%example, with Lemma 11.
-%
-%\subsection{Figures}
-%
-%For \LaTeX\ users, we recommend using the \emph{graphics} or \emph{graphicx}
-%package and the \verb+\includegraphics+ command.
-%
-%Please check that the lines in line drawings are not
-%interrupted and are of a constant width. Grids and details within the
-%figures must be clearly legible and may not be written one on top of
-%the other. Line drawings should have a resolution of at least 800 dpi
-%(preferably 1200 dpi). The lettering in figures should have a height of
-%2~mm (10-point type). Figures should be numbered and should have a
-%caption which should always be positioned \emph{under} the figures, in
-%contrast to the caption belonging to a table, which should always appear
-%\emph{above} the table; this is simply achieved as matter of sequence in
-%your source.
-%
-%Please center the figures or your tabular material by using the \verb+\centering+
-%declaration. Short captions are centered by default between the margins
-%and typeset in 9-point type (Fig.~\ref{fig:example} shows an example).
-%The distance between text and figure is preset to be about 8~mm, the
-%distance between figure and caption about 6~mm.
-%
-%To ensure that the reproduction of your illustrations is of a reasonable
-%quality, we advise against the use of shading. The contrast should be as
-%pronounced as possible.
-%
-%If screenshots are necessary, please make sure that you are happy with
-%the print quality before you send the files.
-
-%\begin{figure}
-%\centering
-%\includegraphics[height=6.2cm]{/Users/meghagupta/Downloads/eijkel2}
-%\caption{One kernel}
-%\label{fig:example}
-%\end{figure}
-
-%Please define figures (and tables) as floating objects. Please avoid
-%using optional location parameters like ``\verb+[h]+" for ``here".
-%
-%\paragraph{Remark 1.}
-%
-%In the printed volumes, illustrations are generally black and white
-%(halftones), and only in exceptional cases, and if the author is
-%prepared to cover the extra cost for color reproduction, are colored
-%pictures accepted. Colored pictures are welcome in the electronic
-%version free of charge. If you send colored figures that are to be
-%printed in black and white, please make sure that they really are
-%legible in black and white. Some colors as well as the contrast of
-%converted colors show up very poorly when printed in black and white.
-%
-%\subsection{Formulas}
-%
-%Displayed equations or formulas are centered and set on a separate
-%line (with an extra line or halfline space above and below). Displayed
-%expressions should be numbered for reference. The numbers should be
-%consecutive within each section or within the contribution,
-%with numbers enclosed in parentheses and set on the right margin --
-%which is the default if you use the \emph{equation} environment, e.g.,
-%\begin{equation}
-%  \psi (u) = \int_{o}^{T} \left[\frac{1}{2}
-%  \left(\Lambda_{o}^{-1} u,u\right) + N^{\ast} (-u)\right] dt \;  .
-%\end{equation}
-%
-%Equations should be punctuated in the same way as ordinary
-%text but with a small space before the end punctuation mark.
-%
-%\subsection{Footnotes}
-%
-%The superscript numeral used to refer to a footnote appears in the text
-%either directly after the word to be discussed or -- in relation to a
-%phrase or a sentence -- following the punctuation sign (comma,
-%semicolon, or period). Footnotes should appear at the bottom of
-%the
-%normal text area, with a line of about 2~cm set
-%immediately above them.\footnote{The footnote numeral is set flush left
-%and the text follows with the usual word spacing.}
-%
-%\subsection{Program Code}
-%
-%Program listings or program commands in the text are normally set in
-%typewriter font, e.g., CMTT10 or Courier.
-%
-%\medskip
-%
-%\noindent
-%{\it Example of a Computer Program}
-%\begin{verbatim}
-%program Inflation (Output)
-%  {Assuming annual inflation rates of 7%, 8%, and 10%,...
-%   years};
-%   const
-%     MaxYears = 10;
-%   var
-%     Year: 0..MaxYears;
-%     Factor1, Factor2, Factor3: Real;
-%   begin
-%     Year := 0;
-%     Factor1 := 1.0; Factor2 := 1.0; Factor3 := 1.0;
-%     WriteLn('Year  7% 8% 10%'); WriteLn;
-%     repeat
-%       Year := Year + 1;
-%       Factor1 := Factor1 * 1.07;
-%       Factor2 := Factor2 * 1.08;
-%       Factor3 := Factor3 * 1.10;
-%       WriteLn(Year:5,Factor1:7:3,Factor2:7:3,Factor3:7:3)
-%     until Year = MaxYears
-%end.
-%\end{verbatim}
-%%
-%\noindent
-%{\small (Example from Jensen K., Wirth N. (1991) Pascal user manual and
-%report. Springer, New York)}
+%Again, in either environment, you can use any of the symbols
+%and structures available in \LaTeX; this section will just
+%give a couple of examples of display equations in context.
+%First, consider the equation, shown as an inline equation above:
+%\begin{equation}\lim_{n\rightarrow \infty}x=0\end{equation}
+%Notice how it is formatted somewhat differently in
+%the \textbf{displaymath}
+%environment.  Now, we'll enter an unnumbered equation:
+%\begin{displaymath}\sum_{i=0}^{\infty} x + 1\end{displaymath}
+%and follow it with another numbered equation:
+%\begin{equation}\sum_{i=0}^{\infty}x_i=\int_{0}^{\pi+2} f\end{equation}
+%just to demonstrate \LaTeX's able handling of numbering.
 %
 %\subsection{Citations}
+%Citations to articles \cite{bowman:reasoning, clark:pct, braams:babel, herlihy:methodology},
+%conference
+%proceedings \cite{clark:pct} or books \cite{salas:calculus, Lamport:LaTeX} listed
+%in the Bibliography section of your
+%article will occur throughout the text of your article.
+%You should use BibTeX to automatically produce this bibliography;
+%you simply need to insert one of several citation commands with
+%a key of the item cited in the proper location in
+%the \texttt{.tex} file \cite{Lamport:LaTeX}.
+%The key is a short reference you invent to uniquely
+%identify each work; in this sample document, the key is
+%the first author's surname and a
+%word from the title.  This identifying key is included
+%with each item in the \texttt{.bib} file for your article.
 %
-%For citations in the text please use
-%square brackets and consecutive numbers: \cite{jour}, \cite{lncschap},
-%\cite{proceeding1} -- provided automatically
-%by \LaTeX 's \verb|\cite| \dots\verb|\bibitem| mechanism.
+%The details of the construction of the \texttt{.bib} file
+%are beyond the scope of this sample document, but more
+%information can be found in the \textit{Author's Guide},
+%and exhaustive details in the \textit{\LaTeX\ User's
+%Guide}\cite{Lamport:LaTeX}.
 %
-%\subsection{Page Numbering and Running Heads}
+%This article shows only the plainest form
+%of the citation command, using \texttt{{\char'134}cite}.
+%This is what is stipulated in the SIGS style specifications.
+%No other citation format is endorsed.
 %
-%There is no need to include page numbers. If your paper title is too
-%long to serve as a running head, it will be shortened. Your suggestion
-%as to how to shorten it would be most welcome.
+%\subsection{Tables}
+%Because tables cannot be split across pages, the best
+%placement for them is typically the top of the page
+%nearest their initial cite.  To
+%ensure this proper ``floating'' placement of tables, use the
+%environment \textbf{table} to enclose the table's contents and
+%the table caption.  The contents of the table itself must go
+%in the \textbf{tabular} environment, to
+%be aligned properly in rows and columns, with the desired
+%horizontal and vertical rules.  Again, detailed instructions
+%on \textbf{tabular} material
+%is found in the \textit{\LaTeX\ User's Guide}.
 %
-%\section{LNCS Online}
+%Immediately following this sentence is the point at which
+%Table 1 is included in the input file; compare the
+%placement of the table here with the table in the printed
+%dvi output of this document.
 %
-%The online version of the volume will be available in LNCS Online.
-%Members of institutes subscribing to the Lecture Notes in Computer
-%Science series have access to all the pdfs of all the online
-%publications. Non-subscribers can only read as far as the abstracts. If
-%they try to go beyond this point, they are automatically asked, whether
-%they would like to order the pdf, and are given instructions as to how
-%to do so.
+%\begin{table}
+%\centering
+%\caption{Frequency of Special Characters}
+%\begin{tabular}{|c|c|l|} \hline
+%Non-English or Math&Frequency&Comments\\ \hline
+%\O & 1 in 1,000& For Swedish names\\ \hline
+%$\pi$ & 1 in 5& Common in math\\ \hline
+%\$ & 4 in 5 & Used in business\\ \hline
+%$\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
+%\hline\end{tabular}
+%\end{table}
 %
-%Please note that, if your email address is given in your paper,
-%it will also be included in the meta data of the online version.
-%
-%\section{BibTeX Entries}
-%
-%The correct BibTeX entries for the Lecture Notes in Computer Science
-%volumes can be found at the following Website shortly after the
-%publication of the book:
-%\url{http://www.informatik.uni-trier.de/~ley/db/journals/lncs.html}
-%
-%\subsubsection*{Acknowledgments.} The heading should be treated as a
-%subsubsection heading and should not be assigned a number.
-%
-%\section{The References Section}\label{references}
-%
-%In order to permit cross referencing within LNCS-Online, and eventually
-%between different publishers and their online databases, LNCS will,
-%from now on, be standardizing the format of the references. This new
-%feature will increase the visibility of publications and facilitate
-%academic research considerably. Please base your references on the
-%examples below. References that don't adhere to this style will be
-%reformatted by Springer. You should therefore check your references
-%thoroughly when you receive the final pdf of your paper.
-%The reference section must be complete. You may not omit references.
-%Instructions as to where to find a fuller version of the references are
-%not permissible.
-%
-%We only accept references written using the latin alphabet. If the title
-%of the book you are referring to is in Russian or Chinese, then please write
-%(in Russian) or (in Chinese) at the end of the transcript or translation
-%of the title.
-%
-%The following section shows a sample reference list with entries for
-%journal articles \cite{jour}, an LNCS chapter \cite{lncschap}, a book
-%\cite{book}, proceedings without editors \cite{proceeding1} and
-%\cite{proceeding2}, as well as a URL \cite{url}.
-%Please note that proceedings published in LNCS are not cited with their
-%full titles, but with their acronyms!
-%
-%\begin{thebibliography}{4}
-%
-%\bibitem{jour} Smith, T.F., Waterman, M.S.: Identification of Common Molecular
-%Subsequences. J. Mol. Biol. 147, 195--197 (1981)
-%
-%\bibitem{lncschap} May, P., Ehrlich, H.C., Steinke, T.: ZIB Structure Prediction Pipeline:
-%Composing a Complex Biological Workflow through Web Services. In: Nagel,
-%W.E., Walter, W.V., Lehner, W. (eds.) Euro-Par 2006. LNCS, vol. 4128,
-%pp. 1148--1158. Springer, Heidelberg (2006)
-%
-%\bibitem{book} Foster, I., Kesselman, C.: The Grid: Blueprint for a New Computing
-%Infrastructure. Morgan Kaufmann, San Francisco (1999)
-%
-%\bibitem{proceeding1} Czajkowski, K., Fitzgerald, S., Foster, I., Kesselman, C.: Grid
-%Information Services for Distributed Resource Sharing. In: 10th IEEE
-%International Symposium on High Performance Distributed Computing, pp.
-%181--184. IEEE Press, New York (2001)
-%
-%\bibitem{proceeding2} Foster, I., Kesselman, C., Nick, J., Tuecke, S.: The Physiology of the
-%Grid: an Open Grid Services Architecture for Distributed Systems
-%Integration. Technical report, Global Grid Forum (2002)
-%
-%\bibitem{url} National Center for Biotechnology Information, \url{http://www.ncbi.nlm.nih.gov}
-%
-%\end{thebibliography}
+%To set a wider table, which takes up the whole width of
+%the page's live area, use the environment
+%\textbf{table*} to enclose the table's contents and
+%the table caption.  As with a single-column table, this wide
+%table will ``float" to a location deemed more desirable.
+%Immediately following this sentence is the point at which
+%Table 2 is included in the input file; again, it is
+%instructive to compare the placement of the
+%table here with the table in the printed dvi
+%output of this document.
 %
 %
-%\section*{Appendix: Springer-Author Discount}
+%\begin{table*}
+%\centering
+%\caption{Some Typical Commands}
+%\begin{tabular}{|c|c|l|} \hline
+%Command&A Number&Comments\\ \hline
+%\texttt{{\char'134}alignauthor} & 100& Author alignment\\ \hline
+%\texttt{{\char'134}numberofauthors}& 200& Author enumeration\\ \hline
+%\texttt{{\char'134}table}& 300 & For tables\\ \hline
+%\texttt{{\char'134}table*}& 400& For wider tables\\ \hline\end{tabular}
+%\end{table*}
+%% end the environment with {table*}, NOTE not {table}!
 %
-%LNCS authors are entitled to a 33.3\% discount off all Springer
-%publications. Before placing an order, the author should send an email, 
-%giving full details of his or her Springer publication,
-%to \url{orders-HD-individuals@springer.com} to obtain a so-called token. This token is a
-%number, which must be entered when placing an order via the Internet, in
-%order to obtain the discount.
+%\subsection{Figures}
+%Like tables, figures cannot be split across pages; the
+%best placement for them
+%is typically the top or the bottom of the page nearest
+%their initial cite.  To ensure this proper ``floating'' placement
+%of figures, use the environment
+%\textbf{figure} to enclose the figure and its caption.
 %
-%\section{Checklist of Items to be Sent to Volume Editors}
-%Here is a checklist of everything the volume editor requires from you:
+%This sample document contains examples of \textbf{.eps}
+%and \textbf{.ps} files to be displayable with \LaTeX.  More
+%details on each of these is found in the \textit{Author's Guide}.
+%
+%%\begin{figure}
+%%\centering
+%%\epsfig{file=fly.eps}
+%%\caption{A sample black and white graphic (.eps format).}
+%%\end{figure}
+%%
+%%\begin{figure}
+%%\centering
+%%\epsfig{file=fly.eps, height=1in, width=1in}
+%%\caption{A sample black and white graphic (.eps format)
+%%that has been resized with the \texttt{epsfig} command.}
+%%\end{figure}
 %
 %
-%\begin{itemize}
-%\settowidth{\leftmargin}{{\Large$\square$}}\advance\leftmargin\labelsep
-%\itemsep8pt\relax
-%\renewcommand\labelitemi{{\lower1.5pt\hbox{\Large$\square$}}}
+%As was the case with tables, you may want a figure
+%that spans two columns.  To do this, and still to
+%ensure proper ``floating'' placement of tables, use the environment
+%\textbf{figure*} to enclose the figure and its caption.
 %
-%\item The final \LaTeX{} source files
-%\item A final PDF file
-%\item A copyright form, signed by one author on behalf of all of the
-%authors of the paper.
-%\item A readme giving the name and email address of the
-%corresponding author.
-%\end{itemize}
+%Note that either {\textbf{.ps}} or {\textbf{.eps}} formats are
+%used; use
+%the \texttt{{\char'134}epsfig} or \texttt{{\char'134}psfig}
+%commands as appropriate for the different file types.
+%
+%\subsection{Theorem-like Constructs}
+%Other common constructs that may occur in your article are
+%the forms for logical constructs like theorems, axioms,
+%corollaries and proofs.  There are
+%two forms, one produced by the
+%command \texttt{{\char'134}newtheorem} and the
+%other by the command \texttt{{\char'134}newdef}; perhaps
+%the clearest and easiest way to distinguish them is
+%to compare the two in the output of this sample document:
+%
+%This uses the \textbf{theorem} environment, created by
+%the\linebreak\texttt{{\char'134}newtheorem} command:
+%\newtheorem{theorem}{Theorem}
+%\begin{theorem}
+%Let $f$ be continuous on $[a,b]$.  If $G$ is
+%an antiderivative for $f$ on $[a,b]$, then
+%\begin{displaymath}\int^b_af(t)dt = G(b) - G(a).\end{displaymath}
+%\end{theorem}
+%
+%The other uses the \textbf{definition} environment, created
+%by the \texttt{{\char'134}newdef} command:
+%\newdef{definition}{Definition}
+%\begin{definition}
+%If $z$ is irrational, then by $e^z$ we mean the
+%unique number which has
+%logarithm $z$: \begin{displaymath}{\log e^z = z}\end{displaymath}
+%\end{definition}
+%
+%%\begin{figure}
+%%\centering
+%%\psfig{file=rosette.ps, height=1in, width=1in,}
+%%\caption{A sample black and white graphic (.ps format) that has
+%%been resized with the \texttt{psfig} command.}
+%%\end{figure}
+%
+%Two lists of constructs that use one of these
+%forms is given in the
+%\textit{Author's  Guidelines}.
+%
+%%\begin{figure*}
+%%\centering
+%%\epsfig{file=flies.eps}
+%%\caption{A sample black and white graphic (.eps format)
+%%that needs to span two columns of text.}
+%%\end{figure*}
+%and don't forget to end the environment with
+%{figure*}, not {figure}!
+% 
+%There is one other similar construct environment, which is
+%already set up
+%for you; i.e. you must \textit{not} use
+%a \texttt{{\char'134}newdef} command to
+%create it: the \textbf{proof} environment.  Here
+%is a example of its use:
+%\begin{proof}
+%Suppose on the contrary there exists a real number $L$ such that
+%\begin{displaymath}
+%\lim_{x\rightarrow\infty} \frac{f(x)}{g(x)} = L.
+%\end{displaymath}
+%Then
+%\begin{displaymath}
+%l=\lim_{x\rightarrow c} f(x)
+%= \lim_{x\rightarrow c}
+%\left[ g{x} \cdot \frac{f(x)}{g(x)} \right ]
+%= \lim_{x\rightarrow c} g(x) \cdot \lim_{x\rightarrow c}
+%\frac{f(x)}{g(x)} = 0\cdot L = 0,
+%\end{displaymath}
+%which contradicts our assumption that $l\neq 0$.
+%\end{proof}
+%
+%Complete rules about using these environments and using the
+%two different creation commands are in the
+%\textit{Author's Guide}; please consult it for more
+%detailed instructions.  If you need to use another construct,
+%not listed therein, which you want to have the same
+%formatting as the Theorem
+%or the Definition\cite{salas:calculus} shown above,
+%use the \texttt{{\char'134}newtheorem} or the
+%\texttt{{\char'134}newdef} command,
+%respectively, to create it.
+%
+%\subsection*{A {\secit Caveat} for the \TeX\ Expert}
+%Because you have just been given permission to
+%use the \texttt{{\char'134}newdef} command to create a
+%new form, you might think you can
+%use \TeX's \texttt{{\char'134}def} to create a
+%new command: \textit{Please refrain from doing this!}
+%Remember that your \LaTeX\ source code is primarily intended
+%to create camera-ready copy, but may be converted
+%to other forms -- e.g. HTML. If you inadvertently omit
+%some or all of the \texttt{{\char'134}def}s recompilation will
+%be, to say the least, problematic.
+%
+%\section{Conclusions}
+%This paragraph will end the body of this sample document.
+%Remember that you might still have Acknowledgments or
+%Appendices; brief samples of these
+%follow.  There is still the Bibliography to deal with; and
+%we will make a disclaimer about that here: with the exception
+%of the reference to the \LaTeX\ book, the citations in
+%this paper are to articles which have nothing to
+%do with the present subject and are used as
+%examples only.
+%%\end{document}  % This is where a 'short' article might terminate
+%
+%%ACKNOWLEDGMENTS are optional
+%\section{Acknowledgments}
+%This section is optional; it is a location for you
+%to acknowledge grants, funding, editing assistance and
+%what have you.  In the present case, for example, the
+%authors would like to thank Gerald Murray of ACM for
+%his help in codifying this \textit{Author's Guide}
+%and the \textbf{.cls} and \textbf{.tex} files that it describes.
+%
 
 
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{sigproc-sp}  % sigproc.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+%
+% ACM needs 'a single self-contained file'!
+%
+%APPENDICES are optional
+%\balancecolumns
+%\appendix
+%%%Appendix A
+%\section{Results from Enernoc dataset}
+%
+%\begin{table*}[htdp]
+%\parbox{.4\linewidth}{
+%\centering
+%\begin{tabular}{| c | c | c | c | c | c |}
+%\hline
+%Samples & $T_{P}$ & $T_H$ & $Iter_P$ & $Iter_H$ & $KL Div $\\
+%\hline
+%%300 & 26 & 41 & 5700 & 28200 & 1.04  \\
+%600 & 31 & 24 & 5600 & 13100 & 35.01 \\
+%1200 & 41 & 15 & 5300 & 5500 & 28.85 \\
+%1500 & 68 & 16 & 7700 & 5400 & 47.78  \\
+%1800 & 52 & 112 & 5400 & 34300 & 49.72 \\
+%2100 & 69 & 40 & 6100 & 11200 & 35.75 \\
+%2500 & 83 & 25 & 6900 & 5500 & 12.0329 \\
+%\hline
+%\end{tabular}
+%\caption{Effect of varying the samples (Enernoc)}
+%\label{table:sample3}}
+%\hfill
+%\parbox{.65\linewidth}{
+%\centering
+%\begin{tabular}{| c | c | c | c | c | c |}
+%\hline
+%Experts & $T_P$ & $T_H$ & $Iter_P$& $Iter_H$ & $KL Div $\\
+%\hline
+%3 & 26 & 41 & 5700 & 28200 & 1.04 \\
+%4 & 49 & 153 & 10233 & 98200 & 4.35 \\
+%5 & 158 & 36 & 32000 & 22300 & 20.72  \\
+%6 & 76 & 10 & 15000 & 6000 & 36.74 \\
+%7 & 117 & 2798 & 21000 & 1430000 & 18.445 \\
+%9 & 455 & 420 & 70500 & 189000 & 22.04  \\
+%\hline
+%\end{tabular}
+%\caption{Effect of varying the HMMs (Enernoc)}
+%\label{table:expert2}}
+%\end{table*}
+
+
+%The rules about hierarchical headings discussed above for
+%the body of the article are different in the appendices.
+%In the \textbf{appendix} environment, the command
+%\textbf{section} is used to
+%indicate the start of each Appendix, with alphabetic order
+%designation (i.e. the first is A, the second B, etc.) and
+%a title (if you include one).  So, if you need
+%hierarchical structure
+%\textit{within} an Appendix, start with \textbf{subsection} as the
+%highest level. Here is an outline of the body of this
+%document in Appendix-appropriate form:
+%\subsection{Introduction}
+%\subsection{The Body of the Paper}
+%\subsubsection{Type Changes and  Special Characters}
+%\subsubsection{Math Equations}
+%\paragraph{Inline (In-text) Equations}
+%\paragraph{Display Equations}
+%\subsubsection{Citations}
+%\subsubsection{Tables}
+%\subsubsection{Figures}
+%\subsubsection{Theorem-like Constructs}
+%\subsubsection*{A Caveat for the \TeX\ Expert}
+%\subsection{Conclusions}
+%\subsection{Acknowledgments}
+%\subsection{Additional Authors}
+%This section is inserted by \LaTeX; you do not insert it.
+%You just add the names and information in the
+%\texttt{{\char'134}additionalauthors} command at the start
+%of the document.
+%\subsection{References}
+%Generated by bibtex from your ~.bib file.  Run latex,
+%then bibtex, then latex twice (to resolve references)
+%to create the ~.bbl file.  Insert that ~.bbl file into
+%the .tex source file and comment out
+%the command \texttt{{\char'134}thebibliography}.
+%% This next section command marks the start of
+%% Appendix B, and does not continue the present hierarchy
+%\section{More Help for the Hardy}
+%The acm\_proc\_article-sp document class file itself is chock-full of succinct
+%and helpful comments.  If you consider yourself a moderately
+%experienced to expert user of \LaTeX, you may find reading
+%it useful but please remember not to change it.
+%\balancecolumns
+% That's all folks!
 
 \end{document}
