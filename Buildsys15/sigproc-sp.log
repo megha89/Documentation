@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  23 JUL 2015 21:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  24 JUL 2015 18:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -185,7 +185,11 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
-))) (./sigproc-sp.aux)
+))) (./sigproc-sp.aux
+
+LaTeX Warning: Label `table:expert2' multiply defined.
+
+)
 \openout1 = `sigproc-sp.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -200,7 +204,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
-(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
 \scratchdimen=\dimen123
@@ -282,29 +286,6 @@ prod-
  []
 
 
-LaTeX Warning: Citation `Klopfert' on page \thepage  undefined on input line 19
-1.
-
-
-LaTeX Warning: Citation `mckerracher' on page \thepage  undefined on input line
- 193.
-
-
-LaTeX Warning: Citation `1626400' on page \thepage  undefined on input line 198
-.
-
-
-LaTeX Warning: Citation `5620917' on page \thepage  undefined on input line 198
-.
-
-
-LaTeX Warning: Citation `Wijaya' on page \thepage  undefined on input line 198.
-
-
-
-LaTeX Warning: Citation `Diane' on page \thepage  undefined on input line 202.
-
-
 Overfull \hbox (2.66219pt too wide) in paragraph at lines 197--203
 \T1/aer/m/n/9 prob-lem of en-ergy con-sump-tion and de-mand fore-cast-ing anal-
 
@@ -319,119 +300,15 @@ Overfull \hbox (2.28433pt too wide) in paragraph at lines 197--203
 
 
 ]
-
-LaTeX Warning: Citation `Taylor' on page \thepage  undefined on input line 210.
-
-
-
-LaTeX Warning: Citation `andrew' on page \thepage  undefined on input line 210.
-
-
-
-LaTeX Warning: Reference `related' on page \thepage  undefined on input line 21
-9.
-
-
-LaTeX Warning: Reference `sec:review' on page \thepage  undefined on input line
- 219.
-
-
-LaTeX Warning: Reference `poc' on page \thepage  undefined on input line 219.
-
-
-LaTeX Warning: Reference `conclusion' on page \thepage  undefined on input line
- 219.
-
-
-LaTeX Warning: Citation `Heinzelman00energy' on page \thepage  undefined on inp
-ut line 229.
-
-
-LaTeX Warning: Citation `taban' on page \thepage  undefined on input line 231.
-
-
-LaTeX Warning: Citation `eps272990' on page \thepage  undefined on input line 2
-42.
-
-
-LaTeX Warning: Citation `DisaggregationHSMM' on page \thepage  undefined on inp
-ut line 242.
-
-
-LaTeX Warning: Citation `NIPS2010' on page \thepage  undefined on input line 24
-2.
-
-
-LaTeX Warning: Citation `KolterJ12' on page \thepage  undefined on input line 2
-42.
-
-
-LaTeX Warning: Citation `Zoha12articlenon-intrusive' on page \thepage  undefine
-d on input line 242.
-
 <chart.jpg, id=12, 584.1825pt x 187.70125pt>
 File: chart.jpg Graphic file (type jpg)
  <use chart.jpg>
 Package pdftex.def Info: chart.jpg used on input line 246.
 (pdftex.def)             Requested size: 302.41281pt x 79.91661pt.
 
-
-LaTeX Warning: Citation `Bakirtzis' on page \thepage  undefined on input line 2
-53.
-
-
-LaTeX Warning: Citation `Chen' on page \thepage  undefined on input line 253.
-
-
-LaTeX Warning: Citation `Chow' on page \thepage  undefined on input line 253.
-
-
-LaTeX Warning: Citation `Falvo' on page \thepage  undefined on input line 254.
-
-
-LaTeX Warning: Citation `bassi' on page \thepage  undefined on input line 254.
-
-
-LaTeX Warning: Citation `samuel' on page \thepage  undefined on input line 254.
-
-
-
-LaTeX Warning: Citation `achnata2012long' on page \thepage  undefined on input 
-line 255.
-
-
-LaTeX Warning: Citation `Zhang' on page \thepage  undefined on input line 257.
-
-
-LaTeX Warning: Reference `fig:problem' on page \thepage  undefined on input lin
-e 258.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-
-LaTeX Warning: Citation `CarrieArmel2013213' on page \thepage  undefined on inp
-ut line 261.
-
-
-LaTeX Warning: Citation `wijaya2014consumer' on page \thepage  undefined on inp
-ut line 261.
-
-
-LaTeX Warning: Citation `Albert' on page \thepage  undefined on input line 261.
-
-
-
-LaTeX Warning: Citation `Shen' on page \thepage  undefined on input line 267.
-
-
-LaTeX Warning: Citation `Felice' on page \thepage  undefined on input line 268.
-
-
-
-LaTeX Warning: Citation `fhmm' on page \thepage  undefined on input line 269.
-
 <hmm1.jpg, id=19, 217.81375pt x 207.77625pt>
 File: hmm1.jpg Graphic file (type jpg)
  <use hmm1.jpg>
@@ -449,62 +326,15 @@ File: product.jpg Graphic file (type jpg)
  <use product.jpg>
 Package pdftex.def Info: product.jpg used on input line 278.
 (pdftex.def)             Requested size: 85.35959pt x 85.35544pt.
-
-
-LaTeX Warning: Citation `Ghahramani' on page \thepage  undefined on input line 
-302.
-
-
-LaTeX Warning: Citation `Rabiner' on page \thepage  undefined on input line 302
-.
-
-
-LaTeX Warning: Citation `Rabiner' on page \thepage  undefined on input line 303
-.
-
-
-LaTeX Warning: Reference `fig:HMMs' on page \thepage  undefined on input line 3
-10.
-
-
-LaTeX Warning: Reference `table:timestamp' on page \thepage  undefined on input
- line 310.
-
-
-LaTeX Warning: Reference `table:timestamp' on page \thepage  undefined on input
- line 310.
-
-
-Overfull \hbox (11.80351pt too wide) in paragraph at lines 302--311
-\T1/aer/m/n/9 model $\OML/cmm/m/it/9 ^^U$ \T1/aer/m/n/9 = {A, B, $\OML/cmm/m/it
-/9 ^^Y$ \T1/aer/m/n/9 }, and ob-ser-va-tion se-quence Y = {$\OML/cmm/m/it/9 y[]
-$\T1/aer/m/n/9 ,...,$\OML/cmm/m/it/9 y[]$\T1/aer/m/n/9 },
- []
-
-[3 <./chart.jpg>]
-
-LaTeX Warning: Reference `eq:pohmm' on page \thepage  undefined on input line 3
-15.
-
+ [3 <./chart.jpg>]
 
 LaTeX Warning: Reference `fig:product' on page \thepage  undefined on input lin
 e 317.
 
 
-Underfull \vbox (badness 3229) has occurred while \output is active []
-
-
 Overfull \hbox (16.61752pt too wide) in paragraph at lines 327--327
 []\secfnt Training the model by min-imis-ing con-trastive
  []
-
-
-LaTeX Warning: Reference `eq:KL' on page \thepage  undefined on input line 329.
-
-
-
-LaTeX Warning: Reference `fig:gibbs' on page \thepage  undefined on input line 
-336.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 336--337
@@ -517,347 +347,128 @@ File: gibbs.jpg Graphic file (type jpg)
 Package pdftex.def Info: gibbs.jpg used on input line 340.
 (pdftex.def)             Requested size: 298.75075pt x 85.3579pt.
 
-
-LaTeX Warning: Reference `fig:gibbs' on page \thepage  undefined on input line 
-345.
-
-
-LaTeX Warning: Reference `eq:gradient' on page \thepage  undefined on input lin
-e 345.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 345--346
 
  []
 
 [4 <./hmm1.jpg> <./hmm2.jpg> <./product.jpg>]
-
-LaTeX Warning: Reference `eq:CD' on page \thepage  undefined on input line 353.
-
-
-
-LaTeX Warning: Reference `eq:CD' on page \thepage  undefined on input line 359.
-
-
-
-LaTeX Warning: Reference `eq:params' on page \thepage  undefined on input line 
-359.
-
-
-Overfull \hbox (5.65073pt too wide) in paragraph at lines 367--368
-[]\T1/aer/m/n/9 The con-trastive di-ver-gence al-go-rithm for train-ing the PoH
-MM
- []
-
-
-LaTeX Warning: Reference `eq:params' on page \thepage  undefined on input line 
-393.
-
-
-Overfull \hbox (31.95122pt too wide) in paragraph at lines 402--402
+Overfull \hbox (31.95122pt too wide) in paragraph at lines 386--386
 []\secfnt APPLICATIONS US-ING PROD-UCT OF HMMS 
  []
 
 <./REDD_img.jpg, id=33, 473.77pt x 405.515pt>
 File: ./REDD_img.jpg Graphic file (type jpg)
  <use ./REDD_img.jpg>
-Package pdftex.def Info: ./REDD_img.jpg used on input line 411.
+Package pdftex.def Info: ./REDD_img.jpg used on input line 395.
 (pdftex.def)             Requested size: 170.71652pt x 146.1214pt.
 
 <./FHschema.jpg, id=34, 503.8825pt x 251.94125pt>
 File: ./FHschema.jpg Graphic file (type jpg)
  <use ./FHschema.jpg>
-Package pdftex.def Info: ./FHschema.jpg used on input line 413.
+Package pdftex.def Info: ./FHschema.jpg used on input line 397.
 (pdftex.def)             Requested size: 199.16928pt x 99.58298pt.
 
-
-LaTeX Warning: Reference `fig:FH' on page \thepage  undefined on input line 422
-.
-
-
-Overfull \hbox (4.17497pt too wide) in paragraph at lines 420--426
+Overfull \hbox (4.17497pt too wide) in paragraph at lines 404--410
 []\T1/aer/bx/n/9 Dataset 1: \T1/aer/m/n/9 The Ref-er-ence En-ergy Dis-ag-gre-ga
 -tion Data
  []
 
-[5 <./gibbs.jpg>]
+[5 <./gibbs.jpg>] <./plot4.jpg, id=40, 444.66125pt x 310.15875pt>
+File: ./plot4.jpg Graphic file (type jpg)
 
-LaTeX Warning: Reference `fig:FH' on page \thepage  undefined on input line 427
-.
+<use ./plot4.jpg>
+Package pdftex.def Info: ./plot4.jpg used on input line 515.
+(pdftex.def)             Requested size: 199.16928pt x 138.92177pt.
+ <./plot5.jpg, id=41, 389.455pt x 271.0125pt>
+File: ./plot5.jpg Graphic file (type jpg)
 
+<use ./plot5.jpg>
+Package pdftex.def Info: ./plot5.jpg used on input line 516.
+(pdftex.def)             Requested size: 199.16928pt x 138.59499pt.
+ <./plot3.jpg, id=42, 290.08376pt x 199.74625pt>
+File: ./plot3.jpg Graphic file (type jpg)
 
-LaTeX Warning: Reference `eq:KL' on page \thepage  undefined on input line 429.
+<use ./plot3.jpg>
+Package pdftex.def Info: ./plot3.jpg used on input line 517.
+(pdftex.def)             Requested size: 199.16928pt x 137.14537pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 524--527
 
-
-LaTeX Warning: Reference `fig:plot' on page \thepage  undefined on input line 4
-29.
-
-
-Overfull \hbox (2.89522pt too wide) in paragraph at lines 429--430
-\T1/aer/m/n/9 vary-ing data sam-ples and ex-perts for 1 month, 4 months
  []
 
-<./plot1.jpg, id=40, 343.2825pt x 253.94875pt>
-File: ./plot1.jpg Graphic file (type jpg)
- <use ./plot1.jpg>
-Package pdftex.def Info: ./plot1.jpg used on input line 435.
-(pdftex.def)             Requested size: 199.16928pt x 147.33687pt.
-
-<./plot2.jpg, id=41, 354.32375pt x 238.8925pt>
-File: ./plot2.jpg Graphic file (type jpg)
- <use ./plot2.jpg>
-Package pdftex.def Info: ./plot2.jpg used on input line 438.
-(pdftex.def)             Requested size: 199.16928pt x 134.28555pt.
+[6 <./REDD_img.jpg> <./FHschema.jpg>] (./sigproc-sp.bbl [7 <./plot4.jpg> <./plo
+t5.jpg> <./plot3.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-LaTeX Warning: Reference `fig:problem' on page \thepage  undefined on input lin
-e 450.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-LaTeX Warning: Citation `hinton2000' on page \thepage  undefined on input line 
-454.
-
-
-Overfull \hbox (23.57384pt too wide) in paragraph at lines 480--480
+ [8])
+Overfull \hbox (23.57384pt too wide) in paragraph at lines 1012--1012
  [][] 
  []
 
 
-Overfull \hbox (22.2086pt too wide) in paragraph at lines 480--505
+Overfull \hbox (22.2086pt too wide) in paragraph at lines 1012--1037
 []$[]$  $[]$ 
  []
 
 
-Overfull \hbox (27.24583pt too wide) in paragraph at lines 526--544
-[]$[]$  $[]$ 
- []
-
-
-LaTeX Warning: Reference `table:sample1' on page \thepage  undefined on input l
-ine 549.
-
-
-LaTeX Warning: Reference `table:threshold1' on page \thepage  undefined on inpu
-t line 549.
-
-
-LaTeX Warning: Reference `table:hmm1' on page \thepage  undefined on input line
- 549.
-
-[6 <./REDD_img.jpg> <./FHschema.jpg>] [7 <./plot1.jpg> <./plot2.jpg>]
-
-LaTeX Warning: Reference `table:sample2' on page \thepage  undefined on input l
-ine 551.
-
-
-LaTeX Warning: Reference `table:threshold2' on page \thepage  undefined on inpu
-t line 551.
-
-
-LaTeX Warning: Reference `table:hmm2' on page \thepage  undefined on input line
- 551.
-
-
-LaTeX Warning: Reference `table:sample1' on page \thepage  undefined on input l
-ine 552.
-
-
-LaTeX Warning: Reference `table:sample2' on page \thepage  undefined on input l
-ine 552.
-
-
-LaTeX Warning: Reference `table:threshold1' on page \thepage  undefined on inpu
-t line 553.
-
-
-LaTeX Warning: Reference `table:threshold2' on page \thepage  undefined on inpu
-t line 553.
-
-
-LaTeX Warning: Reference `table:hmm1' on page \thepage  undefined on input line
- 555.
-
-
-LaTeX Warning: Reference `table:hmm2' on page \thepage  undefined on input line
- 555.
-
-
-Overfull \hbox (31.29561pt too wide) in paragraph at lines 572--572
+Overfull \hbox (0.66768pt too wide) in paragraph at lines 1053--1053
  [][] 
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 572--572
+Underfull \hbox (badness 6542) in paragraph at lines 1053--1053
+[]\T1/aer/bx/n/9 Table 4: Ef-fect of vary-ing sam-ples
+ []
+
+
+Overfull \hbox (27.24583pt too wide) in paragraph at lines 1053--1070
+[]$[]$  $[]$ 
+ []
+
+
+Overfull \hbox (31.29561pt too wide) in paragraph at lines 1087--1087
+ [][] 
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 1087--1087
 []\T1/aer/bx/n/9 Table 6: Ef-fect of vary-ing thresh-old
  []
 
 
-Overfull \hbox (22.2086pt too wide) in paragraph at lines 572--591
+Overfull \hbox (22.2086pt too wide) in paragraph at lines 1087--1106
 []$[]$  $[]$ 
  []
 
 
-Overfull \hbox (13.56633pt too wide) in paragraph at lines 612--612
+Overfull \hbox (17.5708pt too wide) in paragraph at lines 1125--1125
  [][] 
  []
 
 
-Overfull \hbox (22.2086pt too wide) in paragraph at lines 612--634
+Overfull \hbox (22.2086pt too wide) in paragraph at lines 1125--1147
 []$[]$  $[]$ 
  []
 
-
-LaTeX Warning: Reference `table:hmm1' on page \thepage  undefined on input line
- 640.
-
-
-LaTeX Warning: Reference `table:hmm2' on page \thepage  undefined on input line
- 640.
-
-
-LaTeX Warning: Citation `Zoha12articlenon-intrusive' undefined on input line 65
-0.
-
-
-LaTeX Warning: Citation `CarrieArmel2013213' undefined on input line 650.
-
-
-LaTeX Warning: Citation `eps272990' undefined on input line 650.
-
-
-LaTeX Warning: Citation `NIPS2010' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Rabiner' undefined on input line 650.
-
-
-LaTeX Warning: Citation `SS97a' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Kawamoto' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Diane' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Klopfert' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Ghahramani' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Felice' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Shen' undefined on input line 650.
-
-
-LaTeX Warning: Citation `taban' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Albert' undefined on input line 650.
-
-
-LaTeX Warning: Citation `wijaya2014consumer' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Zhang' undefined on input line 650.
-
-
-LaTeX Warning: Citation `achnata2012long' undefined on input line 650.
-
-
-LaTeX Warning: Citation `bassi' undefined on input line 650.
-
-
-LaTeX Warning: Citation `samuel' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Falvo' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Bakirtzis' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Chen' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Chow' undefined on input line 650.
-
-
-LaTeX Warning: Citation `DisaggregationHSMM' undefined on input line 650.
-
-
-LaTeX Warning: Citation `KolterJ12' undefined on input line 650.
-
-
-LaTeX Warning: Citation `KolterF11' undefined on input line 650.
-
-
-LaTeX Warning: Citation `BLTJ:BLTJ21650' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Heinzelman00energy' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Taylor' undefined on input line 650.
-
-
-LaTeX Warning: Citation `NYAS:NYAS5921' undefined on input line 650.
-
-
-LaTeX Warning: Citation `Wijaya' undefined on input line 650.
-
-
-LaTeX Warning: Citation `5620917' undefined on input line 650.
-
-
-LaTeX Warning: Citation `1626400' undefined on input line 650.
-
-
-LaTeX Warning: Citation `mckerracher' undefined on input line 650.
-
-
-LaTeX Warning: Citation `hinton2000' undefined on input line 650.
-
-
-LaTeX Warning: Citation `aistats' undefined on input line 650.
-
-
-LaTeX Warning: Citation `fhmm' undefined on input line 650.
-
-
-LaTeX Warning: Citation `andrew' undefined on input line 650.
-
-(./sigproc-sp.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9])
-[10
-
-] (./sigproc-sp.aux)
+[9] [10] (./sigproc-sp.aux)
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2888 strings out of 493315
- 36655 string characters out of 6137903
- 113909 words of memory out of 5000000
- 6260 multiletter control sequences out of 15000+600000
+ 2893 strings out of 493315
+ 36734 string characters out of 6137903
+ 116293 words of memory out of 5000000
+ 6264 multiletter control sequences out of 15000+600000
  50604 words of font info for 68 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,12n,28p,1462b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,28p,1456b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/
@@ -875,10 +486,10 @@ st/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2013/texmf-dist
 type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/u
 rw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on sigproc-sp.pdf (10 pages, 440119 bytes).
+Output written on sigproc-sp.pdf (10 pages, 463221 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
+ 112 PDF objects out of 1000 (max. 8388607)
  73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

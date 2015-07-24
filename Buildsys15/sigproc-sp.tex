@@ -201,9 +201,9 @@ Chicco et al. \cite{1626400} compared several clustering techniques (such as hie
 %outlier detection algorithms are designed to enable customers to be notified that they are consuming unusually large amount(s) of energy during some specific period. 
 Related problems involve study of trends of electricity consumption (steadily increasing, decreasing, cyclic, seasonal) and sudden anomalous behaviour (sudden peaks or drops on consumption) for individual homes and across the community \cite{Diane}.
 
-In this paper, we use Hidden Markov models (HMMs) to analyse the time series energy data.
-We model the data stream from each source as a HMM with its states represented as ON/OFF.  For $N$ sources, there are $N$ HMMs and  the total number of states collectively are $2^N$. The observations represent the energy consumed in a particular state. These observations are recorded at different time scales for different sources. \\
-In order to aggregate the data from all the different sources, we build a machine learning model using products of HMMs (PoHMMs) and apply it to the energy aggregation problem. There are many reasons why the product model constructed from many HMMs is appropriate. 
+In this paper, we use Hidden Markov models (HMMs) to analyse the time series energy data. HMMs are also referred to as experts and have been used interchangeably through out the paper.
+We model the data stream from each source as a HMM/expert with its states represented as ON/OFF.  For $N$ sources, there are $N$ HMMs and  the total number of states collectively are $2^N$. The observations represent the energy consumed in a particular state. These observations are recorded at different time scales for different sources. \\
+In order to aggregate the data from all the different sources, we build a machine learning model using products of HMMs (PoHMMs or Product of Experts) and apply it to the energy aggregation problem. There are many reasons why the product model constructed from many HMMs is appropriate. 
 %First, this model is ideal for data which is caused by multiple underlying influences.
 %First, this model allows each HMM to make decisions based on few dimensions without actually having to worry about covering the full dimensionality of the problem.
 First, in a high-dimensional space each model constraints a different subset of dimensions but their product constraints all of the dimensions.
@@ -333,7 +333,7 @@ P^0 || P^\infty_\theta =  \sum_{d}P^0 (d)logP^0(d) - \sum_{d}P^0 (d)logP^\infty_
  = \nonumber -H(P^0) - \langle log P^\infty_\theta \rangle_{P^{0}}
 \end{eqnarray}
 
-where $||$ represents Kullback-Leibler divergence, d is the data vector in discrete space, $\theta_m$ is all the parameters of individual model m, $P^0$ is the data distribution at time $0$, $P^\infty_\theta$ (fantasy data) is the equilibrium distribution obtained after prolonged Gibbs sampling (figure~\ref{fig:gibbs}), H($P^0$) represents the entropy which is ignored during optimisation as $P^0$ does not depend on the parameters of the model, angle brackets denote the expectation over the distribution specified by the subscript. \\
+where $||$ represents KL divergence, d is the data vector in discrete space, $\theta_m$ is all the parameters of individual model m, $P^0$ is the data distribution at time $0$, $P^\infty_\theta$ (fantasy data) is the equilibrium distribution obtained after prolonged Gibbs sampling (figure~\ref{fig:gibbs}), H($P^0$) represents the entropy which is ignored during optimisation as $P^0$ does not depend on the parameters of the model, angle brackets denote the expectation over the distribution specified by the subscript. \\
 
  \begin{figure*}[t]
 \centering
@@ -386,7 +386,7 @@ The main feature of PoHMMs is its undirected graphical modelling with no direct 
 \section{Applications using Product of HMMs}
 \label{poc}
 
-\textbf{Aim}: In this section we demonstrate how PoHMMs can be used to model data streams and perform load forecasting. Proof-of-concepts are provided on two data sets - REDD\footnote{http://redd.csail.mit.edu/} and on the energy data collected from faculty housing at IIIT Delhi.
+\textbf{Aim}: In this section we demonstrate how PoHMMs can be used to model data streams and perform load forecasting. Proof-of-concepts are provided on three data sets - REDD\footnote{http://redd.csail.mit.edu/}, energy data collected from faculty housing at IIIT Delhi and Enernoc data set\footnote{http://open.enernoc.com/data/}.
 %To represent streams of energy consumption data from $n$\footnote{n=2} appliances by product of $k$ HMMs.
 
 \subsection{Data Description} 
@@ -408,220 +408,217 @@ The REDD data set contains two main types of home electricity data: high-frequen
 Experiments reported here use `house 2' data from REDD. This dataset has $318759$ records and $2$ columns. We randomly sample $300$ records for our initial experiment.
 %The time series data of the microwave, dryer, kitchen$\_2$ and refrigerator are plotted below in Figures~\ref{fig:micro}, ~\ref{fig:washer}, ~\ref{fig:kitchen2}, ~\ref{fig:refri}. 
 
-\item \textbf{Dataset 2:} This data represents the energy consumed by the IIIT Delhi's faculty housing building. As a part of research, a team from the institute has installed various temperature, light and motion sensors to perform real world studies and to analyse user preferences for energy conservation. Its schematic diagram is shown in figure~\ref{fig:FH}. For our analysis, we selected $1$ month's historical data ranging from 01-01-2014, 00:01 hours to 31-01-2014, 23:59 hours. The two smart meters installed, captured data from all the $12$ floors. The first meter records readings from ground to $5$th floor generating one stream of data and the second meter generates a stream from $6$th to $11$th. Both these streams are aggregated to obtain the aggregated load of the housing building. The dataset includes timestamp and power consumed in watts. There are $84133$ records in this dataset. We also have the total energy consumed by the faculty housing building which would serve as the ground truth to compare the aggregated load using PoHMMs. 
+\item \textbf{Dataset 2:} This data represents the energy consumed by the IIIT Delhi's Faculty Housing (FH) building. As a part of research, a team from the institute has installed various temperature, light and motion sensors to perform real world studies and to analyse user preferences for energy conservation. Its schematic diagram is shown in figure~\ref{fig:FH}. For our analysis, we selected $1$ month's historical data ranging from 01-01-2014, 00:01 hours to 31-01-2014, 23:59 hours. The two smart meters installed, captured data from all the $12$ floors. The first meter records readings from ground to $5$th floor generating one stream of data and the second meter generates a stream from $6$th to $11$th. Both these streams are aggregated to obtain the aggregated load of the housing building. The dataset includes timestamp and power consumed in watts. There are $84133$ records in this dataset. We also have the total energy consumed by the faculty housing building which would serve as the ground truth to compare the aggregated load using PoHMMs. 
 
-\item \textbf{Dataset 3:} The third dataset that we have used is the Enernoc data set\footnote{http://open.enernoc.com/data/}, which consists of power consumption data from different industrial customers. This contains energy consumption data of 100 industrial consumers from January 2012 to December 2012. In our analysis, we have used 66\% of data for training and 33\% for testing. We are comparing the load forecast by using PoHMMs vs single HMM. The metric used to quantify the similarity between the distribution of both the methods is KL divergence (refer equation\ref{eq:KL}). The comparisons using both the above approaches are done to observe the behaviour at different time scales, number of consumers and type of consumers. Figure~\ref{fig:plot} shows how KL Divergence gets affected with varying data samples and experts for 1 month, 4 months and 6 months data. We can see that KL is 
+\item \textbf{Dataset 3:} The third dataset that we have used is the Enernoc data set, which consists of power consumption data from different industrial customers. This contains energy consumption data of 100 industrial consumers from January 2012 to December 2012. In our analysis, we have used 66\% of data for training and 33\% for testing. We are comparing the load forecast by using PoHMMs vs single HMM. The metric used to measure the difference between the distribution of both the methods is KL divergence (refer equation\ref{eq:KL}). Hence, lesser value of KL divergence would mean more similar distributions. The comparisons using both the above approaches are done to observe the behaviour at different time scales, number of consumers and type of consumers.
 \end{itemize}
 
 
-\begin{figure*}
-\centering
-\includegraphics[width=7cm]{./plot1.jpg}
-%\caption{Schematic diagram of REDD}
-%\label{fig:plot1}}
-\includegraphics[width=7cm]{./plot2.jpg}
-\caption{Plots using Enernoc data set}
-\label{fig:plot}
-\end{figure*}
-
-
 \subsection{Problem Formulation}
-The disparate energy data streams collects readings at different time scales. Each of the data stream is modelled as a HMM with cardinality $2$, that is either ON or OFF. The process of aggregating the energy data from different data streams is modelled through PoHMMs. 
+The disparate energy data streams collects readings at different time scales. Each of the data stream is modelled as a HMM/ expert with cardinality $2$, that is either ON or OFF. The process of aggregating the energy data from different data streams is modelled through PoHMMs. 
 
 %Different smart meters can send data points when they are collected resulting in inconsistent data including aggregating non-aligned time stamped readings, readings with missing values, repeated values, meter reset readings.
 %We address the problem of learning from disparate data streams (with inconsistencies) by modelling streams as HMMs and the process of aggregating data at the base station as a Product of HMMs. This enables us to perform load forecasting using machine learning techniques.
 Each energy data stream is used to train the model, till the time the objective function, that is contrastive divergence reaches a threshold value. Once the model is trained from a randomly sampled data stream, the parameters learned by the model %(mixing component of each unigauss, means of gaussian bits, log precisions of axis-aligned gaussian bits) 
-are provided to the randomly sampled test set (total energy consumed data) to obtain the conditional probability distribution of the gaussians given the data. Similarly, all the data streams are used for training the model, and the parameters learned are then applied on the test set to obtain the conditional probability of the gaussians given the data. After all the data streams are used to obtain the probability distribution, we use the data stream that correspond to the total energy consumed from the house/ building to train the model and hence obtain the probability distribution P of the gaussians. These probability distributions are then compared with the product of the probability distributions Q obtained from the individual data streams. The evaluation of how well the learning has taken place is done by using a Kullback-Leibler divergence. KL divergence of two probability distributions P and Q, $D_{KL}$(P$\parallel$Q) is the measure of information lost when Q is used to approximate P. Figure~\ref{fig:problem} shows a flowchart that depicts the problem formulation.
+are provided to the randomly sampled test set (total energy consumed data) to obtain the conditional probability distribution of the gaussians given the data. Similarly, all the data streams are used for training the model, and the parameters learned are then applied on the test set to obtain the conditional probability of the gaussians given the data. After all the data streams are used to obtain the probability distribution, we use the data stream that correspond to the total energy consumed from the house/ building to train the model and hence obtain the probability distribution P of the gaussians. These probability distributions are then compared with the product of the probability distributions Q obtained from the individual data streams. The evaluation of how well the learning has taken place is done by using a KL divergence. KL divergence of two probability distributions P and Q, $D_{KL}$(P$\parallel$Q) is the measure of information lost when Q is used to approximate P. Figure~\ref{fig:problem} shows a flowchart that depicts the problem formulation.
 %Here, P is the real data and Q is a fantasy data. The two probability distributions in the REDD example refer to the expert probabilities in real and fantasy data. 
 %The learned parameters from the training are fitted to the fantasy data to measure the information lost when fantasy data is used to approximate real data.
+
 \subsubsection{Implementation Details}
 The implementation of the product of hidden Markov model is obtained from Iain Murray's website\footnote{\label{link}http://homepages.inf.ed.ac.uk/imurray2/code/}. It implements the technique described in paper \cite{hinton2000}.
-%Time series data from two appliances are represented as product of $k$ HMMs. It has $11$ channels where each channel corresponds to the following appliance, 1. mains1, 2. mains2, 3. kitchen 1, 4. lighting, 5. stove, 6. microwave, 7. washer dryer, 8. kitchen 2, 9. refrigerator, 10. dishwasher, 11. disposal
 
-\begin{table*}[htdp]
-\parbox{.39\linewidth}{
+%\begin{table*}[htdp]
+%\parbox{.39\linewidth}{
+%\centering
+%\begin{tabular}{| c | c | c | c |}
+%\hline
+%Samples & $KL Div$ & $Iterations$& $T(sec)$ \\
+%\hline
+%300 & 2.4864 & 18600 & 186.212 $\pm$9.087  \\
+%500 & 0.6761 & 10200 & 106.564 $\pm$10.046 \\
+%1000 & 1.1088 & 11200 & 158.521 $\pm$1.97  \\
+%1500 & 3.8829 & 5300 & 92.896 $\pm$8.075  \\
+%2000 & 1.8686 & 6900 & 130.98 $\pm$1.932 \\
+%2500 & 0.4733 & 9900 & 215.563 $\pm$ 2.471 \\
+%3000 & 2.8204 & 11000 & 258.213 $\pm1.918$ \\
+%3500 & 1.2332 & 7900 & 204.661 $\pm$1.713 \\
+%4000 & 0.8959 & 10400 & 292.666 $\pm$0.619 \\
+%4500 & 1.1118 & 7200 & 222.558 $\pm$1.967 \\
+%8000 & 6.392 & 8100 & 381.635 $\pm$2.952  \\
+%10000 & 8.276 & 10500 & 887.932 $\pm$13.824  \\
+%15000 & 0.7201 & 9400 & 1368.514 $\pm$13.605  \\
+%\hline
+%\end{tabular}
+%\caption{Effect of varying samples (REDD)}
+%\label{table:sample1}}
+%\hfill
+%\parbox{.65\linewidth}{
+%\centering
+%\begin{tabular}{| c | c | c | c |}
+%\hline
+%Samples & $KL Div$  & $Iterations$ & $T(sec)$\\
+%\hline
+%100 & 0.26219 & 45100 & 257  \\
+%300 & 0.19753 & 43200 & 222 \\
+%500 & 0.55493 & 44800 & 260  \\
+%700 & 0.32847 & 44000 & 249 \\
+%900 & 3.9486 & 42600 & 221  \\
+%1100 & 4.9274 & 44700 & 317  \\
+%1300 & 3.0425 & 43100 & 276 \\
+%1500 &  3.1128 & 44400 & 303 \\
+%2000 & 1.9192 & 44400 & 306 \\
+%2500 & 1.7122 & 44100 & 370 \\
+%3000 & 1.4686 & 43300 & 331 \\
+%3500 & 1.2663 & 43200 & 370  \\
+%4000 & 1.0793 & 43200 & 403  \\
+%\hline
+%\end{tabular}
+%\caption{Effect of varying samples (housing data), KL Div in e-04}
+%\label{table:sample2}}
+%\end{table*}
+%
+%\begin{table*}[htdp]
+%\parbox{.4\linewidth}{
+%\centering
+%\begin{tabular}{| c | c | c | c | c | c |}
+%\hline
+%Samples & $T_{P}$ & $T_H$ & $Iter_P$ & $Iter_H$ & $KL Div $\\
+%\hline
+%600 & 92 & 91 & 8000 & 26900 & 20.82 \\
+%1500 & 127 & 130 & 5700 & 15300 & 11.14  \\
+%1800 & 180 & 166 & 5900 & 15100 & 12.59 \\
+%2500 & 485 & 127 & 5800 & 5500 & 6.87 \\
+%\hline
+%\end{tabular}
+%\caption{Effect of varying samples (Enernoc)}
+%\label{table:sample3}}
+%\hfill
+%\parbox{.65\linewidth}{
+%\centering
+%\begin{tabular}{| c | c | c | c | c | c |}
+%\hline
+%Experts & $T_P$ & $T_H$ & $Iter_P$& $Iter_H$ & $KL Div $\\
+%\hline
+%3 & 102 & 463 & 14100 & 210200 & 4.09 \\
+%5 & 49 & 79 & 6300 & 27700 & 13.75  \\
+%7 & 80 & 44 & 8600 & 14500 & 7.46 \\
+%10 & 66 & 60 & 6100 & 16600 & 4.355  \\
+%15 & 113 & 127 & 8200 & 27500 & 6  \\
+%\hline
+%\end{tabular}
+%\caption{Effect of varying HMMs (Enernoc)}
+%\label{table:expert2}}
+%\end{table*}
+
+\begin{figure*}
 \centering
-\begin{tabular}{| c | c | c | c |}
-\hline
-Samples & $KL Div$ & $Iterations$& $T(sec)$ \\
-\hline
-300 & 2.4864 & 18600 & 186.212 $\pm$9.087  \\
-500 & 0.6761 & 10200 & 106.564 $\pm$10.046 \\
-1000 & 1.1088 & 11200 & 158.521 $\pm$1.97  \\
-1500 & 3.8829 & 5300 & 92.896 $\pm$8.075  \\
-2000 & 1.8686 & 6900 & 130.98 $\pm$1.932 \\
-2500 & 0.4733 & 9900 & 215.563 $\pm$ 2.471 \\
-3000 & 2.8204 & 11000 & 258.213 $\pm1.918$ \\
-3500 & 1.2332 & 7900 & 204.661 $\pm$1.713 \\
-4000 & 0.8959 & 10400 & 292.666 $\pm$0.619 \\
-4500 & 1.1118 & 7200 & 222.558 $\pm$1.967 \\
-8000 & 6.392 & 8100 & 381.635 $\pm$2.952  \\
-10000 & 8.276 & 10500 & 887.932 $\pm$13.824  \\
-15000 & 0.7201 & 9400 & 1368.514 $\pm$13.605  \\
-\hline
-\end{tabular}
-\caption{Effect of varying the samples (REDD)}
-\label{table:sample1}}
-\hfill
-\parbox{.65\linewidth}{
-\centering
-\begin{tabular}{| c | c | c | c |}
-\hline
-Samples & $KL Div$  & $Iterations$ & $T(sec)$\\
-\hline
-100 & 0.26219 & 45100 & 257  \\
-300 & 0.19753 & 43200 & 222 \\
-500 & 0.55493 & 44800 & 260  \\
-700 & 0.32847 & 44000 & 249 \\
-900 & 3.9486 & 42600 & 221  \\
-1100 & 4.9274 & 44700 & 317  \\
-1300 & 3.0425 & 43100 & 276 \\
-1500 &  3.1128 & 44400 & 303 \\
-2000 & 1.9192 & 44400 & 306 \\
-2500 & 1.7122 & 44100 & 370 \\
-3000 & 1.4686 & 43300 & 331 \\
-3500 & 1.2663 & 43200 & 370  \\
-4000 & 1.0793 & 43200 & 403  \\
-\hline
-\end{tabular}
-\caption{Effect of varying the samples (housing data), KL Div in e-04}
-\label{table:sample2}}
-\end{table*}
-
-
-
-\begin{table*}[htdp]
-\parbox{.4\linewidth}{
-\centering
-\begin{tabular}{| c | c | c | c | c | c |}
-\hline
-Samples & $T_{P}$ & $T_H$ & $Iter_P$ & $Iter_H$ & $KL Div $\\
-\hline
-%300 & 26 & 41 & 5700 & 28200 & 1.04  \\
-600 & 31 & 24 & 5600 & 13100 & 35.01 \\
-1200 & 41 & 15 & 5300 & 5500 & 28.85 \\
-1500 & 68 & 16 & 7700 & 5400 & 47.78  \\
-1800 & 52 & 112 & 5400 & 34300 & 49.72 \\
-2100 & 69 & 40 & 6100 & 11200 & 35.75 \\
-2500 & 83 & 25 & 6900 & 5500 & 12.0329 \\
-\hline
-\end{tabular}
-\caption{Effect of varying the samples (Enernoc)}
-\label{table:sample3}}
-\hfill
-\parbox{.65\linewidth}{
-\centering
-\begin{tabular}{| c | c | c | c | c | c |}
-\hline
-Experts & $T_P$ & $T_H$ & $Iter_P$& $Iter_H$ & $KL Div $\\
-\hline
-3 & 26 & 41 & 5700 & 28200 & 1.04 \\
-4 & 49 & 153 & 10233 & 98200 & 4.35 \\
-5 & 158 & 36 & 32000 & 22300 & 20.72  \\
-6 & 76 & 10 & 15000 & 6000 & 36.74 \\
-7 & 117 & 2798 & 21000 & 1430000 & 18.445 \\
-9 & 455 & 420 & 70500 & 189000 & 22.04  \\
-\hline
-\end{tabular}
-\caption{Effect of varying the HMMs (Enernoc)}
-\label{table:expert2}}
-\end{table*}
-
+\includegraphics[width=7cm]{./plot4.jpg}
+\includegraphics[width=7cm]{./plot5.jpg}
+\includegraphics[width=7cm]{./plot3.jpg}
+\caption{Comparison of REDD, FH and Enernoc data sets}
+\label{fig:plots}
+\end{figure*}
 
 
 \subsection{Empirical Results}
-In both the datasets, experiments are performed by tuning some parameters and keeping some fixed. In case of REDD, Tables~\ref{table:sample1},~\ref{table:threshold1} and \ref{table:hmm1} show the effect of varying data samples, threshold and no. of HMMs on KL divergence. In this experiment, data samples are randomly selected from the dataset, KL divergence is chosen as the performance metric, iterations are performed to obtain the samples from the equilibrium distribution by using Gibbs sampler on the hidden and visible variables and the average time taken (sec) with the standard deviation on three such iterations is noted.
+All the experiments were performed on two machines, a personal machine with 8GB Ram, Intel Core i7 CPU @ 2.9GHz and a HPC server with 20 CPUs @ 2.5GHz, 10 cores/socket, 2 sockets and 99 GB RAM.  
+%In case of REDD, Tables~\ref{table:sample1},~\ref{table:threshold1} and \ref{table:expert1} show the effect of varying data samples, threshold and no. of experts on KL divergence. 
+Figure~\ref{fig:plots} shows three plots, first two show the relationship of KL Divergence with varying number of experts and samples respectively. This comparison is done between REDD, FH, Enernoc-1 (1 month data), Enernoc-4 and Enernoc-6. As seen in the first plot of figure~\ref{fig:plots}, (Enernoc-1 and Enernoc-4) and (Enernoc-6 and REDD) follow a similar trend. Amongst all the datasets, REDD attains the minimum KL divergence followed by FH. FH dataset has minimum deviation amongst the rest of the datasets. Similarly, in the second plot we can observe that FH and REDD attain the minimum divergence when varied across the different data samples. Thus our experiments show that the divergence in aggregate forecasting is less in residential dataset as compared to industrial dataset.\\
 
- In case of faculty housing dataset, Tables~\ref{table:sample2},~\ref{table:threshold2} and \ref{table:hmm2} show the effect of varying data samples, threshold and no. of HMMs on the KL divergence.
-As per table \ref{table:sample1} and \ref{table:sample2}, there is no linear relationship between no. of samples and KL divergence. The best performance was attained when $2500$ and $300$ samples were randomly chosen from the REDD and faculty housing dataset respectively. 
-In table \ref{table:threshold1} and \ref{table:threshold2}, there is an indirect relationship between threshold and KL divergence value, that is lower the threshold, higher the KL divergence. 
-%Similarly, the relationship between threshold values and iterations/time taken is indirect.
-In table \ref{table:hmm1} and \ref{table:hmm2}, it can be seen that the KL divergence attains its minimum value when the no. of HMMs multiplied are same as the number of data streams aggregated. Hence, the error is minimum when the number of HMMs reaches the number of aggregated data streams, that is when all the appliances in `house 2' (total appliances are $9$) of REDD are used in PoHMMs and when both the data streams of faculty housing building are aggregated together.
+The detailed empirical results are shown in Appendix~\ref{App:AppendixA}. 
+%The data samples are randomly selected from the dataset, KL divergence is chosen as the performance metric, iterations are performed to obtain the samples from the equilibrium distribution by using Gibbs sampler on the hidden and visible variables and the average time (in seconds) taken with the standard deviation on three such iterations is noted.
+%
+%In case of faculty housing dataset, Tables~\ref{table:sample2},~\ref{table:threshold2} and \ref{table:expert2} show the effect of varying data samples, threshold and no. of HMMs on the KL divergence.
+%As per table \ref{table:sample1} and \ref{table:sample2}, there is no linear relationship between no. of samples and KL divergence. 
+%%The best performance was attained when $2500$ and $300$ samples were randomly chosen from the REDD and faculty housing dataset respectively. 
+%In table \ref{table:threshold1} and \ref{table:threshold2}, there is an indirect relationship between threshold and KL divergence value, that is lower the threshold, higher the KL divergence. 
+%%Similarly, the relationship between threshold values and iterations/time taken is indirect.
+%In table \ref{table:expert1} and \ref{table:expert2}, it can be seen that the KL divergence attains its minimum value when the no. of HMMs multiplied are same as the number of data streams aggregated. Hence, the error is minimum when the number of HMMs reaches the number of aggregated data streams, that is when all the appliances in `house 2' (total appliances are $9$) of REDD are used in PoHMMs and when both the data streams of faculty housing building are aggregated together.
+%Figure~\ref{fig:plot} shows how KL Divergence behaves with varying data samples and experts for 1 month, 4 months and 6 months data. We can see that the curve representing KL divergence (6 months) stays lower than the rest through out the time period. Also, we can see that the curves attain their minimum values when more number data samples are used for training and testing.
 
-\begin{table*}[htdp]
-\parbox{.39\linewidth}{
-\centering
-\begin{tabular}{| c | c | c | c |}
-\hline
-Threshold & $KL Div$ & $Iterations$ & $T(sec)$  \\
-\hline
-.1 & 0.473 & 9900 & 210.6 $\pm$1.493 \\
-.05 & 0.443 & 10900 & 240.607$\pm$2.436 \\
-.01 & 0.454 & 18000 & 431.536 $\pm$14.509 \\
-.005 & 0.509 & 49800 & 1167.243 $\pm$43.412 \\
-\hline
-\end{tabular}
-\caption{Effect of varying threshold (REDD)}
-\label{table:threshold1}
-}
-\hfill
-\parbox{.65\linewidth}{
-\centering
-\begin{tabular}{| c | c | c | c |}
-\hline
-Threshold & $KL Div$ & $Iterations$& $T(sec)$ \\
-\hline
-0.9 & 0.768 & 49300 & 153.67 $\pm$13.57  \\
-0.8 & 0.768 & 49300 & 190.3 $\pm$34.35 \\
-0.7 & 0.769 & 49400 &  193.67$\pm$31.64  \\
-0.6 & 0.792 & 49500 & 218.3 $\pm$43.93  \\
-0.5 & 0.793 & 49600 & 250.67$\pm$3.51  \\
-0.4 & 0.854 & 49600 & 191$\pm$35.55  \\
-\hline
-\end{tabular}
-\caption{Effect of varying threshold (housing data), KL Div in e-04}
-\label{table:threshold2}
-}
-\end{table*}
-
-
-
-\begin{table*}[htdp]
-\parbox{.39\linewidth}{
-\centering
-\begin{tabular}{| c | c | c | c |}
-\hline
-HMMs & $KL Div$ & $Iterations$ & $T(sec)$  \\
-\hline
-3 & 5.559  & 10700 & 233.664 $\pm$0.579 \\
-4 & 0.188 & 19900 & 465.634 $\pm$5.275  \\
-5 & 0.432  & 13400 & 338.416 $\pm$3.988  \\
-6 & 8.736  & 28100 & 606.062 $\pm$7.534 \\
-7 & 5.054  & 17300 & 411.457 $\pm$10.051\\
-8 & 0.436 & 10700 & 260.544 $\pm$27.862 \\
-9 & 0.15 & 20600 & 474.579 $\pm$14.619 \\
-\hline
-\end{tabular}
-\caption{Effect of varying HMMs (REDD)}
-\label{table:hmm1}}
-\hfill
-\parbox{.65\linewidth}{
-\centering
-\begin{tabular}{| c | c | c | c |}
-\hline
-HMMs & $KL Div$ & Iterations & $T(sec)$\\
-\hline
-2 & 0 & 49200 & 233.33 $\pm$7.23 \\
-3 & 0.81 & 49200 & 237.67 $\pm$10.59 \\
-5 & 0.77 & 49300 & 242.33 $\pm$3 \\
-10 & 2.12 & 49300 & 228.33 $\pm$46.23 \\
-15 & 2.55 & 49300 & 269.33 $\pm$17.61 \\
-20 & 2.23 & 49300 & 305.66 $\pm$2.08  \\
-25 & 2.19 & 49300 & 302.33 $\pm$8 \\
-30 & 2.24 & 49300 & 336.33 $\pm$9.5 \\
-35 & 1.94 & 49300 & 331.33 $\pm$9 \\
-\hline
-\end{tabular}
-\caption{Effect of varying HMMs (housing data), KL Div in e-04}
-\label{table:hmm2}
-}
-\end{table*}
+%\begin{table*}[htdp]
+%\parbox{.39\linewidth}{
+%\centering
+%\begin{tabular}{| c | c | c | c |}
+%\hline
+%Threshold & $KL Div$ & $Iterations$ & $T(sec)$  \\
+%\hline
+%.1 & 0.473 & 9900 & 210.6 $\pm$1.493 \\
+%.05 & 0.443 & 10900 & 240.607$\pm$2.436 \\
+%.01 & 0.454 & 18000 & 431.536 $\pm$14.509 \\
+%.005 & 0.509 & 49800 & 1167.243 $\pm$43.412 \\
+%\hline
+%\end{tabular}
+%\caption{Effect of varying threshold (REDD)}
+%\label{table:threshold1}
+%}
+%\hfill
+%\parbox{.65\linewidth}{
+%\centering
+%\begin{tabular}{| c | c | c | c |}
+%\hline
+%Threshold & $KL Div$ & $Iterations$& $T(sec)$ \\
+%\hline
+%0.9 & 0.768 & 49300 & 153.67 $\pm$13.57  \\
+%0.8 & 0.768 & 49300 & 190.3 $\pm$34.35 \\
+%0.7 & 0.769 & 49400 &  193.67$\pm$31.64  \\
+%0.6 & 0.792 & 49500 & 218.3 $\pm$43.93  \\
+%0.5 & 0.793 & 49600 & 250.67$\pm$3.51  \\
+%0.4 & 0.854 & 49600 & 191$\pm$35.55  \\
+%\hline
+%\end{tabular}
+%\caption{Effect of varying threshold (housing data), KL Div in e-04}
+%\label{table:threshold2}
+%}
+%\end{table*}
+%
+%\begin{table*}[htdp]
+%\parbox{.39\linewidth}{
+%\centering
+%\begin{tabular}{| c | c | c | c |}
+%\hline
+%Experts & $KL Div$ & $Iterations$ & $T(sec)$  \\
+%\hline
+%3 & 5.559  & 10700 & 233.664 $\pm$0.579 \\
+%4 & 0.188 & 19900 & 465.634 $\pm$5.275  \\
+%5 & 0.432  & 13400 & 338.416 $\pm$3.988  \\
+%6 & 8.736  & 28100 & 606.062 $\pm$7.534 \\
+%7 & 5.054  & 17300 & 411.457 $\pm$10.051\\
+%8 & 0.436 & 10700 & 260.544 $\pm$27.862 \\
+%9 & 0.15 & 20600 & 474.579 $\pm$14.619 \\
+%\hline
+%\end{tabular}
+%\caption{Effect of varying experts (REDD)}
+%\label{table:expert1}}
+%\hfill
+%\parbox{.65\linewidth}{
+%\centering
+%\begin{tabular}{| c | c | c | c |}
+%\hline
+%Experts & $KL Div$ & Iterations & $T(sec)$\\
+%\hline
+%2 & 0 & 49200 & 233.33 $\pm$7.23 \\
+%3 & 0.81 & 49200 & 237.67 $\pm$10.59 \\
+%5 & 0.77 & 49300 & 242.33 $\pm$3 \\
+%10 & 2.12 & 49300 & 228.33 $\pm$46.23 \\
+%15 & 2.55 & 49300 & 269.33 $\pm$17.61 \\
+%20 & 2.23 & 49300 & 305.66 $\pm$2.08  \\
+%25 & 2.19 & 49300 & 302.33 $\pm$8 \\
+%30 & 2.24 & 49300 & 336.33 $\pm$9.5 \\
+%35 & 1.94 & 49300 & 331.33 $\pm$9 \\
+%\hline
+%\end{tabular}
+%\caption{Effect of varying experts (housing data), KL Div in e-04}
+%\label{table:expert2}
+%}
+%\end{table*}
 
 
 \section{Conclusion}
 \label{conclusion}
 
-In this paper, we are solving the problem of load aggregation (energy consumption) for disparate energy data sources using the ensemble based learning technique called Product of HMMs. Several challenges are faced while computing the aggregated energy, few of which include non-aligned timestamp readings, missing values, meter reset readings. This technique produces the combined probability distributions of several simpler distributions and then renormalizes this output. The optimisation problem is to minimise the contrastive divergence between the two probability distributions of the data at time $0$ and the data at time $1$ (one-step reconstruction using gibbs sampling). The evaluation of the algorithm is done by computing the KL divergence between the product of the energy data distributions and the total energy data distribution. From the results shown in table \ref{table:hmm1} and \ref{table:hmm2}, we can see that the algorithm has performed best when the number of appliances (REDD) reached the actual number of appliances ($9$) in the house and the number of data streams in case of housing data reached the actual number of streams ($2$) used in the 12 floor faculty housing data. Therefore, this signifies that this algorithm is applicable for this kind of application and can be used for load forecasting.
+In this paper, we are solving the problem of load aggregation (energy consumption) and aggregate forecasting for disparate energy data sources using the ensemble based learning technique called Product of HMMs. Several challenges are faced while computing the aggregated energy, few of which include non-aligned timestamp readings, missing values, meter reset readings. This technique produces the combined probability distributions of several simpler distributions and then renormalizes the output. The optimization problem is to minimize the contrastive divergence between the two probability distributions of the data at time $0$ and the data at time $1$ (one-step reconstruction using Gibbs sampling). The evaluation of the algorithm is done by computing the KL divergence between the product of the energy data distributions and the total energy data distribution.
+ From the results shown in table \ref{table:expert1} and \ref{table:expert2}, we can see that the algorithm has performed best when the number of appliances (REDD) reached the actual number of appliances ($9$) in the house and the number of data streams in case of FH data reached the actual number of streams ($2$) used in the 12 floor building. Therefore, this signifies that this algorithm is applicable for this kind of application and can be used for load forecasting.
 
 
 \section*{Acknowledgment}
@@ -971,47 +968,187 @@ Wijaya,5620917,1626400,mckerracher,hinton2000,aistats,fhmm,andrew}
 %
 %APPENDICES are optional
 %\balancecolumns
-%\appendix
+\newpage
+\appendix
+\section{Empirical Results} 
+\label{App:AppendixA}
+
+The data samples are randomly selected from the dataset, KL divergence is chosen as the performance metric, iterations are performed to obtain the samples from the equilibrium distribution by using Gibbs sampler on the hidden and visible variables and the average time (in seconds) taken with the standard deviation on three such iterations is noted.
+
+In case of faculty housing dataset, Tables~\ref{table:sample2},~\ref{table:threshold2} and \ref{table:expert2} show the effect of varying data samples, threshold and no. of HMMs on the KL divergence.
+As per table \ref{table:sample1} and \ref{table:sample2}, there is no linear relationship between no. of samples and KL divergence. 
+%The best performance was attained when $2500$ and $300$ samples were randomly chosen from the REDD and faculty housing dataset respectively. 
+In table \ref{table:threshold1} and \ref{table:threshold2}, there is an indirect relationship between threshold and KL divergence value, that is lower the threshold, higher the KL divergence. 
+%Similarly, the relationship between threshold values and iterations/time taken is indirect.
+
+In table \ref{table:expert1} and \ref{table:expert2}, it can be seen that the KL divergence attains its minimum value when the no. of HMMs multiplied are same as the number of data streams aggregated. Hence, the error is minimum 
+when the number of HMMs reaches the number of aggregated data streams, that is when all the appliances in `house 2' (total appliances are $9$) of REDD are used in PoHMMs and when both the data streams of faculty housing building are aggregated together.
+
+%Figure~\ref{fig:plot} shows how KL divergence behaves with varying data samples and experts for 1 month, 4 months and 6 months data. We can see that the curve representing KL divergence (6 months) stays lower than the rest through out the time period. Also, we can see that the curves attain their minimum values when more number data samples are used for training and testing.
+
+\begin{table*}[htdp]
+\parbox{.39\linewidth}{
+\centering
+\begin{tabular}{| c | c | c | c |}
+\hline
+Samples & $KL Div$ & $Iterations$& $T(sec)$ \\
+\hline
+300 & 2.4864 & 18600 & 186.212 $\pm$9.087  \\
+500 & 0.6761 & 10200 & 106.564 $\pm$10.046 \\
+1000 & 1.1088 & 11200 & 158.521 $\pm$1.97  \\
+1500 & 3.8829 & 5300 & 92.896 $\pm$8.075  \\
+2000 & 1.8686 & 6900 & 130.98 $\pm$1.932 \\
+2500 & 0.4733 & 9900 & 215.563 $\pm$ 2.471 \\
+3000 & 2.8204 & 11000 & 258.213 $\pm1.918$ \\
+3500 & 1.2332 & 7900 & 204.661 $\pm$1.713 \\
+4000 & 0.8959 & 10400 & 292.666 $\pm$0.619 \\
+4500 & 1.1118 & 7200 & 222.558 $\pm$1.967 \\
+8000 & 6.392 & 8100 & 381.635 $\pm$2.952  \\
+10000 & 8.276 & 10500 & 887.932 $\pm$13.824  \\
+15000 & 0.7201 & 9400 & 1368.514 $\pm$13.605  \\
+\hline
+\end{tabular}
+\caption{Effect of varying samples (REDD)}
+\label{table:sample1}}
+\hfill
+\parbox{.65\linewidth}{
+\centering
+\begin{tabular}{| c | c | c | c |}
+\hline
+Samples & $KL Div$  & $Iterations$ & $T(sec)$\\
+\hline
+100 & 0.26219 & 45100 & 257  \\
+300 & 0.19753 & 43200 & 222 \\
+500 & 0.55493 & 44800 & 260  \\
+700 & 0.32847 & 44000 & 249 \\
+900 & 3.9486 & 42600 & 221  \\
+1100 & 4.9274 & 44700 & 317  \\
+1300 & 3.0425 & 43100 & 276 \\
+1500 &  3.1128 & 44400 & 303 \\
+2000 & 1.9192 & 44400 & 306 \\
+2500 & 1.7122 & 44100 & 370 \\
+3000 & 1.4686 & 43300 & 331 \\
+3500 & 1.2663 & 43200 & 370  \\
+4000 & 1.0793 & 43200 & 403  \\
+\hline
+\end{tabular}
+\caption{Effect of varying samples (housing data), KL Div in e-04}
+\label{table:sample2}}
+\end{table*}
+
+\begin{table*}[htdp]
+\parbox{.4\linewidth}{
+\centering
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+Samples & $T_{P}$ & $T_H$ & $Iter_P$ & $Iter_H$ & $KL Div $\\
+\hline
+600 & 92 & 91 & 8000 & 26900 & 20.82 \\
+1500 & 127 & 130 & 5700 & 15300 & 11.14  \\
+1800 & 180 & 166 & 5900 & 15100 & 12.59 \\
+2500 & 485 & 127 & 5800 & 5500 & 6.87 \\
+\hline
+\end{tabular}
+\caption{Effect of varying samples (Enernoc-6)}
+\label{table:sample3}}
+\hfill
+\parbox{.65\linewidth}{
+\centering
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+Experts & $T_P$ & $T_H$ & $Iter_P$& $Iter_H$ & $KL Div $\\
+\hline
+3 & 102 & 463 & 14100 & 210200 & 4.09 \\
+5 & 49 & 79 & 6300 & 27700 & 13.75  \\
+7 & 80 & 44 & 8600 & 14500 & 7.46 \\
+10 & 66 & 60 & 6100 & 16600 & 4.355  \\
+15 & 113 & 127 & 8200 & 27500 & 6  \\
+\hline
+\end{tabular}
+\caption{Effect of varying HMMs (Enernoc-6)}
+\label{table:expert2}}
+\end{table*}
+
+\begin{table*}[htdp]
+\parbox{.39\linewidth}{
+\centering
+\begin{tabular}{| c | c | c | c |}
+\hline
+Threshold & $KL Div$ & $Iterations$ & $T(sec)$  \\
+\hline
+.1 & 0.473 & 9900 & 210.6 $\pm$1.493 \\
+.05 & 0.443 & 10900 & 240.607$\pm$2.436 \\
+.01 & 0.454 & 18000 & 431.536 $\pm$14.509 \\
+.005 & 0.509 & 49800 & 1167.243 $\pm$43.412 \\
+\hline
+\end{tabular}
+\caption{Effect of varying threshold (REDD)}
+\label{table:threshold1}
+}
+\hfill
+\parbox{.65\linewidth}{
+\centering
+\begin{tabular}{| c | c | c | c |}
+\hline
+Threshold & $KL Div$ & $Iterations$& $T(sec)$ \\
+\hline
+0.9 & 0.768 & 49300 & 153.67 $\pm$13.57  \\
+0.8 & 0.768 & 49300 & 190.3 $\pm$34.35 \\
+0.7 & 0.769 & 49400 &  193.67$\pm$31.64  \\
+0.6 & 0.792 & 49500 & 218.3 $\pm$43.93  \\
+0.5 & 0.793 & 49600 & 250.67$\pm$3.51  \\
+0.4 & 0.854 & 49600 & 191$\pm$35.55  \\
+\hline
+\end{tabular}
+\caption{Effect of varying threshold (housing data), KL Div in e-04}
+\label{table:threshold2}
+}
+\end{table*}
+
+\begin{table*}[htdp]
+\parbox{.39\linewidth}{
+\centering
+\begin{tabular}{| c | c | c | c |}
+\hline
+Experts & $KL Div$ & $Iterations$ & $T(sec)$  \\
+\hline
+3 & 5.559  & 10700 & 233.664 $\pm$0.579 \\
+4 & 0.188 & 19900 & 465.634 $\pm$5.275  \\
+5 & 0.432  & 13400 & 338.416 $\pm$3.988  \\
+6 & 8.736  & 28100 & 606.062 $\pm$7.534 \\
+7 & 5.054  & 17300 & 411.457 $\pm$10.051\\
+8 & 0.436 & 10700 & 260.544 $\pm$27.862 \\
+9 & 0.15 & 20600 & 474.579 $\pm$14.619 \\
+\hline
+\end{tabular}
+\caption{Effect of varying experts (REDD)}
+\label{table:expert1}}
+\hfill
+\parbox{.65\linewidth}{
+\centering
+\begin{tabular}{| c | c | c | c |}
+\hline
+Experts & $KL Div$ & Iterations & $T(sec)$\\
+\hline
+2 & 0 & 49200 & 233.33 $\pm$7.23 \\
+3 & 0.81 & 49200 & 237.67 $\pm$10.59 \\
+5 & 0.77 & 49300 & 242.33 $\pm$3 \\
+10 & 2.12 & 49300 & 228.33 $\pm$46.23 \\
+15 & 2.55 & 49300 & 269.33 $\pm$17.61 \\
+20 & 2.23 & 49300 & 305.66 $\pm$2.08  \\
+25 & 2.19 & 49300 & 302.33 $\pm$8 \\
+30 & 2.24 & 49300 & 336.33 $\pm$9.5 \\
+35 & 1.94 & 49300 & 331.33 $\pm$9 \\
+\hline
+\end{tabular}
+\caption{Effect of varying experts (housing data), KL Div in e-04}
+\label{table:expert2}
+}
+\end{table*}
+
 %%%Appendix A
 %\section{Results from Enernoc dataset}
 %
-%\begin{table*}[htdp]
-%\parbox{.4\linewidth}{
-%\centering
-%\begin{tabular}{| c | c | c | c | c | c |}
-%\hline
-%Samples & $T_{P}$ & $T_H$ & $Iter_P$ & $Iter_H$ & $KL Div $\\
-%\hline
-%%300 & 26 & 41 & 5700 & 28200 & 1.04  \\
-%600 & 31 & 24 & 5600 & 13100 & 35.01 \\
-%1200 & 41 & 15 & 5300 & 5500 & 28.85 \\
-%1500 & 68 & 16 & 7700 & 5400 & 47.78  \\
-%1800 & 52 & 112 & 5400 & 34300 & 49.72 \\
-%2100 & 69 & 40 & 6100 & 11200 & 35.75 \\
-%2500 & 83 & 25 & 6900 & 5500 & 12.0329 \\
-%\hline
-%\end{tabular}
-%\caption{Effect of varying the samples (Enernoc)}
-%\label{table:sample3}}
-%\hfill
-%\parbox{.65\linewidth}{
-%\centering
-%\begin{tabular}{| c | c | c | c | c | c |}
-%\hline
-%Experts & $T_P$ & $T_H$ & $Iter_P$& $Iter_H$ & $KL Div $\\
-%\hline
-%3 & 26 & 41 & 5700 & 28200 & 1.04 \\
-%4 & 49 & 153 & 10233 & 98200 & 4.35 \\
-%5 & 158 & 36 & 32000 & 22300 & 20.72  \\
-%6 & 76 & 10 & 15000 & 6000 & 36.74 \\
-%7 & 117 & 2798 & 21000 & 1430000 & 18.445 \\
-%9 & 455 & 420 & 70500 & 189000 & 22.04  \\
-%\hline
-%\end{tabular}
-%\caption{Effect of varying the HMMs (Enernoc)}
-%\label{table:expert2}}
-%\end{table*}
-
 
 %The rules about hierarchical headings discussed above for
 %the body of the article are different in the appendices.
