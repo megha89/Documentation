@@ -1,0 +1,12 @@
+\beamer@endinputifotherversion {3.26pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Courses and TA duties}{3}{0}{1}
+\beamer@sectionintoc {2}{Conferences and Workshops}{4}{0}{2}
+\beamer@sectionintoc {3}{Motivation}{5}{0}{3}
+\beamer@sectionintoc {4}{Problem}{9}{0}{4}
+\beamer@sectionintoc {5}{Architecture of the Proposed System}{10}{0}{5}
+\beamer@sectionintoc {6}{Methodology}{13}{0}{6}
+\beamer@sectionintoc {7}{Results}{18}{0}{7}
+\beamer@sectionintoc {8}{Conclusion}{20}{0}{8}
+\beamer@sectionintoc {9}{Future Work}{21}{0}{9}
+\beamer@sectionintoc {10}{Ongoing Work}{22}{0}{10}

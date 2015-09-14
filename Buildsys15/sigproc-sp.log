@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  24 JUL 2015 18:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.11)  21 AUG 2015 09:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -396,8 +396,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 524--527
 
  []
 
-[6 <./REDD_img.jpg> <./FHschema.jpg>] (./sigproc-sp.bbl [7 <./plot4.jpg> <./plo
-t5.jpg> <./plot3.jpg>]
+[6 <./REDD_img.jpg> <./FHschema.jpg>] (./sigproc-sp.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./plot4.jpg> <./plot5.jpg> <./plot3.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -486,7 +488,7 @@ st/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2013/texmf-dist
 type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/u
 rw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on sigproc-sp.pdf (10 pages, 463221 bytes).
+Output written on sigproc-sp.pdf (10 pages, 463439 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  73 compressed objects within 1 object stream
