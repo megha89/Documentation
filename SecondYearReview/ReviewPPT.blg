@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ReviewPPT.aux
+The style file: plain.bst
+Database file #1: ReviewPPT.bib.bib
+Warning--there's a number but no series in aistats
+Warning--empty journal in Travis
+You've used 4 entries,
+            2118 wiz_defined-function locations,
+            520 strings with 4597 characters,
+and the built_in function-call counts, 1184 in all, are:
+= -- 105
+> -- 56
+< -- 1
++ -- 22
+- -- 18
+* -- 76
+:= -- 206
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 21
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 49
+empty$ -- 103
+format.name$ -- 18
+if$ -- 244
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 23
+num.names$ -- 8
+pop$ -- 27
+preamble$ -- 1
+purify$ -- 17
+quote$ -- 0
+skip$ -- 30
+stack$ -- 0
+substring$ -- 47
+swap$ -- 6
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 2
+while$ -- 9
+width$ -- 5
+write$ -- 43
+(There were 2 warnings)

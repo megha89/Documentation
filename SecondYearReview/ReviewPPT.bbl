@@ -1,0 +1,25 @@
+\begin{thebibliography}{1}
+
+\bibitem{aistats}
+Andrew Brown and Geoffrey Hinton.
+\newblock Proceedings of artificial intelligence and statistics 2001.
+\newblock In {\em Products of Hidden Markov Models}, number GCNU TR 2000-008,
+  2001.
+
+\bibitem{Travis}
+Travis Goodwin and Sanda~M Harabagiu.
+\newblock Utd at trec 2014: Query expansion for clinical decision support.
+\newblock 2014.
+
+\bibitem{hinton2000}
+Geoffrey~E. Hinton.
+\newblock Training products of experts by minimizing contrastive divergence.
+\newblock {\em Neural Computation}, 14(8):1771--1800, 2002.
+
+\bibitem{palotti14_trec}
+Jo{\~{a}}o Palotti, Navid Rekabsaz, Linda Anderson, and Allan Hanbury.
+\newblock {TUW @ TREC Clinical Decision Support Track}.
+\newblock In {\em Proceedings of The Twenty-Third Text REtrieval Conference,
+  {TREC}}, 2014.
+
+\end{thebibliography}
