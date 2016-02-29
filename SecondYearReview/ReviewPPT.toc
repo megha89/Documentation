@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.26pt}
+\beamer@endinputifotherversion {3.36pt}
 \select@language {english}
 \beamer@sectionintoc {1}{Courses and TA duties}{3}{0}{1}
 \beamer@sectionintoc {2}{Conferences and Workshops}{4}{0}{2}

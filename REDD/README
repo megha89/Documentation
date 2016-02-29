@@ -1,0 +1,57 @@
+I (Iain Murray) originally tried to make this demo reading Hinton (2000,2002).
+It only worked if training over *days* with a tiny learning rate. That was after
+reparameterizing positive quantities and probabilities to unconstrained values
+--- this is vital, but "obvious" once one knows such things.
+
+I had another go in March 2006 after talking to Geoff Hinton. Now it works quite
+quickly and gives better answers than before. The trick is to scale the
+gradients wrt the mean by dividing out the precision. Note that if you were
+doing Newton's method to fit a single Gaussian you would do this. Here we aren't
+really using the correct Hessian so Geoff called it 'pseudo-natural gradients'.
+
+For another example of fixing up gradients with approximate second derivatives
+see MacKay (1999).
+
+Another trick I learned from Geoff is that it's important in high dimensions to
+bias the mixing proportions sensibly (which is kinda like rescaling the uniform
+area). Fitting this bias on the fly such that some experts are always used
+ensures the model does *something*. While this sort of "implicit prior" on the
+parameters is a hack, it is hard to interpret the parameters of undirected
+models, so difficult to set any regularization apriori.
+
+Run runme to see CD1 in action --- single samples using one step from each data
+point. This is the key line:
+        deltamu=deltamu./prec; % pseudo-natural-gradient hack
+
+runmeK (with rambly comments at the top) takes K rather than one step from each
+data point. I start with K=1 and then increase it in a hacky way. The modes end
+up balanced better. Starting out with a large K would make learning slower
+(might have to tweak epsilon to be smaller).
+
+
+@techreport{hinton2000,
+title={Training products of experts by minimizing contrastive divergence},
+author={Geoffrey E. Hinton},
+number={GCNU TR 2000-004},
+year={2000},
+institution={Gatsby Computational Neuroscience Unit, University College London}
+}
+
+@article{hinton2002,
+title={Training products of experts by minimizing contrastive divergence},
+journal={Neural Computation},
+author={Geoffrey E. Hinton},
+number={8},
+month={August},
+volume={14},
+year={2002},
+pages={1771{--}1800}
+}
+
+@techreport{mackay1999,
+title={Maximum likelihood and covariant algorithms for independent component analysis},
+author={David J. C. MacKay},
+year={1999},
+institution={Cavendish Laboratory, University of Cambridge}
+}
+
